@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="前端,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="最近的一个需求里面要实现类似推特点赞的动画效果，纠结好久最后还是用了帧图片，,h5 实现的效果说实话不尽如人意，不知道原生那边的效果如何。但这依然是一个实用的 demo.记录一下说不定以后能用得上呢因为不好上传图片所以用了base64,图片的代码都有好长一串不想引jquery就用原生写的，结果发现原生的东西啊，简直是都不记得了">
+<meta name="keywords" content="前端">
+<meta property="og:type" content="article">
+<meta property="og:title" content="h5实现点赞动画呀">
+<meta property="og:url" content="https://wine1.github.io/2019/06/11/h5实现点赞动画呀/index.html">
+<meta property="og:site_name" content="哦。">
+<meta property="og:description" content="最近的一个需求里面要实现类似推特点赞的动画效果，纠结好久最后还是用了帧图片，,h5 实现的效果说实话不尽如人意，不知道原生那边的效果如何。但这依然是一个实用的 demo.记录一下说不定以后能用得上呢因为不好上传图片所以用了base64,图片的代码都有好长一串不想引jquery就用原生写的，结果发现原生的东西啊，简直是都不记得了">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-06-13T15:12:38.973Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="h5实现点赞动画呀">
+<meta name="twitter:description" content="最近的一个需求里面要实现类似推特点赞的动画效果，纠结好久最后还是用了帧图片，,h5 实现的效果说实话不尽如人意，不知道原生那边的效果如何。但这依然是一个实用的 demo.记录一下说不定以后能用得上呢因为不好上传图片所以用了base64,图片的代码都有好长一串不想引jquery就用原生写的，结果发现原生的东西啊，简直是都不记得了">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://wine1.github.io/2019/06/11/h5实现点赞动画呀/">
+
+
+
+
+
+  <title>h5实现点赞动画呀 | 哦。</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">哦。</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">总要做点自己想做的事情。</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://wine1.github.io/2019/06/11/h5实现点赞动画呀/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="田京京京京京">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="哦。">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">h5实现点赞动画呀</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-11T16:32:59+08:00">
+                2019-06-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>最近的一个需求里面要实现类似推特点赞的动画效果，纠结好久最后还是用了帧图片，,h5 实现的效果说实话不尽如人意，不知道原生那边的效果如何。但这依然是一个实用的 demo.记录一下说不定以后能用得上呢<br>因为不好上传图片所以用了base64,图片的代码都有好长一串<br>不想引jquery就用原生写的，结果发现原生的东西啊，简直是都不记得了</p>
+<a id="more"></a>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=&quot;en&quot;&gt;</span><br><span class="line">  &lt;head&gt;</span><br><span class="line">    &lt;meta charset=&quot;UTF-8&quot; /&gt;</span><br><span class="line">    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;</span><br><span class="line">    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;ie=edge&quot; /&gt;</span><br><span class="line">    &lt;title&gt;Document&lt;/title&gt;</span><br><span class="line">  &lt;/head&gt;</span><br><span class="line">  &lt;body&gt;</span><br><span class="line">    &lt;div class=&quot;zan&quot; id=&quot;zan&quot;&gt;</span><br><span class="line">      &lt;div class=&quot;icon&quot;&gt;&lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line"></span><br><span class="line">    &lt;script&gt;</span><br><span class="line">        var btn =document.getElementById(&apos;zan&apos;)</span><br><span class="line">        btn.onclick=function()&#123;</span><br><span class="line">            console.log(1);</span><br><span class="line">            var icon=document.getElementsByClassName(&apos;icon&apos;)[0];</span><br><span class="line">            console.log(icon);</span><br><span class="line">            icon.classList.add(&apos;active&apos;,&apos;zanAnimation&apos;);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &lt;/script&gt;</span><br><span class="line"></span><br><span class="line">     &lt;style&gt;</span><br><span class="line">      .icon &#123;</span><br><span class="line">        content: &quot;&quot;;</span><br><span class="line">        height: 100px;</span><br><span class="line">        width: 100px;</span><br><span class="line">        display: inline-block;</span><br><span class="line">        vertical-align: middle;</span><br><span class="line">        background-size: 100% 100%;</span><br><span class="line">        background-repeat: no-repeat;</span><br><span class="line">        background-position: left;</span><br><span class="line">        background-size: 2000%;</span><br><span class="line">        background: url(&quot;data:image/png;base64,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&quot;);</span><br><span class="line">      &#125;</span><br><span class="line">      .active &#123;</span><br><span class="line">        background-position: right;</span><br><span class="line">      &#125;</span><br><span class="line">      .zanAnimation &#123;</span><br><span class="line">        display: inline-block;</span><br><span class="line">        -webkit-animation-name: zan;</span><br><span class="line">        animation-name: zan;</span><br><span class="line">        -webkit-animation-duration: 0.5s;</span><br><span class="line">        animation-duration: 0.5s;</span><br><span class="line">        -webkit-animation-iteration-count: 1;</span><br><span class="line">        animation-iteration-count: 1;</span><br><span class="line">        -webkit-animation-timing-function: steps(19);</span><br><span class="line">        animation-timing-function: steps(19);</span><br><span class="line">        background-position: right;</span><br><span class="line">      &#125;</span><br><span class="line">      @-webkit-keyframes zan &#123;</span><br><span class="line">        0% &#123;</span><br><span class="line">          background-position: left;</span><br><span class="line">        &#125;</span><br><span class="line">        100% &#123;</span><br><span class="line">          background-position: right;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      @keyframes zan &#123;</span><br><span class="line">        0% &#123;</span><br><span class="line">          background-position: left;</span><br><span class="line">        &#125;</span><br><span class="line">        100% &#123;</span><br><span class="line">          background-position: right;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &lt;/style&gt;</span><br><span class="line">  &lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/前端/" rel="tag"># 前端</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/06/07/网站部署/" rel="next" title="网站部署">
+                <i class="fa fa-chevron-left"></i> 网站部署
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/06/12/自我和解/" rel="prev" title="自我和解">
+                自我和解 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">田京京京京京</p>
+              <p class="site-description motion-element" itemprop="description">日常自说自话的地方</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">101</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">23</span>
+                  <span class="site-state-item-name">标签</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">田京京京京京</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

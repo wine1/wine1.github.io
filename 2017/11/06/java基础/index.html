@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="java,面试,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="三大特性五大基本原则继承 封装 多态封装：把客观事物封装成抽象的类继承：可以使用现有类的所有功能，并在无需重新编写原来的类的情况下对这些功能进行扩展。多态：指一个类实例在不同的情形下可以有不同的表现形式，可以通过接口的形式实现。参考 Java中修饰符private：该类；default：同包访问，且为默认值；protected：同包及继承子类可访问；public：均可访问">
+<meta name="keywords" content="java,面试">
+<meta property="og:type" content="article">
+<meta property="og:title" content="java基础">
+<meta property="og:url" content="https://wine1.github.io/2017/11/06/java基础/index.html">
+<meta property="og:site_name" content="哦。">
+<meta property="og:description" content="三大特性五大基本原则继承 封装 多态封装：把客观事物封装成抽象的类继承：可以使用现有类的所有功能，并在无需重新编写原来的类的情况下对这些功能进行扩展。多态：指一个类实例在不同的情形下可以有不同的表现形式，可以通过接口的形式实现。参考 Java中修饰符private：该类；default：同包访问，且为默认值；protected：同包及继承子类可访问；public：均可访问">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-01-07T13:01:37.710Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="java基础">
+<meta name="twitter:description" content="三大特性五大基本原则继承 封装 多态封装：把客观事物封装成抽象的类继承：可以使用现有类的所有功能，并在无需重新编写原来的类的情况下对这些功能进行扩展。多态：指一个类实例在不同的情形下可以有不同的表现形式，可以通过接口的形式实现。参考 Java中修饰符private：该类；default：同包访问，且为默认值；protected：同包及继承子类可访问；public：均可访问">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://wine1.github.io/2017/11/06/java基础/">
+
+
+
+
+
+  <title>java基础 | 哦。</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">哦。</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">总要做点自己想做的事情。</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://wine1.github.io/2017/11/06/java基础/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="田京京京京京">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="哦。">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">java基础</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-06T21:54:32+08:00">
+                2017-11-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="三大特性五大基本原则"><a href="#三大特性五大基本原则" class="headerlink" title="三大特性五大基本原则"></a>三大特性五大基本原则</h2><p>继承 封装 多态<br>封装：把客观事物封装成抽象的类<br>继承：可以使用现有类的所有功能，并在无需重新编写原来的类的情况下对这些功能进行扩展。<br>多态：指一个类实例在不同的情形下可以有不同的表现形式，可以通过接口的形式实现。<br><a href="http://www.cnblogs.com/hnrainll/archive/2012/09/18/2690846.html" target="_blank" rel="noopener">参考</a></p>
+<h2 id="Java中修饰符"><a href="#Java中修饰符" class="headerlink" title="Java中修饰符"></a>Java中修饰符</h2><p>private：该类；<br>default：同包访问，且为默认值；<br>protected：同包及继承子类可访问；<br>public：均可访问</p>
+<a id="more"></a>
+<h2 id="Java的四类八种数据类型"><a href="#Java的四类八种数据类型" class="headerlink" title="Java的四类八种数据类型"></a>Java的四类八种数据类型</h2><p>整数类型 byte    1字节 short    2字节 int    4字节 long    8字节<br>浮点型 float    4字节   double    8字节<br>布尔型 Boolean<br>字符型 char<br>引用数据类型：类class 接口interface 数组<br> 注：String不属于八种的一种，String是一个对象。</p>
+<h2 id="ArrayList和LinkedList区别"><a href="#ArrayList和LinkedList区别" class="headerlink" title="ArrayList和LinkedList区别"></a>ArrayList和LinkedList区别</h2><p>ArrayList和LinkedList都实现了List接口，他们有以下的不同点：<br>ArrayList是基于索引的数据接口，它的底层是数组。它可以以O(1)时间复杂度对元素进行随机访问。与此对应，LinkedList是以元素列表的形式存储它的数据，每一个元素都和它的前一个和后一个元素链接在一起，在这种情况下，查找某个元素的时间复杂度是O(n)。<br>相对于ArrayList，LinkedList的插入，添加，删除操作速度更快，因为当元素被添加到集合任意位置的时候，不需要像数组那样重新计算大小或者是更新索引。<br>LinkedList比ArrayList更占内存，因为LinkedList为每一个节点存储了两个引用，一个指向前一个元素，一个指向下一个元素。</p>
+<h2 id="collection和collections"><a href="#collection和collections" class="headerlink" title="collection和collections"></a>collection和collections</h2><p>1、java.util.Collection 是一个集合接口。它提供了对集合对象进行基本操作的通用接口方法。Collection接口在Java 类库中有很多具体的实现。Collection接口的意义是为各种具体的集合提供了最大化的统一操作list queue 等<br>2、java.util.Collections 是一个包装类。它包含有各种有关集合操作的静态多态方法。此类不能实例化，就像一个工具类，服务于Java的Collection框架。</p>
+<h2 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h2><p>Java集合类框架的基本接口<br>Collection：代表一组对象，每一个对象都是它的子元素。<br>Set：不包含重复元素的Collection。<br>List：有顺序的collection，并且可以包含重复元素。<br>Map：可以把键(key)映射到值(value)的对象，键不能重复。</p>
+<h2 id="String-VS-StringBuilder-VS-StringBuffer"><a href="#String-VS-StringBuilder-VS-StringBuffer" class="headerlink" title="String VS StringBuilder VS StringBuffer"></a>String VS StringBuilder VS StringBuffer</h2><p>String是不可变对象(final修饰)，一旦创建，那么整个对象就不可改变。即使新手觉得String引用变了，实际上只是（指针）引用指向了另一个（新的）对象。<br>StringBuilder 是可变的,因此可以在创建以后修改内部的值.<br>StringBuffer 是同步的,因此是线程安全的,但效率相对更低.<br>通过new关键字来生成对象是在堆区进行的，而在堆区进行对象生成的过程是不会去检测该对象是否已经存在的。因此通过new来创建对象，创建出的一定是不同的对象，即使字符串的内容是相同的。<br>StringBuilder和StringBuffer类拥有的成员属性以及成员方法基本相同，区别是StringBuffer类的成员方法前面多了一个关键字：synchronized，不用多说，这个关键字是在多线程访问时起到安全保护作用的,也就是说StringBuffer是线程安全的。<br><a href="http://www.cnblogs.com/dolphin0520/p/3778589.html" target="_blank" rel="noopener">参考</a></p>
+<h2 id="hashmap和hashtable-concurrentHashMap"><a href="#hashmap和hashtable-concurrentHashMap" class="headerlink" title="hashmap和hashtable concurrentHashMap"></a>hashmap和hashtable concurrentHashMap</h2><p>Java中的HashMap是以键值对(key-value)的形式存储元素的。HashMap需要一个hash函数，它使用hashCode()和equals()方法来向集合添加和检索元素。当调用put()方法的时候，HashMap会计算key的hash值，然后把键值对存储在集合中合适的索引上。如果key已经存在了，value会被更新成新值。HashMap的一些重要的特性是它的容量(capacity)，负载因子(load factor)和扩容极限(threshold resizing)。</p>
+<ol>
+<li>继承类不同：<br> A.HashMap继承AbstractMap<br> B.Hashtable继承Dictionary</li>
+<li>执行效率不同：<br> A.HashMap是非线程安全的，是Hashtable的轻量级实现，效率较高<br> B.Hashtable是线程安全的，效率较低</li>
+<li>put方法对key和value的要求不同<br> A.HashMap允许Entry的key或value为null<br> B.Hashtable不允许Entry的key或value为null，否则出现NullPointerException</li>
+<li>有无contains方法<br> A.HashMap没有contains方法<br> B.Hashtable有contains方法<br>从ConcurrentHashMap代码中可以看出，它引入了一个“分段锁”的概念，具体可以理解为把一个大的Map拆分成N个小的HashTable，根据key.hashCode()来决定把key放到哪个HashTable中。<br><a href="http://blog.csdn.net/liuzhengkang/article/details/2916620" target="_blank" rel="noopener">转载自某总结的很全面的文章</a></li>
+</ol>
+<h2 id="hashset和treeset"><a href="#hashset和treeset" class="headerlink" title="hashset和treeset"></a>hashset和treeset</h2><p>HashSet是由一个hash表来实现的，因此，它的元素是无序的。add()，remove()，contains()方法的时间复杂度是O(1)。<br>另一方面，TreeSet是由一个树形的结构来实现的，它里面的元素是有序的。因此，add()，remove()，contains()方法的时间复杂度是O(logn)。</p>
+<p>无论是否抛出异常，finally代码块都会执行，它主要是用来释放应用占用的资源。finalize()方法是Object类的一个protected方法，它是在对象被垃圾回收之前由Java虚拟机来调用的。</p>
+<h2 id="方法覆盖和方法重载"><a href="#方法覆盖和方法重载" class="headerlink" title="方法覆盖和方法重载"></a>方法覆盖和方法重载</h2><p>Java中的方法重载发生在同一个  类里面两个或者是多个方法的方法名相同但是参数不同的情况。与此相对，方法覆盖是说子类重新定义了父类的方法。方法覆盖必须有相同的方法名，参数列表和返回类型。覆盖者可能不会限制它所覆盖的方法的访问。</p>
+<ol>
+<li>相同点：<br>都要求方法同名。<br>都可以用于抽象方法和非抽象方法之间。</li>
+<li>不同点：<br>方法覆盖要求参数签名必须一致，而方法重载要求参数签名必须不一致。<br>方法覆盖要求返回类型必须一致，而方法重载对此不做限制。<br>方法覆盖只能用于子类覆盖父类的方法，方法重载用于同一个类的所有方法（包括从父类中继承而来的方法）。<br>方法覆盖对方法的访问权限和抛出的异常有特殊的要求，而方法重载在这方面没有限制。<br>父类的一个方法只能被子类覆盖一次，而一个方法在所在的类中可以被重载多次。</li>
+</ol>
+<h2 id="线程"><a href="#线程" class="headerlink" title="线程"></a>线程</h2><p>一个程序至少有一个进程,一个进程至少有一个线程.<br>     线程的划分尺度小于进程，使得多线程程序的并发性高。另外，进程在执行过程中拥有独立的内存单元，而多个线程共享内存，从而极大地提高了程序的运行效率。<br>      线程在执行过程中与进程还是有区别的。每个独立的线程有一个程序运行的入口、顺序执行序列和程序的出口。但是线程不能够独立执行，必须依存在应用程序中，由应用程序提供多个线程执行控制。</p>
+<p>并行与并发：<br>并行：多个cpu实例或者多台机器同时执行一段处理逻辑，是真正的同时。<br>并发：通过cpu调度算法，让用户看上去同时执行，实际上从cpu操作层面不是真正的同时。并发往往在场景中有公用的资源，那么针对这个公用的资源往往产生瓶颈，我们会用TPS或者QPS来反应这个系统的处理能力。<br>线程安全：经常用来描绘一段代码。指在并发的情况之下，该代码经过多线程使用，线程的调度顺序不影响任何结果。这个时候使用多线程，我们只需要关注系统的内存，cpu是不是够用即可。反过来，线程不安全就意味着线程的调度顺序会影响最终结果，</p>
+<p>同步：Java中的同步指的是通过人为的控制和调度，保证共享资源的多线程访问成为线程安全，来保证结果的准确。如上面的代码简单加入@synchronized关键字。在保证结果准确的同时，提高性能，才是优秀的程序。线程安全的优先级高于性能。<br>BIO NIO AIO的区别</p>
+<h2 id="java-applet"><a href="#java-applet" class="headerlink" title="java applet"></a>java applet</h2><p>是能够被包含在HTML页面中并且能被启用了java的客户端浏览器执行的程序。Applet主要用来创建动态交互的web应用程序。<br>applet可以经历下面的状态：<br>Init：每次被载入的时候都会被初始化。<br>Start：开始执行applet。<br>Stop：结束执行applet。<br>Destroy：卸载applet之前，做最后的清理工作。</p>
+<h2 id="连接池"><a href="#连接池" class="headerlink" title="连接池"></a>连接池</h2><p>像打开关闭数据库连接这种和数据库的交互可能是很费时的，尤其是当客户端数量增加的时候，会消耗大量的资源，成本是非常高的。可以在应用服务器启动的时候建立很多个数据库连接并维护在一个池中。连接请求由池中的连接提供。在连接使用完毕以后，把连接归还到池中，以用于满足将来更多的请求。</p>
+<h2 id="Servlet"><a href="#Servlet" class="headerlink" title="Servlet"></a>Servlet</h2><p>是用来处理客户端请求并产生动态网页内容的Java类。Servlet主要是用来处理或者是存储HTML表单提交的数据，产生动态内容，在无状态的HTTP协议下管理状态信息。<br>生命周期：对每一个客户端的请求，Servlet引擎载入Servlet，调用它的init()方法，完成Servlet的初始化。然后，Servlet对象通过为每一个请求单独调用service()方法来处理所有随后来自客户端的请求，最后，调用Servlet的destroy()方法把Servlet删除掉。</p>
+<p>Applet是运行在客户端主机的浏览器上的客户端Java程序。而Servlet是运行在web服务器上的服务端的组件。applet可以使用用户界面类，而Servlet没有用户界面，相反，Servlet是等待客户端的HTTP请求，然后为请求产生响应。</p>
+<p>sendRedirect()方法会创建一个新的请求，而forward()方法只是把请求转发到一个新的目标上。重定向(redirect)以后，之前请求作用域范围以内的对象就失效了，因为会产生一个新的请求，而转发(forwarding)以后，之前请求作用域范围以内的对象还是能访问的。一般认为sendRedirect()比forward()要慢。</p>
+<h2 id="JSP"><a href="#JSP" class="headerlink" title="JSP"></a>JSP</h2><p>动作以XML语法的结构来控制Servlet引擎的行为。当JSP页面被请求的时候，JSP动作会被执行。它们可以被动态的插入到文件中，重用JavaBean组件，转发用户到其他的页面，或者是给Java插件产生HTML代码。下面列出了可用的动作：<br>jsp:include-当JSP页面被请求的时候包含一个文件。<br>jsp:useBean-找出或者是初始化Javabean。<br>jsp:setProperty-设置JavaBean的属性。<br>jsp:getProperty-获取JavaBean的属性。<br>jsp:forward-把请求转发到新的页面。<br>jsp:plugin-产生特定浏览器的代码。</p>
+<p>jsp隐含对象：application<br>page<br>request<br>response<br>session<br>exception<br>out<br>config<br>pageContext</p>
+<h2 id="抽象"><a href="#抽象" class="headerlink" title="抽象"></a>抽象</h2><p>抽象是把想法从具体的实例中分离出来的步骤，因此，要根据他们的功能而不是实现细节来创建类。Java支持创建只暴漏接口而不包含方法实现的抽象的类。这种抽象技术的主要目的是把类的行为和实现细节分离开。<br>抽象和封装是互补的概念。一方面，抽象关注对象的行为。另一方面，封装关注对象行为的细节。一般是通过隐藏对象内部状态信息做到封装，因此，封装可以看成是用来提供抽象的一种策略。</p>
+<h2 id="常见软件设计模式"><a href="#常见软件设计模式" class="headerlink" title="常见软件设计模式"></a>常见软件设计模式</h2><ol>
+<li>单例模式：<ul>
+<li>单例模式有以下特点：<br>　　1、单例类只能有一个实例。<br>　　2、单例类必须自己创建自己的唯一实例。<br>　　3、单例类必须给所有其他对象提供这一实例。</li>
+<li>每台计算机可以有若干通信端口，系统应当集中管理这些通信端口，以避免一个通信端口同时被两个请求同时调用。总之，选择单例模式就是为了避免不一致状态，避免政出多头。</li>
+</ul>
+</li>
+<li>简单工厂：</li>
+<li>工厂方法和抽象工厂：</li>
+</ol>
+<h2 id="Spring"><a href="#Spring" class="headerlink" title="Spring"></a>Spring</h2><p><a href="http://www.cnblogs.com/wmbg/p/6972194.html" target="_blank" rel="noopener">http://www.cnblogs.com/wmbg/p/6972194.html</a><br>Spring七个模块<br>Spring context<br>Spring AOP<br>Spring DAO<br>Spring ORM<br>Spring Web<br>Spring MVC<br>Spring Core<br>AOP和IOC</p>
+<h4 id="aop"><a href="#aop" class="headerlink" title="aop"></a>aop</h4><p>允许程序通过分离的应用业务逻辑与系统级别服务。程序员只需专注自己的业务逻辑，而不需要管系统级服务。容器中的对象能享有容器中的公共服务（日志、安全）.</p>
+<h6 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h6><p>通过动态代理做到这一点。用到了代理模式，代理模式是一种静态代理，而动态代理就是利用反射和动态编译将代理模式变成动态的。得知被代理类后通过反射得知他的一切信息，然后动态编译成代理类的class文件（动态组装成代理类，生成java文件，再编译成class文件）。</p>
+<h6 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h6><p>提供另外一种编程思路，可以把类似的行为抽离出来统一处理。</p>
+<h4 id="ioc"><a href="#ioc" class="headerlink" title="ioc"></a>ioc</h4><p>依赖注入（DI）和控制反转（Inversion of Control）是同一个概念。控制权的反转，在程序中对象的控制权转到容器而不是程序员自己控制，促进了松耦合。依赖注入，将相互依赖的对象分离，在Spring配置文件中，描述他们的依赖关系，用到一个对象时注入，而不需要New一个对象。</p>
+<h6 id="原理-1"><a href="#原理-1" class="headerlink" title="原理"></a>原理</h6><p>通过工厂+反射将我们的bean放到容器中，当我们想用某个bean的时候，只需要调用getBean(“beanID”)方法。</p>
+<h6 id="优点-1"><a href="#优点-1" class="headerlink" title="优点"></a>优点</h6><p>解耦、统一管理bean，缺点占用内存多、构造对象慢</p>
+<p>参考：某博主总结的面试知识点，很全面<a href="http://www.cnblogs.com/lanhj/p/4672735.html" target="_blank" rel="noopener">http://www.cnblogs.com/lanhj/p/4672735.html</a></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/java/" rel="tag"># java</a>
+          
+            <a href="/tags/面试/" rel="tag"># 面试</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/11/06/今日随笔“/" rel="next" title="今日随笔“">
+                <i class="fa fa-chevron-left"></i> 今日随笔“
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/11/07/内心煎熬/" rel="prev" title="内心煎熬">
+                内心煎熬 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">田京京京京京</p>
+              <p class="site-description motion-element" itemprop="description">日常自说自话的地方</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">101</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">23</span>
+                  <span class="site-state-item-name">标签</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#三大特性五大基本原则"><span class="nav-number">1.</span> <span class="nav-text">三大特性五大基本原则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Java中修饰符"><span class="nav-number">2.</span> <span class="nav-text">Java中修饰符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Java的四类八种数据类型"><span class="nav-number">3.</span> <span class="nav-text">Java的四类八种数据类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ArrayList和LinkedList区别"><span class="nav-number">4.</span> <span class="nav-text">ArrayList和LinkedList区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#collection和collections"><span class="nav-number">5.</span> <span class="nav-text">collection和collections</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#集合"><span class="nav-number">6.</span> <span class="nav-text">集合</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#String-VS-StringBuilder-VS-StringBuffer"><span class="nav-number">7.</span> <span class="nav-text">String VS StringBuilder VS StringBuffer</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hashmap和hashtable-concurrentHashMap"><span class="nav-number">8.</span> <span class="nav-text">hashmap和hashtable concurrentHashMap</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hashset和treeset"><span class="nav-number">9.</span> <span class="nav-text">hashset和treeset</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方法覆盖和方法重载"><span class="nav-number">10.</span> <span class="nav-text">方法覆盖和方法重载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#线程"><span class="nav-number">11.</span> <span class="nav-text">线程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#java-applet"><span class="nav-number">12.</span> <span class="nav-text">java applet</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#连接池"><span class="nav-number">13.</span> <span class="nav-text">连接池</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Servlet"><span class="nav-number">14.</span> <span class="nav-text">Servlet</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JSP"><span class="nav-number">15.</span> <span class="nav-text">JSP</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#抽象"><span class="nav-number">16.</span> <span class="nav-text">抽象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常见软件设计模式"><span class="nav-number">17.</span> <span class="nav-text">常见软件设计模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Spring"><span class="nav-number">18.</span> <span class="nav-text">Spring</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#aop"><span class="nav-number">18.0.1.</span> <span class="nav-text">aop</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#原理"><span class="nav-number">18.0.1.0.1.</span> <span class="nav-text">原理</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#优点"><span class="nav-number">18.0.1.0.2.</span> <span class="nav-text">优点</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ioc"><span class="nav-number">18.0.2.</span> <span class="nav-text">ioc</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#原理-1"><span class="nav-number">18.0.2.0.1.</span> <span class="nav-text">原理</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#优点-1"><span class="nav-number">18.0.2.0.2.</span> <span class="nav-text">优点</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">田京京京京京</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

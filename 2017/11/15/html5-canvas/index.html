@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="前端,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="参考：HTML5与CSS3权威指南或者W3Cschool 菜鸟教程之类的 都有详细的用法">
+<meta name="keywords" content="前端">
+<meta property="og:type" content="article">
+<meta property="og:title" content="html5(canvas)">
+<meta property="og:url" content="https://wine1.github.io/2017/11/15/html5-canvas/index.html">
+<meta property="og:site_name" content="哦。">
+<meta property="og:description" content="参考：HTML5与CSS3权威指南或者W3Cschool 菜鸟教程之类的 都有详细的用法">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-01-07T13:01:37.695Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="html5(canvas)">
+<meta name="twitter:description" content="参考：HTML5与CSS3权威指南或者W3Cschool 菜鸟教程之类的 都有详细的用法">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://wine1.github.io/2017/11/15/html5-canvas/">
+
+
+
+
+
+  <title>html5(canvas) | 哦。</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">哦。</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">总要做点自己想做的事情。</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://wine1.github.io/2017/11/15/html5-canvas/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="田京京京京京">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="哦。">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">html5(canvas)</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-15T21:04:37+08:00">
+                2017-11-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>参考：HTML5与CSS3权威指南<br>或者W3Cschool 菜鸟教程之类的 都有详细的用法</p>
+<a id="more"></a>
+<section>
+canvas相当于设置了一块透明画布
+用canvas绘制图形的步骤：
+> 获取canvas元素
+> 取得图形上下文
+> 填充(fill)与绘制边框(stroke)
+> 设定绘图样式
+> 指定线宽
+> 指定颜色值
+> 绘制图形
+<!-- more -->
+function draw(id){
+  var canvas = document.getElementById(id);
+  if(canvas == null)
+   return false;
+  var context = canvas.getContext('2d');
+  context.fillStyle = "#999999";
+  context.fillRect(0,0,400,400);
+  context.fillStyle = "red";
+  context.strokeStyle = "blue";
+  context.lineWidth = 1;
+  context.fillRect(50,50,100,100);
+  context.strokeRect(50,50,100,100);
+}<!-- 绘制正方形 -->
+
+</section>
+<section>
+用canvas绘制圆形的步骤：
+ 获取canvas元素
+ 取得图形上下文
+ 开始创建路径
+ 创建图形的路径context.arc(x,y,radius,startAngle,endAngle,anticlockwise)
+ 关闭路径
+ 设定绘制样式，调用绘制方法，绘制路径 
+function draw(id){
+  var canvas = document.getElementById(id);
+  if(canvas == null)
+   return false;
+  var context = canvas.getContext('2d');
+  context.fillStyle = "#999999";
+  context.fillRect(0,0,400,400);
+
+<p>  context.beginPath();<br>  context.arc(200,200,150,0,Math.PI*2,true);<br>  context.closePath();<br>  context.fillStyle=’rgba(255,255,255,0.7)’;<br>  context.fill();<br>}</p>
+</section>
+<section>
+绘制直线
+ moveTo 将光标移动到指定坐标点 该坐标点设置为起点
+ lineTo 表示直线终点
+ lineCap butt默认不添加线帽 round添加圆形线帽 square添加正方形线帽
+</section>
+<section>
+    绘制曲线：
+    arcTo(x1,y1,x2,y2,radiusX[,radiusY,rotation])[]中的内容是可以不写的
+    贝塞尔曲线 bezierCurveTo（cp1x,cp1y,cp2x,cp2y,x,y)
+</section>
+<section>
+    用path2D对象绘制路径：（支持chorme37、Firefox31、Opera23、Safari7及以上版本）：
+    path.moveTo(x,y) 将光标移动到指定坐标点
+    path.lineTo(x,y) 绘制直线
+    path.rect(x,y,w,h) 绘制矩形
+    path.arc(x,y,radius,startAngle,endAngle,anticlockwise)绘制圆形或圆弧
+    path.ellipse(x,y,radiusx,radiuy,rotation,startAngel,endAngel)绘制椭圆或者椭圆弧
+</section>
+
+<blockquote>
+<p>Canvas - 文本<br>使用 canvas 绘制文本，重要的属性和方法如下：<br>font - 定义字体<br>fillText(text,x,y) - 在 canvas 上绘制实心的文本<br>strokeText(text,x,y) - 在 canvas 上绘制空心的文本</p>
+</blockquote>
+<blockquote>
+<p>createLinearGradient(x,y,x1,y1) - 创建线条渐变<br>createRadialGradient(x,y,r,x1,y1,r1) - 创建一个径向/圆渐变<br>当我们使用渐变对象，必须使用两种或两种以上的停止颜色。<br>addColorStop()方法指定颜色停止，参数使用坐标来描述，可以是0至1.</p>
+</blockquote>
+<blockquote>
+<p>drawImage(image,x,y)</p>
+</blockquote>
+<p>canvas.save() canvas.restore() 作用是两个相互匹配出现的，作用是用来保存画布的状态和取出保存的状态的。<br>rotate() 旋转<br>transplate() 平移</p>
+<p>用canvas绘制一个可以展现实时时间的时钟</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;UTF-8&quot;&gt;
+        &lt;title&gt;画时钟&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body onload=&quot;draw(&apos;canvas&apos;)&quot;&gt;
+        &lt;canvas id=&quot;canvas&quot; width=&quot;400px&quot; height=&quot;400px&quot; border:&gt;&lt;/canvas&gt;
+    &lt;/body&gt;    
+&lt;script&gt;
+    var dom=document.getElementById(&apos;canvas&apos;);
+    var cxt=dom.getContext(&quot;2d&quot;);
+    var width=cxt.canvas.width;
+    var height=cxt.canvas.height;
+    var r=width/2;
+
+    function drawBackground(){
+      cxt.save();
+      cxt.translate(r,r);
+      cxt.beginPath();
+      cxt.lineWidth=10;
+      cxt.arc(0,0,r-5,0,2*Math.PI,false);
+      cxt.stroke();
+      cxt.font=&quot;18px Arial&quot;;
+      cxt.textAlign=&apos;center&apos;
+      cxt.textBaseline=&apos;middle&apos;
+      var hourNums=[3,4,5,6,7,8,9,10,11,12,1,2];
+      hourNums.forEach(function(number,i){
+
+        var rad=2*Math.PI/12*i;
+        var x=Math.cos(rad)*(r-30);
+        var y=Math.sin(rad)*(r-30);
+        cxt.fillText(number,x,y);
+
+      });
+
+      for(var i=0;i&lt;60;i++){
+
+        var rad=2*Math.PI/60*i;
+        var x=Math.cos(rad)*(r-18);
+        var y=Math.sin(rad)*(r-18);
+        cxt.beginPath();
+        if(i % 5===0){
+          cxt.fillStyle=&quot;#000&quot;
+          cxt.arc(x,y,2,0,2*Math.PI,false);
+        }
+        else{
+          cxt.fillStyle=&quot;#ccc&quot;
+          cxt.arc(x,y,2,0,2*Math.PI,false);
+        }
+        cxt.fill(); 
+      }
+
+    }
+
+    function drawHour(hour,minute){
+      cxt.save();
+      cxt.beginPath();
+      var rad=2*Math.PI/12*hour;
+      var mrad=2*Math.PI/12/60*minute
+      cxt.rotate(rad+mrad);
+      cxt.lineWidth=6;
+      cxt.lineCap=&apos;round&apos;
+      cxt.moveTo(0,10);
+      cxt.lineTo(0,-r/2);
+      cxt.stroke();
+      cxt.restore();
+    }
+
+    function drawMinute(minute){
+      cxt.save();
+      cxt.beginPath();
+      var rad=2*Math.PI/60*minute;
+      cxt.rotate(rad);
+      cxt.lineWidth=3;
+      cxt.lineCap=&apos;round&apos;
+      cxt.moveTo(0,10);
+      cxt.lineTo(0,-r+30);
+      cxt.stroke();
+      cxt.restore();
+    }
+
+    function drawSecond(second){
+      cxt.save();
+      cxt.beginPath();
+      cxt.fillStyle=&apos;#c14543&apos;
+      var rad=2*Math.PI/60*second;
+      cxt.rotate(rad);  
+      cxt.moveTo(-2,20);
+      cxt.lineTo(2,20);
+      cxt.lineTo(1,-r+18);
+      cxt.lineTo(-1,-r+18);
+      cxt.fill();
+      cxt.restore();
+    }
+
+    function drawDot(){
+
+      cxt.beginPath();
+      cxt.fillStyle=&apos;#fff&apos;
+      cxt.arc(0,0,3,0,2*Math.PI,false);
+      cxt.fill();
+    }
+
+    function draw(){
+
+      cxt.clearRect(0,0,width,height);
+      var now=new Date();
+      var hour=now.getHours();
+      var minute=now.getMinutes();
+      var second=now.getSeconds();
+      drawBackground();
+      drawHour(hour,minute);
+      drawMinute(minute);
+      drawSecond(second);
+      drawDot();
+      cxt.restore();
+    }
+    draw();
+    setInterval(draw,1000);
+
+&lt;/script&gt;
+&lt;/html&gt;</code></pre>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/前端/" rel="tag"># 前端</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/11/15/html5-新增元素/" rel="next" title="html5（新增元素）">
+                <i class="fa fa-chevron-left"></i> html5（新增元素）
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/11/16/WebSockets/" rel="prev" title="WebSockets">
+                WebSockets <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">田京京京京京</p>
+              <p class="site-description motion-element" itemprop="description">日常自说自话的地方</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">101</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">23</span>
+                  <span class="site-state-item-name">标签</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">田京京京京京</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
