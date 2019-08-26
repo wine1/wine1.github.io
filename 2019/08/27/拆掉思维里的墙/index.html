@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://wine1.github.io">
-  <title>js中的操作符问题 | 哦。</title>
+  <title>拆掉思维里的墙 | 哦。</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="今天群里的小伙伴讨论了一个问题var x = 5; if(x += 1 &amp;amp;&amp;amp; x++) console.log(x)//10反正我开始看到这个是一脸懵逼的">
-<meta name="keywords" content="前端">
+  <meta name="description" content="◆ 6招快速提升安全感   消除恐惧的最后一招，也是最有效的一招，就是找到你自己的恐惧底线，然后去面对它。     恐惧有三个层次：第一个层次是恐惧事情本身。第二个层次是害怕失去背后的价值。第三个层次，也就是真正的恐惧，是你觉得自己没有能力去应对这个失去。   ◆ 必问自己的两个触底反弹问题   你有没有被逼到命运的墙角？有没有试过触碰想都不敢想的事情的底线？那一瞬间你会怎么问自己？   ◆ 思维">
+<meta name="keywords" content="随笔">
 <meta property="og:type" content="article">
-<meta property="og:title" content="js中的操作符问题">
-<meta property="og:url" content="https://wine1.github.io/2017/11/26/js中的操作符问题/index.html">
+<meta property="og:title" content="拆掉思维里的墙">
+<meta property="og:url" content="https://wine1.github.io/2019/08/27/拆掉思维里的墙/index.html">
 <meta property="og:site_name" content="哦。">
-<meta property="og:description" content="今天群里的小伙伴讨论了一个问题var x = 5; if(x += 1 &amp;amp;&amp;amp; x++) console.log(x)//10反正我开始看到这个是一脸懵逼的">
+<meta property="og:description" content="◆ 6招快速提升安全感   消除恐惧的最后一招，也是最有效的一招，就是找到你自己的恐惧底线，然后去面对它。     恐惧有三个层次：第一个层次是恐惧事情本身。第二个层次是害怕失去背后的价值。第三个层次，也就是真正的恐惧，是你觉得自己没有能力去应对这个失去。   ◆ 必问自己的两个触底反弹问题   你有没有被逼到命运的墙角？有没有试过触碰想都不敢想的事情的底线？那一瞬间你会怎么问自己？   ◆ 思维">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-07T13:01:37.710Z">
+<meta property="og:updated_time" content="2019-08-26T23:33:46.568Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="js中的操作符问题">
-<meta name="twitter:description" content="今天群里的小伙伴讨论了一个问题var x = 5; if(x += 1 &amp;amp;&amp;amp; x++) console.log(x)//10反正我开始看到这个是一脸懵逼的">
+<meta name="twitter:title" content="拆掉思维里的墙">
+<meta name="twitter:description" content="◆ 6招快速提升安全感   消除恐惧的最后一招，也是最有效的一招，就是找到你自己的恐惧底线，然后去面对它。     恐惧有三个层次：第一个层次是恐惧事情本身。第二个层次是害怕失去背后的价值。第三个层次，也就是真正的恐惧，是你觉得自己没有能力去应对这个失去。   ◆ 必问自己的两个触底反弹问题   你有没有被逼到命运的墙角？有没有试过触碰想都不敢想的事情的底线？那一瞬间你会怎么问自己？   ◆ 思维">
   
     <link rel="alternative" href="/atom.xml" title="哦。" type="application/atom+xml">
   
@@ -159,47 +159,135 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-js中的操作符问题" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-拆掉思维里的墙" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      js中的操作符问题
+      拆掉思维里的墙
     </h1>
   
 
         
-        <a href="/2017/11/26/js中的操作符问题/" class="archive-article-date">
-  	<time datetime="2017-11-26T13:36:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-26</time>
+        <a href="/2019/08/27/拆掉思维里的墙/" class="archive-article-date">
+  	<time datetime="2019-08-26T22:58:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-27</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>今天群里的小伙伴讨论了一个问题<br><code>var x = 5;
-if(x += 1 &amp;&amp; x++)
-console.log(x)//10</code><br>反正我开始看到这个是一脸懵逼的</p>
-<a id="more"></a>
-<p>这个问题涉及到了一个基本上都会被忽略掉的操作符优先级问题和一些js中的操作符问题 首先，运算符优先级<br><code>！ &gt; 算术运算符 &gt; 关系运算符 &gt; &amp;&amp; &gt; || &gt; 赋值运算符</code><br>接下来，系统的回顾一下js操作符吧<br><code>+</code> 会将各种类型自动转换成number类型<br><code>~</code> 按位非<br><code>AND</code> 按位与<br><code>OR</code> 按位或<br><code>XOR</code> 按位异或<br><code>&lt;&lt;</code> 左移<br><code>&gt;&gt;</code> 有符号的右移  符号位不动 以符号位填充空位<br><code>&gt;&gt;&gt;</code> 无符号的右移 符号位不动 以0填充空位</p>
-<p>###布尔操作符###</p>
-<ul>
-<li>逻辑非 逻辑非操作符由一个叹号表示(!),可以应用于ECMAScript中的任何值。无论这个值是什么数据类型，这个操作符都会返回一个布尔值。</li>
-<li>逻辑与 逻辑与属于短路操作，即如果第一个操作数求值结果是false，那么就不会对第二个操作数求值。<blockquote>其中一个值不是布尔值时：遵循下列规则
-第一个操作数为假，返回第一个；
-第一个操作数为真的时候，返回第二个。
-如果第一个操作数是对象，则返回第二个操作数
-如果第二个操作数是对象，则只有在第一个操作数的求值结果为true的情况下才会返回该对象
-如果两个操作数都是对象，则返回第二操作数
-（1）如果有一个操作数是null，则返回null
-（2）如果有一个操作数是NaN,则返回NaN
-（3）如果有一个操作数是undefined，则返回undefinded</blockquote></li>
-<li>逻辑或 逻辑或操作符也是短路操作符。也就是说，如果第一个操作数的求值结果为true，就不会对第二个操作数求值了。<br>（1）第一个操作数为真，返回第一个<br>（2）第一个操作数为假，返回第二个</li>
-</ul>
-<p>###关系操作符###<br>如果两个操作数都是数值，则执行数值比较<br>如果两个操作数都是字符串，则比较两个字符串对应的字符编码值<br>如果一个操作数是数值，则将另一个操作数转换为数值，然后执行数值比较</p>
-<p>###相等操作符###<br>1.相等和不相等<br>先转换再比较<br>（1）如果有一个操作数是布尔值，则在比较相等性之前，先将其转换为数值<br>（2）如果有一个操作数是字符串，另一个操作数是数值，先将其转换为数值<br>（3）如果有一个操作数是对象，另一个不是，则调用对象的valueOf()方法，用得到的基本类型值按前面的基本规则进行比较<br>null和undefined是相等的<br>要比较相等性之前不能将null和undefined转换为任何其他值<br>如果两个操作数都是NaN，相等操作符也返回false，按规则，NaN不等于NaN<br>2.全等和不全等<br>仅比较而不转换 未经转换就相等则返回true</p>
+        <p>◆ 6招快速提升安全感</p>
+<blockquote>
+<blockquote>
+<p>消除恐惧的最后一招，也是最有效的一招，就是找到你自己的恐惧底线，然后去面对它。</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>恐惧有三个层次：<br>第一个层次是恐惧事情本身。<br>第二个层次是害怕失去背后的价值。<br>第三个层次，也就是真正的恐惧，是你觉得自己没有能力去应对这个失去。</p>
+</blockquote>
+</blockquote>
+<p>◆ 必问自己的两个触底反弹问题</p>
+<blockquote>
+<blockquote>
+<p>你有没有被逼到命运的墙角？有没有试过触碰想都不敢想的事情的底线？那一瞬间你会怎么问自己？</p>
+</blockquote>
+</blockquote>
+<p>◆ 思维里的墙如何限制我们</p>
+<blockquote>
+<blockquote>
+<p>愿上帝赐我一个平静的心，去接纳我所不能改变的事物；赐我无限勇气，去改变那有可能改变的东西；并且赐我智慧，去辨别这两者的差异。</p>
+</blockquote>
+</blockquote>
+<p>◆ 关于心智模式的几个观点</p>
+<blockquote>
+<blockquote>
+<p>齐白石说：学我者生，似我者死。我说：学心智生，学心态死。</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>对一生进行充分规划永远都是一个好想法，但一定要记得写下来的时候要用铅笔，而且手边还要有块橡皮。<br>——Adam Marchick</p>
+</blockquote>
+</blockquote>
+<p>◆ 模仿比尔·盖茨就能成功？你死定了</p>
+<blockquote>
+<blockquote>
+<p>模仿成功者就能成功，这是成功学的著名逻辑。<br>当你真正开始实践，才发现很多东西是无法模仿的，这就是生活的逻辑</p>
+</blockquote>
+</blockquote>
+<p>◆ 努力就能成功？看看李嘉诚的创业奇迹</p>
+<blockquote>
+<blockquote>
+<p>很多时候少听成功专家讲的话。所有的创业者多花点时间学习别人是怎么失败的，因为成功的原因有千千万万，失败的原因就一两个点。所以我的建议就是少听成功学讲座，真正的成功学是用心感受的，有一天你就是成功者，你讲任何话都是对的。</p>
+</blockquote>
+</blockquote>
+<p>◆ 成功，就是越走越近</p>
+<blockquote>
+<blockquote>
+<p>成功的真正本义应该是：越走越近。</p>
+</blockquote>
+</blockquote>
+<p>◆ 你现在就很成功</p>
+<blockquote>
+<blockquote>
+<p>你的天花板是别人的地板，而你总在向上看，从来没有留意过窗边的风景。</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>．美国哲学家厄尔·南丁格尔：成功就是逐渐实现有价值的理想。<br>2．成功就是实现人生目标的过程。<br>3．成功可以分为两部分：你怎样看待自己；别人怎么看待你。<br>4．成功=what you have been / what you should be。</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>罗兰：成功的意义应该是发挥了自己的所长，尽了自己的努力之后，所感到的一种无愧于心的收获之乐，而不是为了虚荣心或金钱。</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>．现代社会的三种毒药：消费主义、性自由和成功学。消费主义以品牌为噱头，以时尚为药效，恋物成瘾。性自由以人性为噱头，以性爱为药效，纵欲成瘾。成功学以速成为噱头，以名利为药效，误导急于走捷径成为人上人的年轻人投身其中，投机成瘾。</p>
+</blockquote>
+</blockquote>
+<p>◆ 拒绝受害，现在就掌控你的生命</p>
+<blockquote>
+<blockquote>
+<p>你看明白了吗？如果你愿意，你总是可以掌控些什么。你没有必要得到允许才开始学习，你也没有必要得到机会才开始努力。如果你愿意，你现在就能够为这件事情做些什么，除非你的受害者模式让你深深陷入抱怨与自怜中。<br>拒绝受害，掌控你的生命。</p>
+</blockquote>
+</blockquote>
+<p>◆ 小人物也能有大掌控</p>
+<blockquote>
+<blockquote>
+<p>面对不公平，无聊的人抱怨、懦弱的人受害、聪明的人跟随、清高的人躲避，而勇敢而智慧的人尝试用自己的方式来改变，掌控我们这个世界。我尊敬那些用自己的方式改变世界不公平的人，一个人面对不公平的态度，最能反映他的品德。</p>
+</blockquote>
+</blockquote>
+<p>◆ 谁动了我们的幸福</p>
+<blockquote>
+<blockquote>
+<p>你可以按照社会设置好的方式去工作、设置好的方式去竞争、设置好的方式去交换，但是一定不能按照社会设置好的方式去幸福。否则，你就彻底废了</p>
+</blockquote>
+</blockquote>
+<p>◆ 我们把自己弄丢了</p>
+<blockquote>
+<blockquote>
+<p>我们很听话地长成为一群有脑无心的人，一群有逻辑没情感的人，一群讲高度不讲尊重的人。我们长成为别人要求的样子，并且以此为荣。<br>就这样，我们把自己弄丢了。</p>
+</blockquote>
+</blockquote>
+<p>◆ 幸福不是用来讲的——口是心非原则</p>
+<blockquote>
+<blockquote>
+<p>从心理学来说，一个人缺什么，就会投射到身边人的身上，他会觉得身边的其他人也觉得自己缺。于是他就会不断地表达说自己其实不缺，一不小心就过了。这个结果就是，他不断地表达的东西就是自己最缺乏的——这个法则我把它命名为口是心非法则。此法则看人非常有用：你看一个人觉得自己缺什么，你就看他不断强调什么就好了。</p>
+</blockquote>
+</blockquote>
+<p>◆ 跋 拆掉思维里的墙，看到光</p>
+<blockquote>
+<blockquote>
+<p>面对呼啸而至的时代车轮，我们必须加速奔跑，有时会力不从心，有时会浮躁焦虑，但必须适应，它可以轻易地将每一个落伍的个体远远抛下，甚至碾作尘土，且不偿命。”<br>在轮下，我们能做些什么？<br>——赫尔曼·黑塞《在轮下》</p>
+</blockquote>
+</blockquote>
 
       
 
@@ -234,7 +322,7 @@ console.log(x)//10</code><br>反正我开始看到这个是一脸懵逼的</p>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
         		</li>
       		
 		</ul>
@@ -290,7 +378,7 @@ console.log(x)//10</code><br>反正我开始看到这个是一脸懵逼的</p>
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://wine1.github.io/2017/11/26/js中的操作符问题/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://wine1.github.io/2019/08/27/拆掉思维里的墙/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -304,18 +392,9 @@ console.log(x)//10</code><br>反正我开始看到这个是一脸懵逼的</p>
   
 <nav id="article-nav">
   
-    <a href="/2017/11/29/linux命令行/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          linux命令行
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/11/18/es6/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">es6</div>
+    <a href="/2019/08/21/typescript-1/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">typescript(1)</div>
       <i class="icon-circle-right"></i>
     </a>
   
