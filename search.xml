@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[哈希]]></title>
+    <url>%2F2019%2F09%2F25%2F%E5%93%88%E5%B8%8C%2F</url>
+    <content type="text"><![CDATA[今天开始刷算法，立了个每天一道算法题的flag,第一天，一道简单的题目，但是也可以有 有深度 的写法leetcode第一题用常规方法时间复杂度为O(n*n) 而hashmap的时间复杂度只有O(n) hashmap是一个用于存储key-value键值对的集合]]></content>
+      <tags>
+        <tag>数据结构</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[24岁这一天]]></title>
     <url>%2F2019%2F09%2F24%2F24%E5%B2%81%E8%BF%99%E4%B8%80%E5%A4%A9%2F</url>
-    <content type="text"></content>
+    <content type="text"><![CDATA[健康状况保持的不行，要坚持每天锻炼一会会呀 少看点书，慢下来，不要着急。欲速则不达 赶紧复习基础，多写代码，不然怎么跳槽，一定要尽快跳出这个烦人的圈。 存到一些钱，但是不要放太多注意力在这个东西，不然得不偿失。 不要抱怨，去改变~]]></content>
+      <tags>
+        <tag>随笔</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[做一个规划]]></title>
