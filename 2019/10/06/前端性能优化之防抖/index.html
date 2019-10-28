@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="https://wine1.github.io">
   <title>前端性能优化之防抖 | 哦。</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="日常自说自话的地方">
+  <meta name="description" content="函数防抖：实际上就是对于频繁触发的事件进行延时处理，只触发一次只响应一次，这样可以极大的提高性能 我们实现的思路就是：先设置一个计时器变量，用闭包保存，保证不会被内存释放，在事件触发的时候，也就是只要事件触发，先清除这个计时器，然后再设置一个，那么只要事件持续触发，刚刚建立的定时器就会被销毁，直到最后我们不在触发事件，就执行最后一次设置的定时器。 节流：限制触发频率">
 <meta name="keywords" content="前端">
 <meta property="og:type" content="article">
 <meta property="og:title" content="前端性能优化之防抖">
 <meta property="og:url" content="https://wine1.github.io/2019/10/06/前端性能优化之防抖/index.html">
 <meta property="og:site_name" content="哦。">
-<meta property="og:description" content="日常自说自话的地方">
+<meta property="og:description" content="函数防抖：实际上就是对于频繁触发的事件进行延时处理，只触发一次只响应一次，这样可以极大的提高性能 我们实现的思路就是：先设置一个计时器变量，用闭包保存，保证不会被内存释放，在事件触发的时候，也就是只要事件触发，先清除这个计时器，然后再设置一个，那么只要事件持续触发，刚刚建立的定时器就会被销毁，直到最后我们不在触发事件，就执行最后一次设置的定时器。 节流：限制触发频率">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-10-28T14:13:07.043Z">
+<meta property="og:updated_time" content="2019-10-28T14:48:59.465Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="前端性能优化之防抖">
-<meta name="twitter:description" content="日常自说自话的地方">
+<meta name="twitter:description" content="函数防抖：实际上就是对于频繁触发的事件进行延时处理，只触发一次只响应一次，这样可以极大的提高性能 我们实现的思路就是：先设置一个计时器变量，用闭包保存，保证不会被内存释放，在事件触发的时候，也就是只要事件触发，先清除这个计时器，然后再设置一个，那么只要事件持续触发，刚刚建立的定时器就会被销毁，直到最后我们不在触发事件，就执行最后一次设置的定时器。 节流：限制触发频率">
   
     <link rel="alternative" href="/atom.xml" title="哦。" type="application/atom+xml">
   
@@ -179,7 +179,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>函数防抖：实际上就是对于频繁触发的事件进行延时处理，只触发一次只响应一次，这样可以极大的提高性能</p>
+<p>我们实现的思路就是：先设置一个计时器变量，用闭包保存，保证不会被内存释放，在事件触发的时候，也就是只要事件触发，先清除这个计时器，然后再设置一个，那么只要事件持续触发，刚刚建立的定时器就会被销毁，直到最后我们不在触发事件，就执行最后一次设置的定时器。</p>
+<p>节流：限制触发频率</p>
+
       
 
       
