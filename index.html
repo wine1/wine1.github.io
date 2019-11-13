@@ -159,6 +159,82 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-serviceworker" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/11/13/serviceworker/">serviceworker</a>
+    </h1>
+  
+
+        
+        <a href="/2019/11/13/serviceworker/" class="archive-article-date">
+  	<time datetime="2019-11-13T13:21:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-13</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="serviceworker"><a href="#serviceworker" class="headerlink" title="serviceworker"></a>serviceworker</h3><p>离线网页应用？</p>
+        
+          <a class="article-more-a" href="/2019/11/13/serviceworker/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/11/13/serviceworker/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-重学前端系列笔记4" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -179,57 +255,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="前端性能优化"><a href="#前端性能优化" class="headerlink" title="前端性能优化"></a>前端性能优化</h2><ul>
-<li>页面加载性能</li>
-</ul>
-<ol>
-<li>秒开率：即一秒之内打开的用户占用户总量的百分比。</li>
-</ol>
-<ul>
-<li>动画与操作性能 3.内存 电量消耗</li>
-</ul>
-<h4 id="技术方案划分"><a href="#技术方案划分" class="headerlink" title="技术方案划分"></a>技术方案划分</h4><ul>
-<li><p>缓存</p>
-<p>1.客户端控制的强缓存策略</p>
-</li>
-</ul>
-<ul>
-<li><p>降低请求成本</p>
-<ol>
-<li>http dns：由客户端控制，隔一段时间主动请求 DNS 获取域名 IP，不走系统的 DNS</li>
-<li>TCP/TLS 连接复用：由服务端升级到 HTTP2，尽量合并域名</li>
-</ol>
-</li>
-</ul>
-<ul>
-<li><p>减少请求数</p>
-<ol>
-<li>JavaScript css 打包到 html</li>
-<li>用 JavaScript 控制图片异步加载和懒加载</li>
-<li>小型图片使用 data-uri(base64)</li>
-</ol>
-</li>
-<li><p>减少传输体积</p>
-<ol>
-<li>尽量使用 SVG/GRADIENT 等代替图片</li>
-<li>根据机型和网络状控制图片清晰度</li>
-<li>对低清晰度的图片使用锐化来提升体验</li>
-<li>设计上避免大型背景</li>
-</ol>
-</li>
-<li><p>技术设计应该从业务角度考虑</p>
-</li>
-</ul>
-<h4 id="工具链"><a href="#工具链" class="headerlink" title="工具链"></a>工具链</h4><ul>
-<li>工具体系的设计：1.初始化项目 2.运行和调试 3.测试 4.发布</li>
-</ul>
-<h4 id="持续集成"><a href="#持续集成" class="headerlink" title="持续集成"></a>持续集成</h4><ul>
-<li>持续集成的目标：一是要及早集成代码形成可测试的版本，二是通过一定的测试来验证提交的代码的有效性。</li>
-</ul>
-<h4 id="搭建系统"><a href="#搭建系统" class="headerlink" title="搭建系统"></a>搭建系统</h4><ul>
-<li>大量紧急不重要的页面 抽象成一个需求 就是搭建一个快速实现大量页面的系统</li>
-</ul>
-
+        <p>前端技能优化4</p>
+        
+          <a class="article-more-a" href="/2019/10/28/重学前端系列笔记4/#more">more >></a>
+        
       
 
       
@@ -308,7 +337,7 @@
       
         <p>函数防抖：实际上就是对于频繁触发的事件进行延时处理，只触发一次只响应一次，这样可以极大的提高性能</p>
 <p>我们实现的思路就是：先设置一个计时器变量，用闭包保存，保证不会被内存释放，在事件触发的时候，也就是只要事件触发，先清除这个计时器，然后再设置一个，那么只要事件持续触发，刚刚建立的定时器就会被销毁，直到最后我们不在触发事件，就执行最后一次设置的定时器。</p>
-<p>节流：限制触发频率</p>
+<p>节流：限制触发频率<br>当快速的点击抢购按钮的时候，数量快速的增加，如果有人用脚本点击，那么这个数量会瞬间非常的大，造成性能问题。<br>那么我们就需要控制触发函数的频率，也就是节流，事件第一次触发的时候，记录下函数执行的时间点，当函数想要再一次执行，需要间隔一定的时间才能执行，也就是每间隔一定的时间，才能触发这个函数，而不能快速触发，这就是节流的方法。</p>
 
       
 
@@ -881,82 +910,6 @@
 
 
   
-    <article id="post-乌合之众" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/06/乌合之众/">乌合之众</a>
-    </h1>
-  
-
-        
-        <a href="/2019/09/06/乌合之众/" class="archive-article-date">
-  	<time datetime="2019-09-06T15:04:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-06</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>法国心理学家古斯塔夫勒庞的这本社会心理学著作《乌合之众》大多数人就算没有看过也应该听说过。其实刚开始看这本书的时候我是看不下去的，加之网上对他各种评论，褒贬不一，让我更加不敢妄加断言自己的观点。但是自己些写东西嘛，必然是有自己的偏见的，还是记录一下自己看这本书时的看法，不一定对。</p>
-        
-          <a class="article-more-a" href="/2019/09/06/乌合之众/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/09/06/乌合之众/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/">12</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -1070,11 +1023,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">基础</a>
+                <a href="javascript:void(0)" class="js-tag color4">css</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">css</a>
+                <a href="javascript:void(0)" class="js-tag color3">基础</a>
               </li>
              
               <li class="article-tag-list-item">

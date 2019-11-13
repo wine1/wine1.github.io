@@ -16,13 +16,13 @@
 <meta property="og:site_name" content="哦。">
 <meta property="og:description" content="关于this的讲解">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://wine1.github.io/2018/09/15/js中的this/js%E4%B8%AD%E7%9A%84this/new.png">
-<meta property="og:image" content="https://wine1.github.io/2018/09/15/js中的this/js%E4%B8%AD%E7%9A%84this/this%E6%8C%87%E5%90%91.png">
+<meta property="og:image" content="https://wine1.github.io/.io//new.png">
+<meta property="og:image" content="https://wine1.github.io/.io//this%E6%8C%87%E5%90%91.png">
 <meta property="og:updated_time" content="2019-05-13T14:58:10.230Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="js中的this">
 <meta name="twitter:description" content="关于this的讲解">
-<meta name="twitter:image" content="https://wine1.github.io/2018/09/15/js中的this/js%E4%B8%AD%E7%9A%84this/new.png">
+<meta name="twitter:image" content="https://wine1.github.io/.io//new.png">
   
     <link rel="alternative" href="/atom.xml" title="哦。" type="application/atom+xml">
   
@@ -186,11 +186,11 @@
 <a id="more"></a>
 <h2 id="this是什么"><a href="#this是什么" class="headerlink" title="this是什么"></a>this是什么</h2><ol>
 <li>调用对象的方法<br>识别和引用我们当前正在使用的对象的方法</li>
-<li>构造函数<br>在实例化构造函数的过程中，new<br><img src="js%E4%B8%AD%E7%9A%84this/new.png" alt="new"></li>
+<li>构造函数<br>在实例化构造函数的过程中，new<br><img src="/.io//new.png" alt="new"></li>
 <li>函数调用<br>如果我们只调用一个普通的日常函数而没有任何这些奇特的对象，那么 这时的this可以做最全局的事情，也就是说这时候this是指向window对象的</li>
 <li>事件处理程序</li>
 </ol>
-<h2 id="系统的阐述this的指向"><a href="#系统的阐述this的指向" class="headerlink" title="系统的阐述this的指向"></a>系统的阐述this的指向</h2><p>this的指向只有在函数执行的时候才可以确定到底指向谁，实际上<strong>this最终指向的是最后调用它的对象</strong><br>　  情况1：如果一个函数中有this，但是它没有被上一级的对象所调用，那么this指向的就是window，这里需要说明的是在js的严格版中this指向的不是window.<br>　　情况2：如果一个函数中有this，这个函数有被上一级的对象所调用，那么this指向的就是上一级的对象。<br>　　情况3：如果一个函数中有this，这个函数中包含多个对象，尽管这个函数是被最外层的对象所调用，this指向的也只是它上一级的对象<br><img src="js%E4%B8%AD%E7%9A%84this/this%E6%8C%87%E5%90%91.png" alt="this指向"><br>在严格模式中的默认的this不再是window，而是undefined。</p>
+<h2 id="系统的阐述this的指向"><a href="#系统的阐述this的指向" class="headerlink" title="系统的阐述this的指向"></a>系统的阐述this的指向</h2><p>this的指向只有在函数执行的时候才可以确定到底指向谁，实际上<strong>this最终指向的是最后调用它的对象</strong><br>　  情况1：如果一个函数中有this，但是它没有被上一级的对象所调用，那么this指向的就是window，这里需要说明的是在js的严格版中this指向的不是window.<br>　　情况2：如果一个函数中有this，这个函数有被上一级的对象所调用，那么this指向的就是上一级的对象。<br>　　情况3：如果一个函数中有this，这个函数中包含多个对象，尽管这个函数是被最外层的对象所调用，this指向的也只是它上一级的对象<br><img src="/.io//this%E6%8C%87%E5%90%91.png" alt="this指向"><br>在严格模式中的默认的this不再是window，而是undefined。</p>
 <p><strong>如果返回值是一个对象，那么this指向的就是那个返回的对象，如果返回值不是一个对象那么this还是指向函数的实例。</strong></p>
 <h2 id="bind-call-apply对this指向的改变"><a href="#bind-call-apply对this指向的改变" class="headerlink" title="bind/call/apply对this指向的改变"></a>bind/call/apply对this指向的改变</h2><p>call/apply是直接进行相关函数的调用,bind不会指向相关函数,而是返回一个新的函数,这个新的函数已经自动绑定了新的this指向.<br>而call和apply的区别主要体现在,参数类型的不同,apply的参数可以是一个数组.</p>
 <h2 id="箭头函数中this的指向"><a href="#箭头函数中this的指向" class="headerlink" title="箭头函数中this的指向"></a>箭头函数中this的指向</h2><p>箭头函数的this 是根据外层(函数或者全局)上下文来决定的.</p>
@@ -457,11 +457,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">基础</a>
+                <a href="javascript:void(0)" class="js-tag color4">css</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">css</a>
+                <a href="javascript:void(0)" class="js-tag color3">基础</a>
               </li>
              
               <li class="article-tag-list-item">
