@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[document.body.scrollTop值为0的解决方法]]></title>
+    <url>%2F2019%2F11%2F25%2Fdocument-body-scrollTop%E5%80%BC%E4%B8%BA0%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95%2F</url>
+    <content type="text"><![CDATA[网传解决方法，不再赘述]]></content>
+      <tags>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[移动端隐藏滚动条]]></title>
+    <url>%2F2019%2F11%2F25%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%9A%90%E8%97%8F%E6%BB%9A%E5%8A%A8%E6%9D%A1%2F</url>
+    <content type="text"><![CDATA[记录工作中遇到的问题，移动端的滚动条在某些情况下十分不美观，特别是在可滚动的表格中，显得格外的不精致。 ::-webkit-scrollbar {display: none;}在ios端并不起作用，安卓端我没有测试针对ios不生效的情况，做如下处理让滚动条离远点超出父元素的范围，在通过隐藏父元素的超出部分让滚动条消失。由于子元素的高度大于父元素的高度，超过父元素的高度的内容被剪裁。因此，子元素的滚动条就被剪裁掉了]]></content>
+      <tags>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[serviceworker]]></title>
     <url>%2F2019%2F11%2F13%2Fserviceworker%2F</url>
     <content type="text"><![CDATA[serviceworker离线网页应用？ serviceworker的前身 manifest Service Worker是谷歌发起的实现PWA（Progressive Web App）的一个关键角色 Service Worker的使用套路是先注册一个Worker，然后后台就会启动一条线程，可以在这条线程启动的时候去加载一些资源缓存起来，然后监听fetch事件，在这个事件里拦截页面的请求，先看下缓存里有没有，如果有直接返回，否则正常加载。或者是一开始不缓存，每个资源请求后再拷贝一份缓存起来，然后下一次请求的时候缓存里就有了。 网上的文章]]></content>
