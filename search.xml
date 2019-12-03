@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[类似fontawesome图标库的实现]]></title>
+    <url>%2F2019%2F12%2F03%2F%E7%B1%BB%E4%BC%BCfontawesome%E5%9B%BE%E6%A0%87%E5%BA%93%E7%9A%84%E5%AE%9E%E7%8E%B0%2F</url>
+    <content type="text"><![CDATA[通常一个app中，正常情况下会有大量重复使用的小图标icon 这些图标以图片的形式存在的话，虽然小，但每个图片都会有一个请求。近日我司一个从阿里来的大佬给提供了另一个做前端小图标的思路。类似 fontawesome 自己实现类似的库，可以通过这种方法(https://zhuanlan.zhihu.com/p/22724856)]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[支付宝体验设计精髓]]></title>
     <url>%2F2019%2F12%2F01%2F%E6%94%AF%E4%BB%98%E5%AE%9D%E4%BD%93%E9%AA%8C%E8%AE%BE%E8%AE%A1%E7%B2%BE%E9%AB%93%2F</url>
     <content type="text"></content>

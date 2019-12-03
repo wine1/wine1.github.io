@@ -6,20 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://wine1.github.io">
-  <title>移动端隐藏滚动条 | 哦。</title>
+  <title>类似fontawesome图标库的实现 | 哦。</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="记录工作中遇到的问题，移动端的滚动条在某些情况下十分不美观，特别是在可滚动的表格中，显得格外的不精致。">
-<meta name="keywords" content="前端">
+  <meta name="description" content="通常一个app中，正常情况下会有大量重复使用的小图标icon 这些图标以图片的形式存在的话，虽然小，但每个图片都会有一个请求。近日我司一个从阿里来的大佬给提供了另一个做前端小图标的思路。类似 fontawesome  自己实现类似的库，可以通过这种方法(https://zhuanlan.zhihu.com/p/22724856)">
 <meta property="og:type" content="article">
-<meta property="og:title" content="移动端隐藏滚动条">
-<meta property="og:url" content="https://wine1.github.io/2019/11/25/移动端隐藏滚动条/index.html">
+<meta property="og:title" content="类似fontawesome图标库的实现">
+<meta property="og:url" content="https://wine1.github.io/2019/12/03/类似fontawesome图标库的实现/index.html">
 <meta property="og:site_name" content="哦。">
-<meta property="og:description" content="记录工作中遇到的问题，移动端的滚动条在某些情况下十分不美观，特别是在可滚动的表格中，显得格外的不精致。">
+<meta property="og:description" content="通常一个app中，正常情况下会有大量重复使用的小图标icon 这些图标以图片的形式存在的话，虽然小，但每个图片都会有一个请求。近日我司一个从阿里来的大佬给提供了另一个做前端小图标的思路。类似 fontawesome  自己实现类似的库，可以通过这种方法(https://zhuanlan.zhihu.com/p/22724856)">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-11-25T15:41:01.820Z">
+<meta property="og:updated_time" content="2019-12-03T13:43:27.206Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="移动端隐藏滚动条">
-<meta name="twitter:description" content="记录工作中遇到的问题，移动端的滚动条在某些情况下十分不美观，特别是在可滚动的表格中，显得格外的不精致。">
+<meta name="twitter:title" content="类似fontawesome图标库的实现">
+<meta name="twitter:description" content="通常一个app中，正常情况下会有大量重复使用的小图标icon 这些图标以图片的形式存在的话，虽然小，但每个图片都会有一个请求。近日我司一个从阿里来的大佬给提供了另一个做前端小图标的思路。类似 fontawesome  自己实现类似的库，可以通过这种方法(https://zhuanlan.zhihu.com/p/22724856)">
   
     <link rel="alternative" href="/atom.xml" title="哦。" type="application/atom+xml">
   
@@ -159,29 +158,28 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-移动端隐藏滚动条" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-类似fontawesome图标库的实现" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      移动端隐藏滚动条
+      类似fontawesome图标库的实现
     </h1>
   
 
         
-        <a href="/2019/11/25/移动端隐藏滚动条/" class="archive-article-date">
-  	<time datetime="2019-11-25T15:37:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-25</time>
+        <a href="/2019/12/03/类似fontawesome图标库的实现/" class="archive-article-date">
+  	<time datetime="2019-12-03T13:42:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-03</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>记录工作中遇到的问题，移动端的滚动条在某些情况下十分不美观，特别是在可滚动的表格中，显得格外的不精致。</p>
-<a id="more"></a>
-<p><code>::-webkit-scrollbar {display: none;}</code><br>在ios端并不起作用，安卓端我没有测试<br>针对ios不生效的情况，做如下处理<br>让滚动条离远点超出父元素的范围，在通过隐藏父元素的超出部分让滚动条消失。由于子元素的高度大于父元素的高度，超过父元素的高度的内容被剪裁。因此，子元素的滚动条就被剪裁掉了</p>
+        <p>通常一个app中，正常情况下会有大量重复使用的小图标icon 这些图标以图片的形式存在的话，虽然小，但每个图片都会有一个请求。<br>近日我司一个从阿里来的大佬给提供了另一个做前端小图标的思路。<br>类似 <a href="http://www.fontawesome.com.cn/" target="_blank" rel="noopener">fontawesome</a> </p>
+<p>自己实现类似的库，可以通过这种方法(<a href="https://zhuanlan.zhihu.com/p/22724856" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/22724856</a>)</p>
 
       
 
@@ -211,17 +209,6 @@
     <div class="article-info article-info-index">
       
       
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
       
 
       
@@ -272,7 +259,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://wine1.github.io/2019/11/25/移动端隐藏滚动条/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://wine1.github.io/2019/12/03/类似fontawesome图标库的实现/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -286,18 +273,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/11/25/document-body-scrollTop值为0的解决方法/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          document.body.scrollTop值为0的解决方法
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/11/13/serviceworker/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">serviceworker</div>
+    <a href="/2019/12/01/支付宝体验设计精髓/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">支付宝体验设计精髓</div>
       <i class="icon-circle-right"></i>
     </a>
   
