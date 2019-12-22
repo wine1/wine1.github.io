@@ -159,6 +159,162 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-重学前端系列笔记4" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/10/28/重学前端系列笔记4/">重学前端系列笔记4</a>
+    </h1>
+  
+
+        
+        <a href="/2019/10/28/重学前端系列笔记4/" class="archive-article-date">
+  	<time datetime="2019-10-28T14:26:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-28</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>前端技能优化4</p>
+        
+          <a class="article-more-a" href="/2019/10/28/重学前端系列笔记4/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">基础知识</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/10/28/重学前端系列笔记4/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-前端性能优化之防抖" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/10/06/前端性能优化之防抖/">前端性能优化之防抖</a>
+    </h1>
+  
+
+        
+        <a href="/2019/10/06/前端性能优化之防抖/" class="archive-article-date">
+  	<time datetime="2019-10-06T03:50:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-06</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>函数防抖：实际上就是对于频繁触发的事件进行延时处理，只触发一次只响应一次，这样可以极大的提高性能</p>
+<p>我们实现的思路就是：先设置一个计时器变量，用闭包保存，保证不会被内存释放，在事件触发的时候，也就是只要事件触发，先清除这个计时器，然后再设置一个，那么只要事件持续触发，刚刚建立的定时器就会被销毁，直到最后我们不在触发事件，就执行最后一次设置的定时器。</p>
+<p>节流：限制触发频率<br>当快速的点击抢购按钮的时候，数量快速的增加，如果有人用脚本点击，那么这个数量会瞬间非常的大，造成性能问题。<br>那么我们就需要控制触发函数的频率，也就是节流，事件第一次触发的时候，记录下函数执行的时间点，当函数想要再一次执行，需要间隔一定的时间才能执行，也就是每间隔一定的时间，才能触发这个函数，而不能快速触发，这就是节流的方法。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/10/06/前端性能优化之防抖/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-哈希" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -754,165 +910,6 @@
 
 
   
-    <article id="post-一个冥想者的觉知书" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/02/一个冥想者的觉知书/">一个冥想者的觉知书</a>
-    </h1>
-  
-
-        
-        <a href="/2019/09/02/一个冥想者的觉知书/" class="archive-article-date">
-  	<time datetime="2019-09-02T14:59:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-02</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>这是我看的第一本关于冥想的书，看完之后我依旧是个没有信仰的人。<br>本书通过作者的亲身经历，描述自己在巨大的压力下，如何战胜抑郁和焦虑，找到了行之有效的自我调节方法。</p>
-<p>看这本书的初衷很简单，我很焦虑。我也希望能有个行之有效的方法，能够让我恢复平静，另一方面，看书也使我平静。</p>
-<p>这本书越看到后面，宗教的色彩越明显，对于作者所说的福至心灵的一刻，我从未体验过，但也无法证明其不存在，故而不置可否。<br>但他其中提到的一些观念，和我在别的书籍中得到的知识交叉印证，这种感觉很妙。</p>
-        
-          <a class="article-more-a" href="/2019/09/02/一个冥想者的觉知书/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/09/02/一个冥想者的觉知书/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-拆掉思维里的墙" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/27/拆掉思维里的墙/">拆掉思维里的墙</a>
-    </h1>
-  
-
-        
-        <a href="/2019/08/27/拆掉思维里的墙/" class="archive-article-date">
-  	<time datetime="2019-08-26T22:58:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-27</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<blockquote>
-<p>面对呼啸而至的时代车轮，我们必须加速奔跑，有时会力不从心，有时会浮躁焦虑，但必须适应，它可以轻易地将每一个落伍的个体远远抛下，甚至碾作尘土，且不偿命。”<br>                                                            ——赫尔曼·黑塞《在轮下》<br>在轮下，我们能做些什么？</p>
-</blockquote>
-</blockquote>
-<p>接受不能改变的，尽力去改变那些我们能改变的，且能让事情变得更好的东西。<br>一万条空想不如开始行动，即使最后的结果并不尽如人意，但是开始，就是成功的第一步，否则想再多都没有意义。<br>少听成功学，每个人的成功都有其特定的背景和机遇，你也有自己的。<br>世俗意义的成功是唯一的成功标准嘛？你想爬到人上，但总有人站在你的上方俯视你，倘若你忿忿不平，发誓一定要站到更高的位置，把别人踩在脚下，那么想一想，你想要的到底是什么 你要付出了什么代价 相较于你想得到的东西，你愿意以失去另一些东西为代价吗 思考清楚了这个问题再行动。<br>时代是时代，你是你。任何时候，当下都是最好的时代，也是最坏的时代。人无法轻易改变他人，不妨从改变自己开始。</p>
-        
-          <a class="article-more-a" href="/2019/08/27/拆掉思维里的墙/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/08/27/拆掉思维里的墙/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
@@ -1018,11 +1015,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">ES6</a>
+                <a href="javascript:void(0)" class="js-tag color5">工作总结</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">工作总结</a>
+                <a href="javascript:void(0)" class="js-tag color4">ES6</a>
               </li>
              
               <li class="article-tag-list-item">
