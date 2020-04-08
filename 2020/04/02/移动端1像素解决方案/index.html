@@ -8,17 +8,18 @@
   <link rel="dns-prefetch" href="https://wine1.github.io">
   <title>移动端1像素解决方案 | 哦。</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="日常自说自话的地方">
+  <meta name="description" content="移动端适配">
+<meta name="keywords" content="前端">
 <meta property="og:type" content="article">
 <meta property="og:title" content="移动端1像素解决方案">
 <meta property="og:url" content="https://wine1.github.io/2020/04/02/移动端1像素解决方案/index.html">
 <meta property="og:site_name" content="哦。">
-<meta property="og:description" content="日常自说自话的地方">
+<meta property="og:description" content="移动端适配">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-04-01T23:54:38.652Z">
+<meta property="og:updated_time" content="2020-04-02T14:17:20.411Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="移动端1像素解决方案">
-<meta name="twitter:description" content="日常自说自话的地方">
+<meta name="twitter:description" content="移动端适配">
   
     <link rel="alternative" href="/atom.xml" title="哦。" type="application/atom+xml">
   
@@ -178,7 +179,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h1 id="移动端适配"><a href="#移动端适配" class="headerlink" title="移动端适配"></a>移动端适配</h1><a id="more"></a>
+<h2 id="1px-边框解决方案"><a href="#1px-边框解决方案" class="headerlink" title="1px 边框解决方案"></a>1px 边框解决方案</h2><h3 id="transform-scale-0-5-方案"><a href="#transform-scale-0-5-方案" class="headerlink" title="transform: scale(0.5) 方案"></a>transform: scale(0.5) 方案</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">div &#123;</span><br><span class="line">    height:1px;</span><br><span class="line">    background:#000;</span><br><span class="line">    -webkit-transform: scaleY(0.5);</span><br><span class="line">    -webkit-transform-origin:0 0;</span><br><span class="line">    overflow: hidden;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="css-根据设备像素比媒体查询后的解决方案"><a href="#css-根据设备像素比媒体查询后的解决方案" class="headerlink" title="css 根据设备像素比媒体查询后的解决方案"></a>css 根据设备像素比媒体查询后的解决方案</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">/* 2倍屏 */</span><br><span class="line">@media only screen and (-webkit-min-device-pixel-ratio: 2.0) &#123;</span><br><span class="line">    .border-bottom::after &#123;</span><br><span class="line">        -webkit-transform: scaleY(0.5);</span><br><span class="line">        transform: scaleY(0.5);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">/* 3倍屏 */</span><br><span class="line">@media only screen and (-webkit-min-device-pixel-ratio: 3.0) &#123;</span><br><span class="line">    .border-bottom::after &#123;</span><br><span class="line">        -webkit-transform: scaleY(0.33);</span><br><span class="line">        transform: scaleY(0.33);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="适配方案"><a href="#适配方案" class="headerlink" title="适配方案"></a>适配方案</h2><p>待续。。。</p>
+
       
 
       
@@ -207,6 +214,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -419,15 +437,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">基础</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">es6</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">js</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">基础</a>
               </li>
              
               <li class="article-tag-list-item">
