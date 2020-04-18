@@ -16,13 +16,13 @@
 <meta property="og:site_name" content="哦。">
 <meta property="og:description" content="vertical-align 是一个容易出bug的属性">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://wine1.github.io/.io//tu1.png">
-<meta property="og:image" content="https://wine1.github.io/.io//tu2.png">
+<meta property="og:image" content="https://wine1.github.io/2018/11/06/vertical-align详解/tu1.png">
+<meta property="og:image" content="https://wine1.github.io/2018/11/06/vertical-align详解/tu2.png">
 <meta property="og:updated_time" content="2019-04-01T14:40:24.266Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vertical-align详解">
 <meta name="twitter:description" content="vertical-align 是一个容易出bug的属性">
-<meta name="twitter:image" content="https://wine1.github.io/.io//tu1.png">
+<meta name="twitter:image" content="https://wine1.github.io/2018/11/06/vertical-align详解/tu1.png">
   
     <link rel="alternative" href="/atom.xml" title="哦。" type="application/atom+xml">
   
@@ -190,7 +190,7 @@
       
         <p>vertical-align 是一个容易出bug的属性</p>
 <a id="more"></a>
-<p>首先，为什么有时候始终达不到对齐的效果呢<br>来看看官方定义<br><img src="/.io//tu1.png" alt="tu"><br>对不齐的原因主要是因为，<strong>父元素</strong> 如图，可能的值中，有不少是以父元素作为基准对其的，而不是与其同辈的元素，但是如果同辈元素中均有这一属性 则两者能够水平和对齐，因为他们的基准一致。<br><code>&lt;p&gt;&lt;img/&gt;balabala&lt;/p&gt;</code>在这段代码里，在img上加vertical-align希望i与文字居中对齐（或者别的）是会出问题的，因为文字不会居中对齐。（某些特定条件下是会对齐的）<br><img src="/.io//tu2.png" alt="tu"><br><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/vertical-align" target="_blank" rel="noopener">MDN上对vertical-align的讲解</a></p>
+<p>首先，为什么有时候始终达不到对齐的效果呢<br>来看看官方定义<br><img src="/2018/11/06/vertical-align详解/tu1.png" alt="tu"><br>对不齐的原因主要是因为，<strong>父元素</strong> 如图，可能的值中，有不少是以父元素作为基准对其的，而不是与其同辈的元素，但是如果同辈元素中均有这一属性 则两者能够水平和对齐，因为他们的基准一致。<br><code>&lt;p&gt;&lt;img/&gt;balabala&lt;/p&gt;</code>在这段代码里，在img上加vertical-align希望i与文字居中对齐（或者别的）是会出问题的，因为文字不会居中对齐。（某些特定条件下是会对齐的）<br><img src="/2018/11/06/vertical-align详解/tu2.png" alt="tu"><br><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/vertical-align" target="_blank" rel="noopener">MDN上对vertical-align的讲解</a></p>
 
       
 
