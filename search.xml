@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[春日]]></title>
+    <url>%2F2020%2F04%2F18%2F%E6%98%A5%E6%97%A5%2F</url>
+    <content type="text"><![CDATA[!(1)[./春日/_MG_2885.jpg]!(2)[_MG_2888.jpg]]]></content>
+      <tags>
+        <tag>图片</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[移动端1像素解决方案]]></title>
     <url>%2F2020%2F04%2F02%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF1%E5%83%8F%E7%B4%A0%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%2F</url>
     <content type="text"><![CDATA[移动端适配 1px 边框解决方案transform: scale(0.5) 方案1234567div &#123; height:1px; background:#000; -webkit-transform: scaleY(0.5); -webkit-transform-origin:0 0; overflow: hidden;&#125; css 根据设备像素比媒体查询后的解决方案1234567891011121314/* 2倍屏 */@media only screen and (-webkit-min-device-pixel-ratio: 2.0) &#123; .border-bottom::after &#123; -webkit-transform: scaleY(0.5); transform: scaleY(0.5); &#125;&#125;/* 3倍屏 */@media only screen and (-webkit-min-device-pixel-ratio: 3.0) &#123; .border-bottom::after &#123; -webkit-transform: scaleY(0.33); transform: scaleY(0.33); &#125;&#125; 适配方案待续。。。]]></content>
       <tags>
         <tag>前端</tag>
       </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[a]]></title>
-    <url>%2F2020%2F01%2F03%2Fa%2F</url>
-    <content type="text"></content>
   </entry>
   <entry>
     <title><![CDATA[2019年度总结]]></title>
