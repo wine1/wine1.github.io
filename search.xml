@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[春日]]></title>
-    <url>%2F2020%2F04%2F18%2F%E6%98%A5%E6%97%A5%2F</url>
-    <content type="text"><![CDATA[!(1)[./春日/_MG_2885.jpg]!(2)[_MG_2888.jpg]]]></content>
+    <title><![CDATA[js对中文编码的函数]]></title>
+    <url>%2F2020%2F05%2F06%2Fjs%E5%AF%B9%E4%B8%AD%E6%96%87%E7%BC%96%E7%A0%81%E7%9A%84%E5%87%BD%E6%95%B0%2F</url>
+    <content type="text"><![CDATA[js中的中文保险起见 最好都进行一下转码escape,encodeURI,encodeURIComponent escapeescape encodeURIencodeURI() 函数可把字符串作为 URI 进行编码。如果 URI 组件中含有分隔符，比如 ? 和 #，则应当使用 encodeURIComponent() 方法分别对各组件进行编码。encodeURI encodeURIComponentencodeURIComponent 参考博文]]></content>
       <tags>
-        <tag>图片</tag>
+        <tag>前端</tag>
       </tags>
   </entry>
   <entry>
