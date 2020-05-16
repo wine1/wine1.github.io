@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[get和post方法]]></title>
+    <url>%2F2020%2F05%2F16%2Fget%E5%92%8Cpost%E6%96%B9%E6%B3%95%2F</url>
+    <content type="text"><![CDATA[http中的get和post方法 get获取的数据可以被缓存get传输的数据长度短get是明文传输，参数在url中，相对来说安全性不够]]></content>
+      <tags>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2F2020%2F05%2F16%2F%E9%AB%98%E6%95%88%E8%83%BD%E4%BA%BA%E5%A3%AB%E7%9A%84%E4%B8%83%E4%B8%AA%E4%B9%A0%E6%83%AF%2F</url>
+    <content type="text"><![CDATA[title: 高效能人士的七个习惯date: 2020-05-16 16:19:00tags: 随笔 –好久之前看的 先记个提纲吧 日后若果看第二遍 倒是可以记个详细的笔记 积极主动 以始为终 要事第一 双赢思维 知彼解己 综合综效 不断更新]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[rn踩坑]]></title>
     <url>%2F2020%2F05%2F13%2Frn%E8%B8%A9%E5%9D%91%2F</url>
     <content type="text"><![CDATA[ES5/ES3 中的异步函数或方法需要 “Promise” 构造函数。确保对 “Promise” 构造函数进行了声明或在 “–lib” 选项中包含了 “ES2015”。解决办法： RN开发 js jsx ts tsx的区别详情看别人家总结 报错 Building and installing the app on the device (cd android &amp;&amp; gradlew.bat installDebug)…Downloading http://10.10.82.235:8080/sdk-resources/gradle-4.6-all.zipException in thread “main” java.net.ConnectException: Connection refused:解决办法1、 rm android/ -rf2、 react-native eject3、 run Props获取不到值原因 箭头函数 this的指向丢了解决办法]]></content>
