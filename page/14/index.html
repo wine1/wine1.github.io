@@ -165,6 +165,138 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-js学习笔记-1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/13/js学习笔记-1/">js学习笔记(1)</a>
+    </h1>
+  
+
+        
+        <a href="/2017/11/13/js学习笔记-1/" class="archive-article-date">
+  	<time datetime="2017-11-13T13:29:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-13</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>基本数据类型<br>undefined、null、Boolean、number、string、object<br><strong>async和defer区别</strong></p>
+<pre><code class="&lt;script">没有 defer 或 async，浏览器会立即加载并执行指定的脚本，“立即”指的是在渲染该 script 标签之下的文档元素之前，也就是说不等待后续载入的文档元素，读到就加载并执行。
+~~~&lt;script async src=&quot;script.js&quot;&gt;&lt;/script&gt;
+有 async，&lt;mark&gt;加载和渲染&lt;/mark&gt;后续文档元素的过程将和 script.js 的加载与执行并行进行（异步）。
+~~~ &lt;script defer src=&quot;myscript.js&quot;&gt;&lt;/script&gt;
+有 defer，&lt;mark&gt;加载&lt;/mark&gt;后续文档元素的过程将和 script.js 的加载并行进行（异步），但是 script.js 的&lt;mark&gt;执行&lt;/mark&gt;要在所有元素解析完成之后，DOMContentLoaded 事件触发之前完成。
+&lt;!-- more --&gt;
+**严格模式**
+将&quot;use strict&quot;放在脚本文件的第一行，则整个脚本都将以&quot;严格模式&quot;运行。如果这行语句不在第一行，则无效，整个脚本以&quot;正常模式&quot;运行。
+- 全局变量显式声明
+- 禁止使用with语句
+- 禁止创设eval作用域
+- 禁止this关键字指向全局对象
+- 禁止在函数内部遍历调用栈
+- 严格模式下无法删除变量。只有configurable设置为true的对象属性，才能被删除
+- 对象不能有重名的属性、函数不能有重名的参数
+- 禁止八进制表示法
+- 不允许对arguments赋值、arguments不再追踪参数的变化、禁止使用arguments.callee
+- 函数必须声明在顶层
+**typeof和instanceof**
+typeof的返回值类型有undefined、Boolean、string、number、object、function
+对于未初始化的变量和没有定义的变量都会返回undefined
+null表示一个空对象指针
+instanceof运算符可以用来判断某个构造函数的prototype属性是否存在于另外一个要检测对象的原型链上。
+语法：object instanceof constructor
+参数：object（要检测的对象.）constructor（某个构造函数）
+**JS全局函数**
+- decodeURI()     解码某个编码的 URI。
+- decodeURIComponent()     解码一个编码的 URI 组件。
+- encodeURI()     把字符串编码为 URI。
+- encodeURIComponent()     把字符串编码为 URI 组件。
+- escape()     对字符串进行编码。
+- eval()     计算 JavaScript 字符串，并把它作为脚本代码来执行。
+- isFinite()     检查某个值是否为有穷大的数。
+- isNaN()     检查某个值是否是数字。
+- Number()     把对象的值转换为数字。
+- parseFloat()     解析一个字符串并返回一个浮点数。
+- parseInt()     解析一个字符串并返回一个整数。默认解析成十进制数
+- String()     把对象的值转换为字符串。
+- unescape()     对由 escape() 编码的字符串进行解码。
+**object类型的属性和方法**
+- Constructor:对创建对象的函数的引用（指针）。对于Object类，该指针指向原始的object()函数。
+- Prototype:对该对象的对象原型的引用。对于所有的类，它默认返回Object对象的一个实例。
+方法：
+- hasOwnProperty(property):判断对象是否有某个特定的属性。必须用字符串指定该属性（例如，o.hasOwnProperty(”name”)）。
+- isPrototypeOf(object):判断该对象是否为另一个对象的原型。
+- propertyIsEnumerable(property):判断给定的属性是否可以用for…in语句进行枚举。
+- toString():返回对象的原始字符串表示。对于Object类，ECMA－262没有定义这个值，所以不同的ECMAScriipt实现具有不同的值。
+- valueOf():返回最适合该对象的原值。对于许多类，该方法返回的值都与toString()的返回值相同。
+**操作符**
+https://www.cnblogs.com/Peng2014/p/4707324.html
+偷个懒，转载别人总结的博客
+forin 
+with
+函数 return语句
+参数
+作用域
+没有重载
+声明提升</code></pre>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/11/13/js学习笔记-1/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-头条项目" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -736,11 +868,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">

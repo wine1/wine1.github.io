@@ -1,17 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[get和post方法]]></title>
-    <url>%2F2020%2F05%2F16%2Fget%E5%92%8Cpost%E6%96%B9%E6%B3%95%2F</url>
-    <content type="text"><![CDATA[http中的get和post方法 get获取的数据可以被缓存get传输的数据长度短get是明文传输，参数在url中，相对来说安全性不够]]></content>
+    <title><![CDATA[axios中的拦截器]]></title>
+    <url>%2F2020%2F05%2F18%2Faxios%E4%B8%AD%E7%9A%84%E6%8B%A6%E6%88%AA%E5%99%A8%2F</url>
+    <content type="text"><![CDATA[拦截器在请求或响应被 then 或 catch 处理前拦截它们。分为请求拦截器和响应拦截器 关于拦截器的官网文档 请求拦截器请求拦截器的作用是在请求发送前进行一些操作，例如在每个请求体里加上token 响应拦截器响应拦截器的作用是在接收到响应后进行一些操作，例如在服务器返回登录状态失效，需要重新登录的时候，跳转到登录页。]]></content>
       <tags>
         <tag>前端</tag>
       </tags>
   </entry>
   <entry>
-    <title></title>
+    <title><![CDATA[get和post方法]]></title>
+    <url>%2F2020%2F05%2F16%2Fget%E5%92%8Cpost%E6%96%B9%E6%B3%95%2F</url>
+    <content type="text"><![CDATA[http中的get和post方法 get获取的数据可以被缓存get传输的数据长度短get是明文传输，参数在url中，相对来说安全性不够 关于在axios中 get和post 以及params和data的区别详情看官网]]></content>
+      <tags>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[高效能人士的七个习惯]]></title>
     <url>%2F2020%2F05%2F16%2F%E9%AB%98%E6%95%88%E8%83%BD%E4%BA%BA%E5%A3%AB%E7%9A%84%E4%B8%83%E4%B8%AA%E4%B9%A0%E6%83%AF%2F</url>
-    <content type="text"><![CDATA[title: 高效能人士的七个习惯date: 2020-05-16 16:19:00tags: 随笔 –好久之前看的 先记个提纲吧 日后若果看第二遍 倒是可以记个详细的笔记 积极主动 以始为终 要事第一 双赢思维 知彼解己 综合综效 不断更新]]></content>
+    <content type="text"><![CDATA[好久之前看的 先记个提纲吧 日后若果看第二遍 倒是可以记个详细的笔记 积极主动 以始为终 要事第一 双赢思维 知彼解己 综合综效 不断更新]]></content>
+      <tags>
+        <tag>随笔</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[rn踩坑]]></title>
