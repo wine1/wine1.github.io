@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[es6-新特性总结]]></title>
+    <url>%2F2020%2F05%2F20%2Fes6-%E6%96%B0%E7%89%B9%E6%80%A7%E6%80%BB%E7%BB%93%2F</url>
+    <content type="text"><![CDATA[es6常用新特性总结 es6新特性 object.assign(source,target) 参数必须是对象 否则会报错 用来将source对象中的所有可枚举属性赋值到目标对象target中 箭头函数 箭头函数体内的this对象，就是定义时所在的对象，而不是使用时所在的对象，箭头函数中没有自己的this的，而箭头函数会默认使用父级的this。 不管在什么情况下,箭头函数的this跟外层function的this一致，外层function的this指向谁，箭头函数的this就指向谁，如果外层不是function则指向window。 适合使用箭头函数的场景：使用箭头函数对this指向进行干预 不适合的场景： 构造函数的原型方法中（构造函数的原型方法需要通过this获得实例） 需要获得arguments时（箭头函数中没有arguments） 使用动态回调 proxy代理 proxy用于修改某些操作的默认行为]]></content>
+      <tags>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[axios中的拦截器]]></title>
     <url>%2F2020%2F05%2F18%2Faxios%E4%B8%AD%E7%9A%84%E6%8B%A6%E6%88%AA%E5%99%A8%2F</url>
     <content type="text"><![CDATA[拦截器在请求或响应被 then 或 catch 处理前拦截它们。分为请求拦截器和响应拦截器 关于拦截器的官网文档 请求拦截器请求拦截器的作用是在请求发送前进行一些操作，例如在每个请求体里加上token 响应拦截器响应拦截器的作用是在接收到响应后进行一些操作，例如在服务器返回登录状态失效，需要重新登录的时候，跳转到登录页。]]></content>
@@ -27,7 +35,7 @@
   <entry>
     <title><![CDATA[rn踩坑]]></title>
     <url>%2F2020%2F05%2F13%2Frn%E8%B8%A9%E5%9D%91%2F</url>
-    <content type="text"><![CDATA[ES5/ES3 中的异步函数或方法需要 “Promise” 构造函数。确保对 “Promise” 构造函数进行了声明或在 “–lib” 选项中包含了 “ES2015”。解决办法： RN开发 js jsx ts tsx的区别详情看别人家总结 报错 Building and installing the app on the device (cd android &amp;&amp; gradlew.bat installDebug)…Downloading http://10.10.82.235:8080/sdk-resources/gradle-4.6-all.zipException in thread “main” java.net.ConnectException: Connection refused:解决办法1、 rm android/ -rf2、 react-native eject3、 run Props获取不到值原因 箭头函数 this的指向丢了解决办法]]></content>
+    <content type="text"><![CDATA[ract native 报错系列 ES5/ES3 中的异步函数或方法需要 “Promise” 构造函数。确保对 “Promise” 构造函数进行了声明或在 “–lib” 选项中包含了 “ES2015”。解决办法： RN开发 js jsx ts tsx的区别详情看别人家总结 报错 Building and installing the app on the device (cd android &amp;&amp; gradlew.bat installDebug)…Downloading http://10.10.82.235:8080/sdk-resources/gradle-4.6-all.zipException in thread “main” java.net.ConnectException: Connection refused:解决办法1、 rm android/ -rf2、 react-native eject3、 run Props获取不到值原因 箭头函数 this的指向丢了解决办法]]></content>
       <tags>
         <tag>前端</tag>
         <tag>rn</tag>
@@ -617,8 +625,8 @@
     <content type="text"><![CDATA[再一次看阮一峰的ES6入门简单的做个笔记。为接下来写react naive做准备。包括最常用的和已经理解了的部分 ##let和const1.var（es5）和let （es6） 在es5中 var的作用域范围是函数作用域，而在es6中，改用let来替换var 。let只在所在的代码块内有效。最典型的例子是循环输出。 let声明的变量不存在“变量提升”。声明的变量一定要在声明后使用，否则会报错 暂时性死区只要块级作用域内存在let，它所声明的变量就“绑定”（binding）这个区域，不再受外部的影响。即，如果一个全局变量在一个代码块内被let重新声明，那么全局变量对于此代码块是无效的。 let不允许在同一作用域内，重复声明同一个变量，会报错；但是在用var声明的时候，后者会覆盖前者 块级作用域let的作用域只在所声明的代码块内，相当于为es6提供了块级作用域。 S6 引入了块级作用域，明确允许在块级作用域之中声明函数。ES6 规定，块级作用域之中，函数声明语句的行为类似于let，在块级作用域之外不可引用。 2.const const声明一个只读的常量。一旦声明，常量的值就不能改变。 对于const来说，只声明不赋值，就会报错。 const的作用域与let命令相同：只在声明所在的块级作用域内有效。 const命令声明的常量也是不提升，同样存在暂时性死区，只能在声明的位置后面使用。 const声明的常量，也与let一样不可重复声明。 ##变量的解构赋值 ES6 允许按照一定模式，从数组和对象中提取值，对变量进行赋值，这被称为解构（Destructuring）。 如果解构不成功，变量的值就等于undefined。 如果等号的右边不是数组（或者严格地说，不是可遍历的结构），那么将会报错。 如果默认值是一个表达式，那么这个表达式是惰性求值的，即只有在用到的时候，才会求值。 ##箭头函数箭头函数在js的语言中山一直存在的，比如 注意，使用了块语句的箭头函数不会自动返回值，你需要使用return语句将所需值返回。 普通function函数和箭头函数的行为有一个微妙的区别，箭头函数没有它自己的this值，箭头函数内的this值继承自外围作用域。##calss##模板字符串##promise函数]]></content>
       <tags>
         <tag>前端</tag>
-        <tag>es6</tag>
         <tag>js</tag>
+        <tag>es6</tag>
       </tags>
   </entry>
   <entry>
@@ -1004,8 +1012,6 @@
     <content type="text"><![CDATA[node.js对ES6的支持度较高，在这个环境下可以更好的体验Babel转码器参考最喜欢的作者阮一峰写的ES6入门参考淘宝前端团队 let和const命令 let命令只在所在的代码块内有效 不存在变量提升，使用一定要在声明之后 暂时性死区 如果区块内存在const或者let这个区块对命令声明的变量形成封闭作用域，不受作用域之外的变量影响 var temp = “123”； if(true){temp=”abc”； let temp；}//报错虽然在代码块中声明了全局变量temp，但是在判断区块内无效，let声明的temp变量在声明前调用，所以报错 在相同的作用域内不能重复声明同一个变量 块级作用域外部无法访问内部函数和变量（引入闭包）const 的定义是不可重新赋值的值，与不可变的值(immutable value)不同；const 定义的 Object，在定义之后仍可以修改其属性。所以其实他的使用场景很广，包括常量、配置项以及引用的组件、定义的 “大部分” 中间变量等，都应该以const做定义。反之就 let 而言，他的使用场景应该是相对较少的，我们只会在 loop(for，while 循环)及少量必须重定义的变量上用到他。猜想：就执行效率而言，const 由于不可以重新赋值的特性，所以可以做更多语法静态分析方面的优化，从而有更高的执行效率。所以上面代码中，所有使用 let 的部分，其实都应该是用 const 的。 变量的解构赋值数组的解构赋值: 模式匹配。如果结构不成功，变量值为undefined 不完全解构只匹配等号右边一部分，如果右边不是数组就会报错实际上，只要某种数据结构具有iterator接口，都可以采用数组形式的解构赋值。 对象的结构赋值：区别（数组的变量取值是由位置决定的，对象的属性没有次序，变量必须与属性同名才行，如果变量名与属性名不一致，则 var{foo:baz}={foo:”aaa”};baz//aaa 解构赋值允许使用默认值，但数组成员不严格等于undefined的话则默认值不生效字符串解构和数值布尔型解构赋值，会首先转换成对象解构赋值中应该尽量避免圆括号，否则可能导致解构歧义，赋值语句的非模式部分可以使用圆括号主要用途： 变换变量的值 从函数返回多个值 函数参数的定义 提起json数据 函数参数的默认值 遍历map解构 输入模块的指定方法 symbol是ES6引入的新的数据类型，表示独一无二的值symbol有symbol函数生成 let s = new symbol();可以接受一个参数，表示对symbol实例的描述symbol不能与其他类型进行运算，但是可以转换成布尔值 作为属性名的symbol：1不能使用点运算符，必须放在方括号中，否则会被解析成一个字符串2作为属性上symbol是公有属性 魔术字符串（没弄懂） Object.getOwnPropertySymbol方法可以获取指定对象的所有symbol属性名新的api reflect.ownkeys方法可以返回所有类型的键名 symbol.for() 接受一个字符串作为参数，搜索有没有以该参数作为名称的symbol值，有则返回，没有就新建一个以该字符串为名称的symbol值 Symbol.for()与Symbol()这两种写法，都会生成新的 Symbol。它们的区别是，前者会被登记在全局环境中供搜索，后者不会。Symbol.for()不会每次调用就返回一个新的 Symbol 类型的值，而是会先检查给定的key是否已经存在，如果不存在才会新建一个值。 Symbol.keyFor方法返回一个已登记的 Symbol 类型值的key。 Set和Map数据结构 Set 它类似于数组，但是成员的值都是唯一的，没有重复的值。内部查重的机制相它类似于精确相等运算符（===），主要的区别是NaN等于自身，而精确相等运算符认为NaN不等于自身。 属性：Set.prototype.constructor：构造函数，默认就是Set函数。 Set.prototype.size：返回Set实例的成员总数。 操作方法：add(value) delete(value) has(value) clear() Array.from方法可以将 Set 结构转为数组。 遍历操作：keys() values() entries() forEach() Set的遍历顺序就是插入顺序。Set 结构的实例默认可遍历，它的默认遍历器生成函数就是它的values方法。这意味着，可以省略values方法，直接用for…of循环遍历 Set。扩展运算符（…）内部使用for…of循环，所以也可以用于 Set 结构。数组的map和filter方法也可以间接用于 Set 了。因此使用 Set 可以很容易地实现并集（Union）、交集（Intersect）和差集（Difference）。 WeakSet结构与 Set 类似，也是不重复的值的集合。但是：WeakSet 的成员只能是对象，而不能是其他类型的值。WeakSet 中的对象都是弱引用，即垃圾回收机制不考虑 WeakSet 对该对象的引用，所以用它保存某些数据可以避免内存泄漏 map JavaScript 的对象（Object），本质上是键值对的集合（Hash 结构），但是传统上只能用字符串当作键。Map 数据结构类似于对象，也是键值对的集合，但是“键”的范围不限于字符串，各种类型的值（包括对象）都可以当作键。 只有对同一个对象的引用，Map 结构才将其视为同一个键。这一点要非常小心。实际上是跟内存地址绑定的，只要内存地址不一样就视为两个键，如果map的键是简单类型的值如数字、字符串、布尔值，只要严格相等就视为一个键，NaN在这里可以相等 属性：size 方法：set(key,value) get(key) has(key) clear() 遍历方法：keys() values() entries() forEach() Map 结构转为数组结构，比较快速的方法是使用扩展运算符（…）。 将数组传入 Map 构造函数，就可以转为 Map。 结合数组的map方法、filter方法，可以实现 Map 的遍历和过滤（Map 本身没有map和filter方法）。 forEach方法还可以接受第二个参数，用来绑定this。 WeakMap结构与Map结构类似，也是用于生成键值对的集合。WeakMap只接受对象作为键名（null除外），不接受其他类型的值作为键名。WeakMap的键名所指向的对象，不计入垃圾回收机制。 ###箭头函数###箭头函数没有独立执行上下文（ this ），所以其内部引用 this 对象会直接访问父级。箭头函数不但没有独立 this，他也没有独立的 arguments，所以如果需要取不定参的时候，要么使用 function，要么用 ES6 的另一个新特性 rest（具体在 rest 中会有详解）。箭头函数语法很灵活，在只有一个参数或者只有一句表达式做方法体时，可以省略相应括号。 ###promise###promise对象代表一个异步操作，有三种状态：pending resolved/fullfilled rejected promise.then接收两个方法作为参数，第一个resolved调用，第二个reject调用。 1promise.then(function(value),funtion(error)); 但是这种写法不太好，有点类似于同步中的try/catch下面的写法比较好。 12promise.then()//成功 .catch()//失败 promise对象的错误会一直向后传递，直到被捕获。done()方法处于回调链的尾端，保证捕捉最后一个方法抛的错误。还有一个附加的API finally() 用于指定无论promise对象状态如何都会执行的操作。Node.js有一个unhandledRejection事件专门监听未捕获的rejected错误 多个异步任务同时执行用 Promise.all，顺序执行使用链式调用Promise.all（）用于将多个promise实例包装成一个新的promise实例。 1234567891011Promise .all([jsBuildPromise, cssBuildPromise])//all内的实例均为reject时promise状态为reject，其中一个为resolved师promise的状态就是resolve .then(() =&gt; &#123; ... &#125;);jsBuildPromise .then(() =&gt; cssBuildPromise) .then(() =&gt; &#123; ... &#125;); Promise 的链式调用需要每一个过程返回一个 Promise 对象才能保证顺序执行 Promise 需要调用 catch 方法来捕获错误，而且过程内的错误不会阻塞后续代码执行new Promise(() =&gt; {f; // not define error !}).catch((err) =&gt; {console.log(err) // show ‘f is not define’});console.log(‘error test’); // 此行可以被正常执行 promise.race()与all()的作用一样，不同的是它的promise状态只要参数的任意一个改变就会随之改变promise.resolve（）将现有对象转换为promise对象promise.reject（）返回状态为rejected的新实例。]]></content>
       <tags>
         <tag>前端</tag>
-        <tag>es6</tag>
-        <tag>js</tag>
       </tags>
   </entry>
   <entry>

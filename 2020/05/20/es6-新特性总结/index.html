@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://wine1.github.io">
-  <title>使用npm时的常见问题 | 哦。</title>
+  <title>es6-新特性总结 | 哦。</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="npm ERR! Unexpected end of JSON input while parsing near ‘…”,’ npm ERR! code EINTEGRITY问题解决方案">
-<meta name="keywords" content="前端,git">
+  <meta name="description" content="es6常用新特性总结">
+<meta name="keywords" content="前端">
 <meta property="og:type" content="article">
-<meta property="og:title" content="使用npm时的常见问题">
-<meta property="og:url" content="https://wine1.github.io/2018/12/12/使用npm时的常见问题/index.html">
+<meta property="og:title" content="es6-新特性总结">
+<meta property="og:url" content="https://wine1.github.io/2020/05/20/es6-新特性总结/index.html">
 <meta property="og:site_name" content="哦。">
-<meta property="og:description" content="npm ERR! Unexpected end of JSON input while parsing near ‘…”,’ npm ERR! code EINTEGRITY问题解决方案">
+<meta property="og:description" content="es6常用新特性总结">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-01T14:40:24.290Z">
+<meta property="og:updated_time" content="2020-05-20T10:55:32.857Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="使用npm时的常见问题">
-<meta name="twitter:description" content="npm ERR! Unexpected end of JSON input while parsing near ‘…”,’ npm ERR! code EINTEGRITY问题解决方案">
+<meta name="twitter:title" content="es6-新特性总结">
+<meta name="twitter:description" content="es6常用新特性总结">
   
     <link rel="alternative" href="/atom.xml" title="哦。" type="application/atom+xml">
   
@@ -165,29 +165,49 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-使用npm时的常见问题" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-es6-新特性总结" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      使用npm时的常见问题
+      es6-新特性总结
     </h1>
   
 
         
-        <a href="/2018/12/12/使用npm时的常见问题/" class="archive-article-date">
-  	<time datetime="2018-12-12T05:57:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-12</time>
+        <a href="/2020/05/20/es6-新特性总结/" class="archive-article-date">
+  	<time datetime="2020-05-20T10:54:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-20</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <ol>
-<li><a href="https://www.cnblogs.com/GeniusLyzh/p/9773440.html" target="_blank" rel="noopener">npm ERR! Unexpected end of JSON input while parsing near ‘…”,’</a></li>
-<li><a href="https://blog.csdn.net/Mr_rain/article/details/74551497" target="_blank" rel="noopener">npm ERR! code EINTEGRITY问题解决方案</a></li>
+        <p>es6常用新特性总结</p>
+<a id="more"></a>
+<h2 id="es6新特性"><a href="#es6新特性" class="headerlink" title="es6新特性"></a>es6新特性</h2><ol>
+<li>object.assign(source,target) 参数必须是对象 否则会报错 <ul>
+<li>用来将<code>source</code>对象中的所有<code>可枚举属性</code>赋值到目标对象<code>target</code>中</li>
+</ul>
+</li>
+<li>箭头函数<ul>
+<li>箭头函数体内的this对象，就是定义时所在的对象，而不是使用时所在的对象，箭头函数中没有自己的this的，而箭头函数会默认使用父级的this。</li>
+<li>不管在什么情况下,箭头函数的this跟外层function的this一致，外层function的this指向谁，箭头函数的this就指向谁，如果外层不是function则指向window。</li>
+<li>适合使用箭头函数的场景：使用箭头函数对this指向进行干预</li>
+<li>不适合的场景：<ul>
+<li>构造函数的原型方法中（构造函数的原型方法需要通过this获得实例）</li>
+<li>需要获得arguments时（箭头函数中没有arguments）</li>
+<li>使用动态回调</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>proxy代理</strong><ul>
+<li>proxy用于修改某些操作的默认行为</li>
+</ul>
+</li>
 </ol>
 
       
@@ -224,10 +244,6 @@
 			 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">git</a>
         		</li>
       		
 		</ul>
@@ -283,7 +299,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://wine1.github.io/2018/12/12/使用npm时的常见问题/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://wine1.github.io/2020/05/20/es6-新特性总结/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -297,18 +313,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/12/19/git多分支多人协作开发/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          git多分支多人协作开发
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/12/11/async和await/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">async和await</div>
+    <a href="/2020/05/18/axios中的拦截器/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">axios中的拦截器</div>
       <i class="icon-circle-right"></i>
     </a>
   
