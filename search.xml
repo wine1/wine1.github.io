@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[node+koa]]></title>
+    <url>%2F2020%2F06%2F23%2Fnode-koa%2F</url>
+    <content type="text"><![CDATA[koa+node基础搭建到实现api接口 https://www.jianshu.com/p/3b60dda108d4]]></content>
+      <tags>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[小程序+腾讯云实时音视频]]></title>
+    <url>%2F2020%2F06%2F23%2F%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E8%85%BE%E8%AE%AF%E4%BA%91%E5%AE%9E%E6%97%B6%E9%9F%B3%E8%A7%86%E9%A2%91%2F</url>
+    <content type="text"><![CDATA[小程序加腾讯云实时音视频 腾讯实时音视频官方demo，IOS微信小程序端不显示本地和远程画面？ 在 app.json 下 window 下配置一下 “renderingMode”: “seperated”强制关掉同层]]></content>
+      <tags>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[js遍历]]></title>
     <url>%2F2020%2F06%2F12%2Fjs%E9%81%8D%E5%8E%86%2F</url>
     <content type="text"><![CDATA[foreach和map的区别 foreachforeach没有返回值 map映射 跟foreach用法类似 返回一个新数组]]></content>
@@ -30,7 +46,7 @@
   <entry>
     <title><![CDATA[小程序开发总结]]></title>
     <url>%2F2020%2F06%2F11%2F%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91%E6%80%BB%E7%BB%93%2F</url>
-    <content type="text"><![CDATA[虽然之前提换组没有成功，但是也阴差阳错参与到了小程序开发组开启了小程序开发的升级打怪之路 rpx单位 没有刷新页面的功能，页面数据都是异步请求获取的，你删除某个商品的时候，直接再请求一次数据，更改页面的数据就可以了。 点击事件传递参数 微信小程序 点击事件获取到的 event.currentTarget.datasethttps://blog.csdn.net/weixin_37861326/article/details/84027569 小程序实现长按复制文字 https://blog.csdn.net/weixin_39589455/article/details/99704077 小程序使用sass https://www.jb51.net/article/144681.htm 微信小程序01：关于错误Page “pages/goods_list/index” has not been registered yet.的原因 小程序打开H5 https://www.jianshu.com/p/3c8e84c6e67d 小程序使textarea自动聚焦 9.e.target和e.currentTarget的区别 e.target 指向触发事件监听的对象。e.currentTarget 指向添加监听事件的对象，指向代码中点击事件的元素e.target始终指向即当前点击的目标元素，e.currentTarget在事件委托中，如果监听元素不是目标元素，则指向监听元素 bind call 的作用和区别 methods中的函数和直接写在page中函数的区别 catchTap 生命周期 wx.onMemoryWarning 监听内存不足警告 页面跳转传参 https://www.jianshu.com/p/079db5ea1a9b 小程序实现写入缓存与读取缓存 17 flex布局 设置小程序的状态栏、导航条、标题、窗口背景色[Window] https://blog.csdn.net/dxnn520/article/details/79342548 textarea 中 ajust-position 中 false 值需要用双层中括号包起来 否则不生效]]></content>
+    <content type="text"><![CDATA[虽然之前提换组没有成功，但是也阴差阳错参与到了小程序开发组开启了小程序开发的升级打怪之路 rpx单位 没有刷新页面的功能，页面数据都是异步请求获取的，你删除某个商品的时候，直接再请求一次数据，更改页面的数据就可以了。 点击事件传递参数 微信小程序 点击事件获取到的 event.currentTarget.datasethttps://blog.csdn.net/weixin_37861326/article/details/84027569 小程序实现长按复制文字 https://blog.csdn.net/weixin_39589455/article/details/99704077 小程序使用sass https://www.jb51.net/article/144681.htm 微信小程序01：关于错误Page “pages/goods_list/index” has not been registered yet.的原因 小程序打开H5 https://www.jianshu.com/p/3c8e84c6e67d 小程序使textarea自动聚焦 9.e.target和e.currentTarget的区别 e.target 指向触发事件监听的对象。e.currentTarget 指向添加监听事件的对象，指向代码中点击事件的元素e.target始终指向即当前点击的目标元素，e.currentTarget在事件委托中，如果监听元素不是目标元素，则指向监听元素 bind call 的作用和区别 methods中的函数和直接写在page中函数的区别 catchTap 生命周期 wx.onMemoryWarning 监听内存不足警告 页面跳转传参 https://www.jianshu.com/p/079db5ea1a9b 小程序实现写入缓存与读取缓存 17 flex布局 设置小程序的状态栏、导航条、标题、窗口背景色[Window] https://blog.csdn.net/dxnn520/article/details/79342548 textarea 中 ajust-position 中 false 值需要用双层中括号包起来 否则不生效 【微信小程序】微信小程序阻止IOS页面上下拖动问题为了阻止IOS端小程序页面上下拖动可以再对应的json文件当中添加这个配置 “disableScroll”:true 小程序windowHeight在不同页面高度不一致问题及解决方案https://blog.csdn.net/qq_41619741/article/details/83143624 小程序的windowheight和screenheight 小程序阻止事件冒泡 https://blog.csdn.net/promiseCao/article/details/83926807?utm_medium=distribute.pc_relevant.none-task-blog-baidujs-2 组件层级问题 https://www.cnblogs.com/duxingdexin/p/9585285.html 使用TypeScript开发小程序入门 https://www.jianshu.com/p/c778943acb37]]></content>
       <tags>
         <tag>前端</tag>
       </tags>
