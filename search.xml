@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[node+koa]]></title>
     <url>%2F2020%2F06%2F23%2Fnode-koa%2F</url>
-    <content type="text"><![CDATA[koa+node基础搭建到实现api接口 https://www.jianshu.com/p/3b60dda108d4]]></content>
+    <content type="text"><![CDATA[koa+node基础搭建到实现api接口 https://www.jianshu.com/p/3b60dda108d4 使用pm2管理node进程 使用knex操作数据库]]></content>
       <tags>
         <tag>前端</tag>
       </tags>
@@ -52,14 +52,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[箭头函数]]></title>
-    <url>%2F2020%2F06%2F11%2F%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0%2F</url>
-    <content type="text"><![CDATA[记的笔记一时找不到了连续加班的我现在好累 有空再补]]></content>
-      <tags>
-        <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[webpack配置css-modules]]></title>
     <url>%2F2020%2F05%2F20%2Fwebpack%E9%85%8D%E7%BD%AEcss-modules%2F</url>
     <content type="text"><![CDATA[CSS Modules 是指：项目中所有 class 名称默认都是局部起作用的。 CSS的规则都是全局的，任何一个组件的样式规则，都对整个页面有效。产生局部作用域的唯一方法，就是使用一个独一无二的class的名字，不会与其他选择器重名。这就是 CSS Modules 的做法。 https://gitbook.cn/gitchat/column/5c91c813968b1d64b1e08fde/topic/5cbbef07bbbba80861a35c21]]></content>
@@ -70,7 +62,7 @@
   <entry>
     <title><![CDATA[es6-新特性总结]]></title>
     <url>%2F2020%2F05%2F20%2Fes6-%E6%96%B0%E7%89%B9%E6%80%A7%E6%80%BB%E7%BB%93%2F</url>
-    <content type="text"><![CDATA[es6常用新特性总结 es6新特性 object.assign(source,target) 参数必须是对象 否则会报错 用来将source对象中的所有可枚举属性赋值到目标对象target中 箭头函数 箭头函数体内的this对象，就是定义时所在的对象，而不是使用时所在的对象，箭头函数中没有自己的this的，而箭头函数会默认使用父级的this。 不管在什么情况下,箭头函数的this跟外层function的this一致，外层function的this指向谁，箭头函数的this就指向谁，如果外层不是function则指向window。 适合使用箭头函数的场景：使用箭头函数对this指向进行干预 不适合的场景： 构造函数的原型方法中（构造函数的原型方法需要通过this获得实例） 需要获得arguments时（箭头函数中没有arguments） 使用动态回调 proxy代理 proxy用于修改某些操作的默认行为]]></content>
+    <content type="text"><![CDATA[es6常用新特性总结 es6新特性 object.assign(source,target) 参数必须是对象 否则会报错 用来将source对象中的所有可枚举属性赋值到目标对象target中 箭头函数 箭头函数体内的this对象，就是定义时所在的对象，而不是使用时所在的对象，箭头函数中没有自己的this的，而箭头函数会默认使用父级的this。 不管在什么情况下,箭头函数的this跟外层function的this一致，外层function的this指向谁，箭头函数的this就指向谁，如果外层不是function则指向window。 适合使用箭头函数的场景：使用箭头函数对this指向进行干预 不适合的场景： 构造函数的原型方法中（构造函数的原型方法需要通过this获得实例） 需要获得arguments时（箭头函数中没有arguments） 使用动态回调 proxy代理 proxy用于修改某些操作的默认行为 ES6中常用的10个新特性讲解]]></content>
       <tags>
         <tag>前端</tag>
       </tags>
