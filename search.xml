@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[浅析虚拟DOM]]></title>
     <url>%2F2020%2F07%2F15%2F%E6%B5%85%E6%9E%90%E8%99%9A%E6%8B%9FDOM%2F</url>
-    <content type="text"><![CDATA[虚拟DOM的基本思想 用js对象模拟DOM树 比较两颗虚拟DOM树的差异 把差异应用到真正的DOM树上]]></content>
+    <content type="text"><![CDATA[虚拟DOM的基本思想 用js对象模拟DOM树 比较两颗虚拟DOM树的差异 把差异应用到真正的DOM树上 看了下，只能说懂了一点点 不甚明白https://www.zhihu.com/question/29504639]]></content>
       <tags>
         <tag>前端</tag>
       </tags>
