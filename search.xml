@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[async/await]]></title>
+    <url>%2F2020%2F07%2F15%2Fasync-await%2F</url>
+    <content type="text"><![CDATA[async/await是一对强大的异步工具async 表示这是一个async函数，await只能用在这个函数里面。await 表示在这里等待promise返回结果了，再继续执行。await 后面跟着的应该是一个promise对象 await等待的虽然是promise对象，但不必写.then(..)，直接可以得到返回值。 捕捉错误既然.then(..)不用写了，那么.catch(..)也不用写，可以直接用标准的try catch语法捕捉错误。]]></content>
+      <tags>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[浅析虚拟DOM]]></title>
     <url>%2F2020%2F07%2F15%2F%E6%B5%85%E6%9E%90%E8%99%9A%E6%8B%9FDOM%2F</url>
     <content type="text"><![CDATA[虚拟DOM的基本思想 用js对象模拟DOM树 比较两颗虚拟DOM树的差异 把差异应用到真正的DOM树上 看了下，只能说懂了一点点 不甚明白https://www.zhihu.com/question/29504639]]></content>

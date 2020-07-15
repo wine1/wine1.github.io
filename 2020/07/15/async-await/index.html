@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://wine1.github.io">
-  <title>乌合之众 | 哦。</title>
+  <title>async/await | 哦。</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="法国心理学家古斯塔夫勒庞的这本社会心理学著作《乌合之众》大多数人就算没有看过也应该听说过。其实刚开始看这本书的时候我是看不下去的，加之网上对他各种评论，褒贬不一，让我更加不敢妄加断言自己的观点。但是自己些写东西嘛，必然是有自己的偏见的，还是记录一下自己看这本书时的看法，不一定对。">
-<meta name="keywords" content="随笔">
+  <meta name="description" content="async/await是一对强大的异步工具async 表示这是一个async函数，await只能用在这个函数里面。await 表示在这里等待promise返回结果了，再继续执行。await 后面跟着的应该是一个promise对象 await等待的虽然是promise对象，但不必写.then(..)，直接可以得到返回值。 捕捉错误既然.then(..)不用写了，那么.catch(..)也不用写，可以">
+<meta name="keywords" content="前端">
 <meta property="og:type" content="article">
-<meta property="og:title" content="乌合之众">
-<meta property="og:url" content="https://wine1.github.io/2019/09/06/乌合之众/index.html">
+<meta property="og:title" content="async&#x2F;await">
+<meta property="og:url" content="https://wine1.github.io/2020/07/15/async-await/index.html">
 <meta property="og:site_name" content="哦。">
-<meta property="og:description" content="法国心理学家古斯塔夫勒庞的这本社会心理学著作《乌合之众》大多数人就算没有看过也应该听说过。其实刚开始看这本书的时候我是看不下去的，加之网上对他各种评论，褒贬不一，让我更加不敢妄加断言自己的观点。但是自己些写东西嘛，必然是有自己的偏见的，还是记录一下自己看这本书时的看法，不一定对。">
+<meta property="og:description" content="async/await是一对强大的异步工具async 表示这是一个async函数，await只能用在这个函数里面。await 表示在这里等待promise返回结果了，再继续执行。await 后面跟着的应该是一个promise对象 await等待的虽然是promise对象，但不必写.then(..)，直接可以得到返回值。 捕捉错误既然.then(..)不用写了，那么.catch(..)也不用写，可以">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-09-15T14:55:01.958Z">
+<meta property="og:updated_time" content="2020-07-15T15:38:44.441Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="乌合之众">
-<meta name="twitter:description" content="法国心理学家古斯塔夫勒庞的这本社会心理学著作《乌合之众》大多数人就算没有看过也应该听说过。其实刚开始看这本书的时候我是看不下去的，加之网上对他各种评论，褒贬不一，让我更加不敢妄加断言自己的观点。但是自己些写东西嘛，必然是有自己的偏见的，还是记录一下自己看这本书时的看法，不一定对。">
+<meta name="twitter:title" content="async&#x2F;await">
+<meta name="twitter:description" content="async/await是一对强大的异步工具async 表示这是一个async函数，await只能用在这个函数里面。await 表示在这里等待promise返回结果了，再继续执行。await 后面跟着的应该是一个promise对象 await等待的虽然是promise对象，但不必写.then(..)，直接可以得到返回值。 捕捉错误既然.then(..)不用写了，那么.catch(..)也不用写，可以">
   
     <link rel="alternative" href="/atom.xml" title="哦。" type="application/atom+xml">
   
@@ -165,29 +165,29 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-乌合之众" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-async-await" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      乌合之众
+      async/await
     </h1>
   
 
         
-        <a href="/2019/09/06/乌合之众/" class="archive-article-date">
-  	<time datetime="2019-09-06T15:04:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-06</time>
+        <a href="/2020/07/15/async-await/" class="archive-article-date">
+  	<time datetime="2020-07-15T15:32:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-15</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>法国心理学家古斯塔夫勒庞的这本社会心理学著作《乌合之众》大多数人就算没有看过也应该听说过。其实刚开始看这本书的时候我是看不下去的，加之网上对他各种评论，褒贬不一，让我更加不敢妄加断言自己的观点。但是自己些写东西嘛，必然是有自己的偏见的，还是记录一下自己看这本书时的看法，不一定对。</p>
-<a id="more"></a>
-<p>首先我们不说这本书是不是一本好书。我对好坏的界定一直不清晰。个人有个人的看法，大致上大家都会倾向于相信自己所相信的东西。<br>正如我是个悲观的人，一定程度上我很认同勒庞关于“群体的无意识性”的说法。<br>这里的群体是指以某种共同的目的或者心理状态而聚合到一起的一群人。<br>勒庞认为人们一旦陷入无序群体之中，个人意识就会消失，变成盲目的集体意识，充满了急躁、冲动、轻信、偏执……</p>
+        <p>async/await是一对强大的异步工具<br>async 表示这是一个async函数，await只能用在这个函数里面。<br>await 表示在这里等待promise返回结果了，再继续执行。<br>await 后面跟着的应该是一个promise对象</p>
+<p>await等待的虽然是promise对象，但不必写.then(..)，直接可以得到返回值。</p>
+<p>捕捉错误<br>既然.then(..)不用写了，那么.catch(..)也不用写，可以直接用标准的try catch语法捕捉错误。</p>
 
       
 
@@ -222,7 +222,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
         		</li>
       		
 		</ul>
@@ -278,7 +278,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://wine1.github.io/2019/09/06/乌合之众/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://wine1.github.io/2020/07/15/async-await/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -292,18 +292,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/09/06/稀缺/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          稀缺
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/09/02/一个冥想者的觉知书/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">一个冥想者的觉知书</div>
+    <a href="/2020/07/15/浅析虚拟DOM/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">浅析虚拟DOM</div>
       <i class="icon-circle-right"></i>
     </a>
   
