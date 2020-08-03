@@ -6,6 +6,132 @@
     <content><![CDATA[]]></content>
   </entry>
   <entry>
+    <title>Object.defineProperty</title>
+    <url>/2019/07/09/Object-defineProperty/</url>
+    <content><![CDATA[<p>Object.defineProperty(object, propertyname, descriptor)<br>为对象定义属性的函数</p>
+]]></content>
+      <tags>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>24岁这一天</title>
+    <url>/2019/09/24/24%E5%B2%81%E8%BF%99%E4%B8%80%E5%A4%A9/</url>
+    <content><![CDATA[<ol>
+<li>健康状况保持的不行，要坚持每天锻炼一会会呀</li>
+<li>少看点书，慢下来，不要着急。欲速则不达</li>
+<li>赶紧复习基础，多写代码，不然怎么跳槽，一定要尽快跳出这个烦人的圈。</li>
+<li>存到一些钱，但是不要放太多注意力在这个东西，不然得不偿失。</li>
+<li>不要抱怨，去改变~</li>
+</ol>
+]]></content>
+      <tags>
+        <tag>随笔</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CSS 多行省略失效</title>
+    <url>/2019/01/31/CSS-%E5%A4%9A%E8%A1%8C%E7%9C%81%E7%95%A5%E5%A4%B1%E6%95%88/</url>
+    <content><![CDATA[<p>CSS 多行省略失效 (-webkit-box-orient 失效)<br><a href="https://blog.csdn.net/Candy_home/article/details/79646655" target="_blank" rel="noopener">神奇的这个问题目前最好的解决方案</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>async/await</title>
+    <url>/2020/07/15/async-await/</url>
+    <content><![CDATA[<p>async/await是一对强大的异步工具<br>async 表示这是一个async函数，await只能用在这个函数里面。<br>await 表示在这里等待promise返回结果了，再继续执行。<br>await 后面跟着的应该是一个promise对象</p>
+<p>await等待的虽然是promise对象，但不必写.then(..)，直接可以得到返回值。</p>
+<p>捕捉错误<br>既然.then(..)不用写了，那么.catch(..)也不用写，可以直接用标准的try catch语法捕捉错误。</p>
+]]></content>
+      <tags>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CSS-BFC</title>
+    <url>/2020/05/20/CSS-BFC/</url>
+    <content><![CDATA[<p>今天认真仔细地看了下BFC的内容，算是有了更具体的理解</p>
+<a id="more"></a>
+<h2 id="BFC（块级格式化上下文）"><a href="#BFC（块级格式化上下文）" class="headerlink" title="BFC（块级格式化上下文）"></a>BFC（块级格式化上下文）</h2><ol>
+<li><p>BFC的触发条件</p>
+<ul>
+<li>根元素或其他包含它的元素</li>
+<li>浮动元素 (元素的 float 不是 none)</li>
+<li>绝对定位元素 (元素具有 position 为 absolute 或 fixed)</li>
+<li>内联块 (元素具有 display: inline-block)</li>
+<li>表格单元格 (元素具有 display: table-cell，HTML 表格单元格默认属性)</li>
+<li>表格标题 (元素具有 display: table-caption, HTML 表格标题默认属性)</li>
+<li>具有 overflow 且值不是 visible 的块元素</li>
+<li>display: flow-root 的元素</li>
+<li>column-span: all 的元素</li>
+</ul>
+</li>
+<li><p>BFC导致的现象</p>
+<ul>
+<li>内部的 box 将会独占宽度，且在垂直方向，一个接一个排列</li>
+<li>box 垂直方向的间距由 margin 属性决定，但是同一个 BFC 的两个相邻box 的 margin 会出现边距折叠现象</li>
+<li>每个 box 水平方向上左边缘，与 BFC 左边缘相对齐，即使存在浮动也是如此</li>
+<li>BFC 区域不会与浮动元素重叠，而是会依次排列</li>
+<li>BFC 区域内是一个独立的渲染容器，容器内元素和 BFC 区域外元素不会形成任何干扰</li>
+<li>浮动元素的高度也参与到 BFC 高度的计算当中</li>
+</ul>
+</li>
+<li><p>目前为止 最常用的BFC操作有 </p>
+<ul>
+<li>通过设置元素display:inline-block消除边距折叠</li>
+<li>给相邻元素或父元素设置 display:inline-block 清除浮动 和给浮动元素设置overflow:hidden清除浮动</li>
+</ul>
+</li>
+</ol>
+]]></content>
+      <tags>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>WebSockets</title>
+    <url>/2017/11/16/WebSockets/</url>
+    <content><![CDATA[<p>实现了用http不容易实现的服务器端与客户端之间进行的非http的通信机制,建立一个非http的双向连接（全双工通信），这个连接是实时的永久的，除非被显式关闭。这意味着当服务器想向客户端发送消息时，可以立即将消息推送到客户端的浏览器，无需重新建立连接。<br>比如用来实现聊天室，实时的接收传递消息。</p>
+<a id="more"></a>
+<p>使用WebSockets API(算了api还是要用的时候查吧 太容易忘记了)</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var ws = new WebSocket(wss://);</span><br><span class="line">ws.onopen() = function(e) &#123;</span><br><span class="line">	console.log(&quot;连接建立，可以开始发消息啦&quot;);</span><br><span class="line">	ws.send();</span><br><span class="line">&#125;;</span><br><span class="line">ws.onmessage() = function(e) &#123;</span><br><span class="line"></span><br><span class="line">	ws.onclose();</span><br><span class="line">&#125;</span><br><span class="line">ws.onclose = function(e) &#123;</span><br><span class="line">	console.log(&quot;大家注意了，连接关了啊&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>readyState的属性值获取WebSocket对象的状态<br>connecting 0 表示正在连接<br>open 1 表示已经建立连接<br>closing 2 表示正在关闭连接<br>closed 3 表示连接已经关闭</p>
+<p>WebSocket和http协议有区别也有联系。首先http协议中请求和响应是成对存在严格对应的，在http1.1中的keep-alive实现可将多个http请求合并成一个，但是它和WebSocket还是不一样，它依然是请求和响应一一对应的。WebSocket是一个新的协议，借助于http协议完成握手。<br>WebSocket的连接请求跟http请求相似，但是多出了这么两行<code>upgrade:wesocket connection:upgrade</code>这两行告诉服务器，我是一个WebSocket协议。</p>
+<pre><code>传统的技术当然也可以实现信息的即时发送和获取，依赖于ajax轮询和long poll。
+轮询，顾名思义就是隔一会查看一下是否有新的消息,需要服务器有很快的处理速度。
+long poll 就是相当于发起请求后没收到消息就赖着不走了这么个样子。需要有很高的并发。
+当然以上两种对我来说都是停留在了理论层面，我并没有真正去实践过。有错误的地方，日后改正。</code></pre>]]></content>
+      <tags>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>async和await</title>
+    <url>/2018/12/11/async%E5%92%8Cawait/</url>
+    <content><![CDATA[<p>async表示函数里有异步操作，await表示紧跟在后面的表达式需要等待结果。<br>await 只能出现在 async 函数中。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">async function testAsync() &#123;</span><br><span class="line">    return &quot;hello async&quot;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">const result = testAsync();</span><br><span class="line">console.log(result);</span><br></pre></td></tr></table></figure>
+
+<p>返回值是一个 promise对象</p>
+<p>引用别人一段话<br><strong>联想一下 Promise 的特点——无等待，所以在没有 await 的情况下执行 async 函数，它会立即执行，返回一个 Promise 对象，并且，绝不会阻塞后面的语句。这和普通返回 Promise 对象的函数并无二致。</strong><br><a href="https://segmentfault.com/a/1190000007535316?utm_source=tag-newest" target="_blank" rel="noopener">原文链接</a></p>
+]]></content>
+      <tags>
+        <tag>前端</tag>
+        <tag>ES6</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>background-clip</title>
+    <url>/2019/07/25/background-clip/</url>
+    <content><![CDATA[<p>今日份的需求出现了一个bug<br>琢磨了好一会解决了，记录一下</p>
+<a id="more"></a>
+<p>需求是这样的<br><img src="/2019/07/25/background-clip/tu2.png" alt="tu1"><br>别的浏览器都显示的好正常的,但是在火狐中，显示的效果就是这样的了<br><img src="/2019/07/25/background-clip/tu1.png" alt="tu1"><br>经过多次尝试，发现去掉左边的背景色，边框就能正常显示出来了<br>但是需求表示左边这块就是要有不一样的颜色，怎么办呢<br>面向浏览器编程的我们打开了谷歌 搜索结果中出现了这么一个属性<br><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-clip" target="_blank" rel="noopener">background-clip</a><br>嗯，根据实际情况酌情使用</p>
+]]></content>
+      <tags>
+        <tag>前端</tag>
+        <tag>工作总结</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>HTML5(表单)</title>
     <url>/2017/11/16/HTML5-%E8%A1%A8%E5%8D%95/</url>
     <content><![CDATA[<h3 id="新增表单元素与属性："><a href="#新增表单元素与属性：" class="headerlink" title="新增表单元素与属性："></a>新增表单元素与属性：</h3><ol>
@@ -55,132 +181,6 @@
       </tags>
   </entry>
   <entry>
-    <title>24岁这一天</title>
-    <url>/2019/09/24/24%E5%B2%81%E8%BF%99%E4%B8%80%E5%A4%A9/</url>
-    <content><![CDATA[<ol>
-<li>健康状况保持的不行，要坚持每天锻炼一会会呀</li>
-<li>少看点书，慢下来，不要着急。欲速则不达</li>
-<li>赶紧复习基础，多写代码，不然怎么跳槽，一定要尽快跳出这个烦人的圈。</li>
-<li>存到一些钱，但是不要放太多注意力在这个东西，不然得不偿失。</li>
-<li>不要抱怨，去改变~</li>
-</ol>
-]]></content>
-      <tags>
-        <tag>随笔</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>CSS-BFC</title>
-    <url>/2020/05/20/CSS-BFC/</url>
-    <content><![CDATA[<p>今天认真仔细地看了下BFC的内容，算是有了更具体的理解</p>
-<a id="more"></a>
-<h2 id="BFC（块级格式化上下文）"><a href="#BFC（块级格式化上下文）" class="headerlink" title="BFC（块级格式化上下文）"></a>BFC（块级格式化上下文）</h2><ol>
-<li><p>BFC的触发条件</p>
-<ul>
-<li>根元素或其他包含它的元素</li>
-<li>浮动元素 (元素的 float 不是 none)</li>
-<li>绝对定位元素 (元素具有 position 为 absolute 或 fixed)</li>
-<li>内联块 (元素具有 display: inline-block)</li>
-<li>表格单元格 (元素具有 display: table-cell，HTML 表格单元格默认属性)</li>
-<li>表格标题 (元素具有 display: table-caption, HTML 表格标题默认属性)</li>
-<li>具有 overflow 且值不是 visible 的块元素</li>
-<li>display: flow-root 的元素</li>
-<li>column-span: all 的元素</li>
-</ul>
-</li>
-<li><p>BFC导致的现象</p>
-<ul>
-<li>内部的 box 将会独占宽度，且在垂直方向，一个接一个排列</li>
-<li>box 垂直方向的间距由 margin 属性决定，但是同一个 BFC 的两个相邻box 的 margin 会出现边距折叠现象</li>
-<li>每个 box 水平方向上左边缘，与 BFC 左边缘相对齐，即使存在浮动也是如此</li>
-<li>BFC 区域不会与浮动元素重叠，而是会依次排列</li>
-<li>BFC 区域内是一个独立的渲染容器，容器内元素和 BFC 区域外元素不会形成任何干扰</li>
-<li>浮动元素的高度也参与到 BFC 高度的计算当中</li>
-</ul>
-</li>
-<li><p>目前为止 最常用的BFC操作有 </p>
-<ul>
-<li>通过设置元素display:inline-block消除边距折叠</li>
-<li>给相邻元素或父元素设置 display:inline-block 清除浮动 和给浮动元素设置overflow:hidden清除浮动</li>
-</ul>
-</li>
-</ol>
-]]></content>
-      <tags>
-        <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>async/await</title>
-    <url>/2020/07/15/async-await/</url>
-    <content><![CDATA[<p>async/await是一对强大的异步工具<br>async 表示这是一个async函数，await只能用在这个函数里面。<br>await 表示在这里等待promise返回结果了，再继续执行。<br>await 后面跟着的应该是一个promise对象</p>
-<p>await等待的虽然是promise对象，但不必写.then(..)，直接可以得到返回值。</p>
-<p>捕捉错误<br>既然.then(..)不用写了，那么.catch(..)也不用写，可以直接用标准的try catch语法捕捉错误。</p>
-]]></content>
-      <tags>
-        <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>CSS 多行省略失效</title>
-    <url>/2019/01/31/CSS-%E5%A4%9A%E8%A1%8C%E7%9C%81%E7%95%A5%E5%A4%B1%E6%95%88/</url>
-    <content><![CDATA[<p>CSS 多行省略失效 (-webkit-box-orient 失效)<br><a href="https://blog.csdn.net/Candy_home/article/details/79646655" target="_blank" rel="noopener">神奇的这个问题目前最好的解决方案</a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>WebSockets</title>
-    <url>/2017/11/16/WebSockets/</url>
-    <content><![CDATA[<p>实现了用http不容易实现的服务器端与客户端之间进行的非http的通信机制,建立一个非http的双向连接（全双工通信），这个连接是实时的永久的，除非被显式关闭。这意味着当服务器想向客户端发送消息时，可以立即将消息推送到客户端的浏览器，无需重新建立连接。<br>比如用来实现聊天室，实时的接收传递消息。</p>
-<a id="more"></a>
-<p>使用WebSockets API(算了api还是要用的时候查吧 太容易忘记了)</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var ws = new WebSocket(wss://);</span><br><span class="line">ws.onopen() = function(e) &#123;</span><br><span class="line">	console.log(&quot;连接建立，可以开始发消息啦&quot;);</span><br><span class="line">	ws.send();</span><br><span class="line">&#125;;</span><br><span class="line">ws.onmessage() = function(e) &#123;</span><br><span class="line"></span><br><span class="line">	ws.onclose();</span><br><span class="line">&#125;</span><br><span class="line">ws.onclose = function(e) &#123;</span><br><span class="line">	console.log(&quot;大家注意了，连接关了啊&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>readyState的属性值获取WebSocket对象的状态<br>connecting 0 表示正在连接<br>open 1 表示已经建立连接<br>closing 2 表示正在关闭连接<br>closed 3 表示连接已经关闭</p>
-<p>WebSocket和http协议有区别也有联系。首先http协议中请求和响应是成对存在严格对应的，在http1.1中的keep-alive实现可将多个http请求合并成一个，但是它和WebSocket还是不一样，它依然是请求和响应一一对应的。WebSocket是一个新的协议，借助于http协议完成握手。<br>WebSocket的连接请求跟http请求相似，但是多出了这么两行<code>upgrade:wesocket connection:upgrade</code>这两行告诉服务器，我是一个WebSocket协议。</p>
-<pre><code>传统的技术当然也可以实现信息的即时发送和获取，依赖于ajax轮询和long poll。
-轮询，顾名思义就是隔一会查看一下是否有新的消息,需要服务器有很快的处理速度。
-long poll 就是相当于发起请求后没收到消息就赖着不走了这么个样子。需要有很高的并发。
-当然以上两种对我来说都是停留在了理论层面，我并没有真正去实践过。有错误的地方，日后改正。</code></pre>]]></content>
-      <tags>
-        <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>async和await</title>
-    <url>/2018/12/11/async%E5%92%8Cawait/</url>
-    <content><![CDATA[<p>async表示函数里有异步操作，await表示紧跟在后面的表达式需要等待结果。<br>await 只能出现在 async 函数中。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">async function testAsync() &#123;</span><br><span class="line">    return &quot;hello async&quot;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">const result = testAsync();</span><br><span class="line">console.log(result);</span><br></pre></td></tr></table></figure>
-
-<p>返回值是一个 promise对象</p>
-<p>引用别人一段话<br><strong>联想一下 Promise 的特点——无等待，所以在没有 await 的情况下执行 async 函数，它会立即执行，返回一个 Promise 对象，并且，绝不会阻塞后面的语句。这和普通返回 Promise 对象的函数并无二致。</strong><br><a href="https://segmentfault.com/a/1190000007535316?utm_source=tag-newest" target="_blank" rel="noopener">原文链接</a></p>
-]]></content>
-      <tags>
-        <tag>前端</tag>
-        <tag>ES6</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Object.defineProperty</title>
-    <url>/2019/07/09/Object-defineProperty/</url>
-    <content><![CDATA[<p>Object.defineProperty(object, propertyname, descriptor)<br>为对象定义属性的函数</p>
-]]></content>
-      <tags>
-        <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>background-clip</title>
-    <url>/2019/07/25/background-clip/</url>
-    <content><![CDATA[<p>今日份的需求出现了一个bug<br>琢磨了好一会解决了，记录一下</p>
-<a id="more"></a>
-<p>需求是这样的<br><img src="/2019/07/25/background-clip/tu2.png" alt="tu1"><br>别的浏览器都显示的好正常的,但是在火狐中，显示的效果就是这样的了<br><img src="/2019/07/25/background-clip/tu1.png" alt="tu1"><br>经过多次尝试，发现去掉左边的背景色，边框就能正常显示出来了<br>但是需求表示左边这块就是要有不一样的颜色，怎么办呢<br>面向浏览器编程的我们打开了谷歌 搜索结果中出现了这么一个属性<br><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-clip" target="_blank" rel="noopener">background-clip</a><br>嗯，根据实际情况酌情使用</p>
-]]></content>
-      <tags>
-        <tag>前端</tag>
-        <tag>工作总结</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>axios中的拦截器</title>
     <url>/2020/05/18/axios%E4%B8%AD%E7%9A%84%E6%8B%A6%E6%88%AA%E5%99%A8/</url>
     <content><![CDATA[<p>拦截器<br>在请求或响应被 then 或 catch 处理前拦截它们。<br>分为请求拦截器和响应拦截器</p>
@@ -217,25 +217,6 @@ long poll 就是相当于发起请求后没收到消息就赖着不走了这么�
       <tags>
         <tag>前端</tag>
         <tag>工作总结</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>css性能优化</title>
-    <url>/2018/11/06/css%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/</url>
-    <content><![CDATA[<p>css经常会要做一些调整，最后几番改动下来乱的自己都看不明白，给人感觉很糟糕，因此一开始就有一个标准并严格按照标准来写就真的非常重要了。特别是在比较忙的时候，自己看自己的代码都会觉得太乱了 很遭罪。<br>因此就需要做出一些优化，高标准严要求哈哈</p>
-<a id="more"></a>
-<p>以下内容整理自稀土掘金中的<a href="https://juejin.im/post/5b6133a351882519d346853f" target="_blank" rel="noopener">奇舞周刊</a><br>1.内联首屏关键css（视情况而定）<br>适当的将渲染首屏内容所需的关键CSS内联到HTML中<br>2.异步加载css<br>3.文件压缩<br>4.去除无用CSS<br>虽然文件压缩能够降低文件大小。但CSS文件压缩通常只会去除无用的空格，这样就限制了CSS文件的压缩比例。那是否还有其他手段来精简CSS呢？答案显然是肯定的，如果压缩后的文件仍然超出了预期的大小，我们可以试着找到并删除代码中无用的CSS。</p>
-<p>一般情况下，会存在这两种无用的CSS代码：一种是不同元素或者其他情况下的重复代码，一种是整个页面内没有生效的CSS代码。对于前者，在编写的代码时候，我们应该尽可能地提取公共类，减少重复。对于后者，在不同开发者进行代码维护的过程中，总会产生不再使用的CSS的代码，当然一个人编写时也有可能出现这一问题。而这些无用的CSS代码不仅会增加浏览器的下载量，还会增加浏览器的解析时间，这对性能来说是很大的消耗。所以我们需要找到并去除这些无用代码。</p>
-<p>5.有选择的使用选择器</p>
-<p>保持简单，不要使用嵌套过多过于复杂的选择器。<br>通配符和属性选择器效率最低，需要匹配的元素最多，尽量避免使用。<br>不要使用类选择器和ID选择器修饰元素标签，如h3#markdown-content，这样多此一举，还会降低效率。<br>不要为了追求速度而放弃可读性与可维护性。<br><a href="http://www.w3cplus.com/css/mindbemding-getting-your-head-round-bem-syntax.html" target="_blank" rel="noopener">BEM命名法</a></p>
-<p>这个命名方式能使结构更加清晰，但是我觉得写出来看着太反人类了，可以借鉴这个思想，但是目前不会用这个方式。</p>
-<p>5.减少使用昂贵的属性</p>
-<p>所有需要浏览器进行操作或计算的属性相对而言都需要花费更大的代价</p>
-<p>6.优化重排和重绘</p>
-]]></content>
-      <tags>
-        <tag>前端</tag>
-        <tag>css</tag>
       </tags>
   </entry>
   <entry>
@@ -280,6 +261,25 @@ long poll 就是相当于发起请求后没收到消息就赖着不走了这么�
 ]]></content>
       <tags>
         <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>css性能优化</title>
+    <url>/2018/11/06/css%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/</url>
+    <content><![CDATA[<p>css经常会要做一些调整，最后几番改动下来乱的自己都看不明白，给人感觉很糟糕，因此一开始就有一个标准并严格按照标准来写就真的非常重要了。特别是在比较忙的时候，自己看自己的代码都会觉得太乱了 很遭罪。<br>因此就需要做出一些优化，高标准严要求哈哈</p>
+<a id="more"></a>
+<p>以下内容整理自稀土掘金中的<a href="https://juejin.im/post/5b6133a351882519d346853f" target="_blank" rel="noopener">奇舞周刊</a><br>1.内联首屏关键css（视情况而定）<br>适当的将渲染首屏内容所需的关键CSS内联到HTML中<br>2.异步加载css<br>3.文件压缩<br>4.去除无用CSS<br>虽然文件压缩能够降低文件大小。但CSS文件压缩通常只会去除无用的空格，这样就限制了CSS文件的压缩比例。那是否还有其他手段来精简CSS呢？答案显然是肯定的，如果压缩后的文件仍然超出了预期的大小，我们可以试着找到并删除代码中无用的CSS。</p>
+<p>一般情况下，会存在这两种无用的CSS代码：一种是不同元素或者其他情况下的重复代码，一种是整个页面内没有生效的CSS代码。对于前者，在编写的代码时候，我们应该尽可能地提取公共类，减少重复。对于后者，在不同开发者进行代码维护的过程中，总会产生不再使用的CSS的代码，当然一个人编写时也有可能出现这一问题。而这些无用的CSS代码不仅会增加浏览器的下载量，还会增加浏览器的解析时间，这对性能来说是很大的消耗。所以我们需要找到并去除这些无用代码。</p>
+<p>5.有选择的使用选择器</p>
+<p>保持简单，不要使用嵌套过多过于复杂的选择器。<br>通配符和属性选择器效率最低，需要匹配的元素最多，尽量避免使用。<br>不要使用类选择器和ID选择器修饰元素标签，如h3#markdown-content，这样多此一举，还会降低效率。<br>不要为了追求速度而放弃可读性与可维护性。<br><a href="http://www.w3cplus.com/css/mindbemding-getting-your-head-round-bem-syntax.html" target="_blank" rel="noopener">BEM命名法</a></p>
+<p>这个命名方式能使结构更加清晰，但是我觉得写出来看着太反人类了，可以借鉴这个思想，但是目前不会用这个方式。</p>
+<p>5.减少使用昂贵的属性</p>
+<p>所有需要浏览器进行操作或计算的属性相对而言都需要花费更大的代价</p>
+<p>6.优化重排和重绘</p>
+]]></content>
+      <tags>
+        <tag>前端</tag>
+        <tag>css</tag>
       </tags>
   </entry>
   <entry>
@@ -346,6 +346,20 @@ long poll 就是相当于发起请求后没收到消息就赖着不走了这么�
       </tags>
   </entry>
   <entry>
+    <title>gulp入门</title>
+    <url>/2018/04/01/gulp%E5%85%A5%E9%97%A8/</url>
+    <content><![CDATA[<p><a href="https://www.gulpjs.com.cn/docs/" target="_blank" rel="noopener">gulp.js中文网</a><br>gulp 基于流的自动构建工具,减少io,提高性能</p>
+<a id="more"></a>
+<ol>
+<li>browserify: 一个前端依赖的工具，可以实现js的模块化加载，主要通过commonjs来实现，</li>
+<li></li>
+</ol>
+]]></content>
+      <tags>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>git多分支多人协作开发</title>
     <url>/2018/12/19/git%E5%A4%9A%E5%88%86%E6%94%AF%E5%A4%9A%E4%BA%BA%E5%8D%8F%E4%BD%9C%E5%BC%80%E5%8F%91/</url>
     <content><![CDATA[<p><img src="/2018/12/19/git多分支多人协作开发/tu1.jpg" alt="tu"></p>
@@ -399,14 +413,24 @@ long poll 就是相当于发起请求后没收到消息就赖着不走了这么�
       </tags>
   </entry>
   <entry>
-    <title>gulp入门</title>
-    <url>/2018/04/01/gulp%E5%85%A5%E9%97%A8/</url>
-    <content><![CDATA[<p><a href="https://www.gulpjs.com.cn/docs/" target="_blank" rel="noopener">gulp.js中文网</a><br>gulp 基于流的自动构建工具,减少io,提高性能</p>
+    <title>html中引入公共模块</title>
+    <url>/2019/06/21/html%E4%B8%AD%E5%BC%95%E5%85%A5%E5%85%AC%E5%85%B1%E6%A8%A1%E5%9D%97/</url>
+    <content><![CDATA[<p>在工作中经常会遇到</p>
+]]></content>
+      <tags>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>iframe</title>
+    <url>/2017/12/06/iframe/</url>
+    <content><![CDATA[<p>哒哒哒~<br>我要来了解一下这个不知道是什么东西的东西了<strong>iframe</strong></p>
 <a id="more"></a>
-<ol>
-<li>browserify: 一个前端依赖的工具，可以实现js的模块化加载，主要通过commonjs来实现，</li>
-<li></li>
-</ol>
+<p>iframe 元素会创建包含另外一个文档的内联框架（即行内框架）</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;iframe width=420 height=330 frameborder=0 scrolling=auto src=URL&gt;&lt;/iframe&gt;</span><br><span class="line">scrolling表示是否显示页面滚动条，可选的参数为auto、yes、no，如果省略这个参数，则默认为auto。</span><br><span class="line"></span><br><span class="line">注意：URL建议用绝对路径</span><br></pre></td></tr></table></figure>
+
+<p>文档没看明白，可能是没有怎么应用的原因，也可能是我现在好困精神没法集中。</p>
+<p>知乎上大佬关于iframe的讨论<a href="https://www.zhihu.com/question/20653055" target="_blank" rel="noopener">https://www.zhihu.com/question/20653055</a><br>先这样吧</p>
 ]]></content>
       <tags>
         <tag>前端</tag>
@@ -620,6 +644,11 @@ function draw(id){
       </tags>
   </entry>
   <entry>
+    <title>iframe下position失效问题</title>
+    <url>/2019/01/26/iframe%E4%B8%8Bposition%E5%A4%B1%E6%95%88%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
     <title>html5（新增元素）</title>
     <url>/2017/11/15/html5-%E6%96%B0%E5%A2%9E%E5%85%83%E7%B4%A0/</url>
     <content><![CDATA[<p>html5要解决的问题：</p>
@@ -684,60 +713,6 @@ email、url、number、range、Date（功能强大，但是很多浏览器不支
       </tags>
   </entry>
   <entry>
-    <title>html中引入公共模块</title>
-    <url>/2019/06/21/html%E4%B8%AD%E5%BC%95%E5%85%A5%E5%85%AC%E5%85%B1%E6%A8%A1%E5%9D%97/</url>
-    <content><![CDATA[<p>在工作中经常会遇到</p>
-]]></content>
-      <tags>
-        <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>iframe</title>
-    <url>/2017/12/06/iframe/</url>
-    <content><![CDATA[<p>哒哒哒~<br>我要来了解一下这个不知道是什么东西的东西了<strong>iframe</strong></p>
-<a id="more"></a>
-<p>iframe 元素会创建包含另外一个文档的内联框架（即行内框架）</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;iframe width=420 height=330 frameborder=0 scrolling=auto src=URL&gt;&lt;/iframe&gt;</span><br><span class="line">scrolling表示是否显示页面滚动条，可选的参数为auto、yes、no，如果省略这个参数，则默认为auto。</span><br><span class="line"></span><br><span class="line">注意：URL建议用绝对路径</span><br></pre></td></tr></table></figure>
-
-<p>文档没看明白，可能是没有怎么应用的原因，也可能是我现在好困精神没法集中。</p>
-<p>知乎上大佬关于iframe的讨论<a href="https://www.zhihu.com/question/20653055" target="_blank" rel="noopener">https://www.zhihu.com/question/20653055</a><br>先这样吧</p>
-]]></content>
-      <tags>
-        <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>iframe下position失效问题</title>
-    <url>/2019/01/26/iframe%E4%B8%8Bposition%E5%A4%B1%E6%95%88%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>js基础之ajax</title>
-    <url>/2017/12/15/js%E5%9F%BA%E7%A1%80%E4%B9%8Bajax/</url>
-    <content><![CDATA[<p>AJAX即异步javascript和XML<br>ajax是一个非常基础又常见的前端技能。我认为它的核心就是实现局部刷新。这在网站中是非常有用的。下面是我整理的学习过程和心得~</p>
-<a id="more"></a>
-<p> 运用ajax大致是这样一个过程</p>
-<ol>
-<li><p>创建XMLHttpRequest对象<br><code>var xhr = new XMLHttpRequest();</code><br>FF,Chorme,Safari,Opera,IE7及以上的浏览器都支持xhr对象，IE7以下浏览器不支持，使用的是ActiveXObject</p>
-</li>
-<li><p>请求<br>XMLHttpRequest 对象用于和服务器交换数据。要将请求发送到服务器，要用到对象的open和send方法。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">xmlhttp.open(method,url,async)</span><br><span class="line">xmlhttp.send();</span><br></pre></td></tr></table></figure>
-
-<p>通过 AJAX，JavaScript 无需等待服务器的响应，而是：在等待服务器响应时执行其他脚本，当响应就绪后对响应进行处理<br>当使用 async=true 时，要规定在响应处于 onreadystatechange 事件中的就绪状态时执行的函数<br>readyState 属性存有 XMLHttpRequest 的状态信息，每当 readyState 改变时，就会触发 onreadystatechange 事件。<br><img src="http://m.qpic.cn/psb?/V11DrKVS1wfriy/x2cx0BSfJJcay*CaNkv5071RMgLhSWUM5FJKEp.U0IE!/b/dPIAAAAAAAAA&bo=5QJlAQAAAAARB7M!&rf=viewer_4" alt="XMLHttpRequest对象的三个属性"><br>当使用 async=false 时，不要编写 onreadystatechange 函数，把代码放到 send() 语句后面即可</p>
-</li>
-<li><p>响应  </p>
-</li>
-<li><p>要获得来自服务器的响应，使用 XMLHttpRequest 对象的 responseText 或 responseXML 属性。</p>
-<p>这个东西说简单简单说复杂复杂，但是平时自己折腾的东西里面很少会涉及到与后台有交互的东西，所以总也搞不太明白，看来还是要多找找东西写和多了解一下底层原理呀~</p>
-</li>
-</ol>
-]]></content>
-      <tags>
-        <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>js中的this</title>
     <url>/2018/09/15/js%E4%B8%AD%E7%9A%84this/</url>
     <content><![CDATA[<p><a href="http://www.digital-web.com/articles/scope_in_javascript/" target="_blank" rel="noopener">关于this的讲解</a></p>
@@ -758,6 +733,35 @@ email、url、number、range、Date（功能强大，但是很多浏览器不支
       <tags>
         <tag>前端</tag>
         <tag>js</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>js中的操作符问题</title>
+    <url>/2017/11/26/js%E4%B8%AD%E7%9A%84%E6%93%8D%E4%BD%9C%E7%AC%A6%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<p>今天群里的小伙伴讨论了一个问题<br><code>var x = 5;
+if(x += 1 &amp;&amp; x++)
+console.log(x)//10</code><br>反正我开始看到这个是一脸懵逼的</p>
+<a id="more"></a>
+<p>这个问题涉及到了一个基本上都会被忽略掉的操作符优先级问题和一些js中的操作符问题 首先，运算符优先级<br><code>！ &gt; 算术运算符 &gt; 关系运算符 &gt; &amp;&amp; &gt; || &gt; 赋值运算符</code><br>接下来，系统的回顾一下js操作符吧<br><code>+</code> 会将各种类型自动转换成number类型<br><code>~</code> 按位非<br><code>AND</code> 按位与<br><code>OR</code> 按位或<br><code>XOR</code> 按位异或<br><code>&lt;&lt;</code> 左移<br><code>&gt;&gt;</code> 有符号的右移  符号位不动 以符号位填充空位<br><code>&gt;&gt;&gt;</code> 无符号的右移 符号位不动 以0填充空位</p>
+<p>###布尔操作符###</p>
+<ul>
+<li>逻辑非 逻辑非操作符由一个叹号表示(!),可以应用于ECMAScript中的任何值。无论这个值是什么数据类型，这个操作符都会返回一个布尔值。</li>
+<li>逻辑与 逻辑与属于短路操作，即如果第一个操作数求值结果是false，那么就不会对第二个操作数求值。<blockquote>其中一个值不是布尔值时：遵循下列规则
+第一个操作数为假，返回第一个；
+第一个操作数为真的时候，返回第二个。
+如果第一个操作数是对象，则返回第二个操作数
+如果第二个操作数是对象，则只有在第一个操作数的求值结果为true的情况下才会返回该对象
+如果两个操作数都是对象，则返回第二操作数
+（1）如果有一个操作数是null，则返回null
+（2）如果有一个操作数是NaN,则返回NaN
+（3）如果有一个操作数是undefined，则返回undefinded</blockquote></li>
+<li>逻辑或 逻辑或操作符也是短路操作符。也就是说，如果第一个操作数的求值结果为true，就不会对第二个操作数求值了。<br>（1）第一个操作数为真，返回第一个<br>（2）第一个操作数为假，返回第二个</li>
+</ul>
+<p>###关系操作符###<br>如果两个操作数都是数值，则执行数值比较<br>如果两个操作数都是字符串，则比较两个字符串对应的字符编码值<br>如果一个操作数是数值，则将另一个操作数转换为数值，然后执行数值比较</p>
+<p>###相等操作符###<br>1.相等和不相等<br>先转换再比较<br>（1）如果有一个操作数是布尔值，则在比较相等性之前，先将其转换为数值<br>（2）如果有一个操作数是字符串，另一个操作数是数值，先将其转换为数值<br>（3）如果有一个操作数是对象，另一个不是，则调用对象的valueOf()方法，用得到的基本类型值按前面的基本规则进行比较<br>null和undefined是相等的<br>要比较相等性之前不能将null和undefined转换为任何其他值<br>如果两个操作数都是NaN，相等操作符也返回false，按规则，NaN不等于NaN<br>2.全等和不全等<br>仅比较而不转换 未经转换就相等则返回true</p>
+]]></content>
+      <tags>
+        <tag>前端</tag>
       </tags>
   </entry>
   <entry>
@@ -795,35 +799,6 @@ email、url、number、range、Date（功能强大，但是很多浏览器不支
       <tags>
         <tag>前端</tag>
         <tag>js</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>js中的操作符问题</title>
-    <url>/2017/11/26/js%E4%B8%AD%E7%9A%84%E6%93%8D%E4%BD%9C%E7%AC%A6%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[<p>今天群里的小伙伴讨论了一个问题<br><code>var x = 5;
-if(x += 1 &amp;&amp; x++)
-console.log(x)//10</code><br>反正我开始看到这个是一脸懵逼的</p>
-<a id="more"></a>
-<p>这个问题涉及到了一个基本上都会被忽略掉的操作符优先级问题和一些js中的操作符问题 首先，运算符优先级<br><code>！ &gt; 算术运算符 &gt; 关系运算符 &gt; &amp;&amp; &gt; || &gt; 赋值运算符</code><br>接下来，系统的回顾一下js操作符吧<br><code>+</code> 会将各种类型自动转换成number类型<br><code>~</code> 按位非<br><code>AND</code> 按位与<br><code>OR</code> 按位或<br><code>XOR</code> 按位异或<br><code>&lt;&lt;</code> 左移<br><code>&gt;&gt;</code> 有符号的右移  符号位不动 以符号位填充空位<br><code>&gt;&gt;&gt;</code> 无符号的右移 符号位不动 以0填充空位</p>
-<p>###布尔操作符###</p>
-<ul>
-<li>逻辑非 逻辑非操作符由一个叹号表示(!),可以应用于ECMAScript中的任何值。无论这个值是什么数据类型，这个操作符都会返回一个布尔值。</li>
-<li>逻辑与 逻辑与属于短路操作，即如果第一个操作数求值结果是false，那么就不会对第二个操作数求值。<blockquote>其中一个值不是布尔值时：遵循下列规则
-第一个操作数为假，返回第一个；
-第一个操作数为真的时候，返回第二个。
-如果第一个操作数是对象，则返回第二个操作数
-如果第二个操作数是对象，则只有在第一个操作数的求值结果为true的情况下才会返回该对象
-如果两个操作数都是对象，则返回第二操作数
-（1）如果有一个操作数是null，则返回null
-（2）如果有一个操作数是NaN,则返回NaN
-（3）如果有一个操作数是undefined，则返回undefinded</blockquote></li>
-<li>逻辑或 逻辑或操作符也是短路操作符。也就是说，如果第一个操作数的求值结果为true，就不会对第二个操作数求值了。<br>（1）第一个操作数为真，返回第一个<br>（2）第一个操作数为假，返回第二个</li>
-</ul>
-<p>###关系操作符###<br>如果两个操作数都是数值，则执行数值比较<br>如果两个操作数都是字符串，则比较两个字符串对应的字符编码值<br>如果一个操作数是数值，则将另一个操作数转换为数值，然后执行数值比较</p>
-<p>###相等操作符###<br>1.相等和不相等<br>先转换再比较<br>（1）如果有一个操作数是布尔值，则在比较相等性之前，先将其转换为数值<br>（2）如果有一个操作数是字符串，另一个操作数是数值，先将其转换为数值<br>（3）如果有一个操作数是对象，另一个不是，则调用对象的valueOf()方法，用得到的基本类型值按前面的基本规则进行比较<br>null和undefined是相等的<br>要比较相等性之前不能将null和undefined转换为任何其他值<br>如果两个操作数都是NaN，相等操作符也返回false，按规则，NaN不等于NaN<br>2.全等和不全等<br>仅比较而不转换 未经转换就相等则返回true</p>
-]]></content>
-      <tags>
-        <tag>前端</tag>
       </tags>
   </entry>
   <entry>
@@ -894,40 +869,25 @@ with
       </tags>
   </entry>
   <entry>
-    <title>js学习计划</title>
-    <url>/2019/01/18/js%E5%AD%A6%E4%B9%A0%E8%AE%A1%E5%88%92/</url>
-    <content><![CDATA[<p>给自己制定一个系统的学习计划，方便对知识体系的掌握和记忆</p>
+    <title>js基础之ajax</title>
+    <url>/2017/12/15/js%E5%9F%BA%E7%A1%80%E4%B9%8Bajax/</url>
+    <content><![CDATA[<p>AJAX即异步javascript和XML<br>ajax是一个非常基础又常见的前端技能。我认为它的核心就是实现局部刷新。这在网站中是非常有用的。下面是我整理的学习过程和心得~</p>
 <a id="more"></a>
-
-<p><img src="/2019/01/18/js学习计划/tu1.png" alt="tu"><br><img src="/2019/01/18/js学习计划/tu2.png" alt="tu"></p>
+<p> 运用ajax大致是这样一个过程</p>
 <ol>
-<li>文法</li>
+<li><p>创建XMLHttpRequest对象<br><code>var xhr = new XMLHttpRequest();</code><br>FF,Chorme,Safari,Opera,IE7及以上的浏览器都支持xhr对象，IE7以下浏览器不支持，使用的是ActiveXObject</p>
+</li>
+<li><p>请求<br>XMLHttpRequest 对象用于和服务器交换数据。要将请求发送到服务器，要用到对象的open和send方法。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">xmlhttp.open(method,url,async)</span><br><span class="line">xmlhttp.send();</span><br></pre></td></tr></table></figure>
+
+<p>通过 AJAX，JavaScript 无需等待服务器的响应，而是：在等待服务器响应时执行其他脚本，当响应就绪后对响应进行处理<br>当使用 async=true 时，要规定在响应处于 onreadystatechange 事件中的就绪状态时执行的函数<br>readyState 属性存有 XMLHttpRequest 的状态信息，每当 readyState 改变时，就会触发 onreadystatechange 事件。<br><img src="http://m.qpic.cn/psb?/V11DrKVS1wfriy/x2cx0BSfJJcay*CaNkv5071RMgLhSWUM5FJKEp.U0IE!/b/dPIAAAAAAAAA&bo=5QJlAQAAAAARB7M!&rf=viewer_4" alt="XMLHttpRequest对象的三个属性"><br>当使用 async=false 时，不要编写 onreadystatechange 函数，把代码放到 send() 语句后面即可</p>
+</li>
+<li><p>响应  </p>
+</li>
+<li><p>要获得来自服务器的响应，使用 XMLHttpRequest 对象的 responseText 或 responseXML 属性。</p>
+<p>这个东西说简单简单说复杂复杂，但是平时自己折腾的东西里面很少会涉及到与后台有交互的东西，所以总也搞不太明白，看来还是要多找找东西写和多了解一下底层原理呀~</p>
+</li>
 </ol>
-<ul>
-<li>词法</li>
-<li>语法</li>
-</ul>
-<ol start="2">
-<li><p>语义</p>
-</li>
-<li><p>运行时</p>
-</li>
-</ol>
-<ul>
-<li>数据结构<ul>
-<li>类型 对象</li>
-<li>实例 应用和机制</li>
-</ul>
-</li>
-<li>算法<ul>
-<li>事件循环</li>
-<li>微任务的执行</li>
-<li>函数的执行</li>
-<li>语句级的执行</li>
-</ul>
-</li>
-</ul>
-<p><img src="/2019/01/18/js学习计划/tu3.png" alt="tu3"></p>
 ]]></content>
       <tags>
         <tag>前端</tag>
@@ -982,6 +942,46 @@ with
       </tags>
   </entry>
   <entry>
+    <title>js学习计划</title>
+    <url>/2019/01/18/js%E5%AD%A6%E4%B9%A0%E8%AE%A1%E5%88%92/</url>
+    <content><![CDATA[<p>给自己制定一个系统的学习计划，方便对知识体系的掌握和记忆</p>
+<a id="more"></a>
+
+<p><img src="/2019/01/18/js学习计划/tu1.png" alt="tu"><br><img src="/2019/01/18/js学习计划/tu2.png" alt="tu"></p>
+<ol>
+<li>文法</li>
+</ol>
+<ul>
+<li>词法</li>
+<li>语法</li>
+</ul>
+<ol start="2">
+<li><p>语义</p>
+</li>
+<li><p>运行时</p>
+</li>
+</ol>
+<ul>
+<li>数据结构<ul>
+<li>类型 对象</li>
+<li>实例 应用和机制</li>
+</ul>
+</li>
+<li>算法<ul>
+<li>事件循环</li>
+<li>微任务的执行</li>
+<li>函数的执行</li>
+<li>语句级的执行</li>
+</ul>
+</li>
+</ul>
+<p><img src="/2019/01/18/js学习计划/tu3.png" alt="tu3"></p>
+]]></content>
+      <tags>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>js高级特性</title>
     <url>/2018/11/05/js%E9%AB%98%E7%BA%A7%E7%89%B9%E6%80%A7-2/</url>
     <content><![CDATA[<p>有关于js的几个高级特性</p>
@@ -1016,38 +1016,6 @@ with
 ]]></content>
       <tags>
         <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>node.js入门(1)</title>
-    <url>/2017/12/06/node-js%E5%85%A5%E9%97%A8-1/</url>
-    <content><![CDATA[<p>之前只用过nodejs的npm工具，现在打算来深入了解一下<br>个人感觉入门的话，有点无从学起，官方文档看的一脸懵，比较片面的博客教程拿来入门的话也不太够，我看的是邵山欢老师的视频，一个蛮可爱的老师，讲的也很好懂。视频资源 链接：<a href="https://pan.baidu.com/s/1qXTQ7BA" target="_blank" rel="noopener">https://pan.baidu.com/s/1qXTQ7BA</a> 密码：xjqi</p>
-<a id="more"></a>
-<p>nodejs用javascript编程，运行在Chrome的V8内核上。它没有服务器这个部分，</p>
-<blockquote>
-<p>nodejs的特点：</p>
-<blockquote>
-<p><strong>单线程</strong>：单线程可以让所有用户共用一个线程，节省服务器内存。但是可以实现宏观上的多线程。而且避免了操作系统多次创建，销毁进程的开销。弊端就是，一旦线程崩溃，那么服务器就无法访问。<br>非阻塞IO：nodejs运用了非阻塞IO，传统单线程采用的阻塞IO，极大降低了程序效率。<a href="http://qindongliang.iteye.com/blog/2018539" target="_blank" rel="noopener">http://qindongliang.iteye.com/blog/2018539</a><br>事件驱动：用事件驱动来完成服务器的调度</p>
-</blockquote>
-</blockquote>
-<p>因此，nodejs 比较适合需要大量IO处理的情况，而不适合需要大量计算的情况。适合做长连接的，比如跟WebSockets配合做长连接的实时交流的应用</p>
-<p>node.js其实是比较像一个虚拟机的，它也是跨平台的。<br>它的程序运行在服务器端，然后将计算结构返回到客户端。<br>如果想修改程序，必须要先中断当前运行的服务器，改动后，重新node，运行服务器<br> Ctrl+C 就可以打断挂起的服务程序，此时按上箭头，能够快速调用最近的node命令<br>简化来想，nodejs 就相当于一个js执行环境.</p>
-<p>node.js没有根目录的概念，它没有web容器。在启动之后，无法直接根据相应的文件路径文件名进入到相应的页面。但是它可以通过读取文件，这样一个路由设计，实现比较方便的读取页面之类的工作。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">fs.readFile(&apos;/etc/passwd&apos;, (err, data) =&gt; &#123;</span><br><span class="line">  if (err) throw err;</span><br><span class="line">  console.log(data);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-<p>###http模块###<br>node.js中将很多功能划分为一个个的muddule,即模块。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">//引用模块</span><br><span class="line">var http = require(&quot;http&quot;);</span><br><span class="line"></span><br><span class="line">//创建一个服务器，回调函数表示接收到请求之后做的事情</span><br><span class="line">var server = http.createServer(function(req, res) &#123;</span><br><span class="line">	console.log(&quot;服务器接受到了请求&quot; + req.url);</span><br><span class="line">	res.end();//这个方法在回调函数中是必须的，否则浏览器会一直处于等待状态</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"> server.listen(3000, &quot;localhost&quot;);</span><br></pre></td></tr></table></figure>
-
-<p>下面是一个将helloWord呈现到页面的一段代码，算是一个完整的请求过程</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">http = require(&quot;http&quot;);</span><br><span class="line">http.createServer( function(req, res) &#123;</span><br><span class="line">	res.writeHead(200, &#123;&quot;Content-type&quot;:&quot;text/html;charset=UTF-8&quot;&#125;);</span><br><span class="line">	res.end(&quot;&lt;h1&gt;hello world&lt;/h1&gt;&quot;);</span><br><span class="line"></span><br><span class="line">&#125;).listen(3000, &quot;localhost&quot;);</span><br></pre></td></tr></table></figure>
-
-<p>node.js中一个要点就是用户请求url，所有的路由设计，都是通过req.url来完成的。由于node.js中与众不同的路由机制，我们更侧重于关心如何识别url而不是拿到url</p>
-<p>要识别url，用到两个新的模块，一个是url模块，另一个就是querystring（查询字符串）</p>
-<p>事件轮询机制<br><img src="http://image.beekka.com/blog/2014/bg2014100803.png" alt="event loop示意图"><br>自己尝试把之前写的前端的demo挂在node.js上运行，结果只能运行HTML页面，相应的css和js页面加载不上来，报错 get不到~~<br>原因应该是之前提到的，nodejs没有web容器<br>所以要用到url和path这个API了</p>
-]]></content>
-      <tags>
-        <tag>前端</tag>
-        <tag>node.js</tag>
       </tags>
   </entry>
   <entry>
@@ -1126,28 +1094,49 @@ with
       </tags>
   </entry>
   <entry>
-    <title>node.js入门(3)</title>
-    <url>/2017/12/09/node-js%E5%85%A5%E9%97%A8-3/</url>
-    <content><![CDATA[<p><a href="http://www.expressjs.com.cn/" target="_blank" rel="noopener">express框架中文官网</a><br>基于 Node.js 平台，快速、开放、极简的 web 开发框架。<br>express可以极大程度上简化nodejs，它由许多api非常方便使用。<br>node.js的http封装的程度不高，路由由原生代码实现起来比较复杂。在我目前的感知里，我认为框架最主要就是实现了比较方便的路由的架构。  </p>
+    <title>node.js入门(1)</title>
+    <url>/2017/12/06/node-js%E5%85%A5%E9%97%A8-1/</url>
+    <content><![CDATA[<p>之前只用过nodejs的npm工具，现在打算来深入了解一下<br>个人感觉入门的话，有点无从学起，官方文档看的一脸懵，比较片面的博客教程拿来入门的话也不太够，我看的是邵山欢老师的视频，一个蛮可爱的老师，讲的也很好懂。视频资源 链接：<a href="https://pan.baidu.com/s/1qXTQ7BA" target="_blank" rel="noopener">https://pan.baidu.com/s/1qXTQ7BA</a> 密码：xjqi</p>
 <a id="more"></a>
+<p>nodejs用javascript编程，运行在Chrome的V8内核上。它没有服务器这个部分，</p>
+<blockquote>
+<p>nodejs的特点：</p>
+<blockquote>
+<p><strong>单线程</strong>：单线程可以让所有用户共用一个线程，节省服务器内存。但是可以实现宏观上的多线程。而且避免了操作系统多次创建，销毁进程的开销。弊端就是，一旦线程崩溃，那么服务器就无法访问。<br>非阻塞IO：nodejs运用了非阻塞IO，传统单线程采用的阻塞IO，极大降低了程序效率。<a href="http://qindongliang.iteye.com/blog/2018539" target="_blank" rel="noopener">http://qindongliang.iteye.com/blog/2018539</a><br>事件驱动：用事件驱动来完成服务器的调度</p>
+</blockquote>
+</blockquote>
+<p>因此，nodejs 比较适合需要大量IO处理的情况，而不适合需要大量计算的情况。适合做长连接的，比如跟WebSockets配合做长连接的实时交流的应用</p>
+<p>node.js其实是比较像一个虚拟机的，它也是跨平台的。<br>它的程序运行在服务器端，然后将计算结构返回到客户端。<br>如果想修改程序，必须要先中断当前运行的服务器，改动后，重新node，运行服务器<br> Ctrl+C 就可以打断挂起的服务程序，此时按上箭头，能够快速调用最近的node命令<br>简化来想，nodejs 就相当于一个js执行环境.</p>
+<p>node.js没有根目录的概念，它没有web容器。在启动之后，无法直接根据相应的文件路径文件名进入到相应的页面。但是它可以通过读取文件，这样一个路由设计，实现比较方便的读取页面之类的工作。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">fs.readFile(&apos;/etc/passwd&apos;, (err, data) =&gt; &#123;</span><br><span class="line">  if (err) throw err;</span><br><span class="line">  console.log(data);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var express = require(&apos;express&apos;);</span><br><span class="line">var app = express();</span><br><span class="line"></span><br><span class="line">app.get(&apos;/&apos;, function(req, res)&#123;</span><br><span class="line">  res.send(&apos;hello world&apos;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">app.listen(3000);</span><br></pre></td></tr></table></figure>
+<p>###http模块###<br>node.js中将很多功能划分为一个个的muddule,即模块。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">//引用模块</span><br><span class="line">var http = require(&quot;http&quot;);</span><br><span class="line"></span><br><span class="line">//创建一个服务器，回调函数表示接收到请求之后做的事情</span><br><span class="line">var server = http.createServer(function(req, res) &#123;</span><br><span class="line">	console.log(&quot;服务器接受到了请求&quot; + req.url);</span><br><span class="line">	res.end();//这个方法在回调函数中是必须的，否则浏览器会一直处于等待状态</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"> server.listen(3000, &quot;localhost&quot;);</span><br></pre></td></tr></table></figure>
 
-<p><strong>路由 app.method</strong><br>常用method有post和get。还有很多，官方文档都有介绍。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">app.get(&apos;网址&apos;, function()&#123;&#125;);</span><br><span class="line">app.post(&apos;网址&apos;, function()&#123;&#125;);</span><br><span class="line">app.all(&apos;网址&apos;, function()&#123;&#125;); 它的作用是对于一个路径上的所有请求加载中间件。</span><br></pre></td></tr></table></figure>
+<p>下面是一个将helloWord呈现到页面的一段代码，算是一个完整的请求过程</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">http = require(&quot;http&quot;);</span><br><span class="line">http.createServer( function(req, res) &#123;</span><br><span class="line">	res.writeHead(200, &#123;&quot;Content-type&quot;:&quot;text/html;charset=UTF-8&quot;&#125;);</span><br><span class="line">	res.end(&quot;&lt;h1&gt;hello world&lt;/h1&gt;&quot;);</span><br><span class="line"></span><br><span class="line">&#125;).listen(3000, &quot;localhost&quot;);</span><br></pre></td></tr></table></figure>
 
-<p>路由路径和请求方法一起定义了请求的端点，它可以是字符串、字符串模式或者正则表达式。<br>路由句柄 可以为请求处理提供多个回调函数，其行为类似 中间件。唯一的区别是这些回调函数有可能调用 next(‘route’) 方法而略过其他路由回调函数。可以利用该机制为路由定义前提条件，如果在现有路径上继续执行没有意义，则可将控制权交给剩下的路径。</p>
-<p>响应方法<br><a href="http://m.qpic.cn/psb?/V11DrKVS1wfriy/P4Q2M8GKHqNe.ok6e8sARSyii349iebvGVX9C2CwZFk!/b/dPMAAAAAAAAA&bo=TgKYAQAAAAARB.U!&rf=viewer_4" target="_blank" rel="noopener">响应方法</a></p>
-<p>可使用 app.route() 创建路由路径的链式路由句柄。由于路径在一个地方指定，这样做有助于创建模块化的路由，而且减少了代码冗余和拼写错误。</p>
-<p>可使用 express.Router 类创建模块化、可挂载的路由句柄。Router 实例是一个完整的中间件和路由系统，因此常称其为一个 “mini-app”。</p>
-<p><strong>中间件</strong><br><a href="http://www.expressjs.com.cn/guide/using-middleware.html" target="_blank" rel="noopener">依旧是官网的解释</a><br>在get和post回调函数中，如果没有next参数，那么就 匹配第一个路由，不会继续往下匹配。<br>应用级中间件<br>应用级中间件绑定到 app 对象 使用 app.use() 和 app.METHOD()app.use()的网址不是精确匹配的。</p>
-<p>路由级中间件和应用级中间件一样，只是它绑定的对象为 express.Router()。</p>
-<p><mark>错误处理中间件</mark><br>错误处理中间件有 4 个参数，定义错误处理中间件时必须使用这 4 个参数。即使不需要 next 对象，也必须在签名中声明它，否则中间件会被识别为一个常规中间件，不能处理错误。</p>
-<p>内置中间件express.static(root, [options])</p>
+<p>node.js中一个要点就是用户请求url，所有的路由设计，都是通过req.url来完成的。由于node.js中与众不同的路由机制，我们更侧重于关心如何识别url而不是拿到url</p>
+<p>要识别url，用到两个新的模块，一个是url模块，另一个就是querystring（查询字符串）</p>
+<p>事件轮询机制<br><img src="http://image.beekka.com/blog/2014/bg2014100803.png" alt="event loop示意图"><br>自己尝试把之前写的前端的demo挂在node.js上运行，结果只能运行HTML页面，相应的css和js页面加载不上来，报错 get不到~~<br>原因应该是之前提到的，nodejs没有web容器<br>所以要用到url和path这个API了</p>
 ]]></content>
       <tags>
         <tag>前端</tag>
         <tag>node.js</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>node+koa</title>
+    <url>/2020/06/23/node-koa/</url>
+    <content><![CDATA[<ol>
+<li>koa+node基础搭建到实现api接口 <a href="https://www.jianshu.com/p/3b60dda108d4" target="_blank" rel="noopener">https://www.jianshu.com/p/3b60dda108d4</a></li>
+<li>使用pm2管理node进程</li>
+<li>使用knex操作数据库</li>
+<li></li>
+</ol>
+]]></content>
+      <tags>
+        <tag>前端</tag>
       </tags>
   </entry>
   <entry>
@@ -1204,14 +1193,37 @@ with
       </tags>
   </entry>
   <entry>
-    <title>node+koa</title>
-    <url>/2020/06/23/node-koa/</url>
-    <content><![CDATA[<ol>
-<li>koa+node基础搭建到实现api接口 <a href="https://www.jianshu.com/p/3b60dda108d4" target="_blank" rel="noopener">https://www.jianshu.com/p/3b60dda108d4</a></li>
-<li>使用pm2管理node进程</li>
-<li>使用knex操作数据库</li>
-<li></li>
-</ol>
+    <title>node.js入门(3)</title>
+    <url>/2017/12/09/node-js%E5%85%A5%E9%97%A8-3/</url>
+    <content><![CDATA[<p><a href="http://www.expressjs.com.cn/" target="_blank" rel="noopener">express框架中文官网</a><br>基于 Node.js 平台，快速、开放、极简的 web 开发框架。<br>express可以极大程度上简化nodejs，它由许多api非常方便使用。<br>node.js的http封装的程度不高，路由由原生代码实现起来比较复杂。在我目前的感知里，我认为框架最主要就是实现了比较方便的路由的架构。  </p>
+<a id="more"></a>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var express = require(&apos;express&apos;);</span><br><span class="line">var app = express();</span><br><span class="line"></span><br><span class="line">app.get(&apos;/&apos;, function(req, res)&#123;</span><br><span class="line">  res.send(&apos;hello world&apos;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">app.listen(3000);</span><br></pre></td></tr></table></figure>
+
+<p><strong>路由 app.method</strong><br>常用method有post和get。还有很多，官方文档都有介绍。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">app.get(&apos;网址&apos;, function()&#123;&#125;);</span><br><span class="line">app.post(&apos;网址&apos;, function()&#123;&#125;);</span><br><span class="line">app.all(&apos;网址&apos;, function()&#123;&#125;); 它的作用是对于一个路径上的所有请求加载中间件。</span><br></pre></td></tr></table></figure>
+
+<p>路由路径和请求方法一起定义了请求的端点，它可以是字符串、字符串模式或者正则表达式。<br>路由句柄 可以为请求处理提供多个回调函数，其行为类似 中间件。唯一的区别是这些回调函数有可能调用 next(‘route’) 方法而略过其他路由回调函数。可以利用该机制为路由定义前提条件，如果在现有路径上继续执行没有意义，则可将控制权交给剩下的路径。</p>
+<p>响应方法<br><a href="http://m.qpic.cn/psb?/V11DrKVS1wfriy/P4Q2M8GKHqNe.ok6e8sARSyii349iebvGVX9C2CwZFk!/b/dPMAAAAAAAAA&bo=TgKYAQAAAAARB.U!&rf=viewer_4" target="_blank" rel="noopener">响应方法</a></p>
+<p>可使用 app.route() 创建路由路径的链式路由句柄。由于路径在一个地方指定，这样做有助于创建模块化的路由，而且减少了代码冗余和拼写错误。</p>
+<p>可使用 express.Router 类创建模块化、可挂载的路由句柄。Router 实例是一个完整的中间件和路由系统，因此常称其为一个 “mini-app”。</p>
+<p><strong>中间件</strong><br><a href="http://www.expressjs.com.cn/guide/using-middleware.html" target="_blank" rel="noopener">依旧是官网的解释</a><br>在get和post回调函数中，如果没有next参数，那么就 匹配第一个路由，不会继续往下匹配。<br>应用级中间件<br>应用级中间件绑定到 app 对象 使用 app.use() 和 app.METHOD()app.use()的网址不是精确匹配的。</p>
+<p>路由级中间件和应用级中间件一样，只是它绑定的对象为 express.Router()。</p>
+<p><mark>错误处理中间件</mark><br>错误处理中间件有 4 个参数，定义错误处理中间件时必须使用这 4 个参数。即使不需要 next 对象，也必须在签名中声明它，否则中间件会被识别为一个常规中间件，不能处理错误。</p>
+<p>内置中间件express.static(root, [options])</p>
+]]></content>
+      <tags>
+        <tag>前端</tag>
+        <tag>node.js</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>react.js入门2（路由）</title>
+    <url>/2018/12/27/react-js%E5%85%A5%E9%97%A82%EF%BC%88%E8%B7%AF%E7%94%B1%EF%BC%89/</url>
+    <content><![CDATA[<p>##react-router和react-router-dom<br>React-router<br>React-router提供了一些router的核心api，包括Router, Route, Switch等，但是它没有提供dom操作进行跳转的api。</p>
+<p>React-router-dom<br>React-router-dom提供了BrowserRouter, Route, Link等api,我们可以通过dom的事件控制路由。例如点击一个按钮进行跳转，大多数情况下我们是这种情况，所以在开发过程中，我们更多是使用React-router-dom。安装很简单npm i react-router-dom –save,安装了淘宝镜像的就用cnpm吧。<br>——摘自 react-router中文官网</p>
+<a id="more"></a>
+
 ]]></content>
       <tags>
         <tag>前端</tag>
@@ -1390,18 +1402,6 @@ with
       </tags>
   </entry>
   <entry>
-    <title>react.js入门2（路由）</title>
-    <url>/2018/12/27/react-js%E5%85%A5%E9%97%A82%EF%BC%88%E8%B7%AF%E7%94%B1%EF%BC%89/</url>
-    <content><![CDATA[<p>##react-router和react-router-dom<br>React-router<br>React-router提供了一些router的核心api，包括Router, Route, Switch等，但是它没有提供dom操作进行跳转的api。</p>
-<p>React-router-dom<br>React-router-dom提供了BrowserRouter, Route, Link等api,我们可以通过dom的事件控制路由。例如点击一个按钮进行跳转，大多数情况下我们是这种情况，所以在开发过程中，我们更多是使用React-router-dom。安装很简单npm i react-router-dom –save,安装了淘宝镜像的就用cnpm吧。<br>——摘自 react-router中文官网</p>
-<a id="more"></a>
-
-]]></content>
-      <tags>
-        <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>rn投顾项目记录</title>
     <url>/2019/04/08/rn%E6%8A%95%E9%A1%BE%E9%A1%B9%E7%9B%AE%E8%AE%B0%E5%BD%95/</url>
     <content><![CDATA[<p>NativeModules: rn调用原生模块<br>withNavigation: withNavigation是一个更高阶的组件，它将navigationprop 传递给一个包装组件。当你不能navigation直接将prop 传递给组件时，或者在深度嵌套的子级的情况下不想传递它时，它很有用。<br>react navigation:<a href="https://reactnavigation.org/docs/zh-Hans/2.x/headers.html" target="_blank" rel="noopener"></a><br>flex布局:</p>
@@ -1410,20 +1410,6 @@ with
 <p><a href="https://reactnative.cn/docs/0.43/statusbar/" target="_blank" rel="noopener">StatusBar 用于控制应用状态栏的组件</a></p>
 <p><a href="https://www.helplib.com/GitHub/article_130622" target="_blank" rel="noopener">react-native-keyboard-spacer</a></p>
 <p><a href="https://reactnative.cn/docs/0.42/keyboardavoidingview/" target="_blank" rel="noopener">KeyboardAvoidingView</a><br>本组件用于解决一个常见的尴尬问题：手机上弹出的键盘常常会挡住当前的视图。本组件可以自动根据键盘的位置，调整自身的position或底部的padding，以避免被遮挡。</p>
-]]></content>
-      <tags>
-        <tag>前端</tag>
-        <tag>rn</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>rn报错记录</title>
-    <url>/2018/11/06/rn%E6%8A%A5%E9%94%99%E8%AE%B0%E5%BD%95/</url>
-    <content><![CDATA[<p>react native 从入门的报错记录</p>
-<a id="more"></a>
-<p>1.<a href="https://blog.csdn.net/u010347226/article/details/79117940" target="_blank" rel="noopener">真机报错</a><br>2.<a href="https://blog.csdn.net/qq_25827845/article/details/52974991?locationNum=4&fps=1" target="_blank" rel="noopener">Could not connect to development server</a><br>3.<a href="https://blog.csdn.net/qq_25827845/article/details/52974991?locationNum=4&fps=1" target="_blank" rel="noopener">React—Native开发之 Could not connect to development server（Android）解决方法
-</a><br>4.<a href="http://ask.android-studio.org/?/question/3008" target="_blank" rel="noopener">启动另一个项目时失败，adb报错device still connecting</a><br>5.<a href="https://blog.csdn.net/awy1988/article/details/80336913" target="_blank" rel="noopener">React Native version mismatch 错误</a><br>6.<a href="https://blog.csdn.net/qq_34966519/article/details/51857967" target="_blank" rel="noopener">简化启动夜神模拟器的步骤</a><br>部分错误是由于rn的版本问题。最好在初始化项目的时候指定版本号，目前0.55.4比较稳定</p>
-<p>react-native bundle –platform android –dev false –entry-file index.android.js –bundle-output android/app/src/main/assets/index.android.bundle –assets-dest android/app/src/main/res</p>
 ]]></content>
       <tags>
         <tag>前端</tag>
@@ -1440,6 +1426,20 @@ with
 ]]></content>
       <tags>
         <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>rn报错记录</title>
+    <url>/2018/11/06/rn%E6%8A%A5%E9%94%99%E8%AE%B0%E5%BD%95/</url>
+    <content><![CDATA[<p>react native 从入门的报错记录</p>
+<a id="more"></a>
+<p>1.<a href="https://blog.csdn.net/u010347226/article/details/79117940" target="_blank" rel="noopener">真机报错</a><br>2.<a href="https://blog.csdn.net/qq_25827845/article/details/52974991?locationNum=4&fps=1" target="_blank" rel="noopener">Could not connect to development server</a><br>3.<a href="https://blog.csdn.net/qq_25827845/article/details/52974991?locationNum=4&fps=1" target="_blank" rel="noopener">React—Native开发之 Could not connect to development server（Android）解决方法
+</a><br>4.<a href="http://ask.android-studio.org/?/question/3008" target="_blank" rel="noopener">启动另一个项目时失败，adb报错device still connecting</a><br>5.<a href="https://blog.csdn.net/awy1988/article/details/80336913" target="_blank" rel="noopener">React Native version mismatch 错误</a><br>6.<a href="https://blog.csdn.net/qq_34966519/article/details/51857967" target="_blank" rel="noopener">简化启动夜神模拟器的步骤</a><br>部分错误是由于rn的版本问题。最好在初始化项目的时候指定版本号，目前0.55.4比较稳定</p>
+<p>react-native bundle –platform android –dev false –entry-file index.android.js –bundle-output android/app/src/main/assets/index.android.bundle –assets-dest android/app/src/main/res</p>
+]]></content>
+      <tags>
+        <tag>前端</tag>
+        <tag>rn</tag>
       </tags>
   </entry>
   <entry>
@@ -1483,6 +1483,20 @@ with
 ]]></content>
   </entry>
   <entry>
+    <title>typescript(1)</title>
+    <url>/2019/08/21/typescript-1/</url>
+    <content><![CDATA[<h2 id="类型思维"><a href="#类型思维" class="headerlink" title="类型思维"></a>类型思维</h2><p>强类型语言：强类型语言在没有强制类型转化前，不允许两种不同类型的变量相互操作。<br>弱类型语言：弱类型语言允许将一块内存看做多种类型。比如直接将整型变量与字符变量相加。</p>
+<p>静态类型语言：编译阶段确定所有变量的类型<br>动态类型语言：执行阶段确定所有变量的类型（js）</p>
+<p><a href="https://blog.csdn.net/csdn799316120/article/details/79234272" target="_blank" rel="noopener">具体解释</a></p>
+<a id="more"></a>
+<h2 id="基本类型："><a href="#基本类型：" class="headerlink" title="基本类型："></a>基本类型：</h2><p>枚举：<br>    一个有名字的常量集合，类似通过通讯录，只需要记住名字而不必在意具体数据<br>    提高可读性和可维护性<br>    分为数字枚举和字符串枚举<br>    枚举的实现原理 反向映射<br>    字符串枚举不能反向映射<br>    数字枚举和字符串枚举一起使用 异构枚举</p>
+<p>接口：<br>TypeScript的核心原则之一是对值所具有的结构进行类型检查。 它有时被称做“鸭式辨型法”或“结构性子类型化”。 在TypeScript里，接口的作用就是为这些类型命名和为你的代码或第三方代码定义契约。</p>
+]]></content>
+      <tags>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>serviceworker</title>
     <url>/2019/11/13/serviceworker/</url>
     <content><![CDATA[<h3 id="serviceworker"><a href="#serviceworker" class="headerlink" title="serviceworker"></a>serviceworker</h3><p>离线网页应用？</p>
@@ -1507,80 +1521,6 @@ with
       <tags>
         <tag>前端</tag>
         <tag>css</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>typescript(1)</title>
-    <url>/2019/08/21/typescript-1/</url>
-    <content><![CDATA[<h2 id="类型思维"><a href="#类型思维" class="headerlink" title="类型思维"></a>类型思维</h2><p>强类型语言：强类型语言在没有强制类型转化前，不允许两种不同类型的变量相互操作。<br>弱类型语言：弱类型语言允许将一块内存看做多种类型。比如直接将整型变量与字符变量相加。</p>
-<p>静态类型语言：编译阶段确定所有变量的类型<br>动态类型语言：执行阶段确定所有变量的类型（js）</p>
-<p><a href="https://blog.csdn.net/csdn799316120/article/details/79234272" target="_blank" rel="noopener">具体解释</a></p>
-<a id="more"></a>
-<h2 id="基本类型："><a href="#基本类型：" class="headerlink" title="基本类型："></a>基本类型：</h2><p>枚举：<br>    一个有名字的常量集合，类似通过通讯录，只需要记住名字而不必在意具体数据<br>    提高可读性和可维护性<br>    分为数字枚举和字符串枚举<br>    枚举的实现原理 反向映射<br>    字符串枚举不能反向映射<br>    数字枚举和字符串枚举一起使用 异构枚举</p>
-<p>接口：<br>TypeScript的核心原则之一是对值所具有的结构进行类型检查。 它有时被称做“鸭式辨型法”或“结构性子类型化”。 在TypeScript里，接口的作用就是为这些类型命名和为你的代码或第三方代码定义契约。</p>
-]]></content>
-      <tags>
-        <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>vuex学习笔记</title>
-    <url>/2018/11/06/vuex%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<p>vuex 是vue.js的状态管理模式<br>简言之就是 整个项目多处会用到的公共数据，我们把它拎出来到另一个比较高的维度，（官方说法：把组件的共享状态抽取出来，以一个全局单例模式管理）大家都可以获取，而不需要在组件之间传来传去了。这是我的理解。</p>
-<a id="more"></a>
-<p>vuex 主要包括以下部分：</p>
-<ol>
-<li>state</li>
-</ol>
-<ul>
-<li>由于 Vuex 的状态存储是响应式的，从 store 实例中读取状态最简单的方法就是在computed中返回某个状态</li>
-<li>Vuex 通过 store 选项，提供了一种机制将状态从根组件“注入”到每一个子组件中</li>
-</ul>
-<ol start="2">
-<li>getter</li>
-<li>mutation</li>
-<li>action</li>
-<li>module<br><a href="https://yicoding.gitbook.io/vue/" target="_blank" rel="noopener">参考我的同事整理的笔记</a></li>
-</ol>
-]]></content>
-      <tags>
-        <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>vue demo报错记录</title>
-    <url>/2018/11/06/vue-demo%E6%8A%A5%E9%94%99%E8%AE%B0%E5%BD%95/</url>
-    <content><![CDATA[<p><a href="https://www.cnblogs.com/adoctors/p/8511647.html" target="_blank" rel="noopener">引入公共scss时的报错</a><br><a href="https://blog.csdn.net/zhouzuoluo/article/details/80675662" target="_blank" rel="noopener">用axios+mock造数据</a><br><a href="https://www.jianshu.com/p/9fef6d040ac7?utm_campaign=maleskine&utm_content=note&utm_medium=seo_notes" target="_blank" rel="noopener">在vue中使用font-awesome</a><br><a href="https://blog.csdn.net/scy_fighting/article/details/80325643" target="_blank" rel="noopener">在vue中使用swiper</a><br><a href="https://blog.csdn.net/qq_33867131/article/details/81235750" target="_blank" rel="noopener">vue-cli项目中的组件注册和引入</a><br><a href="https://blog.csdn.net/cxmB140705/article/details/80699084" target="_blank" rel="noopener">[vue-router] Duplicate named routes definition: { name: “[object Object]”, path: “/search” }</a><br><a href="https://blog.csdn.net/youth_lx/article/details/79780938" target="_blank" rel="noopener">vue-router中的query和param</a><br><a href="https://www.cnblogs.com/penghuwan/p/7194133.html" target="_blank" rel="noopener">method watch 和 computed</a><br><a href="https://segmentfault.com/q/1010000008827096" target="_blank" rel="noopener">express，10次请求之后，status就pending了</a></p>
-]]></content>
-      <tags>
-        <tag>前端</tag>
-        <tag>实践</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>webpack</title>
-    <url>/2017/11/18/webpack/</url>
-    <content><![CDATA[<p><a href="http://www.runoob.com/w3cnote/webpack-tutorial.html" target="_blank" rel="noopener">菜鸟教程</a><br><a href="https://doc.webpack-china.org/concepts/" target="_blank" rel="noopener">中文官方文档</a><br><a href="http://www.imooc.com/learn/802" target="_blank" rel="noopener">慕课网视频教程 </a><br>webpack是将js文件进行打包的工具<br>webpack 根据模块的依赖关系进行静态分析，这些文件(模块)会被包含到 bundle.js 文件中。Webpack 会给每个模块分配一个唯一的 id 并通过这个 id 索引和访问模块。<br>Webpack 本身只能处理 JavaScript 模块，如果要处理其他类型的文件，就需要使用 loader 进行转换。</p>
-<a id="more"></a>
-<p>配置文件:我们可以将一些编译选项放在配置文件中，以便于统一管理。<br>插件：在 webpack 的配置信息 plugins 选项中指定，用于完成一些 loader 不能完成的工。<br>webpack 自带一些插件，你可以通过 cnpm 安装一些插件。<br>‘cnpm install webpack –save-dev’<br><strong>开发环境</strong><br>当项目逐渐变大，webpack 的编译时间会变长，可以通过参数让编译的输出内容带有进度和颜色。<br>‘webpack –progress –colors’<br>如果不想每次修改模块后都重新编译，那么可以启动监听模式。开启监听模式后，没有变化的模块会在编译后缓存到内存中，而不会每次都被重新编译，所以监听模式的整体速度是很快的。<br>‘webpack –progress –colors –watch’<br>当然，我们可以使用 webpack-dev-server 开发服务，这样我们就能通过 localhost:8080 启动一个 express 静态资源 web 服务器，并且会以监听模式自动运行 webpack，在浏览器打开 <a href="http://localhost:8080/" target="_blank" rel="noopener">http://localhost:8080/</a> 或 <a href="http://localhost:8080/webpack-dev-server/" target="_blank" rel="noopener">http://localhost:8080/webpack-dev-server/</a> 可以浏览项目中的页面和编译后的资源输出，并且通过一个 socket.io 服务实时监听它们的变化并自动刷新页面。<br>安装 ‘cnpm install webpack-dev-server -g’<br>运行 ‘webpack-dev-server –progress –colors’<br>(利用webpack实现热响应？？)</p>
-<p><strong>webpack核心概念</strong></p>
-<ol>
-<li>entry<br>单个入口<br>对象入口（多个）</li>
-</ol>
-<ol start="2">
-<li>output<br> filename 用于输出文件的文件名。<br> 目标输出目录 path 的绝对路径。<br> 将filename 输出到path的路径中<br> 如果有多个入口起点则应该使用占位符来确保每个文件具有唯一的名称。</li>
-</ol>
-<ol start="3">
-<li>loader<br> 使用 Loader：在你的应用程序中，有三种使用 loader 的方式：<pre><code>配置（推荐）：在 webpack.config.js 文件中指定 loader。
-内联：在每个 import 语句中显式指定 loader。
-CLI：在 shell 命令中指定它们。</code></pre></li>
-</ol>
-<ol start="4">
-<li>plugins<br> 插件目的在于解决 loader 无法实现的其他事。</li>
-</ol>
-]]></content>
-      <tags>
-        <tag>前端</tag>
       </tags>
   </entry>
   <entry>
@@ -1619,60 +1559,6 @@ CLI：在 shell 命令中指定它们。</code></pre></li>
 ]]></content>
       <tags>
         <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>web安全详解1</title>
-    <url>/2019/12/17/web%E5%AE%89%E5%85%A8%E8%AF%A6%E8%A7%A31/</url>
-    <content><![CDATA[<p>桥哥给我们讲web安全~</p>
-<a id="more"></a>
-<p>前端语言：html js php 面向浏览器 用户<br>后端语言：java c语言 c++</p>
-<p>OSI是一个开放性的通信系统互连参考模型，它是一个定义得非常好的协议规范。OSI模型有7层结构，每层都可以有几个子层。<br>OSI的7层从上到下分别是 7 应用层 6 表示层 5 会话层 4 传输层 3 网络层 2 数据链路层 1 物理层 ；其中高层（即7、6、5、4层）定义了应用程序的功能，下面3层（即3、2、1层）主要面向通过网络的端到端，点到点的数据流。<br>实际应用中 表示层和会话层是没有的</p>
-<p>数据包的传送过程<br>输入url<br>浏览器发送请求<br>默认路由：<br>常见端口<br>21：FTP<br>25：SMTP 邮件<br>80: HTTP<br>443: HTTPS</p>
-<p>DNS域名解析：顶级域到子域</p>
-]]></content>
-      <tags>
-        <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>一个冥想者的觉知书</title>
-    <url>/2019/09/02/%E4%B8%80%E4%B8%AA%E5%86%A5%E6%83%B3%E8%80%85%E7%9A%84%E8%A7%89%E7%9F%A5%E4%B9%A6/</url>
-    <content><![CDATA[<p>这是我看的第一本关于冥想的书，看完之后我依旧是个没有信仰的人。<br>本书通过作者的亲身经历，描述自己在巨大的压力下，如何战胜抑郁和焦虑，找到了行之有效的自我调节方法。</p>
-<p>看这本书的初衷很简单，我很焦虑。我也希望能有个行之有效的方法，能够让我恢复平静，另一方面，看书也使我平静。</p>
-<p>这本书越看到后面，宗教的色彩越明显，对于作者所说的福至心灵的一刻，我从未体验过，但也无法证明其不存在，故而不置可否。<br>但他其中提到的一些观念，和我在别的书籍中得到的知识交叉印证，这种感觉很妙。</p>
-<a id="more"></a>
-<p>以下，是来自书中的一些精彩的观点</p>
-<ol>
-<li>根据拖勒所述，自我意识就是我们的内在叙述者，是我们对“我”的感知意识。他认为自我意识总是以当下为代价，迷恋着过去和未来。我们在对陈年往事恋恋不舍的同时反思反悔，我们在对未来远景憧憬期许的同时痴心妄想。但此时此刻才是最重要的，当下这一刻是我们所拥有的全部。 这一观点，隐约让我有点理解我们常说的 什么叫做“活在当下”</li>
-<li>自己所预测的恐怖剧情无非是脑海中一闪而过的念头罢了。他们并非空穴来风，但也绝对不是既定事实。我们应当接受自己的思想，它只是些念头，不是事实，因而不必怀有那么深刻的恐惧。 人说恐惧才是人类发展最原始的驱动力。恐惧驱使着我们去做各种事情，一定程度上它促进了我们的进步，但另一方面，也让我们有些许盲目。</li>
-</ol>
-<p>专注当下，接受自己的念头，承认它的存在，但是，客观世界里的隐患呢 我们要怎么面对 承认意识的存在 然后呢 问题还是没有得到解决</p>
-<p>继而，接触到佛教</p>
-<ol start="3">
-<li><p>佛教的主要思想就是“无常”。就像我们说的，世界上唯一不变的就是变化本身。从某种角度看，佛教的思想其实也是一种东方的哲学思想。佛教并不通过挑战死亡来承诺灵魂的救赎，而是教我们直面那些能够毁掉我们的东西。</p>
-</li>
-<li><p>正念：是一种让我们站在一个非评判性的距离上审视思想内容的方法。 我个人将之理解为 觉察。感受到自我的意识，但不去评判好坏对错，仅仅是觉察到它的存在即可。 正念是给我们一种审视自我的机会，而不是试图驱逐它，尤其不是试图爱上它。<br>这里提供了一种正念的方法：识别 接受 探寻（探究当下情绪对自己的影响） 不对号入座（不要给自己贴标签，甚至谴责自己当下的情绪，情绪并没有对错）</p>
-</li>
-</ol>
-<p>这种“佛系”，会让我们变成一个软弱的人吗</p>
-<p>认清问题之所在并不是被动接纳，我们无法改变眼前发生的事情，但是我们可以控制自己应对的方式，积极或消极，只有自己说了算。</p>
-<p>每当好事临门，我们却过于急切地把自己地心理预期提高，欲望的大坑依旧无法填满。人们总认为这样或者那样地事物才终极地自由和幸福的源泉，但佛法说“无常”，事物永恒是变化的，摆脱“执念”，活在当下的快乐里，才是幸福的源泉。</p>
-<p>活在当下的其中一个我们比较容易做到的事情： 一次只做一件事。</p>
-<p>一段高深的结尾：一个雄心勃勃、想要开创历史获得成功的人，当然需要发奋图强。但有了结果时，要放下结果，因为人生中并非事事如意。放下对于结果的执念。</p>
-<p>个人理解的佛法（短暂的认为我是个有信仰的人），不同于我们传统印象中清心寡欲、不近酒色的和尚，反而是更接近《活佛济公》中的济公和尚。形形色色的欲望和情绪才组成了我们丰富饱满的人生啊，怀着欲望和情绪，活在当下，或许能让我们得到些许的安慰和救赎，谁知道呢 人终其一生，不都是在探索和寻觅这些嘛</p>
-]]></content>
-      <tags>
-        <tag>随笔</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>上班后的第一篇</title>
-    <url>/2018/04/01/%E4%B8%8A%E7%8F%AD%E5%90%8E%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87/</url>
-    <content><![CDATA[<p>实习一个星期，最大的感受就是自己好菜还有就是下班之后好困。<br>回头想想之前立的flag,大多数都不了了之。所以，怎么样做个自律的人呢<br>要学的东西还有很多，在公司的开发和以前做的些东西确实有些出入。尽快成长起来才是硬道理呀~</p>
-]]></content>
-      <tags>
-        <tag>随笔</tag>
       </tags>
   </entry>
   <entry>
@@ -1836,11 +1722,145 @@ CLI：在 shell 命令中指定它们。</code></pre></li>
       </tags>
   </entry>
   <entry>
+    <title>vue demo报错记录</title>
+    <url>/2018/11/06/vue-demo%E6%8A%A5%E9%94%99%E8%AE%B0%E5%BD%95/</url>
+    <content><![CDATA[<p><a href="https://www.cnblogs.com/adoctors/p/8511647.html" target="_blank" rel="noopener">引入公共scss时的报错</a><br><a href="https://blog.csdn.net/zhouzuoluo/article/details/80675662" target="_blank" rel="noopener">用axios+mock造数据</a><br><a href="https://www.jianshu.com/p/9fef6d040ac7?utm_campaign=maleskine&utm_content=note&utm_medium=seo_notes" target="_blank" rel="noopener">在vue中使用font-awesome</a><br><a href="https://blog.csdn.net/scy_fighting/article/details/80325643" target="_blank" rel="noopener">在vue中使用swiper</a><br><a href="https://blog.csdn.net/qq_33867131/article/details/81235750" target="_blank" rel="noopener">vue-cli项目中的组件注册和引入</a><br><a href="https://blog.csdn.net/cxmB140705/article/details/80699084" target="_blank" rel="noopener">[vue-router] Duplicate named routes definition: { name: “[object Object]”, path: “/search” }</a><br><a href="https://blog.csdn.net/youth_lx/article/details/79780938" target="_blank" rel="noopener">vue-router中的query和param</a><br><a href="https://www.cnblogs.com/penghuwan/p/7194133.html" target="_blank" rel="noopener">method watch 和 computed</a><br><a href="https://segmentfault.com/q/1010000008827096" target="_blank" rel="noopener">express，10次请求之后，status就pending了</a></p>
+]]></content>
+      <tags>
+        <tag>前端</tag>
+        <tag>实践</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>vuex学习笔记</title>
+    <url>/2018/11/06/vuex%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<p>vuex 是vue.js的状态管理模式<br>简言之就是 整个项目多处会用到的公共数据，我们把它拎出来到另一个比较高的维度，（官方说法：把组件的共享状态抽取出来，以一个全局单例模式管理）大家都可以获取，而不需要在组件之间传来传去了。这是我的理解。</p>
+<a id="more"></a>
+<p>vuex 主要包括以下部分：</p>
+<ol>
+<li>state</li>
+</ol>
+<ul>
+<li>由于 Vuex 的状态存储是响应式的，从 store 实例中读取状态最简单的方法就是在computed中返回某个状态</li>
+<li>Vuex 通过 store 选项，提供了一种机制将状态从根组件“注入”到每一个子组件中</li>
+</ul>
+<ol start="2">
+<li>getter</li>
+<li>mutation</li>
+<li>action</li>
+<li>module<br><a href="https://yicoding.gitbook.io/vue/" target="_blank" rel="noopener">参考我的同事整理的笔记</a></li>
+</ol>
+]]></content>
+      <tags>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>webpack</title>
+    <url>/2017/11/18/webpack/</url>
+    <content><![CDATA[<p><a href="http://www.runoob.com/w3cnote/webpack-tutorial.html" target="_blank" rel="noopener">菜鸟教程</a><br><a href="https://doc.webpack-china.org/concepts/" target="_blank" rel="noopener">中文官方文档</a><br><a href="http://www.imooc.com/learn/802" target="_blank" rel="noopener">慕课网视频教程 </a><br>webpack是将js文件进行打包的工具<br>webpack 根据模块的依赖关系进行静态分析，这些文件(模块)会被包含到 bundle.js 文件中。Webpack 会给每个模块分配一个唯一的 id 并通过这个 id 索引和访问模块。<br>Webpack 本身只能处理 JavaScript 模块，如果要处理其他类型的文件，就需要使用 loader 进行转换。</p>
+<a id="more"></a>
+<p>配置文件:我们可以将一些编译选项放在配置文件中，以便于统一管理。<br>插件：在 webpack 的配置信息 plugins 选项中指定，用于完成一些 loader 不能完成的工。<br>webpack 自带一些插件，你可以通过 cnpm 安装一些插件。<br>‘cnpm install webpack –save-dev’<br><strong>开发环境</strong><br>当项目逐渐变大，webpack 的编译时间会变长，可以通过参数让编译的输出内容带有进度和颜色。<br>‘webpack –progress –colors’<br>如果不想每次修改模块后都重新编译，那么可以启动监听模式。开启监听模式后，没有变化的模块会在编译后缓存到内存中，而不会每次都被重新编译，所以监听模式的整体速度是很快的。<br>‘webpack –progress –colors –watch’<br>当然，我们可以使用 webpack-dev-server 开发服务，这样我们就能通过 localhost:8080 启动一个 express 静态资源 web 服务器，并且会以监听模式自动运行 webpack，在浏览器打开 <a href="http://localhost:8080/" target="_blank" rel="noopener">http://localhost:8080/</a> 或 <a href="http://localhost:8080/webpack-dev-server/" target="_blank" rel="noopener">http://localhost:8080/webpack-dev-server/</a> 可以浏览项目中的页面和编译后的资源输出，并且通过一个 socket.io 服务实时监听它们的变化并自动刷新页面。<br>安装 ‘cnpm install webpack-dev-server -g’<br>运行 ‘webpack-dev-server –progress –colors’<br>(利用webpack实现热响应？？)</p>
+<p><strong>webpack核心概念</strong></p>
+<ol>
+<li>entry<br>单个入口<br>对象入口（多个）</li>
+</ol>
+<ol start="2">
+<li>output<br> filename 用于输出文件的文件名。<br> 目标输出目录 path 的绝对路径。<br> 将filename 输出到path的路径中<br> 如果有多个入口起点则应该使用占位符来确保每个文件具有唯一的名称。</li>
+</ol>
+<ol start="3">
+<li>loader<br> 使用 Loader：在你的应用程序中，有三种使用 loader 的方式：<pre><code>配置（推荐）：在 webpack.config.js 文件中指定 loader。
+内联：在每个 import 语句中显式指定 loader。
+CLI：在 shell 命令中指定它们。</code></pre></li>
+</ol>
+<ol start="4">
+<li>plugins<br> 插件目的在于解决 loader 无法实现的其他事。</li>
+</ol>
+]]></content>
+      <tags>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>上班后的第一篇</title>
+    <url>/2018/04/01/%E4%B8%8A%E7%8F%AD%E5%90%8E%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87/</url>
+    <content><![CDATA[<p>实习一个星期，最大的感受就是自己好菜还有就是下班之后好困。<br>回头想想之前立的flag,大多数都不了了之。所以，怎么样做个自律的人呢<br>要学的东西还有很多，在公司的开发和以前做的些东西确实有些出入。尽快成长起来才是硬道理呀~</p>
+]]></content>
+      <tags>
+        <tag>随笔</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>web安全详解1</title>
+    <url>/2019/12/17/web%E5%AE%89%E5%85%A8%E8%AF%A6%E8%A7%A31/</url>
+    <content><![CDATA[<p>桥哥给我们讲web安全~</p>
+<a id="more"></a>
+<p>前端语言：html js php 面向浏览器 用户<br>后端语言：java c语言 c++</p>
+<p>OSI是一个开放性的通信系统互连参考模型，它是一个定义得非常好的协议规范。OSI模型有7层结构，每层都可以有几个子层。<br>OSI的7层从上到下分别是 7 应用层 6 表示层 5 会话层 4 传输层 3 网络层 2 数据链路层 1 物理层 ；其中高层（即7、6、5、4层）定义了应用程序的功能，下面3层（即3、2、1层）主要面向通过网络的端到端，点到点的数据流。<br>实际应用中 表示层和会话层是没有的</p>
+<p>数据包的传送过程<br>输入url<br>浏览器发送请求<br>默认路由：<br>常见端口<br>21：FTP<br>25：SMTP 邮件<br>80: HTTP<br>443: HTTPS</p>
+<p>DNS域名解析：顶级域到子域</p>
+]]></content>
+      <tags>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>一个冥想者的觉知书</title>
+    <url>/2019/09/02/%E4%B8%80%E4%B8%AA%E5%86%A5%E6%83%B3%E8%80%85%E7%9A%84%E8%A7%89%E7%9F%A5%E4%B9%A6/</url>
+    <content><![CDATA[<p>这是我看的第一本关于冥想的书，看完之后我依旧是个没有信仰的人。<br>本书通过作者的亲身经历，描述自己在巨大的压力下，如何战胜抑郁和焦虑，找到了行之有效的自我调节方法。</p>
+<p>看这本书的初衷很简单，我很焦虑。我也希望能有个行之有效的方法，能够让我恢复平静，另一方面，看书也使我平静。</p>
+<p>这本书越看到后面，宗教的色彩越明显，对于作者所说的福至心灵的一刻，我从未体验过，但也无法证明其不存在，故而不置可否。<br>但他其中提到的一些观念，和我在别的书籍中得到的知识交叉印证，这种感觉很妙。</p>
+<a id="more"></a>
+<p>以下，是来自书中的一些精彩的观点</p>
+<ol>
+<li>根据拖勒所述，自我意识就是我们的内在叙述者，是我们对“我”的感知意识。他认为自我意识总是以当下为代价，迷恋着过去和未来。我们在对陈年往事恋恋不舍的同时反思反悔，我们在对未来远景憧憬期许的同时痴心妄想。但此时此刻才是最重要的，当下这一刻是我们所拥有的全部。 这一观点，隐约让我有点理解我们常说的 什么叫做“活在当下”</li>
+<li>自己所预测的恐怖剧情无非是脑海中一闪而过的念头罢了。他们并非空穴来风，但也绝对不是既定事实。我们应当接受自己的思想，它只是些念头，不是事实，因而不必怀有那么深刻的恐惧。 人说恐惧才是人类发展最原始的驱动力。恐惧驱使着我们去做各种事情，一定程度上它促进了我们的进步，但另一方面，也让我们有些许盲目。</li>
+</ol>
+<p>专注当下，接受自己的念头，承认它的存在，但是，客观世界里的隐患呢 我们要怎么面对 承认意识的存在 然后呢 问题还是没有得到解决</p>
+<p>继而，接触到佛教</p>
+<ol start="3">
+<li><p>佛教的主要思想就是“无常”。就像我们说的，世界上唯一不变的就是变化本身。从某种角度看，佛教的思想其实也是一种东方的哲学思想。佛教并不通过挑战死亡来承诺灵魂的救赎，而是教我们直面那些能够毁掉我们的东西。</p>
+</li>
+<li><p>正念：是一种让我们站在一个非评判性的距离上审视思想内容的方法。 我个人将之理解为 觉察。感受到自我的意识，但不去评判好坏对错，仅仅是觉察到它的存在即可。 正念是给我们一种审视自我的机会，而不是试图驱逐它，尤其不是试图爱上它。<br>这里提供了一种正念的方法：识别 接受 探寻（探究当下情绪对自己的影响） 不对号入座（不要给自己贴标签，甚至谴责自己当下的情绪，情绪并没有对错）</p>
+</li>
+</ol>
+<p>这种“佛系”，会让我们变成一个软弱的人吗</p>
+<p>认清问题之所在并不是被动接纳，我们无法改变眼前发生的事情，但是我们可以控制自己应对的方式，积极或消极，只有自己说了算。</p>
+<p>每当好事临门，我们却过于急切地把自己地心理预期提高，欲望的大坑依旧无法填满。人们总认为这样或者那样地事物才终极地自由和幸福的源泉，但佛法说“无常”，事物永恒是变化的，摆脱“执念”，活在当下的快乐里，才是幸福的源泉。</p>
+<p>活在当下的其中一个我们比较容易做到的事情： 一次只做一件事。</p>
+<p>一段高深的结尾：一个雄心勃勃、想要开创历史获得成功的人，当然需要发奋图强。但有了结果时，要放下结果，因为人生中并非事事如意。放下对于结果的执念。</p>
+<p>个人理解的佛法（短暂的认为我是个有信仰的人），不同于我们传统印象中清心寡欲、不近酒色的和尚，反而是更接近《活佛济公》中的济公和尚。形形色色的欲望和情绪才组成了我们丰富饱满的人生啊，怀着欲望和情绪，活在当下，或许能让我们得到些许的安慰和救赎，谁知道呢 人终其一生，不都是在探索和寻觅这些嘛</p>
+]]></content>
+      <tags>
+        <tag>随笔</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>今日随笔“</title>
+    <url>/2017/11/06/%E4%BB%8A%E6%97%A5%E9%9A%8F%E7%AC%94%E2%80%9C/</url>
+    <content><![CDATA[<p>anyway 今天也算是有了许多收获。<br>从今以后，正式在github写博客啦~<br>反应有点慢，加强锻炼啊</p>
+]]></content>
+      <tags>
+        <tag>随笔</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>乌合之众</title>
     <url>/2019/09/06/%E4%B9%8C%E5%90%88%E4%B9%8B%E4%BC%97/</url>
     <content><![CDATA[<p>法国心理学家古斯塔夫勒庞的这本社会心理学著作《乌合之众》大多数人就算没有看过也应该听说过。其实刚开始看这本书的时候我是看不下去的，加之网上对他各种评论，褒贬不一，让我更加不敢妄加断言自己的观点。但是自己些写东西嘛，必然是有自己的偏见的，还是记录一下自己看这本书时的看法，不一定对。</p>
 <a id="more"></a>
 <p>首先我们不说这本书是不是一本好书。我对好坏的界定一直不清晰。个人有个人的看法，大致上大家都会倾向于相信自己所相信的东西。<br>正如我是个悲观的人，一定程度上我很认同勒庞关于“群体的无意识性”的说法。<br>这里的群体是指以某种共同的目的或者心理状态而聚合到一起的一群人。<br>勒庞认为人们一旦陷入无序群体之中，个人意识就会消失，变成盲目的集体意识，充满了急躁、冲动、轻信、偏执……</p>
+]]></content>
+      <tags>
+        <tag>随笔</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>代码之外的软技能读后有感</title>
+    <url>/2019/06/18/%E4%BB%A3%E7%A0%81%E4%B9%8B%E5%A4%96%E7%9A%84%E8%BD%AF%E6%8A%80%E8%83%BD%E8%AF%BB%E5%90%8E%E6%9C%89%E6%84%9F/</url>
+    <content><![CDATA[<p>首先啊，不要老是觉得自己是在为别人打工啊，其实，无论怎么说都应该是自己为自己打工的，在企业工作也好，自己创业也好，工作的目的应该是为了自己，而不是为了企业。为了提升自己的综合实力也好，为了赚钱也好，都比总觉得自己在被压榨被利用的好~</p>
+<p>不要试图去改变别人的想法，具体表现为 不要跟人杠，不要贬低否定别人 控制好自己的情绪，不要随意宣泄</p>
+<p>一个面试的捷径：经营自己的个人品牌，比如说写博客 比如说 去别人的博客下面混脸熟~</p>
 ]]></content>
       <tags>
         <tag>随笔</tag>
@@ -1869,78 +1889,12 @@ CLI：在 shell 命令中指定它们。</code></pre></li>
       </tags>
   </entry>
   <entry>
-    <title>今日随笔“</title>
-    <url>/2017/11/06/%E4%BB%8A%E6%97%A5%E9%9A%8F%E7%AC%94%E2%80%9C/</url>
-    <content><![CDATA[<p>anyway 今天也算是有了许多收获。<br>从今以后，正式在github写博客啦~<br>反应有点慢，加强锻炼啊</p>
-]]></content>
-      <tags>
-        <tag>随笔</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>从乡下归来</title>
     <url>/2018/03/08/%E4%BB%8E%E4%B9%A1%E4%B8%8B%E5%BD%92%E6%9D%A5/</url>
     <content><![CDATA[<p>经历了一个多月没有WiFi的生活~<br>倒也没有多么难过。各种情绪都有过，但是也想通了许多事情。<br>博客没有写，这倒是有点遗憾了。人呐，每天都会有好多的想法，有时候把有些东西记录下来，其实也是件有意思的事情。功利点想，或许也是一件对以后的发展都很有益的事情呢<br>最近收到了个kindle，除了压泡面之外，对于比较喜欢看书的人来说也的确是个很值得入的东西。倒不是说电子水墨屏有多么护眼，反正多年以来我眼镜的度数也没涨起来过，我觉得，kindle这种除了看书啥也不能干的设定，才是它最大的亮点，嘻嘻嘻，去看书了~</p>
 ]]></content>
       <tags>
         <tag>随笔</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>代码之外的软技能读后有感</title>
-    <url>/2019/06/18/%E4%BB%A3%E7%A0%81%E4%B9%8B%E5%A4%96%E7%9A%84%E8%BD%AF%E6%8A%80%E8%83%BD%E8%AF%BB%E5%90%8E%E6%9C%89%E6%84%9F/</url>
-    <content><![CDATA[<p>首先啊，不要老是觉得自己是在为别人打工啊，其实，无论怎么说都应该是自己为自己打工的，在企业工作也好，自己创业也好，工作的目的应该是为了自己，而不是为了企业。为了提升自己的综合实力也好，为了赚钱也好，都比总觉得自己在被压榨被利用的好~</p>
-<p>不要试图去改变别人的想法，具体表现为 不要跟人杠，不要贬低否定别人 控制好自己的情绪，不要随意宣泄</p>
-<p>一个面试的捷径：经营自己的个人品牌，比如说写博客 比如说 去别人的博客下面混脸熟~</p>
-]]></content>
-      <tags>
-        <tag>随笔</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>使用npm时的常见问题</title>
-    <url>/2018/12/12/%E4%BD%BF%E7%94%A8npm%E6%97%B6%E7%9A%84%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[<ol>
-<li><a href="https://www.cnblogs.com/GeniusLyzh/p/9773440.html" target="_blank" rel="noopener">npm ERR! Unexpected end of JSON input while parsing near ‘…”,’</a></li>
-<li><a href="https://blog.csdn.net/Mr_rain/article/details/74551497" target="_blank" rel="noopener">npm ERR! code EINTEGRITY问题解决方案</a></li>
-</ol>
-]]></content>
-      <tags>
-        <tag>前端</tag>
-        <tag>git</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>仿淘宝商城前端开发</title>
-    <url>/2017/11/14/%E4%BB%BF%E6%B7%98%E5%AE%9D%E5%95%86%E5%9F%8E%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/</url>
-    <content><![CDATA[<p>我遇到了一个很烦人的问题，就是font awesome的图标老是只显示一个框，没有内容。查了半天没改好，一怒之下换成了把下载下来本地引入的方法换成了在线引入，OK解决了。偷了个懒</p>
-]]></content>
-      <tags>
-        <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>关于web可访问性的思考</title>
-    <url>/2017/12/15/%E5%85%B3%E4%BA%8Eweb%E5%8F%AF%E8%AE%BF%E9%97%AE%E6%80%A7%E7%9A%84%E6%80%9D%E8%80%83/</url>
-    <content><![CDATA[<p>今天看书的时候看到了web可用性的相关问题，我一直是一个比较爱思考这类问题的人，所以打算写下我的看法~</p>
-<a id="more"></a>
-<p>首先，谈谈作为一个用户的看法：</p>
-<ol>
-<li>如果一个前端做的很丑的页面或者哎拍拍，我是不太愿意用的，如果这个哎拍拍是有同类型替代的，那么我大概会立马删掉转而投入别家的怀抱，根本就不会关心它是否功能比别家强大之类的东西了。作为一个比较注重功能的女生，我都已经是受不了，更别提颜控的小女生们啦（我的大胆猜测，不知道跟实际有没有出入，但是好好做外观总是没有错的）~</li>
-<li>然后就是容易上手。这一点很重很重要，如果一个软件或者页面使用前还要看一大堆操作说明（除了专业性很强的软件，但是最好也要符合该专业的常规使用方法），那我，除非必要，否则还是会投入别人家的怀抱。同样如果功能做的及其花哨复杂不好用，那么不好意思，下一个。</li>
-<li>再有就是，我是一个健健康康的普通用户，但是这个东西做出来也可能会有一些特殊的用户，比如色弱色盲之类的，考虑到这种情况，我们在设计之初就应该尽量避免呢。总之，我认为应该充分考虑到我们的客户群体的情况，尽可能的满足人性化的需求，当然这并不意味着一定要为极少的个例去把东西做的繁琐，这样可能有点得不偿失了，这个问题在具体的项目中，应该会有不同的思考方向。<br>感觉这些都比较偏向设计方面的问题了，但是我就是一个不羁的前端，作为一个和用户“面对面”的工程师，对这方面有些思考总是没有坏处。<br><img src="http://4493bz.1985t.com/uploads/allimg/141222/4-141222144934.jpg" alt="没啥，就是想放一张萌萌哒图~"><br>其次，我就要谈谈作为一个前端工程师的看法了：</li>
-</ol>
-<p>我认为前端和美工都得考虑到上述问题，前端工程师还要另外考虑一些更专业更底层的问题。</p>
-<ol>
-<li>如果是移动端的应用，那么在不同的设备上的显示问题就至关重要了，必须要考虑到常见浏览设备的显示和兼容问题。否则会非常影响用户体验，就又要面临被抛弃的悲剧了哭唧唧~~</li>
-<li>众所周知，前端的技术发展更新是非常快的，那么我们在写代码时就要考虑到这一点，尽可能的为以后技术的更新提供一些便利，方便以后的维护和更新，万一以后维护更新的还是你嘞~</li>
-</ol>
-<p>虽然我根本没有接触过实际的代码优化啥啥的这种大阵仗，但是······<br>但是啥</p>
-<p>自言自语好像这个博客有除了我自己之外的人看似的···</p>
-<p>暂时到这里，说不定我以后会有新的灵光一闪呢</p>
-]]></content>
-      <tags>
-        <tag>前端</tag>
       </tags>
   </entry>
   <entry>
@@ -1959,30 +1913,25 @@ CLI：在 shell 命令中指定它们。</code></pre></li>
       </tags>
   </entry>
   <entry>
-    <title>关于http协议</title>
-    <url>/2017/12/13/%E5%85%B3%E4%BA%8Ehttp%E5%8D%8F%E8%AE%AE/</url>
-    <content><![CDATA[<p>最近看到http2协议，一直以来对网络的知识都是一知半解，现在想想，简直搞不懂以前上网络课的时候学了什么~ 看来是时候深入了解一下HTTP协议了~</p>
-<a id="more"></a>
-<p>http协议是基于tcp/ip协议之上的应用层协议，是一个无状态协议。</p>
-<p>HTTP0.9</p>
-<blockquote>
-<p>这是最早版本的http协议，这时候的协议还极其简单，只有一个get方法。服务器只能回应HTML格式的字符串，不能回应别的格式 </p>
-</blockquote>
-<p>http1.0</p>
-<blockquote>
-<p>这时候可以发送任何格式的内容了。还引入了post 和 head 命令，http请求和响应报文的格式也发生了较大的改变，除了数据之外，额外增加了http header。也新增了许多功能包括状态码（status code）、多字符集支持、多部分发送（multi-part type）、权限（authorization）、缓存（cache）、内容编码（content encoding）等。<br>HTTP/1.0 版的主要缺点是，每个TCP连接只能发送一个请求。发送数据完毕，连接就关闭，如果还要请求其他资源，就必须再新建一个连接。TCP连接的新建成本很高，因为需要客户端和服务器三次握手，并且开始时发送速率较慢（slow start）。所以，HTTP 1.0版本的性能比较差。随着网页加载的外部资源越来越多，这个问题就愈发突出了。<br>为了解决这个问题，有些浏览器在请求时，用了一个非标准的Connection字段。这个字段要求服务器不要关闭tcp连接，直到被主动关闭，但是它不是根本的解决办法，所以有http1.1横空出世啦~</p>
-</blockquote>
-<p>http1.1</p>
-<blockquote>
-<p>这一版本最大的变化是实现了持久化的连接，即tcp默认不关闭，但是这个持久化和WebSockets的持久化连接是不一样的注意区分。目前，对于同一个域名，大多数浏览器允许同时建立6个持久连接。<br>新增管道机制，即在同一个TCP连接里面，客户端可以同时发送多个请求。这样就进一步改进了HTTP协议的效率。<br>Content-Length 字段 一个TCP连接现在可以传送多个回应，势必就要有一种机制，区分数据包是属于哪一个回应的。这就是Content-length字段的作用，声明本次回应的数据长度。<br>1.1版还新增了许多动词方法：PUT、PATCH、HEAD、 OPTIONS、DELETE。另外，客户端请求的头信息新增了Host字段，用来指定服务器的域名。<br>但是在在一个TCP连接中，数据通信依然是按照顺序进行的，只有前一个回应传回来了才能发送下一个请求，这就可能造成对头堵塞。</p>
-</blockquote>
-<p>HTTP2</p>
-<blockquote>
-<p>HTTP/1.1 版的头信息肯定是文本（ASCII编码），数据体可以是文本，也可以是二进制。HTTP/2 则是一个彻底的二进制协议，头信息和数据体都是二进制，并且统称为”帧”（frame）：头信息帧和数据帧。<br>HTTP/2 复用TCP连接，在一个连接里，客户端和浏览器都可以同时发送多个请求或回应，而且不用按照顺序一一对应，这样就避免了”队头堵塞”。<br>在HTTP/2中，将所有的请求或者回应的数据包，成为一个数据流，每个数据流都有独一无二的编号来指出他们属于哪个数据流。另外还规定，客户端发出的数据流，ID一律为奇数，服务器发出的，ID为偶数。<br>数据流发送到一半的时候，客户端和服务器都可以发送信号（RST_STREAM帧），取消这个数据流。1.1版取消数据流的唯一方法，就是关闭TCP连接。这就是说，HTTP/2 可以取消某一次请求，同时保证TCP连接还打开着，可以被其他请求使用。客户端还可以指定数据流的优先级。优先级越高，服务器就会越早回应。<br>服务器推送 HTTP/2 允许服务器未经请求，主动向客户端发送资源，这叫做服务器推送（server push）。<br>常见场景是客户端请求一个网页，这个网页里面包含很多静态资源。正常情况下，客户端必须收到网页后，解析HTML源码，发现有静态资源，再发出静态资源请求。其实，服务器可以预期到客户端请求网页后，很可能会再请求静态资源，所以就主动把这些静态资源随着网页一起发给客户端了。<strong>划重点，这里的服务器推送和WebSockets里的推送有本质上的区别。</strong></p>
-</blockquote>
+    <title>仿淘宝商城前端开发</title>
+    <url>/2017/11/14/%E4%BB%BF%E6%B7%98%E5%AE%9D%E5%95%86%E5%9F%8E%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/</url>
+    <content><![CDATA[<p>我遇到了一个很烦人的问题，就是font awesome的图标老是只显示一个框，没有内容。查了半天没改好，一怒之下换成了把下载下来本地引入的方法换成了在线引入，OK解决了。偷了个懒</p>
 ]]></content>
       <tags>
-        <tag>网络</tag>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>使用npm时的常见问题</title>
+    <url>/2018/12/12/%E4%BD%BF%E7%94%A8npm%E6%97%B6%E7%9A%84%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<ol>
+<li><a href="https://www.cnblogs.com/GeniusLyzh/p/9773440.html" target="_blank" rel="noopener">npm ERR! Unexpected end of JSON input while parsing near ‘…”,’</a></li>
+<li><a href="https://blog.csdn.net/Mr_rain/article/details/74551497" target="_blank" rel="noopener">npm ERR! code EINTEGRITY问题解决方案</a></li>
+</ol>
+]]></content>
+      <tags>
+        <tag>前端</tag>
+        <tag>git</tag>
       </tags>
   </entry>
   <entry>
@@ -2053,6 +2002,57 @@ CLI：在 shell 命令中指定它们。</code></pre></li>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
+    <title>关于http协议</title>
+    <url>/2017/12/13/%E5%85%B3%E4%BA%8Ehttp%E5%8D%8F%E8%AE%AE/</url>
+    <content><![CDATA[<p>最近看到http2协议，一直以来对网络的知识都是一知半解，现在想想，简直搞不懂以前上网络课的时候学了什么~ 看来是时候深入了解一下HTTP协议了~</p>
+<a id="more"></a>
+<p>http协议是基于tcp/ip协议之上的应用层协议，是一个无状态协议。</p>
+<p>HTTP0.9</p>
+<blockquote>
+<p>这是最早版本的http协议，这时候的协议还极其简单，只有一个get方法。服务器只能回应HTML格式的字符串，不能回应别的格式 </p>
+</blockquote>
+<p>http1.0</p>
+<blockquote>
+<p>这时候可以发送任何格式的内容了。还引入了post 和 head 命令，http请求和响应报文的格式也发生了较大的改变，除了数据之外，额外增加了http header。也新增了许多功能包括状态码（status code）、多字符集支持、多部分发送（multi-part type）、权限（authorization）、缓存（cache）、内容编码（content encoding）等。<br>HTTP/1.0 版的主要缺点是，每个TCP连接只能发送一个请求。发送数据完毕，连接就关闭，如果还要请求其他资源，就必须再新建一个连接。TCP连接的新建成本很高，因为需要客户端和服务器三次握手，并且开始时发送速率较慢（slow start）。所以，HTTP 1.0版本的性能比较差。随着网页加载的外部资源越来越多，这个问题就愈发突出了。<br>为了解决这个问题，有些浏览器在请求时，用了一个非标准的Connection字段。这个字段要求服务器不要关闭tcp连接，直到被主动关闭，但是它不是根本的解决办法，所以有http1.1横空出世啦~</p>
+</blockquote>
+<p>http1.1</p>
+<blockquote>
+<p>这一版本最大的变化是实现了持久化的连接，即tcp默认不关闭，但是这个持久化和WebSockets的持久化连接是不一样的注意区分。目前，对于同一个域名，大多数浏览器允许同时建立6个持久连接。<br>新增管道机制，即在同一个TCP连接里面，客户端可以同时发送多个请求。这样就进一步改进了HTTP协议的效率。<br>Content-Length 字段 一个TCP连接现在可以传送多个回应，势必就要有一种机制，区分数据包是属于哪一个回应的。这就是Content-length字段的作用，声明本次回应的数据长度。<br>1.1版还新增了许多动词方法：PUT、PATCH、HEAD、 OPTIONS、DELETE。另外，客户端请求的头信息新增了Host字段，用来指定服务器的域名。<br>但是在在一个TCP连接中，数据通信依然是按照顺序进行的，只有前一个回应传回来了才能发送下一个请求，这就可能造成对头堵塞。</p>
+</blockquote>
+<p>HTTP2</p>
+<blockquote>
+<p>HTTP/1.1 版的头信息肯定是文本（ASCII编码），数据体可以是文本，也可以是二进制。HTTP/2 则是一个彻底的二进制协议，头信息和数据体都是二进制，并且统称为”帧”（frame）：头信息帧和数据帧。<br>HTTP/2 复用TCP连接，在一个连接里，客户端和浏览器都可以同时发送多个请求或回应，而且不用按照顺序一一对应，这样就避免了”队头堵塞”。<br>在HTTP/2中，将所有的请求或者回应的数据包，成为一个数据流，每个数据流都有独一无二的编号来指出他们属于哪个数据流。另外还规定，客户端发出的数据流，ID一律为奇数，服务器发出的，ID为偶数。<br>数据流发送到一半的时候，客户端和服务器都可以发送信号（RST_STREAM帧），取消这个数据流。1.1版取消数据流的唯一方法，就是关闭TCP连接。这就是说，HTTP/2 可以取消某一次请求，同时保证TCP连接还打开着，可以被其他请求使用。客户端还可以指定数据流的优先级。优先级越高，服务器就会越早回应。<br>服务器推送 HTTP/2 允许服务器未经请求，主动向客户端发送资源，这叫做服务器推送（server push）。<br>常见场景是客户端请求一个网页，这个网页里面包含很多静态资源。正常情况下，客户端必须收到网页后，解析HTML源码，发现有静态资源，再发出静态资源请求。其实，服务器可以预期到客户端请求网页后，很可能会再请求静态资源，所以就主动把这些静态资源随着网页一起发给客户端了。<strong>划重点，这里的服务器推送和WebSockets里的推送有本质上的区别。</strong></p>
+</blockquote>
+]]></content>
+      <tags>
+        <tag>网络</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>关于web可访问性的思考</title>
+    <url>/2017/12/15/%E5%85%B3%E4%BA%8Eweb%E5%8F%AF%E8%AE%BF%E9%97%AE%E6%80%A7%E7%9A%84%E6%80%9D%E8%80%83/</url>
+    <content><![CDATA[<p>今天看书的时候看到了web可用性的相关问题，我一直是一个比较爱思考这类问题的人，所以打算写下我的看法~</p>
+<a id="more"></a>
+<p>首先，谈谈作为一个用户的看法：</p>
+<ol>
+<li>如果一个前端做的很丑的页面或者哎拍拍，我是不太愿意用的，如果这个哎拍拍是有同类型替代的，那么我大概会立马删掉转而投入别家的怀抱，根本就不会关心它是否功能比别家强大之类的东西了。作为一个比较注重功能的女生，我都已经是受不了，更别提颜控的小女生们啦（我的大胆猜测，不知道跟实际有没有出入，但是好好做外观总是没有错的）~</li>
+<li>然后就是容易上手。这一点很重很重要，如果一个软件或者页面使用前还要看一大堆操作说明（除了专业性很强的软件，但是最好也要符合该专业的常规使用方法），那我，除非必要，否则还是会投入别人家的怀抱。同样如果功能做的及其花哨复杂不好用，那么不好意思，下一个。</li>
+<li>再有就是，我是一个健健康康的普通用户，但是这个东西做出来也可能会有一些特殊的用户，比如色弱色盲之类的，考虑到这种情况，我们在设计之初就应该尽量避免呢。总之，我认为应该充分考虑到我们的客户群体的情况，尽可能的满足人性化的需求，当然这并不意味着一定要为极少的个例去把东西做的繁琐，这样可能有点得不偿失了，这个问题在具体的项目中，应该会有不同的思考方向。<br>感觉这些都比较偏向设计方面的问题了，但是我就是一个不羁的前端，作为一个和用户“面对面”的工程师，对这方面有些思考总是没有坏处。<br><img src="http://4493bz.1985t.com/uploads/allimg/141222/4-141222144934.jpg" alt="没啥，就是想放一张萌萌哒图~"><br>其次，我就要谈谈作为一个前端工程师的看法了：</li>
+</ol>
+<p>我认为前端和美工都得考虑到上述问题，前端工程师还要另外考虑一些更专业更底层的问题。</p>
+<ol>
+<li>如果是移动端的应用，那么在不同的设备上的显示问题就至关重要了，必须要考虑到常见浏览设备的显示和兼容问题。否则会非常影响用户体验，就又要面临被抛弃的悲剧了哭唧唧~~</li>
+<li>众所周知，前端的技术发展更新是非常快的，那么我们在写代码时就要考虑到这一点，尽可能的为以后技术的更新提供一些便利，方便以后的维护和更新，万一以后维护更新的还是你嘞~</li>
+</ol>
+<p>虽然我根本没有接触过实际的代码优化啥啥的这种大阵仗，但是······<br>但是啥</p>
+<p>自言自语好像这个博客有除了我自己之外的人看似的···</p>
+<p>暂时到这里，说不定我以后会有新的灵光一闪呢</p>
+]]></content>
+      <tags>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>关于价值观：什么更重要</title>
     <url>/2019/07/18/%E5%85%B3%E4%BA%8E%E4%BB%B7%E5%80%BC%E8%A7%82%EF%BC%9A%E4%BB%80%E4%B9%88%E6%9B%B4%E9%87%8D%E8%A6%81/</url>
     <content><![CDATA[<p>最近依然想很多，但是没那么难受，没有那种撕裂的感觉了~ 事情正在朝好的方向发展中</p>
@@ -2065,6 +2065,16 @@ CLI：在 shell 命令中指定它们。</code></pre></li>
 </ol>
 <p>说到底三观 到底是什么东西，一时半会也说不清。可能因为经历的太少，也可能是在灵魂碰撞或是契合的时候才能够感知到的吧。</p>
 <p>愿永远热忱 永远保持向死而生的勇气和能力。</p>
+]]></content>
+      <tags>
+        <tag>随笔</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>关于做产品的一些笔记</title>
+    <url>/2019/09/06/%E5%85%B3%E4%BA%8E%E5%81%9A%E4%BA%A7%E5%93%81%E7%9A%84%E4%B8%80%E4%BA%9B%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<p>如何成为一名优秀的独立开发者，作者给出了以下几点建议：做一些你喜欢做的东西；<br>快速构建好产品，并及早放到市场上验证（精益创业）；<br>不要在技术上浪费太多时间，定好发布日期便执行；<br>不懂技术也可以打造一款好产品；<br>如果你打算开始单干，记得打造好你的个人品牌；<br>亲自为客户提供邮件支持，至少在一开始时要这么做；<br>顾客至上；<br>仔细思考并设定合理的目标，先实现产品再谈其他。</p>
+<p>认清自己，你可以自己问问自己，最喜欢做什么，最不喜欢做什么，也可以问问身边的朋友，觉得你哪方面不错，哪方面不灵。然后认真分析一下，真的，这事可能需要很多年，越早知道越有利。    </p>
 ]]></content>
       <tags>
         <tag>随笔</tag>
@@ -2154,6 +2164,37 @@ CLI：在 shell 命令中指定它们。</code></pre></li>
       </tags>
   </entry>
   <entry>
+    <title>前端安全性问题</title>
+    <url>/2017/12/10/%E5%89%8D%E7%AB%AF%E5%AE%89%E5%85%A8%E6%80%A7%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<p>今天不知道怎么突然想起来前端的安全性问题，之前遇到过这样的笔试题，了解过，但是感觉没明白，又忘记了，所以今天来做一个总结。</p>
+<a id="more"></a>
+
+<ol>
+<li>SQL注入：通过把SQL命令插入到Web表单提交或输入域名或页面请求的查询字符串，最终达到欺骗服务器执行恶意的SQL命令。<br>防护措施：前端页面要校验用户的输入数据，后端不要使用动态SQL语句，不要直接存放机密数据。（严格说，sql注入属于后端的安全问题）<ol start="2">
+<li>XXS跨站脚本分析：攻击者将恶意脚本插入到网页中，网页会将这些恶意脚本当正常脚本来执行。所有可输入的地方没有处理输入的数据，就可能存在xxs漏洞。为了防护应该尽可能完善过滤体系。</li>
+<li>iframe风险<br>iframe中的内容是由第三方来提供的，默认情况下他们不受我们的控制，他们可以在iframe中运行JavaScirpt脚本、Flash插件、弹出对话框等等，这可能会破坏前端用户体验。如果iframe中的域名因为过期而被恶意攻击者抢注，或者第三方被黑客攻破，iframe中的内容被替换掉了，从而利用用户浏览器中的安全漏洞下载安装木马、恶意勒索软件，这样就会有很大的安全隐患了。</li>
+<li>CSRF 跨站请求伪造：CSRF攻击过程的受害者用户登录网站A，输入个人信息，在本地保存服务器生成的cookie。然后在A网站点击由攻击者构建一条恶意链接跳转到<br>B网站,然后B网站携带着的用户cookie信息去访问B网站.让A网站造成是用户自己访问的假相,从而来进行一些列的操作,常见的就是转账.</li>
+</ol>
+</li>
+</ol>
+<p>emm~ 大概暂时就这些了，当然还有别的安全问题，但是我好像不太能理解，粗略的浏览了一下，然后以后弄明白点了再补充吧</p>
+<p><strong>补充：前端安全性问题之跨域</strong><br>所谓的跨域，是为了避免前端安全性问题而做的同源策略引发的问题。<br>同域名、同端口、同协议视为同一个域，一个域内的脚本仅仅具有本域内的权限，可以理解为本域脚本只能读写本域内的资源，而无法访问其它域的资源。<br>否则，就是跨域。<br>在同源策略的限制下允许部分不遵循同源策略访问的方式就是跨域<br><a href="https://www.cnblogs.com/st-leslie/p/5958822.html" target="_blank" rel="noopener">这里是一篇我认为总结的很好的博客</a><br><a href="https://www.cnblogs.com/chillaxyw/p/5492763.html" target="_blank" rel="noopener">这是个跟我差不多情况的博主写的博客~</a></p>
+<p>常见的跨域方式有：</p>
+<ul>
+<li>jsonp Jsonp(JSON with Padding)是json的一种”使用模式”，可以让网页从别的域名（网站）那获取资料，即跨域<strong>读取</strong>数据。因为通过script标签引入的js是不受同源策略的限制的。JSONP易于实现，但是也会存在一些安全隐患，如果第三方的脚本随意地执行，那么它就可以篡改页面内容，截获敏感数据。但是在受信任的双方传递数据，JSONP是非常合适的选择。可以看出来JSONP跨域一般用于获取其他域的数据。</li>
+<li>ifarme iframe跨域的原理跟script跨域一样，但是我们要注意的是标签自身功能的差异性，具体差异如下：<br> script单纯就是引入的作用，但是iframe标签还有一个作用是显示的作用可以把远程加载的HTML代码显示出来，也就是script无法引入HTML代码文件script标签只能够从远程获取数据，无法操作远程文件执行。但是iframe可以这样</li>
+<li>document.domain</li>
+<li>window.name </li>
+<li>cookie</li>
+<li>postMessage</li>
+</ul>
+<p>还是不太明白~</p>
+]]></content>
+      <tags>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>初识less预处理器</title>
     <url>/2017/12/16/%E5%88%9D%E8%AF%86less%E9%A2%84%E5%A4%84%E7%90%86%E5%99%A8/</url>
     <content><![CDATA[<p>哒哒哒~ 每天学习一点点新东西<br>通过阅读别人的博客初识了css预处理器的强大，我选择了less预处理器作为入门，同时，我也认为利用处理器对css进行某些操作能极大地简化后期的维护和管理，在编写的时候也能带来一些便利，当然这只是我目前的认知，在系统的学习之前的认知~ 但是毫无疑问，在高速的技术迭代中，前端的发展趋于一个更加简化和智能的方向。</p>
@@ -2197,71 +2238,36 @@ CLI：在 shell 命令中指定它们。</code></pre></li>
       </tags>
   </entry>
   <entry>
-    <title>前端安全性问题</title>
-    <url>/2017/12/10/%E5%89%8D%E7%AB%AF%E5%AE%89%E5%85%A8%E6%80%A7%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[<p>今天不知道怎么突然想起来前端的安全性问题，之前遇到过这样的笔试题，了解过，但是感觉没明白，又忘记了，所以今天来做一个总结。</p>
-<a id="more"></a>
-
-<ol>
-<li>SQL注入：通过把SQL命令插入到Web表单提交或输入域名或页面请求的查询字符串，最终达到欺骗服务器执行恶意的SQL命令。<br>防护措施：前端页面要校验用户的输入数据，后端不要使用动态SQL语句，不要直接存放机密数据。（严格说，sql注入属于后端的安全问题）<ol start="2">
-<li>XXS跨站脚本分析：攻击者将恶意脚本插入到网页中，网页会将这些恶意脚本当正常脚本来执行。所有可输入的地方没有处理输入的数据，就可能存在xxs漏洞。为了防护应该尽可能完善过滤体系。</li>
-<li>iframe风险<br>iframe中的内容是由第三方来提供的，默认情况下他们不受我们的控制，他们可以在iframe中运行JavaScirpt脚本、Flash插件、弹出对话框等等，这可能会破坏前端用户体验。如果iframe中的域名因为过期而被恶意攻击者抢注，或者第三方被黑客攻破，iframe中的内容被替换掉了，从而利用用户浏览器中的安全漏洞下载安装木马、恶意勒索软件，这样就会有很大的安全隐患了。</li>
-<li>CSRF 跨站请求伪造：CSRF攻击过程的受害者用户登录网站A，输入个人信息，在本地保存服务器生成的cookie。然后在A网站点击由攻击者构建一条恶意链接跳转到<br>B网站,然后B网站携带着的用户cookie信息去访问B网站.让A网站造成是用户自己访问的假相,从而来进行一些列的操作,常见的就是转账.</li>
+    <title>告别低自尊呐</title>
+    <url>/2019/06/03/%E5%91%8A%E5%88%AB%E4%BD%8E%E8%87%AA%E5%B0%8A%E5%91%90/</url>
+    <content><![CDATA[<ol>
+<li>为什么会有讨好行为<br> 正视自己的真实情感与需求<br> 接受自己的不完美</li>
 </ol>
-</li>
-</ol>
-<p>emm~ 大概暂时就这些了，当然还有别的安全问题，但是我好像不太能理解，粗略的浏览了一下，然后以后弄明白点了再补充吧</p>
-<p><strong>补充：前端安全性问题之跨域</strong><br>所谓的跨域，是为了避免前端安全性问题而做的同源策略引发的问题。<br>同域名、同端口、同协议视为同一个域，一个域内的脚本仅仅具有本域内的权限，可以理解为本域脚本只能读写本域内的资源，而无法访问其它域的资源。<br>否则，就是跨域。<br>在同源策略的限制下允许部分不遵循同源策略访问的方式就是跨域<br><a href="https://www.cnblogs.com/st-leslie/p/5958822.html" target="_blank" rel="noopener">这里是一篇我认为总结的很好的博客</a><br><a href="https://www.cnblogs.com/chillaxyw/p/5492763.html" target="_blank" rel="noopener">这是个跟我差不多情况的博主写的博客~</a></p>
-<p>常见的跨域方式有：</p>
-<ul>
-<li>jsonp Jsonp(JSON with Padding)是json的一种”使用模式”，可以让网页从别的域名（网站）那获取资料，即跨域<strong>读取</strong>数据。因为通过script标签引入的js是不受同源策略的限制的。JSONP易于实现，但是也会存在一些安全隐患，如果第三方的脚本随意地执行，那么它就可以篡改页面内容，截获敏感数据。但是在受信任的双方传递数据，JSONP是非常合适的选择。可以看出来JSONP跨域一般用于获取其他域的数据。</li>
-<li>ifarme iframe跨域的原理跟script跨域一样，但是我们要注意的是标签自身功能的差异性，具体差异如下：<br> script单纯就是引入的作用，但是iframe标签还有一个作用是显示的作用可以把远程加载的HTML代码显示出来，也就是script无法引入HTML代码文件script标签只能够从远程获取数据，无法操作远程文件执行。但是iframe可以这样</li>
-<li>document.domain</li>
-<li>window.name </li>
-<li>cookie</li>
-<li>postMessage</li>
-</ul>
-<p>还是不太明白~</p>
+]]></content>
+      <tags>
+        <tag>随笔</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>前端性能优化之防抖</title>
+    <url>/2019/10/06/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E4%B9%8B%E9%98%B2%E6%8A%96/</url>
+    <content><![CDATA[<p>函数防抖：实际上就是对于频繁触发的事件进行延时处理，只触发一次只响应一次，这样可以极大的提高性能</p>
+<p>我们实现的思路就是：先设置一个计时器变量，用闭包保存，保证不会被内存释放，在事件触发的时候，也就是只要事件触发，先清除这个计时器，然后再设置一个，那么只要事件持续触发，刚刚建立的定时器就会被销毁，直到最后我们不在触发事件，就执行最后一次设置的定时器。</p>
+<p>节流：限制触发频率<br>当快速的点击抢购按钮的时候，数量快速的增加，如果有人用脚本点击，那么这个数量会瞬间非常的大，造成性能问题。<br>那么我们就需要控制触发函数的频率，也就是节流，事件第一次触发的时候，记录下函数执行的时间点，当函数想要再一次执行，需要间隔一定的时间才能执行，也就是每间隔一定的时间，才能触发这个函数，而不能快速触发，这就是节流的方法。</p>
 ]]></content>
       <tags>
         <tag>前端</tag>
       </tags>
   </entry>
   <entry>
-    <title>前端模块化之commonJS</title>
-    <url>/2017/12/22/%E5%89%8D%E7%AB%AF%E6%A8%A1%E5%9D%97%E5%8C%96%E4%B9%8BcommonJS/</url>
-    <content><![CDATA[<p>整理自 <a href="http://javascript.ruanyifeng.com/nodejs/module.html#toc4" target="_blank" rel="noopener">阮一峰的《javascript标准参考教程》</a><br>node.js采用的CommonJS模块规范，看别人的博客都在说之后的模块化方案会趋向于采用ES6中的模块化方案。作为一个还在学习，尚未投入到工作中的小可爱，再加上最近在学习node.js所以打算从CommonJs规范下手。</p>
+    <title>哈希</title>
+    <url>/2019/09/25/%E5%93%88%E5%B8%8C/</url>
+    <content><![CDATA[<p>今天开始刷算法，<s>立了个每天一道算法题的flag</s>,第一天，一道简单的题目，但是也可以有 有深度 的写法<br><a href="https://github.com/wine1/code/blob/master/1twoSum.js" target="_blank" rel="noopener">leetcode第一题</a><br>用常规方法时间复杂度为O(n*n) 而hashmap的时间复杂度只有O(n)</p>
 <a id="more"></a>
-<h3 id="module"><a href="#module" class="headerlink" title="module"></a>module</h3><p>CommonJS规范规定，每个模块内部，module变量代表当前模块。这个变量是一个对象，它的exports属性（即module.exports）是对外的接口。加载某个模块，其实是加载该模块的module.exports属性。<br>require方法用于加载模块。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var x = 5;</span><br><span class="line">var addX = function (value) &#123;</span><br><span class="line">  return value + x;</span><br><span class="line">&#125;;</span><br><span class="line">module.exports.x = x;</span><br><span class="line">module.exports.addX = addX;</span><br><span class="line"></span><br><span class="line">var example = require(&apos;./example.js&apos;);</span><br><span class="line">console.log(example.x); // 5</span><br><span class="line">console.log(example.addX(1)); // 6</span><br></pre></td></tr></table></figure>
-
-<p>CommonJS模块的特点如下:</p>
-<ol>
-<li>所有代码都运行在模块作用域，不会污染全局作用域。</li>
-<li>模块可以多次加载，但是只会在第一次加载时运行一次，然后运行结果就被缓存了，以后再加载，就直接读取缓存结果。要想让模块再次运行，必须清除缓存。</li>
-<li>模块加载的顺序，按照其在代码中出现的顺序。</li>
-</ol>
-<p>每个模块内部，都有一个module对象，代表当前模块。它有以下属性:</p>
-<ol>
-<li>module.id 模块的识别符，通常是带有绝对路径的模块文件名。</li>
-<li>module.filename 模块的文件名，带有绝对路径。</li>
-<li>module.loaded 返回一个布尔值，表示模块是否已经完成加载。</li>
-<li>module.parent 返回一个对象，表示调用该模块的模块。</li>
-<li>module.children 返回一个数组，表示该模块要用到的其他模块。</li>
-<li>module.exports 表示模块对外输出的值。</li>
-</ol>
-<h3 id="AMD规范与CommonJS规范的兼容性"><a href="#AMD规范与CommonJS规范的兼容性" class="headerlink" title="AMD规范与CommonJS规范的兼容性"></a>AMD规范与CommonJS规范的兼容性</h3><p>CommonJS规范加载模块是同步的，也就是说，只有加载完成，才能执行后面的操作。AMD规范则是非同步加载模块，允许指定回调函数。浏览器端一般采用AMD规范。AMD规范使用define方法定义模块。AMD规范允许输出的模块兼容CommonJS规范。</p>
-<h3 id="require命令"><a href="#require命令" class="headerlink" title="require命令"></a>require命令</h3><p>require命令的基本功能是，读入并执行一个JavaScript文件，然后返回该模块的exports对象。</p>
-<p><strong>加载规则</strong><br>require命令用于加载文件，后缀名默认为.js<br>根据参数的不同格式，require命令去不同路径寻找模块文件。</p>
-<p><strong>目录加载规则</strong><br>通常，我们会把相关的文件会放在一个目录里面，便于组织。这时，最好为该目录设置一个入口文件，让require方法可以通过这个入口文件，加载整个目录。<br>在目录中放置一个package.json文件，并且将入口文件写入main字段。<br>require发现参数字符串指向一个目录以后，会自动查看该目录的package.json文件，然后加载main字段指定的入口文件。如果package.json文件没有main字段，或者根本就没有package.json文件，则会加载该目录下的index.js文件或index.node文件。</p>
-<p><strong>模块的缓存</strong><br>第一次加载某个模块时，Node会缓存该模块。以后再加载该模块，就直接从缓存取出该模块的module.exports属性。</p>
-<p><strong>环境变量NODE_PATH</strong><br>Node执行一个脚本时，会先查看环境变量NODE_PATH。它是一组以冒号分隔的绝对路径。在其他位置找不到指定模块时，Node会去这些路径查找。可以将NODE_PATH添加到.bashrc。</p>
-<p><strong>模块的循环加载</strong><br>如果发生模块的循环加载，即A加载B，B又加载A，则B将加载A的不完整版本。</p>
-<p>require方法有一个main属性，可以用来判断模块是直接执行，还是被调用执行。<br>直接执行的时候（node module.js），require.main属性指向模块本身。</p>
-<h3 id="模块加载机制"><a href="#模块加载机制" class="headerlink" title="模块加载机制"></a>模块加载机制</h3><p>CommonJS模块的加载机制是，输入的是被输出的值的拷贝。也就是说，一旦输出一个值，模块内部的变化就影响不到这个值。</p>
+<p>hashmap是一个用于存储key-value键值对的集合</p>
 ]]></content>
       <tags>
-        <tag>前端</tag>
+        <tag>数据结构</tag>
       </tags>
   </entry>
   <entry>
@@ -2310,24 +2316,79 @@ CLI：在 shell 命令中指定它们。</code></pre></li>
       </tags>
   </entry>
   <entry>
-    <title>关于做产品的一些笔记</title>
-    <url>/2019/09/06/%E5%85%B3%E4%BA%8E%E5%81%9A%E4%BA%A7%E5%93%81%E7%9A%84%E4%B8%80%E4%BA%9B%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<p>如何成为一名优秀的独立开发者，作者给出了以下几点建议：做一些你喜欢做的东西；<br>快速构建好产品，并及早放到市场上验证（精益创业）；<br>不要在技术上浪费太多时间，定好发布日期便执行；<br>不懂技术也可以打造一款好产品；<br>如果你打算开始单干，记得打造好你的个人品牌；<br>亲自为客户提供邮件支持，至少在一开始时要这么做；<br>顾客至上；<br>仔细思考并设定合理的目标，先实现产品再谈其他。</p>
-<p>认清自己，你可以自己问问自己，最喜欢做什么，最不喜欢做什么，也可以问问身边的朋友，觉得你哪方面不错，哪方面不灵。然后认真分析一下，真的，这事可能需要很多年，越早知道越有利。    </p>
+    <title>前端模块化之commonJS</title>
+    <url>/2017/12/22/%E5%89%8D%E7%AB%AF%E6%A8%A1%E5%9D%97%E5%8C%96%E4%B9%8BcommonJS/</url>
+    <content><![CDATA[<p>整理自 <a href="http://javascript.ruanyifeng.com/nodejs/module.html#toc4" target="_blank" rel="noopener">阮一峰的《javascript标准参考教程》</a><br>node.js采用的CommonJS模块规范，看别人的博客都在说之后的模块化方案会趋向于采用ES6中的模块化方案。作为一个还在学习，尚未投入到工作中的小可爱，再加上最近在学习node.js所以打算从CommonJs规范下手。</p>
+<a id="more"></a>
+<h3 id="module"><a href="#module" class="headerlink" title="module"></a>module</h3><p>CommonJS规范规定，每个模块内部，module变量代表当前模块。这个变量是一个对象，它的exports属性（即module.exports）是对外的接口。加载某个模块，其实是加载该模块的module.exports属性。<br>require方法用于加载模块。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var x = 5;</span><br><span class="line">var addX = function (value) &#123;</span><br><span class="line">  return value + x;</span><br><span class="line">&#125;;</span><br><span class="line">module.exports.x = x;</span><br><span class="line">module.exports.addX = addX;</span><br><span class="line"></span><br><span class="line">var example = require(&apos;./example.js&apos;);</span><br><span class="line">console.log(example.x); // 5</span><br><span class="line">console.log(example.addX(1)); // 6</span><br></pre></td></tr></table></figure>
+
+<p>CommonJS模块的特点如下:</p>
+<ol>
+<li>所有代码都运行在模块作用域，不会污染全局作用域。</li>
+<li>模块可以多次加载，但是只会在第一次加载时运行一次，然后运行结果就被缓存了，以后再加载，就直接读取缓存结果。要想让模块再次运行，必须清除缓存。</li>
+<li>模块加载的顺序，按照其在代码中出现的顺序。</li>
+</ol>
+<p>每个模块内部，都有一个module对象，代表当前模块。它有以下属性:</p>
+<ol>
+<li>module.id 模块的识别符，通常是带有绝对路径的模块文件名。</li>
+<li>module.filename 模块的文件名，带有绝对路径。</li>
+<li>module.loaded 返回一个布尔值，表示模块是否已经完成加载。</li>
+<li>module.parent 返回一个对象，表示调用该模块的模块。</li>
+<li>module.children 返回一个数组，表示该模块要用到的其他模块。</li>
+<li>module.exports 表示模块对外输出的值。</li>
+</ol>
+<h3 id="AMD规范与CommonJS规范的兼容性"><a href="#AMD规范与CommonJS规范的兼容性" class="headerlink" title="AMD规范与CommonJS规范的兼容性"></a>AMD规范与CommonJS规范的兼容性</h3><p>CommonJS规范加载模块是同步的，也就是说，只有加载完成，才能执行后面的操作。AMD规范则是非同步加载模块，允许指定回调函数。浏览器端一般采用AMD规范。AMD规范使用define方法定义模块。AMD规范允许输出的模块兼容CommonJS规范。</p>
+<h3 id="require命令"><a href="#require命令" class="headerlink" title="require命令"></a>require命令</h3><p>require命令的基本功能是，读入并执行一个JavaScript文件，然后返回该模块的exports对象。</p>
+<p><strong>加载规则</strong><br>require命令用于加载文件，后缀名默认为.js<br>根据参数的不同格式，require命令去不同路径寻找模块文件。</p>
+<p><strong>目录加载规则</strong><br>通常，我们会把相关的文件会放在一个目录里面，便于组织。这时，最好为该目录设置一个入口文件，让require方法可以通过这个入口文件，加载整个目录。<br>在目录中放置一个package.json文件，并且将入口文件写入main字段。<br>require发现参数字符串指向一个目录以后，会自动查看该目录的package.json文件，然后加载main字段指定的入口文件。如果package.json文件没有main字段，或者根本就没有package.json文件，则会加载该目录下的index.js文件或index.node文件。</p>
+<p><strong>模块的缓存</strong><br>第一次加载某个模块时，Node会缓存该模块。以后再加载该模块，就直接从缓存取出该模块的module.exports属性。</p>
+<p><strong>环境变量NODE_PATH</strong><br>Node执行一个脚本时，会先查看环境变量NODE_PATH。它是一组以冒号分隔的绝对路径。在其他位置找不到指定模块时，Node会去这些路径查找。可以将NODE_PATH添加到.bashrc。</p>
+<p><strong>模块的循环加载</strong><br>如果发生模块的循环加载，即A加载B，B又加载A，则B将加载A的不完整版本。</p>
+<p>require方法有一个main属性，可以用来判断模块是直接执行，还是被调用执行。<br>直接执行的时候（node module.js），require.main属性指向模块本身。</p>
+<h3 id="模块加载机制"><a href="#模块加载机制" class="headerlink" title="模块加载机制"></a>模块加载机制</h3><p>CommonJS模块的加载机制是，输入的是被输出的值的拷贝。也就是说，一旦输出一个值，模块内部的变化就影响不到这个值。</p>
+]]></content>
+      <tags>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>坚持的重要性</title>
+    <url>/2019/06/04/%E5%9D%9A%E6%8C%81%E7%9A%84%E9%87%8D%E8%A6%81%E6%80%A7/</url>
+    <content><![CDATA[<p>日复一日年复一年<br>做什么事情总是半途而废的话<br>做什么事情总是自我麻痹的话<br>就什么都做不好了的<br>并不是一定要做出多么令人惊叹的创举<br>坚持和自律<br>就已经足以让人变得更加优秀了<br>不要走错了方向啊。</p>
 ]]></content>
       <tags>
         <tag>随笔</tag>
       </tags>
   </entry>
   <entry>
-    <title>告别低自尊呐</title>
-    <url>/2019/06/03/%E5%91%8A%E5%88%AB%E4%BD%8E%E8%87%AA%E5%B0%8A%E5%91%90/</url>
-    <content><![CDATA[<ol>
-<li>为什么会有讨好行为<br> 正视自己的真实情感与需求<br> 接受自己的不完美</li>
-</ol>
+    <title>头条项目</title>
+    <url>/2017/11/12/%E5%A4%B4%E6%9D%A1%E9%A1%B9%E7%9B%AE/</url>
+    <content><![CDATA[<p>这个实战项目是一个不错的面试拿来讲的项目，牛客网购买的，如果有缘看到这个博客，喏，拿去好了 链接：<a href="http://pan.baidu.com/s/1nv86TVN" target="_blank" rel="noopener">http://pan.baidu.com/s/1nv86TVN</a> 密码：pj06</p>
+<a id="more"></a>
+<h3 id="该项目实现的功能："><a href="#该项目实现的功能：" class="headerlink" title="该项目实现的功能："></a>该项目实现的功能：</h3><p>数据交互iBatis集成<br>用户注册登录管理<br>资讯发布 图像上传<br>评论中心<br>基于Redis点赞的功能<br>异步设计 站内邮件<br>多种资讯的排布算法</p>
+<h4 id="Spring-boot注解"><a href="#Spring-boot注解" class="headerlink" title="Spring boot注解"></a>Spring boot注解</h4><p>@Controller定义Controller控制器，用它标记的类就是一个SpringMVC Controller对象用于定义控制器类，在spring 项目中由控制器负责将用户发来的URL请求转发到对应的服务接口（service层），一般这个注解在类中，通常方法需要配合注解@RequestMapping。<br>@RequestMapping来映射request请求与处理器（url到Controller）<br>@RequestBody在使用@RequestMapping后，返回值通常解析为跳转路径，加上@responsebody后返回结果不会被解析为跳转路径，而是直接写入HTTP response body中。<br>@RequestParam绑定HttpServletRequest请求参数到控制器方法参数<br>@CookieValue绑定cookie的值到Controller方法参数<br>@RequestHeader绑定HttpServletRequest头信息到Controller方法参数<br><a href="https://www.cnblogs.com/tanwei81/p/6814022.html" target="_blank" rel="noopener">附一位博主的总结</a></p>
+<h3 id="AOP-面向切面编程"><a href="#AOP-面向切面编程" class="headerlink" title="AOP 面向切面编程"></a>AOP 面向切面编程</h3><p>在运行时，动态地将代码切入到类的指定方法、指定位置上的编程思想就是面向切面的编程。<br>一般而言，我们管切入到指定类指定方法的代码片段称为切面，而切入到哪些类、哪些方法则叫切入点。有了AOP，我们就可以把几个类共有的代码，抽取到一个切片中，等到需要时再切入对象中去，从而改变其原有的行为。</p>
+<h3 id="IOC-依赖注入-控制反转"><a href="#IOC-依赖注入-控制反转" class="headerlink" title="IOC 依赖注入 控制反转"></a>IOC 依赖注入 控制反转</h3><p>让调用类对某一接口实现类的依赖关系由第三方（容器或协作类）注入，以移除调用类对某一接口实现类的依赖。</p>
+<h3 id="velocity"><a href="#velocity" class="headerlink" title="velocity"></a>velocity</h3><p>是一个java模板引擎，可以直接引用定义在java代码中的对象</p>
+<blockquote>
+<p>基本语法</p>
+<blockquote>
+<p>‘ # ‘用来标识velocity的脚本语言 包括’ #set、#if 、#else、#end、#foreach、#end、#iinclude、#parse、#macro ‘等<br>‘ $ ‘ 用来标识对象或者说变量<br>‘ {} ‘ 用来明确标识velocity变量<br>‘ ! ‘ 用来强制将不存在的变量显示为空白<br>实践<br>‘ $!obj ‘直接返回对象中的结果<br>‘ #if($!obj) #else #end ‘判断语句<br>‘ #foreach($info in $list) $info.someList #end ‘ 循环读取集合list中的对象，并做处理<br>‘ #macro(macroName)#end ‘ 脚本函数(宏)调用，不推荐在界面模板中大量使用<br>包含文件’ #inclue(“模板文件名”)或#parse(“模板文件名”) ‘ parse与include的区别在于，若包含的文件中有Velocity脚本标签，将会进一步解析，而include将原样显示。<br>‘ #set ‘声明<br>在万不得已的时候，不要在页面视图自己声明Velocity脚本变量，也就是尽量少使用’ #set ‘。<br><a href="3https://www.cnblogs.com/likwo/archive/2010/05/13/1734936.html" target="_blank" rel="noopener">附一位博友的文章链接</a></p>
+</blockquote>
+</blockquote>
+<h3 id="数据库部分"><a href="#数据库部分" class="headerlink" title="数据库部分"></a>数据库部分</h3><blockquote>
+<p>业务字段的设计<br>数据的创建及增删改查的操作<br>myBatis集成数据库环境<br>整体框架的搭建 model controller service dao database</p>
+</blockquote>
+<h3 id="注册-登录-浏览-功能的实现"><a href="#注册-登录-浏览-功能的实现" class="headerlink" title="注册 登录 浏览 功能的实现"></a>注册 登录 浏览 功能的实现</h3><blockquote>
+<p>注册</p>
+<blockquote>
+<p>用户合法性检验（长度，敏感词，重复，特殊字符）<br>密码长度要求<br>密码salt加密，密码长度检测（基于MD5加密）<br>用户邮件 短信激活</p>
+</blockquote>
+</blockquote>
 ]]></content>
       <tags>
-        <tag>随笔</tag>
+        <tag>java</tag>
       </tags>
   </entry>
   <entry>
@@ -2385,26 +2446,6 @@ CLI：在 shell 命令中指定它们。</code></pre></li>
       </tags>
   </entry>
   <entry>
-    <title>哈希</title>
-    <url>/2019/09/25/%E5%93%88%E5%B8%8C/</url>
-    <content><![CDATA[<p>今天开始刷算法，<s>立了个每天一道算法题的flag</s>,第一天，一道简单的题目，但是也可以有 有深度 的写法<br><a href="https://github.com/wine1/code/blob/master/1twoSum.js" target="_blank" rel="noopener">leetcode第一题</a><br>用常规方法时间复杂度为O(n*n) 而hashmap的时间复杂度只有O(n)</p>
-<a id="more"></a>
-<p>hashmap是一个用于存储key-value键值对的集合</p>
-]]></content>
-      <tags>
-        <tag>数据结构</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>坚持的重要性</title>
-    <url>/2019/06/04/%E5%9D%9A%E6%8C%81%E7%9A%84%E9%87%8D%E8%A6%81%E6%80%A7/</url>
-    <content><![CDATA[<p>日复一日年复一年<br>做什么事情总是半途而废的话<br>做什么事情总是自我麻痹的话<br>就什么都做不好了的<br>并不是一定要做出多么令人惊叹的创举<br>坚持和自律<br>就已经足以让人变得更加优秀了<br>不要走错了方向啊。</p>
-]]></content>
-      <tags>
-        <tag>随笔</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>基于vue的饿了吗项目总结</title>
     <url>/2017/11/08/%E5%9F%BA%E4%BA%8Evue%E7%9A%84%E9%A5%BF%E4%BA%86%E5%90%97%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/</url>
     <content><![CDATA[<p>这是基于vue.js开发的一个仿饿了么外卖的前端APP<br> 开发过程：<br>    1. 需求分析<br>    2. 脚手架工具<br>    3. 数据mock<br>    4. 架构设计<br>    5. 代码编写<br>    6. 自测<br>    7. 编译打包<br>功能技术分析:后端 vue-resource 前端 vue-router 第三方js库better-scroll<br>html5的localstorage做本地存储 各种样式和布局flex布局<br>组件化和模块化的思想  webpack打包构建工具<br>商家页面：</p>
@@ -2423,45 +2464,10 @@ CLI：在 shell 命令中指定它们。</code></pre></li>
       </tags>
   </entry>
   <entry>
-    <title>头条项目</title>
-    <url>/2017/11/12/%E5%A4%B4%E6%9D%A1%E9%A1%B9%E7%9B%AE/</url>
-    <content><![CDATA[<p>这个实战项目是一个不错的面试拿来讲的项目，牛客网购买的，如果有缘看到这个博客，喏，拿去好了 链接：<a href="http://pan.baidu.com/s/1nv86TVN" target="_blank" rel="noopener">http://pan.baidu.com/s/1nv86TVN</a> 密码：pj06</p>
-<a id="more"></a>
-<h3 id="该项目实现的功能："><a href="#该项目实现的功能：" class="headerlink" title="该项目实现的功能："></a>该项目实现的功能：</h3><p>数据交互iBatis集成<br>用户注册登录管理<br>资讯发布 图像上传<br>评论中心<br>基于Redis点赞的功能<br>异步设计 站内邮件<br>多种资讯的排布算法</p>
-<h4 id="Spring-boot注解"><a href="#Spring-boot注解" class="headerlink" title="Spring boot注解"></a>Spring boot注解</h4><p>@Controller定义Controller控制器，用它标记的类就是一个SpringMVC Controller对象用于定义控制器类，在spring 项目中由控制器负责将用户发来的URL请求转发到对应的服务接口（service层），一般这个注解在类中，通常方法需要配合注解@RequestMapping。<br>@RequestMapping来映射request请求与处理器（url到Controller）<br>@RequestBody在使用@RequestMapping后，返回值通常解析为跳转路径，加上@responsebody后返回结果不会被解析为跳转路径，而是直接写入HTTP response body中。<br>@RequestParam绑定HttpServletRequest请求参数到控制器方法参数<br>@CookieValue绑定cookie的值到Controller方法参数<br>@RequestHeader绑定HttpServletRequest头信息到Controller方法参数<br><a href="https://www.cnblogs.com/tanwei81/p/6814022.html" target="_blank" rel="noopener">附一位博主的总结</a></p>
-<h3 id="AOP-面向切面编程"><a href="#AOP-面向切面编程" class="headerlink" title="AOP 面向切面编程"></a>AOP 面向切面编程</h3><p>在运行时，动态地将代码切入到类的指定方法、指定位置上的编程思想就是面向切面的编程。<br>一般而言，我们管切入到指定类指定方法的代码片段称为切面，而切入到哪些类、哪些方法则叫切入点。有了AOP，我们就可以把几个类共有的代码，抽取到一个切片中，等到需要时再切入对象中去，从而改变其原有的行为。</p>
-<h3 id="IOC-依赖注入-控制反转"><a href="#IOC-依赖注入-控制反转" class="headerlink" title="IOC 依赖注入 控制反转"></a>IOC 依赖注入 控制反转</h3><p>让调用类对某一接口实现类的依赖关系由第三方（容器或协作类）注入，以移除调用类对某一接口实现类的依赖。</p>
-<h3 id="velocity"><a href="#velocity" class="headerlink" title="velocity"></a>velocity</h3><p>是一个java模板引擎，可以直接引用定义在java代码中的对象</p>
-<blockquote>
-<p>基本语法</p>
-<blockquote>
-<p>‘ # ‘用来标识velocity的脚本语言 包括’ #set、#if 、#else、#end、#foreach、#end、#iinclude、#parse、#macro ‘等<br>‘ $ ‘ 用来标识对象或者说变量<br>‘ {} ‘ 用来明确标识velocity变量<br>‘ ! ‘ 用来强制将不存在的变量显示为空白<br>实践<br>‘ $!obj ‘直接返回对象中的结果<br>‘ #if($!obj) #else #end ‘判断语句<br>‘ #foreach($info in $list) $info.someList #end ‘ 循环读取集合list中的对象，并做处理<br>‘ #macro(macroName)#end ‘ 脚本函数(宏)调用，不推荐在界面模板中大量使用<br>包含文件’ #inclue(“模板文件名”)或#parse(“模板文件名”) ‘ parse与include的区别在于，若包含的文件中有Velocity脚本标签，将会进一步解析，而include将原样显示。<br>‘ #set ‘声明<br>在万不得已的时候，不要在页面视图自己声明Velocity脚本变量，也就是尽量少使用’ #set ‘。<br><a href="3https://www.cnblogs.com/likwo/archive/2010/05/13/1734936.html" target="_blank" rel="noopener">附一位博友的文章链接</a></p>
-</blockquote>
-</blockquote>
-<h3 id="数据库部分"><a href="#数据库部分" class="headerlink" title="数据库部分"></a>数据库部分</h3><blockquote>
-<p>业务字段的设计<br>数据的创建及增删改查的操作<br>myBatis集成数据库环境<br>整体框架的搭建 model controller service dao database</p>
-</blockquote>
-<h3 id="注册-登录-浏览-功能的实现"><a href="#注册-登录-浏览-功能的实现" class="headerlink" title="注册 登录 浏览 功能的实现"></a>注册 登录 浏览 功能的实现</h3><blockquote>
-<p>注册</p>
-<blockquote>
-<p>用户合法性检验（长度，敏感词，重复，特殊字符）<br>密码长度要求<br>密码salt加密，密码长度检测（基于MD5加密）<br>用户邮件 短信激活</p>
-</blockquote>
-</blockquote>
+    <title>寒假计划</title>
+    <url>/2018/01/27/%E5%AF%92%E5%81%87%E8%AE%A1%E5%88%92/</url>
+    <content><![CDATA[<p>人生中最后一个寒假了。在家陪陪亲人，走走亲戚，也就过去了。本想着回家之后认真学习一点东西，现实无情的打了脸，哈哈哈。<br>也好，在适当的时间做适当的事情反而会事半功倍，这种时候，应该多看看闲书，多思考一些平日里想不明白的事情比较好。</p>
 ]]></content>
-      <tags>
-        <tag>java</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>前端性能优化之防抖</title>
-    <url>/2019/10/06/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E4%B9%8B%E9%98%B2%E6%8A%96/</url>
-    <content><![CDATA[<p>函数防抖：实际上就是对于频繁触发的事件进行延时处理，只触发一次只响应一次，这样可以极大的提高性能</p>
-<p>我们实现的思路就是：先设置一个计时器变量，用闭包保存，保证不会被内存释放，在事件触发的时候，也就是只要事件触发，先清除这个计时器，然后再设置一个，那么只要事件持续触发，刚刚建立的定时器就会被销毁，直到最后我们不在触发事件，就执行最后一次设置的定时器。</p>
-<p>节流：限制触发频率<br>当快速的点击抢购按钮的时候，数量快速的增加，如果有人用脚本点击，那么这个数量会瞬间非常的大，造成性能问题。<br>那么我们就需要控制触发函数的频率，也就是节流，事件第一次触发的时候，记录下函数执行的时间点，当函数想要再一次执行，需要间隔一定的时间才能执行，也就是每间隔一定的时间，才能触发这个函数，而不能快速触发，这就是节流的方法。</p>
-]]></content>
-      <tags>
-        <tag>前端</tag>
-      </tags>
   </entry>
   <entry>
     <title>好好吃饭</title>
@@ -2495,6 +2501,18 @@ CLI：在 shell 命令中指定它们。</code></pre></li>
       </tags>
   </entry>
   <entry>
+    <title>小程序+腾讯云实时音视频</title>
+    <url>/2020/06/23/%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E8%85%BE%E8%AE%AF%E4%BA%91%E5%AE%9E%E6%97%B6%E9%9F%B3%E8%A7%86%E9%A2%91/</url>
+    <content><![CDATA[<h2 id="小程序加腾讯云实时音视频"><a href="#小程序加腾讯云实时音视频" class="headerlink" title="小程序加腾讯云实时音视频"></a>小程序加腾讯云实时音视频</h2><a id="more"></a>
+<ol>
+<li>腾讯实时音视频官方demo，IOS微信小程序端不显示本地和远程画面？<br> 在 app.json 下 window 下配置一下 “renderingMode”: “seperated”强制关掉同层</li>
+</ol>
+]]></content>
+      <tags>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>富爸爸穷爸爸</title>
     <url>/2019/08/11/%E5%AF%8C%E7%88%B8%E7%88%B8%E7%A9%B7%E7%88%B8%E7%88%B8/</url>
     <content><![CDATA[<p>《富爸爸，穷爸爸》作为一本理财知识的入门书简直要被推烂了。前段时间一直都处于一种很丧气的状态。逼着自己看了好多书，渐渐的体验到了看书的乐趣和思考的乐趣。虽然作者所处的年代和国情跟我们不一样，但是还是有很多通用的方法论，甚至可以用到生活的其他方面。以下，是第二遍看完这本书之后的梳理~</p>
@@ -2512,12 +2530,6 @@ CLI：在 shell 命令中指定它们。</code></pre></li>
       <tags>
         <tag>随笔</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>寒假计划</title>
-    <url>/2018/01/27/%E5%AF%92%E5%81%87%E8%AE%A1%E5%88%92/</url>
-    <content><![CDATA[<p>人生中最后一个寒假了。在家陪陪亲人，走走亲戚，也就过去了。本想着回家之后认真学习一点东西，现实无情的打了脸，哈哈哈。<br>也好，在适当的时间做适当的事情反而会事半功倍，这种时候，应该多看看闲书，多思考一些平日里想不明白的事情比较好。</p>
-]]></content>
   </entry>
   <entry>
     <title>小学问</title>
@@ -2541,30 +2553,6 @@ CLI：在 shell 命令中指定它们。</code></pre></li>
 ]]></content>
       <tags>
         <tag>随笔</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>小程序+腾讯云实时音视频</title>
-    <url>/2020/06/23/%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E8%85%BE%E8%AE%AF%E4%BA%91%E5%AE%9E%E6%97%B6%E9%9F%B3%E8%A7%86%E9%A2%91/</url>
-    <content><![CDATA[<h2 id="小程序加腾讯云实时音视频"><a href="#小程序加腾讯云实时音视频" class="headerlink" title="小程序加腾讯云实时音视频"></a>小程序加腾讯云实时音视频</h2><a id="more"></a>
-<ol>
-<li>腾讯实时音视频官方demo，IOS微信小程序端不显示本地和远程画面？<br> 在 app.json 下 window 下配置一下 “renderingMode”: “seperated”强制关掉同层</li>
-</ol>
-]]></content>
-      <tags>
-        <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>常见属性失效情况</title>
-    <url>/2018/11/06/%E5%B8%B8%E8%A7%81%E5%B1%9E%E6%80%A7%E5%A4%B1%E6%95%88%E6%83%85%E5%86%B5/</url>
-    <content><![CDATA[<p>这里记录属性失效的情况</p>
-<a id="more"></a>
-<p>1.z-index失效<br>    1、父标签 position属性为relative；<br>    2、问题标签含有浮动(float)属性；<br>    3、Z-index 仅能在定位元素上奏效；<br>2.margin:0 auto失效<br>    1、问题元素必须要有宽度<br>    2、问题元素不能浮动<br>3.vertical-align失效<br>    1、只有当元素属于inline或者inline-block时，其vertical-align才有效</p>
-]]></content>
-      <tags>
-        <tag>前端</tag>
-        <tag>css</tag>
       </tags>
   </entry>
   <entry>
@@ -2599,30 +2587,30 @@ CLI：在 shell 命令中指定它们。</code></pre></li>
 <li>小程序阻止事件冒泡 <a href="https://blog.csdn.net/promiseCao/article/details/83926807?utm_medium=distribute.pc_relevant.none-task-blog-baidujs-2" target="_blank" rel="noopener">https://blog.csdn.net/promiseCao/article/details/83926807?utm_medium=distribute.pc_relevant.none-task-blog-baidujs-2</a></li>
 <li>组件层级问题 <a href="https://www.cnblogs.com/duxingdexin/p/9585285.html" target="_blank" rel="noopener">https://www.cnblogs.com/duxingdexin/p/9585285.html</a></li>
 <li>使用TypeScript开发小程序入门 <a href="https://www.jianshu.com/p/c778943acb37" target="_blank" rel="noopener">https://www.jianshu.com/p/c778943acb37</a></li>
+<li>当input框输入到限定长度时，自动focus下一个input框 <a href="https://blog.csdn.net/weixin_30781107/article/details/95180186" target="_blank" rel="noopener">https://blog.csdn.net/weixin_30781107/article/details/95180186</a></li>
+<li>新增页面 has not been registered yet自行创建的新页面 .js文件中，必须有 Page({ }) 里面留空即可，否则就会爆这个错误 Page “pages/detail/detail” has not been registered yet. 并且页面上的文字也不会显示。 .json文件中，必须有{ }</li>
+<li>wx.redirectTo(OBJECT) 关闭当前页面，跳转到应用内的某个页面。</li>
+<li>wx.navigateTo(OBJECT) 保留当前页面，跳转到应用内的某个页面，使用wx.navigateBack可以返回到原页面。</li>
 </ol>
-]]></content>
+<h2 id="小程序组件传参"><a href="#小程序组件传参" class="headerlink" title="小程序组件传参"></a>小程序组件传参</h2><p>父组件A向子组件B传参</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">   //子组件 wxml</span><br><span class="line">&lt;cover-view class=&apos;nav-title&apos;&gt;&#123;&#123;title&#125;&#125;&lt;/cover-view&gt;</span><br><span class="line">   //子组件 js</span><br><span class="line">   properties: &#123;</span><br><span class="line">       title: &#123;</span><br><span class="line">       type: String,</span><br><span class="line">       value: &apos;&apos;</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   //父组件wxml</span><br><span class="line">   &lt;navbar title=&quot;&#123;&#123;title&#125;&#125;&quot;  /&gt;</span><br><span class="line">   //父组件js</span><br><span class="line">   data:&#123;</span><br><span class="line">       title: &apos;标题&apos;, </span><br><span class="line">   &#125;</span><br><span class="line">   //json文件当然是需要配置的</span><br></pre></td></tr></table></figure>
+
+<p>子组件B向父组件A传参</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">   //子组件 wxml</span><br><span class="line">&lt;cover-view class=&apos;nav-title&apos; bindtap=&quot;Change&quot;&gt;&#123;&#123;title&#125;&#125;&lt;/cover-view&gt;</span><br><span class="line">   &lt;view bindtap=&quot;trigger&quot;&gt;&lt;/view&gt;</span><br><span class="line">   //子组件 js</span><br><span class="line">    data:&#123;</span><br><span class="line">       title:&apos;标题&apos;</span><br><span class="line">   &#125;，</span><br><span class="line">  methods:&#123;</span><br><span class="line">   trigger() &#123;</span><br><span class="line">     let &#123; title &#125; = this.data</span><br><span class="line">     this.triggerEvent(&apos;change&apos;, &#123; param: title &#125;);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">   //父组件wxml</span><br><span class="line">   &lt;navbar title=&quot;&#123;&#123;title&#125;&#125;&quot; bind:change=&quot;change&quot; /&gt;</span><br><span class="line">   //父组件js</span><br><span class="line">  methods:&#123;</span><br><span class="line">       change(e) &#123;</span><br><span class="line">           let title=e.detail.param</span><br><span class="line">       &#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>]]></content>
       <tags>
         <tag>前端</tag>
       </tags>
   </entry>
   <entry>
-    <title>我的代码规范</title>
-    <url>/2019/01/03/%E6%88%91%E7%9A%84%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/</url>
-    <content><![CDATA[<p>最近接手别的同事的代码，才意识到代码的规范有多么的重要，所以决定整理一份自己的代码书写规范</p>
+    <title>常见属性失效情况</title>
+    <url>/2018/11/06/%E5%B8%B8%E8%A7%81%E5%B1%9E%E6%80%A7%E5%A4%B1%E6%95%88%E6%83%85%E5%86%B5/</url>
+    <content><![CDATA[<p>这里记录属性失效的情况</p>
 <a id="more"></a>
-<ol>
-<li>不同的主题色分类<br>除了默主题之外， 白色主题统一用white-theme 黑色主题统一用black-theme 作用在body上</li>
-<li>样式从里往外写，这样在后期有改动的时候比较方便（特别是在边距边框之类的问题上）</li>
-<li>使用列表标签的时候通过在ul上添加类名区分，表内的内容的名称可以一致</li>
-<li>外边距可能会导致边距重叠的事情发生，所以尽量避免使用，虽然能够用别的方法解决这个问题，但是这样又增加了新的不必要的代码</li>
-<li>写sass的时候，层级最好不超过三层，控制在三层左右</li>
-<li>后面我定义一个公共组件样式表，用以将清除浮动，居中，布局，文字隐藏之类的重复率较高的代码分离出来</li>
-<li>css的命名规则上，选择网易的<a href="http://nec.netease.com" target="_blank" rel="noopener">nec原则</a></li>
-</ol>
+<p>1.z-index失效<br>    1、父标签 position属性为relative；<br>    2、问题标签含有浮动(float)属性；<br>    3、Z-index 仅能在定位元素上奏效；<br>2.margin:0 auto失效<br>    1、问题元素必须要有宽度<br>    2、问题元素不能浮动<br>3.vertical-align失效<br>    1、只有当元素属于inline或者inline-block时，其vertical-align才有效</p>
 ]]></content>
       <tags>
         <tag>前端</tag>
-        <tag>工作总结</tag>
+        <tag>css</tag>
       </tags>
   </entry>
   <entry>
@@ -2651,6 +2639,26 @@ queue=temp; //此时temp里就有下一层按从左到右顺序的所有节点�
 <p>第二层遍历完了temp赋值给queue（为空）,level++为3</p>
 <p>此时queue长度为空，跳出循环，而level就是二叉树的层数（虽然从0层开始（为了和数组下标对应）但是再遍历完第二层（此时是最后一层遍历后仍然加1）为3）<br>然后将res数组reverse一下得到结果</p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>我的代码规范</title>
+    <url>/2019/01/03/%E6%88%91%E7%9A%84%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/</url>
+    <content><![CDATA[<p>最近接手别的同事的代码，才意识到代码的规范有多么的重要，所以决定整理一份自己的代码书写规范</p>
+<a id="more"></a>
+<ol>
+<li>不同的主题色分类<br>除了默主题之外， 白色主题统一用white-theme 黑色主题统一用black-theme 作用在body上</li>
+<li>样式从里往外写，这样在后期有改动的时候比较方便（特别是在边距边框之类的问题上）</li>
+<li>使用列表标签的时候通过在ul上添加类名区分，表内的内容的名称可以一致</li>
+<li>外边距可能会导致边距重叠的事情发生，所以尽量避免使用，虽然能够用别的方法解决这个问题，但是这样又增加了新的不必要的代码</li>
+<li>写sass的时候，层级最好不超过三层，控制在三层左右</li>
+<li>后面我定义一个公共组件样式表，用以将清除浮动，居中，布局，文字隐藏之类的重复率较高的代码分离出来</li>
+<li>css的命名规则上，选择网易的<a href="http://nec.netease.com" target="_blank" rel="noopener">nec原则</a></li>
+</ol>
+]]></content>
+      <tags>
+        <tag>前端</tag>
+        <tag>工作总结</tag>
+      </tags>
   </entry>
   <entry>
     <title>异步不可怕？可怕</title>
@@ -2839,6 +2847,11 @@ async function async1() {
       </tags>
   </entry>
   <entry>
+    <title>断舍离</title>
+    <url>/2020/01/01/%E6%96%AD%E8%88%8D%E7%A6%BB/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
     <title>支付宝体验设计精髓</title>
     <url>/2019/12/01/%E6%94%AF%E4%BB%98%E5%AE%9D%E4%BD%93%E9%AA%8C%E8%AE%BE%E8%AE%A1%E7%B2%BE%E9%AB%93/</url>
     <content><![CDATA[<p>哈</p>
@@ -2883,6 +2896,25 @@ async function async1() {
       <tags>
         <tag>面试</tag>
         <tag>数据库</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>最近沉迷于模拟人生</title>
+    <url>/2018/01/07/%E6%9C%80%E8%BF%91%E6%B2%89%E8%BF%B7%E4%BA%8E%E6%A8%A1%E6%8B%9F%E4%BA%BA%E7%94%9F/</url>
+    <content><![CDATA[<p>如题，最近沉迷于模拟人生这个单机游戏，熬夜玩游戏涨了两颗痘痘~<br>不太爱玩竞技类的游戏，像解密啊养成类的游戏对我来说就比较耐玩了<br>感觉很神奇啊 屏幕里的小人们，忙忙碌碌，有时候也会按照自己的想法产生一些行为<del>很可爱</del><br>姑且认为是他们是他们自己的想法吧</p>
+]]></content>
+      <tags>
+        <tag>随笔</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>本地运行服务器</title>
+    <url>/2019/03/17/%E6%9C%AC%E5%9C%B0%E8%BF%90%E8%A1%8C%E6%9C%8D%E5%8A%A1%E5%99%A8/</url>
+    <content><![CDATA[<p>可以使用基于node的 http-server插件运行本地服务</p>
+<p>启动的命令为 hs -o(即http-server -open)</p>
+]]></content>
+      <tags>
+        <tag>前端</tag>
       </tags>
   </entry>
   <entry>
@@ -2968,17 +3000,19 @@ kmp算法</code></pre><p>4.逆波兰表达式<br>中缀表达式转成后缀表�
       </tags>
   </entry>
   <entry>
-    <title>断舍离</title>
-    <url>/2020/01/01/%E6%96%AD%E8%88%8D%E7%A6%BB/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>最近沉迷于模拟人生</title>
-    <url>/2018/01/07/%E6%9C%80%E8%BF%91%E6%B2%89%E8%BF%B7%E4%BA%8E%E6%A8%A1%E6%8B%9F%E4%BA%BA%E7%94%9F/</url>
-    <content><![CDATA[<p>如题，最近沉迷于模拟人生这个单机游戏，熬夜玩游戏涨了两颗痘痘~<br>不太爱玩竞技类的游戏，像解密啊养成类的游戏对我来说就比较耐玩了<br>感觉很神奇啊 屏幕里的小人们，忙忙碌碌，有时候也会按照自己的想法产生一些行为<del>很可爱</del><br>姑且认为是他们是他们自己的想法吧</p>
+    <title>浅析虚拟DOM</title>
+    <url>/2020/07/15/%E6%B5%85%E6%9E%90%E8%99%9A%E6%8B%9FDOM/</url>
+    <content><![CDATA[<p>虚拟DOM的基本思想</p>
+<ol>
+<li>用js对象模拟DOM树</li>
+<li>比较两颗虚拟DOM树的差异</li>
+<li>把差异应用到真正的DOM树上</li>
+</ol>
+<a id="more"></a>
+<p>看了下，只能说懂了一点点 不甚明白<br><a href="https://www.zhihu.com/question/29504639" target="_blank" rel="noopener">https://www.zhihu.com/question/29504639</a></p>
 ]]></content>
       <tags>
-        <tag>随笔</tag>
+        <tag>前端</tag>
       </tags>
   </entry>
   <entry>
@@ -3020,41 +3054,23 @@ kmp算法</code></pre><p>4.逆波兰表达式<br>中缀表达式转成后缀表�
       </tags>
   </entry>
   <entry>
-    <title>本地运行服务器</title>
-    <url>/2019/03/17/%E6%9C%AC%E5%9C%B0%E8%BF%90%E8%A1%8C%E6%9C%8D%E5%8A%A1%E5%99%A8/</url>
-    <content><![CDATA[<p>可以使用基于node的 http-server插件运行本地服务</p>
-<p>启动的命令为 hs -o(即http-server -open)</p>
-]]></content>
-      <tags>
-        <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>移动端1像素解决方案</title>
-    <url>/2020/04/02/%E7%A7%BB%E5%8A%A8%E7%AB%AF1%E5%83%8F%E7%B4%A0%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</url>
-    <content><![CDATA[<h1 id="移动端适配"><a href="#移动端适配" class="headerlink" title="移动端适配"></a>移动端适配</h1><a id="more"></a>
-<h2 id="1px-边框解决方案"><a href="#1px-边框解决方案" class="headerlink" title="1px 边框解决方案"></a>1px 边框解决方案</h2><h3 id="transform-scale-0-5-方案"><a href="#transform-scale-0-5-方案" class="headerlink" title="transform: scale(0.5) 方案"></a>transform: scale(0.5) 方案</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">div &#123;</span><br><span class="line">    height:1px;</span><br><span class="line">    background:#000;</span><br><span class="line">    -webkit-transform: scaleY(0.5);</span><br><span class="line">    -webkit-transform-origin:0 0;</span><br><span class="line">    overflow: hidden;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="css-根据设备像素比媒体查询后的解决方案"><a href="#css-根据设备像素比媒体查询后的解决方案" class="headerlink" title="css 根据设备像素比媒体查询后的解决方案"></a>css 根据设备像素比媒体查询后的解决方案</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">/* 2倍屏 */</span><br><span class="line">@media only screen and (-webkit-min-device-pixel-ratio: 2.0) &#123;</span><br><span class="line">    .border-bottom::after &#123;</span><br><span class="line">        -webkit-transform: scaleY(0.5);</span><br><span class="line">        transform: scaleY(0.5);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">/* 3倍屏 */</span><br><span class="line">@media only screen and (-webkit-min-device-pixel-ratio: 3.0) &#123;</span><br><span class="line">    .border-bottom::after &#123;</span><br><span class="line">        -webkit-transform: scaleY(0.33);</span><br><span class="line">        transform: scaleY(0.33);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="适配方案"><a href="#适配方案" class="headerlink" title="适配方案"></a>适配方案</h2><p>待续。。。</p>
-]]></content>
-      <tags>
-        <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>浅析虚拟DOM</title>
-    <url>/2020/07/15/%E6%B5%85%E6%9E%90%E8%99%9A%E6%8B%9FDOM/</url>
-    <content><![CDATA[<p>虚拟DOM的基本思想</p>
-<ol>
-<li>用js对象模拟DOM树</li>
-<li>比较两颗虚拟DOM树的差异</li>
-<li>把差异应用到真正的DOM树上</li>
-</ol>
+    <title>正则表达式</title>
+    <url>/2018/01/07/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</url>
+    <content><![CDATA[<p><a href="http://www.runoob.com/regexp/regexp-syntax.html" target="_blank" rel="noopener">菜鸟教程的正则表达式教程</a><br>正则表达式，我实在不知道要把它归类在哪个分类里。<br>以后肯定还会有一些不知道怎么分类的文章，索性开个新分类–杂<br>哈哈哈</p>
 <a id="more"></a>
-<p>看了下，只能说懂了一点点 不甚明白<br><a href="https://www.zhihu.com/question/29504639" target="_blank" rel="noopener">https://www.zhihu.com/question/29504639</a></p>
+<p>正则表达式的作用总结起来就两个字，匹配。<br><strong>常见匹配方式</strong><br>/d 匹配0到9内的任意数字 字符组的简写形式<br>[0-9] 匹配0到9内的任意数字 字符组匹配<br>. 可以匹配任意字符 通配符<br><strong><em>将内容放在圆括号中</em></strong>捕获分组和<strong><em>\1</em></strong>向后引用<br>通常可以将简写式取反，取反的结果就是排除。如<code>\d</code>是匹配任意数字<code>\D</code>则用来匹配任意非数字字符<br>在匹配的过程中使用量词<br>匹配的过程离不开元字符，元字符可以说是基础了。</p>
+<p>###元字符###<br><a href="http://www.runoob.com/regexp/regexp-metachar.html" target="_blank" rel="noopener">菜鸟教程中关于元字符的详细介绍</a></p>
+<p>然后就是匹配规则之类的东西，看起来很复杂，但是实际上就是一个熟能生巧的过程，用多了之后就能一目了然了</p>
+<p>以上<br>以后补充</p>
 ]]></content>
+      <tags>
+        <tag>杂</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>移动端不满一屏的解决方案</title>
+    <url>/2019/03/20/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E4%B8%8D%E6%BB%A1%E4%B8%80%E5%B1%8F%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</url>
+    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">body::before&#123;</span><br><span class="line">    content:&quot; &quot;;</span><br><span class="line">    position:absolute;</span><br><span class="line">    left:0;</span><br><span class="line">    right:0;</span><br><span class="line">    top:0;</span><br><span class="line">    bottom:0;</span><br><span class="line">    background-color:#ccc;/* 颜色自定义 */</span><br><span class="line">    z-index:-100;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
       <tags>
         <tag>前端</tag>
       </tags>
@@ -3074,11 +3090,29 @@ kmp算法</code></pre><p>4.逆波兰表达式<br>中缀表达式转成后缀表�
       </tags>
   </entry>
   <entry>
-    <title>移动端不满一屏的解决方案</title>
-    <url>/2019/03/20/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E4%B8%8D%E6%BB%A1%E4%B8%80%E5%B1%8F%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</url>
-    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">body::before&#123;</span><br><span class="line">    content:&quot; &quot;;</span><br><span class="line">    position:absolute;</span><br><span class="line">    left:0;</span><br><span class="line">    right:0;</span><br><span class="line">    top:0;</span><br><span class="line">    bottom:0;</span><br><span class="line">    background-color:#ccc;/* 颜色自定义 */</span><br><span class="line">    z-index:-100;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    <title>移动端1像素解决方案</title>
+    <url>/2020/04/02/%E7%A7%BB%E5%8A%A8%E7%AB%AF1%E5%83%8F%E7%B4%A0%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</url>
+    <content><![CDATA[<h1 id="移动端适配"><a href="#移动端适配" class="headerlink" title="移动端适配"></a>移动端适配</h1><a id="more"></a>
+<h2 id="1px-边框解决方案"><a href="#1px-边框解决方案" class="headerlink" title="1px 边框解决方案"></a>1px 边框解决方案</h2><h3 id="transform-scale-0-5-方案"><a href="#transform-scale-0-5-方案" class="headerlink" title="transform: scale(0.5) 方案"></a>transform: scale(0.5) 方案</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">div &#123;</span><br><span class="line">    height:1px;</span><br><span class="line">    background:#000;</span><br><span class="line">    -webkit-transform: scaleY(0.5);</span><br><span class="line">    -webkit-transform-origin:0 0;</span><br><span class="line">    overflow: hidden;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="css-根据设备像素比媒体查询后的解决方案"><a href="#css-根据设备像素比媒体查询后的解决方案" class="headerlink" title="css 根据设备像素比媒体查询后的解决方案"></a>css 根据设备像素比媒体查询后的解决方案</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">/* 2倍屏 */</span><br><span class="line">@media only screen and (-webkit-min-device-pixel-ratio: 2.0) &#123;</span><br><span class="line">    .border-bottom::after &#123;</span><br><span class="line">        -webkit-transform: scaleY(0.5);</span><br><span class="line">        transform: scaleY(0.5);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">/* 3倍屏 */</span><br><span class="line">@media only screen and (-webkit-min-device-pixel-ratio: 3.0) &#123;</span><br><span class="line">    .border-bottom::after &#123;</span><br><span class="line">        -webkit-transform: scaleY(0.33);</span><br><span class="line">        transform: scaleY(0.33);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="适配方案"><a href="#适配方案" class="headerlink" title="适配方案"></a>适配方案</h2><p>待续。。。</p>
+]]></content>
       <tags>
         <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>移动端布局（一）</title>
+    <url>/2018/05/15/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%B8%83%E5%B1%80%EF%BC%88%E4%B8%80%EF%BC%89/</url>
+    <content><![CDATA[<p>本来想自己写，但是别人都已经写的非常好了。。。</p>
+<p><a href="https://juejin.im/entry/596465c951882568b00311b4" target="_blank" rel="noopener">转载自掘金社区</a> </p>
+<p>//js动态计算</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">//定义一个方法并执行</span><br><span class="line">(function(doc, win) &#123;</span><br><span class="line">    var docEl = doc.documentElement;</span><br><span class="line">    resizeEvt = &apos;orientationchange&apos; in win ? &apos;orientationchange&apos; : &apos;resize&apos;;</span><br><span class="line">    var recalc = function() &#123;</span><br><span class="line">        var clientWidth = docEl.clientWidth;</span><br><span class="line">        if(!clientWidth) return;</span><br><span class="line">        docEl.style.fontSize = 50 * ((clientWidth &gt;= 750 ? 750 : clientWidth) / 375) + &apos;px&apos;;</span><br><span class="line">        /*docEl.style.fontSize = 50 * (clientWidth / 320) + &apos;px&apos;;*/</span><br><span class="line">    &#125;;</span><br><span class="line">    if(!doc.addEventListener) return;</span><br><span class="line">    win.addEventListener(resizeEvt, recalc, false);</span><br><span class="line">    doc.addEventListener(&apos;DOMContentLoaded&apos;, recalc, false);</span><br><span class="line">&#125;)(document, window);</span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>前端</tag>
+        <tag>移动端</tag>
       </tags>
   </entry>
   <entry>
@@ -3096,54 +3130,6 @@ kmp算法</code></pre><p>4.逆波兰表达式<br>中缀表达式转成后缀表�
       </tags>
   </entry>
   <entry>
-    <title>正则表达式</title>
-    <url>/2018/01/07/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</url>
-    <content><![CDATA[<p><a href="http://www.runoob.com/regexp/regexp-syntax.html" target="_blank" rel="noopener">菜鸟教程的正则表达式教程</a><br>正则表达式，我实在不知道要把它归类在哪个分类里。<br>以后肯定还会有一些不知道怎么分类的文章，索性开个新分类–杂<br>哈哈哈</p>
-<a id="more"></a>
-<p>正则表达式的作用总结起来就两个字，匹配。<br><strong>常见匹配方式</strong><br>/d 匹配0到9内的任意数字 字符组的简写形式<br>[0-9] 匹配0到9内的任意数字 字符组匹配<br>. 可以匹配任意字符 通配符<br><strong><em>将内容放在圆括号中</em></strong>捕获分组和<strong><em>\1</em></strong>向后引用<br>通常可以将简写式取反，取反的结果就是排除。如<code>\d</code>是匹配任意数字<code>\D</code>则用来匹配任意非数字字符<br>在匹配的过程中使用量词<br>匹配的过程离不开元字符，元字符可以说是基础了。</p>
-<p>###元字符###<br><a href="http://www.runoob.com/regexp/regexp-metachar.html" target="_blank" rel="noopener">菜鸟教程中关于元字符的详细介绍</a></p>
-<p>然后就是匹配规则之类的东西，看起来很复杂，但是实际上就是一个熟能生巧的过程，用多了之后就能一目了然了</p>
-<p>以上<br>以后补充</p>
-]]></content>
-      <tags>
-        <tag>杂</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>移动端布局（一）</title>
-    <url>/2018/05/15/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%B8%83%E5%B1%80%EF%BC%88%E4%B8%80%EF%BC%89/</url>
-    <content><![CDATA[<p>本来想自己写，但是别人都已经写的非常好了。。。</p>
-<p><a href="https://juejin.im/entry/596465c951882568b00311b4" target="_blank" rel="noopener">转载自掘金社区</a> </p>
-<p>//js动态计算</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">//定义一个方法并执行</span><br><span class="line">(function(doc, win) &#123;</span><br><span class="line">    var docEl = doc.documentElement;</span><br><span class="line">    resizeEvt = &apos;orientationchange&apos; in win ? &apos;orientationchange&apos; : &apos;resize&apos;;</span><br><span class="line">    var recalc = function() &#123;</span><br><span class="line">        var clientWidth = docEl.clientWidth;</span><br><span class="line">        if(!clientWidth) return;</span><br><span class="line">        docEl.style.fontSize = 50 * ((clientWidth &gt;= 750 ? 750 : clientWidth) / 375) + &apos;px&apos;;</span><br><span class="line">        /*docEl.style.fontSize = 50 * (clientWidth / 320) + &apos;px&apos;;*/</span><br><span class="line">    &#125;;</span><br><span class="line">    if(!doc.addEventListener) return;</span><br><span class="line">    win.addEventListener(resizeEvt, recalc, false);</span><br><span class="line">    doc.addEventListener(&apos;DOMContentLoaded&apos;, recalc, false);</span><br><span class="line">&#125;)(document, window);</span><br></pre></td></tr></table></figure>]]></content>
-      <tags>
-        <tag>前端</tag>
-        <tag>移动端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>移动端隐藏滚动条</title>
-    <url>/2019/11/25/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%9A%90%E8%97%8F%E6%BB%9A%E5%8A%A8%E6%9D%A1/</url>
-    <content><![CDATA[<p>记录工作中遇到的问题，移动端的滚动条在某些情况下十分不美观，特别是在可滚动的表格中，显得格外的不精致。</p>
-<a id="more"></a>
-<p><code>::-webkit-scrollbar {display: none;}</code><br>在ios端并不起作用，安卓端我没有测试<br>针对ios不生效的情况，做如下处理<br>让滚动条离远点超出父元素的范围，在通过隐藏父元素的超出部分让滚动条消失。由于子元素的高度大于父元素的高度，超过父元素的高度的内容被剪裁。因此，子元素的滚动条就被剪裁掉了</p>
-]]></content>
-      <tags>
-        <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>移动端长按弹出事件</title>
-    <url>/2018/11/05/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%95%BF%E6%8C%89%E5%BC%B9%E5%87%BA%E4%BA%8B%E4%BB%B6/</url>
-    <content><![CDATA[<p>这是在尝试写购物车的时候遇到的问题，长按商品弹出删除的选项框</p>
-<a id="more"></a>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"> // 长按弹出删除弹窗</span><br><span class="line">        // var timeOUtEvent = 0;</span><br><span class="line">        // $(&apos;.shops ul&apos;).on(&#123;</span><br><span class="line">        //     touchstart: function (e) &#123;</span><br><span class="line">        //         var that = $(this);</span><br><span class="line">        //         timeOUtEvent = setTimeout(function () &#123;</span><br><span class="line">        //             that.addClass(&apos;waitdel&apos;);</span><br><span class="line">        //             timeOUtEvent = 0;</span><br><span class="line">        //             pop($(&apos;#pop-del&apos;));</span><br><span class="line">        //         &#125;, 2000);</span><br><span class="line">        //         e.preventDefault();</span><br><span class="line">        //     &#125;,</span><br><span class="line">        //     touchmove: function () &#123;</span><br><span class="line">        //         clearTimeout(timeOUtEvent);</span><br><span class="line">        //         timeOUtEvent = 0;</span><br><span class="line">        //     &#125;,</span><br><span class="line">        //     touchend: function () &#123;</span><br><span class="line">        //         clearTimeout(timeOUtEvent);</span><br><span class="line">        //         if (timeOUtEvent != 0) &#123;</span><br><span class="line">        //             $(&apos;#cart&apos;).click(</span><br><span class="line">        //                 function (e) &#123;</span><br><span class="line">        //                         console.log(1);</span><br><span class="line">        //                     if(e.target == $(&apos;#count&apos;))&#123;</span><br><span class="line">        //                         console.log(12);</span><br><span class="line">        //             change($(this).find(&apos;#count&apos;));</span><br><span class="line">        //                     &#125;</span><br><span class="line">        //                   &#125;</span><br><span class="line">        //             )</span><br><span class="line">        //             // change($(this).find(&apos;#count&apos;));</span><br><span class="line">        //             // console.log(timeOUtEvent)</span><br><span class="line">        //         &#125;</span><br><span class="line">        //         // return false;</span><br><span class="line">        //     &#125;</span><br><span class="line">        // &#125;, &apos;li&apos;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">// 长按弹出删除弹窗结束</span><br><span class="line">        var timer = null;</span><br><span class="line">        var t = 0;</span><br><span class="line">        $(&apos;.shops ul&apos;).on(&#123;</span><br><span class="line">            touchstart: function (e) &#123;</span><br><span class="line">                var that = $(this);</span><br><span class="line">                timer = setTimeout(function () &#123;</span><br><span class="line">                    pop($(&apos;#pop-del&apos;));</span><br><span class="line">                    that.addClass(&apos;waitdel&apos;)</span><br><span class="line">                    clearTimeout(timer);</span><br><span class="line">                &#125;, 1000)</span><br><span class="line">                e.preventDefault();</span><br><span class="line">            &#125;,</span><br><span class="line">            touchend: function () &#123;</span><br><span class="line">                clearTimeout(timer);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;, &apos;li&apos;)</span><br><span class="line">        //模拟点击事件</span><br><span class="line">        //点击增加商品数量</span><br><span class="line">        var t = 0;</span><br><span class="line">        $(&apos;.shops ul&apos;).on(&#123;</span><br><span class="line">            touchstart: function () &#123;</span><br><span class="line">                t = new Date().getTime();</span><br><span class="line">                console.log(t)</span><br><span class="line">            &#125;,</span><br><span class="line">            touchend: function () &#123;</span><br><span class="line">                var newT = new Date().getTime();</span><br><span class="line">                if (newT - t &lt; 300) &#123;</span><br><span class="line">                    var count = $(this).prev().text();</span><br><span class="line">                    count = parseInt(count) + 1;</span><br><span class="line">                    $(this).prev().text(count);</span><br><span class="line">                    totalprice();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;, &apos;span.ri&apos;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">两种方法，各有千秋</span><br></pre></td></tr></table></figure>]]></content>
-      <tags>
-        <tag>前端</tag>
-        <tag>移动端</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>稀缺</title>
     <url>/2019/09/06/%E7%A8%80%E7%BC%BA/</url>
     <content><![CDATA[]]></content>
@@ -3154,6 +3140,15 @@ kmp算法</code></pre><p>4.逆波兰表达式<br>中缀表达式转成后缀表�
     <content><![CDATA[<p>通常一个app中，正常情况下会有大量重复使用的小图标icon 这些图标以图片的形式存在的话，虽然小，但每个图片都会有一个请求。<br>近日我司一个从阿里来的大佬给提供了另一个做前端小图标的思路。<br>类似 <a href="http://www.fontawesome.com.cn/" target="_blank" rel="noopener">fontawesome</a> </p>
 <p>自己实现类似的库，可以通过这种方法(<a href="https://zhuanlan.zhihu.com/p/22724856" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/22724856</a>)</p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>经济机器是怎样运行的</title>
+    <url>/2019/09/07/%E7%BB%8F%E6%B5%8E%E6%9C%BA%E5%99%A8%E6%98%AF%E6%80%8E%E6%A0%B7%E8%BF%90%E8%A1%8C%E7%9A%84/</url>
+    <content><![CDATA[<p>经济动力：<br>1.生产率提高<br>2.短期债务周期<br>3.长期债务周期</p>
+]]></content>
+      <tags>
+        <tag>随笔</tag>
+      </tags>
   </entry>
   <entry>
     <title>网站部署</title>
@@ -3171,21 +3166,34 @@ kmp算法</code></pre><p>4.逆波兰表达式<br>中缀表达式转成后缀表�
 ]]></content>
   </entry>
   <entry>
-    <title>经济机器是怎样运行的</title>
-    <url>/2019/09/07/%E7%BB%8F%E6%B5%8E%E6%9C%BA%E5%99%A8%E6%98%AF%E6%80%8E%E6%A0%B7%E8%BF%90%E8%A1%8C%E7%9A%84/</url>
-    <content><![CDATA[<p>经济动力：<br>1.生产率提高<br>2.短期债务周期<br>3.长期债务周期</p>
-]]></content>
-      <tags>
-        <tag>随笔</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>自我和解</title>
     <url>/2019/06/12/%E8%87%AA%E6%88%91%E5%92%8C%E8%A7%A3/</url>
     <content><![CDATA[<p>最近真的好丧啊。<br>每天处在 焦虑 易怒 暴躁的情绪里。<br>整个人的感觉是破碎的 一片片的 拼不起来。<br>负能量是不适合拿出来说的。<br>没有合适的人 合适的事情<br>只能自己默默消化掉。<br>生活需要一场洗牌<br>破后而立吧<br>多看书 多规整 一件件事情 总是能好起来的<br>可我确实是一个悲观主义者。</p>
 ]]></content>
       <tags>
         <tag>随笔</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>移动端长按弹出事件</title>
+    <url>/2018/11/05/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%95%BF%E6%8C%89%E5%BC%B9%E5%87%BA%E4%BA%8B%E4%BB%B6/</url>
+    <content><![CDATA[<p>这是在尝试写购物车的时候遇到的问题，长按商品弹出删除的选项框</p>
+<a id="more"></a>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"> // 长按弹出删除弹窗</span><br><span class="line">        // var timeOUtEvent = 0;</span><br><span class="line">        // $(&apos;.shops ul&apos;).on(&#123;</span><br><span class="line">        //     touchstart: function (e) &#123;</span><br><span class="line">        //         var that = $(this);</span><br><span class="line">        //         timeOUtEvent = setTimeout(function () &#123;</span><br><span class="line">        //             that.addClass(&apos;waitdel&apos;);</span><br><span class="line">        //             timeOUtEvent = 0;</span><br><span class="line">        //             pop($(&apos;#pop-del&apos;));</span><br><span class="line">        //         &#125;, 2000);</span><br><span class="line">        //         e.preventDefault();</span><br><span class="line">        //     &#125;,</span><br><span class="line">        //     touchmove: function () &#123;</span><br><span class="line">        //         clearTimeout(timeOUtEvent);</span><br><span class="line">        //         timeOUtEvent = 0;</span><br><span class="line">        //     &#125;,</span><br><span class="line">        //     touchend: function () &#123;</span><br><span class="line">        //         clearTimeout(timeOUtEvent);</span><br><span class="line">        //         if (timeOUtEvent != 0) &#123;</span><br><span class="line">        //             $(&apos;#cart&apos;).click(</span><br><span class="line">        //                 function (e) &#123;</span><br><span class="line">        //                         console.log(1);</span><br><span class="line">        //                     if(e.target == $(&apos;#count&apos;))&#123;</span><br><span class="line">        //                         console.log(12);</span><br><span class="line">        //             change($(this).find(&apos;#count&apos;));</span><br><span class="line">        //                     &#125;</span><br><span class="line">        //                   &#125;</span><br><span class="line">        //             )</span><br><span class="line">        //             // change($(this).find(&apos;#count&apos;));</span><br><span class="line">        //             // console.log(timeOUtEvent)</span><br><span class="line">        //         &#125;</span><br><span class="line">        //         // return false;</span><br><span class="line">        //     &#125;</span><br><span class="line">        // &#125;, &apos;li&apos;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">// 长按弹出删除弹窗结束</span><br><span class="line">        var timer = null;</span><br><span class="line">        var t = 0;</span><br><span class="line">        $(&apos;.shops ul&apos;).on(&#123;</span><br><span class="line">            touchstart: function (e) &#123;</span><br><span class="line">                var that = $(this);</span><br><span class="line">                timer = setTimeout(function () &#123;</span><br><span class="line">                    pop($(&apos;#pop-del&apos;));</span><br><span class="line">                    that.addClass(&apos;waitdel&apos;)</span><br><span class="line">                    clearTimeout(timer);</span><br><span class="line">                &#125;, 1000)</span><br><span class="line">                e.preventDefault();</span><br><span class="line">            &#125;,</span><br><span class="line">            touchend: function () &#123;</span><br><span class="line">                clearTimeout(timer);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;, &apos;li&apos;)</span><br><span class="line">        //模拟点击事件</span><br><span class="line">        //点击增加商品数量</span><br><span class="line">        var t = 0;</span><br><span class="line">        $(&apos;.shops ul&apos;).on(&#123;</span><br><span class="line">            touchstart: function () &#123;</span><br><span class="line">                t = new Date().getTime();</span><br><span class="line">                console.log(t)</span><br><span class="line">            &#125;,</span><br><span class="line">            touchend: function () &#123;</span><br><span class="line">                var newT = new Date().getTime();</span><br><span class="line">                if (newT - t &lt; 300) &#123;</span><br><span class="line">                    var count = $(this).prev().text();</span><br><span class="line">                    count = parseInt(count) + 1;</span><br><span class="line">                    $(this).prev().text(count);</span><br><span class="line">                    totalprice();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;, &apos;span.ri&apos;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">两种方法，各有千秋</span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>前端</tag>
+        <tag>移动端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>移动端隐藏滚动条</title>
+    <url>/2019/11/25/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%9A%90%E8%97%8F%E6%BB%9A%E5%8A%A8%E6%9D%A1/</url>
+    <content><![CDATA[<p>记录工作中遇到的问题，移动端的滚动条在某些情况下十分不美观，特别是在可滚动的表格中，显得格外的不精致。</p>
+<a id="more"></a>
+<p><code>::-webkit-scrollbar {display: none;}</code><br>在ios端并不起作用，安卓端我没有测试<br>针对ios不生效的情况，做如下处理<br>让滚动条离远点超出父元素的范围，在通过隐藏父元素的超出部分让滚动条消失。由于子元素的高度大于父元素的高度，超过父元素的高度的内容被剪裁。因此，子元素的滚动条就被剪裁掉了</p>
+]]></content>
+      <tags>
+        <tag>前端</tag>
       </tags>
   </entry>
   <entry>
@@ -3227,6 +3235,19 @@ kmp算法</code></pre><p>4.逆波兰表达式<br>中缀表达式转成后缀表�
       </tags>
   </entry>
   <entry>
+    <title>解决图片宽高自适应需求：object-fit</title>
+    <url>/2019/07/17/%E8%A7%A3%E5%86%B3%E5%9B%BE%E7%89%87%E5%AE%BD%E9%AB%98%E8%87%AA%E9%80%82%E5%BA%94%E9%9C%80%E6%B1%82%EF%BC%9Aobject-fit/</url>
+    <content><![CDATA[<p>在日常的需求中，有这么一个场景：<br>文本中可能会穿插一些图片，但是这个图片的大小啊长宽比啊什么的 都是不确定的。<br>但我们要它美观啊，好看啊，所以要给它一个确定的大小，但同时让展示出来效果尽可能是图片的主体而不是边边角角。<br>这时候，有一个不常见的利器了 object-fit</p>
+<a id="more"></a>
+<p>mdn的官方解释是 指定可替换元素的内容应该如何适应到其使用的高度和宽度确定的框。<br>其属性值有<br>fill:被替换的内容正好填充元素的内容框。整个对象将完全填充此框。如果对象的宽高比与内容框不相匹配，那么该对象将被拉伸以适应内容框。<br>contain:被替换的内容将被缩放，以在填充元素的内容框时保持其宽高比。 整个对象在填充盒子的同时保留其长宽比，因此如果宽高比与框的宽高比不匹配，该对象将被添加“黑边”。<br>cover:被替换的内容在保持其宽高比的同时填充元素的整个内容框。如果对象的宽高比与内容框不相匹配，该对象将被剪裁以适应内容框。<br>none:被替换的内容将保持其原有的尺寸。<br>scale-down:内容的尺寸与 none 或 contain 中的一个相同，取决于它们两个之间谁得到的对象尺寸会更小一些。</p>
+<p>而我在开头提到的需求场景是可以用cover属性值来实现了~<br>css果然是博大精深啊<br>值得好好学习<br><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/object-fit" target="_blank" rel="noopener">mdn地址</a></p>
+]]></content>
+      <tags>
+        <tag>前端</tag>
+        <tag>工作总结</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>读《对赌》</title>
     <url>/2019/07/20/%E8%AF%BB%E3%80%8A%E5%AF%B9%E8%B5%8C%E3%80%8B/</url>
     <content><![CDATA[<p>最近看完了安妮杜克的《对赌》，私以为是一本关于方法论的书，有那么一点点的啰嗦了。不过这本书对我本身的一些观念造成了些许冲击。</p>
@@ -3259,39 +3280,23 @@ kmp算法</code></pre><p>4.逆波兰表达式<br>中缀表达式转成后缀表�
       </tags>
   </entry>
   <entry>
-    <title>解决图片宽高自适应需求：object-fit</title>
-    <url>/2019/07/17/%E8%A7%A3%E5%86%B3%E5%9B%BE%E7%89%87%E5%AE%BD%E9%AB%98%E8%87%AA%E9%80%82%E5%BA%94%E9%9C%80%E6%B1%82%EF%BC%9Aobject-fit/</url>
-    <content><![CDATA[<p>在日常的需求中，有这么一个场景：<br>文本中可能会穿插一些图片，但是这个图片的大小啊长宽比啊什么的 都是不确定的。<br>但我们要它美观啊，好看啊，所以要给它一个确定的大小，但同时让展示出来效果尽可能是图片的主体而不是边边角角。<br>这时候，有一个不常见的利器了 object-fit</p>
-<a id="more"></a>
-<p>mdn的官方解释是 指定可替换元素的内容应该如何适应到其使用的高度和宽度确定的框。<br>其属性值有<br>fill:被替换的内容正好填充元素的内容框。整个对象将完全填充此框。如果对象的宽高比与内容框不相匹配，那么该对象将被拉伸以适应内容框。<br>contain:被替换的内容将被缩放，以在填充元素的内容框时保持其宽高比。 整个对象在填充盒子的同时保留其长宽比，因此如果宽高比与框的宽高比不匹配，该对象将被添加“黑边”。<br>cover:被替换的内容在保持其宽高比的同时填充元素的整个内容框。如果对象的宽高比与内容框不相匹配，该对象将被剪裁以适应内容框。<br>none:被替换的内容将保持其原有的尺寸。<br>scale-down:内容的尺寸与 none 或 contain 中的一个相同，取决于它们两个之间谁得到的对象尺寸会更小一些。</p>
-<p>而我在开头提到的需求场景是可以用cover属性值来实现了~<br>css果然是博大精深啊<br>值得好好学习<br><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/object-fit" target="_blank" rel="noopener">mdn地址</a></p>
+    <title>重学前端系列笔记2</title>
+    <url>/2019/04/11/%E9%87%8D%E5%AD%A6%E5%89%8D%E7%AB%AF%E7%B3%BB%E5%88%97%E7%AC%94%E8%AE%B02/</url>
+    <content><![CDATA[<p>html部分</p>
+<p>语义化由于越来越多的“阅读模式”的出现，而变得更加重要。<br>emm…<br>适当的实践语义化吧。但是最主要的目的可能是为了让代码可读性高可维护性强，从这个角度来讲，命名规范似乎更加重要一点。<br>加上在企业级的应用里面，几乎并不涉及到seo,所以语义化对于seo的影响也基本上可以忽略不计了。<br>尽可能的践行语义化，或者说是更加标准和工整的结构和命名方式吧。</p>
 ]]></content>
       <tags>
         <tag>前端</tag>
-        <tag>工作总结</tag>
+        <tag>基础知识</tag>
       </tags>
   </entry>
   <entry>
-    <title>重学前端系列笔记1</title>
-    <url>/2019/04/11/%E9%87%8D%E5%AD%A6%E5%89%8D%E7%AB%AF%E7%B3%BB%E5%88%97%E7%AC%94%E8%AE%B01/</url>
-    <content><![CDATA[<p>winter大神的重学前端课程已经买了几个月了，突然发现自己陷入了快节奏与焦虑之中。希望能慢慢改善。每天学点东西，每天积累。<br>工作中用到的知识都比较简单和单一，导致没有多少上升的机会，大环境是这样，抱怨是没有用的啊 趁现在不忙 有时间有精力 多学习东西吧。</p>
-<a id="more"></a>
-<p>首先，明确方法和路线，偶尔看到之前记的一些笔记，但是都很长时间没有翻了，内容也大都忘记了，实在是不应该啊。果然不忘初心真的很难做到。</p>
+    <title>重学前端系列笔记3</title>
+    <url>/2019/04/11/%E9%87%8D%E5%AD%A6%E5%89%8D%E7%AB%AF%E7%B3%BB%E5%88%97%E7%AC%94%E8%AE%B03/</url>
+    <content><![CDATA[<p>面向对象：<br>JavaScript对象的两类属性</p>
 <ol>
-<li>基础知识很重要</li>
-<li>尝试自己建立自己的知识体系</li>
+<li>数据属性  2. 访问器属性</li>
 </ol>
-<p>目前来说，css的知识储备是够用的，一些比较奇技淫巧的东西，可能在碰到的时候就学会了，没有必要专门去学，况且也是学不完的。</p>
-<p>目前的知识体系主要是说原生js,因为工作分配的原因，对原生js一直处于一知半解的状态，这也是焦虑的原因之一，希望这次能够在原生js方面能有比较多收获。</p>
-<p>最近要多看看《js语言精粹》这本书了，买了这么久 一直没怎么看。</p>
-<p>知识体系大致分为以下四部分</p>
-<ol>
-<li>javascript</li>
-<li>css和html</li>
-<li>浏览器的实现原理和API</li>
-<li>实践部分</li>
-</ol>
-<p>后续我会按照自己的理解整理一份知识体系<br><img src="/2019/04/11/重学前端系列笔记1/tu1.jpg" alt="winter的前端知识图谱"></p>
 ]]></content>
       <tags>
         <tag>前端</tag>
@@ -3308,17 +3313,6 @@ kmp算法</code></pre><p>4.逆波兰表达式<br>中缀表达式转成后缀表�
 ]]></content>
       <tags>
         <tag>随笔</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>重学前端系列笔记2</title>
-    <url>/2019/04/11/%E9%87%8D%E5%AD%A6%E5%89%8D%E7%AB%AF%E7%B3%BB%E5%88%97%E7%AC%94%E8%AE%B02/</url>
-    <content><![CDATA[<p>html部分</p>
-<p>语义化由于越来越多的“阅读模式”的出现，而变得更加重要。<br>emm…<br>适当的实践语义化吧。但是最主要的目的可能是为了让代码可读性高可维护性强，从这个角度来讲，命名规范似乎更加重要一点。<br>加上在企业级的应用里面，几乎并不涉及到seo,所以语义化对于seo的影响也基本上可以忽略不计了。<br>尽可能的践行语义化，或者说是更加标准和工整的结构和命名方式吧。</p>
-]]></content>
-      <tags>
-        <tag>前端</tag>
-        <tag>基础知识</tag>
       </tags>
   </entry>
   <entry>
@@ -3356,12 +3350,26 @@ kmp算法</code></pre><p>4.逆波兰表达式<br>中缀表达式转成后缀表�
       </tags>
   </entry>
   <entry>
-    <title>重学前端系列笔记3</title>
-    <url>/2019/04/11/%E9%87%8D%E5%AD%A6%E5%89%8D%E7%AB%AF%E7%B3%BB%E5%88%97%E7%AC%94%E8%AE%B03/</url>
-    <content><![CDATA[<p>面向对象：<br>JavaScript对象的两类属性</p>
+    <title>重学前端系列笔记1</title>
+    <url>/2019/04/11/%E9%87%8D%E5%AD%A6%E5%89%8D%E7%AB%AF%E7%B3%BB%E5%88%97%E7%AC%94%E8%AE%B01/</url>
+    <content><![CDATA[<p>winter大神的重学前端课程已经买了几个月了，突然发现自己陷入了快节奏与焦虑之中。希望能慢慢改善。每天学点东西，每天积累。<br>工作中用到的知识都比较简单和单一，导致没有多少上升的机会，大环境是这样，抱怨是没有用的啊 趁现在不忙 有时间有精力 多学习东西吧。</p>
+<a id="more"></a>
+<p>首先，明确方法和路线，偶尔看到之前记的一些笔记，但是都很长时间没有翻了，内容也大都忘记了，实在是不应该啊。果然不忘初心真的很难做到。</p>
 <ol>
-<li>数据属性  2. 访问器属性</li>
+<li>基础知识很重要</li>
+<li>尝试自己建立自己的知识体系</li>
 </ol>
+<p>目前来说，css的知识储备是够用的，一些比较奇技淫巧的东西，可能在碰到的时候就学会了，没有必要专门去学，况且也是学不完的。</p>
+<p>目前的知识体系主要是说原生js,因为工作分配的原因，对原生js一直处于一知半解的状态，这也是焦虑的原因之一，希望这次能够在原生js方面能有比较多收获。</p>
+<p>最近要多看看《js语言精粹》这本书了，买了这么久 一直没怎么看。</p>
+<p>知识体系大致分为以下四部分</p>
+<ol>
+<li>javascript</li>
+<li>css和html</li>
+<li>浏览器的实现原理和API</li>
+<li>实践部分</li>
+</ol>
+<p>后续我会按照自己的理解整理一份知识体系<br><img src="/2019/04/11/重学前端系列笔记1/tu1.jpg" alt="winter的前端知识图谱"></p>
 ]]></content>
       <tags>
         <tag>前端</tag>
@@ -3430,6 +3438,34 @@ kmp算法</code></pre><p>4.逆波兰表达式<br>中缀表达式转成后缀表�
       </tags>
   </entry>
   <entry>
+    <title>高效能人士的七个习惯</title>
+    <url>/2020/05/16/%E9%AB%98%E6%95%88%E8%83%BD%E4%BA%BA%E5%A3%AB%E7%9A%84%E4%B8%83%E4%B8%AA%E4%B9%A0%E6%83%AF/</url>
+    <content><![CDATA[<p>好久之前看的 先记个提纲吧 日后若果看第二遍 倒是可以记个详细的笔记</p>
+<a id="more"></a>
+<ol>
+<li>积极主动</li>
+<li>以始为终</li>
+<li>要事第一</li>
+<li>双赢思维</li>
+<li>知彼解己</li>
+<li>综合综效</li>
+<li>不断更新</li>
+</ol>
+]]></content>
+      <tags>
+        <tag>随笔</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>黑客与画家</title>
+    <url>/2019/08/18/%E9%BB%91%E5%AE%A2%E4%B8%8E%E7%94%BB%E5%AE%B6/</url>
+    <content><![CDATA[<p>读《黑客与画家有感》</p>
+]]></content>
+      <tags>
+        <tag>随笔</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>重排和重绘</title>
     <url>/2020/07/14/%E9%87%8D%E6%8E%92%E5%92%8C%E9%87%8D%E7%BB%98/</url>
     <content><![CDATA[<p>今天一个bug引发了我对重排和重绘的好奇<br>对这个知识点做个系统的了解和总结</p>
@@ -3470,219 +3506,6 @@ kmp算法</code></pre><p>4.逆波兰表达式<br>中缀表达式转成后缀表�
 ]]></content>
       <tags>
         <tag>随笔</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>高效能人士的七个习惯</title>
-    <url>/2020/05/16/%E9%AB%98%E6%95%88%E8%83%BD%E4%BA%BA%E5%A3%AB%E7%9A%84%E4%B8%83%E4%B8%AA%E4%B9%A0%E6%83%AF/</url>
-    <content><![CDATA[<p>好久之前看的 先记个提纲吧 日后若果看第二遍 倒是可以记个详细的笔记</p>
-<a id="more"></a>
-<ol>
-<li>积极主动</li>
-<li>以始为终</li>
-<li>要事第一</li>
-<li>双赢思维</li>
-<li>知彼解己</li>
-<li>综合综效</li>
-<li>不断更新</li>
-</ol>
-]]></content>
-      <tags>
-        <tag>随笔</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>黑客与画家</title>
-    <url>/2019/08/18/%E9%BB%91%E5%AE%A2%E4%B8%8E%E7%94%BB%E5%AE%B6/</url>
-    <content><![CDATA[<p>读《黑客与画家有感》</p>
-]]></content>
-      <tags>
-        <tag>随笔</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>web前端基础知识点整理</title>
-    <url>/2017/11/07/web%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9%E6%95%B4%E7%90%86/</url>
-    <content><![CDATA[<p>这篇文章是系统性的知识点的整理，并不详细，只是做个总结的作用</p>
-<h3 id="HTML-amp-CSS"><a href="#HTML-amp-CSS" class="headerlink" title="HTML&amp;CSS"></a>HTML&amp;CSS</h3><h4 id="对web标准的理解"><a href="#对web标准的理解" class="headerlink" title="对web标准的理解"></a>对web标准的理解</h4><ol>
-<li>web标准是对web的结构，表现，行为的规范。</li>
-<li>标签小写，标签闭合，不乱嵌套。</li>
-<li>使用外css和js脚本，提高渲染速度</li>
-<li>尽量避免使用行内样式，标签的id和class等属性命名要做到见文知义，标签越少，加载越快，用户体验提高，代码维护简单，便于改版。</li>
-<li>标签规范可以提高搜索引擎对页面的抓取效率，对SEO很有帮助。<a id="more"></a>
-
-</li>
-</ol>
-<h4 id="浏览器内核差异"><a href="#浏览器内核差异" class="headerlink" title="浏览器内核差异"></a>浏览器内核差异</h4><ol>
-<li>Trident内核(window)IE 浏览器使用的内核</li>
-<li>WebKit内核（NB 的内核，跨平台）chrome，Safari，塞班手机浏览器，安卓手机浏览器。</li>
-<li>gecko内核 Firefox内核</li>
-</ol>
-<p><strong>浏览器渲染原理</strong><br>1.当用户在地址栏里面输入网址并敲下回车的时候，浏览器开始向服务器发出请求；<br>2.当浏览器拿到html页面的时候，开始从上而下进行解释；<br>3.当遇到link标签的时候，浏览器会再次向页面进行请求，并根据请求得到的css来重绘页面；<br>4.当遇到script标签的时候，浏览器再次请求服务器，并执行得到的js对页面进行重绘；<br>5.当遇到图片等其他文件的时候，浏览器也会再次发起请求并根据拿到的文件来对页面进行重绘；<br>6.当进行上面这些步骤时，浏览器的重绘回流等是无法避免的，即需要进一步的优化，比如制作雪碧图，避免反复请求，给图片固定宽高等等；<br>上面的内容也可以解释为：<br>    浏览器拿到html、css、js,开始构建一个dom树，页面要显示的各元素都会创建到这个dom树当中，每当一个新元素加入到这个dom树当中，浏览器便会通过css引擎查询css样式表，找到符合该元素的样式规则应用到这个元素上，每一次应用新规则都可能引起重绘回流；<br>    css文件在加载的时候回阻塞页面渲染，但是并不会阻止dom解析，而js文件加载的时候会阻塞dom解析，所以通常把css文件放在页面头部而把脚本放在页面底部</p>
-<p>####浏览器兼容性问题</p>
-<ol>
-<li>不同浏览器的标签默认的外边距和内边距不同<br><code>*{margin:0;padding:0}</code> 据说是一种不好的写法。有个初始化css的插件叫什么来着忘了</li>
-<li>块属性标签float后，又有横行的margin情况下，在IE6显示margin比设置的大<br>在float的标签样式控制中加入 display:inline;将其转化为行内属性</li>
-<li>设置较小高度标签（一般小于10px），在IE6，IE7，遨游中高度超出自己设置高度<br>给超出高度的标签设置overflow:hidden;或者设置行高line-height 小于你设置的高度。<br><a href="http://blog.csdn.net/chuyuqing/article/details/37561313/(附上别人总结的博客链接)" target="_blank" rel="noopener">http://blog.csdn.net/chuyuqing/article/details/37561313/(附上别人总结的博客链接)</a><h4 id="hack"><a href="#hack" class="headerlink" title="hack"></a>hack</h4>[csshack]（<a href="http://www.duitang.com/static/csshack.html）" target="_blank" rel="noopener">http://www.duitang.com/static/csshack.html）</a><h4 id="CSS基本布局盒模型选择器优先级"><a href="#CSS基本布局盒模型选择器优先级" class="headerlink" title="CSS基本布局盒模型选择器优先级"></a>CSS基本布局盒模型选择器优先级</h4><h4 id="HTML5-CSS3"><a href="#HTML5-CSS3" class="headerlink" title="HTML5 CSS3"></a>HTML5 CSS3</h4>data-* 属性用于存储页面或应用程序的私有自定义数据。<br>data-* 属性赋予我们在所有 HTML 元素上嵌入自定义 data 属性的能力。<br>存储的（自定义）数据能够被页面的 JavaScript 中利用，以创建更好的用户体验（不进行 Ajax 调用或服务器端数据库查询）。<br>data- 浏览器兼容性 Internet Explorer 11+  Chrome 8+  Firefox 6.0+  Opera 11.10+  Safari 6+</li>
-</ol>
-<p><a href="http://www.w3school.com.cn/html5/html_5_intro.asp" target="_blank" rel="noopener">http://www.w3school.com.cn/html5/html_5_intro.asp</a></p>
-<h4 id="FLEXBOX"><a href="#FLEXBOX" class="headerlink" title="FLEXBOX"></a>FLEXBOX</h4><ol>
-<li>flex-direction属性  flex-direction属性决定主轴的方向（即项目的排列方向）。<ul>
-<li>row（默认值）：主轴为水平方向，起点在左端。</li>
-<li>row-reverse：主轴为水平方向，起点在右端。</li>
-<li>column：主轴为垂直方向，起点在上沿。</li>
-<li>column-reverse：主轴为垂直方向，起点在下沿。</li>
-</ul>
-</li>
-<li>flex-wrap属性<ul>
-<li>nowrap 不换行</li>
-<li>wrap 换行 第一行在上方</li>
-<li>wrap-reverse 换行 第一行在下方</li>
-</ul>
-</li>
-<li>flex-flow<br>flex-flow属性是flex-direction属性和flex-wrap属性的简写形式，默认值为row nowrap。</li>
-<li>justify-content属性 定义了项目在主轴上的对齐方式。<ul>
-<li>flex-start（默认值）：左对齐</li>
-<li>flex-end：右对齐</li>
-<li>center： 居中</li>
-<li>space-between：两端对齐，项目之间的间隔都相等。</li>
-</ul>
-</li>
-<li>align-items属性定义项目在交叉轴上如何对齐<ul>
-<li>flex-start：交叉轴的起点对齐。</li>
-<li>flex-end：交叉轴的终点对齐。</li>
-<li>center：交叉轴的中点对齐。</li>
-<li>baseline: 项目的第一行文字的基线对齐。</li>
-<li>stretch（默认值）：如果项目未设置高度或设为auto，将占满整个容器的高度</li>
-</ul>
-</li>
-<li>align-content属性定义了多根轴线的对齐方式。如果项目只有一根轴线，该属性不起作用。<ul>
-<li>flex-start：与交叉轴的起点对齐。</li>
-<li>flex-end：与交叉轴的终点对齐。</li>
-<li>center：与交叉轴的中点对齐。</li>
-<li>space-between：与交叉轴两端对齐，轴线之间的间隔平均分布。</li>
-<li>space-around：每根轴线两侧的间隔都相等。所以，轴线之间的间隔比轴线与边框的间隔大一倍。</li>
-<li>stretch（默认值）：轴线占满整个交叉轴。</li>
-<li><a href="http://www.jianshu.com/p/f9bcddb0e8b4" target="_blank" rel="noopener">http://www.jianshu.com/p/f9bcddb0e8b4</a></li>
-<li>圣杯布局 优先渲染中间栏 中间栏宽度为100% 左右栏左外边距设为负百分比</li>
-<li>圣杯布局和双飞翼布局解决问题的方案在前一半是相同的，也就是三栏全部float浮动，但左右两栏加上负margin让其跟中间栏div并排，以形成三栏布局。不同在于解决”中间栏div内容不被遮挡“问题的思路不一样：圣杯布局，为了中间div内容不被遮挡，将中间div设置了左右padding-left和padding-right后，将左右两个div用相对布局position: relative并分别配合right和left属性，以便左右两栏div移动后不遮挡中间div。双飞翼布局，为了中间div内容不被遮挡，直接在中间div内部创建子div用于放置内容，在该子div里用margin-left和margin-right为左右两栏div留出位置。多了1个div，少用大致4个css属性。<h3 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h3><h4 id="map和set"><a href="#map和set" class="headerlink" title="map和set"></a>map和set</h4></li>
-</ul>
-</li>
-<li>map set() has() get() delete()</li>
-<li>set 重复元素在Set中自动被过滤 add() delete()<h4 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h4>number boolean string undefined null object<h4 id="运算"><a href="#运算" class="headerlink" title="运算"></a>运算</h4><h4 id="this的指向问题"><a href="#this的指向问题" class="headerlink" title="this的指向问题"></a>this的指向问题</h4><a href="http://www.jb51.net/article/42257.htm" target="_blank" rel="noopener">http://www.jb51.net/article/42257.htm</a><h4 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h4></li>
-<li>数组对象  方法<ul>
-<li>join（[分隔符]）</li>
-</ul>
-</li>
-</ol>
-<ul>
-<li>reverse()数组翻转</li>
-<li>valueOf()返回数组值</li>
-</ul>
-<ol start="2">
-<li>字符串对象 方法<ul>
-<li>toUpperCase() 大写</li>
-<li>toLowerCase() 小写</li>
-<li>charAt（索引）</li>
-<li>indexOf（“字串”）</li>
-<li>replace(“字串1”,”字串2”) 字串2替换字串1</li>
-<li>slice(索引i[,索引j]) 返回索引i倒索引j-1的子串</li>
-<li>substr(start[,length]) 返回特定长度的字串</li>
-<li>match（/匹配字符/）</li>
-<li>toString() 返回字符串</li>
-<li>valueOf()返回字符串</li>
-</ul>
-</li>
-<li>数学对象<ul>
-<li>Math ceil(数值) 大于等于该数值的最小整数</li>
-<li>floor(数值) 小于等于该数值的最小整数</li>
-<li>random()0到1的随机数</li>
-<li>round（数值）最接近该数值的整数</li>
-<li>sqrt(数值)  开平方根</li>
-</ul>
-<ol start="4">
-<li>定时器<br>用以指定在一段特定的时间后执行某段程序。 setTimeout()：  格式：  [定时器对象名=] setTimeout(“&lt;表达式&gt;”，毫秒) 功能：执行&lt;表达式&gt;一次。 clearTimeout()：终止定时器  格式：  clearTimeout(定时器对象名)</li>
-</ol>
-</li>
-<li>窗口名称.方法（参数）<h4 id="function"><a href="#function" class="headerlink" title="function"></a>function</h4></li>
-<li>函数声明提前</li>
-<li>函数构造器<h4 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h4></li>
-<li>使用对象冒充实现继承</li>
-<li>采用call方法改变函数上下文实现继承 改变函数内部的函数上下文this，使它指向传入函数的具体对象<h4 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h4><ul>
-<li>外部函数不是必需的。通过访问外部变量，一个闭包可以维持（keep alive）这些变量。在内部函数和外部函数的例子中，外部函数可以创建局部变量，并且最终退出；但是，如果任何一个或多个内部函数在它退出后却没有退出，那么内部函数就维持了外部函数的局部数据。<h4 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h4>在函数中使用var关键字进行显式申明的变量是做为局部变量，而没有用var关键字，使用直接赋值方式声明的是全局变量。　　<br>当我们使用访问一个没有声明的变量时，JS会报错。而当我们给一个没有声明的变量赋值时，JS不会报错，相反它会认为我们是要隐式申明一个全局变量，这一点一定要注意。<h4 id="原型链"><a href="#原型链" class="headerlink" title="原型链"></a>原型链</h4>函数的原型对象constructor默认指向函数本身，原型对象除了有原型属性外，为了实现继承，还有一个原型链指针<strong>proto</strong>，该指针指向上一层的原型对象，而上一层的原型对象的结构依然类似，这样利用<strong>proto</strong>一直指向Object的原型对象上，而Object的原型对象用Object.prototype.<strong>proto</strong> = null表示原型链的最顶端，如此变形成了javascript的原型链继承，同时也解释了为什么所有的javascript对象都具有Object的基本方法。<h4 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h4></li>
-</ul>
-<ol>
-<li>JavaScript事件代理（委托）一般用于以下情况：1. 事件注册在祖先级元素上，代理其子级元素。可以减少事件注册数量，节约内存开销，提高性能。2. 对js动态添加的子元素可自动绑定事件。</li>
-<li>冒泡型事件：事件按照从最特定的事件目标到最不特定的事件目标(document对象)的顺序触发。</li>
-<li>捕获型事件(event capturing)：事件从最不精确的对象(document 对象)开始触发，然后到最精确(也可以在窗口级别捕获事件，不过必须由开发人员特别指定)。</li>
-<li>DOM事件流：同时支持两种事件模型：捕获型事件和冒泡型事件，但是，捕获型事件先发生。两种事件流会触及DOM中的所有对象，从document对象开始，也在document对象结束。 DOM事件模型最独特的性质是，文本节点也触发事件(在IE中不会)。<br>####RegExp<br>new RegExp(pattern, attributes);<br>参数 attributes 是一个可选的字符串，包含属性 “g”、”i” 和 “m”，分别用于指定全局匹配、区分大小写的匹配和多行匹配。</li>
-</ol>
-</li>
-</ol>
-<h4 id="Json"><a href="#Json" class="headerlink" title="Json"></a>Json</h4><p><a href="http://www.cnblogs.com/fanshaokun/p/6272850.html" target="_blank" rel="noopener">http://www.cnblogs.com/fanshaokun/p/6272850.html</a><br>JSON有两种表示结构，对象和数组。<br>字符串：这个很好解释，指使用“”双引号或’’单引号包括的字符。例如：var comStr = ‘this is string’;<br>json字符串：指的是符合json格式要求的js字符串。例如：var jsonStr = “{StudentID:’100’,Name:’tmac’,Hometown:’usa’}”;<br>json对象：指符合json格式要求的js对象。例如：var jsonObj = { StudentID: “100”, Name: “tmac”, Hometown: “usa” };</p>
-<h4 id="Ajax"><a href="#Ajax" class="headerlink" title="Ajax"></a>Ajax</h4><p>1.建立xmlHttpRequest对象<br>2.设置回调函数<br>3.使用OPEN方法与服务器建立连接  xmlHttp.open(“get”,”ajax?name=”+ name,true)<br>   此步注意设置http的请求方式（post/get）,如果是POST方式，注意设置请求头信息xmlHttp.setRequestHeader(“Content-Type”,”application/x-www-form-urlencoded”)<br>4.向服务器端发送数据<br>5.在回调函数中针对不同的响应状态进行处理</p>
-<h4 id="DOM"><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h4><h4 id="BOM"><a href="#BOM" class="headerlink" title="BOM"></a>BOM</h4><h4 id="内存泄漏"><a href="#内存泄漏" class="headerlink" title="内存泄漏"></a>内存泄漏</h4><p>程序的运行需要内存。只要程序提出要求，操作系统或者运行时（runtime）就必须供给内存。<br>对于持续运行的服务进程（daemon），必须及时释放不再用到的内存。否则，内存占用越来越高，轻则影响系统性能，重则导致进程崩溃。<br>不再用到的内存，没有及时释放，就叫做内存泄漏（memory leak）。<br>有些语言（比如 C 语言）必须手动释放内存，程序员负责内存管理。<br><strong>垃圾回收机制怎么知道，哪些内存不再需要呢？</strong><br>最常使用的方法叫做”引用计数”（reference counting）：语言引擎有一张”引用表”，保存了内存里面所有的资源（通常是各种值）的引用次数。如果一个值的引用次数是0，就表示这个值不再用到了，因此可以将这块内存释放。</p>
-<h4 id="跨域"><a href="#跨域" class="headerlink" title="跨域"></a>跨域</h4><p>只要协议、域名、端口有任何一个不同，都被当作是不同的域。</p>
-<ol>
-<li>通过jsonp跨域</li>
-<li>通过修改document.domain来跨子域</li>
-<li>使用window.name来进行跨域</li>
-</ol>
-<h4 id="异步装载"><a href="#异步装载" class="headerlink" title="异步装载"></a>异步装载</h4><ol>
-<li>对于支持HTML5的浏览器，实现JS的异步加载只需要在script元素中加上async属性，为了兼容老版本的IE还需加上defer属性；对于不支持HTML5的浏览器(IE可以用defer实现)，可以采用以上几种方法实现。原理基本上都是向DOM中写入script或者通过eval函数执行JS代码，你可以把它放在匿名函数中执行，也可以在onload中执行，也可以通过XHR注入实现，也可以创建一个iframe元素，然后在iframe中执行插入JS代码。</li>
-</ol>
-<h4 id="模板引擎"><a href="#模板引擎" class="headerlink" title="模板引擎"></a>模板引擎</h4><p>模板引擎分为java模板引擎和js模板引擎<br>常用的java引擎有velocity （还有我就不晓得了，就接触过这一个）<br>常用的javascript模板引擎有 ejs jade 还有互联网三巨头开发的模板引擎。。。</p>
-<h4 id="前端MVC"><a href="#前端MVC" class="headerlink" title="前端MVC"></a>前端MVC</h4><p>MVC是一种设计模式，它将应用划分为3个部分：数据（模型）、展现层（视图）和用户交互（控制器）。换句话说，一个事件的发生是这样的过程：<br>　　1. 用户和应用产生交互。<br>　　2. 控制器的事件处理器被触发。<br>　　3. 控制器从模型中请求数据，并将其交给视图。<br>　　4. 视图将数据呈现给用户。<br>（1）MVC： 模型－视图－控制器(Model View Controller)<br>（2）MVP： 模型－视图－表现类（Model-View-Presenter）<br>（3）MVVM：模型－视图－视图模型（Model-View-ViewModel）</p>
-<h4 id="路由"><a href="#路由" class="headerlink" title="路由"></a>路由</h4><ol>
-<li>init 监听浏览器 url hash 更新事件</li>
-<li>route 存储路由更新时的回调到回调数组routes中，回调函数将负责对页面的更新</li>
-<li>refresh 执行当前url对应的回调函数，更新页面<br>以上，以前写的，没怎么了解前端路由之前写的，我也不知道写的是个啥。<br>以下，有点了解之后写的。<br>前端的js页面在es6之前都模块化这样一个概念，自然也无法实现多个js页面的相互关联，这样的相互关联的过程就是前端路由。虽然在es6之前没有模块化，但是可以用第三方提供的一些模块化的方法，如AMD COMMONJS 在node.js中，已经有了模块化的方法。node.js可以很优雅的实现前端路由~~</li>
-</ol>
-<h4 id="模块化"><a href="#模块化" class="headerlink" title="模块化"></a>模块化</h4><ol>
-<li>函数封装   这种做法的缺点很明显：污染了全局变量，无法保证不与其他模块发生变量名冲突，而且模块成员之间没什么关系。</li>
-<li>对象  为了解决上面问题，对象的写法应运而生，可以把所有的模块成员封装在一个对象中  这样避免了变量污染，只要保证模块名唯一即可，同时同一模块内的成员也有了关系 看似不错的解决方案，但是也有缺陷，外部可以随意修改内部成员</li>
-<li>立即执行函数</li>
-<li>放大模式 如果一个模块很大，必须分成几个部分，或者一个模块需要继承另一个模块，这时就有必要采用”放大模式”（augmentation）。</li>
-<li>宽放大模式 与”放大模式”相比，＂宽放大模式＂就是”立即执行函数”的参数可以是空对象。</li>
-<li>输入全局变量  独立性是模块的重要特点，模块内部最好不与程序的其他部分直接交互。为了在模块内部调用全局变量，必须显式地将其他变量输入模块。</li>
-</ol>
-<h4 id="Canvas"><a href="#Canvas" class="headerlink" title="Canvas"></a>Canvas</h4><p>HTML5中的一个画布，功能强大，详情参考html5的内容</p>
-<h3 id="ES6"><a href="#ES6" class="headerlink" title="ES6"></a>ES6</h3><ol>
-<li>let var const<ul>
-<li>let是块级作用域，跟var不同的是，let没有前置功能，不能重复声明</li>
-<li>const定义的变量不可以修改，而且必须初始化。</li>
-<li>var分为两种：局部作用域和函数作用域</li>
-<li>let是块级作用域，函数内部使用let定义后，对函数外部无影响。</li>
-</ul>
-</li>
-<li>箭头函数<ul>
-<li>箭头函数相当于匿名函数，并且简化了函数定义。箭头函数有两种格式，一种像上面的，只包含一个表达式，连{ … }和return都省略掉了。还有一种可以包含多条语句，这时候就不能省略{ … }和return</li>
-<li>箭头函数看上去是匿名函数的一种简写，但实际上，箭头函数和匿名函数有个明显的区别：箭头函数内部的this是词法作用域，由上下文确定。</li>
-</ul>
-</li>
-<li>promise<ul>
-<li>pending进行中</li>
-<li>fullfilled已成功/resolved</li>
-<li>rejected已失败</li>
-<li>then</li>
-<li>只有异步操作的结果能决定当前是哪种状态</li>
-</ul>
-<ol start="4">
-<li>map 和set</li>
-</ol>
-<ul>
-<li>set()</li>
-<li>get()</li>
-<li>has()</li>
-<li>delete()<br><mark>专门整理了一篇关于es6新特性的博客，还有部分内容在图书馆看书的时候记在了小本子上，择日整理上传</mark></li>
-</ul>
-</li>
-</ol>
-<h3 id="Nodejs"><a href="#Nodejs" class="headerlink" title="Nodejs"></a>Nodejs</h3><p>详情参考node.js入门篇</p>
-]]></content>
-      <tags>
-        <tag>前端</tag>
-        <tag>面试</tag>
       </tags>
   </entry>
   <entry>
@@ -4031,6 +3854,191 @@ kmp算法</code></pre><p>4.逆波兰表达式<br>中缀表达式转成后缀表�
       <tags>
         <tag>面试</tag>
         <tag>网络</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>web前端基础知识点整理</title>
+    <url>/2017/11/07/web%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9%E6%95%B4%E7%90%86/</url>
+    <content><![CDATA[<p>这篇文章是系统性的知识点的整理，并不详细，只是做个总结的作用</p>
+<h3 id="HTML-amp-CSS"><a href="#HTML-amp-CSS" class="headerlink" title="HTML&amp;CSS"></a>HTML&amp;CSS</h3><h4 id="对web标准的理解"><a href="#对web标准的理解" class="headerlink" title="对web标准的理解"></a>对web标准的理解</h4><ol>
+<li>web标准是对web的结构，表现，行为的规范。</li>
+<li>标签小写，标签闭合，不乱嵌套。</li>
+<li>使用外css和js脚本，提高渲染速度</li>
+<li>尽量避免使用行内样式，标签的id和class等属性命名要做到见文知义，标签越少，加载越快，用户体验提高，代码维护简单，便于改版。</li>
+<li>标签规范可以提高搜索引擎对页面的抓取效率，对SEO很有帮助。<a id="more"></a>
+
+</li>
+</ol>
+<h4 id="浏览器内核差异"><a href="#浏览器内核差异" class="headerlink" title="浏览器内核差异"></a>浏览器内核差异</h4><ol>
+<li>Trident内核(window)IE 浏览器使用的内核</li>
+<li>WebKit内核（NB 的内核，跨平台）chrome，Safari，塞班手机浏览器，安卓手机浏览器。</li>
+<li>gecko内核 Firefox内核</li>
+</ol>
+<p><strong>浏览器渲染原理</strong><br>1.当用户在地址栏里面输入网址并敲下回车的时候，浏览器开始向服务器发出请求；<br>2.当浏览器拿到html页面的时候，开始从上而下进行解释；<br>3.当遇到link标签的时候，浏览器会再次向页面进行请求，并根据请求得到的css来重绘页面；<br>4.当遇到script标签的时候，浏览器再次请求服务器，并执行得到的js对页面进行重绘；<br>5.当遇到图片等其他文件的时候，浏览器也会再次发起请求并根据拿到的文件来对页面进行重绘；<br>6.当进行上面这些步骤时，浏览器的重绘回流等是无法避免的，即需要进一步的优化，比如制作雪碧图，避免反复请求，给图片固定宽高等等；<br>上面的内容也可以解释为：<br>    浏览器拿到html、css、js,开始构建一个dom树，页面要显示的各元素都会创建到这个dom树当中，每当一个新元素加入到这个dom树当中，浏览器便会通过css引擎查询css样式表，找到符合该元素的样式规则应用到这个元素上，每一次应用新规则都可能引起重绘回流；<br>    css文件在加载的时候回阻塞页面渲染，但是并不会阻止dom解析，而js文件加载的时候会阻塞dom解析，所以通常把css文件放在页面头部而把脚本放在页面底部</p>
+<p>####浏览器兼容性问题</p>
+<ol>
+<li>不同浏览器的标签默认的外边距和内边距不同<br><code>*{margin:0;padding:0}</code> 据说是一种不好的写法。有个初始化css的插件叫什么来着忘了</li>
+<li>块属性标签float后，又有横行的margin情况下，在IE6显示margin比设置的大<br>在float的标签样式控制中加入 display:inline;将其转化为行内属性</li>
+<li>设置较小高度标签（一般小于10px），在IE6，IE7，遨游中高度超出自己设置高度<br>给超出高度的标签设置overflow:hidden;或者设置行高line-height 小于你设置的高度。<br><a href="http://blog.csdn.net/chuyuqing/article/details/37561313/(附上别人总结的博客链接)" target="_blank" rel="noopener">http://blog.csdn.net/chuyuqing/article/details/37561313/(附上别人总结的博客链接)</a><h4 id="hack"><a href="#hack" class="headerlink" title="hack"></a>hack</h4>[csshack]（<a href="http://www.duitang.com/static/csshack.html）" target="_blank" rel="noopener">http://www.duitang.com/static/csshack.html）</a><h4 id="CSS基本布局盒模型选择器优先级"><a href="#CSS基本布局盒模型选择器优先级" class="headerlink" title="CSS基本布局盒模型选择器优先级"></a>CSS基本布局盒模型选择器优先级</h4><h4 id="HTML5-CSS3"><a href="#HTML5-CSS3" class="headerlink" title="HTML5 CSS3"></a>HTML5 CSS3</h4>data-* 属性用于存储页面或应用程序的私有自定义数据。<br>data-* 属性赋予我们在所有 HTML 元素上嵌入自定义 data 属性的能力。<br>存储的（自定义）数据能够被页面的 JavaScript 中利用，以创建更好的用户体验（不进行 Ajax 调用或服务器端数据库查询）。<br>data- 浏览器兼容性 Internet Explorer 11+  Chrome 8+  Firefox 6.0+  Opera 11.10+  Safari 6+</li>
+</ol>
+<p><a href="http://www.w3school.com.cn/html5/html_5_intro.asp" target="_blank" rel="noopener">http://www.w3school.com.cn/html5/html_5_intro.asp</a></p>
+<h4 id="FLEXBOX"><a href="#FLEXBOX" class="headerlink" title="FLEXBOX"></a>FLEXBOX</h4><ol>
+<li>flex-direction属性  flex-direction属性决定主轴的方向（即项目的排列方向）。<ul>
+<li>row（默认值）：主轴为水平方向，起点在左端。</li>
+<li>row-reverse：主轴为水平方向，起点在右端。</li>
+<li>column：主轴为垂直方向，起点在上沿。</li>
+<li>column-reverse：主轴为垂直方向，起点在下沿。</li>
+</ul>
+</li>
+<li>flex-wrap属性<ul>
+<li>nowrap 不换行</li>
+<li>wrap 换行 第一行在上方</li>
+<li>wrap-reverse 换行 第一行在下方</li>
+</ul>
+</li>
+<li>flex-flow<br>flex-flow属性是flex-direction属性和flex-wrap属性的简写形式，默认值为row nowrap。</li>
+<li>justify-content属性 定义了项目在主轴上的对齐方式。<ul>
+<li>flex-start（默认值）：左对齐</li>
+<li>flex-end：右对齐</li>
+<li>center： 居中</li>
+<li>space-between：两端对齐，项目之间的间隔都相等。</li>
+</ul>
+</li>
+<li>align-items属性定义项目在交叉轴上如何对齐<ul>
+<li>flex-start：交叉轴的起点对齐。</li>
+<li>flex-end：交叉轴的终点对齐。</li>
+<li>center：交叉轴的中点对齐。</li>
+<li>baseline: 项目的第一行文字的基线对齐。</li>
+<li>stretch（默认值）：如果项目未设置高度或设为auto，将占满整个容器的高度</li>
+</ul>
+</li>
+<li>align-content属性定义了多根轴线的对齐方式。如果项目只有一根轴线，该属性不起作用。<ul>
+<li>flex-start：与交叉轴的起点对齐。</li>
+<li>flex-end：与交叉轴的终点对齐。</li>
+<li>center：与交叉轴的中点对齐。</li>
+<li>space-between：与交叉轴两端对齐，轴线之间的间隔平均分布。</li>
+<li>space-around：每根轴线两侧的间隔都相等。所以，轴线之间的间隔比轴线与边框的间隔大一倍。</li>
+<li>stretch（默认值）：轴线占满整个交叉轴。</li>
+<li><a href="http://www.jianshu.com/p/f9bcddb0e8b4" target="_blank" rel="noopener">http://www.jianshu.com/p/f9bcddb0e8b4</a></li>
+<li>圣杯布局 优先渲染中间栏 中间栏宽度为100% 左右栏左外边距设为负百分比</li>
+<li>圣杯布局和双飞翼布局解决问题的方案在前一半是相同的，也就是三栏全部float浮动，但左右两栏加上负margin让其跟中间栏div并排，以形成三栏布局。不同在于解决”中间栏div内容不被遮挡“问题的思路不一样：圣杯布局，为了中间div内容不被遮挡，将中间div设置了左右padding-left和padding-right后，将左右两个div用相对布局position: relative并分别配合right和left属性，以便左右两栏div移动后不遮挡中间div。双飞翼布局，为了中间div内容不被遮挡，直接在中间div内部创建子div用于放置内容，在该子div里用margin-left和margin-right为左右两栏div留出位置。多了1个div，少用大致4个css属性。<h3 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h3><h4 id="map和set"><a href="#map和set" class="headerlink" title="map和set"></a>map和set</h4></li>
+</ul>
+</li>
+<li>map set() has() get() delete()</li>
+<li>set 重复元素在Set中自动被过滤 add() delete()<h4 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h4>number boolean string undefined null object<h4 id="运算"><a href="#运算" class="headerlink" title="运算"></a>运算</h4><h4 id="this的指向问题"><a href="#this的指向问题" class="headerlink" title="this的指向问题"></a>this的指向问题</h4><a href="http://www.jb51.net/article/42257.htm" target="_blank" rel="noopener">http://www.jb51.net/article/42257.htm</a><h4 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h4></li>
+<li>数组对象  方法<ul>
+<li>join（[分隔符]）</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li>reverse()数组翻转</li>
+<li>valueOf()返回数组值</li>
+</ul>
+<ol start="2">
+<li>字符串对象 方法<ul>
+<li>toUpperCase() 大写</li>
+<li>toLowerCase() 小写</li>
+<li>charAt（索引）</li>
+<li>indexOf（“字串”）</li>
+<li>replace(“字串1”,”字串2”) 字串2替换字串1</li>
+<li>slice(索引i[,索引j]) 返回索引i倒索引j-1的子串</li>
+<li>substr(start[,length]) 返回特定长度的字串</li>
+<li>match（/匹配字符/）</li>
+<li>toString() 返回字符串</li>
+<li>valueOf()返回字符串</li>
+</ul>
+</li>
+<li>数学对象<ul>
+<li>Math ceil(数值) 大于等于该数值的最小整数</li>
+<li>floor(数值) 小于等于该数值的最小整数</li>
+<li>random()0到1的随机数</li>
+<li>round（数值）最接近该数值的整数</li>
+<li>sqrt(数值)  开平方根</li>
+</ul>
+<ol start="4">
+<li>定时器<br>用以指定在一段特定的时间后执行某段程序。 setTimeout()：  格式：  [定时器对象名=] setTimeout(“&lt;表达式&gt;”，毫秒) 功能：执行&lt;表达式&gt;一次。 clearTimeout()：终止定时器  格式：  clearTimeout(定时器对象名)</li>
+</ol>
+</li>
+<li>窗口名称.方法（参数）<h4 id="function"><a href="#function" class="headerlink" title="function"></a>function</h4></li>
+<li>函数声明提前</li>
+<li>函数构造器<h4 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h4></li>
+<li>使用对象冒充实现继承</li>
+<li>采用call方法改变函数上下文实现继承 改变函数内部的函数上下文this，使它指向传入函数的具体对象<h4 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h4><ul>
+<li>外部函数不是必需的。通过访问外部变量，一个闭包可以维持（keep alive）这些变量。在内部函数和外部函数的例子中，外部函数可以创建局部变量，并且最终退出；但是，如果任何一个或多个内部函数在它退出后却没有退出，那么内部函数就维持了外部函数的局部数据。<h4 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h4>在函数中使用var关键字进行显式申明的变量是做为局部变量，而没有用var关键字，使用直接赋值方式声明的是全局变量。　　<br>当我们使用访问一个没有声明的变量时，JS会报错。而当我们给一个没有声明的变量赋值时，JS不会报错，相反它会认为我们是要隐式申明一个全局变量，这一点一定要注意。<h4 id="原型链"><a href="#原型链" class="headerlink" title="原型链"></a>原型链</h4>函数的原型对象constructor默认指向函数本身，原型对象除了有原型属性外，为了实现继承，还有一个原型链指针<strong>proto</strong>，该指针指向上一层的原型对象，而上一层的原型对象的结构依然类似，这样利用<strong>proto</strong>一直指向Object的原型对象上，而Object的原型对象用Object.prototype.<strong>proto</strong> = null表示原型链的最顶端，如此变形成了javascript的原型链继承，同时也解释了为什么所有的javascript对象都具有Object的基本方法。<h4 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h4></li>
+</ul>
+<ol>
+<li>JavaScript事件代理（委托）一般用于以下情况：1. 事件注册在祖先级元素上，代理其子级元素。可以减少事件注册数量，节约内存开销，提高性能。2. 对js动态添加的子元素可自动绑定事件。</li>
+<li>冒泡型事件：事件按照从最特定的事件目标到最不特定的事件目标(document对象)的顺序触发。</li>
+<li>捕获型事件(event capturing)：事件从最不精确的对象(document 对象)开始触发，然后到最精确(也可以在窗口级别捕获事件，不过必须由开发人员特别指定)。</li>
+<li>DOM事件流：同时支持两种事件模型：捕获型事件和冒泡型事件，但是，捕获型事件先发生。两种事件流会触及DOM中的所有对象，从document对象开始，也在document对象结束。 DOM事件模型最独特的性质是，文本节点也触发事件(在IE中不会)。<br>####RegExp<br>new RegExp(pattern, attributes);<br>参数 attributes 是一个可选的字符串，包含属性 “g”、”i” 和 “m”，分别用于指定全局匹配、区分大小写的匹配和多行匹配。</li>
+</ol>
+</li>
+</ol>
+<h4 id="Json"><a href="#Json" class="headerlink" title="Json"></a>Json</h4><p><a href="http://www.cnblogs.com/fanshaokun/p/6272850.html" target="_blank" rel="noopener">http://www.cnblogs.com/fanshaokun/p/6272850.html</a><br>JSON有两种表示结构，对象和数组。<br>字符串：这个很好解释，指使用“”双引号或’’单引号包括的字符。例如：var comStr = ‘this is string’;<br>json字符串：指的是符合json格式要求的js字符串。例如：var jsonStr = “{StudentID:’100’,Name:’tmac’,Hometown:’usa’}”;<br>json对象：指符合json格式要求的js对象。例如：var jsonObj = { StudentID: “100”, Name: “tmac”, Hometown: “usa” };</p>
+<h4 id="Ajax"><a href="#Ajax" class="headerlink" title="Ajax"></a>Ajax</h4><p>1.建立xmlHttpRequest对象<br>2.设置回调函数<br>3.使用OPEN方法与服务器建立连接  xmlHttp.open(“get”,”ajax?name=”+ name,true)<br>   此步注意设置http的请求方式（post/get）,如果是POST方式，注意设置请求头信息xmlHttp.setRequestHeader(“Content-Type”,”application/x-www-form-urlencoded”)<br>4.向服务器端发送数据<br>5.在回调函数中针对不同的响应状态进行处理</p>
+<h4 id="DOM"><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h4><h4 id="BOM"><a href="#BOM" class="headerlink" title="BOM"></a>BOM</h4><h4 id="内存泄漏"><a href="#内存泄漏" class="headerlink" title="内存泄漏"></a>内存泄漏</h4><p>程序的运行需要内存。只要程序提出要求，操作系统或者运行时（runtime）就必须供给内存。<br>对于持续运行的服务进程（daemon），必须及时释放不再用到的内存。否则，内存占用越来越高，轻则影响系统性能，重则导致进程崩溃。<br>不再用到的内存，没有及时释放，就叫做内存泄漏（memory leak）。<br>有些语言（比如 C 语言）必须手动释放内存，程序员负责内存管理。<br><strong>垃圾回收机制怎么知道，哪些内存不再需要呢？</strong><br>最常使用的方法叫做”引用计数”（reference counting）：语言引擎有一张”引用表”，保存了内存里面所有的资源（通常是各种值）的引用次数。如果一个值的引用次数是0，就表示这个值不再用到了，因此可以将这块内存释放。</p>
+<h4 id="跨域"><a href="#跨域" class="headerlink" title="跨域"></a>跨域</h4><p>只要协议、域名、端口有任何一个不同，都被当作是不同的域。</p>
+<ol>
+<li>通过jsonp跨域</li>
+<li>通过修改document.domain来跨子域</li>
+<li>使用window.name来进行跨域</li>
+</ol>
+<h4 id="异步装载"><a href="#异步装载" class="headerlink" title="异步装载"></a>异步装载</h4><ol>
+<li>对于支持HTML5的浏览器，实现JS的异步加载只需要在script元素中加上async属性，为了兼容老版本的IE还需加上defer属性；对于不支持HTML5的浏览器(IE可以用defer实现)，可以采用以上几种方法实现。原理基本上都是向DOM中写入script或者通过eval函数执行JS代码，你可以把它放在匿名函数中执行，也可以在onload中执行，也可以通过XHR注入实现，也可以创建一个iframe元素，然后在iframe中执行插入JS代码。</li>
+</ol>
+<h4 id="模板引擎"><a href="#模板引擎" class="headerlink" title="模板引擎"></a>模板引擎</h4><p>模板引擎分为java模板引擎和js模板引擎<br>常用的java引擎有velocity （还有我就不晓得了，就接触过这一个）<br>常用的javascript模板引擎有 ejs jade 还有互联网三巨头开发的模板引擎。。。</p>
+<h4 id="前端MVC"><a href="#前端MVC" class="headerlink" title="前端MVC"></a>前端MVC</h4><p>MVC是一种设计模式，它将应用划分为3个部分：数据（模型）、展现层（视图）和用户交互（控制器）。换句话说，一个事件的发生是这样的过程：<br>　　1. 用户和应用产生交互。<br>　　2. 控制器的事件处理器被触发。<br>　　3. 控制器从模型中请求数据，并将其交给视图。<br>　　4. 视图将数据呈现给用户。<br>（1）MVC： 模型－视图－控制器(Model View Controller)<br>（2）MVP： 模型－视图－表现类（Model-View-Presenter）<br>（3）MVVM：模型－视图－视图模型（Model-View-ViewModel）</p>
+<h4 id="路由"><a href="#路由" class="headerlink" title="路由"></a>路由</h4><ol>
+<li>init 监听浏览器 url hash 更新事件</li>
+<li>route 存储路由更新时的回调到回调数组routes中，回调函数将负责对页面的更新</li>
+<li>refresh 执行当前url对应的回调函数，更新页面<br>以上，以前写的，没怎么了解前端路由之前写的，我也不知道写的是个啥。<br>以下，有点了解之后写的。<br>前端的js页面在es6之前都模块化这样一个概念，自然也无法实现多个js页面的相互关联，这样的相互关联的过程就是前端路由。虽然在es6之前没有模块化，但是可以用第三方提供的一些模块化的方法，如AMD COMMONJS 在node.js中，已经有了模块化的方法。node.js可以很优雅的实现前端路由~~</li>
+</ol>
+<h4 id="模块化"><a href="#模块化" class="headerlink" title="模块化"></a>模块化</h4><ol>
+<li>函数封装   这种做法的缺点很明显：污染了全局变量，无法保证不与其他模块发生变量名冲突，而且模块成员之间没什么关系。</li>
+<li>对象  为了解决上面问题，对象的写法应运而生，可以把所有的模块成员封装在一个对象中  这样避免了变量污染，只要保证模块名唯一即可，同时同一模块内的成员也有了关系 看似不错的解决方案，但是也有缺陷，外部可以随意修改内部成员</li>
+<li>立即执行函数</li>
+<li>放大模式 如果一个模块很大，必须分成几个部分，或者一个模块需要继承另一个模块，这时就有必要采用”放大模式”（augmentation）。</li>
+<li>宽放大模式 与”放大模式”相比，＂宽放大模式＂就是”立即执行函数”的参数可以是空对象。</li>
+<li>输入全局变量  独立性是模块的重要特点，模块内部最好不与程序的其他部分直接交互。为了在模块内部调用全局变量，必须显式地将其他变量输入模块。</li>
+</ol>
+<h4 id="Canvas"><a href="#Canvas" class="headerlink" title="Canvas"></a>Canvas</h4><p>HTML5中的一个画布，功能强大，详情参考html5的内容</p>
+<h3 id="ES6"><a href="#ES6" class="headerlink" title="ES6"></a>ES6</h3><ol>
+<li>let var const<ul>
+<li>let是块级作用域，跟var不同的是，let没有前置功能，不能重复声明</li>
+<li>const定义的变量不可以修改，而且必须初始化。</li>
+<li>var分为两种：局部作用域和函数作用域</li>
+<li>let是块级作用域，函数内部使用let定义后，对函数外部无影响。</li>
+</ul>
+</li>
+<li>箭头函数<ul>
+<li>箭头函数相当于匿名函数，并且简化了函数定义。箭头函数有两种格式，一种像上面的，只包含一个表达式，连{ … }和return都省略掉了。还有一种可以包含多条语句，这时候就不能省略{ … }和return</li>
+<li>箭头函数看上去是匿名函数的一种简写，但实际上，箭头函数和匿名函数有个明显的区别：箭头函数内部的this是词法作用域，由上下文确定。</li>
+</ul>
+</li>
+<li>promise<ul>
+<li>pending进行中</li>
+<li>fullfilled已成功/resolved</li>
+<li>rejected已失败</li>
+<li>then</li>
+<li>只有异步操作的结果能决定当前是哪种状态</li>
+</ul>
+<ol start="4">
+<li>map 和set</li>
+</ol>
+<ul>
+<li>set()</li>
+<li>get()</li>
+<li>has()</li>
+<li>delete()<br><mark>专门整理了一篇关于es6新特性的博客，还有部分内容在图书馆看书的时候记在了小本子上，择日整理上传</mark></li>
+</ul>
+</li>
+</ol>
+<h3 id="Nodejs"><a href="#Nodejs" class="headerlink" title="Nodejs"></a>Nodejs</h3><p>详情参考node.js入门篇</p>
+]]></content>
+      <tags>
+        <tag>前端</tag>
+        <tag>面试</tag>
       </tags>
   </entry>
 </search>
