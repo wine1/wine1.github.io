@@ -9,7 +9,7 @@
   <title>圣杯布局和双飞翼布局 | 哦。</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="写过几次圣杯布局和双飞翼布局，但是老是忘记，还是自己总结一篇博客来梳理一遍~圣杯布局其实和双飞翼布局是一回事。它们实现的都是三栏布局，两边的盒子宽度固定，中间盒子自适应，它们实现的效果是一样的，差别在于其实现的思想。">
-<meta name="keywords" content="前端">
+<meta name="keywords" content="前端,css">
 <meta property="og:type" content="article">
 <meta property="og:title" content="圣杯布局和双飞翼布局">
 <meta property="og:url" content="https://wine1.github.io/2017/12/01/圣杯布局和双飞翼布局/index.html">
@@ -18,7 +18,7 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://wine1.github.io/2017/12/01/圣杯布局和双飞翼布局/%E5%8F%8C%E9%A3%9E%E7%BF%BC%E5%B8%83%E5%B1%801.jpg">
 <meta property="og:image" content="https://wine1.github.io/2017/12/01/圣杯布局和双飞翼布局/%E5%8F%8C%E9%A3%9E%E7%BF%BC%E5%B8%83%E5%B1%802.jpg">
-<meta property="og:updated_time" content="2019-01-07T13:01:37.742Z">
+<meta property="og:updated_time" content="2020-08-10T15:18:21.653Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="圣杯布局和双飞翼布局">
 <meta name="twitter:description" content="写过几次圣杯布局和双飞翼布局，但是老是忘记，还是自己总结一篇博客来梳理一遍~圣杯布局其实和双飞翼布局是一回事。它们实现的都是三栏布局，两边的盒子宽度固定，中间盒子自适应，它们实现的效果是一样的，差别在于其实现的思想。">
@@ -193,40 +193,23 @@
 <blockquote>
 <p>圣杯布局：</p>
 <ol>
-<li>首先写这样三个div<br>` <div id="container"><div id="main">main</div>
-<div id="left">left</div>
-<div id="right">right</div> `
-注意要优先渲染中间栏，所以要写在最上面。并且要设置自适应width：100%;</div></li>
-<li>给出每个盒子的样式，都设置左浮动。<br> <img src="/2017/12/01/圣杯布局和双飞翼布局/%E5%8F%8C%E9%A3%9E%E7%BF%BC%E5%B8%83%E5%B1%801.jpg" alt="圣杯布局">;</li>
-<li>这时候就要使用负边距了。</li>
-</ol>
-</blockquote>
-<pre><code>#main{
-  background:red;
-  height:100px;
-  width:100%;
-  float:left;
-}
-#left{
-  width:100px;
-  height:100px;
-  margin-left:-100%;
-  background:yellow;
-  float:left;
-
-}
-#right{
-  width:100px;
-  height:100px;
-  background:grey;
-  float:left;
-  margin-left:-100px;
-}</code></pre><ol start="4">
-<li><p>但是现在中间栏的内容会被左右两个div遮挡，所以 在最外层边框设置内边距，然后将左右两个盒子position：relative; 然后再设置定位~~<br> #main{<br>   background:red;<br>   height:100px;<br>   width:100%;<br>   float:left;<br> }<br> #left{<br>   width:100px;<br>   height:100px;<br>   margin-left:-100%;<br>   background:yellow;<br>   float:left;<br>   position:relative;<br>   left:-100px;</p>
-<p> }<br> #right{<br>   width:100px;<br>   height:100px;<br>   background:grey;<br>   float:left;<br>   margin-left:-100px;<br>   position:relative;<br>   left:100px;<br> }<br> #container{</p>
-<pre><code>padding: 0 100px;</code></pre><p> }<br><img src="/2017/12/01/圣杯布局和双飞翼布局/%E5%8F%8C%E9%A3%9E%E7%BF%BC%E5%B8%83%E5%B1%802.jpg" alt="圣杯布局">;</p>
+<li>首先写这样三个div<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=&quot;container&quot;&gt;</span><br><span class="line">&lt;div id=&quot;main&quot;&gt;main&lt;/div&gt;</span><br><span class="line">&lt;div id=&quot;left&quot;&gt;left&lt;/div&gt;</span><br><span class="line">&lt;div id=&quot;right&quot;&gt;right&lt;/div&gt;</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
+</blockquote>
+<p>注意要优先渲染中间栏，所以要写在最上面。并且要设置自适应width：100%;</p>
+<ol>
+<li><p>给出每个盒子的样式，都设置左浮动。<br> <img src="/2017/12/01/圣杯布局和双飞翼布局/%E5%8F%8C%E9%A3%9E%E7%BF%BC%E5%B8%83%E5%B1%801.jpg" alt="圣杯布局">;</p>
+</li>
+<li><p>这时候就要使用负边距了。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">#main&#123;</span><br><span class="line">   background:red;</span><br><span class="line">   height:100px;</span><br><span class="line">   width:100%;</span><br><span class="line">   float:left;</span><br><span class="line"> &#125;</span><br><span class="line"> #left&#123;</span><br><span class="line">   width:100px;</span><br><span class="line">   height:100px;</span><br><span class="line">   margin-left:-100%;</span><br><span class="line">   background:yellow;</span><br><span class="line">   float:left;</span><br><span class="line"> &#125;</span><br><span class="line"> #right&#123;</span><br><span class="line">   width:100px;</span><br><span class="line">   height:100px;</span><br><span class="line">   background:grey;</span><br><span class="line">   float:left;</span><br><span class="line">   margin-left:-100px;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>但是现在中间栏的内容会被左右两个div遮挡，所以 在最外层边框设置内边距，然后将左右两个盒子position：relative; 然后再设置定位~~</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">#main&#123;</span><br><span class="line">   background:red;</span><br><span class="line">   height:100px;</span><br><span class="line">   width:100%;</span><br><span class="line">   float:left;</span><br><span class="line"> &#125;</span><br><span class="line"> #left&#123;</span><br><span class="line">   width:100px;</span><br><span class="line">   height:100px;</span><br><span class="line">   margin-left:-100%;</span><br><span class="line">   background:yellow;</span><br><span class="line">   float:left;</span><br><span class="line">   position:relative;</span><br><span class="line">   left:-100px;</span><br><span class="line">   </span><br><span class="line"> &#125;</span><br><span class="line"> #right&#123;</span><br><span class="line">   width:100px;</span><br><span class="line">   height:100px;</span><br><span class="line">   background:grey;</span><br><span class="line">   float:left;</span><br><span class="line">   margin-left:-100px;</span><br><span class="line">   position:relative;</span><br><span class="line">   left:100px;</span><br><span class="line"> &#125;</span><br><span class="line"> #container&#123;</span><br><span class="line">    padding: 0 100px;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<p><img src="/2017/12/01/圣杯布局和双飞翼布局/%E5%8F%8C%E9%A3%9E%E7%BF%BC%E5%B8%83%E5%B1%802.jpg" alt="圣杯布局">;</p>
 <blockquote>
 <p>双飞翼布局：<br>不同在于解决”中间栏div内容不被遮挡“问题的思路不一样：圣杯布局，为了中间div内容不被遮挡，将中间div设置了左右padding-left和padding-right后，将左右两个div用相对布局position: relative并分别配合right和left属性，以便左右两栏div移动后不遮挡中间div。双飞翼布局，为了中间div内容不被遮挡，直接在中间div内部创建子div用于放置内容，在该子div里用margin-left和margin-right为左右两栏div留出位置。<br>    <div id="container"><br>      <div id="main"><br>        <div id="mini">main</div><br>      </div><br>      <div id="left">left</div><br>      <div id="right">right</div><br>    </div></p>
 </blockquote>
@@ -269,6 +252,10 @@
 			 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
         		</li>
       		
 		</ul>
@@ -483,7 +470,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">ES6</a>
+                <a href="javascript:void(0)" class="js-tag color4">css</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -491,7 +478,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">css</a>
+                <a href="javascript:void(0)" class="js-tag color4">ES6</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -515,19 +502,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">兼容性</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">rn</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">实践</a>
+                <a href="javascript:void(0)" class="js-tag color4">兼容性</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">vue.js</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">实践</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -539,11 +526,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
+                <a href="javascript:void(0)" class="js-tag color5">java</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">java</a>
+                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
               </li>
              
               <li class="article-tag-list-item">

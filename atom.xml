@@ -43,6 +43,29 @@
   </entry>
   
   <entry>
+    <title>flex布局知识点</title>
+    <link href="https://wine1.github.io/2020/07/22/flex%E5%B8%83%E5%B1%80%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
+    <id>https://wine1.github.io/2020/07/22/flex%E5%B8%83%E5%B1%80%E7%9F%A5%E8%AF%86%E7%82%B9/</id>
+    <published>2020-07-22T14:39:48.000Z</published>
+    <updated>2020-08-10T15:26:54.637Z</updated>
+    
+    <content type="html"><![CDATA[<p>flex是一个十分好用的布局方法，能轻松的实现很多以往需要做复杂的工作才能实现的效果<br>在reactnative中 更是默认的flex布局<br>之前对flex布局都是一知半解，今天看到了一句值得划重点的知识点<br>码起来呀</p><a id="more"></a><p>在前端面试题中有一道经典css的考题：实现元素的水平垂直居中布局<br>当然实现的方法很多，毕竟css是十分灵活的<br>但是在css布局中 一行 <code>align-items:center</code> 就能解决这个问题<br>可能提到flex布局有些人也只能想到<code>justify-content:center</code>和<code>align-items:center</code><br>甚至弄不太清楚到底那个属性决定了水平居中哪个决定了垂直居中</p><p>flex布局中是分为 主轴 和 副轴 的<br>而主轴和副轴的方向又由flex-direction决定 该属性的默认值是row 即 横轴是主轴 竖轴是副轴</p><p>划重点来了</p><p>justify-content属性用于控制项目在<em>主轴</em> 的对齐方式<br>注意这里是主轴而不是横轴 当flex-direction的值是row 或者 就是默认值时，主轴就是横轴，但是当flex-direction值为column时 主轴就是竖轴</p><p>而align-items属性 是控制副轴的排列方式的</p><p>常见flex布局的考点</p><ol><li><p>实现水平垂直居中</p></li><li><p>等高布局</p><ul><li>flex布局中子元素等高</li></ul></li><li><p>Sticky Footer</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- HTML --&gt;</span><br><span class="line">&lt;header&gt;&lt;/header&gt;</span><br><span class="line">&lt;main&gt;&lt;/main&gt;</span><br><span class="line">&lt;footer&gt;&lt;/footer&gt;</span><br><span class="line">//方案1 css</span><br><span class="line">body &#123;</span><br><span class="line">    display: flex;</span><br><span class="line">    flex-direction: column;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">footer &#123;</span><br><span class="line">    margin-top: auto;</span><br><span class="line">&#125;</span><br><span class="line">//方案2 css</span><br><span class="line">body &#123;</span><br><span class="line">    display: flex;</span><br><span class="line">    flex-direction: column;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">main &#123;</span><br><span class="line">    flex: 1 0 auto;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li><li><p>均分列 </p><ul><li>flex布局 </li><li>子元素 width:calc(100% / 3)</li></ul></li><li><p><a href="https://wine1.github.io/2017/12/01/%E5%9C%A3%E6%9D%AF%E5%B8%83%E5%B1%80%E5%92%8C%E5%8F%8C%E9%A3%9E%E7%BF%BC%E5%B8%83%E5%B1%80/">圣杯布局</a></p></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;flex是一个十分好用的布局方法，能轻松的实现很多以往需要做复杂的工作才能实现的效果&lt;br&gt;在reactnative中 更是默认的flex布局&lt;br&gt;之前对flex布局都是一知半解，今天看到了一句值得划重点的知识点&lt;br&gt;码起来呀&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="前端" scheme="https://wine1.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="css" scheme="https://wine1.github.io/tags/css/"/>
+    
+  </entry>
+  
+  <entry>
     <title>async/await</title>
     <link href="https://wine1.github.io/2020/07/15/async-await/"/>
     <id>https://wine1.github.io/2020/07/15/async-await/</id>
@@ -319,7 +342,7 @@
     <link href="https://wine1.github.io/2020/05/20/CSS-BFC/"/>
     <id>https://wine1.github.io/2020/05/20/CSS-BFC/</id>
     <published>2020-05-20T10:47:50.000Z</published>
-    <updated>2020-05-20T12:03:04.192Z</updated>
+    <updated>2020-08-10T15:21:13.296Z</updated>
     
     <content type="html"><![CDATA[<p>今天认真仔细地看了下BFC的内容，算是有了更具体的理解</p><a id="more"></a><h2 id="BFC（块级格式化上下文）"><a href="#BFC（块级格式化上下文）" class="headerlink" title="BFC（块级格式化上下文）"></a>BFC（块级格式化上下文）</h2><ol><li><p>BFC的触发条件</p><ul><li>根元素或其他包含它的元素</li><li>浮动元素 (元素的 float 不是 none)</li><li>绝对定位元素 (元素具有 position 为 absolute 或 fixed)</li><li>内联块 (元素具有 display: inline-block)</li><li>表格单元格 (元素具有 display: table-cell，HTML 表格单元格默认属性)</li><li>表格标题 (元素具有 display: table-caption, HTML 表格标题默认属性)</li><li>具有 overflow 且值不是 visible 的块元素</li><li>display: flow-root 的元素</li><li>column-span: all 的元素</li></ul></li><li><p>BFC导致的现象</p><ul><li>内部的 box 将会独占宽度，且在垂直方向，一个接一个排列</li><li>box 垂直方向的间距由 margin 属性决定，但是同一个 BFC 的两个相邻box 的 margin 会出现边距折叠现象</li><li>每个 box 水平方向上左边缘，与 BFC 左边缘相对齐，即使存在浮动也是如此</li><li>BFC 区域不会与浮动元素重叠，而是会依次排列</li><li>BFC 区域内是一个独立的渲染容器，容器内元素和 BFC 区域外元素不会形成任何干扰</li><li>浮动元素的高度也参与到 BFC 高度的计算当中</li></ul></li><li><p>目前为止 最常用的BFC操作有 </p><ul><li>通过设置元素display:inline-block消除边距折叠</li><li>给相邻元素或父元素设置 display:inline-block 清除浮动 和给浮动元素设置overflow:hidden清除浮动</li></ul></li></ol>]]></content>
     
@@ -332,6 +355,8 @@
     
     
       <category term="前端" scheme="https://wine1.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="css" scheme="https://wine1.github.io/tags/css/"/>
     
   </entry>
   
@@ -433,27 +458,6 @@
     <summary type="html">
     
       &lt;p&gt;echarts在rn中设置颜色不生效解决方案&lt;br&gt;在rn中的用法跟h5中有点不一样 直接照搬过来会出很多问题&lt;br&gt;费了九牛二虎之力 实践摸索出来的&lt;/p&gt;
-    
-    </summary>
-    
-    
-    
-      <category term="前端" scheme="https://wine1.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>js对中文编码的函数</title>
-    <link href="https://wine1.github.io/2020/05/06/js%E5%AF%B9%E4%B8%AD%E6%96%87%E7%BC%96%E7%A0%81%E7%9A%84%E5%87%BD%E6%95%B0/"/>
-    <id>https://wine1.github.io/2020/05/06/js%E5%AF%B9%E4%B8%AD%E6%96%87%E7%BC%96%E7%A0%81%E7%9A%84%E5%87%BD%E6%95%B0/</id>
-    <published>2020-05-06T13:28:48.000Z</published>
-    <updated>2020-05-06T13:45:04.801Z</updated>
-    
-    <content type="html"><![CDATA[<p>js中的中文保险起见 最好都进行一下转码<br>escape,encodeURI,encodeURIComponent</p><a id="more"></a><h3 id="escape"><a href="#escape" class="headerlink" title="escape"></a>escape</h3><p><a href="https://www.w3school.com.cn/js/jsref_escape.asp" target="_blank" rel="noopener">escape</a></p><h3 id="encodeURI"><a href="#encodeURI" class="headerlink" title="encodeURI"></a>encodeURI</h3><p>encodeURI() 函数可把字符串作为 URI 进行编码。<br>如果 URI 组件中含有分隔符，比如 ? 和 #，则应当使用 encodeURIComponent() 方法分别对各组件进行编码。<br><a href="https://www.w3school.com.cn/js/jsref_encodeuri.asp" target="_blank" rel="noopener">encodeURI</a></p><h3 id="encodeURIComponent"><a href="#encodeURIComponent" class="headerlink" title="encodeURIComponent"></a>encodeURIComponent</h3><p><a href="https://www.w3school.com.cn/js/jsref_encodeURIComponent.asp" target="_blank" rel="noopener">encodeURIComponent</a></p><p><a href="https://www.cnblogs.com/yanglongbo/p/9784020.html" target="_blank" rel="noopener">参考博文</a></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;js中的中文保险起见 最好都进行一下转码&lt;br&gt;escape,encodeURI,encodeURIComponent&lt;/p&gt;
     
     </summary>
     
