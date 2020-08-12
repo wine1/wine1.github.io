@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wine1.github.io/"/>
-  <updated>2020-08-09T13:35:47.999Z</updated>
+  <updated>2020-08-12T15:33:47.128Z</updated>
   <id>https://wine1.github.io/</id>
   
   <author>
@@ -15,6 +15,52 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>小程序同层渲染</title>
+    <link href="https://wine1.github.io/2020/08/12/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%90%8C%E5%B1%82%E6%B8%B2%E6%9F%93/"/>
+    <id>https://wine1.github.io/2020/08/12/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%90%8C%E5%B1%82%E6%B8%B2%E6%9F%93/</id>
+    <published>2020-08-12T15:33:13.000Z</published>
+    <updated>2020-08-12T15:33:47.128Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="同层渲染"><a href="#同层渲染" class="headerlink" title="同层渲染"></a>同层渲染</h2><p>小程序的内容大多是渲染在 WebView 上的，如果把 WebView 看成单独的一层，那么由系统自带的这些原生组件则位于另一个更高的层级（如 canvas、video）。两个层级是完全独立的，因此无法简单地通过使用 z-index 控制原生组件和非原生组件之间的相对层级。想要在原生组件之上只能用 cover-view 和 cover-image 来实现。但 cover-view 和 cover-image 支持的 css 样式是在很有限，而且经过实践来看，cover-view 在安卓部分机器上性能真的很差。<br><a href="https://developers.weixin.qq.com/community/develop/doc/000aa28d030f60a3c4183eecb5d801" target="_blank" rel="noopener">官方社区说明</a></p><p>然并卵 没有用</p><p>实时音视频小程序开发ios手机无法正常在小程序里视频，安卓手机就可以<br>解决方案： 在 app.json 下 window 下配置一下 “renderingMode”: “seperated”强制关掉同层<br>关掉同层渲染 “renderingMode”: “seperated”,</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;同层渲染&quot;&gt;&lt;a href=&quot;#同层渲染&quot; class=&quot;headerlink&quot; title=&quot;同层渲染&quot;&gt;&lt;/a&gt;同层渲染&lt;/h2&gt;&lt;p&gt;小程序的内容大多是渲染在 WebView 上的，如果把 WebView 看成单独的一层，那么由系统自带的这些原生组件则位于另
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>grid布局</title>
+    <link href="https://wine1.github.io/2020/08/12/grid%E5%B8%83%E5%B1%80/"/>
+    <id>https://wine1.github.io/2020/08/12/grid%E5%B8%83%E5%B1%80/</id>
+    <published>2020-08-12T15:31:12.000Z</published>
+    <updated>2020-08-12T15:33:40.530Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="grid布局"><a href="#grid布局" class="headerlink" title="grid布局"></a>grid布局</h2><p>gap属性能解决flex多行布局中最后一行布局不满时位置偏移的问题</p><p><a href="http://www.ruanyifeng.com/blog/2019/03/grid-layout-tutorial.html" target="_blank" rel="noopener">阮一峰的grid布局教程</a><br>网格布局 将网页划分成一个个网格，可以任意组合不同的网格，做出各种各样的布局。<br>具体么 目前还没有使用过 最近没有用上 没找到合适的应用场景</p><a id="more"></a><p>跟flex布局有一定的相似性</p><p>display 属性<br>display: grid指定一个容器采用网格布局。</p><p>grid-template-columns 属性，<br>grid-template-rows 属性<br>容器指定了网格布局以后，接着就要划分行和列。grid-template-columns属性定义每一列的列宽，grid-template-rows属性定义每一行的行高。</p><p>repeat()<br>有时候，重复写同样的值非常麻烦，尤其网格很多时。这时，可以使用repeat()函数，简化重复的值。<br>repeat()接受两个参数，第一个参数是重复的次数（上例是3），第二个参数是所要重复的值。</p><p>auto-fill 关键字<br>有时，单元格的大小是固定的，但是容器的大小不确定。如果希望每一行（或每一列）容纳尽可能多的单元格，这时可以使用auto-fill关键字表示自动填充。</p><p>fr 关键字<br>为了方便表示比例关系，网格布局提供了fr关键字（fraction 的缩写，意为”片段”）。如果两列的宽度分别为1fr和2fr，就表示后者是前者的两倍。<br>minmax()<br>minmax()函数产生一个长度范围，表示长度就在这个范围之中。它接受两个参数，分别为最小值和最大值。</p><p>auto 关键字<br>auto关键字表示由浏览器自己决定长度。</p><p>网格线的名称<br>grid-template-columns属性和grid-template-rows属性里面，还可以使用方括号，指定每一根网格线的名字，方便以后的引用。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;grid布局&quot;&gt;&lt;a href=&quot;#grid布局&quot; class=&quot;headerlink&quot; title=&quot;grid布局&quot;&gt;&lt;/a&gt;grid布局&lt;/h2&gt;&lt;p&gt;gap属性能解决flex多行布局中最后一行布局不满时位置偏移的问题&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.ruanyifeng.com/blog/2019/03/grid-layout-tutorial.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;阮一峰的grid布局教程&lt;/a&gt;&lt;br&gt;网格布局 将网页划分成一个个网格，可以任意组合不同的网格，做出各种各样的布局。&lt;br&gt;具体么 目前还没有使用过 最近没有用上 没找到合适的应用场景&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="前端" scheme="https://wine1.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="css" scheme="https://wine1.github.io/tags/css/"/>
+    
+  </entry>
   
   <entry>
     <title>解决小程序列表更新卡顿方案</title>
@@ -420,50 +466,6 @@
     
     
       <category term="随笔" scheme="https://wine1.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>rn踩坑</title>
-    <link href="https://wine1.github.io/2020/05/13/rn%E8%B8%A9%E5%9D%91/"/>
-    <id>https://wine1.github.io/2020/05/13/rn%E8%B8%A9%E5%9D%91/</id>
-    <published>2020-05-13T13:06:56.000Z</published>
-    <updated>2020-05-20T10:50:00.544Z</updated>
-    
-    <content type="html"><![CDATA[<p>ract native 报错系列</p><a id="more"></a><ol><li><p>ES5/ES3 中的异步函数或方法需要 “Promise” 构造函数。确保对 “Promise” 构造函数进行了声明或在 “–lib” 选项中包含了 “ES2015”。<br>解决办法：<br><img src="/2020/05/13/rn踩坑/tu1.png" alt="tu1"></p></li><li><p>RN开发 js jsx ts tsx的区别<br><a href="https://blog.csdn.net/shifang07/article/details/105371268?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-3.nonecase&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-3.nonecase" target="_blank" rel="noopener">详情看别人家总结</a></p></li><li><p>报错 Building and installing the app on the device (cd android &amp;&amp; gradlew.bat installDebug)…<br>Downloading <a href="http://10.10.82.235:8080/sdk-resources/gradle-4.6-all.zip" target="_blank" rel="noopener">http://10.10.82.235:8080/sdk-resources/gradle-4.6-all.zip</a><br>Exception in thread “main” java.net.ConnectException: Connection refused:<br>解决办法<br>1、  rm android/ -rf<br>2、    react-native eject<br>3、    run</p></li><li><p>Props获取不到值<br>原因 箭头函数 this的指向丢了<br><img src="/2020/05/13/rn踩坑/%E8%8E%B7%E5%8F%96%E4%B8%8D%E5%88%B0props.png" alt><br>解决办法<br><img src="/2020/05/13/rn踩坑/%E8%8E%B7%E5%8F%96%E4%B8%8D%E5%88%B0props2.png" alt></p></li></ol>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;ract native 报错系列&lt;/p&gt;
-    
-    </summary>
-    
-    
-    
-      <category term="前端" scheme="https://wine1.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-      <category term="rn" scheme="https://wine1.github.io/tags/rn/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>echarts在rn中设置颜色不生效解决方案</title>
-    <link href="https://wine1.github.io/2020/05/06/echarts%E5%9C%A8rn%E4%B8%AD%E8%AE%BE%E7%BD%AE%E9%A2%9C%E8%89%B2%E4%B8%8D%E7%94%9F%E6%95%88%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
-    <id>https://wine1.github.io/2020/05/06/echarts%E5%9C%A8rn%E4%B8%AD%E8%AE%BE%E7%BD%AE%E9%A2%9C%E8%89%B2%E4%B8%8D%E7%94%9F%E6%95%88%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</id>
-    <published>2020-05-06T13:52:35.000Z</published>
-    <updated>2020-05-06T14:08:53.087Z</updated>
-    
-    <content type="html"><![CDATA[<p>echarts在rn中设置颜色不生效解决方案<br>在rn中的用法跟h5中有点不一样 直接照搬过来会出很多问题<br>费了九牛二虎之力 实践摸索出来的</p><a id="more"></a><p><img src="/2020/05/06/echarts在rn中设置颜色不生效解决方案/tu1.png" alt="tu1"></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;echarts在rn中设置颜色不生效解决方案&lt;br&gt;在rn中的用法跟h5中有点不一样 直接照搬过来会出很多问题&lt;br&gt;费了九牛二虎之力 实践摸索出来的&lt;/p&gt;
-    
-    </summary>
-    
-    
-    
-      <category term="前端" scheme="https://wine1.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
