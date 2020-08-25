@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wine1.github.io/"/>
-  <updated>2020-08-12T15:33:47.128Z</updated>
+  <updated>2020-08-25T16:00:58.521Z</updated>
   <id>https://wine1.github.io/</id>
   
   <author>
@@ -15,6 +15,52 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>js中的防抖和节流</title>
+    <link href="https://wine1.github.io/2020/08/25/js%E4%B8%AD%E7%9A%84%E9%98%B2%E6%8A%96%E5%92%8C%E8%8A%82%E6%B5%81/"/>
+    <id>https://wine1.github.io/2020/08/25/js%E4%B8%AD%E7%9A%84%E9%98%B2%E6%8A%96%E5%92%8C%E8%8A%82%E6%B5%81/</id>
+    <published>2020-08-25T15:16:15.000Z</published>
+    <updated>2020-08-25T16:00:58.521Z</updated>
+    
+    <content type="html"><![CDATA[<p>debounce，去抖动。策略是当事件被触发时，设定一个周期延迟执行动作，若期间又被触发，则重新设定周期，直到周期结束，执行动作。 这是debounce的基本思想，在后期又扩展了前缘debounce，即执行动作在前，然后设定周期，周期内有事件被触发，不执行动作，且周期重新设定。</p><p>throttling，节流的策略是，固定周期内，只执行一次动作，若有新事件触发，不执行。周期结束后，又有事件触发，开始新的周期。 节流策略也分前缘和延迟两种。与debounce类似，延迟是指 周期结束后执行动作，前缘是指执行动作后再开始周期。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;debounce，去抖动。策略是当事件被触发时，设定一个周期延迟执行动作，若期间又被触发，则重新设定周期，直到周期结束，执行动作。 这是debounce的基本思想，在后期又扩展了前缘debounce，即执行动作在前，然后设定周期，周期内有事件被触发，不执行动作，且周期重新设
+      
+    
+    </summary>
+    
+    
+    
+      <category term="前端" scheme="https://wine1.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>leetcode之数组</title>
+    <link href="https://wine1.github.io/2020/08/12/leetcode%E4%B9%8B%E6%95%B0%E7%BB%84/"/>
+    <id>https://wine1.github.io/2020/08/12/leetcode%E4%B9%8B%E6%95%B0%E7%BB%84/</id>
+    <published>2020-08-12T15:36:36.000Z</published>
+    <updated>2020-08-12T15:36:51.074Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="leetcode——数组类知识点及题型总结"><a href="#leetcode——数组类知识点及题型总结" class="headerlink" title="leetcode——数组类知识点及题型总结"></a>leetcode——数组类知识点及题型总结</h2><p>很多题都能靠暴力解法 但是通常都会有时间复杂度或者空间复杂度超出限制的情况，因此都不予讨论</p><ol><li><p>k-sum类 如 第一题 twosum 计算数组中的哪些值得和能等于给定的target 有时候题目中会带有是否能重复使用一个值的限制</p><ul><li>hash 遍历数组 将每一个值存入hash表中 并检测hash表中是否有 target-nums[i] 的结果 如果有 则结果就是 i 和对应的hash表中的值 时间复杂度O(n)</li><li>two-points </li></ul></li><li><p>区间类</p></li></ol><ol start="3"><li>子数组类</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;leetcode——数组类知识点及题型总结&quot;&gt;&lt;a href=&quot;#leetcode——数组类知识点及题型总结&quot; class=&quot;headerlink&quot; title=&quot;leetcode——数组类知识点及题型总结&quot;&gt;&lt;/a&gt;leetcode——数组类知识点及题型总结&lt;/
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>小程序同层渲染</title>
@@ -324,9 +370,9 @@
     <link href="https://wine1.github.io/2020/06/11/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91%E6%80%BB%E7%BB%93/"/>
     <id>https://wine1.github.io/2020/06/11/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91%E6%80%BB%E7%BB%93/</id>
     <published>2020-06-11T15:44:36.000Z</published>
-    <updated>2020-08-03T14:43:24.533Z</updated>
+    <updated>2020-08-15T08:00:30.680Z</updated>
     
-    <content type="html"><![CDATA[<p>虽然之前提换组没有成功，但是也阴差阳错参与到了小程序开发组<br>开启了小程序开发的升级打怪之路</p><a id="more"></a><ol><li><a href="https://www.jianshu.com/p/25f28d80ec81" target="_blank" rel="noopener">rpx单位</a></li><li>没有刷新页面的功能，页面数据都是异步请求获取的，你删除某个商品的时候，直接再请求一次数据，更改页面的数据就可以了。</li><li>点击事件传递参数 微信小程序 点击事件获取到的 event.currentTarget.dataset<a href="https://blog.csdn.net/weixin_37861326/article/details/84027569" target="_blank" rel="noopener">https://blog.csdn.net/weixin_37861326/article/details/84027569</a></li><li>小程序实现长按复制文字 <a href="https://blog.csdn.net/weixin_39589455/article/details/99704077" target="_blank" rel="noopener">https://blog.csdn.net/weixin_39589455/article/details/99704077</a></li><li>小程序使用sass <a href="https://www.jb51.net/article/144681.htm" target="_blank" rel="noopener">https://www.jb51.net/article/144681.htm</a></li><li>微信小程序01：关于错误Page “pages/goods_list/index” has not been registered yet.的原因 </li><li>小程序打开H5 <a href="https://www.jianshu.com/p/3c8e84c6e67d" target="_blank" rel="noopener">https://www.jianshu.com/p/3c8e84c6e67d</a></li><li>小程序使textarea自动聚焦 </li><li>9.e.target和e.currentTarget的区别  e.target 指向触发事件监听的对象。<br>e.currentTarget 指向添加监听事件的对象，指向代码中点击事件的元素<br>e.target始终指向即当前点击的目标元素，e.currentTarget在事件委托中，如果监听元素不是目标元素，则指向监听元素</li><li>bind call 的作用和区别</li><li>methods中的函数和直接写在page中函数的区别</li><li>catchTap</li><li>生命周期</li><li>wx.onMemoryWarning 监听内存不足警告</li><li>页面跳转传参 <a href="https://www.jianshu.com/p/079db5ea1a9b" target="_blank" rel="noopener">https://www.jianshu.com/p/079db5ea1a9b</a></li><li>小程序实现写入缓存与读取缓存</li><li>17 flex布局</li><li>设置小程序的状态栏、导航条、标题、窗口背景色[Window] <a href="https://blog.csdn.net/dxnn520/article/details/79342548" target="_blank" rel="noopener">https://blog.csdn.net/dxnn520/article/details/79342548</a></li><li>textarea 中 ajust-position 中 false 值需要用双层中括号包起来 否则不生效</li><li>【微信小程序】微信小程序阻止IOS页面上下拖动问题<br>为了阻止IOS端小程序页面上下拖动可以再对应的json文件当中添加这个配置 “disableScroll”:true</li><li>小程序windowHeight在不同页面高度不一致问题及解决方案<br><a href="https://blog.csdn.net/qq_41619741/article/details/83143624" target="_blank" rel="noopener">https://blog.csdn.net/qq_41619741/article/details/83143624</a> </li><li>小程序的windowheight和screenheight</li><li>小程序阻止事件冒泡 <a href="https://blog.csdn.net/promiseCao/article/details/83926807?utm_medium=distribute.pc_relevant.none-task-blog-baidujs-2" target="_blank" rel="noopener">https://blog.csdn.net/promiseCao/article/details/83926807?utm_medium=distribute.pc_relevant.none-task-blog-baidujs-2</a></li><li>组件层级问题 <a href="https://www.cnblogs.com/duxingdexin/p/9585285.html" target="_blank" rel="noopener">https://www.cnblogs.com/duxingdexin/p/9585285.html</a></li><li>使用TypeScript开发小程序入门 <a href="https://www.jianshu.com/p/c778943acb37" target="_blank" rel="noopener">https://www.jianshu.com/p/c778943acb37</a></li><li>当input框输入到限定长度时，自动focus下一个input框 <a href="https://blog.csdn.net/weixin_30781107/article/details/95180186" target="_blank" rel="noopener">https://blog.csdn.net/weixin_30781107/article/details/95180186</a></li><li>新增页面 has not been registered yet自行创建的新页面 .js文件中，必须有 Page({ }) 里面留空即可，否则就会爆这个错误 Page “pages/detail/detail” has not been registered yet. 并且页面上的文字也不会显示。 .json文件中，必须有{ }</li><li>wx.redirectTo(OBJECT) 关闭当前页面，跳转到应用内的某个页面。</li><li>wx.navigateTo(OBJECT) 保留当前页面，跳转到应用内的某个页面，使用wx.navigateBack可以返回到原页面。</li></ol><h2 id="小程序组件传参"><a href="#小程序组件传参" class="headerlink" title="小程序组件传参"></a>小程序组件传参</h2><p>父组件A向子组件B传参</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">   //子组件 wxml</span><br><span class="line">&lt;cover-view class=&apos;nav-title&apos;&gt;&#123;&#123;title&#125;&#125;&lt;/cover-view&gt;</span><br><span class="line">   //子组件 js</span><br><span class="line">   properties: &#123;</span><br><span class="line">       title: &#123;</span><br><span class="line">       type: String,</span><br><span class="line">       value: &apos;&apos;</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   //父组件wxml</span><br><span class="line">   &lt;navbar title=&quot;&#123;&#123;title&#125;&#125;&quot;  /&gt;</span><br><span class="line">   //父组件js</span><br><span class="line">   data:&#123;</span><br><span class="line">       title: &apos;标题&apos;, </span><br><span class="line">   &#125;</span><br><span class="line">   //json文件当然是需要配置的</span><br></pre></td></tr></table></figure><p>子组件B向父组件A传参</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">   //子组件 wxml</span><br><span class="line">&lt;cover-view class=&apos;nav-title&apos; bindtap=&quot;Change&quot;&gt;&#123;&#123;title&#125;&#125;&lt;/cover-view&gt;</span><br><span class="line">   &lt;view bindtap=&quot;trigger&quot;&gt;&lt;/view&gt;</span><br><span class="line">   //子组件 js</span><br><span class="line">    data:&#123;</span><br><span class="line">       title:&apos;标题&apos;</span><br><span class="line">   &#125;，</span><br><span class="line">  methods:&#123;</span><br><span class="line">   trigger() &#123;</span><br><span class="line">     let &#123; title &#125; = this.data</span><br><span class="line">     this.triggerEvent(&apos;change&apos;, &#123; param: title &#125;);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">   //父组件wxml</span><br><span class="line">   &lt;navbar title=&quot;&#123;&#123;title&#125;&#125;&quot; bind:change=&quot;change&quot; /&gt;</span><br><span class="line">   //父组件js</span><br><span class="line">  methods:&#123;</span><br><span class="line">       change(e) &#123;</span><br><span class="line">           let title=e.detail.param</span><br><span class="line">       &#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<p>虽然之前提换组没有成功，但是也阴差阳错参与到了小程序开发组<br>开启了小程序开发的升级打怪之路</p><a id="more"></a><ol><li><a href="https://www.jianshu.com/p/25f28d80ec81" target="_blank" rel="noopener">rpx单位</a></li><li>没有刷新页面的功能，页面数据都是异步请求获取的，你删除某个商品的时候，直接再请求一次数据，更改页面的数据就可以了。</li><li>点击事件传递参数 微信小程序 点击事件获取到的 event.currentTarget.dataset<a href="https://blog.csdn.net/weixin_37861326/article/details/84027569" target="_blank" rel="noopener">https://blog.csdn.net/weixin_37861326/article/details/84027569</a></li><li>小程序实现长按复制文字 <a href="https://blog.csdn.net/weixin_39589455/article/details/99704077" target="_blank" rel="noopener">https://blog.csdn.net/weixin_39589455/article/details/99704077</a></li><li>小程序使用sass <a href="https://www.jb51.net/article/144681.htm" target="_blank" rel="noopener">https://www.jb51.net/article/144681.htm</a></li><li>微信小程序01：关于错误Page “pages/goods_list/index” has not been registered yet.的原因 </li><li>小程序打开H5 <a href="https://www.jianshu.com/p/3c8e84c6e67d" target="_blank" rel="noopener">https://www.jianshu.com/p/3c8e84c6e67d</a></li><li>小程序使textarea自动聚焦 </li><li>9.e.target和e.currentTarget的区别  e.target 指向触发事件监听的对象。<br>e.currentTarget 指向添加监听事件的对象，指向代码中点击事件的元素<br>e.target始终指向即当前点击的目标元素，e.currentTarget在事件委托中，如果监听元素不是目标元素，则指向监听元素</li><li>bind call 的作用和区别</li><li>methods中的函数和直接写在page中函数的区别</li><li>catchTap</li><li>生命周期</li><li>wx.onMemoryWarning 监听内存不足警告</li><li>页面跳转传参 <a href="https://www.jianshu.com/p/079db5ea1a9b" target="_blank" rel="noopener">https://www.jianshu.com/p/079db5ea1a9b</a></li><li>小程序实现写入缓存与读取缓存</li><li>17 flex布局</li><li>设置小程序的状态栏、导航条、标题、窗口背景色[Window] <a href="https://blog.csdn.net/dxnn520/article/details/79342548" target="_blank" rel="noopener">https://blog.csdn.net/dxnn520/article/details/79342548</a></li><li>textarea 中 ajust-position 中 false 值需要用双层中括号包起来 否则不生效</li><li>【微信小程序】微信小程序阻止IOS页面上下拖动问题<br>为了阻止IOS端小程序页面上下拖动可以再对应的json文件当中添加这个配置 “disableScroll”:true</li><li>小程序windowHeight在不同页面高度不一致问题及解决方案<br><a href="https://blog.csdn.net/qq_41619741/article/details/83143624" target="_blank" rel="noopener">https://blog.csdn.net/qq_41619741/article/details/83143624</a> </li><li>小程序的windowheight和screenheight</li><li>小程序阻止事件冒泡 <a href="https://blog.csdn.net/promiseCao/article/details/83926807?utm_medium=distribute.pc_relevant.none-task-blog-baidujs-2" target="_blank" rel="noopener">https://blog.csdn.net/promiseCao/article/details/83926807?utm_medium=distribute.pc_relevant.none-task-blog-baidujs-2</a></li><li>组件层级问题 <a href="https://www.cnblogs.com/duxingdexin/p/9585285.html" target="_blank" rel="noopener">https://www.cnblogs.com/duxingdexin/p/9585285.html</a></li><li>使用TypeScript开发小程序入门 <a href="https://www.jianshu.com/p/c778943acb37" target="_blank" rel="noopener">https://www.jianshu.com/p/c778943acb37</a></li><li>当input框输入到限定长度时，自动focus下一个input框 <a href="https://blog.csdn.net/weixin_30781107/article/details/95180186" target="_blank" rel="noopener">https://blog.csdn.net/weixin_30781107/article/details/95180186</a></li><li>新增页面 has not been registered yet自行创建的新页面 .js文件中，必须有 Page({ }) 里面留空即可，否则就会爆这个错误 Page “pages/detail/detail” has not been registered yet. 并且页面上的文字也不会显示。 .json文件中，必须有{ }</li><li>wx.redirectTo(OBJECT) 关闭当前页面，跳转到应用内的某个页面。</li><li>wx.navigateTo(OBJECT) 保留当前页面，跳转到应用内的某个页面，使用wx.navigateBack可以返回到原页面。</li><li>webview中的页面怎么跳转回小程序？<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">url:’pages/login/login’+’$params’</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></li></ol><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">**//跳转到小程序导航页面**</span><br><span class="line">wx.miniProgram.switchTab(&#123;</span><br><span class="line">url:’/pages/index/index’</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure><h2 id="小程序组件传参"><a href="#小程序组件传参" class="headerlink" title="小程序组件传参"></a>小程序组件传参</h2><p>父组件A向子组件B传参</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">   //子组件 wxml</span><br><span class="line">&lt;cover-view class=&apos;nav-title&apos;&gt;&#123;&#123;title&#125;&#125;&lt;/cover-view&gt;</span><br><span class="line">   //子组件 js</span><br><span class="line">   properties: &#123;</span><br><span class="line">       title: &#123;</span><br><span class="line">       type: String,</span><br><span class="line">       value: &apos;&apos;</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   //父组件wxml</span><br><span class="line">   &lt;navbar title=&quot;&#123;&#123;title&#125;&#125;&quot;  /&gt;</span><br><span class="line">   //父组件js</span><br><span class="line">   data:&#123;</span><br><span class="line">       title: &apos;标题&apos;, </span><br><span class="line">   &#125;</span><br><span class="line">   //json文件当然是需要配置的</span><br></pre></td></tr></table></figure><p>子组件B向父组件A传参</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">   //子组件 wxml</span><br><span class="line">&lt;cover-view class=&apos;nav-title&apos; bindtap=&quot;Change&quot;&gt;&#123;&#123;title&#125;&#125;&lt;/cover-view&gt;</span><br><span class="line">   &lt;view bindtap=&quot;trigger&quot;&gt;&lt;/view&gt;</span><br><span class="line">   //子组件 js</span><br><span class="line">    data:&#123;</span><br><span class="line">       title:&apos;标题&apos;</span><br><span class="line">   &#125;，</span><br><span class="line">  methods:&#123;</span><br><span class="line">   trigger() &#123;</span><br><span class="line">     let &#123; title &#125; = this.data</span><br><span class="line">     this.triggerEvent(&apos;change&apos;, &#123; param: title &#125;);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">   //父组件wxml</span><br><span class="line">   &lt;navbar title=&quot;&#123;&#123;title&#125;&#125;&quot; bind:change=&quot;change&quot; /&gt;</span><br><span class="line">   //父组件js</span><br><span class="line">  methods:&#123;</span><br><span class="line">       change(e) &#123;</span><br><span class="line">           let title=e.detail.param</span><br><span class="line">       &#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
@@ -424,48 +470,6 @@
     
     
       <category term="前端" scheme="https://wine1.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>get和post方法</title>
-    <link href="https://wine1.github.io/2020/05/16/get%E5%92%8Cpost%E6%96%B9%E6%B3%95/"/>
-    <id>https://wine1.github.io/2020/05/16/get%E5%92%8Cpost%E6%96%B9%E6%B3%95/</id>
-    <published>2020-05-16T10:36:59.000Z</published>
-    <updated>2020-05-18T13:20:51.539Z</updated>
-    
-    <content type="html"><![CDATA[<p>http中的get和post方法</p><a id="more"></a><p>get获取的数据可以被缓存<br>get传输的数据长度短<br>get是明文传输，参数在url中，相对来说安全性不够</p><p><a href="https://www.cnblogs.com/cwzqianduan/p/8675356.html" target="_blank" rel="noopener">关于在axios中 get和post 以及params和data的区别</a><br>详情看官网</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;http中的get和post方法&lt;/p&gt;
-    
-    </summary>
-    
-    
-    
-      <category term="前端" scheme="https://wine1.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>高效能人士的七个习惯</title>
-    <link href="https://wine1.github.io/2020/05/16/%E9%AB%98%E6%95%88%E8%83%BD%E4%BA%BA%E5%A3%AB%E7%9A%84%E4%B8%83%E4%B8%AA%E4%B9%A0%E6%83%AF/"/>
-    <id>https://wine1.github.io/2020/05/16/%E9%AB%98%E6%95%88%E8%83%BD%E4%BA%BA%E5%A3%AB%E7%9A%84%E4%B8%83%E4%B8%AA%E4%B9%A0%E6%83%AF/</id>
-    <published>2020-05-16T08:19:00.000Z</published>
-    <updated>2020-05-16T11:46:03.268Z</updated>
-    
-    <content type="html"><![CDATA[<p>好久之前看的 先记个提纲吧 日后若果看第二遍 倒是可以记个详细的笔记</p><a id="more"></a><ol><li>积极主动</li><li>以始为终</li><li>要事第一</li><li>双赢思维</li><li>知彼解己</li><li>综合综效</li><li>不断更新</li></ol>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;好久之前看的 先记个提纲吧 日后若果看第二遍 倒是可以记个详细的笔记&lt;/p&gt;
-    
-    </summary>
-    
-    
-    
-      <category term="随笔" scheme="https://wine1.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
     
   </entry>
   
