@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="哦。">
 <meta property="og:description" content="虽然之前提换组没有成功，但是也阴差阳错参与到了小程序开发组开启了小程序开发的升级打怪之路">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-09-06T10:24:03.515Z">
+<meta property="og:updated_time" content="2020-09-07T12:49:24.552Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="小程序开发总结">
 <meta name="twitter:description" content="虽然之前提换组没有成功，但是也阴差阳错参与到了小程序开发组开启了小程序开发的升级打怪之路">
@@ -235,6 +235,9 @@
 
 <p>向组件中传递参数</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">wxml：&lt;view wx:for=&quot;&#123;&#123;imgs&#125;&#125;&quot; wx:key=&quot;index&quot; style=&quot;width: 500rpx;height: 300rpx;margin: 30rpx auto;&quot;&gt;</span><br><span class="line">　　&lt;button bindtap=&quot;ondelete&quot; style=&quot;&quot; data-index=&quot;&#123;&#123;index&#125;&#125;&quot;&gt;删除&lt;/button&gt;</span><br><span class="line">　　&lt;image src=&quot;&#123;&#123;item.url&#125;&#125;&quot; style=&quot;width: 100%;height: 100%;&quot;&gt;&lt;/image&gt;</span><br><span class="line">&lt;/view&gt;</span><br><span class="line"></span><br><span class="line">&lt;xly-upload id=&apos;btn&apos; customeStyle=&quot;true&quot;  bindsuccess=&quot;uploadChange&quot;binddelete=&quot;deleteChange&quot; bindfail=&quot;uploadfail&quot;&gt;</span><br><span class="line">&lt;text&gt;上传&lt;/text&gt;</span><br><span class="line">&lt;/xly-upload&gt;</span><br><span class="line"></span><br><span class="line">js:   </span><br><span class="line"></span><br><span class="line">ondelete(e) &#123;</span><br><span class="line">this.selectComponent(&apos;#btn&apos;).DelImg(e);</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+<p>获取子组件的dom<br><a href="https://developers.weixin.qq.com/miniprogram/dev/api/wxml/SelectorQuery.select.html" target="_blank" rel="noopener">https://developers.weixin.qq.com/miniprogram/dev/api/wxml/SelectorQuery.select.html</a><br>跨自定义组件的后代选择器：.the-ancestor &gt;&gt;&gt; .the-descendant</p>
+
       
 
       
@@ -475,15 +478,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">css</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -527,11 +530,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">实践</a>
+                <a href="javascript:void(0)" class="js-tag color2">vue.js</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">vue.js</a>
+                <a href="javascript:void(0)" class="js-tag color3">实践</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -555,11 +558,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">数据库</a>
+                <a href="javascript:void(0)" class="js-tag color2">杂</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">杂</a>
+                <a href="javascript:void(0)" class="js-tag color4">数据库</a>
               </li>
              
               <li class="article-tag-list-item">
