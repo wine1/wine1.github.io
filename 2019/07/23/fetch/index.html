@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="https://wine1.github.io">
   <title>fetch | 哦。</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="最近在写的一个项目用到了fetch,本着边写边学的原则，终于到了我要开始学习fetch的时候了。首先是定义： fetchfetch基于promise的语法结构">
+  <meta name="description" content="最近在写的一个项目用到了fetch,本着边写边学的原则，终于到了我要开始学习fetch的时候了。">
 <meta name="keywords" content="前端">
 <meta property="og:type" content="article">
 <meta property="og:title" content="fetch">
 <meta property="og:url" content="https://wine1.github.io/2019/07/23/fetch/index.html">
 <meta property="og:site_name" content="哦。">
-<meta property="og:description" content="最近在写的一个项目用到了fetch,本着边写边学的原则，终于到了我要开始学习fetch的时候了。首先是定义： fetchfetch基于promise的语法结构">
+<meta property="og:description" content="最近在写的一个项目用到了fetch,本着边写边学的原则，终于到了我要开始学习fetch的时候了。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-07-23T12:23:50.697Z">
+<meta property="og:updated_time" content="2020-09-09T14:51:41.838Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="fetch">
-<meta name="twitter:description" content="最近在写的一个项目用到了fetch,本着边写边学的原则，终于到了我要开始学习fetch的时候了。首先是定义： fetchfetch基于promise的语法结构">
+<meta name="twitter:description" content="最近在写的一个项目用到了fetch,本着边写边学的原则，终于到了我要开始学习fetch的时候了。">
   
     <link rel="alternative" href="/atom.xml" title="哦。" type="application/atom+xml">
   
@@ -185,8 +185,14 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>最近在写的一个项目用到了fetch,本着边写边学的原则，终于到了我要开始学习fetch的时候了。<br>首先是定义： fetch<br>fetch基于promise的语法结构</p>
+        <p>最近在写的一个项目用到了fetch,本着边写边学的原则，终于到了我要开始学习fetch的时候了。</p>
+<a id="more"></a>
+<p>首先是定义： fetch<br>fetch基于promise的语法结构<br>fetch是全局量window的一个方法，第一个参数为URL。<br>Response响应<br>fetch方法的then会接收一个Response实例，值得注意的是fetch方法的第二个then接收的才是后台传过来的真正的数据，一般第一个then对数据进行处理等。</p>
+<p>例如fetch处理JSON响应时 回调函数有一个json()方法，可以将原始数据转换为json对象</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">fetch(&apos;/some/url&apos;, &#123; method: &apos;get&apos;, &#125;)</span><br><span class="line">    // 第一个then  设置请求的格式</span><br><span class="line">        .then(e =&gt; e.json())</span><br><span class="line">        // 第二个then 处理回调</span><br><span class="line">        .then((data) =&gt; &#123;</span><br><span class="line">         &lt;!-- data为真正数据 --&gt;</span><br><span class="line">    &#125;).catch(e =&gt; console.log(&quot;Oops, error&quot;, e))</span><br></pre></td></tr></table></figure>
 
+<p>使用fetch请求发送cookie</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">fetch(url,&#123;</span><br><span class="line">credentials:&quot;include&quot;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
       
 
       
@@ -447,11 +453,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">面试题</a>
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
+                <a href="javascript:void(0)" class="js-tag color4">面试题</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -471,11 +477,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">兼容性</a>
+                <a href="javascript:void(0)" class="js-tag color3">rn</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">rn</a>
+                <a href="javascript:void(0)" class="js-tag color4">兼容性</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -495,11 +501,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
+                <a href="javascript:void(0)" class="js-tag color5">java</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">java</a>
+                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
               </li>
              
               <li class="article-tag-list-item">
