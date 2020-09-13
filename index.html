@@ -238,7 +238,7 @@
         <hr>
 <p>title: 日常收集一些面试题<br>date: 2020-09-09 22:27:01<br>tags:</p>
 <ul>
-<li>面经</li>
+<li>面试</li>
 </ul>
 <hr>
 <p>朋友面试记录下一些值得看看的面试题</p>
@@ -316,6 +316,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -371,133 +382,9 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>浏览器/html/css面试题</p>
-<ol>
-<li><p>什么是盒模型<br>盒模型（内容（content）,内边距（padding）,边框（border）,外边距（margin））</p>
-</li>
-<li><p>行内元素有哪些？块级元素有哪些？ 空(void)元素有那些？行内元素和块级元素有什么区别？<br>（1）行内元素有：a( 锚点) ,b(粗体(不推荐)) ,span(常用内联容器，定义文本内区块) img(图片) input(输入框) select(项目选择) strong(粗体强调) label(表格标签) cite (引用)code(计算机代码)<br>（2）块级元素有：div ul(无序列表) ol(有序列表) dl(定义列表) table(表格)form(表单) h1 (一级标题))p(段落)pre(预格式化)<br>（3）常见的空元素： </p>
-<figure class="highlight plain"><figcaption><span><hr> <img> <input> <link> <meta> ```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">鲜为人知的是： </span><br><span class="line">```&lt;area&gt; &lt;base&gt; &lt;col&gt; &lt;command&gt; &lt;embed&gt; &lt;keygen&gt; &lt;param&gt; &lt;source&gt; &lt;track&gt; &lt;wbr&gt;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>简述src和href的区别<br> 1.src 是指向物件的来源地址，是引入。在 img、script、iframe 等元素上使用。<br> 2.href 是超文本引用，指向需要连结的地方，是与该页面有关联的，是引用。在 link和a 等元素上使用。<br> 使用区别：<br> src通常用作“拿取”（引入），href 用作 “连结前往”（引用）。</p>
-</li>
-<li><p>什么是css Hack<br> 由于不同厂商的浏览器，比如Internet Explorer、Chrome、Mozilla Firefox、Safari等，或者是统一厂商的浏览器的不同版本，比如IE6和IE7，对CSS的解析和认识不完全一样，因此会导致生成的页面效果不一样，得不到我们所需要的页面效果。</p>
-<p> 这个时候，我们就需要针对不同的浏览器，去写不同CSS，让它能够同时兼容不同的浏览器，能在不同的浏览器中，也能得到我们想要的页面效果。</p>
-<p> 这个针对不同的浏览器写不同的CSS code的过程，就叫CSS hack!</p>
-</li>
-<li><p>什么叫优雅降级和渐进增强<br>渐进增强 progressive enhancement： 针对低版本浏览器进行构建页面，保证最基本的功能，然后再针对高级浏览器进行效果、交互等改进和追加功能达到更好的用户体验。 优雅降级 graceful degradation： 一开始就构建完整的功能，然后再针对低版本浏览器进行兼容。 </p>
-</li>
-<li><p>px和em的区别<br> PX实际上就是像素，用PX设置字体大小时，比较稳定和精确。但如果改变浏览器的缩放，原本的布局就会被打破，这时候就可以使用em定义页面的字体大小，em是相对于父元素的，1em等于一倍的父元素字体大小。<br> EM是相对于其父元素来设置字体大小的，这样就会存在一个问题，进行任何元素设置，都有可能需要知道他父元素的大小，也比较麻烦。而Rem是相对于根元素<html>，这样就意味着，我们只需要在根元素确定一个参考值，所以rem用的更广泛。</html></p>
-</li>
-<li><p>Http的状态码有哪些<br> 200 – 请求成功<br> 301 – 资源(网页等)被永久转移到其它URL<br> 404 – 请求的资源(网页等)不存在<br> 500 – 内部服务器错误</p>
-</li>
-</ol>
-<p>9.一次完整的HTTP事务是怎么一个过程</p>
-<p>10.HTTPS是如何实现加密<br>    HTTPS就是使用SSL/TLS协议进行加密传输，让客户端拿到服务器的公钥，然后客户端随机生成一个对称加密的秘钥，使用公钥加密，传输给服务端，后续的所有信息都通过该对称秘钥进行加密解密，完成整个HTTPS的流程。</p>
-<p>11.浏览器是如何渲染页面的</p>
-<p>12.浏览器的内核有哪些？分别有什么代表的浏览器</p>
-<p>13.页面导入时，使用link和@import有什么区别</p>
-<p>14.如何优化图像，图像格式的区别</p>
-<p>15.列举你了解Html5. Css3 新特性</p>
-<p>16.可以通过哪些方法优化css3 animation渲染</p>
-<p>17.列举几个前端性能方面的优化</p>
-<p>18.如何实现同一个浏览器多个标签页之间的通信</p>
-<p>19.浏览器的存储技术有哪些</p>
-<p>20.css定位方式</p>
-<p>21.尽可能多的写出浏览器兼容性问题</p>
-<p>22.垂直上下居中的方法</p>
-<p>23.响应式布局原理</p>
-<p>25.清除浮动的方法</p>
-<p>26.http协议和tcp协议</p>
-<p>27.刷新页面，js请求一般会有哪些地方有缓存处理</p>
-<p>28.如何对网站的文件和资源进行优化</p>
-<p>29.你对网页标准和W3C重要性的理解</p>
-<p>30.Http和https的区别</p>
-<p>31.data-属性的作用</p>
-<p>32.如何让Chrome浏览器显示小于12px的文字</p>
-<p>33.哪些操作会引起页面回流（Reflow）</p>
-<p>34.CSS预处理器的比较less sass</p>
-<p>35.如何实现页面每次打开时清除本页缓存</p>
-<p>36.什么是Virtual DOM,为何要用Virtual DOM</p>
-<p>37.伪元素和伪类的区别</p>
-<p>38.http的几种请求方法和区别</p>
-<p>39.前端需要注意哪些SEO</p>
-<p>40.的title和alt有什么区别</p>
-<p>41.从浏览器地址栏输入url到显示页面的步骤</p>
-<p>42.如何进行网站性能优化</p>
-<p>43.语义化的理解</p>
-<p>44.HTML5的离线储存怎么使用，工作原理能不能解释一下？</p>
-<p>45.浏览器是怎么对HTML5的离线储存资源进行管理和加载的呢</p>
-<p>46.iframe有那些缺点？</p>
-<p>47.WEB标准以及W3C标准是什么?</p>
-<p>48.Doctype作用? 严格模式与混杂模式如何区分？它们有何意义?</p>
-<p>49.HTML全局属性(global attribute)有哪些</p>
-<p>50.Canvas和SVG有什么区别？</p>
-<p>51.如何在页面上实现一个圆形的可点击区域？</p>
-<p>52.网页验证码是干嘛的，是为了解决什么安全问题</p>
-<p>53.请描述一下 cookies，sessionStorage 和 localStorage 的区别？</p>
-<p>54.CSS选择器有哪些？哪些属性可以继承？</p>
-<p>55.CSS优先级算法如何计算？</p>
-<p>56.CSS3有哪些新特性？</p>
-<p>57.请解释一下CSS3的flexbox（弹性盒布局模型）,以及适用场景？</p>
-<p>58.用纯CSS创建一个三角形的原理是什么？</p>
-<p>59.常见的兼容性问题？</p>
-<p>60.为什么要初始化CSS样式</p>
-<p>61.absolute的containing block计算方式跟正常流有什么不同？</p>
-<p>62.CSS里的visibility属性有个collapse属性值？在不同浏览器下以后什么区别？</p>
-<p>63.display:none与visibility：hidden的区别？</p>
-<p>64.position跟display、overflow、float这些特性相互叠加后会怎么样？</p>
-<p>65.对BFC规范(块级格式化上下文：block formatting context)的理解？</p>
-<p>66.为什么会出现浮动和什么时候需要清除浮动？清除浮动的方式？</p>
-<p>67.上下margin重合的问题</p>
-<p>68.设置元素浮动后，该元素的display值是多少？</p>
-<p>69.移动端的布局用过媒体查询吗？</p>
-<p>70.CSS优化、提高性能的方法有哪些？</p>
-<p>71.浏览器是怎样解析CSS选择器的？</p>
-<p>72.在网页中的应该使用奇数还是偶数的字体？为什么呢？</p>
-<p>73.margin和padding分别适合什么场景使用？</p>
-<p>74.元素竖向的百分比设定是相对于容器的高度吗？</p>
-<p>75.全屏滚动的原理是什么？用到了CSS的哪些属性？</p>
-<p>76.什么是响应式设计？响应式设计的基本原理是什么？如何兼容低版本的IE？</p>
-<p>77.视差滚动效果？</p>
-<p>78.::before 和 :after中双冒号和单冒号有什么区别？解释一下这2个伪元素的作用</p>
-<p>79.让页面里的字体变清晰，变细用CSS怎么做？</p>
-<p>80.position:fixed;在android下无效怎么处理？</p>
-<p>81.如果需要手动写动画，你认为最小时间间隔是多久，为什么？</p>
-<p>82.li与li之间有看不见的空白间隔是什么原因引起的？有什么解决办法？</p>
-<p>83.display:inline-block 什么时候会显示间隙？</p>
-<p>84.有一个高度自适应的div，里面有两个div，一个高度100px，希望另一个填满剩下的高度</p>
-<p>85.png、jpg、gif 这些图片格式解释一下，分别什么时候用。有没有了解过webp？</p>
-<p>86.style标签写在body后与body前有什么区别？</p>
-<p>87.CSS属性overflow属性定义溢出元素内容区的内容会如何处理?</p>
-<p>88.阐述一下CSS Sprites</p>
-<p>移动端热点问题</p>
-<ol>
-<li><p>1px border问题<br> 使用1px 再用transform缩放到50%</p>
-</li>
-<li><p>2X图 3X图适配<br>根据dpr显示2x图/3x图</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.bg-image(@url)&#123;</span><br><span class="line">  background-image:~&quot;url(&apos;@&#123;url&#125;@2x.png&apos;)&quot;;</span><br><span class="line">  @media (-webkit-min-device-pixel-ratio: 3),(min-device-pixel-ratio: 3)&#123;</span><br><span class="line">    background-image:~&quot;url(&apos;@&#123;url&#125;@3x.png&apos;)&quot;;</span><br><span class="line">  &#125;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>固定定位布局 键盘挡住输入框内容</p>
-</li>
-</ol>
-<ol start="4">
-<li>click的300ms延迟问题和点击穿透问题</li>
-<li>phone及ipad下输入框默认内阴影</li>
-<li>防止手机中页面放大和缩小</li>
-<li>flex布局</li>
-<li>px、em、rem、%、vw、vh、vm这些单位的区别</li>
-<li>移动端适配- dpr浅析</li>
-<li>移动端扩展点击区域</li>
-<li>上下拉动滚动条时卡顿、慢</li>
-<li>长时间按住页面出现闪退</li>
-<li>ios和android下触摸元素时出现半透明灰色遮罩</li>
-<li>active兼容处理 即 伪类：active失效</li>
-<li>webkit mask兼容处理</li>
-<li>pc端与移动端字体大小的问题</li>
-<li>transiton闪屏</li>
-<li>圆角bug</li>
-<li>如何解决禁用表单后移动端样式不统一问题 ?</li>
-</ol>
-
+        
+          <a class="article-more-a" href="/2020/09/06/基础知识面试题/#more">more >></a>
+        
       
 
       
@@ -505,6 +392,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -705,6 +603,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -790,7 +699,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">面试题</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">面试</a>
         		</li>
       		
 		</ul>
@@ -1098,7 +1007,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">面试题</a>
+                <a href="javascript:void(0)" class="js-tag color3">面试</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1111,10 +1020,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">linux</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">面试</a>
               </li>
              
               <li class="article-tag-list-item">
