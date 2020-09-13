@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="哦。">
 <meta property="og:description" content="title: 日常收集一些面试题date: 2020-09-09 22:27:01tags:  面经   朋友面试记录下一些值得看看的面试题">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-09-09T14:40:50.026Z">
+<meta property="og:updated_time" content="2020-09-13T12:00:41.604Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="哦。">
 <meta name="twitter:description" content="title: 日常收集一些面试题date: 2020-09-09 22:27:01tags:  面经   朋友面试记录下一些值得看看的面试题">
@@ -209,7 +209,7 @@
 </li>
 </ol>
 <ol start="13">
-<li><p>实现dialog组件，有title content onPk onCancel几个props</p>
+<li><p>实现dialog组件，有title content onPk onCancel几个props<br>详情见另一个文章 封装一个组件</p>
 </li>
 <li><p>实现curry函数 curry函数是一个加工函数的函数。将任何函数（a）传入curry函数处理之后，会得到一个可以记住参数的函数（a1）调用a1并传参，当参数数量不满足a的要求时，a1可以缓存这些参数并支持继续调用，当传入的参数数量足够时返回a的执行结果。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">function a(x,y,z) &#123;</span><br><span class="line">    return x+y+z</span><br><span class="line">&#125;</span><br><span class="line">const a1=curry(a)</span><br><span class="line"></span><br><span class="line">a1(1)(2)(3)//6</span><br><span class="line">a1(1,2)(3)//6</span><br><span class="line">a1(1)(2,3)//6</span><br><span class="line">a1(1,2,3)//6</span><br><span class="line"></span><br><span class="line">//解法</span><br><span class="line">function curry(func)&#123;</span><br><span class="line">    var num=[]</span><br><span class="line">   var count = function()&#123;</span><br><span class="line">       num=num.concat([...arguments])//获取函数的入参 </span><br><span class="line">       if(num.length&lt;func.length) &#123;</span><br><span class="line">           return count//递归</span><br><span class="line">       &#125;</span><br><span class="line">       var result=func(...num)</span><br><span class="line">       num=[]//调用结束后清除闭包值</span><br><span class="line">       return result</span><br><span class="line">    &#125;</span><br><span class="line">    return count//返回一个闭包</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
@@ -306,6 +306,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2020/09/13/封装一个组件/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          封装一个组件
+        
+      </div>
+    </a>
   
   
     <a href="/2020/09/06/正则表达式面试题/" id="article-nav-older" class="article-nav-link-wrap">
@@ -455,11 +464,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
+                <a href="javascript:void(0)" class="js-tag color4">面试题</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">面试题</a>
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -479,11 +488,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">rn</a>
+                <a href="javascript:void(0)" class="js-tag color4">兼容性</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">兼容性</a>
+                <a href="javascript:void(0)" class="js-tag color3">rn</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -503,11 +512,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">java</a>
+                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
+                <a href="javascript:void(0)" class="js-tag color5">java</a>
               </li>
              
               <li class="article-tag-list-item">
