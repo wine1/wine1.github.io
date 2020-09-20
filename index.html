@@ -479,12 +479,34 @@
 <li><p>active-class 是哪个组件的属性？<br> router-link 用于做选中样式的切换</p>
 </li>
 <li><p>怎么定义 vue-router 的动态路由? 怎么获取传过来的值</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">//路由配置文件中 配置动态路由</span><br><span class="line">&#123;</span><br><span class="line">    path: &apos;/detail/:id&apos;,</span><br><span class="line">    name: &apos;Detail&apos;,</span><br><span class="line">    component: Detail</span><br><span class="line">&#125;</span><br><span class="line">//跳转时页面</span><br><span class="line">var id = 1;</span><br><span class="line">this.$router.push(&apos;/detail/&apos; + id)</span><br><span class="line"></span><br><span class="line">//跳转后页面获取参数</span><br><span class="line">this.$route.params.id</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>通过动态路由方式</li>
+<li>通过query传值</li>
+<li>通过params属性传值</li>
+<li>1.动态路由和query属性传值 页面刷新参数不会丢失， params会丢失 2.动态路由一般用来传一个参数时居多(如详情页的id), query、params可以传递一个也可以传递多个参数 。</li>
+</ul>
+</li>
+<li><p>vue-router 有哪几种导航钩子?<br> <a href="https://www.cnblogs.com/kzxiaotan/p/11676872.html" target="_blank" rel="noopener">https://www.cnblogs.com/kzxiaotan/p/11676872.html</a></p>
+</li>
+<li><p>route和router 的区别<br> 1.$router是VueRouter的实例方法,可以认为是全局的路由对象，包含了所有路由的对象和属性。<br> 2.$route是一个跳转的路由对象，可以认为是当前组件的路由管理，指当前激活的路由对象，包含当前url解析得到的数据，可以从对象里获取一些数据。如name,path等。</p>
+</li>
+<li><p>vue-router响应路由参数的变化</p>
 </li>
 </ol>
-<p>5.vue-router 有哪几种导航钩子?<br>6.route和router 的区别<br>7.vue-router响应路由参数的变化<br>8.vue-router传参<br>9.vue-router的两种模式<br>10.vue-router实现路由懒加载（ 动态加载路由 ）<br>vue常见面试题</p>
+<ol start="8">
+<li>vue-router传参</li>
+</ol>
+<ol start="9">
+<li>vue-router的两种模式</li>
+</ol>
+<ol start="10">
+<li>vue-router实现路由懒加载（ 动态加载路由 ）</li>
+</ol>
 <p>1.vue优点<br>2.vue父组件向子组件传递数据？<br>3.子组件像父组件传递事件<br>4.v-show和v-if指令的共同点和不同点<br>5.如何让CSS只在当前组件中起作用<br>6.的作用是什么?<br>7.如何获取dom<br>8.说出几种vue当中的指令和它的用法？<br>9.vue-loader是什么？使用它的用途有哪些？<br>10.为什么使用key<br>11.axios及安装<br>12.axios解决跨域<br>13.v-modal的使用<br>14.scss的安装以及使用<br>15.请说出vue.cli项目中src目录每个文件夹和文件的用法？<br>16.分别简述computed和watch的使用场景<br>17.v-on可以监听多个方法吗<br>18.$nextTick的使用<br>19.vue组件中data为什么必须是一个函数<br>20.vue事件对象的使用<br>21 组件间的通信<br>22.渐进式框架的理解<br>23.Vue中双向数据绑定是如何实现的<br>24.单页面应用和多页面应用区别及优缺点<br>25.vue中过滤器有什么作用及详解<br>26.v-if和v-for的优先级<br>27.assets和static的区别<br>28.列举常用的指令<br>29.vue常用的修饰符<br>30.数组更新检测<br>31.Vue.set视图更新<br>32.自定义指令详解<br>33.vue的两个核心点<br>34.vue和jQuery的区别<br>35 引进组件的步骤<br>36.Vue-cli打包命令是什么？打包后悔导致路径问题，应该在哪里修改<br>37.三大框架的对比<br>38.跨组件双向数据绑定<br>39.delete和Vue.delete删除数组的区别<br>40.SPA首屏加载慢如何解决<br>41.Vue-router跳转和location.href有什么区别<br>42.vue slot<br>43.你们vue项目是打包了一个js文件，一个css文件，还是有多个文件？<br>44.vue遇到的坑，如何解决的？<br>45.Vue里面router-link在电脑上有用，在安卓上没反应怎么解决？<br>46.Vue2中注册在router-link上事件无效解决方法<br>47.RouterLink在IE和Firefox中不起作用（路由不跳转）的问题<br>48.axios的特点有哪些<br>49.请说下封装 vue 组件的过程？<br>50.vue 各种组件通信方法（父子 子父 兄弟 爷孙 毫无关系的组件）<br>51.params和query的区别<br>52.vue mock数据<br>53 vue封装通用组件<br>54.vue初始化页面闪动问题<br>55.vue禁止弹窗后的屏幕滚动<br>56.vue更新数组时触发视图更新的方法<br>57.vue常用的UI组件库<br>58.vue如何引进本地背景图片<br>59.vue如何引进sass<br>60.vue修改打包后静态资源路径的修改<br>vuex常见面试题</p>
 <p>1.vuex是什么？怎么使用？哪种功能场景使用它？<br>2.vuex有哪几种属性<br>3.不使用Vuex会带来什么问题<br>4.Vue.js中ajax请求代码应该写在组件的methods中还是vuex的actions中？<br>5.vuex一个例子方法<br>6.Vuex中如何异步修改状态<br>7.Vuex中actions和mutations的区别<br>vue项目实战</p>
-<p>1.顶部悬停效果<br>2.电话本列表效果（ 右边字母分类 上下滑动 旁边字母显示高亮）<br>3.vue做代理<br>4.Vue路由切换时的左滑和右滑效果示例<br>ES6面试题</p>
+<p>1.顶部悬停效果<br>2.电话本列表效果（ 右边字母分类 上下滑动 旁边字母显示高亮）<br>3.vue做代理<br>4.Vue路由切换时的左滑和右滑效果示例</p>
 
       
 
@@ -1009,11 +1031,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1029,11 +1051,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">面试</a>
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
+                <a href="javascript:void(0)" class="js-tag color3">面试</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1041,11 +1063,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">linux</a>
+                <a href="javascript:void(0)" class="js-tag color3">node.js</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">node.js</a>
+                <a href="javascript:void(0)" class="js-tag color1">linux</a>
               </li>
              
               <li class="article-tag-list-item">
