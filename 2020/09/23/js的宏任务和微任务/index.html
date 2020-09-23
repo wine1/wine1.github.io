@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://wine1.github.io">
-  <title>CSS-BFC | 哦。</title>
+  <title>js的宏任务和微任务 | 哦。</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="今天认真仔细地看了下BFC的内容，算是有了更具体的理解">
-<meta name="keywords" content="前端,css">
+  <meta name="description" content=".宏任务（macrotask ）和微任务（microtask ） macrotask 和 microtask 表示异步任务的两种分类。 在挂起任务时，JS 引擎会将所有任务按照类别分到这两个队列中，首先在 macrotask 的队列（这个队列也被叫做 task queue）中取出第一个任务，执行完毕后取出 microtask 队列中的所有任务顺序执行；之后再取 macrotask 任务，周而复始，">
+<meta name="keywords" content="前端">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CSS-BFC">
-<meta property="og:url" content="https://wine1.github.io/2020/05/20/CSS-BFC/index.html">
+<meta property="og:title" content="js的宏任务和微任务">
+<meta property="og:url" content="https://wine1.github.io/2020/09/23/js的宏任务和微任务/index.html">
 <meta property="og:site_name" content="哦。">
-<meta property="og:description" content="今天认真仔细地看了下BFC的内容，算是有了更具体的理解">
+<meta property="og:description" content=".宏任务（macrotask ）和微任务（microtask ） macrotask 和 microtask 表示异步任务的两种分类。 在挂起任务时，JS 引擎会将所有任务按照类别分到这两个队列中，首先在 macrotask 的队列（这个队列也被叫做 task queue）中取出第一个任务，执行完毕后取出 microtask 队列中的所有任务顺序执行；之后再取 macrotask 任务，周而复始，">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-08-10T15:21:13.296Z">
+<meta property="og:updated_time" content="2020-09-23T14:55:59.932Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CSS-BFC">
-<meta name="twitter:description" content="今天认真仔细地看了下BFC的内容，算是有了更具体的理解">
+<meta name="twitter:title" content="js的宏任务和微任务">
+<meta name="twitter:description" content=".宏任务（macrotask ）和微任务（microtask ） macrotask 和 microtask 表示异步任务的两种分类。 在挂起任务时，JS 引擎会将所有任务按照类别分到这两个队列中，首先在 macrotask 的队列（这个队列也被叫做 task queue）中取出第一个任务，执行完毕后取出 microtask 队列中的所有任务顺序执行；之后再取 macrotask 任务，周而复始，">
   
     <link rel="alternative" href="/atom.xml" title="哦。" type="application/atom+xml">
   
@@ -165,59 +165,36 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-CSS-BFC" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-js的宏任务和微任务" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      CSS-BFC
+      js的宏任务和微任务
     </h1>
   
 
         
-        <a href="/2020/05/20/CSS-BFC/" class="archive-article-date">
-  	<time datetime="2020-05-20T10:47:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-20</time>
+        <a href="/2020/09/23/js的宏任务和微任务/" class="archive-article-date">
+  	<time datetime="2020-09-23T14:45:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-23</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>今天认真仔细地看了下BFC的内容，算是有了更具体的理解</p>
+        <p>.宏任务（macrotask ）和微任务（microtask ）</p>
+<p>macrotask 和 microtask 表示异步任务的两种分类。</p>
+<p>在挂起任务时，JS 引擎会将所有任务按照类别分到这两个队列中，首先在 macrotask 的队列（这个队列也被叫做 task queue）中取出第一个任务，执行完毕后取出 microtask 队列中的所有任务顺序执行；之后再取 macrotask 任务，周而复始，直至两个队列的任务都取完。</p>
 <a id="more"></a>
-<h2 id="BFC（块级格式化上下文）"><a href="#BFC（块级格式化上下文）" class="headerlink" title="BFC（块级格式化上下文）"></a>BFC（块级格式化上下文）</h2><ol>
-<li><p>BFC的触发条件</p>
-<ul>
-<li>根元素或其他包含它的元素</li>
-<li>浮动元素 (元素的 float 不是 none)</li>
-<li>绝对定位元素 (元素具有 position 为 absolute 或 fixed)</li>
-<li>内联块 (元素具有 display: inline-block)</li>
-<li>表格单元格 (元素具有 display: table-cell，HTML 表格单元格默认属性)</li>
-<li>表格标题 (元素具有 display: table-caption, HTML 表格标题默认属性)</li>
-<li>具有 overflow 且值不是 visible 的块元素</li>
-<li>display: flow-root 的元素</li>
-<li>column-span: all 的元素</li>
-</ul>
-</li>
-<li><p>BFC导致的现象</p>
-<ul>
-<li>内部的 box 将会独占宽度，且在垂直方向，一个接一个排列</li>
-<li>box 垂直方向的间距由 margin 属性决定，但是同一个 BFC 的两个相邻box 的 margin 会出现边距折叠现象</li>
-<li>每个 box 水平方向上左边缘，与 BFC 左边缘相对齐，即使存在浮动也是如此</li>
-<li>BFC 区域不会与浮动元素重叠，而是会依次排列</li>
-<li>BFC 区域内是一个独立的渲染容器，容器内元素和 BFC 区域外元素不会形成任何干扰</li>
-<li>浮动元素的高度也参与到 BFC 高度的计算当中</li>
-</ul>
-</li>
-<li><p>目前为止 最常用的BFC操作有 </p>
-<ul>
-<li>通过设置元素display:inline-block消除边距折叠</li>
-<li>给相邻元素或父元素设置 display:inline-block 清除浮动 和给浮动元素设置overflow:hidden清除浮动</li>
-</ul>
-</li>
-</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">setTimeout(() =&gt; &#123;</span><br><span class="line">    //执行后 回调一个宏事件</span><br><span class="line">    console.log(&apos;内层宏事件3&apos;)</span><br><span class="line">&#125;, 0)</span><br><span class="line">console.log(&apos;外层宏事件1&apos;);</span><br><span class="line"></span><br><span class="line">new Promise((resolve) =&gt; &#123;</span><br><span class="line">    console.log(&apos;外层宏事件2&apos;);</span><br><span class="line">    resolve()</span><br><span class="line">&#125;).then(() =&gt; &#123;</span><br><span class="line">    console.log(&apos;微事件1&apos;);</span><br><span class="line">&#125;).then(()=&gt;&#123;</span><br><span class="line">    console.log(&apos;微事件2&apos;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>打印结果</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">外层宏事件1</span><br><span class="line">外层宏事件2</span><br><span class="line">微事件1</span><br><span class="line">微事件2</span><br><span class="line">内层宏事件3</span><br></pre></td></tr></table></figure>
+
+<p>宏任务 setTimeOut setInterval<br>微任务 nextTick promise<br>先执行微任务 再执行宏任务</p>
 
       
 
@@ -253,10 +230,6 @@
 			 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
         		</li>
       		
 		</ul>
@@ -312,7 +285,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://wine1.github.io/2020/05/20/CSS-BFC/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://wine1.github.io/2020/09/23/js的宏任务和微任务/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -326,18 +299,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/05/20/es6-新特性总结/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          es6-新特性总结
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/05/18/axios中的拦截器/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">axios中的拦截器</div>
+    <a href="/2020/09/13/封装一个组件/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">封装一个组件</div>
       <i class="icon-circle-right"></i>
     </a>
   
