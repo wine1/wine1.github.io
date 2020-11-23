@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="https://wine1.github.io">
   <title>HTML5(表单) | 哦。</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="新增表单元素与属性： form属性 可以书写在页面中的任何部分，然后为该元素指定一个form属性，属性值为该表单的id，这样就可以声明该元素从属于指定表单  id123	&amp;lt;input type = &amp;quot;text&amp;quot;&amp;gt;	&amp;lt;/form&amp;gt;&amp;lt;textarea form=&amp;quot;textform&amp;quot;&amp;gt;&amp;lt;/textarea&amp;gt;">
+  <meta name="description" content="新增表单元素与属性： form属性 可以书写在页面中的任何部分，然后为该元素指定一个form属性，属性值为该表单的id，这样就可以声明该元素从属于指定表单  1234&amp;lt;form id=&amp;quot;testform&amp;quot;&amp;gt;	&amp;lt;input type = &amp;quot;text&amp;quot;&amp;gt;	&amp;lt;/form&amp;gt;&amp;lt;textarea form=&amp;quot;textf">
 <meta name="keywords" content="前端">
 <meta property="og:type" content="article">
 <meta property="og:title" content="HTML5(表单)">
 <meta property="og:url" content="https://wine1.github.io/2017/11/16/HTML5-表单/index.html">
 <meta property="og:site_name" content="哦。">
-<meta property="og:description" content="新增表单元素与属性： form属性 可以书写在页面中的任何部分，然后为该元素指定一个form属性，属性值为该表单的id，这样就可以声明该元素从属于指定表单  id123	&amp;lt;input type = &amp;quot;text&amp;quot;&amp;gt;	&amp;lt;/form&amp;gt;&amp;lt;textarea form=&amp;quot;textform&amp;quot;&amp;gt;&amp;lt;/textarea&amp;gt;">
+<meta property="og:description" content="新增表单元素与属性： form属性 可以书写在页面中的任何部分，然后为该元素指定一个form属性，属性值为该表单的id，这样就可以声明该元素从属于指定表单  1234&amp;lt;form id=&amp;quot;testform&amp;quot;&amp;gt;	&amp;lt;input type = &amp;quot;text&amp;quot;&amp;gt;	&amp;lt;/form&amp;gt;&amp;lt;textarea form=&amp;quot;textf">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-07T13:01:37.695Z">
+<meta property="og:updated_time" content="2020-11-23T14:42:14.616Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HTML5(表单)">
-<meta name="twitter:description" content="新增表单元素与属性： form属性 可以书写在页面中的任何部分，然后为该元素指定一个form属性，属性值为该表单的id，这样就可以声明该元素从属于指定表单  id123	&amp;lt;input type = &amp;quot;text&amp;quot;&amp;gt;	&amp;lt;/form&amp;gt;&amp;lt;textarea form=&amp;quot;textform&amp;quot;&amp;gt;&amp;lt;/textarea&amp;gt;">
+<meta name="twitter:description" content="新增表单元素与属性： form属性 可以书写在页面中的任何部分，然后为该元素指定一个form属性，属性值为该表单的id，这样就可以声明该元素从属于指定表单  1234&amp;lt;form id=&amp;quot;testform&amp;quot;&amp;gt;	&amp;lt;input type = &amp;quot;text&amp;quot;&amp;gt;	&amp;lt;/form&amp;gt;&amp;lt;textarea form=&amp;quot;textf">
   
     <link rel="alternative" href="/atom.xml" title="哦。" type="application/atom+xml">
   
@@ -188,16 +188,12 @@
         <h3 id="新增表单元素与属性："><a href="#新增表单元素与属性：" class="headerlink" title="新增表单元素与属性："></a>新增表单元素与属性：</h3><ol>
 <li>form属性 可以书写在页面中的任何部分，然后为该元素指定一个form属性，属性值为该表单的id，这样就可以声明该元素从属于指定表单</li>
 </ol>
-<figure class="highlight plain"><figcaption><span>id</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">	&lt;input type = &quot;text&quot;&gt;</span><br><span class="line">	&lt;/form&gt;</span><br><span class="line">&lt;textarea form=&quot;textform&quot;&gt;&lt;/textarea&gt;</span><br></pre></td></tr></table></figure>
+<pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;form id=&quot;testform&quot;&gt;</span><br><span class="line">	&lt;input type = &quot;text&quot;&gt;</span><br><span class="line">	&lt;/form&gt;</span><br><span class="line">&lt;textarea form=&quot;textform&quot;&gt;&lt;/textarea&gt;</span><br></pre></td></tr></table></figure></code></pre><a id="more"></a>
 
-<a id="more"></a>
-
-<ol start="2">
+<ol>
 <li>formaction元素 formmethod元素  formtarget元素 HTML4中只能通过form的属性提交表单，在html5中每个都可以单独设置</li>
 </ol>
-<figure class="highlight plain"><figcaption><span>action</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">    &lt;input type=&quot;submit&quot; name=&quot;s1&quot; value=&quot;s1&quot; formaction=&quot;s1.jsp&quot;&gt;</span><br><span class="line">	&lt;input type=&quot;submit&quot; name=&quot;s2&quot; value=&quot;s2&quot; formaction=&quot;s2.jsp&quot;&gt;</span><br><span class="line">	&lt;input type=&quot;submit&quot;&gt;</span><br><span class="line">	&lt;input type=&quot;submit&quot; value=&quot;post方式提交&quot; formmethod=&quot;post&quot;&gt;</span><br><span class="line">	&lt;input type=&quot;submit&quot; value=&quot;get方式提交&quot; formmethod=&quot;get&quot;&gt;</span><br><span class="line">&lt;/form&gt;</span><br></pre></td></tr></table></figure>
-
-<ol start="3">
+<pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;form action=&quot;submit&quot;&gt;//html4中的写法</span><br><span class="line">	&lt;input type=&quot;submit&quot; name=&quot;s1&quot; value=&quot;s1&quot; formaction=&quot;s1.jsp&quot;&gt;</span><br><span class="line">	&lt;input type=&quot;submit&quot; name=&quot;s2&quot; value=&quot;s2&quot; formaction=&quot;s2.jsp&quot;&gt;</span><br><span class="line">	&lt;input type=&quot;submit&quot;&gt;</span><br><span class="line">	&lt;input type=&quot;submit&quot; value=&quot;post方式提交&quot; formmethod=&quot;post&quot;&gt;</span><br><span class="line">	&lt;input type=&quot;submit&quot; value=&quot;get方式提交&quot; formmethod=&quot;get&quot;&gt;</span><br><span class="line">&lt;/form&gt;</span><br></pre></td></tr></table></figure></code></pre><ol start="3">
 <li><p>autofocus属性 页面打开时自动获得光标焦点，一个页面最多只能设置一个,通过js实现</p>
 </li>
 <li><p>required属性 提交时如果元素中内容为空，则不允许提交，同时显示提示文字</p>
@@ -209,7 +205,7 @@
 <li><p>placeholder属性 表单处于未输入状态时显示的内容</p>
 </li>
 <li><p>list属性 datalist属性 autocomplete属性</p>
-<figure class="highlight plain"><figcaption><span>type </span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;datalist id=&quot;greeting&quot; style=&quot;display:none;&quot;&gt;</span><br><span class="line">  &lt;option value=&quot;123&quot;&gt;123&lt;/option&gt;</span><br><span class="line">  &lt;option value=&quot;234&quot;&gt;234&lt;/option&gt;</span><br><span class="line">  &lt;option value=&quot;345&quot;&gt;345&lt;/option&gt;</span><br><span class="line">&lt;/datalist&gt;</span><br></pre></td></tr></table></figure>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;input type = &quot;text&quot; name=&quot;greeting&quot; list=&quot;greeting&quot; autocomplete=&quot;on&quot;&gt;</span><br><span class="line">&lt;datalist id=&quot;greeting&quot; style=&quot;display:none;&quot;&gt;</span><br><span class="line">	&lt;option value=&quot;123&quot;&gt;123&lt;/option&gt;</span><br><span class="line">	&lt;option value=&quot;234&quot;&gt;234&lt;/option&gt;</span><br><span class="line">	&lt;option value=&quot;345&quot;&gt;345&lt;/option&gt;</span><br><span class="line">&lt;/datalist&gt;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>pattern属性 可以进行输入值的正则检查</p>
 </li>
@@ -471,19 +467,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">css</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">ES6</a>
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">工作总结</a>
+                <a href="javascript:void(0)" class="js-tag color4">ES6</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -495,19 +487,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">linux</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">node.js</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">兼容性</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -539,10 +523,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">基础</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">数据库</a>
               </li>
              
@@ -551,7 +531,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">杂</a>
+                <a href="javascript:void(0)" class="js-tag color5">-css</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -564,6 +544,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">基础知识</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">工作总结</a>
               </li>
             
             <div class="clearfix"></div>

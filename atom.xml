@@ -88,17 +88,13 @@
     <link href="https://wine1.github.io/2020/09/06/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
     <id>https://wine1.github.io/2020/09/06/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E9%9D%A2%E8%AF%95%E9%A2%98/</id>
     <published>2020-09-06T10:29:06.000Z</published>
-    <updated>2020-09-13T12:14:02.766Z</updated>
+    <updated>2020-11-23T14:30:30.427Z</updated>
     
-    <content type="html"><![CDATA[<p>正则表达式常见面试题</p><p>1.给一个连字符串例如：get-element-by-id转化成驼峰形式。<br>2.匹配二进制数字<br>3.非零的十进制数字 (有至少一位数字, 但是不能以0开头)<br>4.匹配一年中的12个月<br>5.匹配qq号最长为13为<br>6.匹配常见的固定电话号码<br>7.匹配ip地址<br>8.匹配用尖括号括起来的以a开头的字符串<br>9.分割数字每三个以一个逗号划分<br>10.判断字符串是否包含数字<br>11.判断电话号码<br>12.判断是否符合指定格式<br>13.判断是否符合USD格式<br>14.JS实现千位分隔符<br>15.获取 url 参数<br>16.验证邮箱<br>17.验证身份证号码<br>18.匹配汉字<br>19.去除首尾的’/‘<br>20.判断日期格式是否符合 ‘2017-05-11’的形式，简单判断，只判断格式<br>21.判断日期格式是否符合 ‘2017-05-11’的形式，严格判断（比较复杂）<br>22.IPv4地址正则<br>23.十六进制颜色正则<br>24.车牌号正则<br>25.过滤HTML标签<br>26.密码强度正则，最少6位，包括至少1个大写字母，1个小写字母，1个数字，1个特殊字符<br>27.URL正则<br>28.匹配浮点数</p>]]></content>
+    <content type="html"><![CDATA[<p><a href="http://www.runoob.com/regexp/regexp-syntax.html" target="_blank" rel="noopener">菜鸟教程的正则表达式教程</a><br>正则表达式，我实在不知道要把它归类在哪个分类里。<br>以后肯定还会有一些不知道怎么分类的文章，索性开个新分类–杂<br>哈哈哈</p><a id="more"></a><p>正则表达式的作用总结起来就两个字，匹配。<br><strong>常见匹配方式</strong><br>/d 匹配0到9内的任意数字 字符组的简写形式<br>[0-9] 匹配0到9内的任意数字 字符组匹配<br>. 可以匹配任意字符 通配符<br><strong><em>将内容放在圆括号中</em></strong>捕获分组和<strong><em>\1</em></strong>向后引用<br>通常可以将简写式取反，取反的结果就是排除。如<code>\d</code>是匹配任意数字<code>\D</code>则用来匹配任意非数字字符<br>在匹配的过程中使用量词<br>匹配的过程离不开元字符，元字符可以说是基础了。</p><p>###元字符###<br><a href="http://www.runoob.com/regexp/regexp-metachar.html" target="_blank" rel="noopener">菜鸟教程中关于元字符的详细介绍</a></p><p>然后就是匹配规则之类的东西，看起来很复杂，但是实际上就是一个熟能生巧的过程，用多了之后就能一目了然了</p><p>正则表达式常见面试题</p><p>1.给一个连字符串例如：get-element-by-id转化成驼峰形式。<br>2.匹配二进制数字<br>3.非零的十进制数字 (有至少一位数字, 但是不能以0开头)<br>4.匹配一年中的12个月<br>5.匹配qq号最长为13为<br>6.匹配常见的固定电话号码<br>7.匹配ip地址<br>8.匹配用尖括号括起来的以a开头的字符串<br>9.分割数字每三个以一个逗号划分<br>10.判断字符串是否包含数字<br>11.判断电话号码<br>12.判断是否符合指定格式<br>13.判断是否符合USD格式<br>14.JS实现千位分隔符<br>15.获取 url 参数<br>16.验证邮箱<br>17.验证身份证号码<br>18.匹配汉字<br>19.去除首尾的’/‘<br>20.判断日期格式是否符合 ‘2017-05-11’的形式，简单判断，只判断格式<br>21.判断日期格式是否符合 ‘2017-05-11’的形式，严格判断（比较复杂）<br>22.IPv4地址正则<br>23.十六进制颜色正则<br>24.车牌号正则<br>25.过滤HTML标签<br>26.密码强度正则，最少6位，包括至少1个大写字母，1个小写字母，1个数字，1个特殊字符<br>27.URL正则<br>28.匹配浮点数</p>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;p&gt;正则表达式常见面试题&lt;/p&gt;
-&lt;p&gt;1.给一个连字符串例如：get-element-by-id转化成驼峰形式。&lt;br&gt;2.匹配二进制数字&lt;br&gt;3.非零的十进制数字 (有至少一位数字, 但是不能以0开头)&lt;br&gt;4.匹配一年中的12个月&lt;br&gt;5.匹配qq号最长为13为&lt;b
-      
+      &lt;p&gt;&lt;a href=&quot;http://www.runoob.com/regexp/regexp-syntax.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;菜鸟教程的正则表达式教程&lt;/a&gt;&lt;br&gt;正则表达式，我实在不知道要把它归类在哪个分类里。&lt;br&gt;以后肯定还会有一些不知道怎么分类的文章，索性开个新分类–杂&lt;br&gt;哈哈哈&lt;/p&gt;
     
     </summary>
     
@@ -136,19 +132,13 @@
     <link href="https://wine1.github.io/2020/09/06/vue%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
     <id>https://wine1.github.io/2020/09/06/vue%E9%9D%A2%E8%AF%95%E9%A2%98/</id>
     <published>2020-09-06T10:27:45.000Z</published>
-    <updated>2020-09-14T14:16:19.584Z</updated>
+    <updated>2020-11-23T14:49:34.023Z</updated>
     
-    <content type="html"><![CDATA[<p>生命周期函数面试题</p><p>生命周期函数面试题</p><ol><li><p>什么是 vue 生命周期,vue生命周期的作用是什么<br> Vue 实例从开始创建、初始化数据、编译模板、挂载Dom和渲染、更新和渲染、卸载等一系列过程，这是 Vue 的生命周期</p></li><li><p>第一次页面加载会触发哪几个钩子<br> beforeCreate() created() beforeMount() mounted() </p></li><li><p>简述每个周期具体适合哪些场景<br> beforeCreate()<br> created()<br> beforeMount()<br> mounted()<br> beforeUpdate()<br> updated()<br> beforeDestory()<br> destroy()</p></li><li><p>created和mounted的区别<br> create阶段new了实例 但是并没有挂载 不能进行dom操作</p></li></ol><p>vue路由面试题</p><ol><li><p>mvvm 框架是什么？</p></li><li><p>vue-router 是什么?它有哪些组件<br> vue-router是vue官方路由管理器</p> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;router-link :to=‘‘ class=‘active-class‘&gt;   //路由声明式跳转 ，active-class是标签被点击时的样式</span><br><span class="line">&lt;router-view&gt;                  //渲染路由的容器</span><br><span class="line">&lt;keep-alive&gt;                    //缓存组件</span><br></pre></td></tr></table></figure></li><li><p>active-class 是哪个组件的属性？<br> router-link 用于做选中样式的切换</p></li><li><p>怎么定义 vue-router 的动态路由? 怎么获取传过来的值</p> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">//路由配置文件中 配置动态路由</span><br><span class="line">&#123;</span><br><span class="line">    path: &apos;/detail/:id&apos;,</span><br><span class="line">    name: &apos;Detail&apos;,</span><br><span class="line">    component: Detail</span><br><span class="line">&#125;</span><br><span class="line">//跳转时页面</span><br><span class="line">var id = 1;</span><br><span class="line">this.$router.push(&apos;/detail/&apos; + id)</span><br><span class="line"></span><br><span class="line">//跳转后页面获取参数</span><br><span class="line">this.$route.params.id</span><br></pre></td></tr></table></figure><ul><li>通过动态路由方式</li><li>通过query传值</li><li>通过params属性传值</li><li>1.动态路由和query属性传值 页面刷新参数不会丢失， params会丢失 2.动态路由一般用来传一个参数时居多(如详情页的id), query、params可以传递一个也可以传递多个参数 。</li></ul></li><li><p>vue-router 有哪几种导航钩子?<br> <a href="https://www.cnblogs.com/kzxiaotan/p/11676872.html" target="_blank" rel="noopener">https://www.cnblogs.com/kzxiaotan/p/11676872.html</a></p></li><li><p>route和router 的区别<br> 1.$router是VueRouter的实例方法,可以认为是全局的路由对象，包含了所有路由的对象和属性。<br> 2.$route是一个跳转的路由对象，可以认为是当前组件的路由管理，指当前激活的路由对象，包含当前url解析得到的数据，可以从对象里获取一些数据。如name,path等。</p></li><li><p>vue-router响应路由参数的变化</p></li></ol><ol start="8"><li>vue-router传参</li></ol><ol start="9"><li>vue-router的两种模式</li></ol><ol start="10"><li>vue-router实现路由懒加载（ 动态加载路由 ）</li></ol><p>1.vue优点<br>2.vue父组件向子组件传递数据？<br>3.子组件像父组件传递事件<br>4.v-show和v-if指令的共同点和不同点<br>5.如何让CSS只在当前组件中起作用<br>6.的作用是什么?<br>7.如何获取dom<br>8.说出几种vue当中的指令和它的用法？<br>9.vue-loader是什么？使用它的用途有哪些？<br>10.为什么使用key<br>11.axios及安装<br>12.axios解决跨域<br>13.v-modal的使用<br>14.scss的安装以及使用<br>15.请说出vue.cli项目中src目录每个文件夹和文件的用法？<br>16.分别简述computed和watch的使用场景<br>17.v-on可以监听多个方法吗<br>18.$nextTick的使用<br>19.vue组件中data为什么必须是一个函数<br>20.vue事件对象的使用<br>21 组件间的通信<br>22.渐进式框架的理解<br>23.Vue中双向数据绑定是如何实现的<br>24.单页面应用和多页面应用区别及优缺点<br>25.vue中过滤器有什么作用及详解<br>26.v-if和v-for的优先级<br>27.assets和static的区别<br>28.列举常用的指令<br>29.vue常用的修饰符<br>30.数组更新检测<br>31.Vue.set视图更新<br>32.自定义指令详解<br>33.vue的两个核心点<br>34.vue和jQuery的区别<br>35 引进组件的步骤<br>36.Vue-cli打包命令是什么？打包后悔导致路径问题，应该在哪里修改<br>37.三大框架的对比<br>38.跨组件双向数据绑定<br>39.delete和Vue.delete删除数组的区别<br>40.SPA首屏加载慢如何解决<br>41.Vue-router跳转和location.href有什么区别<br>42.vue slot<br>43.你们vue项目是打包了一个js文件，一个css文件，还是有多个文件？<br>44.vue遇到的坑，如何解决的？<br>45.Vue里面router-link在电脑上有用，在安卓上没反应怎么解决？<br>46.Vue2中注册在router-link上事件无效解决方法<br>47.RouterLink在IE和Firefox中不起作用（路由不跳转）的问题<br>48.axios的特点有哪些<br>49.请说下封装 vue 组件的过程？<br>50.vue 各种组件通信方法（父子 子父 兄弟 爷孙 毫无关系的组件）<br>51.params和query的区别<br>52.vue mock数据<br>53 vue封装通用组件<br>54.vue初始化页面闪动问题<br>55.vue禁止弹窗后的屏幕滚动<br>56.vue更新数组时触发视图更新的方法<br>57.vue常用的UI组件库<br>58.vue如何引进本地背景图片<br>59.vue如何引进sass<br>60.vue修改打包后静态资源路径的修改<br>vuex常见面试题</p><p>1.vuex是什么？怎么使用？哪种功能场景使用它？<br>2.vuex有哪几种属性<br>3.不使用Vuex会带来什么问题<br>4.Vue.js中ajax请求代码应该写在组件的methods中还是vuex的actions中？<br>5.vuex一个例子方法<br>6.Vuex中如何异步修改状态<br>7.Vuex中actions和mutations的区别<br>vue项目实战</p><p>1.顶部悬停效果<br>2.电话本列表效果（ 右边字母分类 上下滑动 旁边字母显示高亮）<br>3.vue做代理<br>4.Vue路由切换时的左滑和右滑效果示例</p>]]></content>
+    <content type="html"><![CDATA[<p>vue面试题</p><a id="more"></a><p>生命周期函数面试题</p><ol><li><p>什么是 vue 生命周期,vue生命周期的作用是什么<br> Vue 实例从开始创建、初始化数据、编译模板、挂载Dom和渲染、更新和渲染、卸载等一系列过程，这是 Vue 的生命周期</p></li><li><p>第一次页面加载会触发哪几个钩子<br> beforeCreate() created() beforeMount() mounted() </p></li><li><p>简述每个周期具体适合哪些场景<br> beforeCreate()<br> created()<br> beforeMount()<br> mounted()<br> beforeUpdate()<br> updated()<br> beforeDestory()<br> destroy()</p></li><li><p>created和mounted的区别<br> create阶段new了实例 但是并没有挂载 不能进行dom操作</p></li></ol><p>vue路由面试题</p><ol><li><p>mvvm 框架是什么？</p></li><li><p>vue-router 是什么?它有哪些组件<br> vue-router是vue官方路由管理器</p> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;router-link :to=‘‘ class=‘active-class‘&gt;   //路由声明式跳转 ，active-class是标签被点击时的样式</span><br><span class="line">&lt;router-view&gt;                  //渲染路由的容器</span><br><span class="line">&lt;keep-alive&gt;                    //缓存组件</span><br></pre></td></tr></table></figure></li><li><p>active-class 是哪个组件的属性？<br> router-link 用于做选中样式的切换</p></li><li><p>怎么定义 vue-router 的动态路由? 怎么获取传过来的值</p> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">//路由配置文件中 配置动态路由</span><br><span class="line">&#123;</span><br><span class="line">    path: &apos;/detail/:id&apos;,</span><br><span class="line">    name: &apos;Detail&apos;,</span><br><span class="line">    component: Detail</span><br><span class="line">&#125;</span><br><span class="line">//跳转时页面</span><br><span class="line">var id = 1;</span><br><span class="line">this.$router.push(&apos;/detail/&apos; + id)</span><br><span class="line"></span><br><span class="line">//跳转后页面获取参数</span><br><span class="line">this.$route.params.id</span><br></pre></td></tr></table></figure><ul><li>通过动态路由方式</li><li>通过query传值</li><li>通过params属性传值</li><li>1.动态路由和query属性传值 页面刷新参数不会丢失， params会丢失 2.动态路由一般用来传一个参数时居多(如详情页的id), query、params可以传递一个也可以传递多个参数 。</li></ul></li><li><p>vue-router 有哪几种导航钩子?<br> <a href="https://www.cnblogs.com/kzxiaotan/p/11676872.html" target="_blank" rel="noopener">https://www.cnblogs.com/kzxiaotan/p/11676872.html</a></p></li><li><p>route和router 的区别<br> 1.$router是VueRouter的实例方法,可以认为是全局的路由对象，包含了所有路由的对象和属性。<br> 2.$route是一个跳转的路由对象，可以认为是当前组件的路由管理，指当前激活的路由对象，包含当前url解析得到的数据，可以从对象里获取一些数据。如name,path等。</p></li><li><p>vue-router响应路由参数的变化</p></li></ol><ol start="8"><li>vue-router传参</li></ol><ol start="9"><li>vue-router的两种模式</li></ol><ol start="10"><li>vue-router实现路由懒加载（ 动态加载路由 ）</li></ol><p>1.vue优点<br>2.vue父组件向子组件传递数据？<br>3.子组件像父组件传递事件<br>4.v-show和v-if指令的共同点和不同点<br>5.如何让CSS只在当前组件中起作用<br>6.的作用是什么?<br>7.如何获取dom<br>8.说出几种vue当中的指令和它的用法？<br>9.vue-loader是什么？使用它的用途有哪些？<br>10.为什么使用key<br>11.axios及安装<br>12.axios解决跨域<br>13.v-modal的使用<br>14.scss的安装以及使用<br>15.请说出vue.cli项目中src目录每个文件夹和文件的用法？<br>16.分别简述computed和watch的使用场景<br>17.v-on可以监听多个方法吗<br>18.$nextTick的使用<br>19.vue组件中data为什么必须是一个函数<br>20.vue事件对象的使用<br>21 组件间的通信<br>22.渐进式框架的理解<br>23.Vue中双向数据绑定是如何实现的<br>24.单页面应用和多页面应用区别及优缺点<br>25.vue中过滤器有什么作用及详解<br>26.v-if和v-for的优先级<br>27.assets和static的区别<br>28.列举常用的指令<br>29.vue常用的修饰符<br>30.数组更新检测<br>31.Vue.set视图更新<br>32.自定义指令详解<br>33.vue的两个核心点<br>34.vue和jQuery的区别<br>35 引进组件的步骤<br>36.Vue-cli打包命令是什么？打包后悔导致路径问题，应该在哪里修改<br>37.三大框架的对比<br>38.跨组件双向数据绑定<br>39.delete和Vue.delete删除数组的区别<br>40.SPA首屏加载慢如何解决<br>41.Vue-router跳转和location.href有什么区别<br>42.vue slot<br>43.你们vue项目是打包了一个js文件，一个css文件，还是有多个文件？<br>44.vue遇到的坑，如何解决的？<br>45.Vue里面router-link在电脑上有用，在安卓上没反应怎么解决？<br>46.Vue2中注册在router-link上事件无效解决方法<br>47.RouterLink在IE和Firefox中不起作用（路由不跳转）的问题<br>48.axios的特点有哪些<br>49.请说下封装 vue 组件的过程？<br>50.vue 各种组件通信方法（父子 子父 兄弟 爷孙 毫无关系的组件）<br>51.params和query的区别<br>52.vue mock数据<br>53 vue封装通用组件<br>54.vue初始化页面闪动问题<br>55.vue禁止弹窗后的屏幕滚动<br>56.vue更新数组时触发视图更新的方法<br>57.vue常用的UI组件库<br>58.vue如何引进本地背景图片<br>59.vue如何引进sass<br>60.vue修改打包后静态资源路径的修改<br>vuex常见面试题</p><p>1.vuex是什么？怎么使用？哪种功能场景使用它？<br>2.vuex有哪几种属性<br>3.不使用Vuex会带来什么问题<br>4.Vue.js中ajax请求代码应该写在组件的methods中还是vuex的actions中？<br>5.vuex一个例子方法<br>6.Vuex中如何异步修改状态<br>7.Vuex中actions和mutations的区别<br>vue项目实战</p><p>1.顶部悬停效果<br>2.电话本列表效果（ 右边字母分类 上下滑动 旁边字母显示高亮）<br>3.vue做代理<br>4.Vue路由切换时的左滑和右滑效果示例</p>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;p&gt;生命周期函数面试题&lt;/p&gt;
-&lt;p&gt;生命周期函数面试题&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;什么是 vue 生命周期,vue生命周期的作用是什么&lt;br&gt; Vue 实例从开始创建、初始化数据、编译模板、挂载Dom和渲染、更新和渲染、卸载等一系列过程，这是 Vue 的生命周期&lt;/p&gt;
-      
+      &lt;p&gt;vue面试题&lt;/p&gt;
     
     </summary>
     
@@ -161,17 +151,13 @@
     <link href="https://wine1.github.io/2020/09/06/react%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
     <id>https://wine1.github.io/2020/09/06/react%E9%9D%A2%E8%AF%95%E9%A2%98/</id>
     <published>2020-09-06T10:26:05.000Z</published>
-    <updated>2020-09-06T10:27:20.218Z</updated>
+    <updated>2020-11-23T14:50:52.343Z</updated>
     
-    <content type="html"><![CDATA[<p>react生命周期面试题</p><p>1.react 生命周期函数<br>2.react生命周期中，最适合与服务端进行数据交互的是哪个函数<br>3.运行阶段生命周期调用顺序<br>4.shouldComponentUpdate 是做什么的，（react 性能优化是哪个周期函数？）<br>5.指出(组件)生命周期方法的不同<br>react 基础面试题</p><p>1.React 中 keys 的作用是什么？<br>2.React 中 refs 的作用是什么？<br>3.React 中有三种构建组件的方式<br>4.调用 setState 之后发生了什么？<br>5.react diff 原理（常考，大厂必考）<br>6.为什么建议传递给 setState 的参数是一个 callback 而不是一个对象<br>7.除了在构造函数中绑定 this，还有其它方式吗<br>8.setState第二个参数的作用<br>9.(在构造函数中)调用 super(props) 的目的是什么<br>10.简述 flux 思想<br>11.在 React 当中 Element 和 Component 有何区别？<br>12.描述事件在 React 中的处理方式。<br>13.createElement 和 cloneElement 有什么区别？<br>14.如何告诉 React 它应该编译生产环境版本？<br>15.Controlled Component 与 Uncontrolled Component 之间的区别是什么？<br>react组件面试题</p><p>1.展示组件(Presentational component)和容器组件(Container component)之间有何不同<br>2.类组件(Class component)和函数式组件(Functional component)之间有何不同<br>3.(组件的)状态(state)和属性(props)之间有何不同<br>4.何为受控组件(controlled component)<br>5.何为高阶组件(higher order component)<br>6.应该在 React 组件的何处发起 Ajax 请求<br>7.react中组件传值<br>8.什么时候在功能组件( Class Component )上使用类组件( Functional Component )？<br>9.受控组件( controlled component )与不受控制的组件( uncontrolled component )有什么区别？<br>10.react 组件的划分业务组件技术组件？<br>redux面试题</p><p>1.redux中间件<br>2.redux有什么缺点<br>3.了解 redux 么，说一下 redux 把</p><p>react性能比较面试题</p><p>1.vue和react的区别<br>2.react性能优化的方案<br>3.React 项目用过什么脚手架<br>4.介绍一下webpack webpack<br>5.如果你创建了类似于下面的 Twitter 元素，那么它相关的类定义是啥样子的？<br>6.为什么我们需要使用 React 提供的 Children API 而不是 JavaScript 的 map？</p>]]></content>
+    <content type="html"><![CDATA[<p>react面试题</p><a id="more"></a><p>1.react 生命周期函数<br>2.react生命周期中，最适合与服务端进行数据交互的是哪个函数<br>3.运行阶段生命周期调用顺序<br>4.shouldComponentUpdate 是做什么的，（react 性能优化是哪个周期函数？）<br>5.指出(组件)生命周期方法的不同<br>react 基础面试题</p><p>1.React 中 keys 的作用是什么？<br>2.React 中 refs 的作用是什么？<br>3.React 中有三种构建组件的方式<br>4.调用 setState 之后发生了什么？<br>5.react diff 原理（常考，大厂必考）<br>6.为什么建议传递给 setState 的参数是一个 callback 而不是一个对象<br>7.除了在构造函数中绑定 this，还有其它方式吗<br>8.setState第二个参数的作用<br>9.(在构造函数中)调用 super(props) 的目的是什么<br>10.简述 flux 思想<br>11.在 React 当中 Element 和 Component 有何区别？<br>12.描述事件在 React 中的处理方式。<br>13.createElement 和 cloneElement 有什么区别？<br>14.如何告诉 React 它应该编译生产环境版本？<br>15.Controlled Component 与 Uncontrolled Component 之间的区别是什么？<br>react组件面试题</p><p>1.展示组件(Presentational component)和容器组件(Container component)之间有何不同<br>2.类组件(Class component)和函数式组件(Functional component)之间有何不同<br>3.(组件的)状态(state)和属性(props)之间有何不同<br>4.何为受控组件(controlled component)<br>5.何为高阶组件(higher order component)<br>6.应该在 React 组件的何处发起 Ajax 请求<br>7.react中组件传值<br>8.什么时候在功能组件( Class Component )上使用类组件( Functional Component )？<br>9.受控组件( controlled component )与不受控制的组件( uncontrolled component )有什么区别？<br>10.react 组件的划分业务组件技术组件？<br>redux面试题</p><p>1.redux中间件<br>2.redux有什么缺点<br>3.了解 redux 么，说一下 redux 把</p><p>react性能比较面试题</p><p>1.vue和react的区别<br>2.react性能优化的方案<br>3.React 项目用过什么脚手架<br>4.介绍一下webpack webpack<br>5.如果你创建了类似于下面的 Twitter 元素，那么它相关的类定义是啥样子的？<br>6.为什么我们需要使用 React 提供的 Children API 而不是 JavaScript 的 map？</p>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;p&gt;react生命周期面试题&lt;/p&gt;
-&lt;p&gt;1.react 生命周期函数&lt;br&gt;2.react生命周期中，最适合与服务端进行数据交互的是哪个函数&lt;br&gt;3.运行阶段生命周期调用顺序&lt;br&gt;4.shouldComponentUpdate 是做什么的，（react 性能优化是哪个周
-      
+      &lt;p&gt;react面试题&lt;/p&gt;
     
     </summary>
     
@@ -184,16 +170,13 @@
     <link href="https://wine1.github.io/2020/09/06/js%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
     <id>https://wine1.github.io/2020/09/06/js%E9%9D%A2%E8%AF%95%E9%A2%98/</id>
     <published>2020-09-06T10:25:21.000Z</published>
-    <updated>2020-09-13T12:13:51.179Z</updated>
+    <updated>2020-11-23T14:45:14.743Z</updated>
     
-    <content type="html"><![CDATA[<p>1.简述同步和异步的区别<br>2.怎么添加、移除、复制、创建、和查找节点<br>3.实现一个函数clone 可以对Javascript中的五种主要数据类型（Number、string、Object、Array、Boolean）进行复制<br>4.如何消除一个数组里面重复的元素<br>5.写一个返回闭包的函数<br>6.使用递归完成1到100的累加<br>7.Javascript有哪几种数据类型<br>8.如何判断数据类型<br>9.console.log(1+’2’)和console.log(1-‘2’)的打印结果<br>10.Js的事件委托是什么，原理是什么<br>11.如何改变函数内部的this指针的指向<br>12.列举几种解决跨域问题的方式，且说明原理<br>13.谈谈垃圾回收机制的方式及内存管理<br>14.写一个function ，清除字符串前后的空格<br>15.js实现继承的方法有哪些<br>16.判断一个变量是否是数组，有哪些办法<br>17.let ，const ，var 有什么区别<br>18.箭头函数与普通函数有什么区别<br>19.随机取1-10之间的整数<br>20.new操作符具体干了什么<br>21.Ajax原理<br>22.模块化开发怎么做<br>23.异步加载Js的方式有哪些<br>24.xml和 json的区别<br>25.webpack如何实现打包的<br>26.常见web安全及防护原理<br>27.用过哪些设计模式<br>28.为什么要同源限制<br>29.offsetWidth/offsetHeight,clientWidth/clientHeight与scrollWidth/scrollHeight的区别<br>30.javascript有哪些方法定义对象<br>31.说说你对promise的了解<br>32.谈谈你对AMD、CMD的理解<br>33.web开发中会话跟踪的方法有哪些<br>34.介绍js有哪些内置对象？<br>35.说几条写JavaScript的基本规范？<br>36.javascript创建对象的几种方式？<br>37.eval是做什么的？<br>38.null，undefined 的区别？<br>39.[“1”, “2”, “3”].map(parseInt) 答案是多少？<br>40.javascript 代码中的”use strict”;是什么意思 ? 使用它区别是什么？<br>41.js延迟加载的方式有哪些？<br>42.defer和async<br>43.说说严格模式的限制<br>44.attribute和property的区别是什么？<br>45.ECMAScript6 怎么写class么，为什么会出现class这种东西?<br>46.常见兼容性问题<br>47.函数防抖节流的原理<br>48.原始类型有哪几种？null是对象吗？<br>49.为什么console.log(0.2+0.1==0.3) //false<br>50.说一下JS中类型转换的规则？<br>51.深拷贝和浅拷贝的区别？如何实现<br>52.如何判断this？箭头函数的this是什么<br>53.== 和 ===的区别<br>54.什么是闭包<br>55.JavaScript原型，原型链 ? 有什么特点？<br>56.typeof()和instanceof()的用法区别<br>57.什么是变量提升<br>58.all、apply以及bind函数内部实现是怎么样的<br>59.为什么会出现setTimeout倒计时误差？如何减少<br>60.谈谈你对JS执行上下文栈和作用域链的理解<br>61.new的原理是什么？通过new的方式创建对象和通过字面量创建有什么区别？<br>62.prototype 和 proto 区别是什么？<br>63.使用ES5实现一个继承？<br>64.取数组的最大值（ES5、ES6）<br>65.ES6新的特性有哪些？<br>66.promise 有几种状态, Promise 有什么优缺点 ?<br>67.Promise构造函数是同步还是异步执行，then呢 ?promise如何实现then处理 ?<br>68.Promise和setTimeout的区别 ?<br>69.如何实现 Promise.all ?<br>70.如何实现 Promise.finally ?<br>71.如何判断img加载完成<br>72.如何阻止冒泡？<br>73.如何阻止默认事件？<br>74.ajax请求时，如何解释json数据<br>75.json和jsonp的区别?<br>76.如何用原生js给一个按钮绑定两个onclick事件？<br>77.拖拽会用到哪些事件<br>78.document.write和innerHTML的区别<br>79.jQuery的事件委托方法bind 、live、delegate、on之间有什么区别？<br>80.浏览器是如何渲染页面的？<br>81.$(document).ready()方法和window.onload有什么区别？<br>82.jquery中.get()提交和post()提交有区别吗？<br>83.对前端路由的理解？前后端路由的区别？<br>84.手写一个类的继承<br>85.XMLHttpRequest：XMLHttpRequest.readyState;状态码的意思</p>]]></content>
+    <content type="html"><![CDATA[<p>js面试题集锦</p><a id="more"></a><p>1.简述同步和异步的区别<br>2.怎么添加、移除、复制、创建、和查找节点<br>3.实现一个函数clone 可以对Javascript中的五种主要数据类型（Number、string、Object、Array、Boolean）进行复制<br>4.如何消除一个数组里面重复的元素<br>5.写一个返回闭包的函数<br>6.使用递归完成1到100的累加<br>7.Javascript有哪几种数据类型<br>8.如何判断数据类型<br>9.console.log(1+’2’)和console.log(1-‘2’)的打印结果<br>10.Js的事件委托是什么，原理是什么<br>11.如何改变函数内部的this指针的指向<br>12.列举几种解决跨域问题的方式，且说明原理<br>13.谈谈垃圾回收机制的方式及内存管理<br>14.写一个function ，清除字符串前后的空格<br>15.js实现继承的方法有哪些<br>16.判断一个变量是否是数组，有哪些办法<br>17.let ，const ，var 有什么区别<br>18.箭头函数与普通函数有什么区别<br>19.随机取1-10之间的整数<br>20.new操作符具体干了什么<br>21.Ajax原理<br>22.模块化开发怎么做<br>23.异步加载Js的方式有哪些<br>24.xml和 json的区别<br>25.webpack如何实现打包的<br>26.常见web安全及防护原理<br>27.用过哪些设计模式<br>28.为什么要同源限制<br>29.offsetWidth/offsetHeight,clientWidth/clientHeight与scrollWidth/scrollHeight的区别<br>30.javascript有哪些方法定义对象<br>31.说说你对promise的了解<br>32.谈谈你对AMD、CMD的理解<br>33.web开发中会话跟踪的方法有哪些<br>34.介绍js有哪些内置对象？<br>35.说几条写JavaScript的基本规范？<br>36.javascript创建对象的几种方式？<br>37.eval是做什么的？<br>38.null，undefined 的区别？<br>39.[“1”, “2”, “3”].map(parseInt) 答案是多少？<br>40.javascript 代码中的”use strict”;是什么意思 ? 使用它区别是什么？<br>41.js延迟加载的方式有哪些？<br>42.defer和async<br>43.说说严格模式的限制<br>44.attribute和property的区别是什么？<br>45.ECMAScript6 怎么写class么，为什么会出现class这种东西?<br>46.常见兼容性问题<br>47.函数防抖节流的原理<br>48.原始类型有哪几种？null是对象吗？<br>49.为什么console.log(0.2+0.1==0.3) //false<br>50.说一下JS中类型转换的规则？<br>51.深拷贝和浅拷贝的区别？如何实现<br>52.如何判断this？箭头函数的this是什么<br>53.== 和 ===的区别<br>54.什么是闭包<br>55.JavaScript原型，原型链 ? 有什么特点？<br>56.typeof()和instanceof()的用法区别<br>57.什么是变量提升<br>58.all、apply以及bind函数内部实现是怎么样的<br>59.为什么会出现setTimeout倒计时误差？如何减少<br>60.谈谈你对JS执行上下文栈和作用域链的理解<br>61.new的原理是什么？通过new的方式创建对象和通过字面量创建有什么区别？<br>62.prototype 和 proto 区别是什么？<br>63.使用ES5实现一个继承？<br>64.取数组的最大值（ES5、ES6）<br>65.ES6新的特性有哪些？<br>66.promise 有几种状态, Promise 有什么优缺点 ?<br>67.Promise构造函数是同步还是异步执行，then呢 ?promise如何实现then处理 ?<br>68.Promise和setTimeout的区别 ?<br>69.如何实现 Promise.all ?<br>70.如何实现 Promise.finally ?<br>71.如何判断img加载完成<br>72.如何阻止冒泡？<br>73.如何阻止默认事件？<br>74.ajax请求时，如何解释json数据<br>75.json和jsonp的区别?<br>76.如何用原生js给一个按钮绑定两个onclick事件？<br>77.拖拽会用到哪些事件<br>78.document.write和innerHTML的区别<br>79.jQuery的事件委托方法bind 、live、delegate、on之间有什么区别？<br>80.浏览器是如何渲染页面的？<br>81.$(document).ready()方法和window.onload有什么区别？<br>82.jquery中.get()提交和post()提交有区别吗？<br>83.对前端路由的理解？前后端路由的区别？<br>84.手写一个类的继承<br>85.XMLHttpRequest：XMLHttpRequest.readyState;状态码的意思</p>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;p&gt;1.简述同步和异步的区别&lt;br&gt;2.怎么添加、移除、复制、创建、和查找节点&lt;br&gt;3.实现一个函数clone 可以对Javascript中的五种主要数据类型（Number、string、Object、Array、Boolean）进行复制&lt;br&gt;4.如何消除一个数组里面重复的
-      
+      &lt;p&gt;js面试题集锦&lt;/p&gt;
     
     </summary>
     
@@ -259,16 +242,13 @@
     <link href="https://wine1.github.io/2020/08/12/leetcode%E4%B9%8B%E6%95%B0%E7%BB%84/"/>
     <id>https://wine1.github.io/2020/08/12/leetcode%E4%B9%8B%E6%95%B0%E7%BB%84/</id>
     <published>2020-08-12T15:36:36.000Z</published>
-    <updated>2020-08-12T15:36:51.074Z</updated>
+    <updated>2020-11-23T14:52:19.943Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="leetcode——数组类知识点及题型总结"><a href="#leetcode——数组类知识点及题型总结" class="headerlink" title="leetcode——数组类知识点及题型总结"></a>leetcode——数组类知识点及题型总结</h2><p>很多题都能靠暴力解法 但是通常都会有时间复杂度或者空间复杂度超出限制的情况，因此都不予讨论</p><ol><li><p>k-sum类 如 第一题 twosum 计算数组中的哪些值得和能等于给定的target 有时候题目中会带有是否能重复使用一个值的限制</p><ul><li>hash 遍历数组 将每一个值存入hash表中 并检测hash表中是否有 target-nums[i] 的结果 如果有 则结果就是 i 和对应的hash表中的值 时间复杂度O(n)</li><li>two-points </li></ul></li><li><p>区间类</p></li></ol><ol start="3"><li>子数组类</li></ol>]]></content>
+    <content type="html"><![CDATA[<h2 id="leetcode——数组类知识点及题型总结"><a href="#leetcode——数组类知识点及题型总结" class="headerlink" title="leetcode——数组类知识点及题型总结"></a>leetcode——数组类知识点及题型总结</h2><p>很多题都能靠暴力解法 但是通常都会有时间复杂度或者空间复杂度超出限制的情况，因此都不予讨论</p><a id="more"></a><ol><li><p>k-sum类 如 第一题 twosum 计算数组中的哪些值得和能等于给定的target 有时候题目中会带有是否能重复使用一个值的限制</p><ul><li>hash 遍历数组 将每一个值存入hash表中 并检测hash表中是否有 target-nums[i] 的结果 如果有 则结果就是 i 和对应的hash表中的值 时间复杂度O(n)</li><li>two-points </li></ul></li><li><p>区间类</p></li></ol><ol start="3"><li>子数组类</li></ol>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;h2 id=&quot;leetcode——数组类知识点及题型总结&quot;&gt;&lt;a href=&quot;#leetcode——数组类知识点及题型总结&quot; class=&quot;headerlink&quot; title=&quot;leetcode——数组类知识点及题型总结&quot;&gt;&lt;/a&gt;leetcode——数组类知识点及题型总结&lt;/
-      
+      &lt;h2 id=&quot;leetcode——数组类知识点及题型总结&quot;&gt;&lt;a href=&quot;#leetcode——数组类知识点及题型总结&quot; class=&quot;headerlink&quot; title=&quot;leetcode——数组类知识点及题型总结&quot;&gt;&lt;/a&gt;leetcode——数组类知识点及题型总结&lt;/h2&gt;&lt;p&gt;很多题都能靠暴力解法 但是通常都会有时间复杂度或者空间复杂度超出限制的情况，因此都不予讨论&lt;/p&gt;
     
     </summary>
     
@@ -316,9 +296,9 @@
     
     
     
-      <category term="前端" scheme="https://wine1.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
-    
       <category term="css" scheme="https://wine1.github.io/tags/css/"/>
+    
+      <category term="前端" scheme="https://wine1.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
@@ -367,32 +347,7 @@
     
     
     
-      <category term="前端" scheme="https://wine1.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
-    
       <category term="css" scheme="https://wine1.github.io/tags/css/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>async/await</title>
-    <link href="https://wine1.github.io/2020/07/15/async-await/"/>
-    <id>https://wine1.github.io/2020/07/15/async-await/</id>
-    <published>2020-07-15T15:32:12.000Z</published>
-    <updated>2020-07-15T15:38:44.441Z</updated>
-    
-    <content type="html"><![CDATA[<p>async/await是一对强大的异步工具<br>async 表示这是一个async函数，await只能用在这个函数里面。<br>await 表示在这里等待promise返回结果了，再继续执行。<br>await 后面跟着的应该是一个promise对象</p><p>await等待的虽然是promise对象，但不必写.then(..)，直接可以得到返回值。</p><p>捕捉错误<br>既然.then(..)不用写了，那么.catch(..)也不用写，可以直接用标准的try catch语法捕捉错误。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;async/await是一对强大的异步工具&lt;br&gt;async 表示这是一个async函数，await只能用在这个函数里面。&lt;br&gt;await 表示在这里等待promise返回结果了，再继续执行。&lt;br&gt;await 后面跟着的应该是一个promise对象&lt;/p&gt;
-&lt;p&gt;awa
-      
-    
-    </summary>
-    
-    
     
       <category term="前端" scheme="https://wine1.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
     
@@ -482,6 +437,35 @@
     <summary type="html">
     
       &lt;h2 id=&quot;小程序加腾讯云实时音视频&quot;&gt;&lt;a href=&quot;#小程序加腾讯云实时音视频&quot; class=&quot;headerlink&quot; title=&quot;小程序加腾讯云实时音视频&quot;&gt;&lt;/a&gt;小程序加腾讯云实时音视频&lt;/h2&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="前端" scheme="https://wine1.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>js遍历</title>
+    <link href="https://wine1.github.io/2020/06/12/js%E9%81%8D%E5%8E%86/"/>
+    <id>https://wine1.github.io/2020/06/12/js%E9%81%8D%E5%8E%86/</id>
+    <published>2020-06-12T14:40:45.000Z</published>
+    <updated>2020-06-12T14:42:05.969Z</updated>
+    
+    <content type="html"><![CDATA[<p>foreach和map的区别</p><ol><li><code>foreach</code><br>foreach没有返回值</li></ol><ol start="2"><li><code>map</code><br>映射 跟foreach用法类似 返回一个新数组</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;foreach和map的区别&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;foreach&lt;/code&gt;&lt;br&gt;foreach没有返回值&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ol start=&quot;2&quot;&gt;
+&lt;li&gt;&lt;code&gt;map&lt;/code&gt;&lt;br&gt;映射 跟foreach用法类似 返回一个新数
+      
     
     </summary>
     

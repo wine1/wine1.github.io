@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="https://wine1.github.io">
   <title>typescript | 哦。</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="类型思维强类型语言：强类型语言在没有强制类型转化前，不允许两种不同类型的变量相互操作。弱类型语言：弱类型语言允许将一块内存看做多种类型。比如直接将整型变量与字符变量相加。 静态类型语言：编译阶段确定所有变量的类型动态类型语言：执行阶段确定所有变量的类型（js） 具体解释">
+  <meta name="description" content="类型思维强类型语言：强类型语言在没有强制类型转化前，不允许两种不同类型的变量相互操作。弱类型语言：弱类型语言允许将一块内存看做多种类型。比如直接将整型变量与字符变量相加。 静态类型语言：编译阶段确定所有变量的类型动态类型语言：执行阶段确定所有变量的类型（js） 具体解释  基本类型：枚举：    一个有名字的常量集合，类似通过通讯录，只需要记住名字而不必在意具体数据    提高可读性和可维护性">
 <meta name="keywords" content="前端">
 <meta property="og:type" content="article">
 <meta property="og:title" content="typescript">
 <meta property="og:url" content="https://wine1.github.io/2019/08/21/typescript-1/index.html">
 <meta property="og:site_name" content="哦。">
-<meta property="og:description" content="类型思维强类型语言：强类型语言在没有强制类型转化前，不允许两种不同类型的变量相互操作。弱类型语言：弱类型语言允许将一块内存看做多种类型。比如直接将整型变量与字符变量相加。 静态类型语言：编译阶段确定所有变量的类型动态类型语言：执行阶段确定所有变量的类型（js） 具体解释">
+<meta property="og:description" content="类型思维强类型语言：强类型语言在没有强制类型转化前，不允许两种不同类型的变量相互操作。弱类型语言：弱类型语言允许将一块内存看做多种类型。比如直接将整型变量与字符变量相加。 静态类型语言：编译阶段确定所有变量的类型动态类型语言：执行阶段确定所有变量的类型（js） 具体解释  基本类型：枚举：    一个有名字的常量集合，类似通过通讯录，只需要记住名字而不必在意具体数据    提高可读性和可维护性">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-09-20T08:39:15.376Z">
+<meta property="og:updated_time" content="2020-11-23T14:49:53.881Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="typescript">
-<meta name="twitter:description" content="类型思维强类型语言：强类型语言在没有强制类型转化前，不允许两种不同类型的变量相互操作。弱类型语言：弱类型语言允许将一块内存看做多种类型。比如直接将整型变量与字符变量相加。 静态类型语言：编译阶段确定所有变量的类型动态类型语言：执行阶段确定所有变量的类型（js） 具体解释">
+<meta name="twitter:description" content="类型思维强类型语言：强类型语言在没有强制类型转化前，不允许两种不同类型的变量相互操作。弱类型语言：弱类型语言允许将一块内存看做多种类型。比如直接将整型变量与字符变量相加。 静态类型语言：编译阶段确定所有变量的类型动态类型语言：执行阶段确定所有变量的类型（js） 具体解释  基本类型：枚举：    一个有名字的常量集合，类似通过通讯录，只需要记住名字而不必在意具体数据    提高可读性和可维护性">
   
     <link rel="alternative" href="/atom.xml" title="哦。" type="application/atom+xml">
   
@@ -185,10 +185,11 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="类型思维"><a href="#类型思维" class="headerlink" title="类型思维"></a>类型思维</h2><p>强类型语言：强类型语言在没有强制类型转化前，不允许两种不同类型的变量相互操作。<br>弱类型语言：弱类型语言允许将一块内存看做多种类型。比如直接将整型变量与字符变量相加。</p>
+        <a id="more"></a>
+<h2 id="类型思维"><a href="#类型思维" class="headerlink" title="类型思维"></a>类型思维</h2><p>强类型语言：强类型语言在没有强制类型转化前，不允许两种不同类型的变量相互操作。<br>弱类型语言：弱类型语言允许将一块内存看做多种类型。比如直接将整型变量与字符变量相加。</p>
 <p>静态类型语言：编译阶段确定所有变量的类型<br>动态类型语言：执行阶段确定所有变量的类型（js）</p>
 <p><a href="https://blog.csdn.net/csdn799316120/article/details/79234272" target="_blank" rel="noopener">具体解释</a></p>
-<a id="more"></a>
+<!-- more -->
 <h2 id="基本类型："><a href="#基本类型：" class="headerlink" title="基本类型："></a>基本类型：</h2><p>枚举：<br>    一个有名字的常量集合，类似通过通讯录，只需要记住名字而不必在意具体数据<br>    提高可读性和可维护性<br>    分为数字枚举和字符串枚举<br>    枚举的实现原理 反向映射<br>    字符串枚举不能反向映射<br>    数字枚举和字符串枚举一起使用 异构枚举</p>
 <p>接口：<br>TypeScript的核心原则之一是对值所具有的结构进行类型检查。 它有时被称做“鸭式辨型法”或“结构性子类型化”。 在TypeScript里，接口的作用就是为这些类型命名和为你的代码或第三方代码定义契约。</p>
 
@@ -436,19 +437,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">css</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">ES6</a>
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">工作总结</a>
+                <a href="javascript:void(0)" class="js-tag color4">ES6</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -460,19 +457,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">linux</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">node.js</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">兼容性</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -504,10 +493,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">基础</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">数据库</a>
               </li>
              
@@ -516,7 +501,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">杂</a>
+                <a href="javascript:void(0)" class="js-tag color5">-css</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -529,6 +514,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">基础知识</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">工作总结</a>
               </li>
             
             <div class="clearfix"></div>

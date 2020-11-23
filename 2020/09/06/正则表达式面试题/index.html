@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="https://wine1.github.io">
   <title>正则表达式面试题 | 哦。</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="正则表达式常见面试题 1.给一个连字符串例如：get-element-by-id转化成驼峰形式。2.匹配二进制数字3.非零的十进制数字 (有至少一位数字, 但是不能以0开头)4.匹配一年中的12个月5.匹配qq号最长为13为6.匹配常见的固定电话号码7.匹配ip地址8.匹配用尖括号括起来的以a开头的字符串9.分割数字每三个以一个逗号划分10.判断字符串是否包含数字11.判断电话号码12.判断是否符">
+  <meta name="description" content="菜鸟教程的正则表达式教程正则表达式，我实在不知道要把它归类在哪个分类里。以后肯定还会有一些不知道怎么分类的文章，索性开个新分类–杂哈哈哈">
 <meta name="keywords" content="前端">
 <meta property="og:type" content="article">
 <meta property="og:title" content="正则表达式面试题">
 <meta property="og:url" content="https://wine1.github.io/2020/09/06/正则表达式面试题/index.html">
 <meta property="og:site_name" content="哦。">
-<meta property="og:description" content="正则表达式常见面试题 1.给一个连字符串例如：get-element-by-id转化成驼峰形式。2.匹配二进制数字3.非零的十进制数字 (有至少一位数字, 但是不能以0开头)4.匹配一年中的12个月5.匹配qq号最长为13为6.匹配常见的固定电话号码7.匹配ip地址8.匹配用尖括号括起来的以a开头的字符串9.分割数字每三个以一个逗号划分10.判断字符串是否包含数字11.判断电话号码12.判断是否符">
+<meta property="og:description" content="菜鸟教程的正则表达式教程正则表达式，我实在不知道要把它归类在哪个分类里。以后肯定还会有一些不知道怎么分类的文章，索性开个新分类–杂哈哈哈">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-09-13T12:14:02.766Z">
+<meta property="og:updated_time" content="2020-11-23T14:30:30.427Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="正则表达式面试题">
-<meta name="twitter:description" content="正则表达式常见面试题 1.给一个连字符串例如：get-element-by-id转化成驼峰形式。2.匹配二进制数字3.非零的十进制数字 (有至少一位数字, 但是不能以0开头)4.匹配一年中的12个月5.匹配qq号最长为13为6.匹配常见的固定电话号码7.匹配ip地址8.匹配用尖括号括起来的以a开头的字符串9.分割数字每三个以一个逗号划分10.判断字符串是否包含数字11.判断电话号码12.判断是否符">
+<meta name="twitter:description" content="菜鸟教程的正则表达式教程正则表达式，我实在不知道要把它归类在哪个分类里。以后肯定还会有一些不知道怎么分类的文章，索性开个新分类–杂哈哈哈">
   
     <link rel="alternative" href="/atom.xml" title="哦。" type="application/atom+xml">
   
@@ -185,7 +185,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>正则表达式常见面试题</p>
+        <p><a href="http://www.runoob.com/regexp/regexp-syntax.html" target="_blank" rel="noopener">菜鸟教程的正则表达式教程</a><br>正则表达式，我实在不知道要把它归类在哪个分类里。<br>以后肯定还会有一些不知道怎么分类的文章，索性开个新分类–杂<br>哈哈哈</p>
+<a id="more"></a>
+<p>正则表达式的作用总结起来就两个字，匹配。<br><strong>常见匹配方式</strong><br>/d 匹配0到9内的任意数字 字符组的简写形式<br>[0-9] 匹配0到9内的任意数字 字符组匹配<br>. 可以匹配任意字符 通配符<br><strong><em>将内容放在圆括号中</em></strong>捕获分组和<strong><em>\1</em></strong>向后引用<br>通常可以将简写式取反，取反的结果就是排除。如<code>\d</code>是匹配任意数字<code>\D</code>则用来匹配任意非数字字符<br>在匹配的过程中使用量词<br>匹配的过程离不开元字符，元字符可以说是基础了。</p>
+<p>###元字符###<br><a href="http://www.runoob.com/regexp/regexp-metachar.html" target="_blank" rel="noopener">菜鸟教程中关于元字符的详细介绍</a></p>
+<p>然后就是匹配规则之类的东西，看起来很复杂，但是实际上就是一个熟能生巧的过程，用多了之后就能一目了然了</p>
+<p>正则表达式常见面试题</p>
 <p>1.给一个连字符串例如：get-element-by-id转化成驼峰形式。<br>2.匹配二进制数字<br>3.非零的十进制数字 (有至少一位数字, 但是不能以0开头)<br>4.匹配一年中的12个月<br>5.匹配qq号最长为13为<br>6.匹配常见的固定电话号码<br>7.匹配ip地址<br>8.匹配用尖括号括起来的以a开头的字符串<br>9.分割数字每三个以一个逗号划分<br>10.判断字符串是否包含数字<br>11.判断电话号码<br>12.判断是否符合指定格式<br>13.判断是否符合USD格式<br>14.JS实现千位分隔符<br>15.获取 url 参数<br>16.验证邮箱<br>17.验证身份证号码<br>18.匹配汉字<br>19.去除首尾的’/‘<br>20.判断日期格式是否符合 ‘2017-05-11’的形式，简单判断，只判断格式<br>21.判断日期格式是否符合 ‘2017-05-11’的形式，严格判断（比较复杂）<br>22.IPv4地址正则<br>23.十六进制颜色正则<br>24.车牌号正则<br>25.过滤HTML标签<br>26.密码强度正则，最少6位，包括至少1个大写字母，1个小写字母，1个数字，1个特殊字符<br>27.URL正则<br>28.匹配浮点数</p>
 
       
@@ -432,19 +437,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">css</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">ES6</a>
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">工作总结</a>
+                <a href="javascript:void(0)" class="js-tag color4">ES6</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -456,19 +457,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">linux</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">node.js</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">兼容性</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -500,10 +493,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">基础</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">数据库</a>
               </li>
              
@@ -512,7 +501,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">杂</a>
+                <a href="javascript:void(0)" class="js-tag color5">-css</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -525,6 +514,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">基础知识</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">工作总结</a>
               </li>
             
             <div class="clearfix"></div>
