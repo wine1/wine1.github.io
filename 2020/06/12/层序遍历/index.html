@@ -17,7 +17,7 @@
 <meta property="og:description" content="小余同学给讲的层次遍历">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://wine1.github.io/2020/06/12/层序遍历/tu1.png">
-<meta property="og:updated_time" content="2020-11-21T15:23:14.329Z">
+<meta property="og:updated_time" content="2021-01-16T13:00:53.028Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="层序遍历">
 <meta name="twitter:description" content="小余同学给讲的层次遍历">
@@ -194,11 +194,9 @@
 <p>Leetcode里面的代码其实就是给定你数据结构的定义，你只要能了解就可以用</p>
 <p>其实是这样的<br>Struct Node{<br>   Int val;<br>   Node left;<br>   Node right；<br>}</p>
 <p>Root也是Node类型是给定的二叉树的根 二叉树的结构已经通过left和right定义好 比如上面root.left（也是一个Node型变量）代表它的左孩子，root.left.val 代表左孩子的结点的值是4，root.right.val=2</p>
-<p>传入函数的是根结点<br>var levelOrderBottom = function(root) {<br>  if(!root)return []; //如果根是空节点 retrun 空的数组<br>  let queue=[root]; //根入列<br>  let res=[];<br>  let level=0; //记录层数初始值为0<br>  while(queue.length){  //当队列不为空时<br>    let temp=[];//临时变量用来存放下一层的所有节点<br>    res[level]=[];//某一层的层序遍历结果<br>    for(let i=0;i&lt;queue.length;i++){ //遍历某一层的节点<br>      res[level].push(queue[i].val);//将此节点入本层队列<br>      if(queue[i].left){<br>        temp.push(queue[i].left); //将左孩子（即下一层）入temp队列<br>      }<br>      if(queue[i].right){<br>        temp.push(queue[i].right);// 将右孩子（即下一层）入temp队列</p>
-<pre><code>  }
-}
-queue=temp; //此时temp里就有下一层按从左到右顺序的所有节点将它赋值给queue，接着重复遍历queue直到空
-++level;//由于这一层的节点遍历完（跳出前面的for循环了），此时的queue是装的下一层节点所以层数加1</code></pre><p>  }<br>  return res.reverse();//由于层序是从上到下从左到右 题目是从下到上从右到左，过将层序结果reverse一下即可<br>};</p>
+<p>传入函数的是根结点</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">var levelOrderBottom = function(root) &#123;</span><br><span class="line">  if(!root)return []; //如果根是空节点 retrun 空的数组</span><br><span class="line">  let queue=[root]; //根入列</span><br><span class="line">  let res=[];</span><br><span class="line">  let level=0; //记录层数初始值为0</span><br><span class="line">  while(queue.length)&#123;  //当队列不为空时</span><br><span class="line">    let temp=[];//临时变量用来存放下一层的所有节点</span><br><span class="line">    res[level]=[];//某一层的层序遍历结果</span><br><span class="line">    for(let i=0;i&lt;queue.length;i++)&#123; //遍历某一层的节点</span><br><span class="line">      res[level].push(queue[i].val);//将此节点入本层队列</span><br><span class="line">      if(queue[i].left)&#123;</span><br><span class="line">        temp.push(queue[i].left); //将左孩子（即下一层）入temp队列</span><br><span class="line">      &#125;</span><br><span class="line">      if(queue[i].right)&#123;</span><br><span class="line">        temp.push(queue[i].right);// 将右孩子（即下一层）入temp队列</span><br><span class="line"></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    queue=temp; //此时temp里就有下一层按从左到右顺序的所有节点将它赋值给queue，接着重复遍历queue直到空</span><br><span class="line">    ++level;//由于这一层的节点遍历完（跳出前面的for循环了），此时的queue是装的下一层节点所以层数加1</span><br><span class="line">  &#125;</span><br><span class="line">  return res.reverse();//由于层序是从上到下从左到右 题目是从下到上从右到左，过将层序结果reverse一下即可 </span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
 <p>通过上面的二叉树模拟一下：<br>开始 queue 里面是 1节点 level是0，，res为空<br>当queue.length（1）不为0循环：<br>   Temp置空<br>   走for遍历这一层的节点；</p>
 <p>将 1节点放入res[level]队列 （level为0）<br>看看他的左右孩子是否存在，依次进入temp队列 此时temp是 4和2节点</p>
 <p>第一层遍历完了temp赋值给queue（4和2）,level++为1</p>
@@ -367,7 +365,7 @@ queue=temp; //此时temp里就有下一层按从左到右顺序的所有节点�
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2020 田京京呀~
+    		&copy; 2021 田京京呀~
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -474,11 +472,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">node.js</a>
+                <a href="javascript:void(0)" class="js-tag color1">linux</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">linux</a>
+                <a href="javascript:void(0)" class="js-tag color3">node.js</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -502,19 +500,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">java</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">算法</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">数据库</a>
+                <a href="javascript:void(0)" class="js-tag color5">java</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">数据库</a>
               </li>
              
               <li class="article-tag-list-item">
