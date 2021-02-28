@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="哦。">
 <meta property="og:description" content="函数防抖：实际上就是对于频繁触发的事件进行延时处理，只触发一次只响应一次，这样可以极大的提高性能 我们实现的思路就是：先设置一个计时器变量，用闭包保存，保证不会被内存释放，在事件触发的时候，也就是只要事件触发，先清除这个计时器，然后再设置一个，那么只要事件持续触发，刚刚建立的定时器就会被销毁，直到最后我们不在触发事件，就执行最后一次设置的定时器。 节流：限制触发频率当快速的点击抢购按钮的时候，数量">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-10-28T14:55:06.474Z">
+<meta property="og:updated_time" content="2021-01-24T14:40:26.169Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="前端性能优化之防抖">
 <meta name="twitter:description" content="函数防抖：实际上就是对于频繁触发的事件进行延时处理，只触发一次只响应一次，这样可以极大的提高性能 我们实现的思路就是：先设置一个计时器变量，用闭包保存，保证不会被内存释放，在事件触发的时候，也就是只要事件触发，先清除这个计时器，然后再设置一个，那么只要事件持续触发，刚刚建立的定时器就会被销毁，直到最后我们不在触发事件，就执行最后一次设置的定时器。 节流：限制触发频率当快速的点击抢购按钮的时候，数量">
@@ -188,6 +188,7 @@
         <p>函数防抖：实际上就是对于频繁触发的事件进行延时处理，只触发一次只响应一次，这样可以极大的提高性能</p>
 <p>我们实现的思路就是：先设置一个计时器变量，用闭包保存，保证不会被内存释放，在事件触发的时候，也就是只要事件触发，先清除这个计时器，然后再设置一个，那么只要事件持续触发，刚刚建立的定时器就会被销毁，直到最后我们不在触发事件，就执行最后一次设置的定时器。</p>
 <p>节流：限制触发频率<br>当快速的点击抢购按钮的时候，数量快速的增加，如果有人用脚本点击，那么这个数量会瞬间非常的大，造成性能问题。<br>那么我们就需要控制触发函数的频率，也就是节流，事件第一次触发的时候，记录下函数执行的时间点，当函数想要再一次执行，需要间隔一定的时间才能执行，也就是每间隔一定的时间，才能触发这个函数，而不能快速触发，这就是节流的方法。</p>
+<p><a href="https://wine1.github.io/2020/08/25/js%E4%B8%AD%E7%9A%84%E9%98%B2%E6%8A%96%E5%92%8C%E8%8A%82%E6%B5%81/">有代码版</a></p>
 
       
 
@@ -433,11 +434,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">css</a>
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+                <a href="javascript:void(0)" class="js-tag color4">css</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -477,15 +478,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">es6</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">算法</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">java</a>
               </li>
              
               <li class="article-tag-list-item">

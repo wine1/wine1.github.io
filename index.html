@@ -165,6 +165,161 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-面经收集" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/02/28/面经收集/">面经收集</a>
+    </h1>
+  
+
+        
+        <a href="/2021/02/28/面经收集/" class="archive-article-date">
+  	<time datetime="2021-02-28T14:18:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-02-28</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ol>
+<li><p>ES6中class是语法还是语法糖<br>class是语法糖 class本身指向构造函数，利用构造函数来实现更加清晰的结构</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">//class 实现类的继承</span><br><span class="line">class Person &#123;</span><br><span class="line">	constructor (name, sex) &#123;</span><br><span class="line">		this.name = name</span><br><span class="line">		this.sex = sex</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">class Man extends Person &#123;</span><br><span class="line">	constructor (name) &#123;</span><br><span class="line">		super(&apos;&apos;, &apos;male&apos;)</span><br><span class="line">		this.name = name</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">let Jy = new Man(&apos;Jy&apos;)</span><br><span class="line"> </span><br><span class="line">console.log(Jy.name, Jy.sex) // Jy, &apos;male&apos;</span><br><span class="line"></span><br><span class="line">//用es6的语法重写上述代码</span><br><span class="line"></span><br><span class="line">function person(name,sex) &#123;</span><br><span class="line">    this.name=name</span><br><span class="line">    this.sex=sex</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function Man(name) &#123;</span><br><span class="line">    this.name=name</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Man.prototype=new Person(&apos;&apos;,&apos;male&apos;)</span><br><span class="line">let Jy=new Man(&apos;Jy)</span><br><span class="line">console.log(Jy.name, Jy.sex) // Jy, mal</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>ES6语法最后会转成ES5执行，是通过什么工具实现的<br>babel</p>
+</li>
+<li><p>手写extends这个关键字是通过什么实现的 🌟<br>prototype</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">// 声明一个父类 person</span><br><span class="line">function Person(name,sex)&#123;</span><br><span class="line">	this.name=name</span><br><span class="line">	this.sex=sex</span><br><span class="line">	this.run=function()&#123;</span><br><span class="line">		conso.log(this.name+&apos;run&apos;)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//原型链继承</span><br><span class="line">function Man()&#123;&#125;</span><br><span class="line">Man.prototype=new Person()</span><br><span class="line">Man.prototype.name=&quot;joe&quot;</span><br><span class="line">let man=new Man()</span><br><span class="line">man.run()</span><br><span class="line">Man.prototype.jump=function()&#123;</span><br><span class="line">    console.log(this.name+&apos;jump&apos;)</span><br><span class="line">&#125;</span><br><span class="line">Man.prototype.jump()</span><br><span class="line">console.log(Man.prototype)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>原型的终点是哪里<br>可以用以下三句话来理解原型链：</p>
+<ul>
+<li>每个对象都拥有一个原型对象: newObj的原型是foo.prototype。</li>
+<li>对象的原型可能也是继承其他原型对象的: foo.prototype也有它的原型Object.prototype。</li>
+<li>一层一层的，以此类推，这种关系就是原型链。<br>原型链的终点是 Object.prototype</li>
+</ul>
+</li>
+<li><p>typeof和instanceof有什么区别 typeof null /array都是什么？🌟<br>typeof可以得出变量的类型 而instanceof可以得出变量是否在对象的原型链上<br>typeof null/array 都是object类型<br>构造/new调用函数的时候做了什么：</p>
+</li>
+<li><p>创建一个全新的对象。🌟<br>这个新对象的原型(Object.getPrototypeOf(target))指向构造函数的prototype对象。<br>该函数的this会绑定在新创建的对象上。<br>如果函数没有返回其他对象，那么new表达式中的函数调用会自动返回这个新对象。<br>我们称这个新对象为构造函数的实例。</p>
+</li>
+<li><p>vue一个父组件包了两个子组件，只关注两个生命周期beforMounted和mounted，这三个组件的两个生命周期的执行顺序<br>父beforeCreate-&gt;父created-&gt;父beforeMount-&gt;子beforeCreate-&gt;子created-&gt;子beforeMount-&gt;子mounted-&gt;父mounted</p>
+</li>
+<li><p>子组件插槽this指向是怎么实现的 ❓</p>
+</li>
+<li><p>scoped是怎么实现的<br>通过 Webpack 调用 VueJS 中相应 Loader , 给组件HTML模板添加自定义属性 (Attribute) data-v-x, 以及给组件内CSS选择器添加对应的属性选择器 (Attribute Selector) [data-v-x], 达到组件内样式只能生效与组件内HTML的效果</p>
+</li>
+<li><p>ajax熟悉吗？get和post的区别<br>get请求url是明文的，不适合用来做涉及敏感信息的请求 get的数据可以缓存<br>post请求可以发送更多数据<br><a href="https://www.zhihu.com/question/28586791" target="_blank" rel="noopener">https://www.zhihu.com/question/28586791</a></p>
+</li>
+<li><p>CORS简单请求和非简单请求 ❓</p>
+</li>
+<li><p>前端怎么ajax带cookie 🌟</p>
+</li>
+<li><p>ajax同域请求下，ajax会自动带上同源的cookie；</p>
+</li>
+</ol>
+<p>2.ajax同域请求下，ajax添加自定义请求头（或原装）header，前端、后台不需要增加任何配置，<br>并且不会因为增加自定义请求头header，而引起预检查请求（options）;</p>
+<p>3.ajax跨域请求下，如果不需要携带cookie、请求头header，只需要在后台配置相应参数即可；<br>    后台参数：<br>    （1）.Access-Control-Allow-Origin：设置允许跨域的配置， 响应头指定了该响应的资源是否被允许与给定的origin共享；</p>
+<p>4.ajax跨域请求下，ajax不会自动携带同源的cookie，需要通过前端配置相应参数才可以跨域携带同源cookie，后台配置相应参数才可以跨域返回同源cookie；<br>前端参数：<br>    withCredentials: true(发送Ajax时，Request header中会带上Cookie信息)<br>后台参数：<br>    （1）.Access-Control-Allow-Origin：设置允许跨域的配置， 响应头指定了该响应的资源是否被允许与给定的origin共享；<br>        特别说明：配置了Access-Control-Allow-Credentials:true则不能把Access-Control-Allow-Origin设置为通配符*；<br>    （2）.Access-Control-Allow-Credentials：响应头表示是否可以将对请求的响应暴露给页面（cookie）。返回true则可以，其他值均不可以。</p>
+<p>5.ajax请求任何时候都不会带上不同源的cookie（Cookie遵循同源策略）；</p>
+<p>6.ajax跨域请求下，ajax添加自定义或者原装的请求头，请求会发送两次，第一次预检查请求，第二次正常请求，详细描述：<br>post（或GET）跨域请求时，分为简单请求和复杂请求，跨域携带自定义或者原装请求头头时是复杂请求。<br>复杂请求会先发送一个method 为option的请求，目的是试探服务器是否接受发起的请求. 如果服务器说可以，再进行post（或GET）请求。<br>对于java后台web应用，跨域需要添加一个过滤器（过滤器详见下面案例代码），这个过滤器做的事就是，加了几个http header在返回中，<br>Access-Control-Allow-Origin 我能接受的跨域请求来源，配置主机名<br>Access-Control-Allow-Headers 表示能接受的http头部，别忘了加入你自己发明创造的头部<br>Access-Control-Allow-Methods 表示能接受的http mothed ，反正就那几种，全写上也无妨，猥琐点就只写 post, options<br>如果是OPTION返回空，设置返回码为202，202表示通过。<br>需要前端配置相应参数才可以跨域携带请求头，后台配置相应参数进行跨域携带请求头；<br>前端参数：<br>    crossDomain:true(发送Ajax时，Request header 中会包含跨域的额外信息，但不会含cookie（作用不明，不会影响请求头的携带）)<br>后台参数（配置预检查过滤器）：<br>    （1）Access-Control-Allow-Origin：设置允许跨域的配置， 响应头指定了该响应的资源是否被允许与给定的origin共享；<br>    （2）Access-Control-Allow-Credentials：响应头表示是否可以将对请求的响应暴露给页面（cookie）。返回true则可以，其他值均不可以；<br>    （3）Access-Control-Allow-Headers:用于预检请求中，列出了将会在正式请求的 Access-Control-Request-Headers 字段中出现的首部信息。（自定义请求头）；<br>    （4）Access-Control-Allow-Methods：在对预检请求的应答中明确了客户端所要访问的资源允许使用的方法或方法列表；</p>
+<ol start="13">
+<li><p>跨域请求是浏览器的限制还是服务器的限制，跨域发出去能不能到服务器<br>首先我们要明确一个问题，请求跨域了，请求到底发出去没有？答案是肯定发出去了，但是浏览器拦截了响应。<br><a href="https://juejin.cn/post/6844903816060469262" target="_blank" rel="noopener">https://juejin.cn/post/6844903816060469262</a></p>
+</li>
+<li><p>prototype和<strong>proto</strong>的区别 🌟</p>
+</li>
+<li><p>Function和Object原型链上有什么关联关系</p>
+</li>
+<li><p>你觉得webpack是什么样的工具</p>
+</li>
+<li><p>js怎么改变this指向，有什么区别，手写实现一下apply<br>改变函数执行时的上下文<br>call 和 apply 的区别在于参数的写法，call可以接收任意个参数，apply的第二个参数只能是数组<br>bind 方法 与 apply 和 call 比较类似，也能改变函数体内的 this 指向。不同的是，bind 方法的返回值是函数，并且需要稍后调用，才会执行。而 apply 和 call 则是立即调用。</p>
+</li>
+<li><p>箭头函数里的this指向，有一道题输出console</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">function Person(name) &#123;</span><br><span class="line">this.name = name;</span><br><span class="line">&#125;</span><br><span class="line">Person.prototype.print = function() &#123;</span><br><span class="line">return this.name;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">Person(&apos;abc&apos;);</span><br><span class="line">const a = new Person(&apos;abc&apos;).print.call(&#123;&#125;);</span><br><span class="line">console.log(a);</span><br><span class="line"></span><br><span class="line">const fn = () =&gt; &#123;</span><br><span class="line">this.x = &apos;z&apos;;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">const b = &#123;x: &apos;y&apos;&#125;;</span><br><span class="line">fn.call(b);</span><br><span class="line">console.log(b);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>事件委托<br>把一个或者一组元素的事件委托到它的父层或者更外层元素上，真正绑定事件的是外层元素，当事件响应到需要绑定的元素上时，会通过事件冒泡机制从而触发它的外层元素的绑定事件上，然后在外层元素上去执行函数。</p>
+</li>
+<li><p>事件循环 手写eventloop 🌟</p>
+</li>
+<li><p>异步</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">async function async1()&#123;</span><br><span class="line">console.log(&apos;async1 start&apos;)</span><br><span class="line">await async2()</span><br><span class="line">console.log(&apos;async1 end&apos;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">async function async2()&#123;</span><br><span class="line">console.log(&apos;async2&apos;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">console.log(&apos;script start&apos;)</span><br><span class="line"></span><br><span class="line">setTimeout(function()&#123;</span><br><span class="line">console.log(&apos;setTimeOut&apos;)</span><br><span class="line">&#125;, 0)</span><br><span class="line"></span><br><span class="line">async1()</span><br><span class="line"></span><br><span class="line">new Promise(function(resolve)&#123;</span><br><span class="line">console.log(&apos;promise1&apos;)</span><br><span class="line">resolve()</span><br><span class="line">&#125;).then(function()&#123;</span><br><span class="line">console.log(&apos;promise2&apos;)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">console.log(&apos;script end&apos;)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>浏览器渲染机制，js阻塞渲染有什么优化方法<br>把js放在页面最后 按需加载</p>
+</li>
+<li><p>css垂直居中<br>verticaml-algin:middle<br>flex布局 algin-item:center</p>
+</li>
+<li><p>改变css属性什么会触发回流什么触发重绘 transform会回流吗<br>页面首次渲染<br>浏览器窗口大小发生改变<br>元素尺寸或位置发生改变<br>元素内容变化（文字数量或图片大小等等）<br>元素字体大小变化<br>添加或者删除可见的DOM元素<br>激活CSS伪类（例如：:hover）<br>查询某些属性或调用某些方法<br>transform不在布局层发生 所以不引发回流</p>
+</li>
+<li><p>怎么避免回流重绘有什么优化方法<br>CSS<br>避免使用table布局。<br>尽可能在DOM树的最末端改变class。<br>避免设置多层内联样式。<br>将动画效果应用到position属性为absolute或fixed的元素上。<br>避免使用CSS表达式（例如：calc()）。</p>
+</li>
+</ol>
+<p>JavaScript<br>避免频繁操作样式，最好一次性重写style属性，或者将样式列表定义为class并一次性更改class属性。<br>避免频繁操作DOM，创建一个documentFragment，在它上面应用所有DOM操作，最后再把它添加到文档中。<br>也可以先为元素设置display: none，操作结束后再把它显示出来。因为在display属性为none的元素上进行的DOM操作不会引发回流和重绘。<br>避免频繁读取会引发回流/重绘的属性，如果确实需要多次使用，就用一个变量缓存起来。<br>对具有复杂动画的元素使用绝对定位，使它脱离文档流，否则会引起父元素及后续元素频繁回流。</p>
+<ol start="25">
+<li>又一道题</li>
+</ol>
+<p>function M1() {<br>this.hello = ‘hello’;<br>}</p>
+<p>function M2() {<br>this.world -&amp;nbsp = ‘world’;<br>}<br>怎么实现一个多重继承。。可以在一个object对象即可以输出M1的hello也可以输出M2.world</p>
+<ol start="26">
+<li><p>了解过object.create()?然后问我怎么创建一个没有原型方法的空对象，特别干净的对象？（提示我我居然没想到。。。傻了，原型链的头是null直接Object.create(null)就行了。。。）<br><a href="https://juejin.cn/post/6844903589815517192" target="_blank" rel="noopener">https://juejin.cn/post/6844903589815517192</a></p>
+</li>
+<li><p>最长无重复字符子串</p>
+</li>
+</ol>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">面试</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/02/28/面经收集/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-js的宏任务和微任务" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -828,82 +983,6 @@
 
 
   
-    <article id="post-js中的防抖和节流" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/08/25/js中的防抖和节流/">js中的防抖和节流</a>
-    </h1>
-  
-
-        
-        <a href="/2020/08/25/js中的防抖和节流/" class="archive-article-date">
-  	<time datetime="2020-08-25T15:16:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-25</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>防抖和节流的原理和代码</p>
-        
-          <a class="article-more-a" href="/2020/08/25/js中的防抖和节流/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/08/25/js中的防抖和节流/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/16/">16</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -1005,11 +1084,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">css</a>
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+                <a href="javascript:void(0)" class="js-tag color4">css</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1049,15 +1128,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">es6</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">算法</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">java</a>
               </li>
              
               <li class="article-tag-list-item">

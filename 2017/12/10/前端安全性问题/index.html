@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="哦。">
 <meta property="og:description" content="今天不知道怎么突然想起来前端的安全性问题，之前遇到过这样的笔试题，了解过，但是感觉没明白，又忘记了，所以今天来做一个总结。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-11-21T15:56:49.483Z">
+<meta property="og:updated_time" content="2021-01-24T11:34:17.981Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="前端安全性问题">
 <meta name="twitter:description" content="今天不知道怎么突然想起来前端的安全性问题，之前遇到过这样的笔试题，了解过，但是感觉没明白，又忘记了，所以今天来做一个总结。">
@@ -189,12 +189,10 @@
 <a id="more"></a>
 
 <ol>
-<li>SQL注入：通过把SQL命令插入到Web表单提交或输入域名或页面请求的查询字符串，最终达到欺骗服务器执行恶意的SQL命令。<br>防护措施：前端页面要校验用户的输入数据，后端不要使用动态SQL语句，不要直接存放机密数据。（严格说，sql注入属于后端的安全问题）<ol start="2">
+<li>SQL注入：通过把SQL命令插入到Web表单提交或输入域名或页面请求的查询字符串，最终达到欺骗服务器执行恶意的SQL命令.防护措施：前端页面要校验用户的输入数据，后端不要使用动态SQL语句，不要直接存放机密数据。（严格说，sql注入属于后端的安全问题）</li>
 <li>XXS跨站脚本分析：攻击者将恶意脚本插入到网页中，网页会将这些恶意脚本当正常脚本来执行。所有可输入的地方没有处理输入的数据，就可能存在xxs漏洞。为了防护应该尽可能完善过滤体系。</li>
-<li>iframe风险<br>iframe中的内容是由第三方来提供的，默认情况下他们不受我们的控制，他们可以在iframe中运行JavaScirpt脚本、Flash插件、弹出对话框等等，这可能会破坏前端用户体验。如果iframe中的域名因为过期而被恶意攻击者抢注，或者第三方被黑客攻破，iframe中的内容被替换掉了，从而利用用户浏览器中的安全漏洞下载安装木马、恶意勒索软件，这样就会有很大的安全隐患了。</li>
-<li>CSRF 跨站请求伪造：CSRF攻击过程的受害者用户登录网站A，输入个人信息，在本地保存服务器生成的cookie。然后在A网站点击由攻击者构建一条恶意链接跳转到<br>B网站,然后B网站携带着的用户cookie信息去访问B网站.让A网站造成是用户自己访问的假相,从而来进行一些列的操作,常见的就是转账.</li>
-</ol>
-</li>
+<li>iframe风险 iframe中的内容是由第三方来提供的，默认情况下他们不受我们的控制，他们可以在iframe中运行JavaScirpt脚本、Flash插件、弹出对话框等等，这可能会破坏前端用户体验。如果iframe中的域名因为过期而被恶意攻击者抢注，或者第三方被黑客攻破，iframe中的内容被替换掉了，从而利用用户浏览器中的安全漏洞下载安装木马、恶意勒索软件，这样就会有很大的安全隐患了。</li>
+<li>CSRF 跨站请求伪造：CSRF攻击过程的受害者用户登录网站A，输入个人信息，在本地保存服务器生成的cookie。然后在A网站点击由攻击者构建一条恶意链接跳转到B网站,然后B网站携带着的用户cookie信息去访问B网站.让A网站造成是用户自己访问的假相,从而来进行一些列的操作,常见的就是转账.</li>
 </ol>
 <p>emm~ 大概暂时就这些了，当然还有别的安全问题，但是我好像不太能理解，粗略的浏览了一下，然后以后弄明白点了再补充吧</p>
 <p><strong>补充：前端安全性问题之跨域</strong><br>所谓的跨域，是为了避免前端安全性问题而做的同源策略引发的问题。<br>同域名、同端口、同协议视为同一个域，一个域内的脚本仅仅具有本域内的权限，可以理解为本域脚本只能读写本域内的资源，而无法访问其它域的资源。<br>否则，就是跨域。<br>在同源策略的限制下允许部分不遵循同源策略访问的方式就是跨域<br><a href="https://www.cnblogs.com/st-leslie/p/5958822.html" target="_blank" rel="noopener">这里是一篇我认为总结的很好的博客</a><br><a href="https://www.cnblogs.com/chillaxyw/p/5492763.html" target="_blank" rel="noopener">这是个跟我差不多情况的博主写的博客~</a></p>
@@ -457,11 +455,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">css</a>
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+                <a href="javascript:void(0)" class="js-tag color4">css</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -501,15 +499,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">es6</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">算法</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">java</a>
               </li>
              
               <li class="article-tag-list-item">
