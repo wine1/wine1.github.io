@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="https://wine1.github.io">
   <title>面经收集 | 哦。</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="ES6中class是语法还是语法糖class是语法糖 class本身指向构造函数，利用构造函数来实现更加清晰的结构 123456789101112131415161718192021222324252627282930313233//class 实现类的继承class Person &amp;#123;	constructor (name, sex) &amp;#123;		this.name = name">
+  <meta name="description" content="面试题收集之—头条面试题">
 <meta name="keywords" content="面试">
 <meta property="og:type" content="article">
 <meta property="og:title" content="面经收集">
 <meta property="og:url" content="https://wine1.github.io/2021/02/28/面经收集/index.html">
 <meta property="og:site_name" content="哦。">
-<meta property="og:description" content="ES6中class是语法还是语法糖class是语法糖 class本身指向构造函数，利用构造函数来实现更加清晰的结构 123456789101112131415161718192021222324252627282930313233//class 实现类的继承class Person &amp;#123;	constructor (name, sex) &amp;#123;		this.name = name">
+<meta property="og:description" content="面试题收集之—头条面试题">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2021-02-28T14:19:45.580Z">
+<meta property="og:updated_time" content="2021-03-02T14:38:16.536Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="面经收集">
-<meta name="twitter:description" content="ES6中class是语法还是语法糖class是语法糖 class本身指向构造函数，利用构造函数来实现更加清晰的结构 123456789101112131415161718192021222324252627282930313233//class 实现类的继承class Person &amp;#123;	constructor (name, sex) &amp;#123;		this.name = name">
+<meta name="twitter:description" content="面试题收集之—头条面试题">
   
     <link rel="alternative" href="/atom.xml" title="哦。" type="application/atom+xml">
   
@@ -185,7 +185,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <ol>
+        <p>面试题收集之—头条面试题</p>
+<a id="more"></a>
+<ol>
 <li><p>ES6中class是语法还是语法糖<br>class是语法糖 class本身指向构造函数，利用构造函数来实现更加清晰的结构</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">//class 实现类的继承</span><br><span class="line">class Person &#123;</span><br><span class="line">	constructor (name, sex) &#123;</span><br><span class="line">		this.name = name</span><br><span class="line">		this.sex = sex</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">class Man extends Person &#123;</span><br><span class="line">	constructor (name) &#123;</span><br><span class="line">		super(&apos;&apos;, &apos;male&apos;)</span><br><span class="line">		this.name = name</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">let Jy = new Man(&apos;Jy&apos;)</span><br><span class="line"> </span><br><span class="line">console.log(Jy.name, Jy.sex) // Jy, &apos;male&apos;</span><br><span class="line"></span><br><span class="line">//用es6的语法重写上述代码</span><br><span class="line"></span><br><span class="line">function person(name,sex) &#123;</span><br><span class="line">    this.name=name</span><br><span class="line">    this.sex=sex</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function Man(name) &#123;</span><br><span class="line">    this.name=name</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Man.prototype=new Person(&apos;&apos;,&apos;male&apos;)</span><br><span class="line">let Jy=new Man(&apos;Jy)</span><br><span class="line">console.log(Jy.name, Jy.sex) // Jy, mal</span><br></pre></td></tr></table></figure>
 </li>
@@ -499,7 +501,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -507,7 +509,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -515,11 +517,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
+                <a href="javascript:void(0)" class="js-tag color3">面试</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">面试</a>
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
               </li>
              
               <li class="article-tag-list-item">
