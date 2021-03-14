@@ -6,20 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://wine1.github.io">
-  <title>搞定GTD | 哦。</title>
+  <title>四大手写 | 哦。</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="构建以结果和行动为导向的思维方式，从漫无目的的思考到行动性的思考">
-<meta name="keywords" content="随笔">
+  <meta name="description" content="在前端领域，以手写 bind、手写深拷贝、手写 EventHub（发布-订阅）、手写 Promise最为常见，称为四大手写。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="搞定GTD">
-<meta property="og:url" content="https://wine1.github.io/2019/12/22/搞定GTD/index.html">
+<meta property="og:title" content="四大手写">
+<meta property="og:url" content="https://wine1.github.io/2021/03/14/四大手写/index.html">
 <meta property="og:site_name" content="哦。">
-<meta property="og:description" content="构建以结果和行动为导向的思维方式，从漫无目的的思考到行动性的思考">
+<meta property="og:description" content="在前端领域，以手写 bind、手写深拷贝、手写 EventHub（发布-订阅）、手写 Promise最为常见，称为四大手写。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-12-22T14:22:44.321Z">
+<meta property="og:updated_time" content="2021-03-14T08:28:03.135Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="搞定GTD">
-<meta name="twitter:description" content="构建以结果和行动为导向的思维方式，从漫无目的的思考到行动性的思考">
+<meta name="twitter:title" content="四大手写">
+<meta name="twitter:description" content="在前端领域，以手写 bind、手写深拷贝、手写 EventHub（发布-订阅）、手写 Promise最为常见，称为四大手写。">
   
     <link rel="alternative" href="/atom.xml" title="哦。" type="application/atom+xml">
   
@@ -165,42 +164,89 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-搞定GTD" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-四大手写" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      搞定GTD
+      四大手写
     </h1>
   
 
         
-        <a href="/2019/12/22/搞定GTD/" class="archive-article-date">
-  	<time datetime="2019-12-22T13:58:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-22</time>
+        <a href="/2021/03/14/四大手写/" class="archive-article-date">
+  	<time datetime="2021-03-14T08:26:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-14</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>构建以结果和行动为导向的思维方式，从漫无目的的思考到行动性的思考</p>
+        <p>在前端领域，以手写 bind、手写深拷贝、手写 EventHub（发布-订阅）、手写 Promise最为常见，称为四大手写。</p>
 <a id="more"></a>
-<p>GTD步骤</p>
-<ol>
-<li>列出所面临的问题</li>
-<li>思考预期结果</li>
-<li>为了推动事情进展需要采取的下一步实际行动（一次只做一件事）</li>
+<h1 id="手写bind"><a href="#手写bind" class="headerlink" title="手写bind"></a>手写bind</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">// 初级</span><br><span class="line">function bind(asthis,arguments)&#123;</span><br><span class="line">    let fn=this</span><br><span class="line">    return funciotn(arguments)&#123;</span><br><span class="line">        return fn.apply(asthis,arguments)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function myBind(thisArg) &#123;</span><br><span class="line">    if(typeoof this !== &apos;function&apos;) &#123;</span><br><span class="line">        return</span><br><span class="line">    &#125;</span><br><span class="line">    var _self = this</span><br><span class="line">    var args=Array.prototype.slice.call(arguments,1)</span><br><span class="line">    return function() &#123;</span><br><span class="line">        return _self.apply(thisArgs)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="深拷贝"><a href="#深拷贝" class="headerlink" title="深拷贝"></a>深拷贝</h1><p>//简单 反序列化<br>不支持date undefind </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">let A=&#123;&#125;</span><br><span class="line">let B=JSON.parse(JSON.stringify(A))</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">// 复杂递归克隆</span><br><span class="line">function clone(target,map=new Map()) &#123;</span><br><span class="line">    if(typeof target === &apos;object&apos;) &#123;</span><br><span class="line">        let cloneTarget = Array.isArray(target)?[]:&#123;&#125;</span><br><span class="line"></span><br><span class="line">        if(map.get(target)) &#123;</span><br><span class="line">            return map.get(target)</span><br><span class="line">        &#125;</span><br><span class="line">        console.log(target,cloneTarget)</span><br><span class="line">        map.set(target,cloneTarget)</span><br><span class="line">        for(const key in target) &#123;</span><br><span class="line">            cloneTarget[key]=clone(target[key],map)</span><br><span class="line">        &#125;</span><br><span class="line">        return cloneTarget</span><br><span class="line">    &#125;else &#123;</span><br><span class="line">        return target</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">const target = &#123;</span><br><span class="line">    field1: 1,</span><br><span class="line">    field2: undefined,</span><br><span class="line">    field3: &#123;</span><br><span class="line">        child: &apos;child&apos;</span><br><span class="line">    &#125;,</span><br><span class="line">    field4: [2, 4, 8],</span><br><span class="line">    field5:&apos;&apos;,</span><br><span class="line">    field5:null,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">console.log(clone(target))</span><br></pre></td></tr></table></figure>
+
+<h1 id="手写EventHub"><a href="#手写EventHub" class="headerlink" title="手写EventHub"></a>手写EventHub</h1><ol>
+<li>使用一个对象作为缓存</li>
+<li>on 负责把方法注册到缓存的EventName 对应的数组</li>
+<li>emit 负责遍历触发 EventName底下的方法数组</li>
+<li>off 找方法的索引，并删除<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">class Notify &#123;</span><br><span class="line">    constructor() &#123;</span><br><span class="line">      this.subscribers = []</span><br><span class="line">    &#125;</span><br><span class="line">    on(handler) &#123;</span><br><span class="line">      this.subscribers.push(handler)</span><br><span class="line">    &#125;</span><br><span class="line">    emit() &#123;</span><br><span class="line">      this.subscribers.forEach(subscriber =&gt; subscriber())</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">let notify = new Notify()</span><br><span class="line"></span><br><span class="line">notify.on(() =&gt; &#123;</span><br><span class="line">    console.log(&apos;emit here&apos;)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">notify.emit()</span><br><span class="line">```</span><br></pre></td></tr></table></figure>
+
+</li>
 </ol>
-<p>在行动之前进行周密的思考<br>思考结果是促使希望转化为现实的最有效的手段之一</p>
-<p>tips: 任何事情都应该做到最简单而不是相对简单</p>
-<ol>
-<li>机制管理“todolost”经常回访并予以清理收集经常冒出来的念头和想法，解决他们</li>
-<li>制定行动计划</li>
-<li>将与行动方案相关联的体时，放到一个经常查询的系统中（融入到日常习惯）</li>
-</ol>
-<p>事务极少会由于时间匮乏而受阻，他们陷入困境往往是由于未能预先明确下一步的行动而造成的</p>
+<p>class EventBus {<br>    map = {}<br>    on(type, handler) {<br>        this.map[type] = (this.map[type] || []).concat(handler)<br>    }</p>
+<pre><code>emit(type, data) {
+    this.map[type] &amp;&amp; this.map[type].forEach(handler =&gt; handler(data))
+}
+
+off(type, handler) {
+    if (this.map[type]) {
+        if (!handler) {
+            delete this.map[type]
+        } else {
+            let index = this.map[type].indexOf(handler)
+            this.map[type].splice(index, 1)
+        }
+    }
+}</code></pre><p>}</p>
+<p>let bus = new EventBus()</p>
+<p>bus.on(‘a’, (data) =&gt; {<br>    console.log(data)<br>})</p>
+<p>bus.emit(‘a’, { a: 1 })</p>
+<p>console.log(123)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"># promise</span><br></pre></td></tr></table></figure>
+
+<p>class myPromise {<br>    succeed = null<br>    fail = null<br>    state=’pending’</p>
+<pre><code>constructor(fn) {
+    fn(this.resolve.bind(this),this.reject.bind(this))
+}
+
+resolve(result) {
+    setTimeout(()=&gt;{
+        this.state = &apos;fulfilled&apos;
+        this.succeed(result)
+    })
+}
+
+reject(reason) {
+    setTimeout(()=&gt;{
+        this.state=&apos;rejected&apos;
+        this.fail(reason)
+    })
+}
+
+then(succeed,fail) {
+    this.succeed=succeed
+    this.fail=fail
+}</code></pre><p>}</p>
+<p>new myPromise((resolve, reject) =&gt; {<br>  let [val, time] = [Math.random(), Math.random() * 1000]<br>  setTimeout(() =&gt; {<br>    val&gt;0.2?resolve(val):reject(val)<br>  }, time)<br>}).then(<br>  val =&gt; console.log(‘promise 测试:’ , val),<br>  err =&gt; console.error(‘promise 测试:’+ err)<br>)</p>
+<p>```</p>
 
       
 
@@ -230,17 +276,6 @@
     <div class="article-info article-info-index">
       
       
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
       
 
       
@@ -291,7 +326,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://wine1.github.io/2019/12/22/搞定GTD/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://wine1.github.io/2021/03/14/四大手写/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -305,18 +340,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/12/22/好好吃饭/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          好好吃饭
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/12/17/web安全详解1/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">web安全详解1</div>
+    <a href="/2021/03/03/跨域/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">跨域</div>
       <i class="icon-circle-right"></i>
     </a>
   

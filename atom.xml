@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wine1.github.io/"/>
-  <updated>2021-03-03T14:28:34.705Z</updated>
+  <updated>2021-03-14T08:28:03.135Z</updated>
   <id>https://wine1.github.io/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>四大手写</title>
+    <link href="https://wine1.github.io/2021/03/14/%E5%9B%9B%E5%A4%A7%E6%89%8B%E5%86%99/"/>
+    <id>https://wine1.github.io/2021/03/14/%E5%9B%9B%E5%A4%A7%E6%89%8B%E5%86%99/</id>
+    <published>2021-03-14T08:26:25.000Z</published>
+    <updated>2021-03-14T08:28:03.135Z</updated>
+    
+    <content type="html"><![CDATA[<p>在前端领域，以手写 bind、手写深拷贝、手写 EventHub（发布-订阅）、手写 Promise最为常见，称为四大手写。</p><a id="more"></a><h1 id="手写bind"><a href="#手写bind" class="headerlink" title="手写bind"></a>手写bind</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">// 初级</span><br><span class="line">function bind(asthis,arguments)&#123;</span><br><span class="line">    let fn=this</span><br><span class="line">    return funciotn(arguments)&#123;</span><br><span class="line">        return fn.apply(asthis,arguments)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function myBind(thisArg) &#123;</span><br><span class="line">    if(typeoof this !== &apos;function&apos;) &#123;</span><br><span class="line">        return</span><br><span class="line">    &#125;</span><br><span class="line">    var _self = this</span><br><span class="line">    var args=Array.prototype.slice.call(arguments,1)</span><br><span class="line">    return function() &#123;</span><br><span class="line">        return _self.apply(thisArgs)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h1 id="深拷贝"><a href="#深拷贝" class="headerlink" title="深拷贝"></a>深拷贝</h1><p>//简单 反序列化<br>不支持date undefind </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">let A=&#123;&#125;</span><br><span class="line">let B=JSON.parse(JSON.stringify(A))</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">// 复杂递归克隆</span><br><span class="line">function clone(target,map=new Map()) &#123;</span><br><span class="line">    if(typeof target === &apos;object&apos;) &#123;</span><br><span class="line">        let cloneTarget = Array.isArray(target)?[]:&#123;&#125;</span><br><span class="line"></span><br><span class="line">        if(map.get(target)) &#123;</span><br><span class="line">            return map.get(target)</span><br><span class="line">        &#125;</span><br><span class="line">        console.log(target,cloneTarget)</span><br><span class="line">        map.set(target,cloneTarget)</span><br><span class="line">        for(const key in target) &#123;</span><br><span class="line">            cloneTarget[key]=clone(target[key],map)</span><br><span class="line">        &#125;</span><br><span class="line">        return cloneTarget</span><br><span class="line">    &#125;else &#123;</span><br><span class="line">        return target</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">const target = &#123;</span><br><span class="line">    field1: 1,</span><br><span class="line">    field2: undefined,</span><br><span class="line">    field3: &#123;</span><br><span class="line">        child: &apos;child&apos;</span><br><span class="line">    &#125;,</span><br><span class="line">    field4: [2, 4, 8],</span><br><span class="line">    field5:&apos;&apos;,</span><br><span class="line">    field5:null,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">console.log(clone(target))</span><br></pre></td></tr></table></figure><h1 id="手写EventHub"><a href="#手写EventHub" class="headerlink" title="手写EventHub"></a>手写EventHub</h1><ol><li>使用一个对象作为缓存</li><li>on 负责把方法注册到缓存的EventName 对应的数组</li><li>emit 负责遍历触发 EventName底下的方法数组</li><li>off 找方法的索引，并删除<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">class Notify &#123;</span><br><span class="line">    constructor() &#123;</span><br><span class="line">      this.subscribers = []</span><br><span class="line">    &#125;</span><br><span class="line">    on(handler) &#123;</span><br><span class="line">      this.subscribers.push(handler)</span><br><span class="line">    &#125;</span><br><span class="line">    emit() &#123;</span><br><span class="line">      this.subscribers.forEach(subscriber =&gt; subscriber())</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">let notify = new Notify()</span><br><span class="line"></span><br><span class="line">notify.on(() =&gt; &#123;</span><br><span class="line">    console.log(&apos;emit here&apos;)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">notify.emit()</span><br><span class="line">```</span><br></pre></td></tr></table></figure></li></ol><p>class EventBus {<br>    map = {}<br>    on(type, handler) {<br>        this.map[type] = (this.map[type] || []).concat(handler)<br>    }</p><pre><code>emit(type, data) {    this.map[type] &amp;&amp; this.map[type].forEach(handler =&gt; handler(data))}off(type, handler) {    if (this.map[type]) {        if (!handler) {            delete this.map[type]        } else {            let index = this.map[type].indexOf(handler)            this.map[type].splice(index, 1)        }    }}</code></pre><p>}</p><p>let bus = new EventBus()</p><p>bus.on(‘a’, (data) =&gt; {<br>    console.log(data)<br>})</p><p>bus.emit(‘a’, { a: 1 })</p><p>console.log(123)</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"># promise</span><br></pre></td></tr></table></figure><p>class myPromise {<br>    succeed = null<br>    fail = null<br>    state=’pending’</p><pre><code>constructor(fn) {    fn(this.resolve.bind(this),this.reject.bind(this))}resolve(result) {    setTimeout(()=&gt;{        this.state = &apos;fulfilled&apos;        this.succeed(result)    })}reject(reason) {    setTimeout(()=&gt;{        this.state=&apos;rejected&apos;        this.fail(reason)    })}then(succeed,fail) {    this.succeed=succeed    this.fail=fail}</code></pre><p>}</p><p>new myPromise((resolve, reject) =&gt; {<br>  let [val, time] = [Math.random(), Math.random() * 1000]<br>  setTimeout(() =&gt; {<br>    val&gt;0.2?resolve(val):reject(val)<br>  }, time)<br>}).then(<br>  val =&gt; console.log(‘promise 测试:’ , val),<br>  err =&gt; console.error(‘promise 测试:’+ err)<br>)</p><p>```</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在前端领域，以手写 bind、手写深拷贝、手写 EventHub（发布-订阅）、手写 Promise最为常见，称为四大手写。&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>跨域</title>
@@ -433,27 +452,6 @@
 &lt;li&gt;比较两颗虚拟DOM树的差异&lt;/li&gt;
 &lt;li&gt;把差异应用到真正的DOM树上&lt;/li&gt;
 &lt;/ol&gt;
-    
-    </summary>
-    
-    
-    
-      <category term="前端" scheme="https://wine1.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>重排和重绘</title>
-    <link href="https://wine1.github.io/2020/07/14/%E9%87%8D%E6%8E%92%E5%92%8C%E9%87%8D%E7%BB%98/"/>
-    <id>https://wine1.github.io/2020/07/14/%E9%87%8D%E6%8E%92%E5%92%8C%E9%87%8D%E7%BB%98/</id>
-    <published>2020-07-14T15:34:39.000Z</published>
-    <updated>2020-07-14T16:03:36.606Z</updated>
-    
-    <content type="html"><![CDATA[<p>今天一个bug引发了我对重排和重绘的好奇<br>对这个知识点做个系统的了解和总结</p><a id="more"></a><p>DOM的变化引发了原生的几何属性的变化，比如宽高和位置的变化等，属于重排<br>完成重排后，要将重新构建的其他样式（如颜色）渲染到屏幕上，这个过程就是重绘<br>重排必然会引发重绘，但重绘并不一定伴随着重排</p><p>重排的触发条件：</p><ol><li>添加或者删除可以的DOM元素</li><li>元素位置改变</li><li>元素本身的尺寸变化</li><li>内容改变</li><li>页面渲染器初始化</li><li>浏览器窗口大小发生改变</li></ol><p>重绘和重排的开销是非常昂贵的，如果我们不停的在改变页面的布局，就会造成浏览器耗费大量的开销在进行页面的计算，这样的话，我们页面在用户使用起来，就会出现明显的卡顿。<br>现在的浏览器其实已经对重排进行了优化</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var div = document.querySelector(&apos;.div&apos;);</span><br><span class="line">div.style.width = &apos;200px&apos;;</span><br><span class="line">div.style.background = &apos;red&apos;;</span><br><span class="line">div.style.height = &apos;300px&apos;;</span><br></pre></td></tr></table></figure><p>比较久远的浏览器，这段代码会触发页面2次重排，在分别设置宽高的时候，触发2次.<br>当代的浏览器对此进行了优化，这种思路类似于现在流行的MVVM框架使用的虚拟DOM，对改变的DOM节点进行依赖收集，确认没有改变的节点，就进行一次更新。但是浏览器针对重排的优化虽然思路和虚拟DOM接近，但是还是有本质的区别。大多数浏览器通过队列化修改并批量执行来优化重排过程。也就是说上面那段代码其实在现在的浏览器优化下，只构成一次重排。</p><p>除此之外，我们也可以针对性的做一些优化</p><ol><li>最小化重排和重绘（把会引起重排和重绘的操作一起操作，尽量只重绘或重排一次）</li><li>缓存布局信息 缓存布局信息这个概念，在《高性能JavaScript》DOM性能优化中，多次提到类似的思想.<ul><li>比如我现在要得到页面ul节点下面的100个li节点，最好的办法就是第一次获取后就保存起来，减少</li></ul></li></ol>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;今天一个bug引发了我对重排和重绘的好奇&lt;br&gt;对这个知识点做个系统的了解和总结&lt;/p&gt;
     
     </summary>
     
