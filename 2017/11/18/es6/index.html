@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="哦。">
 <meta property="og:description" content="node.js对ES6的支持度较高，在这个环境下可以更好的体验Babel转码器参考最喜欢的作者阮一峰写的ES6入门参考淘宝前端团队">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-05-20T10:54:56.913Z">
+<meta property="og:updated_time" content="2021-03-14T08:58:45.671Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="es6">
 <meta name="twitter:description" content="node.js对ES6的支持度较高，在这个环境下可以更好的体验Babel转码器参考最喜欢的作者阮一峰写的ES6入门参考淘宝前端团队">
@@ -187,15 +187,14 @@
       
         <p>node.js对ES6的支持度较高，在这个环境下可以更好的体验<br>Babel转码器<br>参考<a href="http://es6.ruanyifeng.com/" target="_blank" rel="noopener">最喜欢的作者阮一峰写的ES6入门</a><br>参考<a href="http://taobaofed.org/blog/2016/07/22/es6-basics/" target="_blank" rel="noopener">淘宝前端团队</a></p>
 <a id="more"></a>
-<p><strong>let和const命令</strong></p>
-<ol>
+<h3 id="let和const命令"><a href="#let和const命令" class="headerlink" title="let和const命令"></a>let和const命令</h3><ol>
 <li>let命令只在所在的代码块内有效</li>
 <li>不存在变量提升，使用一定要在声明之后</li>
 <li>暂时性死区 如果区块内存在const或者let这个区块对命令声明的变量形成封闭作用域，不受作用域之外的变量影响<br> var temp = “123”；<br> if(true){temp=”abc”； let temp；}//报错<br>虽然在代码块中声明了全局变量temp，但是在判断区块内无效，let声明的temp变量在声明前调用，所以报错</li>
 <li>在相同的作用域内不能重复声明同一个变量</li>
-<li>块级作用域外部无法访问内部函数和变量（引入闭包）<br><mark>const 的定义是不可重新赋值的值，与不可变的值(immutable value)不同；const 定义的 Object，在定义之后仍可以修改其属性。<br>所以其实他的使用场景很广，包括常量、配置项以及引用的组件、定义的 “大部分” 中间变量等，都应该以const做定义。反之就 let 而言，他的使用场景应该是相对较少的，我们只会在 loop(for，while 循环)及少量必须重定义的变量上用到他。<br>猜想：就执行效率而言，const 由于不可以重新赋值的特性，所以可以做更多语法静态分析方面的优化，从而有更高的执行效率。<br>所以上面代码中，所有使用 let 的部分，其实都应该是用 const 的。</mark></li>
+<li>块级作用域外部无法访问内部函数和变量（引入闭包）<br><mark>const 的定义是不可重新赋值的值，与不可变的值(immutable value)不同；const 定义的 Object，在定义之后仍可以修改其属性。<br>所以其实他的使用场景很广，包括常量、配置项以及引用的组件、定义的 “大部分” 中间变量等，都应该以const做定义。反之就 let 而言，他的使用场景应该是相对较少的，我们只会在 loop(for，while 循环)及少量必须重定义的变量上用到他。<br>猜想：就执行效率而言，const 由于不可以重新赋值的特性，所以可以做更多语法静态分析方面的优化，从而有更高的执行效率。</mark></li>
 </ol>
-<p><strong>变量的解构赋值</strong><br>数组的解构赋值:</p>
+<h3 id="变量的解构赋值"><a href="#变量的解构赋值" class="headerlink" title="变量的解构赋值"></a>变量的解构赋值</h3><p>数组的解构赋值:</p>
 <ol>
 <li>模式匹配。如果结构不成功，变量值为undefined</li>
 <li>不完全解构只匹配等号右边一部分，如果右边不是数组就会报错<br>实际上，只要某种数据结构具有iterator接口，都可以采用数组形式的解构赋值。</li>
@@ -244,8 +243,8 @@
 <p>WeakMap结构与Map结构类似，也是用于生成键值对的集合。<br>WeakMap只接受对象作为键名（null除外），不接受其他类型的值作为键名。<br>WeakMap的键名所指向的对象，不计入垃圾回收机制。</p>
 </li>
 </ol>
-<p>###箭头函数###<br>箭头函数没有独立执行上下文（ this ），所以其内部引用 this 对象会直接访问父级。<br>箭头函数不但没有独立 this，他也没有独立的 arguments，所以如果需要取不定参的时候，要么使用 function，要么用 ES6 的另一个新特性 rest（具体在 rest 中会有详解）。<br>箭头函数语法很灵活，在只有一个参数或者只有一句表达式做方法体时，可以省略相应括号。</p>
-<p>###promise###<br>promise对象代表一个异步操作，有三种状态：pending resolved/fullfilled  rejected </p>
+<h3 id="箭头函数"><a href="#箭头函数" class="headerlink" title="箭头函数"></a>箭头函数</h3><p>箭头函数没有独立执行上下文（ this ），所以其内部引用 this 对象会直接访问父级。<br>箭头函数不但没有独立 this，他也没有独立的 arguments，所以如果需要取不定参的时候，要么使用 function，要么用 ES6 的另一个新特性 rest（具体在 rest 中会有详解）。<br>箭头函数语法很灵活，在只有一个参数或者只有一句表达式做方法体时，可以省略相应括号。</p>
+<h3 id="promise"><a href="#promise" class="headerlink" title="promise"></a>promise</h3><p>promise对象代表一个异步操作，有三种状态：pending resolved/fullfilled  rejected </p>
 <p>promise.then接收两个方法作为参数，第一个resolved调用，第二个reject调用。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">promise.then(function(value),funtion(error));</span><br></pre></td></tr></table></figure>
 
@@ -510,11 +509,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">css</a>
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+                <a href="javascript:void(0)" class="js-tag color4">css</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -530,11 +529,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">linux</a>
+                <a href="javascript:void(0)" class="js-tag color3">node.js</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">node.js</a>
+                <a href="javascript:void(0)" class="js-tag color1">linux</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -542,23 +541,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">实践</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">vue.js</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">网络</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">es6</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">算法</a>
+                <a href="javascript:void(0)" class="js-tag color3">实践</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -566,7 +553,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
+                <a href="javascript:void(0)" class="js-tag color4">es6</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">网络</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">算法</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -574,11 +569,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">移动端</a>
+                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">-css</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">移动端</a>
               </li>
              
               <li class="article-tag-list-item">
