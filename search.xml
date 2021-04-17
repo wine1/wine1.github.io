@@ -1,21 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>24岁这一天</title>
-    <url>/2019/09/24/24%E5%B2%81%E8%BF%99%E4%B8%80%E5%A4%A9/</url>
-    <content><![CDATA[<ol>
-<li>健康状况保持的不行，要坚持每天锻炼一会会呀</li>
-<li>少看点书，慢下来，不要着急。欲速则不达</li>
-<li>赶紧复习基础，多写代码，不然怎么跳槽，一定要尽快跳出这个烦人的圈。</li>
-<li>存到一些钱，但是不要放太多注意力在这个东西，不然得不偿失。</li>
-<li>不要抱怨，去改变~</li>
-</ol>
-]]></content>
-      <tags>
-        <tag>随笔</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>CSS-BFC</title>
     <url>/2020/05/20/CSS-BFC/</url>
     <content><![CDATA[<p>今天认真仔细地看了下BFC的内容，算是有了更具体的理解</p>
@@ -67,53 +52,6 @@
       </tags>
   </entry>
   <entry>
-    <title>async和await</title>
-    <url>/2018/12/11/async%E5%92%8Cawait/</url>
-    <content><![CDATA[<p>async表示函数里有异步操作，await表示紧跟在后面的表达式需要等待结果。</p>
-<a id="more"></a>
-<p>async 表示这是一个async函数，await只能用在这个函数里面。<br>await 表示在这里等待promise返回结果了，再继续执行。<br>await 后面跟着的应该是一个promise对象</p>
-<p>await等待的虽然是promise对象，但不必写.then(..)，直接可以得到返回值。</p>
-<p>捕捉错误<br>既然.then(..)不用写了，那么.catch(..)也不用写，可以直接用标准的try catch语法捕捉错误。<br>await 只能出现在 async 函数中。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">async function testAsync() &#123;</span><br><span class="line">    return &quot;hello async&quot;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">const result = testAsync();</span><br><span class="line">console.log(result);</span><br></pre></td></tr></table></figure>
-
-<p>返回值是一个 promise对象</p>
-<p>引用别人一段话<br><strong>联想一下 Promise 的特点——无等待，所以在没有 await 的情况下执行 async 函数，它会立即执行，返回一个 Promise 对象，并且，绝不会阻塞后面的语句。这和普通返回 Promise 对象的函数并无二致。</strong><br><a href="https://segmentfault.com/a/1190000007535316?utm_source=tag-newest" target="_blank" rel="noopener">原文链接</a></p>
-]]></content>
-      <tags>
-        <tag>前端</tag>
-        <tag>ES6</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>background-clip</title>
-    <url>/2019/07/25/background-clip/</url>
-    <content><![CDATA[<p>今日份的需求出现了一个bug<br>琢磨了好一会解决了，记录一下</p>
-<a id="more"></a>
-<p>需求是这样的<br><img src="/2019/07/25/background-clip/tu2.png" alt="tu1"><br>别的浏览器都显示的好正常的,但是在火狐中，显示的效果就是这样的了<br><img src="/2019/07/25/background-clip/tu1.png" alt="tu1"><br>经过多次尝试，发现去掉左边的背景色，边框就能正常显示出来了<br>但是需求表示左边这块就是要有不一样的颜色，怎么办呢<br>面向浏览器编程的我们打开了谷歌 搜索结果中出现了这么一个属性<br><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-clip" target="_blank" rel="noopener">background-clip</a><br>嗯，根据实际情况酌情使用</p>
-]]></content>
-      <tags>
-        <tag>前端</tag>
-        <tag>css</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>axios中的拦截器</title>
-    <url>/2020/05/18/axios%E4%B8%AD%E7%9A%84%E6%8B%A6%E6%88%AA%E5%99%A8/</url>
-    <content><![CDATA[<p>拦截器<br>在请求或响应被 then 或 catch 处理前拦截它们。<br>分为请求拦截器和响应拦截器</p>
-<a id="more"></a>
-<p><a href="http://www.axios-js.com/zh-cn/docs/#拦截器" target="_blank" rel="noopener">关于拦截器的官网文档</a></p>
-<ol>
-<li><p>请求拦截器<br>请求拦截器的作用是在请求发送前进行一些操作，例如在每个请求体里加上token</p>
-</li>
-<li><p>响应拦截器<br>响应拦截器的作用是在接收到响应后进行一些操作，例如在服务器返回登录状态失效，需要重新登录的时候，跳转到登录页。</p>
-</li>
-</ol>
-]]></content>
-      <tags>
-        <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>HTML5(表单)</title>
     <url>/2017/11/16/HTML5-%E8%A1%A8%E5%8D%95/</url>
     <content><![CDATA[<h3 id="新增表单元素与属性："><a href="#新增表单元素与属性：" class="headerlink" title="新增表单元素与属性："></a>新增表单元素与属性：</h3><ol>
@@ -159,11 +97,112 @@
       </tags>
   </entry>
   <entry>
+    <title>Object.defineProperty</title>
+    <url>/2019/07/09/Object-defineProperty/</url>
+    <content><![CDATA[<p>Object.defineProperty(object, propertyname, descriptor)<br>为对象定义属性的函数</p>
+]]></content>
+      <tags>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>WebSockets</title>
+    <url>/2017/11/16/WebSockets/</url>
+    <content><![CDATA[<p>实现了用http不容易实现的服务器端与客户端之间进行的非http的通信机制,建立一个非http的双向连接（全双工通信），这个连接是实时的永久的，除非被显式关闭。这意味着当服务器想向客户端发送消息时，可以立即将消息推送到客户端的浏览器，无需重新建立连接。<br>比如用来实现聊天室，实时的接收传递消息。</p>
+<a id="more"></a>
+<p>使用WebSockets API(算了api还是要用的时候查吧 太容易忘记了)</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var ws = new WebSocket(wss://);</span><br><span class="line">ws.onopen() = function(e) &#123;</span><br><span class="line">	console.log(&quot;连接建立，可以开始发消息啦&quot;);</span><br><span class="line">	ws.send();</span><br><span class="line">&#125;;</span><br><span class="line">ws.onmessage() = function(e) &#123;</span><br><span class="line"></span><br><span class="line">	ws.onclose();</span><br><span class="line">&#125;</span><br><span class="line">ws.onclose = function(e) &#123;</span><br><span class="line">	console.log(&quot;大家注意了，连接关了啊&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>readyState的属性值获取WebSocket对象的状态<br>connecting 0 表示正在连接<br>open 1 表示已经建立连接<br>closing 2 表示正在关闭连接<br>closed 3 表示连接已经关闭</p>
+<p>WebSocket和http协议有区别也有联系。首先http协议中请求和响应是成对存在严格对应的，在http1.1中的keep-alive实现可将多个http请求合并成一个，但是它和WebSocket还是不一样，它依然是请求和响应一一对应的。WebSocket是一个新的协议，借助于http协议完成握手。<br>WebSocket的连接请求跟http请求相似，但是多出了这么两行<code>upgrade:wesocket connection:upgrade</code>这两行告诉服务器，我是一个WebSocket协议。</p>
+<pre><code>传统的技术当然也可以实现信息的即时发送和获取，依赖于ajax轮询和long poll。
+轮询，顾名思义就是隔一会查看一下是否有新的消息,需要服务器有很快的处理速度。
+long poll 就是相当于发起请求后没收到消息就赖着不走了这么个样子。需要有很高的并发。
+当然以上两种对我来说都是停留在了理论层面，我并没有真正去实践过。有错误的地方，日后改正。</code></pre>]]></content>
+      <tags>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>async和await</title>
+    <url>/2018/12/11/async%E5%92%8Cawait/</url>
+    <content><![CDATA[<p>async表示函数里有异步操作，await表示紧跟在后面的表达式需要等待结果。</p>
+<a id="more"></a>
+<p>async 表示这是一个async函数，await只能用在这个函数里面。<br>await 表示在这里等待promise返回结果了，再继续执行。<br>await 后面跟着的应该是一个promise对象</p>
+<p>await等待的虽然是promise对象，但不必写.then(..)，直接可以得到返回值。</p>
+<p>捕捉错误<br>既然.then(..)不用写了，那么.catch(..)也不用写，可以直接用标准的try catch语法捕捉错误。<br>await 只能出现在 async 函数中。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">async function testAsync() &#123;</span><br><span class="line">    return &quot;hello async&quot;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">const result = testAsync();</span><br><span class="line">console.log(result);</span><br></pre></td></tr></table></figure>
+
+<p>返回值是一个 promise对象</p>
+<p>引用别人一段话<br><strong>联想一下 Promise 的特点——无等待，所以在没有 await 的情况下执行 async 函数，它会立即执行，返回一个 Promise 对象，并且，绝不会阻塞后面的语句。这和普通返回 Promise 对象的函数并无二致。</strong><br><a href="https://segmentfault.com/a/1190000007535316?utm_source=tag-newest" target="_blank" rel="noopener">原文链接</a></p>
+]]></content>
+      <tags>
+        <tag>前端</tag>
+        <tag>ES6</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>axios中的拦截器</title>
+    <url>/2020/05/18/axios%E4%B8%AD%E7%9A%84%E6%8B%A6%E6%88%AA%E5%99%A8/</url>
+    <content><![CDATA[<p>拦截器<br>在请求或响应被 then 或 catch 处理前拦截它们。<br>分为请求拦截器和响应拦截器</p>
+<a id="more"></a>
+<p><a href="http://www.axios-js.com/zh-cn/docs/#拦截器" target="_blank" rel="noopener">关于拦截器的官网文档</a></p>
+<ol>
+<li><p>请求拦截器<br>请求拦截器的作用是在请求发送前进行一些操作，例如在每个请求体里加上token</p>
+</li>
+<li><p>响应拦截器<br>响应拦截器的作用是在接收到响应后进行一些操作，例如在服务器返回登录状态失效，需要重新登录的时候，跳转到登录页。</p>
+</li>
+</ol>
+]]></content>
+      <tags>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>background-clip</title>
+    <url>/2019/07/25/background-clip/</url>
+    <content><![CDATA[<p>今日份的需求出现了一个bug<br>琢磨了好一会解决了，记录一下</p>
+<a id="more"></a>
+<p>需求是这样的<br><img src="/2019/07/25/background-clip/tu2.png" alt="tu1"><br>别的浏览器都显示的好正常的,但是在火狐中，显示的效果就是这样的了<br><img src="/2019/07/25/background-clip/tu1.png" alt="tu1"><br>经过多次尝试，发现去掉左边的背景色，边框就能正常显示出来了<br>但是需求表示左边这块就是要有不一样的颜色，怎么办呢<br>面向浏览器编程的我们打开了谷歌 搜索结果中出现了这么一个属性<br><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-clip" target="_blank" rel="noopener">background-clip</a><br>嗯，根据实际情况酌情使用</p>
+]]></content>
+      <tags>
+        <tag>前端</tag>
+        <tag>css</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>css3实现加载图标</title>
     <url>/2020/06/12/css3%E5%AE%9E%E7%8E%B0%E5%8A%A0%E8%BD%BD%E5%9B%BE%E6%A0%87/</url>
     <content><![CDATA[<p>纯css3实现loading效果</p>
 <a id="more"></a>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=&quot;en&quot;&gt;</span><br><span class="line"></span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;</span><br><span class="line">    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;ie=edge&quot;&gt;</span><br><span class="line">    &lt;title&gt;Document&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line"></span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div class=&quot;wrapper&quot;&gt;</span><br><span class="line">        &lt;div class=&quot;line1&quot;&gt;&lt;/div&gt;</span><br><span class="line">        &lt;div class=&quot;line2&quot;&gt;&lt;/div&gt;</span><br><span class="line">        &lt;div class=&quot;line3&quot;&gt;&lt;/div&gt;</span><br><span class="line">        &lt;div class=&quot;line4&quot;&gt;&lt;/div&gt;</span><br><span class="line">        &lt;div class=&quot;line5&quot;&gt;&lt;/div&gt;</span><br><span class="line">        &lt;div class=&quot;line6&quot;&gt;&lt;/div&gt;</span><br><span class="line">        &lt;div class=&quot;line7&quot;&gt;&lt;/div&gt;</span><br><span class="line">        &lt;div class=&quot;line8&quot;&gt;&lt;/div&gt;</span><br><span class="line">        &lt;div class=&quot;line9&quot;&gt;&lt;/div&gt;</span><br><span class="line">        &lt;div class=&quot;line10&quot;&gt;&lt;/div&gt;</span><br><span class="line">        &lt;div class=&quot;line11&quot;&gt;&lt;/div&gt;</span><br><span class="line">        &lt;div class=&quot;line12&quot;&gt;&lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line"></span><br><span class="line">    &lt;style&gt;</span><br><span class="line">        @-webkit-keyframes loading &#123;</span><br><span class="line">            from &#123;</span><br><span class="line">                opacity: 1;</span><br><span class="line">                width: 5px;</span><br><span class="line">                height: 20px;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            to &#123;</span><br><span class="line">                opacity: 0.25;</span><br><span class="line">                width: 5px;</span><br><span class="line">                height: 20px;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        .wrapper &#123;</span><br><span class="line">            position: relative;</span><br><span class="line">            top: 50%;</span><br><span class="line">            left: 50%;</span><br><span class="line">            display: inline-block;</span><br><span class="line">            zoom: 0.3;</span><br><span class="line">            /*通过修改这个值(值的区间为0-1)的大小来设置菊花的大小*/</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        .wrapper div &#123;</span><br><span class="line">            width: 3px;</span><br><span class="line">            height: 16px;</span><br><span class="line">            background: #a4a2a4;</span><br><span class="line">            position: absolute;</span><br><span class="line">            left: 100%;</span><br><span class="line">            top: 100%;</span><br><span class="line">            opacity: 0;</span><br><span class="line"></span><br><span class="line">            -webkit-animation: loading 1.2s linear infinite;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        .wrapper .line1 &#123;</span><br><span class="line">            -webkit-transform: rotate(0deg) translate(0, -34px);</span><br><span class="line">            -webkit-animation-delay: 0s;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        .wrapper .line2 &#123;</span><br><span class="line">            -webkit-transform: rotate(30deg) translate(0, -34px);</span><br><span class="line">            -webkit-animation-delay: 0.1s;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        .wrapper .line3 &#123;</span><br><span class="line">            -webkit-transform: rotate(60deg) translate(0, -34px);</span><br><span class="line">            -webkit-animation-delay: 0.2s;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        .wrapper .line4 &#123;</span><br><span class="line">            -webkit-transform: rotate(90deg) translate(0, -34px);</span><br><span class="line">            -webkit-animation-delay: 0.3s;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        .wrapper .line5 &#123;</span><br><span class="line">            -webkit-transform: rotate(120deg) translate(0, -34px);</span><br><span class="line">            -webkit-animation-delay: 0.4s;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        .wrapper .line6 &#123;</span><br><span class="line">            -webkit-transform: rotate(150deg) translate(0, -34px);</span><br><span class="line">            -webkit-animation-delay: 0.5s;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        .wrapper .line7 &#123;</span><br><span class="line">            -webkit-transform: rotate(180deg) translate(0, -34px);</span><br><span class="line">            -webkit-animation-delay: 0.6s;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        .wrapper .line8 &#123;</span><br><span class="line">            -webkit-transform: rotate(210deg) translate(0, -34px);</span><br><span class="line">            -webkit-animation-delay: 0.7s;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        .wrapper .line9 &#123;</span><br><span class="line">            -webkit-transform: rotate(240deg) translate(0, -34px);</span><br><span class="line">            -webkit-animation-delay: 0.8s;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        .wrapper .line10 &#123;</span><br><span class="line">            -webkit-transform: rotate(270deg) translate(0, -34px);</span><br><span class="line">            -webkit-animation-delay: 0.9s;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        .wrapper .line11 &#123;</span><br><span class="line">            -webkit-transform: rotate(300deg) translate(0, -34px);</span><br><span class="line">            -webkit-animation-delay: 1.0s;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        .wrapper .line12 &#123;</span><br><span class="line">            -webkit-transform: rotate(330deg) translate(0, -34px);</span><br><span class="line">            -webkit-animation-delay: 1.1s;</span><br><span class="line">        &#125;</span><br><span class="line">    &lt;/style&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>前端</tag>
+        <tag>css</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>24岁这一天</title>
+    <url>/2019/09/24/24%E5%B2%81%E8%BF%99%E4%B8%80%E5%A4%A9/</url>
+    <content><![CDATA[<ol>
+<li>健康状况保持的不行，要坚持每天锻炼一会会呀</li>
+<li>少看点书，慢下来，不要着急。欲速则不达</li>
+<li>赶紧复习基础，多写代码，不然怎么跳槽，一定要尽快跳出这个烦人的圈。</li>
+<li>存到一些钱，但是不要放太多注意力在这个东西，不然得不偿失。</li>
+<li>不要抱怨，去改变~</li>
+</ol>
+]]></content>
+      <tags>
+        <tag>随笔</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>css实现三角形</title>
+    <url>/2019/07/16/css%E5%AE%9E%E7%8E%B0%E4%B8%89%E8%A7%92%E5%BD%A2/</url>
+    <content><![CDATA[<p>在日常开发中，经常有一些箭头啊 边边角角的地方会用到三角形，但是又懒得切图啥的，其实用css自己画也是个不错的选择，这里，来探寻一下其原理~</p>
+<a id="more"></a>
+<p>css实现三角形的底层原理其实就是利用了盒模型的边框<br><img src="/2019/07/16/css实现三角形/tu1.png" alt="tu"><br>如图所示 实质上在块级元素的长宽均为0的情况下，块级元素的四条边框就组成了一个完整的矩形，在此基础上，我们需要什么样的三角形，调整相应的边框颜色为透明即可。</p>
+]]></content>
       <tags>
         <tag>前端</tag>
         <tag>css</tag>
@@ -188,25 +227,6 @@
 <p>}<br>媒体查询</p>
 <p>特殊字体<br>@font-face {<br>    font-family: ‘’;<br>    font-style: ;<br>    src: url();<br>}</p>
 <p>font-family: Helvetica, Tahoma, Arial, “PingFang SC”, “Hiragino Sans GB”, “Heiti SC”, “Microsoft YaHei”, “WenQuanYi Micro Hei”, sans-serif;</p>
-]]></content>
-      <tags>
-        <tag>前端</tag>
-        <tag>css</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>css性能优化</title>
-    <url>/2018/11/06/css%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/</url>
-    <content><![CDATA[<p>css经常会要做一些调整，最后几番改动下来乱的自己都看不明白，给人感觉很糟糕，因此一开始就有一个标准并严格按照标准来写就真的非常重要了。特别是在比较忙的时候，自己看自己的代码都会觉得太乱了 很遭罪。<br>因此就需要做出一些优化，高标准严要求哈哈</p>
-<a id="more"></a>
-<p>以下内容整理自稀土掘金中的<a href="https://juejin.im/post/5b6133a351882519d346853f" target="_blank" rel="noopener">奇舞周刊</a><br>1.内联首屏关键css（视情况而定）<br>适当的将渲染首屏内容所需的关键CSS内联到HTML中<br>2.异步加载css<br>3.文件压缩<br>4.去除无用CSS<br>虽然文件压缩能够降低文件大小。但CSS文件压缩通常只会去除无用的空格，这样就限制了CSS文件的压缩比例。那是否还有其他手段来精简CSS呢？答案显然是肯定的，如果压缩后的文件仍然超出了预期的大小，我们可以试着找到并删除代码中无用的CSS。</p>
-<p>一般情况下，会存在这两种无用的CSS代码：一种是不同元素或者其他情况下的重复代码，一种是整个页面内没有生效的CSS代码。对于前者，在编写的代码时候，我们应该尽可能地提取公共类，减少重复。对于后者，在不同开发者进行代码维护的过程中，总会产生不再使用的CSS的代码，当然一个人编写时也有可能出现这一问题。而这些无用的CSS代码不仅会增加浏览器的下载量，还会增加浏览器的解析时间，这对性能来说是很大的消耗。所以我们需要找到并去除这些无用代码。</p>
-<p>5.有选择的使用选择器</p>
-<p>保持简单，不要使用嵌套过多过于复杂的选择器。<br>通配符和属性选择器效率最低，需要匹配的元素最多，尽量避免使用。<br>不要使用类选择器和ID选择器修饰元素标签，如h3#markdown-content，这样多此一举，还会降低效率。<br>不要为了追求速度而放弃可读性与可维护性。<br><a href="http://www.w3cplus.com/css/mindbemding-getting-your-head-round-bem-syntax.html" target="_blank" rel="noopener">BEM命名法</a></p>
-<p>这个命名方式能使结构更加清晰，但是我觉得写出来看着太反人类了，可以借鉴这个思想，但是目前不会用这个方式。</p>
-<p>5.减少使用昂贵的属性</p>
-<p>所有需要浏览器进行操作或计算的属性相对而言都需要花费更大的代价</p>
-<p>6.优化重排和重绘</p>
 ]]></content>
       <tags>
         <tag>前端</tag>
@@ -250,21 +270,22 @@
       </tags>
   </entry>
   <entry>
-    <title>WebSockets</title>
-    <url>/2017/11/16/WebSockets/</url>
-    <content><![CDATA[<p>实现了用http不容易实现的服务器端与客户端之间进行的非http的通信机制,建立一个非http的双向连接（全双工通信），这个连接是实时的永久的，除非被显式关闭。这意味着当服务器想向客户端发送消息时，可以立即将消息推送到客户端的浏览器，无需重新建立连接。<br>比如用来实现聊天室，实时的接收传递消息。</p>
+    <title>css性能优化</title>
+    <url>/2018/11/06/css%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/</url>
+    <content><![CDATA[<p>css经常会要做一些调整，最后几番改动下来乱的自己都看不明白，给人感觉很糟糕，因此一开始就有一个标准并严格按照标准来写就真的非常重要了。特别是在比较忙的时候，自己看自己的代码都会觉得太乱了 很遭罪。<br>因此就需要做出一些优化，高标准严要求哈哈</p>
 <a id="more"></a>
-<p>使用WebSockets API(算了api还是要用的时候查吧 太容易忘记了)</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var ws = new WebSocket(wss://);</span><br><span class="line">ws.onopen() = function(e) &#123;</span><br><span class="line">	console.log(&quot;连接建立，可以开始发消息啦&quot;);</span><br><span class="line">	ws.send();</span><br><span class="line">&#125;;</span><br><span class="line">ws.onmessage() = function(e) &#123;</span><br><span class="line"></span><br><span class="line">	ws.onclose();</span><br><span class="line">&#125;</span><br><span class="line">ws.onclose = function(e) &#123;</span><br><span class="line">	console.log(&quot;大家注意了，连接关了啊&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>readyState的属性值获取WebSocket对象的状态<br>connecting 0 表示正在连接<br>open 1 表示已经建立连接<br>closing 2 表示正在关闭连接<br>closed 3 表示连接已经关闭</p>
-<p>WebSocket和http协议有区别也有联系。首先http协议中请求和响应是成对存在严格对应的，在http1.1中的keep-alive实现可将多个http请求合并成一个，但是它和WebSocket还是不一样，它依然是请求和响应一一对应的。WebSocket是一个新的协议，借助于http协议完成握手。<br>WebSocket的连接请求跟http请求相似，但是多出了这么两行<code>upgrade:wesocket connection:upgrade</code>这两行告诉服务器，我是一个WebSocket协议。</p>
-<pre><code>传统的技术当然也可以实现信息的即时发送和获取，依赖于ajax轮询和long poll。
-轮询，顾名思义就是隔一会查看一下是否有新的消息,需要服务器有很快的处理速度。
-long poll 就是相当于发起请求后没收到消息就赖着不走了这么个样子。需要有很高的并发。
-当然以上两种对我来说都是停留在了理论层面，我并没有真正去实践过。有错误的地方，日后改正。</code></pre>]]></content>
+<p>以下内容整理自稀土掘金中的<a href="https://juejin.im/post/5b6133a351882519d346853f" target="_blank" rel="noopener">奇舞周刊</a><br>1.内联首屏关键css（视情况而定）<br>适当的将渲染首屏内容所需的关键CSS内联到HTML中<br>2.异步加载css<br>3.文件压缩<br>4.去除无用CSS<br>虽然文件压缩能够降低文件大小。但CSS文件压缩通常只会去除无用的空格，这样就限制了CSS文件的压缩比例。那是否还有其他手段来精简CSS呢？答案显然是肯定的，如果压缩后的文件仍然超出了预期的大小，我们可以试着找到并删除代码中无用的CSS。</p>
+<p>一般情况下，会存在这两种无用的CSS代码：一种是不同元素或者其他情况下的重复代码，一种是整个页面内没有生效的CSS代码。对于前者，在编写的代码时候，我们应该尽可能地提取公共类，减少重复。对于后者，在不同开发者进行代码维护的过程中，总会产生不再使用的CSS的代码，当然一个人编写时也有可能出现这一问题。而这些无用的CSS代码不仅会增加浏览器的下载量，还会增加浏览器的解析时间，这对性能来说是很大的消耗。所以我们需要找到并去除这些无用代码。</p>
+<p>5.有选择的使用选择器</p>
+<p>保持简单，不要使用嵌套过多过于复杂的选择器。<br>通配符和属性选择器效率最低，需要匹配的元素最多，尽量避免使用。<br>不要使用类选择器和ID选择器修饰元素标签，如h3#markdown-content，这样多此一举，还会降低效率。<br>不要为了追求速度而放弃可读性与可维护性。<br><a href="http://www.w3cplus.com/css/mindbemding-getting-your-head-round-bem-syntax.html" target="_blank" rel="noopener">BEM命名法</a></p>
+<p>这个命名方式能使结构更加清晰，但是我觉得写出来看着太反人类了，可以借鉴这个思想，但是目前不会用这个方式。</p>
+<p>5.减少使用昂贵的属性</p>
+<p>所有需要浏览器进行操作或计算的属性相对而言都需要花费更大的代价</p>
+<p>6.优化重排和重绘</p>
+]]></content>
       <tags>
         <tag>前端</tag>
+        <tag>css</tag>
       </tags>
   </entry>
   <entry>
@@ -423,39 +444,6 @@ long poll 就是相当于发起请求后没收到消息就赖着不走了这么�
       </tags>
   </entry>
   <entry>
-    <title>get和post方法</title>
-    <url>/2020/05/16/get%E5%92%8Cpost%E6%96%B9%E6%B3%95/</url>
-    <content><![CDATA[<p>http中的get和post方法</p>
-<a id="more"></a>
-<p>get获取的数据可以被缓存<br>get传输的数据长度短<br>get是明文传输，参数在url中，相对来说安全性不够</p>
-<p><a href="https://www.cnblogs.com/cwzqianduan/p/8675356.html" target="_blank" rel="noopener">关于在axios中 get和post 以及params和data的区别</a><br>详情看官网</p>
-]]></content>
-      <tags>
-        <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Object.defineProperty</title>
-    <url>/2019/07/09/Object-defineProperty/</url>
-    <content><![CDATA[<p>Object.defineProperty(object, propertyname, descriptor)<br>为对象定义属性的函数</p>
-]]></content>
-      <tags>
-        <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>css实现三角形</title>
-    <url>/2019/07/16/css%E5%AE%9E%E7%8E%B0%E4%B8%89%E8%A7%92%E5%BD%A2/</url>
-    <content><![CDATA[<p>在日常开发中，经常有一些箭头啊 边边角角的地方会用到三角形，但是又懒得切图啥的，其实用css自己画也是个不错的选择，这里，来探寻一下其原理~</p>
-<a id="more"></a>
-<p>css实现三角形的底层原理其实就是利用了盒模型的边框<br><img src="/2019/07/16/css实现三角形/tu1.png" alt="tu"><br>如图所示 实质上在块级元素的长宽均为0的情况下，块级元素的四条边框就组成了一个完整的矩形，在此基础上，我们需要什么样的三角形，调整相应的边框颜色为透明即可。</p>
-]]></content>
-      <tags>
-        <tag>前端</tag>
-        <tag>css</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>flex布局知识点</title>
     <url>/2020/07/22/flex%E5%B8%83%E5%B1%80%E7%9F%A5%E8%AF%86%E7%82%B9/</url>
     <content><![CDATA[<p>flex是一个十分好用的布局方法，能轻松的实现很多以往需要做复杂的工作才能实现的效果<br>在reactnative中 更是默认的flex布局<br>之前对flex布局都是一知半解，今天看到了一句值得划重点的知识点<br>码起来呀</p>
@@ -490,6 +478,18 @@ long poll 就是相当于发起请求后没收到消息就赖着不走了这么�
       <tags>
         <tag>前端</tag>
         <tag>css</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>get和post方法</title>
+    <url>/2020/05/16/get%E5%92%8Cpost%E6%96%B9%E6%B3%95/</url>
+    <content><![CDATA[<p>http中的get和post方法</p>
+<a id="more"></a>
+<p>get获取的数据可以被缓存<br>get传输的数据长度短<br>get是明文传输，参数在url中，相对来说安全性不够</p>
+<p><a href="https://www.cnblogs.com/cwzqianduan/p/8675356.html" target="_blank" rel="noopener">关于在axios中 get和post 以及params和data的区别</a><br>详情看官网</p>
+]]></content>
+      <tags>
+        <tag>前端</tag>
       </tags>
   </entry>
   <entry>
@@ -588,70 +588,6 @@ long poll 就是相当于发起请求后没收到消息就赖着不走了这么�
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=&quot;en&quot;&gt;</span><br><span class="line">  &lt;head&gt;</span><br><span class="line">    &lt;meta charset=&quot;UTF-8&quot; /&gt;</span><br><span class="line">    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;</span><br><span class="line">    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;ie=edge&quot; /&gt;</span><br><span class="line">    &lt;title&gt;Document&lt;/title&gt;</span><br><span class="line">  &lt;/head&gt;</span><br><span class="line">  &lt;body&gt;</span><br><span class="line">    &lt;div class=&quot;zan&quot; id=&quot;zan&quot;&gt;</span><br><span class="line">      &lt;div class=&quot;icon&quot;&gt;&lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line"></span><br><span class="line">    &lt;script&gt;</span><br><span class="line">        var btn =document.getElementById(&apos;zan&apos;)</span><br><span class="line">        btn.onclick=function()&#123;</span><br><span class="line">            console.log(1);</span><br><span class="line">            var icon=document.getElementsByClassName(&apos;icon&apos;)[0];</span><br><span class="line">            console.log(icon);</span><br><span class="line">            icon.classList.add(&apos;active&apos;,&apos;zanAnimation&apos;);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &lt;/script&gt;</span><br><span class="line"></span><br><span class="line">     &lt;style&gt;</span><br><span class="line">      .icon &#123;</span><br><span class="line">        content: &quot;&quot;;</span><br><span class="line">        height: 100px;</span><br><span class="line">        width: 100px;</span><br><span class="line">        display: inline-block;</span><br><span class="line">        vertical-align: middle;</span><br><span class="line">        background-size: 100% 100%;</span><br><span class="line">        background-repeat: no-repeat;</span><br><span class="line">        background-position: left;</span><br><span class="line">        background-size: 2000%;</span><br><span class="line">        background: url(&quot;data:image/png;base64,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&quot;);</span><br><span class="line">      &#125;</span><br><span class="line">      .active &#123;</span><br><span class="line">        background-position: right;</span><br><span class="line">      &#125;</span><br><span class="line">      .zanAnimation &#123;</span><br><span class="line">        display: inline-block;</span><br><span class="line">        -webkit-animation-name: zan;</span><br><span class="line">        animation-name: zan;</span><br><span class="line">        -webkit-animation-duration: 0.5s;</span><br><span class="line">        animation-duration: 0.5s;</span><br><span class="line">        -webkit-animation-iteration-count: 1;</span><br><span class="line">        animation-iteration-count: 1;</span><br><span class="line">        -webkit-animation-timing-function: steps(19);</span><br><span class="line">        animation-timing-function: steps(19);</span><br><span class="line">        background-position: right;</span><br><span class="line">      &#125;</span><br><span class="line">      @-webkit-keyframes zan &#123;</span><br><span class="line">        0% &#123;</span><br><span class="line">          background-position: left;</span><br><span class="line">        &#125;</span><br><span class="line">        100% &#123;</span><br><span class="line">          background-position: right;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      @keyframes zan &#123;</span><br><span class="line">        0% &#123;</span><br><span class="line">          background-position: left;</span><br><span class="line">        &#125;</span><br><span class="line">        100% &#123;</span><br><span class="line">          background-position: right;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &lt;/style&gt;</span><br><span class="line">  &lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
 
 ]]></content>
-      <tags>
-        <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>html5（新增元素）</title>
-    <url>/2017/11/15/html5-%E6%96%B0%E5%A2%9E%E5%85%83%E7%B4%A0/</url>
-    <content><![CDATA[<p>html5要解决的问题：</p>
-<ol>
-<li>web浏览器之家的兼容性很低</li>
-<li>文档结构不够明确 （语义化）</li>
-<li>web应用程序的功能受到了限制</li>
-</ol>
-<p>HTML5中的DOCTYPE声明  ‘&lt;！DOCTYPE html&gt;’’<br> <a id="more"></a></p>
-<section>新增的结构元素：
- section 表示页面中的内容区块，比如章节、页眉、页脚
- article 表示与页面上下文无关的独立内容 
- aside 侧边栏
- header 页面中一个内容区块或整个页面的标题
- footer 整个页面或者页面中一个内容区块的脚注
- nav 页面中导航链接的部分 替换ul
- figure 表示文档主体流内容中的一个独立单元 figcaption 为figure元素添加标题 替换dl
- main 网页中的主要内容
-</section>
- <section>
- 新增的其他元素:
-> vedio 用于定义视频
-> audio 用于定义音频
-> embed 用来插入各种多媒体
-> mark 高亮显示
-> progress 表示运行中的进程，可以用来显示js中耗费时间函数的进程
-> time 用来表示日期或时间
-> ruby 表示ruby注释
-> canvas 表示图形，仅提供一个画布
-> command 表示命令按钮
-> details 细节 summary提供标题或图例 点击标题是可以展示细节内容
-> datalist 表示可选数据的列表  datagrid 以树形列表显示
-> Keygen 表示生成秘钥
-> output 表示不同类型的输出
-> menu 表示菜单列表
-> source 为媒介元素定义媒介资源
-</section>
-<section>新增input元素类型：
-email、url、number、range、Date（功能强大，但是很多浏览器不支持）
-废除的元素：
-> 能使用css替代的元素 如center、font、big
-> 不再使用frame框架
-> 只有部分浏览器支持的元素 如applet、blink、bgsound
-</section>
-<section>新增的事件：
-> beforeprint 即将开始打印前触发
-> afterprint 打印完毕后触发
-> resize 窗口大小改变时触发
-> error 页面出错是触发
-> offline 离线是触发
-> online 在线时触发
-> pageshow 页面加载时触发
-> beforeunload 页面被关闭时触发
-> hashchange 页面url地址字符串中的hash部分发送改变时触发
-> mousewheel 
-> scroll
-> input 用户修改文本框中的内容时触发
-> reset 
-</section> ]]></content>
       <tags>
         <tag>前端</tag>
       </tags>
@@ -864,6 +800,70 @@ function draw(id){
       </tags>
   </entry>
   <entry>
+    <title>html5（新增元素）</title>
+    <url>/2017/11/15/html5-%E6%96%B0%E5%A2%9E%E5%85%83%E7%B4%A0/</url>
+    <content><![CDATA[<p>html5要解决的问题：</p>
+<ol>
+<li>web浏览器之家的兼容性很低</li>
+<li>文档结构不够明确 （语义化）</li>
+<li>web应用程序的功能受到了限制</li>
+</ol>
+<p>HTML5中的DOCTYPE声明  ‘&lt;！DOCTYPE html&gt;’’<br> <a id="more"></a></p>
+<section>新增的结构元素：
+ section 表示页面中的内容区块，比如章节、页眉、页脚
+ article 表示与页面上下文无关的独立内容 
+ aside 侧边栏
+ header 页面中一个内容区块或整个页面的标题
+ footer 整个页面或者页面中一个内容区块的脚注
+ nav 页面中导航链接的部分 替换ul
+ figure 表示文档主体流内容中的一个独立单元 figcaption 为figure元素添加标题 替换dl
+ main 网页中的主要内容
+</section>
+ <section>
+ 新增的其他元素:
+> vedio 用于定义视频
+> audio 用于定义音频
+> embed 用来插入各种多媒体
+> mark 高亮显示
+> progress 表示运行中的进程，可以用来显示js中耗费时间函数的进程
+> time 用来表示日期或时间
+> ruby 表示ruby注释
+> canvas 表示图形，仅提供一个画布
+> command 表示命令按钮
+> details 细节 summary提供标题或图例 点击标题是可以展示细节内容
+> datalist 表示可选数据的列表  datagrid 以树形列表显示
+> Keygen 表示生成秘钥
+> output 表示不同类型的输出
+> menu 表示菜单列表
+> source 为媒介元素定义媒介资源
+</section>
+<section>新增input元素类型：
+email、url、number、range、Date（功能强大，但是很多浏览器不支持）
+废除的元素：
+> 能使用css替代的元素 如center、font、big
+> 不再使用frame框架
+> 只有部分浏览器支持的元素 如applet、blink、bgsound
+</section>
+<section>新增的事件：
+> beforeprint 即将开始打印前触发
+> afterprint 打印完毕后触发
+> resize 窗口大小改变时触发
+> error 页面出错是触发
+> offline 离线是触发
+> online 在线时触发
+> pageshow 页面加载时触发
+> beforeunload 页面被关闭时触发
+> hashchange 页面url地址字符串中的hash部分发送改变时触发
+> mousewheel 
+> scroll
+> input 用户修改文本框中的内容时触发
+> reset 
+</section> ]]></content>
+      <tags>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>iframe</title>
     <url>/2017/12/06/iframe/</url>
     <content><![CDATA[<p>哒哒哒~<br>我要来了解一下这个不知道是什么东西的东西了<strong>iframe</strong></p>
@@ -1030,6 +1030,18 @@ console.log(x)//10</code><br>反正我开始看到这个是一脸懵逼的</p>
       </tags>
   </entry>
   <entry>
+    <title>js中的防抖和节流</title>
+    <url>/2020/08/25/js%E4%B8%AD%E7%9A%84%E9%98%B2%E6%8A%96%E5%92%8C%E8%8A%82%E6%B5%81/</url>
+    <content><![CDATA[<p>防抖和节流的原理和代码</p>
+<a id="more"></a>
+<p>debounce，去抖动。策略是当事件被触发时，设定一个周期延迟执行动作，若期间又被触发，则重新设定周期，直到周期结束，执行动作。 这是debounce的基本思想，在后期又扩展了前缘debounce，即执行动作在前，然后设定周期，周期内有事件被触发，不执行动作，且周期重新设定。</p>
+<p>throttling，节流的策略是，固定周期内，只执行一次动作，若有新事件触发，不执行。周期结束后，又有事件触发，开始新的周期。 节流策略也分前缘和延迟两种。与debounce类似，延迟是指 周期结束后执行动作，前缘是指执行动作后再开始周期。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">/**防抖 一段时间内重复触发则清除定时器重新开始计时 */</span><br><span class="line">const debounce = function (fn, delay) &#123;</span><br><span class="line">    let timer = null</span><br><span class="line">    if (!delay) &#123;</span><br><span class="line">        delay = 1000</span><br><span class="line">    &#125;</span><br><span class="line">    return function (fn, delay) &#123;</span><br><span class="line">        clearTimeout(timer)</span><br><span class="line">        timer = setTimeout(fn, delay)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/**节流 第一次点击执行后一段时间内再次触发不执行 直到计时结束才可以再次被触发 */</span><br><span class="line">const throttling = function (fn, delay) &#123;</span><br><span class="line">    var timer = null;</span><br><span class="line">    if (!delay) &#123;</span><br><span class="line">        delay = 1000</span><br><span class="line">    &#125;</span><br><span class="line">    return function () &#123;</span><br><span class="line">        var context = this;</span><br><span class="line">        var args = arguments;</span><br><span class="line">        if (!timer) &#123;</span><br><span class="line">            timer = setTimeout(function () &#123;</span><br><span class="line">                fn.apply(context, args);</span><br><span class="line">                timer = null;</span><br><span class="line">            &#125;, delay);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>js基础之ajax</title>
     <url>/2017/12/15/js%E5%9F%BA%E7%A1%80%E4%B9%8Bajax/</url>
     <content><![CDATA[<p>AJAX即异步javascript和XML<br>ajax是一个非常基础又常见的前端技能。我认为它的核心就是实现局部刷新。这在网站中是非常有用的。下面是我整理的学习过程和心得~</p>
@@ -1095,13 +1107,15 @@ console.log(x)//10</code><br>反正我开始看到这个是一脸懵逼的</p>
       </tags>
   </entry>
   <entry>
-    <title>js中的防抖和节流</title>
-    <url>/2020/08/25/js%E4%B8%AD%E7%9A%84%E9%98%B2%E6%8A%96%E5%92%8C%E8%8A%82%E6%B5%81/</url>
-    <content><![CDATA[<p>防抖和节流的原理和代码</p>
+    <title>js对中文编码的函数</title>
+    <url>/2020/05/06/js%E5%AF%B9%E4%B8%AD%E6%96%87%E7%BC%96%E7%A0%81%E7%9A%84%E5%87%BD%E6%95%B0/</url>
+    <content><![CDATA[<p>js中的中文保险起见 最好都进行一下转码<br>escape,encodeURI,encodeURIComponent</p>
 <a id="more"></a>
-<p>debounce，去抖动。策略是当事件被触发时，设定一个周期延迟执行动作，若期间又被触发，则重新设定周期，直到周期结束，执行动作。 这是debounce的基本思想，在后期又扩展了前缘debounce，即执行动作在前，然后设定周期，周期内有事件被触发，不执行动作，且周期重新设定。</p>
-<p>throttling，节流的策略是，固定周期内，只执行一次动作，若有新事件触发，不执行。周期结束后，又有事件触发，开始新的周期。 节流策略也分前缘和延迟两种。与debounce类似，延迟是指 周期结束后执行动作，前缘是指执行动作后再开始周期。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">/**防抖 一段时间内重复触发则清除定时器重新开始计时 */</span><br><span class="line">const debounce = function (fn, delay) &#123;</span><br><span class="line">    let timer = null</span><br><span class="line">    if (!delay) &#123;</span><br><span class="line">        delay = 1000</span><br><span class="line">    &#125;</span><br><span class="line">    return function (fn, delay) &#123;</span><br><span class="line">        clearTimeout(timer)</span><br><span class="line">        timer = setTimeout(fn, delay)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/**节流 第一次点击执行后一段时间内再次触发不执行 直到计时结束才可以再次被触发 */</span><br><span class="line">const throttling = function (fn, delay) &#123;</span><br><span class="line">    var timer = null;</span><br><span class="line">    if (!delay) &#123;</span><br><span class="line">        delay = 1000</span><br><span class="line">    &#125;</span><br><span class="line">    return function () &#123;</span><br><span class="line">        var context = this;</span><br><span class="line">        var args = arguments;</span><br><span class="line">        if (!timer) &#123;</span><br><span class="line">            timer = setTimeout(function () &#123;</span><br><span class="line">                fn.apply(context, args);</span><br><span class="line">                timer = null;</span><br><span class="line">            &#125;, delay);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+<h3 id="escape"><a href="#escape" class="headerlink" title="escape"></a>escape</h3><p><a href="https://www.w3school.com.cn/js/jsref_escape.asp" target="_blank" rel="noopener">escape</a></p>
+<h3 id="encodeURI"><a href="#encodeURI" class="headerlink" title="encodeURI"></a>encodeURI</h3><p>encodeURI() 函数可把字符串作为 URI 进行编码。<br>如果 URI 组件中含有分隔符，比如 ? 和 #，则应当使用 encodeURIComponent() 方法分别对各组件进行编码。<br><a href="https://www.w3school.com.cn/js/jsref_encodeuri.asp" target="_blank" rel="noopener">encodeURI</a></p>
+<h3 id="encodeURIComponent"><a href="#encodeURIComponent" class="headerlink" title="encodeURIComponent"></a>encodeURIComponent</h3><p><a href="https://www.w3school.com.cn/js/jsref_encodeURIComponent.asp" target="_blank" rel="noopener">encodeURIComponent</a></p>
+<p><a href="https://www.cnblogs.com/yanglongbo/p/9784020.html" target="_blank" rel="noopener">参考博文</a></p>
+]]></content>
       <tags>
         <tag>前端</tag>
       </tags>
@@ -1119,35 +1133,6 @@ console.log(x)//10</code><br>反正我开始看到这个是一脸懵逼的</p>
 </ol>
 <ol start="3">
 <li><mark>BaiduTemplate</mark>（百度）</li>
-</ol>
-]]></content>
-      <tags>
-        <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>js对中文编码的函数</title>
-    <url>/2020/05/06/js%E5%AF%B9%E4%B8%AD%E6%96%87%E7%BC%96%E7%A0%81%E7%9A%84%E5%87%BD%E6%95%B0/</url>
-    <content><![CDATA[<p>js中的中文保险起见 最好都进行一下转码<br>escape,encodeURI,encodeURIComponent</p>
-<a id="more"></a>
-<h3 id="escape"><a href="#escape" class="headerlink" title="escape"></a>escape</h3><p><a href="https://www.w3school.com.cn/js/jsref_escape.asp" target="_blank" rel="noopener">escape</a></p>
-<h3 id="encodeURI"><a href="#encodeURI" class="headerlink" title="encodeURI"></a>encodeURI</h3><p>encodeURI() 函数可把字符串作为 URI 进行编码。<br>如果 URI 组件中含有分隔符，比如 ? 和 #，则应当使用 encodeURIComponent() 方法分别对各组件进行编码。<br><a href="https://www.w3school.com.cn/js/jsref_encodeuri.asp" target="_blank" rel="noopener">encodeURI</a></p>
-<h3 id="encodeURIComponent"><a href="#encodeURIComponent" class="headerlink" title="encodeURIComponent"></a>encodeURIComponent</h3><p><a href="https://www.w3school.com.cn/js/jsref_encodeURIComponent.asp" target="_blank" rel="noopener">encodeURIComponent</a></p>
-<p><a href="https://www.cnblogs.com/yanglongbo/p/9784020.html" target="_blank" rel="noopener">参考博文</a></p>
-]]></content>
-      <tags>
-        <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>js遍历</title>
-    <url>/2020/06/12/js%E9%81%8D%E5%8E%86/</url>
-    <content><![CDATA[<p>foreach和map的区别</p>
-<ol>
-<li><code>foreach</code><br>foreach没有返回值</li>
-</ol>
-<ol start="2">
-<li><code>map</code><br>映射 跟foreach用法类似 返回一个新数组</li>
 </ol>
 ]]></content>
       <tags>
@@ -1173,15 +1158,55 @@ console.log(x)//10</code><br>反正我开始看到这个是一脸懵逼的</p>
       </tags>
   </entry>
   <entry>
-    <title>linux命令行</title>
-    <url>/2017/11/29/linux%E5%91%BD%E4%BB%A4%E8%A1%8C/</url>
-    <content><![CDATA[<p>ctrl+C 让当前的程序停掉<br>Ctrl+D 可以取代exit<br>tab 命令补齐</p>
-<a id="more"></a>
-<p>man 通过man指令可以查看Linux中的指令帮助、配置文件帮助和编程帮助等信息。<br>chgrp 改变文件的所属群组<br>chown 改变文件拥有者<br>chmod 改变文件权限<br>cd 变换目录<br>pwd 显示当前所在目录<br>mkdir 建立新目录<br>rmdir 删除空目录<br>ls 档案与目录的显示<br>gzip，zcat 压缩文件和读取压缩文件</p>
+    <title>js遍历</title>
+    <url>/2020/06/12/js%E9%81%8D%E5%8E%86/</url>
+    <content><![CDATA[<p>foreach和map的区别</p>
+<ol>
+<li><code>foreach</code><br>foreach没有返回值</li>
+</ol>
+<ol start="2">
+<li><code>map</code><br>映射 跟foreach用法类似 返回一个新数组</li>
+</ol>
 ]]></content>
       <tags>
-        <tag>面试</tag>
-        <tag>linux</tag>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>js高级特性</title>
+    <url>/2018/11/05/js%E9%AB%98%E7%BA%A7%E7%89%B9%E6%80%A7-2/</url>
+    <content><![CDATA[<p>有关于js的几个高级特性</p>
+<a id="more"></a>
+<p>###作用域<br>1.JavaScript的函数定义是可以嵌套的，每层一个作用域，变量搜索顺序是从内到外<br>2.无论函数内在什么地方定义了变量，变量都会提前到函数开始，但是直到运行到var时才会被初始化，在此之前都是undefined<br>3.函数作用域的嵌套关系是定义时决定的，而不是运行时决定的。即 js的作用域是静态作用域</p>
+<p>###闭包</p>
+<p style="color:red">闭包：由函数及其封闭的自由变量组成的集合体。</p>
+特性：当一个函数返回它内部定义的一个函数时，就产生了一个闭包。闭包不但包括被返回的函数，还包括这个函数的定义函数。
+作用：
+- 嵌套的回调函数：让变量的值始终保持在内存中
+- 隐藏对象的细节（实现私有成员）：可以读取函数内部的变量
+[阮一峰关于闭包的解释](http://www.ruanyifeng.com/blog/2009/08/learning_javascript_closures.html)
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">　var name = &quot;The Window&quot;;</span><br><span class="line">　　var object = &#123;</span><br><span class="line">　　　　name : &quot;My Object&quot;,</span><br><span class="line"></span><br><span class="line">　　　　getNameFunc : function()&#123;</span><br><span class="line">　　　　　　return function()&#123;</span><br><span class="line">　　　　　　　　return this.name;</span><br><span class="line">　　　　　　&#125;;</span><br><span class="line"></span><br><span class="line">　　　　&#125;</span><br><span class="line"></span><br><span class="line">　　&#125;;</span><br><span class="line"></span><br><span class="line">　　alert(object.getNameFunc()());//the windows</span><br><span class="line"></span><br><span class="line">//在这里首先执行object.getNameFunc() 它是作为一个返回值，返回的结果就是对象里层的function()函数,而这个函数的返回值是一个匿名函数，此时返回的this指向全局变量~</span><br><span class="line"></span><br><span class="line">var name = &quot;The Window&quot;;</span><br><span class="line"></span><br><span class="line">　　var object = &#123;</span><br><span class="line">　　　　name : &quot;My Object&quot;,</span><br><span class="line"></span><br><span class="line">　　　　getNameFunc : function()&#123;</span><br><span class="line">　　　　　　var that = this;</span><br><span class="line">　　　　　　return function()&#123;</span><br><span class="line">　　　　　　　　return that.name;</span><br><span class="line">　　　　　　&#125;;</span><br><span class="line"></span><br><span class="line">　　　　&#125;</span><br><span class="line"></span><br><span class="line">　　&#125;;</span><br><span class="line"></span><br><span class="line">　　alert(object.getNameFunc()());</span><br><span class="line"></span><br><span class="line">//对象在这里首先执行object.getNameFunc() 它是作为一个返回值，返回的结果就是对象里层的function()函数,而这个返回的函数指向that是指向object对象的哈哈哈 我明白了</span><br></pre></td></tr></table></figure>
+
+<p>###对象<br>1.call和apply</p>
+<ul>
+<li>作用是允许一个对象去调用另一个对象的成员函数</li>
+<li>func.call(func被调用时的上下文，传入func的参数)</li>
+<li>func.apply(func被调用时的上下文，传入func的参数组)</li>
+</ul>
+<p>2.bind（有待深入理解啊）</p>
+<ul>
+<li>永久绑定函数的上下文</li>
+<li>绑定参数表</li>
+</ul>
+<p>3.原型<br><img src="/2018/11/05/js高级特性-2/-1772995812.png" alt="原型"></p>
+<ul>
+<li>构造函数自身的属性和方法无法被共享，而原型对象的属性和方法可以被所有实例对象所共享。无法被共享带来的影响就是实例化多个对象时，构造函数中的方法就会被调用多次</li>
+<li>原型链：js分为两种对象：function和object 在万物皆对象的情况下，函数对象也属于对象，所有对象时最终原型都是object.prototype,而function.prototype是所有函数的原型。</li>
+</ul>
+<p>每一个函数都有prototype属性，prototype属性指向该函数的原型对象<br>每一个对象都有<strong>proto</strong>属性,<strong>proto</strong>属性指向该对象的构造函数的prototype属性<br><img src="/2018/11/05/js高级特性-2/8f7b173c-b989-440a-8590-e1062105037f.jpg" alt="原型链图"></p>
+]]></content>
+      <tags>
+        <tag>前端</tag>
       </tags>
   </entry>
   <entry>
@@ -1267,40 +1292,15 @@ console.log(x)//10</code><br>反正我开始看到这个是一脸懵逼的</p>
 ]]></content>
   </entry>
   <entry>
-    <title>js高级特性</title>
-    <url>/2018/11/05/js%E9%AB%98%E7%BA%A7%E7%89%B9%E6%80%A7-2/</url>
-    <content><![CDATA[<p>有关于js的几个高级特性</p>
+    <title>linux命令行</title>
+    <url>/2017/11/29/linux%E5%91%BD%E4%BB%A4%E8%A1%8C/</url>
+    <content><![CDATA[<p>ctrl+C 让当前的程序停掉<br>Ctrl+D 可以取代exit<br>tab 命令补齐</p>
 <a id="more"></a>
-<p>###作用域<br>1.JavaScript的函数定义是可以嵌套的，每层一个作用域，变量搜索顺序是从内到外<br>2.无论函数内在什么地方定义了变量，变量都会提前到函数开始，但是直到运行到var时才会被初始化，在此之前都是undefined<br>3.函数作用域的嵌套关系是定义时决定的，而不是运行时决定的。即 js的作用域是静态作用域</p>
-<p>###闭包</p>
-<p style="color:red">闭包：由函数及其封闭的自由变量组成的集合体。</p>
-特性：当一个函数返回它内部定义的一个函数时，就产生了一个闭包。闭包不但包括被返回的函数，还包括这个函数的定义函数。
-作用：
-- 嵌套的回调函数：让变量的值始终保持在内存中
-- 隐藏对象的细节（实现私有成员）：可以读取函数内部的变量
-[阮一峰关于闭包的解释](http://www.ruanyifeng.com/blog/2009/08/learning_javascript_closures.html)
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">　var name = &quot;The Window&quot;;</span><br><span class="line">　　var object = &#123;</span><br><span class="line">　　　　name : &quot;My Object&quot;,</span><br><span class="line"></span><br><span class="line">　　　　getNameFunc : function()&#123;</span><br><span class="line">　　　　　　return function()&#123;</span><br><span class="line">　　　　　　　　return this.name;</span><br><span class="line">　　　　　　&#125;;</span><br><span class="line"></span><br><span class="line">　　　　&#125;</span><br><span class="line"></span><br><span class="line">　　&#125;;</span><br><span class="line"></span><br><span class="line">　　alert(object.getNameFunc()());//the windows</span><br><span class="line"></span><br><span class="line">//在这里首先执行object.getNameFunc() 它是作为一个返回值，返回的结果就是对象里层的function()函数,而这个函数的返回值是一个匿名函数，此时返回的this指向全局变量~</span><br><span class="line"></span><br><span class="line">var name = &quot;The Window&quot;;</span><br><span class="line"></span><br><span class="line">　　var object = &#123;</span><br><span class="line">　　　　name : &quot;My Object&quot;,</span><br><span class="line"></span><br><span class="line">　　　　getNameFunc : function()&#123;</span><br><span class="line">　　　　　　var that = this;</span><br><span class="line">　　　　　　return function()&#123;</span><br><span class="line">　　　　　　　　return that.name;</span><br><span class="line">　　　　　　&#125;;</span><br><span class="line"></span><br><span class="line">　　　　&#125;</span><br><span class="line"></span><br><span class="line">　　&#125;;</span><br><span class="line"></span><br><span class="line">　　alert(object.getNameFunc()());</span><br><span class="line"></span><br><span class="line">//对象在这里首先执行object.getNameFunc() 它是作为一个返回值，返回的结果就是对象里层的function()函数,而这个返回的函数指向that是指向object对象的哈哈哈 我明白了</span><br></pre></td></tr></table></figure>
-
-<p>###对象<br>1.call和apply</p>
-<ul>
-<li>作用是允许一个对象去调用另一个对象的成员函数</li>
-<li>func.call(func被调用时的上下文，传入func的参数)</li>
-<li>func.apply(func被调用时的上下文，传入func的参数组)</li>
-</ul>
-<p>2.bind（有待深入理解啊）</p>
-<ul>
-<li>永久绑定函数的上下文</li>
-<li>绑定参数表</li>
-</ul>
-<p>3.原型<br><img src="/2018/11/05/js高级特性-2/-1772995812.png" alt="原型"></p>
-<ul>
-<li>构造函数自身的属性和方法无法被共享，而原型对象的属性和方法可以被所有实例对象所共享。无法被共享带来的影响就是实例化多个对象时，构造函数中的方法就会被调用多次</li>
-<li>原型链：js分为两种对象：function和object 在万物皆对象的情况下，函数对象也属于对象，所有对象时最终原型都是object.prototype,而function.prototype是所有函数的原型。</li>
-</ul>
-<p>每一个函数都有prototype属性，prototype属性指向该函数的原型对象<br>每一个对象都有<strong>proto</strong>属性,<strong>proto</strong>属性指向该对象的构造函数的prototype属性<br><img src="/2018/11/05/js高级特性-2/8f7b173c-b989-440a-8590-e1062105037f.jpg" alt="原型链图"></p>
+<p>man 通过man指令可以查看Linux中的指令帮助、配置文件帮助和编程帮助等信息。<br>chgrp 改变文件的所属群组<br>chown 改变文件拥有者<br>chmod 改变文件权限<br>cd 变换目录<br>pwd 显示当前所在目录<br>mkdir 建立新目录<br>rmdir 删除空目录<br>ls 档案与目录的显示<br>gzip，zcat 压缩文件和读取压缩文件</p>
 ]]></content>
       <tags>
-        <tag>前端</tag>
+        <tag>面试</tag>
+        <tag>linux</tag>
       </tags>
   </entry>
   <entry>
@@ -1389,20 +1389,6 @@ console.log(x)//10</code><br>反正我开始看到这个是一脸懵逼的</p>
       </tags>
   </entry>
   <entry>
-    <title>node+koa</title>
-    <url>/2020/06/23/node-koa/</url>
-    <content><![CDATA[<ol>
-<li>koa+node基础搭建到实现api接口 <a href="https://www.jianshu.com/p/3b60dda108d4" target="_blank" rel="noopener">https://www.jianshu.com/p/3b60dda108d4</a></li>
-<li>使用pm2管理node进程</li>
-<li>使用knex操作数据库</li>
-<li></li>
-</ol>
-]]></content>
-      <tags>
-        <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>node.js入门(3)</title>
     <url>/2017/12/09/node-js%E5%85%A5%E9%97%A8-3/</url>
     <content><![CDATA[<p><a href="http://www.expressjs.com.cn/" target="_blank" rel="noopener">express框架中文官网</a><br>基于 Node.js 平台，快速、开放、极简的 web 开发框架。<br>express可以极大程度上简化nodejs，它由许多api非常方便使用。<br>node.js的http封装的程度不高，路由由原生代码实现起来比较复杂。在我目前的感知里，我认为框架最主要就是实现了比较方便的路由的架构。  </p>
@@ -1425,6 +1411,34 @@ console.log(x)//10</code><br>反正我开始看到这个是一脸懵逼的</p>
       <tags>
         <tag>前端</tag>
         <tag>node.js</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>node+koa</title>
+    <url>/2020/06/23/node-koa/</url>
+    <content><![CDATA[<ol>
+<li>koa+node基础搭建到实现api接口 <a href="https://www.jianshu.com/p/3b60dda108d4" target="_blank" rel="noopener">https://www.jianshu.com/p/3b60dda108d4</a></li>
+<li>使用pm2管理node进程</li>
+<li>使用knex操作数据库</li>
+<li></li>
+</ol>
+]]></content>
+      <tags>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>npm依赖管理</title>
+    <url>/2017/12/14/npm%E4%BE%9D%E8%B5%96%E7%AE%A1%E7%90%86/</url>
+    <content><![CDATA[<p>npm是node.js的包管理器，在前端项目中我们经常用它来加载模块，npm库有许多实用的包，使用起来也非常方便，只需要用命令行下载就行了。在项目的拷贝迁移和管理过程中，也能极大地提供方便。</p>
+<a id="more"></a>
+<p>npm中的–save命令行会自动将加载的依赖添加到package.json文件中。<br>npm 目前支持以下几类依赖包管理：</p>
+<blockquote>
+<p>dependencies 应用依赖：它用于指定应用依赖的外部包，这些依赖是应用发布后正常执行时所需要的，但不包含测试时或者本地打包时所使用的包。<br>devDependencies 开发环境依赖：它的对象定义和dependencies一样，只不过它里面的包只用于开发环境，不用于生产环境，这些包通常是单元测试或者打包工具等<br>peerDependencies 同等依赖：或者叫同伴依赖，用于指定当前包（也就是你写的包）兼容的宿主版本。<br>optionalDependencies 可选依赖：如果有一些依赖包即使安装失败，项目仍然能够运行或者希望npm继续运行，就可以使用optionalDependencies。另外optionalDependencies会覆盖dependencies中的同名依赖包，所以不要在两个地方都写。<br>bundledDependencies / bundleDependencies 打包依赖：是一个包含依赖包名的数组对象，在发布时会将这个对象中的包打包到最终的发布包里。</p>
+</blockquote>
+]]></content>
+      <tags>
+        <tag>前端</tag>
       </tags>
   </entry>
   <entry>
@@ -1463,32 +1477,6 @@ console.log(x)//10</code><br>反正我开始看到这个是一脸懵逼的</p>
       </tags>
   </entry>
   <entry>
-    <title>npm依赖管理</title>
-    <url>/2017/12/14/npm%E4%BE%9D%E8%B5%96%E7%AE%A1%E7%90%86/</url>
-    <content><![CDATA[<p>npm是node.js的包管理器，在前端项目中我们经常用它来加载模块，npm库有许多实用的包，使用起来也非常方便，只需要用命令行下载就行了。在项目的拷贝迁移和管理过程中，也能极大地提供方便。</p>
-<a id="more"></a>
-<p>npm中的–save命令行会自动将加载的依赖添加到package.json文件中。<br>npm 目前支持以下几类依赖包管理：</p>
-<blockquote>
-<p>dependencies 应用依赖：它用于指定应用依赖的外部包，这些依赖是应用发布后正常执行时所需要的，但不包含测试时或者本地打包时所使用的包。<br>devDependencies 开发环境依赖：它的对象定义和dependencies一样，只不过它里面的包只用于开发环境，不用于生产环境，这些包通常是单元测试或者打包工具等<br>peerDependencies 同等依赖：或者叫同伴依赖，用于指定当前包（也就是你写的包）兼容的宿主版本。<br>optionalDependencies 可选依赖：如果有一些依赖包即使安装失败，项目仍然能够运行或者希望npm继续运行，就可以使用optionalDependencies。另外optionalDependencies会覆盖dependencies中的同名依赖包，所以不要在两个地方都写。<br>bundledDependencies / bundleDependencies 打包依赖：是一个包含依赖包名的数组对象，在发布时会将这个对象中的包打包到最终的发布包里。</p>
-</blockquote>
-]]></content>
-      <tags>
-        <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>react.js入门2（路由）</title>
-    <url>/2018/12/27/react-js%E5%85%A5%E9%97%A82%EF%BC%88%E8%B7%AF%E7%94%B1%EF%BC%89/</url>
-    <content><![CDATA[<p>##react-router和react-router-dom<br>React-router<br>React-router提供了一些router的核心api，包括Router, Route, Switch等，但是它没有提供dom操作进行跳转的api。</p>
-<p>React-router-dom<br>React-router-dom提供了BrowserRouter, Route, Link等api,我们可以通过dom的事件控制路由。例如点击一个按钮进行跳转，大多数情况下我们是这种情况，所以在开发过程中，我们更多是使用React-router-dom。安装很简单npm i react-router-dom –save,安装了淘宝镜像的就用cnpm吧。<br>——摘自 react-router中文官网</p>
-<a id="more"></a>
-
-]]></content>
-      <tags>
-        <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>react.js入门1</title>
     <url>/2018/12/24/react-js%E5%85%A5%E9%97%A81/</url>
     <content><![CDATA[<p>写在前面<br>没啥好写的，说是资本寒冬，多学点东西总没坏处</p>
@@ -1508,6 +1496,18 @@ console.log(x)//10</code><br>反正我开始看到这个是一脸懵逼的</p>
 <h2 id="状态提升"><a href="#状态提升" class="headerlink" title="状态提升"></a>状态提升</h2><h2 id="react事件处理"><a href="#react事件处理" class="headerlink" title="react事件处理"></a><a href="https://segmentfault.com/a/1190000011877137" target="_blank" rel="noopener">react事件处理</a></h2><p>在以类继承的方式定义的组件中，为了能方便地调用当前组件的其他成员方法或属性（如：this.state），通常需要将事件处理函数运行时的 this 指向当前组件实例。<br>jsx回调函数中的this 类的方法默认是不会绑定this的 如果忘记绑定，那么这个函数的this值会是undifined<br>绑定事件处理函数的 this 到当前组件，有如下几种方式。</p>
 <p>第一种方式，通过 bind 方法，原地绑定事件处理函数的 this 指向<br>这种方式的优点是书写起来相对简单，但是每次渲染都会执行 bind 方法生成一个新的函数，会有额外的开销，由于事件处理函数是作为属性传递的，所以从而导致子组件进行重新渲染，显然这不是一种好的方式。<br>第二种方式，通过一个箭头函数将真实的事件处理函数包装一下<br>第三种方式，在 constructor 中预先将所有的事件处理函数通过 bind 方法进行绑定。</p>
 <p>this.props.back</p>
+]]></content>
+      <tags>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>react.js入门2（路由）</title>
+    <url>/2018/12/27/react-js%E5%85%A5%E9%97%A82%EF%BC%88%E8%B7%AF%E7%94%B1%EF%BC%89/</url>
+    <content><![CDATA[<p>##react-router和react-router-dom<br>React-router<br>React-router提供了一些router的核心api，包括Router, Route, Switch等，但是它没有提供dom操作进行跳转的api。</p>
+<p>React-router-dom<br>React-router-dom提供了BrowserRouter, Route, Link等api,我们可以通过dom的事件控制路由。例如点击一个按钮进行跳转，大多数情况下我们是这种情况，所以在开发过程中，我们更多是使用React-router-dom。安装很简单npm i react-router-dom –save,安装了淘宝镜像的就用cnpm吧。<br>——摘自 react-router中文官网</p>
+<a id="more"></a>
+
 ]]></content>
       <tags>
         <tag>前端</tag>
@@ -1709,18 +1709,6 @@ console.log(x)//10</code><br>反正我开始看到这个是一脸懵逼的</p>
 ]]></content>
   </entry>
   <entry>
-    <title>vertical-align详解</title>
-    <url>/2018/11/06/vertical-align%E8%AF%A6%E8%A7%A3/</url>
-    <content><![CDATA[<p>vertical-align 是一个容易出bug的属性</p>
-<a id="more"></a>
-<p>首先，为什么有时候始终达不到对齐的效果呢<br>来看看官方定义<br><img src="/2018/11/06/vertical-align详解/tu1.png" alt="tu"><br>对不齐的原因主要是因为，<strong>父元素</strong> 如图，可能的值中，有不少是以父元素作为基准对其的，而不是与其同辈的元素，但是如果同辈元素中均有这一属性 则两者能够水平和对齐，因为他们的基准一致。<br><code>&lt;p&gt;&lt;img/&gt;balabala&lt;/p&gt;</code>在这段代码里，在img上加vertical-align希望i与文字居中对齐（或者别的）是会出问题的，因为文字不会居中对齐。（某些特定条件下是会对齐的）<br><img src="/2018/11/06/vertical-align详解/tu2.png" alt="tu"><br><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/vertical-align" target="_blank" rel="noopener">MDN上对vertical-align的讲解</a></p>
-]]></content>
-      <tags>
-        <tag>前端</tag>
-        <tag>css</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>typescript</title>
     <url>/2019/08/21/typescript-1/</url>
     <content><![CDATA[<a id="more"></a>
@@ -1733,6 +1721,18 @@ console.log(x)//10</code><br>反正我开始看到这个是一脸懵逼的</p>
 ]]></content>
       <tags>
         <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>vertical-align详解</title>
+    <url>/2018/11/06/vertical-align%E8%AF%A6%E8%A7%A3/</url>
+    <content><![CDATA[<p>vertical-align 是一个容易出bug的属性</p>
+<a id="more"></a>
+<p>首先，为什么有时候始终达不到对齐的效果呢<br>来看看官方定义<br><img src="/2018/11/06/vertical-align详解/tu1.png" alt="tu"><br>对不齐的原因主要是因为，<strong>父元素</strong> 如图，可能的值中，有不少是以父元素作为基准对其的，而不是与其同辈的元素，但是如果同辈元素中均有这一属性 则两者能够水平和对齐，因为他们的基准一致。<br><code>&lt;p&gt;&lt;img/&gt;balabala&lt;/p&gt;</code>在这段代码里，在img上加vertical-align希望i与文字居中对齐（或者别的）是会出问题的，因为文字不会居中对齐。（某些特定条件下是会对齐的）<br><img src="/2018/11/06/vertical-align详解/tu2.png" alt="tu"><br><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/vertical-align" target="_blank" rel="noopener">MDN上对vertical-align的讲解</a></p>
+]]></content>
+      <tags>
+        <tag>前端</tag>
+        <tag>css</tag>
       </tags>
   </entry>
   <entry>
@@ -2032,37 +2032,6 @@ CLI：在 shell 命令中指定它们。</code></pre></li>
       </tags>
   </entry>
   <entry>
-    <title>上班后的第一篇</title>
-    <url>/2018/04/01/%E4%B8%8A%E7%8F%AD%E5%90%8E%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87/</url>
-    <content><![CDATA[<p>实习一个星期，最大的感受就是自己好菜还有就是下班之后好困。<br>回头想想之前立的flag,大多数都不了了之。所以，怎么样做个自律的人呢<br>要学的东西还有很多，在公司的开发和以前做的些东西确实有些出入。尽快成长起来才是硬道理呀~</p>
-]]></content>
-      <tags>
-        <tag>随笔</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>事实</title>
-    <url>/2019/12/01/%E4%BA%8B%E5%AE%9E/</url>
-    <content><![CDATA[<p>《事实》一书，读书笔记</p>
-<a id="more"></a>
-<ol>
-<li>一分为二  关注大多数</li>
-<li>负面思维  对坏消息有思想准备</li>
-<li>直线思维  直线可以弯曲</li>
-<li>恐惧本能  计算风险</li>
-<li>规模错觉  按照比例看待事物</li>
-<li>以偏概全  思考你的分类方法</li>
-<li>命中注定  一点点改变也是改变</li>
-<li>单一视角  获取一套工具箱</li>
-<li>归咎他人  拒绝职责他人</li>
-<li>情急生乱  慢慢来</li>
-</ol>
-]]></content>
-      <tags>
-        <tag>随笔</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>一个冥想者的觉知书</title>
     <url>/2019/09/02/%E4%B8%80%E4%B8%AA%E5%86%A5%E6%83%B3%E8%80%85%E7%9A%84%E8%A7%89%E7%9F%A5%E4%B9%A6/</url>
     <content><![CDATA[<p>这是我看的第一本关于冥想的书，看完之后我依旧是个没有信仰的人。<br>本书通过作者的亲身经历，描述自己在巨大的压力下，如何战胜抑郁和焦虑，找到了行之有效的自我调节方法。</p>
@@ -2099,6 +2068,37 @@ CLI：在 shell 命令中指定它们。</code></pre></li>
     <content><![CDATA[<p>法国心理学家古斯塔夫勒庞的这本社会心理学著作《乌合之众》大多数人就算没有看过也应该听说过。其实刚开始看这本书的时候我是看不下去的，加之网上对他各种评论，褒贬不一，让我更加不敢妄加断言自己的观点。但是自己些写东西嘛，必然是有自己的偏见的，还是记录一下自己看这本书时的看法，不一定对。</p>
 <a id="more"></a>
 <p>首先我们不说这本书是不是一本好书。我对好坏的界定一直不清晰。个人有个人的看法，大致上大家都会倾向于相信自己所相信的东西。<br>正如我是个悲观的人，一定程度上我很认同勒庞关于“群体的无意识性”的说法。<br>这里的群体是指以某种共同的目的或者心理状态而聚合到一起的一群人。<br>勒庞认为人们一旦陷入无序群体之中，个人意识就会消失，变成盲目的集体意识，充满了急躁、冲动、轻信、偏执……</p>
+]]></content>
+      <tags>
+        <tag>随笔</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>上班后的第一篇</title>
+    <url>/2018/04/01/%E4%B8%8A%E7%8F%AD%E5%90%8E%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87/</url>
+    <content><![CDATA[<p>实习一个星期，最大的感受就是自己好菜还有就是下班之后好困。<br>回头想想之前立的flag,大多数都不了了之。所以，怎么样做个自律的人呢<br>要学的东西还有很多，在公司的开发和以前做的些东西确实有些出入。尽快成长起来才是硬道理呀~</p>
+]]></content>
+      <tags>
+        <tag>随笔</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>事实</title>
+    <url>/2019/12/01/%E4%BA%8B%E5%AE%9E/</url>
+    <content><![CDATA[<p>《事实》一书，读书笔记</p>
+<a id="more"></a>
+<ol>
+<li>一分为二  关注大多数</li>
+<li>负面思维  对坏消息有思想准备</li>
+<li>直线思维  直线可以弯曲</li>
+<li>恐惧本能  计算风险</li>
+<li>规模错觉  按照比例看待事物</li>
+<li>以偏概全  思考你的分类方法</li>
+<li>命中注定  一点点改变也是改变</li>
+<li>单一视角  获取一套工具箱</li>
+<li>归咎他人  拒绝职责他人</li>
+<li>情急生乱  慢慢来</li>
+</ol>
 ]]></content>
       <tags>
         <tag>随笔</tag>
@@ -2214,18 +2214,18 @@ CLI：在 shell 命令中指定它们。</code></pre></li>
       </tags>
   </entry>
   <entry>
-    <title>从乡下归来</title>
-    <url>/2018/03/08/%E4%BB%8E%E4%B9%A1%E4%B8%8B%E5%BD%92%E6%9D%A5/</url>
-    <content><![CDATA[<p>经历了一个多月没有WiFi的生活~<br>倒也没有多么难过。各种情绪都有过，但是也想通了许多事情。<br>博客没有写，这倒是有点遗憾了。人呐，每天都会有好多的想法，有时候把有些东西记录下来，其实也是件有意思的事情。功利点想，或许也是一件对以后的发展都很有益的事情呢<br>最近收到了个kindle，除了压泡面之外，对于比较喜欢看书的人来说也的确是个很值得入的东西。倒不是说电子水墨屏有多么护眼，反正多年以来我眼镜的度数也没涨起来过，我觉得，kindle这种除了看书啥也不能干的设定，才是它最大的亮点，嘻嘻嘻，去看书了~</p>
+    <title>今日随笔</title>
+    <url>/2017/11/06/%E4%BB%8A%E6%97%A5%E9%9A%8F%E7%AC%94/</url>
+    <content><![CDATA[<p>anyway 今天也算是有了许多收获。<br>从今以后，正式在github写博客啦~<br>反应有点慢，加强锻炼啊</p>
 ]]></content>
       <tags>
         <tag>随笔</tag>
       </tags>
   </entry>
   <entry>
-    <title>今日随笔</title>
-    <url>/2017/11/06/%E4%BB%8A%E6%97%A5%E9%9A%8F%E7%AC%94/</url>
-    <content><![CDATA[<p>anyway 今天也算是有了许多收获。<br>从今以后，正式在github写博客啦~<br>反应有点慢，加强锻炼啊</p>
+    <title>从乡下归来</title>
+    <url>/2018/03/08/%E4%BB%8E%E4%B9%A1%E4%B8%8B%E5%BD%92%E6%9D%A5/</url>
+    <content><![CDATA[<p>经历了一个多月没有WiFi的生活~<br>倒也没有多么难过。各种情绪都有过，但是也想通了许多事情。<br>博客没有写，这倒是有点遗憾了。人呐，每天都会有好多的想法，有时候把有些东西记录下来，其实也是件有意思的事情。功利点想，或许也是一件对以后的发展都很有益的事情呢<br>最近收到了个kindle，除了压泡面之外，对于比较喜欢看书的人来说也的确是个很值得入的东西。倒不是说电子水墨屏有多么护眼，反正多年以来我眼镜的度数也没涨起来过，我觉得，kindle这种除了看书啥也不能干的设定，才是它最大的亮点，嘻嘻嘻，去看书了~</p>
 ]]></content>
       <tags>
         <tag>随笔</tag>
@@ -2263,6 +2263,21 @@ CLI：在 shell 命令中指定它们。</code></pre></li>
       <tags>
         <tag>前端</tag>
         <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>做一个规划</title>
+    <url>/2019/09/16/%E5%81%9A%E4%B8%80%E4%B8%AA%E8%A7%84%E5%88%92/</url>
+    <content><![CDATA[<p>最近两个月沉迷于看书以及梳理计划之类的东西，除了工作之外都没有写代码。今天来系统的做一个反思，关于生活、工作和理财。</p>
+<a id="more"></a>
+<p>首先是生活，我给自己定了一系列的目标规划，基本上算是把日常生活安排的明明白白了。虽然有些安排没做到。。。但是大部分还是坚持下来了，而且说实话作为一个995的社畜，实践真的是很难安排。<br>早起一杯水，一杯黑咖啡这个习惯基本上算是养成了，别说黑咖啡真的还挺提神醒脑的，不过要想上午不犯困还是得早点休息，所以我的计划是11点关灯趴在床上看书然后自然入睡~<br>看书。个人觉得多看书真的能学到一些东西，特别是人文社科类的书籍，挺启发人的。<br>输出。人说最好的学习方式是输出，我在努力。尽量保持隔一天就写一篇总结吧，不过也意识到了水平不足的情况下高产带来的负面影响，质量不够高。<br>复盘。每天复盘目前我没做到。每月复盘倒是坚持下来了。每个月月尾必须要做的事情，就是做一篇复盘、核对一遍账单和换床单。目前看来，还挺有成效的，把一些不好量化的东西量化出来，慢慢能看到自己的进步，这种感觉挺好的~<br>听广播。每天起床到出门的这段时间，就是边洗漱收拾边听广播过的，说起来我目前唯一还在续费的会员就是喜马拉雅了~ 听听相声小品脱口秀或者讲书，都挺不错。<br>最近开始尝试坚持运动和正念冥想。我一直是注意力不太容易集中的人。听说正念冥想能有用，想着尝试一下，反正也没有成本~ 运动的话，是我一直觉得自己有点胖了，而且不够健康了。作为一个心里把健康摆在第一重要位置的人，每周在运动上花费的时间不到五小时我觉得这对健康来说委实不公，所以得不到健康也正常。。。</p>
+<p>工作啊。就我所接触到的来说，大多数人的工作都是没有挑战性的，千篇一律，没什么意思。这也正常，企业家的目标是挣钱，不在乎你个人的理想。如果一开始工作就进入了一个高速成长的团队，那真的是很幸运了。但很多人没那么幸运，我也没那么幸运。好在我意识到这一点并且尝试要做点什么。给自己定一个跳槽的目标并且按照这个标准准备，理想很美好，但是没时间的现实有点残酷，达不到目标的现实更残酷，所以还是逼自己一把吧，做起来其实也没想象的那么难，关键在于把握好一种平衡，而这种平衡我目前还在摸索。</p>
+<p>今天梳理了一下自己的账户，感觉还可以再抠门一点，每个月还能再多存一点~ 理想总是要有的，万一实现了呢<br>按照大V的建议，每个月的储蓄额为收入的50%，预期年化收益10%的话，十年下来好像是能够实现理想的样子~ 现在想十年好像很漫长，理想随时可能会变，但是谁知道呢，先种一颗树呗，万一十年之后我还是想吃苹果呢 比现在什么都不做好。而且大幅度削减开支并没有让我的生活过得紧巴巴的，感觉变化不大，但是余额增多很爽啊~<br>从去年开始接触基金到现在，大A股一直处于一个比较低的点位，而且我因为不太懂这些东西一直处于猥琐发育的状态，所以到现在一直也没亏，今年以来竟然也陆陆续续的赚到了四五千的样子，不看我的账本流水我也是没有想到的，更没有想到的是，这半年的加班报销晚餐钱都有了两千多，我都不晓得我居然加了这么多班~<br>今天稍微思考了一下资金分配的问题，虽然总金额不多，但是一想到我差点把所有的钱都投进了高风险的基金里，就觉得有点刺激，得亏是运气好，前段时间卖掉了一些盈利的基金，留下了一笔紧急备用的资金放在天天基金的活期宝里不动，从此告别我司的理财产品了~ 从其他理财大V那抄的，留三到六个月的生活费，虽然目前还没用上，而且也不明白为啥要留，但还是希望不要有用上这笔钱的时候。反正裸辞是不可能裸辞的，说什么都不会裸辞的。为了不被劝退，还是得好好学习啊~</p>
+<p>希望能成为一个有点厉害的人吧~</p>
+<p>N</p>
+]]></content>
+      <tags>
+        <tag>随笔</tag>
       </tags>
   </entry>
   <entry>
@@ -2380,18 +2395,10 @@ CLI：在 shell 命令中指定它们。</code></pre></li>
       </tags>
   </entry>
   <entry>
-    <title>关于价值观：什么更重要</title>
-    <url>/2019/07/18/%E5%85%B3%E4%BA%8E%E4%BB%B7%E5%80%BC%E8%A7%82%EF%BC%9A%E4%BB%80%E4%B9%88%E6%9B%B4%E9%87%8D%E8%A6%81/</url>
-    <content><![CDATA[<p>最近依然想很多，但是没那么难受，没有那种撕裂的感觉了~ 事情正在朝好的方向发展中</p>
-<a id="more"></a>
-<p>关于三观：</p>
-<ol>
-<li>价值观<br>什么东西，最重要呢<br>我曾经列出了人生中最不愿失去的五样东西：健康、家人、金钱、色相。最后一个 我之前没想到，现在想想 应该是独立的思想。<br>排名不分先后，我也不知道怎么分先后。或许在一些极端情况下是可以牺牲其中某些坚持，来换取另一些东西的。没法区分先后顺序，也没必要。</li>
-<li>人生观<br>人生观啊，我觉得人生就是一场体验。<br>人生啊，就应该体验各种各样的东西，遇见各种各样的灵魂。但是真的会很难过啊，如果遇到的人，跟自己相克，无论是分开还是磨合，都是一个很撕裂的过程。不过从中真的学到很多。<br>我对人生的态度消极，但也在努力去追求更好的东西。</li>
-<li>世界观<br>世界观啊 没怎么观过世界，所以也谈不上世界观。</li>
-</ol>
-<p>说到底三观 到底是什么东西，一时半会也说不清。可能因为经历的太少，也可能是在灵魂碰撞或是契合的时候才能够感知到的吧。</p>
-<p>愿永远热忱 永远保持向死而生的勇气和能力。</p>
+    <title>内心煎熬</title>
+    <url>/2017/11/07/%E5%86%85%E5%BF%83%E7%85%8E%E7%86%AC/</url>
+    <content><![CDATA[<h3 id="开始秋招的第不知道多少天"><a href="#开始秋招的第不知道多少天" class="headerlink" title="开始秋招的第不知道多少天"></a>开始秋招的第不知道多少天</h3><p>不觉得自己努力比别人少，可能方向和方法上真的有很大的问题。<br>一度怀疑自己，是不是真的太没用，什么都做不了。还从来都没有好运气。<br>真的觉得很难过。加上整体的氛围，整个人真的，很乱。<br>写下来是希望无论以后是个什么要的结果，不要好了伤疤忘了疼，<br>决定做什么事的时候，一定要未雨绸缪，做好万全的准备。<br>希望能够有个比较好的结局。坚持做该做的事吧。</p>
+<p><strong>所以如果有正处于大学迷茫期的小伙伴们，一定不能眼高手低，一定要多写代码。<br>多关注实习信息。争取早点去公司实习。不然永远不知道，在学校学的东西跟企业有多大差距。<br></strong></p>
 ]]></content>
       <tags>
         <tag>随笔</tag>
@@ -2408,28 +2415,29 @@ CLI：在 shell 命令中指定它们。</code></pre></li>
       </tags>
   </entry>
   <entry>
-    <title>内心煎熬</title>
-    <url>/2017/11/07/%E5%86%85%E5%BF%83%E7%85%8E%E7%86%AC/</url>
-    <content><![CDATA[<h3 id="开始秋招的第不知道多少天"><a href="#开始秋招的第不知道多少天" class="headerlink" title="开始秋招的第不知道多少天"></a>开始秋招的第不知道多少天</h3><p>不觉得自己努力比别人少，可能方向和方法上真的有很大的问题。<br>一度怀疑自己，是不是真的太没用，什么都做不了。还从来都没有好运气。<br>真的觉得很难过。加上整体的氛围，整个人真的，很乱。<br>写下来是希望无论以后是个什么要的结果，不要好了伤疤忘了疼，<br>决定做什么事的时候，一定要未雨绸缪，做好万全的准备。<br>希望能够有个比较好的结局。坚持做该做的事吧。</p>
-<p><strong>所以如果有正处于大学迷茫期的小伙伴们，一定不能眼高手低，一定要多写代码。<br>多关注实习信息。争取早点去公司实习。不然永远不知道，在学校学的东西跟企业有多大差距。<br></strong></p>
-]]></content>
-      <tags>
-        <tag>随笔</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>做一个规划</title>
-    <url>/2019/09/16/%E5%81%9A%E4%B8%80%E4%B8%AA%E8%A7%84%E5%88%92/</url>
-    <content><![CDATA[<p>最近两个月沉迷于看书以及梳理计划之类的东西，除了工作之外都没有写代码。今天来系统的做一个反思，关于生活、工作和理财。</p>
+    <title>初学eslint</title>
+    <url>/2018/01/02/%E5%88%9D%E5%AD%A6eslint/</url>
+    <content><![CDATA[<p>还是说，每天学习一点点~<br>元旦浪完了滚回来继续学习。毕竟生活还有眼前的苟且和枸杞。<br>ESLint在之前有接触过，只知道是一个es6的代码风格检查工具，所以。。。到底具体是做什么呢，走进计算机科学之——eslint</p>
 <a id="more"></a>
-<p>首先是生活，我给自己定了一系列的目标规划，基本上算是把日常生活安排的明明白白了。虽然有些安排没做到。。。但是大部分还是坚持下来了，而且说实话作为一个995的社畜，实践真的是很难安排。<br>早起一杯水，一杯黑咖啡这个习惯基本上算是养成了，别说黑咖啡真的还挺提神醒脑的，不过要想上午不犯困还是得早点休息，所以我的计划是11点关灯趴在床上看书然后自然入睡~<br>看书。个人觉得多看书真的能学到一些东西，特别是人文社科类的书籍，挺启发人的。<br>输出。人说最好的学习方式是输出，我在努力。尽量保持隔一天就写一篇总结吧，不过也意识到了水平不足的情况下高产带来的负面影响，质量不够高。<br>复盘。每天复盘目前我没做到。每月复盘倒是坚持下来了。每个月月尾必须要做的事情，就是做一篇复盘、核对一遍账单和换床单。目前看来，还挺有成效的，把一些不好量化的东西量化出来，慢慢能看到自己的进步，这种感觉挺好的~<br>听广播。每天起床到出门的这段时间，就是边洗漱收拾边听广播过的，说起来我目前唯一还在续费的会员就是喜马拉雅了~ 听听相声小品脱口秀或者讲书，都挺不错。<br>最近开始尝试坚持运动和正念冥想。我一直是注意力不太容易集中的人。听说正念冥想能有用，想着尝试一下，反正也没有成本~ 运动的话，是我一直觉得自己有点胖了，而且不够健康了。作为一个心里把健康摆在第一重要位置的人，每周在运动上花费的时间不到五小时我觉得这对健康来说委实不公，所以得不到健康也正常。。。</p>
-<p>工作啊。就我所接触到的来说，大多数人的工作都是没有挑战性的，千篇一律，没什么意思。这也正常，企业家的目标是挣钱，不在乎你个人的理想。如果一开始工作就进入了一个高速成长的团队，那真的是很幸运了。但很多人没那么幸运，我也没那么幸运。好在我意识到这一点并且尝试要做点什么。给自己定一个跳槽的目标并且按照这个标准准备，理想很美好，但是没时间的现实有点残酷，达不到目标的现实更残酷，所以还是逼自己一把吧，做起来其实也没想象的那么难，关键在于把握好一种平衡，而这种平衡我目前还在摸索。</p>
-<p>今天梳理了一下自己的账户，感觉还可以再抠门一点，每个月还能再多存一点~ 理想总是要有的，万一实现了呢<br>按照大V的建议，每个月的储蓄额为收入的50%，预期年化收益10%的话，十年下来好像是能够实现理想的样子~ 现在想十年好像很漫长，理想随时可能会变，但是谁知道呢，先种一颗树呗，万一十年之后我还是想吃苹果呢 比现在什么都不做好。而且大幅度削减开支并没有让我的生活过得紧巴巴的，感觉变化不大，但是余额增多很爽啊~<br>从去年开始接触基金到现在，大A股一直处于一个比较低的点位，而且我因为不太懂这些东西一直处于猥琐发育的状态，所以到现在一直也没亏，今年以来竟然也陆陆续续的赚到了四五千的样子，不看我的账本流水我也是没有想到的，更没有想到的是，这半年的加班报销晚餐钱都有了两千多，我都不晓得我居然加了这么多班~<br>今天稍微思考了一下资金分配的问题，虽然总金额不多，但是一想到我差点把所有的钱都投进了高风险的基金里，就觉得有点刺激，得亏是运气好，前段时间卖掉了一些盈利的基金，留下了一笔紧急备用的资金放在天天基金的活期宝里不动，从此告别我司的理财产品了~ 从其他理财大V那抄的，留三到六个月的生活费，虽然目前还没用上，而且也不明白为啥要留，但还是希望不要有用上这笔钱的时候。反正裸辞是不可能裸辞的，说什么都不会裸辞的。为了不被劝退，还是得好好学习啊~</p>
-<p>希望能成为一个有点厉害的人吧~</p>
-<p>N</p>
+
+<p>JavaScript 是一个动态的弱类型语言，在开发中比较容易出错。因为没有编译程序，为了寻找 JavaScript 代码错误通常需要在执行过程中不断调适。像 ESLint 这样的可以让程序员在编码的过程中发现问题而不是在执行的过程中。</p>
+<p>ESLint 被设计成完全可配置的，开发人员可以通过自定规则来规范代码的风格。</p>
+<ol>
+<li>可以直接把代码嵌入到js文件</li>
+<li>配置文件</li>
+</ol>
+<p>可以被配置的文件主要分为三类：</p>
+<ol>
+<li>环境 environments 如node.js browser commonjs等</li>
+<li>额外全局变量 globals</li>
+<li>开启规则 rules</li>
+</ol>
+<p>还是这种插件还是比较适合在用的过程中了解啊</p>
+<p>明天有电话面试好紧脏<del>~</del></p>
+<p>update: 2021.1.16<br>至今也没有用过eslint<br>typescript 倒是挺好用</p>
 ]]></content>
       <tags>
-        <tag>随笔</tag>
+        <tag>前端</tag>
       </tags>
   </entry>
   <entry>
@@ -2536,29 +2544,51 @@ CLI：在 shell 命令中指定它们。</code></pre></li>
       </tags>
   </entry>
   <entry>
-    <title>初学eslint</title>
-    <url>/2018/01/02/%E5%88%9D%E5%AD%A6eslint/</url>
-    <content><![CDATA[<p>还是说，每天学习一点点~<br>元旦浪完了滚回来继续学习。毕竟生活还有眼前的苟且和枸杞。<br>ESLint在之前有接触过，只知道是一个es6的代码风格检查工具，所以。。。到底具体是做什么呢，走进计算机科学之——eslint</p>
+    <title>前端安全性问题</title>
+    <url>/2017/12/10/%E5%89%8D%E7%AB%AF%E5%AE%89%E5%85%A8%E6%80%A7%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<p>今天不知道怎么突然想起来前端的安全性问题，之前遇到过这样的笔试题，了解过，但是感觉没明白，又忘记了，所以今天来做一个总结。</p>
 <a id="more"></a>
 
-<p>JavaScript 是一个动态的弱类型语言，在开发中比较容易出错。因为没有编译程序，为了寻找 JavaScript 代码错误通常需要在执行过程中不断调适。像 ESLint 这样的可以让程序员在编码的过程中发现问题而不是在执行的过程中。</p>
-<p>ESLint 被设计成完全可配置的，开发人员可以通过自定规则来规范代码的风格。</p>
 <ol>
-<li>可以直接把代码嵌入到js文件</li>
-<li>配置文件</li>
+<li>SQL注入：通过把SQL命令插入到Web表单提交或输入域名或页面请求的查询字符串，最终达到欺骗服务器执行恶意的SQL命令.防护措施：前端页面要校验用户的输入数据，后端不要使用动态SQL语句，不要直接存放机密数据。（严格说，sql注入属于后端的安全问题）</li>
+<li>XXS跨站脚本分析：攻击者将恶意脚本插入到网页中，网页会将这些恶意脚本当正常脚本来执行。所有可输入的地方没有处理输入的数据，就可能存在xxs漏洞。为了防护应该尽可能完善过滤体系。</li>
+<li>iframe风险 iframe中的内容是由第三方来提供的，默认情况下他们不受我们的控制，他们可以在iframe中运行JavaScirpt脚本、Flash插件、弹出对话框等等，这可能会破坏前端用户体验。如果iframe中的域名因为过期而被恶意攻击者抢注，或者第三方被黑客攻破，iframe中的内容被替换掉了，从而利用用户浏览器中的安全漏洞下载安装木马、恶意勒索软件，这样就会有很大的安全隐患了。</li>
+<li>CSRF 跨站请求伪造：CSRF攻击过程的受害者用户登录网站A，输入个人信息，在本地保存服务器生成的cookie。然后在A网站点击由攻击者构建一条恶意链接跳转到B网站,然后B网站携带着的用户cookie信息去访问B网站.让A网站造成是用户自己访问的假相,从而来进行一些列的操作,常见的就是转账.</li>
 </ol>
-<p>可以被配置的文件主要分为三类：</p>
-<ol>
-<li>环境 environments 如node.js browser commonjs等</li>
-<li>额外全局变量 globals</li>
-<li>开启规则 rules</li>
-</ol>
-<p>还是这种插件还是比较适合在用的过程中了解啊</p>
-<p>明天有电话面试好紧脏<del>~</del></p>
-<p>update: 2021.1.16<br>至今也没有用过eslint<br>typescript 倒是挺好用</p>
+<p>emm~ 大概暂时就这些了，当然还有别的安全问题，但是我好像不太能理解，粗略的浏览了一下，然后以后弄明白点了再补充吧</p>
+<p><strong>补充：前端安全性问题之跨域</strong><br>所谓的跨域，是为了避免前端安全性问题而做的同源策略引发的问题。<br>同域名、同端口、同协议视为同一个域，一个域内的脚本仅仅具有本域内的权限，可以理解为本域脚本只能读写本域内的资源，而无法访问其它域的资源。<br>否则，就是跨域。<br>在同源策略的限制下允许部分不遵循同源策略访问的方式就是跨域<br><a href="https://www.cnblogs.com/st-leslie/p/5958822.html" target="_blank" rel="noopener">这里是一篇我认为总结的很好的博客</a><br><a href="https://www.cnblogs.com/chillaxyw/p/5492763.html" target="_blank" rel="noopener">这是个跟我差不多情况的博主写的博客~</a></p>
+<p>常见的跨域方式有：</p>
+<ul>
+<li>jsonp Jsonp(JSON with Padding)是json的一种”使用模式”，可以让网页从别的域名（网站）那获取资料，即跨域<strong>读取</strong>数据。因为通过script标签引入的js是不受同源策略的限制的。JSONP易于实现，但是也会存在一些安全隐患，如果第三方的脚本随意地执行，那么它就可以篡改页面内容，截获敏感数据。但是在受信任的双方传递数据，JSONP是非常合适的选择。可以看出来JSONP跨域一般用于获取其他域的数据。</li>
+<li>ifarme iframe跨域的原理跟script跨域一样，但是我们要注意的是标签自身功能的差异性，具体差异如下：<br> script单纯就是引入的作用，但是iframe标签还有一个作用是显示的作用可以把远程加载的HTML代码显示出来，也就是script无法引入HTML代码文件script标签只能够从远程获取数据，无法操作远程文件执行。但是iframe可以这样</li>
+<li>document.domain</li>
+<li>window.name </li>
+<li>cookie</li>
+<li>postMessage</li>
+</ul>
+<p>还是不太明白~</p>
 ]]></content>
       <tags>
         <tag>前端</tag>
+        <tag>面试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>关于价值观：什么更重要</title>
+    <url>/2019/07/18/%E5%85%B3%E4%BA%8E%E4%BB%B7%E5%80%BC%E8%A7%82%EF%BC%9A%E4%BB%80%E4%B9%88%E6%9B%B4%E9%87%8D%E8%A6%81/</url>
+    <content><![CDATA[<p>最近依然想很多，但是没那么难受，没有那种撕裂的感觉了~ 事情正在朝好的方向发展中</p>
+<a id="more"></a>
+<p>关于三观：</p>
+<ol>
+<li>价值观<br>什么东西，最重要呢<br>我曾经列出了人生中最不愿失去的五样东西：健康、家人、金钱、色相。最后一个 我之前没想到，现在想想 应该是独立的思想。<br>排名不分先后，我也不知道怎么分先后。或许在一些极端情况下是可以牺牲其中某些坚持，来换取另一些东西的。没法区分先后顺序，也没必要。</li>
+<li>人生观<br>人生观啊，我觉得人生就是一场体验。<br>人生啊，就应该体验各种各样的东西，遇见各种各样的灵魂。但是真的会很难过啊，如果遇到的人，跟自己相克，无论是分开还是磨合，都是一个很撕裂的过程。不过从中真的学到很多。<br>我对人生的态度消极，但也在努力去追求更好的东西。</li>
+<li>世界观<br>世界观啊 没怎么观过世界，所以也谈不上世界观。</li>
+</ol>
+<p>说到底三观 到底是什么东西，一时半会也说不清。可能因为经历的太少，也可能是在灵魂碰撞或是契合的时候才能够感知到的吧。</p>
+<p>愿永远热忱 永远保持向死而生的勇气和能力。</p>
+]]></content>
+      <tags>
+        <tag>随笔</tag>
       </tags>
   </entry>
   <entry>
@@ -2599,36 +2629,6 @@ CLI：在 shell 命令中指定它们。</code></pre></li>
       </tags>
   </entry>
   <entry>
-    <title>前端安全性问题</title>
-    <url>/2017/12/10/%E5%89%8D%E7%AB%AF%E5%AE%89%E5%85%A8%E6%80%A7%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[<p>今天不知道怎么突然想起来前端的安全性问题，之前遇到过这样的笔试题，了解过，但是感觉没明白，又忘记了，所以今天来做一个总结。</p>
-<a id="more"></a>
-
-<ol>
-<li>SQL注入：通过把SQL命令插入到Web表单提交或输入域名或页面请求的查询字符串，最终达到欺骗服务器执行恶意的SQL命令.防护措施：前端页面要校验用户的输入数据，后端不要使用动态SQL语句，不要直接存放机密数据。（严格说，sql注入属于后端的安全问题）</li>
-<li>XXS跨站脚本分析：攻击者将恶意脚本插入到网页中，网页会将这些恶意脚本当正常脚本来执行。所有可输入的地方没有处理输入的数据，就可能存在xxs漏洞。为了防护应该尽可能完善过滤体系。</li>
-<li>iframe风险 iframe中的内容是由第三方来提供的，默认情况下他们不受我们的控制，他们可以在iframe中运行JavaScirpt脚本、Flash插件、弹出对话框等等，这可能会破坏前端用户体验。如果iframe中的域名因为过期而被恶意攻击者抢注，或者第三方被黑客攻破，iframe中的内容被替换掉了，从而利用用户浏览器中的安全漏洞下载安装木马、恶意勒索软件，这样就会有很大的安全隐患了。</li>
-<li>CSRF 跨站请求伪造：CSRF攻击过程的受害者用户登录网站A，输入个人信息，在本地保存服务器生成的cookie。然后在A网站点击由攻击者构建一条恶意链接跳转到B网站,然后B网站携带着的用户cookie信息去访问B网站.让A网站造成是用户自己访问的假相,从而来进行一些列的操作,常见的就是转账.</li>
-</ol>
-<p>emm~ 大概暂时就这些了，当然还有别的安全问题，但是我好像不太能理解，粗略的浏览了一下，然后以后弄明白点了再补充吧</p>
-<p><strong>补充：前端安全性问题之跨域</strong><br>所谓的跨域，是为了避免前端安全性问题而做的同源策略引发的问题。<br>同域名、同端口、同协议视为同一个域，一个域内的脚本仅仅具有本域内的权限，可以理解为本域脚本只能读写本域内的资源，而无法访问其它域的资源。<br>否则，就是跨域。<br>在同源策略的限制下允许部分不遵循同源策略访问的方式就是跨域<br><a href="https://www.cnblogs.com/st-leslie/p/5958822.html" target="_blank" rel="noopener">这里是一篇我认为总结的很好的博客</a><br><a href="https://www.cnblogs.com/chillaxyw/p/5492763.html" target="_blank" rel="noopener">这是个跟我差不多情况的博主写的博客~</a></p>
-<p>常见的跨域方式有：</p>
-<ul>
-<li>jsonp Jsonp(JSON with Padding)是json的一种”使用模式”，可以让网页从别的域名（网站）那获取资料，即跨域<strong>读取</strong>数据。因为通过script标签引入的js是不受同源策略的限制的。JSONP易于实现，但是也会存在一些安全隐患，如果第三方的脚本随意地执行，那么它就可以篡改页面内容，截获敏感数据。但是在受信任的双方传递数据，JSONP是非常合适的选择。可以看出来JSONP跨域一般用于获取其他域的数据。</li>
-<li>ifarme iframe跨域的原理跟script跨域一样，但是我们要注意的是标签自身功能的差异性，具体差异如下：<br> script单纯就是引入的作用，但是iframe标签还有一个作用是显示的作用可以把远程加载的HTML代码显示出来，也就是script无法引入HTML代码文件script标签只能够从远程获取数据，无法操作远程文件执行。但是iframe可以这样</li>
-<li>document.domain</li>
-<li>window.name </li>
-<li>cookie</li>
-<li>postMessage</li>
-</ul>
-<p>还是不太明白~</p>
-]]></content>
-      <tags>
-        <tag>前端</tag>
-        <tag>面试</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>匹配js中的enter换行操作</title>
     <url>/2020/07/23/%E5%8C%B9%E9%85%8Djs%E4%B8%AD%E7%9A%84enter%E6%8D%A2%E8%A1%8C%E6%93%8D%E4%BD%9C/</url>
     <content><![CDATA[<p>前几日在被莫名其妙的提了个bug<br>测试说 测试数据配置的时候有用enter换行 为什么在我的小程序里换行就神奇的消失了<br>第一次遇到这样的情况 在我的认真查找下 终于发现在数据里 字里行间还隐秘的藏着一些 回车符 （我实在是打不出来那个小小的符号了）</p>
@@ -2639,6 +2639,14 @@ CLI：在 shell 命令中指定它们。</code></pre></li>
         <tag>前端</tag>
         <tag>css</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>原型和原型链</title>
+    <url>/2021/04/17/%E5%8E%9F%E5%9E%8B%E5%92%8C%E5%8E%9F%E5%9E%8B%E9%93%BE/</url>
+    <content><![CDATA[<p>解析原型和原型链</p>
+<a id="more"></a>
+<p><img src="/2021/04/17/原型和原型链/prototype.jpg" alt></p>
+]]></content>
   </entry>
   <entry>
     <title>告别低自尊呐</title>
@@ -2788,6 +2796,36 @@ CLI：在 shell 命令中指定它们。</code></pre></li>
       </tags>
   </entry>
   <entry>
+    <title>头条项目</title>
+    <url>/2017/11/12/%E5%A4%B4%E6%9D%A1%E9%A1%B9%E7%9B%AE/</url>
+    <content><![CDATA[<p>这个实战项目是一个不错的面试拿来讲的项目，牛客网购买的，如果有缘看到这个博客，喏，拿去好了 链接：<a href="http://pan.baidu.com/s/1nv86TVN" target="_blank" rel="noopener">http://pan.baidu.com/s/1nv86TVN</a> 密码：pj06</p>
+<a id="more"></a>
+<h3 id="该项目实现的功能："><a href="#该项目实现的功能：" class="headerlink" title="该项目实现的功能："></a>该项目实现的功能：</h3><p>数据交互iBatis集成<br>用户注册登录管理<br>资讯发布 图像上传<br>评论中心<br>基于Redis点赞的功能<br>异步设计 站内邮件<br>多种资讯的排布算法</p>
+<h4 id="Spring-boot注解"><a href="#Spring-boot注解" class="headerlink" title="Spring boot注解"></a>Spring boot注解</h4><p>@Controller定义Controller控制器，用它标记的类就是一个SpringMVC Controller对象用于定义控制器类，在spring 项目中由控制器负责将用户发来的URL请求转发到对应的服务接口（service层），一般这个注解在类中，通常方法需要配合注解@RequestMapping。<br>@RequestMapping来映射request请求与处理器（url到Controller）<br>@RequestBody在使用@RequestMapping后，返回值通常解析为跳转路径，加上@responsebody后返回结果不会被解析为跳转路径，而是直接写入HTTP response body中。<br>@RequestParam绑定HttpServletRequest请求参数到控制器方法参数<br>@CookieValue绑定cookie的值到Controller方法参数<br>@RequestHeader绑定HttpServletRequest头信息到Controller方法参数<br><a href="https://www.cnblogs.com/tanwei81/p/6814022.html" target="_blank" rel="noopener">附一位博主的总结</a></p>
+<h3 id="AOP-面向切面编程"><a href="#AOP-面向切面编程" class="headerlink" title="AOP 面向切面编程"></a>AOP 面向切面编程</h3><p>在运行时，动态地将代码切入到类的指定方法、指定位置上的编程思想就是面向切面的编程。<br>一般而言，我们管切入到指定类指定方法的代码片段称为切面，而切入到哪些类、哪些方法则叫切入点。有了AOP，我们就可以把几个类共有的代码，抽取到一个切片中，等到需要时再切入对象中去，从而改变其原有的行为。</p>
+<h3 id="IOC-依赖注入-控制反转"><a href="#IOC-依赖注入-控制反转" class="headerlink" title="IOC 依赖注入 控制反转"></a>IOC 依赖注入 控制反转</h3><p>让调用类对某一接口实现类的依赖关系由第三方（容器或协作类）注入，以移除调用类对某一接口实现类的依赖。</p>
+<h3 id="velocity"><a href="#velocity" class="headerlink" title="velocity"></a>velocity</h3><p>是一个java模板引擎，可以直接引用定义在java代码中的对象</p>
+<blockquote>
+<p>基本语法</p>
+<blockquote>
+<p>‘ # ‘用来标识velocity的脚本语言 包括’ #set、#if 、#else、#end、#foreach、#end、#iinclude、#parse、#macro ‘等<br>‘ $ ‘ 用来标识对象或者说变量<br>‘ {} ‘ 用来明确标识velocity变量<br>‘ ! ‘ 用来强制将不存在的变量显示为空白<br>实践<br>‘ $!obj ‘直接返回对象中的结果<br>‘ #if($!obj) #else #end ‘判断语句<br>‘ #foreach($info in $list) $info.someList #end ‘ 循环读取集合list中的对象，并做处理<br>‘ #macro(macroName)#end ‘ 脚本函数(宏)调用，不推荐在界面模板中大量使用<br>包含文件’ #inclue(“模板文件名”)或#parse(“模板文件名”) ‘ parse与include的区别在于，若包含的文件中有Velocity脚本标签，将会进一步解析，而include将原样显示。<br>‘ #set ‘声明<br>在万不得已的时候，不要在页面视图自己声明Velocity脚本变量，也就是尽量少使用’ #set ‘。<br><a href="3https://www.cnblogs.com/likwo/archive/2010/05/13/1734936.html" target="_blank" rel="noopener">附一位博友的文章链接</a></p>
+</blockquote>
+</blockquote>
+<h3 id="数据库部分"><a href="#数据库部分" class="headerlink" title="数据库部分"></a>数据库部分</h3><blockquote>
+<p>业务字段的设计<br>数据的创建及增删改查的操作<br>myBatis集成数据库环境<br>整体框架的搭建 model controller service dao database</p>
+</blockquote>
+<h3 id="注册-登录-浏览-功能的实现"><a href="#注册-登录-浏览-功能的实现" class="headerlink" title="注册 登录 浏览 功能的实现"></a>注册 登录 浏览 功能的实现</h3><blockquote>
+<p>注册</p>
+<blockquote>
+<p>用户合法性检验（长度，敏感词，重复，特殊字符）<br>密码长度要求<br>密码salt加密，密码长度检测（基于MD5加密）<br>用户邮件 短信激活</p>
+</blockquote>
+</blockquote>
+]]></content>
+      <tags>
+        <tag>java</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>好好吃饭</title>
     <url>/2019/12/22/%E5%A5%BD%E5%A5%BD%E5%90%83%E9%A5%AD/</url>
     <content><![CDATA[<p>总结三项法则</p>
@@ -2828,42 +2866,6 @@ CLI：在 shell 命令中指定它们。</code></pre></li>
       </tags>
   </entry>
   <entry>
-    <title>头条项目</title>
-    <url>/2017/11/12/%E5%A4%B4%E6%9D%A1%E9%A1%B9%E7%9B%AE/</url>
-    <content><![CDATA[<p>这个实战项目是一个不错的面试拿来讲的项目，牛客网购买的，如果有缘看到这个博客，喏，拿去好了 链接：<a href="http://pan.baidu.com/s/1nv86TVN" target="_blank" rel="noopener">http://pan.baidu.com/s/1nv86TVN</a> 密码：pj06</p>
-<a id="more"></a>
-<h3 id="该项目实现的功能："><a href="#该项目实现的功能：" class="headerlink" title="该项目实现的功能："></a>该项目实现的功能：</h3><p>数据交互iBatis集成<br>用户注册登录管理<br>资讯发布 图像上传<br>评论中心<br>基于Redis点赞的功能<br>异步设计 站内邮件<br>多种资讯的排布算法</p>
-<h4 id="Spring-boot注解"><a href="#Spring-boot注解" class="headerlink" title="Spring boot注解"></a>Spring boot注解</h4><p>@Controller定义Controller控制器，用它标记的类就是一个SpringMVC Controller对象用于定义控制器类，在spring 项目中由控制器负责将用户发来的URL请求转发到对应的服务接口（service层），一般这个注解在类中，通常方法需要配合注解@RequestMapping。<br>@RequestMapping来映射request请求与处理器（url到Controller）<br>@RequestBody在使用@RequestMapping后，返回值通常解析为跳转路径，加上@responsebody后返回结果不会被解析为跳转路径，而是直接写入HTTP response body中。<br>@RequestParam绑定HttpServletRequest请求参数到控制器方法参数<br>@CookieValue绑定cookie的值到Controller方法参数<br>@RequestHeader绑定HttpServletRequest头信息到Controller方法参数<br><a href="https://www.cnblogs.com/tanwei81/p/6814022.html" target="_blank" rel="noopener">附一位博主的总结</a></p>
-<h3 id="AOP-面向切面编程"><a href="#AOP-面向切面编程" class="headerlink" title="AOP 面向切面编程"></a>AOP 面向切面编程</h3><p>在运行时，动态地将代码切入到类的指定方法、指定位置上的编程思想就是面向切面的编程。<br>一般而言，我们管切入到指定类指定方法的代码片段称为切面，而切入到哪些类、哪些方法则叫切入点。有了AOP，我们就可以把几个类共有的代码，抽取到一个切片中，等到需要时再切入对象中去，从而改变其原有的行为。</p>
-<h3 id="IOC-依赖注入-控制反转"><a href="#IOC-依赖注入-控制反转" class="headerlink" title="IOC 依赖注入 控制反转"></a>IOC 依赖注入 控制反转</h3><p>让调用类对某一接口实现类的依赖关系由第三方（容器或协作类）注入，以移除调用类对某一接口实现类的依赖。</p>
-<h3 id="velocity"><a href="#velocity" class="headerlink" title="velocity"></a>velocity</h3><p>是一个java模板引擎，可以直接引用定义在java代码中的对象</p>
-<blockquote>
-<p>基本语法</p>
-<blockquote>
-<p>‘ # ‘用来标识velocity的脚本语言 包括’ #set、#if 、#else、#end、#foreach、#end、#iinclude、#parse、#macro ‘等<br>‘ $ ‘ 用来标识对象或者说变量<br>‘ {} ‘ 用来明确标识velocity变量<br>‘ ! ‘ 用来强制将不存在的变量显示为空白<br>实践<br>‘ $!obj ‘直接返回对象中的结果<br>‘ #if($!obj) #else #end ‘判断语句<br>‘ #foreach($info in $list) $info.someList #end ‘ 循环读取集合list中的对象，并做处理<br>‘ #macro(macroName)#end ‘ 脚本函数(宏)调用，不推荐在界面模板中大量使用<br>包含文件’ #inclue(“模板文件名”)或#parse(“模板文件名”) ‘ parse与include的区别在于，若包含的文件中有Velocity脚本标签，将会进一步解析，而include将原样显示。<br>‘ #set ‘声明<br>在万不得已的时候，不要在页面视图自己声明Velocity脚本变量，也就是尽量少使用’ #set ‘。<br><a href="3https://www.cnblogs.com/likwo/archive/2010/05/13/1734936.html" target="_blank" rel="noopener">附一位博友的文章链接</a></p>
-</blockquote>
-</blockquote>
-<h3 id="数据库部分"><a href="#数据库部分" class="headerlink" title="数据库部分"></a>数据库部分</h3><blockquote>
-<p>业务字段的设计<br>数据的创建及增删改查的操作<br>myBatis集成数据库环境<br>整体框架的搭建 model controller service dao database</p>
-</blockquote>
-<h3 id="注册-登录-浏览-功能的实现"><a href="#注册-登录-浏览-功能的实现" class="headerlink" title="注册 登录 浏览 功能的实现"></a>注册 登录 浏览 功能的实现</h3><blockquote>
-<p>注册</p>
-<blockquote>
-<p>用户合法性检验（长度，敏感词，重复，特殊字符）<br>密码长度要求<br>密码salt加密，密码长度检测（基于MD5加密）<br>用户邮件 短信激活</p>
-</blockquote>
-</blockquote>
-]]></content>
-      <tags>
-        <tag>java</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>寒假计划</title>
-    <url>/2018/01/27/%E5%AF%92%E5%81%87%E8%AE%A1%E5%88%92/</url>
-    <content><![CDATA[<p>人生中最后一个寒假了。在家陪陪亲人，走走亲戚，也就过去了。本想着回家之后认真学习一点东西，现实无情的打了脸，哈哈哈。<br>也好，在适当的时间做适当的事情反而会事半功倍，这种时候，应该多看看闲书，多思考一些平日里想不明白的事情比较好。</p>
-]]></content>
-  </entry>
-  <entry>
     <title>富爸爸穷爸爸</title>
     <url>/2019/08/11/%E5%AF%8C%E7%88%B8%E7%88%B8%E7%A9%B7%E7%88%B8%E7%88%B8/</url>
     <content><![CDATA[<p>《富爸爸，穷爸爸》作为一本理财知识的入门书简直要被推烂了。前段时间一直都处于一种很丧气的状态。逼着自己看了好多书，渐渐的体验到了看书的乐趣和思考的乐趣。虽然作者所处的年代和国情跟我们不一样，但是还是有很多通用的方法论，甚至可以用到生活的其他方面。以下，是第二遍看完这本书之后的梳理~</p>
@@ -2880,6 +2882,27 @@ CLI：在 shell 命令中指定它们。</code></pre></li>
 ]]></content>
       <tags>
         <tag>随笔</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>寒假计划</title>
+    <url>/2018/01/27/%E5%AF%92%E5%81%87%E8%AE%A1%E5%88%92/</url>
+    <content><![CDATA[<p>人生中最后一个寒假了。在家陪陪亲人，走走亲戚，也就过去了。本想着回家之后认真学习一点东西，现实无情的打了脸，哈哈哈。<br>也好，在适当的时间做适当的事情反而会事半功倍，这种时候，应该多看看闲书，多思考一些平日里想不明白的事情比较好。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>封装一个组件</title>
+    <url>/2020/09/13/%E5%B0%81%E8%A3%85%E4%B8%80%E4%B8%AA%E7%BB%84%E4%BB%B6/</url>
+    <content><![CDATA[<p>自己封装一个组件</p>
+<a id="more"></a>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=&quot;en&quot;&gt;</span><br><span class="line">  &lt;head&gt;</span><br><span class="line">    &lt;meta charset=&quot;UTF-8&quot; /&gt;</span><br><span class="line">    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;</span><br><span class="line">    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;ie=edge&quot; /&gt;</span><br><span class="line">    &lt;title&gt;diago&lt;/title&gt;</span><br><span class="line">    &lt;link rel=&quot;stylesheet&quot; href=&quot;./diago.css&quot; /&gt;</span><br><span class="line">  &lt;/head&gt;</span><br><span class="line">  &lt;body&gt;</span><br><span class="line">    &lt;button id=&quot;showDiago&quot;&gt;点击打开弹窗&lt;/button&gt;</span><br><span class="line">    &lt;script src=&quot;./diago.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line">      document.getElementById(&quot;showDiago&quot;).addEventListener(&apos;click&apos;, function(e) &#123;</span><br><span class="line">        dialog.show(&#123;</span><br><span class="line">          title: &quot;biaoti&quot;,</span><br><span class="line">          content: &quot;抱歉，该游戏暂无Android版本&quot;,</span><br><span class="line">          cancel: function() &#123;</span><br><span class="line">            console.log(111);</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">      &#125;);</span><br><span class="line">    &lt;/script&gt;</span><br><span class="line">  &lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var dialog = (function() &#123;</span><br><span class="line">  var elem, dialog, cancelBtn, confirmBtn;</span><br><span class="line">  /**</span><br><span class="line">   * @method getNeedElement 获取所需要的节点</span><br><span class="line">   */</span><br><span class="line">  var getNeedElement = function() &#123;</span><br><span class="line">    elem = document.querySelector(&quot;.dialog-wrapper&quot;);</span><br><span class="line">    dialog = document.querySelector(&quot;.dialog&quot;);</span><br><span class="line">    cancelBtn = document.querySelector(&quot;.cancel-btn&quot;);</span><br><span class="line">    confirmBtn = document.querySelector(&quot;.confirm-btn&quot;);</span><br><span class="line">  &#125;;</span><br><span class="line">  /**</span><br><span class="line">   * @method show 打开dialog组件</span><br><span class="line">   */</span><br><span class="line">  var show = function(options = &#123;&#125;) &#123;</span><br><span class="line">    let &#123;</span><br><span class="line">      title = &quot;&quot;,</span><br><span class="line">      content = &quot;默认content&quot;,</span><br><span class="line">      btns = [&quot;确定&quot;, &quot;取消&quot;],</span><br><span class="line">      confirm = null,</span><br><span class="line">      cancel = null</span><br><span class="line">    &#125; = options;</span><br><span class="line">    let btnTemp = &quot;&quot;;</span><br><span class="line">    btns.forEach((item, index) =&gt; &#123;</span><br><span class="line">      if (index == 2) return;</span><br><span class="line">      let btnClass = index == 0 ? &quot;confirm-btn&quot; : &quot;cancel-btn&quot;;</span><br><span class="line">      let temp = `&lt;div class=&quot;btn $&#123;btnClass&#125;&quot;&gt;$&#123;item&#125;&lt;/div&gt;`;</span><br><span class="line">      btnTemp += temp;</span><br><span class="line">    &#125;);</span><br><span class="line">    let html = `&lt;div class=&quot;dialog-wrapper&quot;&gt;</span><br><span class="line">      &lt;div class=&quot;dialog&quot;&gt;</span><br><span class="line">        &lt;div class=&quot;title&quot;&gt;$&#123;title&#125;&lt;/div&gt;</span><br><span class="line">        &lt;div class=&quot;content&quot;&gt;$&#123;content&#125;&lt;/div&gt;</span><br><span class="line">        &lt;div class=&quot;buttons&quot;&gt;$&#123;btnTemp&#125;&lt;/div&gt;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;`; // 添加到Body</span><br><span class="line">    document.body.innerHTML += html;</span><br><span class="line">    getNeedElement();</span><br><span class="line">    bindEvent(confirm, cancel);</span><br><span class="line">    return elem;</span><br><span class="line">  &#125;;</span><br><span class="line">  /**</span><br><span class="line">   * @method hide 关闭dialog组件</span><br><span class="line">   */</span><br><span class="line">  var hide = function() &#123;</span><br><span class="line">    elem.remove(elem);</span><br><span class="line">    // elem.parentNode.removeChild(elem);</span><br><span class="line">  &#125;;</span><br><span class="line">  /**</span><br><span class="line">   * @method bindEvent 给dialog绑定事件</span><br><span class="line">   * @param &#123;Object&#125; confirm 确认回调</span><br><span class="line">   * @param &#123;Object&#125; cancel 取消回调</span><br><span class="line">   */</span><br><span class="line">  var bindEvent = function(confirm, cancel) &#123;</span><br><span class="line">    confirmBtn &amp;&amp;</span><br><span class="line">      confirmBtn.addEventListener(&quot;click&quot;, e =&gt; &#123;</span><br><span class="line">        hide();</span><br><span class="line">        confirm &amp;&amp; confirm();</span><br><span class="line">      &#125;);</span><br><span class="line"></span><br><span class="line">    cancelBtn &amp;&amp;</span><br><span class="line">      cancelBtn.addEventListener(&quot;click&quot;, e =&gt; &#123;</span><br><span class="line">        hide();</span><br><span class="line">        cancel &amp;&amp; cancel();</span><br><span class="line">      &#125;);</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  return &#123; show, hide &#125;;</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">body,html &#123;  font-family: -apple-system, BlinkMacSystemFont, &apos;Segoe UI&apos;, Roboto, Oxygen, Ubuntu, Cantarell, &apos;Open Sans&apos;, &apos;Helvetica Neue&apos;, sans-serif;</span><br><span class="line">&#125;.dialog-wrapper &#123;  position: fixed;  display: flex;  justify-content: center;  align-items: center;  top: 0;  left: 0;  width: 100vw;  height: 100vh;  background-color: rgba(49, 49, 49, 0.5);  color: #313131;  font-size: 10px;  -webkit-tap-highlight-color: transparent;</span><br><span class="line">&#125;.dialog-wrapper.fadeIn &#123;  animation: fadeIn .2s ease;</span><br><span class="line">&#125;.dialog-wrapper.fadeOut &#123;  animation: fadeOut .2s ease forwards;</span><br><span class="line">&#125;.dialog-wrapper .dialog &#123;  position: relative;  width: 85vw;  max-width: 30em;  border-radius: .4em;  background-color: #fff;  box-sizing: border-box;  overflow: hidden;  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);</span><br><span class="line">&#125;.dialog-wrapper .dialog.slideDown &#123;  animation: slideDown .2s ease;</span><br><span class="line">&#125;.dialog-wrapper .dialog.slideUp &#123;  animation: slideUp .2s ease forwards;</span><br><span class="line">&#125;.dialog-wrapper .dialog.scaleIn &#123;  animation: scaleIn 0.2s cubic-bezier(0.07, 0.89, 0.95, 1.4);</span><br><span class="line">&#125;.dialog-wrapper .dialog.scaleOut &#123;  animation: scaleOut 0.2s cubic-bezier(0.07, 0.89, 0.95, 1.4) forwards;</span><br><span class="line">&#125;.dialog-wrapper .dialog .btn &#123;  cursor: pointer;</span><br><span class="line">&#125;.dialog-wrapper .dialog .btn:active &#123;  background-color: #f4f4f4;</span><br><span class="line">&#125;.dialog-wrapper .dialog .close-btn &#123;  position: absolute;  top: 0;  right: 0;  padding: 10px;  font-size: 1.8em;</span><br><span class="line">&#125;.dialog-wrapper .dialog .title &#123;  font-size: 1.8em;  padding: 15px;  text-align: center;  background-color: #f4f4f4;</span><br><span class="line">&#125;.dialog-wrapper .dialog .title:empty &#123;  display: none;</span><br><span class="line">&#125;.dialog-wrapper .dialog .content &#123;  padding: 40px 20px;  font-size: 1.6em;  text-align: center;</span><br><span class="line">&#125;.dialog-wrapper .dialog .buttons &#123;  font-size: 1.6em;  display: flex;  flex-flow: row-reverse;</span><br><span class="line">&#125;.dialog-wrapper .dialog .buttons .btn &#123;  flex: 1;  padding: 15px;  text-align: center;  border-top: 1px solid #ebebeb;</span><br><span class="line">&#125;.dialog-wrapper .dialog .buttons .btn.confirm-btn &#123;  color: #f2d985;</span><br><span class="line">&#125;.dialog-wrapper .dialog .buttons .btn.cancel-btn &#123;  color: #313131;  border-right: 1px solid #ebebeb;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@keyframes slideDown &#123;  from &#123;    transform: translateY(-3em);</span><br><span class="line">  &#125;  to &#123;    transform: translateY(0);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@keyframes slideUp &#123;  from &#123;    transform: translateY(0);</span><br><span class="line">  &#125;  to &#123;    transform: translateY(-3em);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@keyframes fadeIn &#123;  from &#123;    opacity: .5;</span><br><span class="line">  &#125;  to &#123;    opacity: 1;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@keyframes fadeOut &#123;  from &#123;    opacity: 1;</span><br><span class="line">  &#125;  to &#123;    opacity: 0;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@keyframes scaleIn &#123;  from &#123;    transform: scale(0.8);</span><br><span class="line">  &#125;  to &#123;    transform: scale(1);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@keyframes scaleOut &#123;  from &#123;    transform: scale(1);</span><br><span class="line">  &#125;  to &#123;    transform: scale(0.8);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>前端</tag>
       </tags>
   </entry>
   <entry>
@@ -2904,21 +2927,6 @@ CLI：在 shell 命令中指定它们。</code></pre></li>
 ]]></content>
       <tags>
         <tag>随笔</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>封装一个组件</title>
-    <url>/2020/09/13/%E5%B0%81%E8%A3%85%E4%B8%80%E4%B8%AA%E7%BB%84%E4%BB%B6/</url>
-    <content><![CDATA[<p>自己封装一个组件</p>
-<a id="more"></a>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=&quot;en&quot;&gt;</span><br><span class="line">  &lt;head&gt;</span><br><span class="line">    &lt;meta charset=&quot;UTF-8&quot; /&gt;</span><br><span class="line">    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;</span><br><span class="line">    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;ie=edge&quot; /&gt;</span><br><span class="line">    &lt;title&gt;diago&lt;/title&gt;</span><br><span class="line">    &lt;link rel=&quot;stylesheet&quot; href=&quot;./diago.css&quot; /&gt;</span><br><span class="line">  &lt;/head&gt;</span><br><span class="line">  &lt;body&gt;</span><br><span class="line">    &lt;button id=&quot;showDiago&quot;&gt;点击打开弹窗&lt;/button&gt;</span><br><span class="line">    &lt;script src=&quot;./diago.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line">      document.getElementById(&quot;showDiago&quot;).addEventListener(&apos;click&apos;, function(e) &#123;</span><br><span class="line">        dialog.show(&#123;</span><br><span class="line">          title: &quot;biaoti&quot;,</span><br><span class="line">          content: &quot;抱歉，该游戏暂无Android版本&quot;,</span><br><span class="line">          cancel: function() &#123;</span><br><span class="line">            console.log(111);</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">      &#125;);</span><br><span class="line">    &lt;/script&gt;</span><br><span class="line">  &lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var dialog = (function() &#123;</span><br><span class="line">  var elem, dialog, cancelBtn, confirmBtn;</span><br><span class="line">  /**</span><br><span class="line">   * @method getNeedElement 获取所需要的节点</span><br><span class="line">   */</span><br><span class="line">  var getNeedElement = function() &#123;</span><br><span class="line">    elem = document.querySelector(&quot;.dialog-wrapper&quot;);</span><br><span class="line">    dialog = document.querySelector(&quot;.dialog&quot;);</span><br><span class="line">    cancelBtn = document.querySelector(&quot;.cancel-btn&quot;);</span><br><span class="line">    confirmBtn = document.querySelector(&quot;.confirm-btn&quot;);</span><br><span class="line">  &#125;;</span><br><span class="line">  /**</span><br><span class="line">   * @method show 打开dialog组件</span><br><span class="line">   */</span><br><span class="line">  var show = function(options = &#123;&#125;) &#123;</span><br><span class="line">    let &#123;</span><br><span class="line">      title = &quot;&quot;,</span><br><span class="line">      content = &quot;默认content&quot;,</span><br><span class="line">      btns = [&quot;确定&quot;, &quot;取消&quot;],</span><br><span class="line">      confirm = null,</span><br><span class="line">      cancel = null</span><br><span class="line">    &#125; = options;</span><br><span class="line">    let btnTemp = &quot;&quot;;</span><br><span class="line">    btns.forEach((item, index) =&gt; &#123;</span><br><span class="line">      if (index == 2) return;</span><br><span class="line">      let btnClass = index == 0 ? &quot;confirm-btn&quot; : &quot;cancel-btn&quot;;</span><br><span class="line">      let temp = `&lt;div class=&quot;btn $&#123;btnClass&#125;&quot;&gt;$&#123;item&#125;&lt;/div&gt;`;</span><br><span class="line">      btnTemp += temp;</span><br><span class="line">    &#125;);</span><br><span class="line">    let html = `&lt;div class=&quot;dialog-wrapper&quot;&gt;</span><br><span class="line">      &lt;div class=&quot;dialog&quot;&gt;</span><br><span class="line">        &lt;div class=&quot;title&quot;&gt;$&#123;title&#125;&lt;/div&gt;</span><br><span class="line">        &lt;div class=&quot;content&quot;&gt;$&#123;content&#125;&lt;/div&gt;</span><br><span class="line">        &lt;div class=&quot;buttons&quot;&gt;$&#123;btnTemp&#125;&lt;/div&gt;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;`; // 添加到Body</span><br><span class="line">    document.body.innerHTML += html;</span><br><span class="line">    getNeedElement();</span><br><span class="line">    bindEvent(confirm, cancel);</span><br><span class="line">    return elem;</span><br><span class="line">  &#125;;</span><br><span class="line">  /**</span><br><span class="line">   * @method hide 关闭dialog组件</span><br><span class="line">   */</span><br><span class="line">  var hide = function() &#123;</span><br><span class="line">    elem.remove(elem);</span><br><span class="line">    // elem.parentNode.removeChild(elem);</span><br><span class="line">  &#125;;</span><br><span class="line">  /**</span><br><span class="line">   * @method bindEvent 给dialog绑定事件</span><br><span class="line">   * @param &#123;Object&#125; confirm 确认回调</span><br><span class="line">   * @param &#123;Object&#125; cancel 取消回调</span><br><span class="line">   */</span><br><span class="line">  var bindEvent = function(confirm, cancel) &#123;</span><br><span class="line">    confirmBtn &amp;&amp;</span><br><span class="line">      confirmBtn.addEventListener(&quot;click&quot;, e =&gt; &#123;</span><br><span class="line">        hide();</span><br><span class="line">        confirm &amp;&amp; confirm();</span><br><span class="line">      &#125;);</span><br><span class="line"></span><br><span class="line">    cancelBtn &amp;&amp;</span><br><span class="line">      cancelBtn.addEventListener(&quot;click&quot;, e =&gt; &#123;</span><br><span class="line">        hide();</span><br><span class="line">        cancel &amp;&amp; cancel();</span><br><span class="line">      &#125;);</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  return &#123; show, hide &#125;;</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">body,html &#123;  font-family: -apple-system, BlinkMacSystemFont, &apos;Segoe UI&apos;, Roboto, Oxygen, Ubuntu, Cantarell, &apos;Open Sans&apos;, &apos;Helvetica Neue&apos;, sans-serif;</span><br><span class="line">&#125;.dialog-wrapper &#123;  position: fixed;  display: flex;  justify-content: center;  align-items: center;  top: 0;  left: 0;  width: 100vw;  height: 100vh;  background-color: rgba(49, 49, 49, 0.5);  color: #313131;  font-size: 10px;  -webkit-tap-highlight-color: transparent;</span><br><span class="line">&#125;.dialog-wrapper.fadeIn &#123;  animation: fadeIn .2s ease;</span><br><span class="line">&#125;.dialog-wrapper.fadeOut &#123;  animation: fadeOut .2s ease forwards;</span><br><span class="line">&#125;.dialog-wrapper .dialog &#123;  position: relative;  width: 85vw;  max-width: 30em;  border-radius: .4em;  background-color: #fff;  box-sizing: border-box;  overflow: hidden;  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);</span><br><span class="line">&#125;.dialog-wrapper .dialog.slideDown &#123;  animation: slideDown .2s ease;</span><br><span class="line">&#125;.dialog-wrapper .dialog.slideUp &#123;  animation: slideUp .2s ease forwards;</span><br><span class="line">&#125;.dialog-wrapper .dialog.scaleIn &#123;  animation: scaleIn 0.2s cubic-bezier(0.07, 0.89, 0.95, 1.4);</span><br><span class="line">&#125;.dialog-wrapper .dialog.scaleOut &#123;  animation: scaleOut 0.2s cubic-bezier(0.07, 0.89, 0.95, 1.4) forwards;</span><br><span class="line">&#125;.dialog-wrapper .dialog .btn &#123;  cursor: pointer;</span><br><span class="line">&#125;.dialog-wrapper .dialog .btn:active &#123;  background-color: #f4f4f4;</span><br><span class="line">&#125;.dialog-wrapper .dialog .close-btn &#123;  position: absolute;  top: 0;  right: 0;  padding: 10px;  font-size: 1.8em;</span><br><span class="line">&#125;.dialog-wrapper .dialog .title &#123;  font-size: 1.8em;  padding: 15px;  text-align: center;  background-color: #f4f4f4;</span><br><span class="line">&#125;.dialog-wrapper .dialog .title:empty &#123;  display: none;</span><br><span class="line">&#125;.dialog-wrapper .dialog .content &#123;  padding: 40px 20px;  font-size: 1.6em;  text-align: center;</span><br><span class="line">&#125;.dialog-wrapper .dialog .buttons &#123;  font-size: 1.6em;  display: flex;  flex-flow: row-reverse;</span><br><span class="line">&#125;.dialog-wrapper .dialog .buttons .btn &#123;  flex: 1;  padding: 15px;  text-align: center;  border-top: 1px solid #ebebeb;</span><br><span class="line">&#125;.dialog-wrapper .dialog .buttons .btn.confirm-btn &#123;  color: #f2d985;</span><br><span class="line">&#125;.dialog-wrapper .dialog .buttons .btn.cancel-btn &#123;  color: #313131;  border-right: 1px solid #ebebeb;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@keyframes slideDown &#123;  from &#123;    transform: translateY(-3em);</span><br><span class="line">  &#125;  to &#123;    transform: translateY(0);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@keyframes slideUp &#123;  from &#123;    transform: translateY(0);</span><br><span class="line">  &#125;  to &#123;    transform: translateY(-3em);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@keyframes fadeIn &#123;  from &#123;    opacity: .5;</span><br><span class="line">  &#125;  to &#123;    opacity: 1;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@keyframes fadeOut &#123;  from &#123;    opacity: 1;</span><br><span class="line">  &#125;  to &#123;    opacity: 0;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@keyframes scaleIn &#123;  from &#123;    transform: scale(0.8);</span><br><span class="line">  &#125;  to &#123;    transform: scale(1);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@keyframes scaleOut &#123;  from &#123;    transform: scale(1);</span><br><span class="line">  &#125;  to &#123;    transform: scale(0.8);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-      <tags>
-        <tag>前端</tag>
       </tags>
   </entry>
   <entry>
@@ -3002,50 +3010,6 @@ CLI：在 shell 命令中指定它们。</code></pre></li>
       </tags>
   </entry>
   <entry>
-    <title>异步不可怕？可怕</title>
-    <url>/2019/06/03/%E5%BC%82%E6%AD%A5%E4%B8%8D%E5%8F%AF%E6%80%95%EF%BC%9F%E5%8F%AF%E6%80%95/</url>
-    <content><![CDATA[<p>异步是一个初期不怎么能遇到但是又十分重要的知识点。<br>而且复杂。<br>掉了三节更新的课程还没有看，罪过啊</p>
-<a id="more"></a>
-<p>众所周知，javascript是单线程，但是单线程的弊端也很明显，就是很多时间都浪费在等待某一个事件执行加载上面了。为了提高效率，我们在js中也实现了异步。</p>
-<ol>
-<li>回调函数</li>
-<li>promise</li>
-<li>generator </li>
-<li>async/awiat</li>
-</ol>
-<p>setTimeout的内容会被放入到执行队列中，不会马上执行，等到主线程执行栈中的任务执行完了之后才会执行setTimeout中的内容</p>
-<p>宏任务和微任务：<br>宏任务一般包括： setTimeout setInterval I/O 事件 postMessage setImmediate (Node.js) requestAnimationFrame UI渲染<br>微任务一般包括： Promise.then MutationObserver process.nextTick(Node.js)</p>
-<p>由上分析得知，每次主线程执行栈为空的时候，引擎会优先处理微任务队列，处理完微任务队列里的所有任务，再去处理宏任务。<br>即 promise在setTimeout之前执行</p>
-<code>
-async function async1() {
-        console.log('async1 start') // step 4: 直接打印同步代码 async1 start
-        await async2() // step 5: 遇见 await，首先执行其右侧逻辑，并在这里中断 async1 函数
-        console.log('async1 end') // step 11: 再次回到 async1 函数，await 中断过后，打印代码 async1 end
-    }
-    async function async2() {
-        console.log('async2') // step 6: 直接打印同步代码 async2，并返回一个 resolve 值为 `undefined` 的 promise
-    }
-    console.log('script start') // step 1: 直接打印同步代码 script start
-    // step 2: 将 setTimeout 回调放到宏任务中，此时 macroTasks: [setTimeout]
-    setTimeout(function() {            
-        console.log('setTimeout') step 13: 开始执行宏任务，输出 setTimeout
-    }, 0)  
-    async1() // step 3: 执行 async1 
-    // step 7: async1 函数已经中断，继续执行到这里
-    new Promise(function(resolve) {
-        console.log('promise1') // step 8: 直接打印同步代码 promise1
-        resolve()
-    }).then(function() { // step 9: 将 then 逻辑放到微任务当中
-        console.log('promise2') // step 12: 开始执行微任务，输出 promise2
-    })
-    console.log('script end') // step 10: 直接打印同步代码 script end，并回到 async1 函数中继续执行 
-</code>]]></content>
-      <tags>
-        <tag>前端</tag>
-        <tag>面试</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>层序遍历</title>
     <url>/2020/06/12/%E5%B1%82%E5%BA%8F%E9%81%8D%E5%8E%86/</url>
     <content><![CDATA[<p>小余同学给讲的层次遍历</p>
@@ -3090,56 +3054,47 @@ async function async1() {
       </tags>
   </entry>
   <entry>
-    <title>我的代码规范</title>
-    <url>/2019/01/03/%E6%88%91%E7%9A%84%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/</url>
-    <content><![CDATA[<p>最近接手别的同事的代码，才意识到代码的规范有多么的重要，所以决定整理一份自己的代码书写规范</p>
+    <title>异步不可怕？可怕</title>
+    <url>/2019/06/03/%E5%BC%82%E6%AD%A5%E4%B8%8D%E5%8F%AF%E6%80%95%EF%BC%9F%E5%8F%AF%E6%80%95/</url>
+    <content><![CDATA[<p>异步是一个初期不怎么能遇到但是又十分重要的知识点。<br>而且复杂。<br>掉了三节更新的课程还没有看，罪过啊</p>
 <a id="more"></a>
+<p>众所周知，javascript是单线程，但是单线程的弊端也很明显，就是很多时间都浪费在等待某一个事件执行加载上面了。为了提高效率，我们在js中也实现了异步。</p>
 <ol>
-<li>不同的主题色分类<br>除了默主题之外， 白色主题统一用white-theme 黑色主题统一用black-theme 作用在body上</li>
-<li>样式从里往外写，这样在后期有改动的时候比较方便（特别是在边距边框之类的问题上）</li>
-<li>使用列表标签的时候通过在ul上添加类名区分，表内的内容的名称可以一致</li>
-<li>外边距可能会导致边距重叠的事情发生，所以尽量避免使用，虽然能够用别的方法解决这个问题，但是这样又增加了新的不必要的代码</li>
-<li>写sass的时候，层级最好不超过三层，控制在三层左右</li>
-<li>后面我定义一个公共组件样式表，用以将清除浮动，居中，布局，文字隐藏之类的重复率较高的代码分离出来</li>
-<li>css的命名规则上，选择网易的<a href="http://nec.netease.com" target="_blank" rel="noopener">nec原则</a></li>
+<li>回调函数</li>
+<li>promise</li>
+<li>generator </li>
+<li>async/awiat</li>
 </ol>
-]]></content>
+<p>setTimeout的内容会被放入到执行队列中，不会马上执行，等到主线程执行栈中的任务执行完了之后才会执行setTimeout中的内容</p>
+<p>宏任务和微任务：<br>宏任务一般包括： setTimeout setInterval I/O 事件 postMessage setImmediate (Node.js) requestAnimationFrame UI渲染<br>微任务一般包括： Promise.then MutationObserver process.nextTick(Node.js)</p>
+<p>由上分析得知，每次主线程执行栈为空的时候，引擎会优先处理微任务队列，处理完微任务队列里的所有任务，再去处理宏任务。<br>即 promise在setTimeout之前执行</p>
+<code>
+async function async1() {
+        console.log('async1 start') // step 4: 直接打印同步代码 async1 start
+        await async2() // step 5: 遇见 await，首先执行其右侧逻辑，并在这里中断 async1 函数
+        console.log('async1 end') // step 11: 再次回到 async1 函数，await 中断过后，打印代码 async1 end
+    }
+    async function async2() {
+        console.log('async2') // step 6: 直接打印同步代码 async2，并返回一个 resolve 值为 `undefined` 的 promise
+    }
+    console.log('script start') // step 1: 直接打印同步代码 script start
+    // step 2: 将 setTimeout 回调放到宏任务中，此时 macroTasks: [setTimeout]
+    setTimeout(function() {            
+        console.log('setTimeout') step 13: 开始执行宏任务，输出 setTimeout
+    }, 0)  
+    async1() // step 3: 执行 async1 
+    // step 7: async1 函数已经中断，继续执行到这里
+    new Promise(function(resolve) {
+        console.log('promise1') // step 8: 直接打印同步代码 promise1
+        resolve()
+    }).then(function() { // step 9: 将 then 逻辑放到微任务当中
+        console.log('promise2') // step 12: 开始执行微任务，输出 promise2
+    })
+    console.log('script end') // step 10: 直接打印同步代码 script end，并回到 async1 函数中继续执行 
+</code>]]></content>
       <tags>
         <tag>前端</tag>
-        <tag>css</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>支付宝体验设计精髓</title>
-    <url>/2019/12/01/%E6%94%AF%E4%BB%98%E5%AE%9D%E4%BD%93%E9%AA%8C%E8%AE%BE%E8%AE%A1%E7%B2%BE%E9%AB%93/</url>
-    <content><![CDATA[<p>哈</p>
-]]></content>
-      <tags>
-        <tag>随笔</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>搞定GTD</title>
-    <url>/2019/12/22/%E6%90%9E%E5%AE%9AGTD/</url>
-    <content><![CDATA[<p>构建以结果和行动为导向的思维方式，从漫无目的的思考到行动性的思考</p>
-<a id="more"></a>
-<p>GTD步骤</p>
-<ol>
-<li>列出所面临的问题</li>
-<li>思考预期结果</li>
-<li>为了推动事情进展需要采取的下一步实际行动（一次只做一件事）</li>
-</ol>
-<p>在行动之前进行周密的思考<br>思考结果是促使希望转化为现实的最有效的手段之一</p>
-<p>tips: 任何事情都应该做到最简单而不是相对简单</p>
-<ol>
-<li>机制管理“todolost”经常回访并予以清理收集经常冒出来的念头和想法，解决他们</li>
-<li>制定行动计划</li>
-<li>将与行动方案相关联的体时，放到一个经常查询的系统中（融入到日常习惯）</li>
-</ol>
-<p>事务极少会由于时间匮乏而受阻，他们陷入困境往往是由于未能预先明确下一步的行动而造成的</p>
-]]></content>
-      <tags>
-        <tag>随笔</tag>
+        <tag>面试</tag>
       </tags>
   </entry>
   <entry>
@@ -3223,6 +3178,59 @@ async function async1() {
       </tags>
   </entry>
   <entry>
+    <title>我的代码规范</title>
+    <url>/2019/01/03/%E6%88%91%E7%9A%84%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/</url>
+    <content><![CDATA[<p>最近接手别的同事的代码，才意识到代码的规范有多么的重要，所以决定整理一份自己的代码书写规范</p>
+<a id="more"></a>
+<ol>
+<li>不同的主题色分类<br>除了默主题之外， 白色主题统一用white-theme 黑色主题统一用black-theme 作用在body上</li>
+<li>样式从里往外写，这样在后期有改动的时候比较方便（特别是在边距边框之类的问题上）</li>
+<li>使用列表标签的时候通过在ul上添加类名区分，表内的内容的名称可以一致</li>
+<li>外边距可能会导致边距重叠的事情发生，所以尽量避免使用，虽然能够用别的方法解决这个问题，但是这样又增加了新的不必要的代码</li>
+<li>写sass的时候，层级最好不超过三层，控制在三层左右</li>
+<li>后面我定义一个公共组件样式表，用以将清除浮动，居中，布局，文字隐藏之类的重复率较高的代码分离出来</li>
+<li>css的命名规则上，选择网易的<a href="http://nec.netease.com" target="_blank" rel="noopener">nec原则</a></li>
+</ol>
+]]></content>
+      <tags>
+        <tag>前端</tag>
+        <tag>css</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>搞定GTD</title>
+    <url>/2019/12/22/%E6%90%9E%E5%AE%9AGTD/</url>
+    <content><![CDATA[<p>构建以结果和行动为导向的思维方式，从漫无目的的思考到行动性的思考</p>
+<a id="more"></a>
+<p>GTD步骤</p>
+<ol>
+<li>列出所面临的问题</li>
+<li>思考预期结果</li>
+<li>为了推动事情进展需要采取的下一步实际行动（一次只做一件事）</li>
+</ol>
+<p>在行动之前进行周密的思考<br>思考结果是促使希望转化为现实的最有效的手段之一</p>
+<p>tips: 任何事情都应该做到最简单而不是相对简单</p>
+<ol>
+<li>机制管理“todolost”经常回访并予以清理收集经常冒出来的念头和想法，解决他们</li>
+<li>制定行动计划</li>
+<li>将与行动方案相关联的体时，放到一个经常查询的系统中（融入到日常习惯）</li>
+</ol>
+<p>事务极少会由于时间匮乏而受阻，他们陷入困境往往是由于未能预先明确下一步的行动而造成的</p>
+]]></content>
+      <tags>
+        <tag>随笔</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>支付宝体验设计精髓</title>
+    <url>/2019/12/01/%E6%94%AF%E4%BB%98%E5%AE%9D%E4%BD%93%E9%AA%8C%E8%AE%BE%E8%AE%A1%E7%B2%BE%E9%AB%93/</url>
+    <content><![CDATA[<p>哈</p>
+]]></content>
+      <tags>
+        <tag>随笔</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>数据库</title>
     <url>/2017/11/29/%E6%95%B0%E6%8D%AE%E5%BA%93/</url>
     <content><![CDATA[<ol>
@@ -3258,44 +3266,6 @@ async function async1() {
       <tags>
         <tag>面试</tag>
         <tag>数据库</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>普鲁斯特问卷</title>
-    <url>/2019/07/26/%E6%99%AE%E9%B2%81%E6%96%AF%E7%89%B9%E9%97%AE%E5%8D%B7/</url>
-    <content><![CDATA[<p>普鲁斯特问卷<br>一年一次吧<br>观己观心</p>
-<a id="more"></a>
-<p>1.你认为最完美的快乐是怎样的？<br>不用考虑现实压力 内心充盈 有想做的事情 而且可以去做</p>
-<p>2.你最希望拥有哪种才华？<br>其实我没啥想要的才华 我觉得拥有一样东西必然有利有弊 有啥我就接受 没有不强求</p>
-<p>3.你最恐惧的是什么？<br>我太丧了 我觉得没啥恐惧的  恐惧失去希望吧 但是又感觉总能找到活着的意义的</p>
-<p>4.你目前的心境怎样？<br>迷茫 害怕未知的一切 怕做不到自己想要的样子</p>
-<p>5.还在世的人中你最钦佩的是谁？<br>我也没有钦佩的人  因为好像一直很冷漠 不关心和我无关的人</p>
-<p>6.你认为自己最伟大的成就是什么？<br>没有什么伟大的成就</p>
-<p>7.你自己的哪个特点让你最觉得痛恨？<br>执行力差</p>
-<p>8.你最喜欢的旅行是哪一次？<br>没有</p>
-<p>9.你最痛恨别人的什么特点？<br>我谈不上痛恨 但我不喜欢跟虚伪的人打交道</p>
-<p>10.你最珍惜的财产是什么？<br>珍惜的财产是 我的健康 时间 与人之间的情感联系 </p>
-<p>11.你认为最奢侈的是什么？<br>自由和勇气</p>
-<p>12.你认为程度最浅的痛苦是什么？<br>身体上的痛苦我觉得是程度最浅的</p>
-<p>13.你认为哪种美德是被过高的评估的？<br>我是觉得 好多所谓美德 都是别人拿来约束别人的 是为了自己作恶方便</p>
-<p>14.你最喜欢的职业是什么？<br>挣钱贼多的职业哈哈哈 还有可以体验各种各样的角色的</p>
-<p>15.你对自己的外表哪一点不满意？<br>都不满意 唯一觉得还行 就眼睛</p>
-<p>16.你最后悔的事情是什么？<br>要说有后悔的 我后悔以前没有听话好好读书 沉迷于早恋了</p>
-<p>17.还在世的人中你最鄙视的是谁？<br>没有</p>
-<p>18.你最喜欢男性身上的什么特质？<br>上进 真诚</p>
-<p>19.你使用过的最多的单词或者是词语是什么？<br>我 还有 都行随便</p>
-<p>20.你最喜欢女性身上的什么特质？<br>勇敢 独立 同时保留女性自己的特点</p>
-<p>21.你最伤痛的事是什么？<br>被亲人欺骗背叛从而导致的对人性的怀疑和失望</p>
-<p>22.你最看重朋友的什么特点？<br>真诚</p>
-<p>23.你这一生中最爱的人或东西是什么？<br>我没啥最爱的  啥都可以失去 但是不失去最好</p>
-<p>24.你希望以什么样的方式死去？<br>突然死掉 来不及反应 也没啥后悔遗憾的时间</p>
-<p>25.何时何地让你感觉到最快乐？<br>跟亲人朋友待在一起 内心平和的时候~</p>
-<p>26.如果你可以改变你家庭的一件事，那会是什么？<br>我就希望 我们家条件能更好点 这样我父母大概就不会老是为钱的问题吵架了</p>
-<p>27.如果你能选择的话，你希望让什么重现？<br>小时候早上醒的时候我妈妈在给我织毛衣吧~  在脑子里重现好多遍</p>
-<p>28.你的座右铭是什么？<br> 知行合一</p>
-]]></content>
-      <tags>
-        <tag>随笔</tag>
       </tags>
   </entry>
   <entry>
@@ -3381,6 +3351,44 @@ kmp算法</code></pre><p>4.逆波兰表达式<br>中缀表达式转成后缀表�
       </tags>
   </entry>
   <entry>
+    <title>普鲁斯特问卷</title>
+    <url>/2019/07/26/%E6%99%AE%E9%B2%81%E6%96%AF%E7%89%B9%E9%97%AE%E5%8D%B7/</url>
+    <content><![CDATA[<p>普鲁斯特问卷<br>一年一次吧<br>观己观心</p>
+<a id="more"></a>
+<p>1.你认为最完美的快乐是怎样的？<br>不用考虑现实压力 内心充盈 有想做的事情 而且可以去做</p>
+<p>2.你最希望拥有哪种才华？<br>其实我没啥想要的才华 我觉得拥有一样东西必然有利有弊 有啥我就接受 没有不强求</p>
+<p>3.你最恐惧的是什么？<br>我太丧了 我觉得没啥恐惧的  恐惧失去希望吧 但是又感觉总能找到活着的意义的</p>
+<p>4.你目前的心境怎样？<br>迷茫 害怕未知的一切 怕做不到自己想要的样子</p>
+<p>5.还在世的人中你最钦佩的是谁？<br>我也没有钦佩的人  因为好像一直很冷漠 不关心和我无关的人</p>
+<p>6.你认为自己最伟大的成就是什么？<br>没有什么伟大的成就</p>
+<p>7.你自己的哪个特点让你最觉得痛恨？<br>执行力差</p>
+<p>8.你最喜欢的旅行是哪一次？<br>没有</p>
+<p>9.你最痛恨别人的什么特点？<br>我谈不上痛恨 但我不喜欢跟虚伪的人打交道</p>
+<p>10.你最珍惜的财产是什么？<br>珍惜的财产是 我的健康 时间 与人之间的情感联系 </p>
+<p>11.你认为最奢侈的是什么？<br>自由和勇气</p>
+<p>12.你认为程度最浅的痛苦是什么？<br>身体上的痛苦我觉得是程度最浅的</p>
+<p>13.你认为哪种美德是被过高的评估的？<br>我是觉得 好多所谓美德 都是别人拿来约束别人的 是为了自己作恶方便</p>
+<p>14.你最喜欢的职业是什么？<br>挣钱贼多的职业哈哈哈 还有可以体验各种各样的角色的</p>
+<p>15.你对自己的外表哪一点不满意？<br>都不满意 唯一觉得还行 就眼睛</p>
+<p>16.你最后悔的事情是什么？<br>要说有后悔的 我后悔以前没有听话好好读书 沉迷于早恋了</p>
+<p>17.还在世的人中你最鄙视的是谁？<br>没有</p>
+<p>18.你最喜欢男性身上的什么特质？<br>上进 真诚</p>
+<p>19.你使用过的最多的单词或者是词语是什么？<br>我 还有 都行随便</p>
+<p>20.你最喜欢女性身上的什么特质？<br>勇敢 独立 同时保留女性自己的特点</p>
+<p>21.你最伤痛的事是什么？<br>被亲人欺骗背叛从而导致的对人性的怀疑和失望</p>
+<p>22.你最看重朋友的什么特点？<br>真诚</p>
+<p>23.你这一生中最爱的人或东西是什么？<br>我没啥最爱的  啥都可以失去 但是不失去最好</p>
+<p>24.你希望以什么样的方式死去？<br>突然死掉 来不及反应 也没啥后悔遗憾的时间</p>
+<p>25.何时何地让你感觉到最快乐？<br>跟亲人朋友待在一起 内心平和的时候~</p>
+<p>26.如果你可以改变你家庭的一件事，那会是什么？<br>我就希望 我们家条件能更好点 这样我父母大概就不会老是为钱的问题吵架了</p>
+<p>27.如果你能选择的话，你希望让什么重现？<br>小时候早上醒的时候我妈妈在给我织毛衣吧~  在脑子里重现好多遍</p>
+<p>28.你的座右铭是什么？<br> 知行合一</p>
+]]></content>
+      <tags>
+        <tag>随笔</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>最近沉迷于模拟人生</title>
     <url>/2018/01/07/%E6%9C%80%E8%BF%91%E6%B2%89%E8%BF%B7%E4%BA%8E%E6%A8%A1%E6%8B%9F%E4%BA%BA%E7%94%9F/</url>
     <content><![CDATA[<p>如题，最近沉迷于模拟人生这个单机游戏，熬夜玩游戏涨了两颗痘痘~<br>不太爱玩竞技类的游戏，像解密啊养成类的游戏对我来说就比较耐玩了<br>感觉很神奇啊 屏幕里的小人们，忙忙碌碌，有时候也会按照自己的想法产生一些行为<del>很可爱</del><br>姑且认为是他们是他们自己的想法吧</p>
@@ -3443,20 +3451,6 @@ kmp算法</code></pre><p>4.逆波兰表达式<br>中缀表达式转成后缀表�
       </tags>
   </entry>
   <entry>
-    <title>移动端1像素解决方案</title>
-    <url>/2020/04/02/%E7%A7%BB%E5%8A%A8%E7%AB%AF1%E5%83%8F%E7%B4%A0%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</url>
-    <content><![CDATA[<h1 id="移动端适配"><a href="#移动端适配" class="headerlink" title="移动端适配"></a>移动端适配</h1><a id="more"></a>
-<h2 id="1px-边框解决方案"><a href="#1px-边框解决方案" class="headerlink" title="1px 边框解决方案"></a>1px 边框解决方案</h2><h3 id="transform-scale-0-5-方案"><a href="#transform-scale-0-5-方案" class="headerlink" title="transform: scale(0.5) 方案"></a>transform: scale(0.5) 方案</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">div &#123;</span><br><span class="line">    height:1px;</span><br><span class="line">    background:#000;</span><br><span class="line">    -webkit-transform: scaleY(0.5);</span><br><span class="line">    -webkit-transform-origin:0 0;</span><br><span class="line">    overflow: hidden;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="css-根据设备像素比媒体查询后的解决方案"><a href="#css-根据设备像素比媒体查询后的解决方案" class="headerlink" title="css 根据设备像素比媒体查询后的解决方案"></a>css 根据设备像素比媒体查询后的解决方案</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">/* 2倍屏 */</span><br><span class="line">@media only screen and (-webkit-min-device-pixel-ratio: 2.0) &#123;</span><br><span class="line">    .border-bottom::after &#123;</span><br><span class="line">        -webkit-transform: scaleY(0.5);</span><br><span class="line">        transform: scaleY(0.5);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">/* 3倍屏 */</span><br><span class="line">@media only screen and (-webkit-min-device-pixel-ratio: 3.0) &#123;</span><br><span class="line">    .border-bottom::after &#123;</span><br><span class="line">        -webkit-transform: scaleY(0.33);</span><br><span class="line">        transform: scaleY(0.33);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <tags>
-        <tag>前端</tag>
-        <tag>css</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>深度工作</title>
     <url>/2019/09/15/%E6%B7%B1%E5%BA%A6%E5%B7%A5%E4%BD%9C/</url>
     <content><![CDATA[<p>在卡尔·纽波特博士的论述里，深度工作的意思为在无干扰的状态下专注进行职业活动，是个人的认知能力达到极限的状态。<br>深度工作不仅是对于正在工作的职场人士有意义，对于任何想要提升自己做事情效率，甚至仅仅是想提升专注的的人来说，都具有极大的意义。</p>
@@ -3471,26 +3465,26 @@ kmp算法</code></pre><p>4.逆波兰表达式<br>中缀表达式转成后缀表�
       </tags>
   </entry>
   <entry>
-    <title>移动端布局（一）</title>
-    <url>/2018/05/15/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%B8%83%E5%B1%80%EF%BC%88%E4%B8%80%EF%BC%89/</url>
-    <content><![CDATA[<p>本来想自己写，但是别人都已经写的非常好了。。。</p>
-<p><a href="https://juejin.im/entry/596465c951882568b00311b4" target="_blank" rel="noopener">转载自掘金社区</a> </p>
-<p>//js动态计算</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">//定义一个方法并执行</span><br><span class="line">(function(doc, win) &#123;</span><br><span class="line">    var docEl = doc.documentElement;</span><br><span class="line">    resizeEvt = &apos;orientationchange&apos; in win ? &apos;orientationchange&apos; : &apos;resize&apos;;</span><br><span class="line">    var recalc = function() &#123;</span><br><span class="line">        var clientWidth = docEl.clientWidth;</span><br><span class="line">        if(!clientWidth) return;</span><br><span class="line">        docEl.style.fontSize = 50 * ((clientWidth &gt;= 750 ? 750 : clientWidth) / 375) + &apos;px&apos;;</span><br><span class="line">        /*docEl.style.fontSize = 50 * (clientWidth / 320) + &apos;px&apos;;*/</span><br><span class="line">    &#125;;</span><br><span class="line">    if(!doc.addEventListener) return;</span><br><span class="line">    win.addEventListener(resizeEvt, recalc, false);</span><br><span class="line">    doc.addEventListener(&apos;DOMContentLoaded&apos;, recalc, false);</span><br><span class="line">&#125;)(document, window);</span><br></pre></td></tr></table></figure>]]></content>
+    <title>移动端1像素解决方案</title>
+    <url>/2020/04/02/%E7%A7%BB%E5%8A%A8%E7%AB%AF1%E5%83%8F%E7%B4%A0%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</url>
+    <content><![CDATA[<h1 id="移动端适配"><a href="#移动端适配" class="headerlink" title="移动端适配"></a>移动端适配</h1><a id="more"></a>
+<h2 id="1px-边框解决方案"><a href="#1px-边框解决方案" class="headerlink" title="1px 边框解决方案"></a>1px 边框解决方案</h2><h3 id="transform-scale-0-5-方案"><a href="#transform-scale-0-5-方案" class="headerlink" title="transform: scale(0.5) 方案"></a>transform: scale(0.5) 方案</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">div &#123;</span><br><span class="line">    height:1px;</span><br><span class="line">    background:#000;</span><br><span class="line">    -webkit-transform: scaleY(0.5);</span><br><span class="line">    -webkit-transform-origin:0 0;</span><br><span class="line">    overflow: hidden;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="css-根据设备像素比媒体查询后的解决方案"><a href="#css-根据设备像素比媒体查询后的解决方案" class="headerlink" title="css 根据设备像素比媒体查询后的解决方案"></a>css 根据设备像素比媒体查询后的解决方案</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">/* 2倍屏 */</span><br><span class="line">@media only screen and (-webkit-min-device-pixel-ratio: 2.0) &#123;</span><br><span class="line">    .border-bottom::after &#123;</span><br><span class="line">        -webkit-transform: scaleY(0.5);</span><br><span class="line">        transform: scaleY(0.5);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">/* 3倍屏 */</span><br><span class="line">@media only screen and (-webkit-min-device-pixel-ratio: 3.0) &#123;</span><br><span class="line">    .border-bottom::after &#123;</span><br><span class="line">        -webkit-transform: scaleY(0.33);</span><br><span class="line">        transform: scaleY(0.33);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
       <tags>
         <tag>前端</tag>
         <tag>css</tag>
       </tags>
   </entry>
   <entry>
-    <title>移动端长按弹出事件</title>
-    <url>/2018/11/05/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%95%BF%E6%8C%89%E5%BC%B9%E5%87%BA%E4%BA%8B%E4%BB%B6/</url>
-    <content><![CDATA[<p>这是在尝试写购物车的时候遇到的问题，长按商品弹出删除的选项框</p>
-<a id="more"></a>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"> // 长按弹出删除弹窗</span><br><span class="line">        // var timeOUtEvent = 0;</span><br><span class="line">        // $(&apos;.shops ul&apos;).on(&#123;</span><br><span class="line">        //     touchstart: function (e) &#123;</span><br><span class="line">        //         var that = $(this);</span><br><span class="line">        //         timeOUtEvent = setTimeout(function () &#123;</span><br><span class="line">        //             that.addClass(&apos;waitdel&apos;);</span><br><span class="line">        //             timeOUtEvent = 0;</span><br><span class="line">        //             pop($(&apos;#pop-del&apos;));</span><br><span class="line">        //         &#125;, 2000);</span><br><span class="line">        //         e.preventDefault();</span><br><span class="line">        //     &#125;,</span><br><span class="line">        //     touchmove: function () &#123;</span><br><span class="line">        //         clearTimeout(timeOUtEvent);</span><br><span class="line">        //         timeOUtEvent = 0;</span><br><span class="line">        //     &#125;,</span><br><span class="line">        //     touchend: function () &#123;</span><br><span class="line">        //         clearTimeout(timeOUtEvent);</span><br><span class="line">        //         if (timeOUtEvent != 0) &#123;</span><br><span class="line">        //             $(&apos;#cart&apos;).click(</span><br><span class="line">        //                 function (e) &#123;</span><br><span class="line">        //                         console.log(1);</span><br><span class="line">        //                     if(e.target == $(&apos;#count&apos;))&#123;</span><br><span class="line">        //                         console.log(12);</span><br><span class="line">        //             change($(this).find(&apos;#count&apos;));</span><br><span class="line">        //                     &#125;</span><br><span class="line">        //                   &#125;</span><br><span class="line">        //             )</span><br><span class="line">        //             // change($(this).find(&apos;#count&apos;));</span><br><span class="line">        //             // console.log(timeOUtEvent)</span><br><span class="line">        //         &#125;</span><br><span class="line">        //         // return false;</span><br><span class="line">        //     &#125;</span><br><span class="line">        // &#125;, &apos;li&apos;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">// 长按弹出删除弹窗结束</span><br><span class="line">        var timer = null;</span><br><span class="line">        var t = 0;</span><br><span class="line">        $(&apos;.shops ul&apos;).on(&#123;</span><br><span class="line">            touchstart: function (e) &#123;</span><br><span class="line">                var that = $(this);</span><br><span class="line">                timer = setTimeout(function () &#123;</span><br><span class="line">                    pop($(&apos;#pop-del&apos;));</span><br><span class="line">                    that.addClass(&apos;waitdel&apos;)</span><br><span class="line">                    clearTimeout(timer);</span><br><span class="line">                &#125;, 1000)</span><br><span class="line">                e.preventDefault();</span><br><span class="line">            &#125;,</span><br><span class="line">            touchend: function () &#123;</span><br><span class="line">                clearTimeout(timer);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;, &apos;li&apos;)</span><br><span class="line">        //模拟点击事件</span><br><span class="line">        //点击增加商品数量</span><br><span class="line">        var t = 0;</span><br><span class="line">        $(&apos;.shops ul&apos;).on(&#123;</span><br><span class="line">            touchstart: function () &#123;</span><br><span class="line">                t = new Date().getTime();</span><br><span class="line">                console.log(t)</span><br><span class="line">            &#125;,</span><br><span class="line">            touchend: function () &#123;</span><br><span class="line">                var newT = new Date().getTime();</span><br><span class="line">                if (newT - t &lt; 300) &#123;</span><br><span class="line">                    var count = $(this).prev().text();</span><br><span class="line">                    count = parseInt(count) + 1;</span><br><span class="line">                    $(this).prev().text(count);</span><br><span class="line">                    totalprice();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;, &apos;span.ri&apos;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">两种方法，各有千秋</span><br></pre></td></tr></table></figure>]]></content>
+    <title>移动端不满一屏的解决方案</title>
+    <url>/2019/03/20/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E4%B8%8D%E6%BB%A1%E4%B8%80%E5%B1%8F%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</url>
+    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">body::before&#123;</span><br><span class="line">    content:&quot; &quot;;</span><br><span class="line">    position:absolute;</span><br><span class="line">    left:0;</span><br><span class="line">    right:0;</span><br><span class="line">    top:0;</span><br><span class="line">    bottom:0;</span><br><span class="line">    background-color:#ccc;/* 颜色自定义 */</span><br><span class="line">    z-index:-100;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
       <tags>
         <tag>前端</tag>
-        <tag>移动端</tag>
+        <tag>css</tag>
       </tags>
   </entry>
   <entry>
@@ -3555,9 +3549,12 @@ kmp算法</code></pre><p>4.逆波兰表达式<br>中缀表达式转成后缀表�
       </tags>
   </entry>
   <entry>
-    <title>移动端不满一屏的解决方案</title>
-    <url>/2019/03/20/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E4%B8%8D%E6%BB%A1%E4%B8%80%E5%B1%8F%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</url>
-    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">body::before&#123;</span><br><span class="line">    content:&quot; &quot;;</span><br><span class="line">    position:absolute;</span><br><span class="line">    left:0;</span><br><span class="line">    right:0;</span><br><span class="line">    top:0;</span><br><span class="line">    bottom:0;</span><br><span class="line">    background-color:#ccc;/* 颜色自定义 */</span><br><span class="line">    z-index:-100;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    <title>移动端布局（一）</title>
+    <url>/2018/05/15/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%B8%83%E5%B1%80%EF%BC%88%E4%B8%80%EF%BC%89/</url>
+    <content><![CDATA[<p>本来想自己写，但是别人都已经写的非常好了。。。</p>
+<p><a href="https://juejin.im/entry/596465c951882568b00311b4" target="_blank" rel="noopener">转载自掘金社区</a> </p>
+<p>//js动态计算</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">//定义一个方法并执行</span><br><span class="line">(function(doc, win) &#123;</span><br><span class="line">    var docEl = doc.documentElement;</span><br><span class="line">    resizeEvt = &apos;orientationchange&apos; in win ? &apos;orientationchange&apos; : &apos;resize&apos;;</span><br><span class="line">    var recalc = function() &#123;</span><br><span class="line">        var clientWidth = docEl.clientWidth;</span><br><span class="line">        if(!clientWidth) return;</span><br><span class="line">        docEl.style.fontSize = 50 * ((clientWidth &gt;= 750 ? 750 : clientWidth) / 375) + &apos;px&apos;;</span><br><span class="line">        /*docEl.style.fontSize = 50 * (clientWidth / 320) + &apos;px&apos;;*/</span><br><span class="line">    &#125;;</span><br><span class="line">    if(!doc.addEventListener) return;</span><br><span class="line">    win.addEventListener(resizeEvt, recalc, false);</span><br><span class="line">    doc.addEventListener(&apos;DOMContentLoaded&apos;, recalc, false);</span><br><span class="line">&#125;)(document, window);</span><br></pre></td></tr></table></figure>]]></content>
       <tags>
         <tag>前端</tag>
         <tag>css</tag>
@@ -3575,25 +3572,41 @@ kmp算法</code></pre><p>4.逆波兰表达式<br>中缀表达式转成后缀表�
       </tags>
   </entry>
   <entry>
-    <title>网络之option</title>
-    <url>/2021/04/17/%E7%BD%91%E7%BB%9C%E4%B9%8Boption/</url>
-    <content><![CDATA[<p>MDN的CORS一文中提到：<br>规范要求，对那些可能对服务器数据产生副作用的 HTTP 请求方法（特别是 GET 以外的 HTTP 请求，或者搭配某些 MIME 类型的 POST 请求），浏览器必须首先使用 OPTIONS 方法发起一个预检请求（preflight request），从而获知服务端是否允许该跨域请求。</p>
+    <title>移动端长按弹出事件</title>
+    <url>/2018/11/05/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%95%BF%E6%8C%89%E5%BC%B9%E5%87%BA%E4%BA%8B%E4%BB%B6/</url>
+    <content><![CDATA[<p>这是在尝试写购物车的时候遇到的问题，长按商品弹出删除的选项框</p>
 <a id="more"></a>
-<p>某些请求不会触发 CORS 预检请求，这样的请求一般称为”简单请求”,而会触发预检的请求则称为”复杂请求”。</p>
-<p>简单请求：<br>简单请求的 HTTP 方法只能是 GET、HEAD 或 POST<br>简单请求的 HTTP 头只能是 Accept/Accept-Language/Conent-Language/Content-Type 等<br>简单请求的 Content-Type 头只能是 text/plain、multipart/form-data 或 application/x-www-form-urlencoded</p>
-<h3 id="CORS预检请求触发条件"><a href="#CORS预检请求触发条件" class="headerlink" title="CORS预检请求触发条件"></a>CORS预检请求触发条件</h3><ol>
-<li>使用了下面任一HTTP 方法：<br>PUT/DELETE/CONNECT/OPTIONS/TRACE/PATCH     </li>
-<li>人为设置了以下集合之外首部字段：<br>Accept/Accept-Language/Content-Language/Content-Type/DPR/Downlink/Save-Data/Viewport-Width/Width     </li>
-<li>Content-Type 的值不属于下列之一:<br>application/x-www-form-urlencoded、multipart/form-data、text/plain</li>
-</ol>
-<h3 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h3><p>当我们发起跨域请求时，如果是简单请求，那么我们只会发出一次请求，但是如果是复杂请求则先发出 options 请求，用于确认目标资源是否支持跨域，然后浏览器会根据服务端响应的 header 自动处理剩余的请求，如果响应支持跨域，则继续发出正常请求，如果不支持，则在控制台显示错误。</p>
-<p>由此可见，当触发预检时，跨域请求便会发送 2 次请求，既增加了请求数，也延迟了请求真正发起的时间，严重影响性能。</p>
-<p>所以，我们可以优化 Options 请求，主要有 2 种方法。</p>
-<p>转为简单请求，如用 JSONP 做跨域请求<br>对 options 请求进行缓存，服务器端设置 Access-Control-Max-Age 字段，那么当第一次请求该 URL 时会发出 OPTIONS 请求，浏览器会根据返回的 Access-Control-Max-Age 字段缓存该请求的 OPTIONS 预检请求的响应结果（具体缓存时间还取决于浏览器的支持的默认最大值，取两者最小值，一般为 10 分钟）。在缓存有效期内，该资源的请求（URL 和 header 字段都相同的情况下）不会再触发预检。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"> // 长按弹出删除弹窗</span><br><span class="line">        // var timeOUtEvent = 0;</span><br><span class="line">        // $(&apos;.shops ul&apos;).on(&#123;</span><br><span class="line">        //     touchstart: function (e) &#123;</span><br><span class="line">        //         var that = $(this);</span><br><span class="line">        //         timeOUtEvent = setTimeout(function () &#123;</span><br><span class="line">        //             that.addClass(&apos;waitdel&apos;);</span><br><span class="line">        //             timeOUtEvent = 0;</span><br><span class="line">        //             pop($(&apos;#pop-del&apos;));</span><br><span class="line">        //         &#125;, 2000);</span><br><span class="line">        //         e.preventDefault();</span><br><span class="line">        //     &#125;,</span><br><span class="line">        //     touchmove: function () &#123;</span><br><span class="line">        //         clearTimeout(timeOUtEvent);</span><br><span class="line">        //         timeOUtEvent = 0;</span><br><span class="line">        //     &#125;,</span><br><span class="line">        //     touchend: function () &#123;</span><br><span class="line">        //         clearTimeout(timeOUtEvent);</span><br><span class="line">        //         if (timeOUtEvent != 0) &#123;</span><br><span class="line">        //             $(&apos;#cart&apos;).click(</span><br><span class="line">        //                 function (e) &#123;</span><br><span class="line">        //                         console.log(1);</span><br><span class="line">        //                     if(e.target == $(&apos;#count&apos;))&#123;</span><br><span class="line">        //                         console.log(12);</span><br><span class="line">        //             change($(this).find(&apos;#count&apos;));</span><br><span class="line">        //                     &#125;</span><br><span class="line">        //                   &#125;</span><br><span class="line">        //             )</span><br><span class="line">        //             // change($(this).find(&apos;#count&apos;));</span><br><span class="line">        //             // console.log(timeOUtEvent)</span><br><span class="line">        //         &#125;</span><br><span class="line">        //         // return false;</span><br><span class="line">        //     &#125;</span><br><span class="line">        // &#125;, &apos;li&apos;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">// 长按弹出删除弹窗结束</span><br><span class="line">        var timer = null;</span><br><span class="line">        var t = 0;</span><br><span class="line">        $(&apos;.shops ul&apos;).on(&#123;</span><br><span class="line">            touchstart: function (e) &#123;</span><br><span class="line">                var that = $(this);</span><br><span class="line">                timer = setTimeout(function () &#123;</span><br><span class="line">                    pop($(&apos;#pop-del&apos;));</span><br><span class="line">                    that.addClass(&apos;waitdel&apos;)</span><br><span class="line">                    clearTimeout(timer);</span><br><span class="line">                &#125;, 1000)</span><br><span class="line">                e.preventDefault();</span><br><span class="line">            &#125;,</span><br><span class="line">            touchend: function () &#123;</span><br><span class="line">                clearTimeout(timer);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;, &apos;li&apos;)</span><br><span class="line">        //模拟点击事件</span><br><span class="line">        //点击增加商品数量</span><br><span class="line">        var t = 0;</span><br><span class="line">        $(&apos;.shops ul&apos;).on(&#123;</span><br><span class="line">            touchstart: function () &#123;</span><br><span class="line">                t = new Date().getTime();</span><br><span class="line">                console.log(t)</span><br><span class="line">            &#125;,</span><br><span class="line">            touchend: function () &#123;</span><br><span class="line">                var newT = new Date().getTime();</span><br><span class="line">                if (newT - t &lt; 300) &#123;</span><br><span class="line">                    var count = $(this).prev().text();</span><br><span class="line">                    count = parseInt(count) + 1;</span><br><span class="line">                    $(this).prev().text(count);</span><br><span class="line">                    totalprice();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;, &apos;span.ri&apos;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">两种方法，各有千秋</span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>前端</tag>
+        <tag>移动端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>类似fontawesome图标库的实现</title>
+    <url>/2019/12/03/%E7%B1%BB%E4%BC%BCfontawesome%E5%9B%BE%E6%A0%87%E5%BA%93%E7%9A%84%E5%AE%9E%E7%8E%B0/</url>
+    <content><![CDATA[<p>通常一个app中，正常情况下会有大量重复使用的小图标icon 这些图标以图片的形式存在的话，虽然小，但每个图片都会有一个请求。<br>近日我司一个从阿里来的大佬给提供了另一个做前端小图标的思路。<br>类似 <a href="http://www.fontawesome.com.cn/" target="_blank" rel="noopener">fontawesome</a> </p>
+<p>自己实现类似的库，可以通过这种方法(<a href="https://zhuanlan.zhihu.com/p/22724856" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/22724856</a>)</p>
 ]]></content>
       <tags>
-        <tag>网络</tag>
+        <tag>前端</tag>
+        <tag>css</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>网站部署</title>
+    <url>/2019/06/07/%E7%BD%91%E7%AB%99%E9%83%A8%E7%BD%B2/</url>
+    <content><![CDATA[<p>开启阿里云建站之旅~</p>
+<a id="more"></a>
+<ol>
+<li>首先在阿里云购买云服务器，根据需求购买相对应的套餐就好。</li>
+<li>下载xshell和xftp</li>
+<li>安装apache mysql 和 php (使用阿里云 lunix下一键安装web环境)<br><a href="https://www.cnblogs.com/smyhvae/p/4965163.html" target="_blank" rel="noopener">具体教程</a></li>
+</ol>
+<p>wordpress定制模板</p>
+<p>目前存在的问题：<br>没怎么做定制的主页<br>不晓得干嘛<br>用经常要服务器重启之后才能重新连上数据库</p>
+<p>一个大坑<br><a href="https://bbs.aliyun.com/read/269743.html" target="_blank" rel="noopener">https://bbs.aliyun.com/read/269743.html</a></p>
+]]></content>
   </entry>
   <entry>
     <title>网络</title>
@@ -3712,19 +3725,25 @@ kmp算法</code></pre><p>4.逆波兰表达式<br>中缀表达式转成后缀表�
       </tags>
   </entry>
   <entry>
-    <title>网站部署</title>
-    <url>/2019/06/07/%E7%BD%91%E7%AB%99%E9%83%A8%E7%BD%B2/</url>
-    <content><![CDATA[<p>开启阿里云建站之旅~</p>
+    <title>网络之option</title>
+    <url>/2021/04/17/%E7%BD%91%E7%BB%9C%E4%B9%8Boption/</url>
+    <content><![CDATA[<p>MDN的CORS一文中提到：<br>规范要求，对那些可能对服务器数据产生副作用的 HTTP 请求方法（特别是 GET 以外的 HTTP 请求，或者搭配某些 MIME 类型的 POST 请求），浏览器必须首先使用 OPTIONS 方法发起一个预检请求（preflight request），从而获知服务端是否允许该跨域请求。</p>
 <a id="more"></a>
-<ol>
-<li>首先在阿里云购买云服务器，根据需求购买相对应的套餐就好。</li>
-<li>下载xshell和xftp</li>
-<li>安装apache mysql 和 php (使用阿里云 lunix下一键安装web环境)<br><a href="https://www.cnblogs.com/smyhvae/p/4965163.html" target="_blank" rel="noopener">具体教程</a></li>
+<p>某些请求不会触发 CORS 预检请求，这样的请求一般称为”简单请求”,而会触发预检的请求则称为”复杂请求”。</p>
+<p>简单请求：<br>简单请求的 HTTP 方法只能是 GET、HEAD 或 POST<br>简单请求的 HTTP 头只能是 Accept/Accept-Language/Conent-Language/Content-Type 等<br>简单请求的 Content-Type 头只能是 text/plain、multipart/form-data 或 application/x-www-form-urlencoded</p>
+<h3 id="CORS预检请求触发条件"><a href="#CORS预检请求触发条件" class="headerlink" title="CORS预检请求触发条件"></a>CORS预检请求触发条件</h3><ol>
+<li>使用了下面任一HTTP 方法：<br>PUT/DELETE/CONNECT/OPTIONS/TRACE/PATCH     </li>
+<li>人为设置了以下集合之外首部字段：<br>Accept/Accept-Language/Content-Language/Content-Type/DPR/Downlink/Save-Data/Viewport-Width/Width     </li>
+<li>Content-Type 的值不属于下列之一:<br>application/x-www-form-urlencoded、multipart/form-data、text/plain</li>
 </ol>
-<p>wordpress定制模板</p>
-<p>目前存在的问题：<br>没怎么做定制的主页<br>不晓得干嘛<br>用经常要服务器重启之后才能重新连上数据库</p>
-<p>一个大坑<br><a href="https://bbs.aliyun.com/read/269743.html" target="_blank" rel="noopener">https://bbs.aliyun.com/read/269743.html</a></p>
+<h3 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h3><p>当我们发起跨域请求时，如果是简单请求，那么我们只会发出一次请求，但是如果是复杂请求则先发出 options 请求，用于确认目标资源是否支持跨域，然后浏览器会根据服务端响应的 header 自动处理剩余的请求，如果响应支持跨域，则继续发出正常请求，如果不支持，则在控制台显示错误。</p>
+<p>由此可见，当触发预检时，跨域请求便会发送 2 次请求，既增加了请求数，也延迟了请求真正发起的时间，严重影响性能。</p>
+<p>所以，我们可以优化 Options 请求，主要有 2 种方法。</p>
+<p>转为简单请求，如用 JSONP 做跨域请求<br>对 options 请求进行缓存，服务器端设置 Access-Control-Max-Age 字段，那么当第一次请求该 URL 时会发出 OPTIONS 请求，浏览器会根据返回的 Access-Control-Max-Age 字段缓存该请求的 OPTIONS 预检请求的响应结果（具体缓存时间还取决于浏览器的支持的默认最大值，取两者最小值，一般为 10 分钟）。在缓存有效期内，该资源的请求（URL 和 header 字段都相同的情况下）不会再触发预检。</p>
 ]]></content>
+      <tags>
+        <tag>网络</tag>
+      </tags>
   </entry>
   <entry>
     <title>自我和解</title>
@@ -3733,19 +3752,6 @@ kmp算法</code></pre><p>4.逆波兰表达式<br>中缀表达式转成后缀表�
 ]]></content>
       <tags>
         <tag>随笔</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>解决图片宽高自适应需求：object-fit</title>
-    <url>/2019/07/17/%E8%A7%A3%E5%86%B3%E5%9B%BE%E7%89%87%E5%AE%BD%E9%AB%98%E8%87%AA%E9%80%82%E5%BA%94%E9%9C%80%E6%B1%82%EF%BC%9Aobject-fit/</url>
-    <content><![CDATA[<p>在日常的需求中，有这么一个场景：<br>文本中可能会穿插一些图片，但是这个图片的大小啊长宽比啊什么的 都是不确定的。<br>但我们要它美观啊，好看啊，所以要给它一个确定的大小，但同时让展示出来效果尽可能是图片的主体而不是边边角角。<br>这时候，有一个不常见的利器了 object-fit</p>
-<a id="more"></a>
-<p>mdn的官方解释是 指定可替换元素的内容应该如何适应到其使用的高度和宽度确定的框。<br>其属性值有<br>fill:被替换的内容正好填充元素的内容框。整个对象将完全填充此框。如果对象的宽高比与内容框不相匹配，那么该对象将被拉伸以适应内容框。<br>contain:被替换的内容将被缩放，以在填充元素的内容框时保持其宽高比。 整个对象在填充盒子的同时保留其长宽比，因此如果宽高比与框的宽高比不匹配，该对象将被添加“黑边”。<br>cover:被替换的内容在保持其宽高比的同时填充元素的整个内容框。如果对象的宽高比与内容框不相匹配，该对象将被剪裁以适应内容框。<br>none:被替换的内容将保持其原有的尺寸。<br>scale-down:内容的尺寸与 none 或 contain 中的一个相同，取决于它们两个之间谁得到的对象尺寸会更小一些。</p>
-<p>而我在开头提到的需求场景是可以用cover属性值来实现了~<br>css果然是博大精深啊<br>值得好好学习<br><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/object-fit" target="_blank" rel="noopener">mdn地址</a></p>
-]]></content>
-      <tags>
-        <tag>前端</tag>
-        <tag>css</tag>
       </tags>
   </entry>
   <entry>
@@ -3821,10 +3827,12 @@ kmp算法</code></pre><p>4.逆波兰表达式<br>中缀表达式转成后缀表�
       </tags>
   </entry>
   <entry>
-    <title>类似fontawesome图标库的实现</title>
-    <url>/2019/12/03/%E7%B1%BB%E4%BC%BCfontawesome%E5%9B%BE%E6%A0%87%E5%BA%93%E7%9A%84%E5%AE%9E%E7%8E%B0/</url>
-    <content><![CDATA[<p>通常一个app中，正常情况下会有大量重复使用的小图标icon 这些图标以图片的形式存在的话，虽然小，但每个图片都会有一个请求。<br>近日我司一个从阿里来的大佬给提供了另一个做前端小图标的思路。<br>类似 <a href="http://www.fontawesome.com.cn/" target="_blank" rel="noopener">fontawesome</a> </p>
-<p>自己实现类似的库，可以通过这种方法(<a href="https://zhuanlan.zhihu.com/p/22724856" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/22724856</a>)</p>
+    <title>解决图片宽高自适应需求：object-fit</title>
+    <url>/2019/07/17/%E8%A7%A3%E5%86%B3%E5%9B%BE%E7%89%87%E5%AE%BD%E9%AB%98%E8%87%AA%E9%80%82%E5%BA%94%E9%9C%80%E6%B1%82%EF%BC%9Aobject-fit/</url>
+    <content><![CDATA[<p>在日常的需求中，有这么一个场景：<br>文本中可能会穿插一些图片，但是这个图片的大小啊长宽比啊什么的 都是不确定的。<br>但我们要它美观啊，好看啊，所以要给它一个确定的大小，但同时让展示出来效果尽可能是图片的主体而不是边边角角。<br>这时候，有一个不常见的利器了 object-fit</p>
+<a id="more"></a>
+<p>mdn的官方解释是 指定可替换元素的内容应该如何适应到其使用的高度和宽度确定的框。<br>其属性值有<br>fill:被替换的内容正好填充元素的内容框。整个对象将完全填充此框。如果对象的宽高比与内容框不相匹配，那么该对象将被拉伸以适应内容框。<br>contain:被替换的内容将被缩放，以在填充元素的内容框时保持其宽高比。 整个对象在填充盒子的同时保留其长宽比，因此如果宽高比与框的宽高比不匹配，该对象将被添加“黑边”。<br>cover:被替换的内容在保持其宽高比的同时填充元素的整个内容框。如果对象的宽高比与内容框不相匹配，该对象将被剪裁以适应内容框。<br>none:被替换的内容将保持其原有的尺寸。<br>scale-down:内容的尺寸与 none 或 contain 中的一个相同，取决于它们两个之间谁得到的对象尺寸会更小一些。</p>
+<p>而我在开头提到的需求场景是可以用cover属性值来实现了~<br>css果然是博大精深啊<br>值得好好学习<br><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/object-fit" target="_blank" rel="noopener">mdn地址</a></p>
 ]]></content>
       <tags>
         <tag>前端</tag>
@@ -3909,6 +3917,17 @@ kmp算法</code></pre><p>4.逆波兰表达式<br>中缀表达式转成后缀表�
       </tags>
   </entry>
   <entry>
+    <title>重学前端系列笔记2</title>
+    <url>/2019/04/11/%E9%87%8D%E5%AD%A6%E5%89%8D%E7%AB%AF%E7%B3%BB%E5%88%97%E7%AC%94%E8%AE%B02/</url>
+    <content><![CDATA[<p>html部分</p>
+<p>语义化由于越来越多的“阅读模式”的出现，而变得更加重要。<br>emm…<br>适当的实践语义化吧。但是最主要的目的可能是为了让代码可读性高可维护性强，从这个角度来讲，命名规范似乎更加重要一点。<br>加上在企业级的应用里面，几乎并不涉及到seo,所以语义化对于seo的影响也基本上可以忽略不计了。<br>尽可能的践行语义化，或者说是更加标准和工整的结构和命名方式吧。</p>
+]]></content>
+      <tags>
+        <tag>前端</tag>
+        <tag>基础知识</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>重学前端系列笔记3</title>
     <url>/2019/04/11/%E9%87%8D%E5%AD%A6%E5%89%8D%E7%AB%AF%E7%B3%BB%E5%88%97%E7%AC%94%E8%AE%B03/</url>
     <content><![CDATA[<p>面向对象：<br>JavaScript对象的两类属性</p>
@@ -3919,49 +3938,6 @@ kmp算法</code></pre><p>4.逆波兰表达式<br>中缀表达式转成后缀表�
       <tags>
         <tag>前端</tag>
         <tag>基础知识</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>重排和重绘</title>
-    <url>/2020/07/14/%E9%87%8D%E6%8E%92%E5%92%8C%E9%87%8D%E7%BB%98/</url>
-    <content><![CDATA[<p>今天一个bug引发了我对重排和重绘的好奇<br>对这个知识点做个系统的了解和总结</p>
-<a id="more"></a>
-<p>DOM的变化引发了原生的几何属性的变化，比如宽高和位置的变化等，属于重排<br>完成重排后，要将重新构建的其他样式（如颜色）渲染到屏幕上，这个过程就是重绘<br>重排必然会引发重绘，但重绘并不一定伴随着重排</p>
-<p>重排的触发条件：</p>
-<ol>
-<li>添加或者删除可以的DOM元素</li>
-<li>元素位置改变</li>
-<li>元素本身的尺寸变化</li>
-<li>内容改变</li>
-<li>页面渲染器初始化</li>
-<li>浏览器窗口大小发生改变</li>
-</ol>
-<p>重绘和重排的开销是非常昂贵的，如果我们不停的在改变页面的布局，就会造成浏览器耗费大量的开销在进行页面的计算，这样的话，我们页面在用户使用起来，就会出现明显的卡顿。<br>现在的浏览器其实已经对重排进行了优化</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var div = document.querySelector(&apos;.div&apos;);</span><br><span class="line">div.style.width = &apos;200px&apos;;</span><br><span class="line">div.style.background = &apos;red&apos;;</span><br><span class="line">div.style.height = &apos;300px&apos;;</span><br></pre></td></tr></table></figure>
-
-<p>比较久远的浏览器，这段代码会触发页面2次重排，在分别设置宽高的时候，触发2次.<br>当代的浏览器对此进行了优化，这种思路类似于现在流行的MVVM框架使用的虚拟DOM，对改变的DOM节点进行依赖收集，确认没有改变的节点，就进行一次更新。但是浏览器针对重排的优化虽然思路和虚拟DOM接近，但是还是有本质的区别。大多数浏览器通过队列化修改并批量执行来优化重排过程。也就是说上面那段代码其实在现在的浏览器优化下，只构成一次重排。</p>
-<p>除此之外，我们也可以针对性的做一些优化</p>
-<ol>
-<li>最小化重排和重绘（把会引起重排和重绘的操作一起操作，尽量只重绘或重排一次）</li>
-<li>缓存布局信息 缓存布局信息这个概念，在《高性能JavaScript》DOM性能优化中，多次提到类似的思想.<ul>
-<li>比如我现在要得到页面ul节点下面的100个li节点，最好的办法就是第一次获取后就保存起来，减少</li>
-</ul>
-</li>
-</ol>
-]]></content>
-      <tags>
-        <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>阿德勒《人，可以做得到任何事》</title>
-    <url>/2019/08/10/%E9%98%BF%E5%BE%B7%E5%8B%92%E3%80%8A%E4%BA%BA%EF%BC%8C%E5%8F%AF%E4%BB%A5%E5%81%9A%E5%BE%97%E5%88%B0%E4%BB%BB%E4%BD%95%E4%BA%8B%E3%80%8B/</url>
-    <content><![CDATA[<p>阿德勒的这本《人，做得到任何事情》是在哪儿看到的来着。不甚记得。一直觉得自己是个很自卑的人，想要摆脱这种状态，所以积极的寻找这类书看。也不知道是不是因为最近的心绪一直不宁，太浮躁，还是不太能够理解书中的内容，有点不太能看下去，但是还是 梳理下内容吧。</p>
-<a id="more"></a>
-<p>1.生活的科学<br>2.自卑情结<br>3.优越情节<br>4.人生风格<br>5.早期记忆<br>6.态度与行动<br>7.梦与梦的解析<br>8.问题儿童及其教育<br>9.社会问题与社会适应<br>10.社会感、常识与自卑情结<br>11.爱情与婚姻<br>12.性与性的问题</p>
-]]></content>
-      <tags>
-        <tag>随笔</tag>
       </tags>
   </entry>
   <entry>
@@ -4026,6 +4002,49 @@ kmp算法</code></pre><p>4.逆波兰表达式<br>中缀表达式转成后缀表�
       </tags>
   </entry>
   <entry>
+    <title>重排和重绘</title>
+    <url>/2020/07/14/%E9%87%8D%E6%8E%92%E5%92%8C%E9%87%8D%E7%BB%98/</url>
+    <content><![CDATA[<p>今天一个bug引发了我对重排和重绘的好奇<br>对这个知识点做个系统的了解和总结</p>
+<a id="more"></a>
+<p>DOM的变化引发了原生的几何属性的变化，比如宽高和位置的变化等，属于重排<br>完成重排后，要将重新构建的其他样式（如颜色）渲染到屏幕上，这个过程就是重绘<br>重排必然会引发重绘，但重绘并不一定伴随着重排</p>
+<p>重排的触发条件：</p>
+<ol>
+<li>添加或者删除可以的DOM元素</li>
+<li>元素位置改变</li>
+<li>元素本身的尺寸变化</li>
+<li>内容改变</li>
+<li>页面渲染器初始化</li>
+<li>浏览器窗口大小发生改变</li>
+</ol>
+<p>重绘和重排的开销是非常昂贵的，如果我们不停的在改变页面的布局，就会造成浏览器耗费大量的开销在进行页面的计算，这样的话，我们页面在用户使用起来，就会出现明显的卡顿。<br>现在的浏览器其实已经对重排进行了优化</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var div = document.querySelector(&apos;.div&apos;);</span><br><span class="line">div.style.width = &apos;200px&apos;;</span><br><span class="line">div.style.background = &apos;red&apos;;</span><br><span class="line">div.style.height = &apos;300px&apos;;</span><br></pre></td></tr></table></figure>
+
+<p>比较久远的浏览器，这段代码会触发页面2次重排，在分别设置宽高的时候，触发2次.<br>当代的浏览器对此进行了优化，这种思路类似于现在流行的MVVM框架使用的虚拟DOM，对改变的DOM节点进行依赖收集，确认没有改变的节点，就进行一次更新。但是浏览器针对重排的优化虽然思路和虚拟DOM接近，但是还是有本质的区别。大多数浏览器通过队列化修改并批量执行来优化重排过程。也就是说上面那段代码其实在现在的浏览器优化下，只构成一次重排。</p>
+<p>除此之外，我们也可以针对性的做一些优化</p>
+<ol>
+<li>最小化重排和重绘（把会引起重排和重绘的操作一起操作，尽量只重绘或重排一次）</li>
+<li>缓存布局信息 缓存布局信息这个概念，在《高性能JavaScript》DOM性能优化中，多次提到类似的思想.<ul>
+<li>比如我现在要得到页面ul节点下面的100个li节点，最好的办法就是第一次获取后就保存起来，减少</li>
+</ul>
+</li>
+</ol>
+]]></content>
+      <tags>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>阿德勒《人，可以做得到任何事》</title>
+    <url>/2019/08/10/%E9%98%BF%E5%BE%B7%E5%8B%92%E3%80%8A%E4%BA%BA%EF%BC%8C%E5%8F%AF%E4%BB%A5%E5%81%9A%E5%BE%97%E5%88%B0%E4%BB%BB%E4%BD%95%E4%BA%8B%E3%80%8B/</url>
+    <content><![CDATA[<p>阿德勒的这本《人，做得到任何事情》是在哪儿看到的来着。不甚记得。一直觉得自己是个很自卑的人，想要摆脱这种状态，所以积极的寻找这类书看。也不知道是不是因为最近的心绪一直不宁，太浮躁，还是不太能够理解书中的内容，有点不太能看下去，但是还是 梳理下内容吧。</p>
+<a id="more"></a>
+<p>1.生活的科学<br>2.自卑情结<br>3.优越情节<br>4.人生风格<br>5.早期记忆<br>6.态度与行动<br>7.梦与梦的解析<br>8.问题儿童及其教育<br>9.社会问题与社会适应<br>10.社会感、常识与自卑情结<br>11.爱情与婚姻<br>12.性与性的问题</p>
+]]></content>
+      <tags>
+        <tag>随笔</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>高效能人士的七个习惯</title>
     <url>/2020/05/16/%E9%AB%98%E6%95%88%E8%83%BD%E4%BA%BA%E5%A3%AB%E7%9A%84%E4%B8%83%E4%B8%AA%E4%B9%A0%E6%83%AF/</url>
     <content><![CDATA[<p>好久之前看的 先记个提纲吧 日后若果看第二遍 倒是可以记个详细的笔记</p>
@@ -4042,17 +4061,6 @@ kmp算法</code></pre><p>4.逆波兰表达式<br>中缀表达式转成后缀表�
 ]]></content>
       <tags>
         <tag>随笔</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>重学前端系列笔记2</title>
-    <url>/2019/04/11/%E9%87%8D%E5%AD%A6%E5%89%8D%E7%AB%AF%E7%B3%BB%E5%88%97%E7%AC%94%E8%AE%B02/</url>
-    <content><![CDATA[<p>html部分</p>
-<p>语义化由于越来越多的“阅读模式”的出现，而变得更加重要。<br>emm…<br>适当的实践语义化吧。但是最主要的目的可能是为了让代码可读性高可维护性强，从这个角度来讲，命名规范似乎更加重要一点。<br>加上在企业级的应用里面，几乎并不涉及到seo,所以语义化对于seo的影响也基本上可以忽略不计了。<br>尽可能的践行语义化，或者说是更加标准和工整的结构和命名方式吧。</p>
-]]></content>
-      <tags>
-        <tag>前端</tag>
-        <tag>基础知识</tag>
       </tags>
   </entry>
 </search>
