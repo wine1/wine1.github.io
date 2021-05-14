@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wine1.github.io/"/>
-  <updated>2021-04-25T12:11:19.177Z</updated>
+  <updated>2021-05-14T11:54:24.570Z</updated>
   <id>https://wine1.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>小程序同层渲染那些坑</title>
+    <link href="https://wine1.github.io/2021/05/14/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%90%8C%E5%B1%82%E6%B8%B2%E6%9F%93%E9%82%A3%E4%BA%9B%E5%9D%91/"/>
+    <id>https://wine1.github.io/2021/05/14/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%90%8C%E5%B1%82%E6%B8%B2%E6%9F%93%E9%82%A3%E4%BA%9B%E5%9D%91/</id>
+    <published>2021-05-14T09:54:07.000Z</published>
+    <updated>2021-05-14T11:54:24.570Z</updated>
+    
+    <content type="html"><![CDATA[<ol><li><p><code>&lt;textarea&gt; &lt;input&gt;</code> 组件的placeholder穿透问题<br>textarea input 上方有元素时 组件输入的内容显示在所有布局的最上面</p><a id="more"></a><p> 解决方案</p><ul><li>input textarea上方元素弹起时 将输入框的内容暂时替换为’’  </li><li>将整个输入框隐藏</li><li>用view标签模拟<code>&lt;textarea&gt;</code>组件，来避免<code>&lt;textarea&gt;</code>组件的placeholder穿透问题</li></ul></li><li><p>live-player组件「同层渲染」失败问题</p></li><li><p>canvas组件「同层渲染」<br>微信小程序从基础库1.0.0开始支持 canvas，2.9.0 起支持一套新 Canvas 2D 接口（需指定 type 属性），同时支持同层渲染，原有接口不再维护<br>canvas的层级最高 会穿透</p></li><li><p>原生组件」无法在 scroll-view、swiper、picker-view、movable-view 中使用，因为如果开发者在可滚动的 DOM 区域，插入「原生组件」作为其子节点，由于「原生组件」是直接插入到 webview 外部的层级，与 DOM 之间没有关联，所以不会跟随移动也不会被裁减。</p></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      &lt;ol&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;&amp;lt;textarea&amp;gt; &amp;lt;input&amp;gt;&lt;/code&gt; 组件的placeholder穿透问题&lt;br&gt;textarea input 上方有元素时 组件输入的内容显示在所有布局的最上面&lt;/p&gt;&lt;/li&gt;&lt;/ol&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="前端" scheme="https://wine1.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="小程序" scheme="https://wine1.github.io/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+  </entry>
   
   <entry>
     <title>发布一个npm包</title>
@@ -230,7 +254,7 @@
     <link href="https://wine1.github.io/2020/08/12/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%90%8C%E5%B1%82%E6%B8%B2%E6%9F%93/"/>
     <id>https://wine1.github.io/2020/08/12/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%90%8C%E5%B1%82%E6%B8%B2%E6%9F%93/</id>
     <published>2020-08-12T15:33:13.000Z</published>
-    <updated>2020-08-12T15:33:48.000Z</updated>
+    <updated>2021-05-14T09:54:41.192Z</updated>
     
     <content type="html"><![CDATA[<h2 id="同层渲染"><a href="#同层渲染" class="headerlink" title="同层渲染"></a>同层渲染</h2><p>小程序的内容大多是渲染在 WebView 上的，如果把 WebView 看成单独的一层，那么由系统自带的这些原生组件则位于另一个更高的层级（如 canvas、video）。两个层级是完全独立的，因此无法简单地通过使用 z-index 控制原生组件和非原生组件之间的相对层级。想要在原生组件之上只能用 cover-view 和 cover-image 来实现。但 cover-view 和 cover-image 支持的 css 样式是在很有限，而且经过实践来看，cover-view 在安卓部分机器上性能真的很差。<br><a href="https://developers.weixin.qq.com/community/develop/doc/000aa28d030f60a3c4183eecb5d801" target="_blank" rel="noopener">官方社区说明</a></p><p>然并卵 没有用</p><p>实时音视频小程序开发ios手机无法正常在小程序里视频，安卓手机就可以<br>解决方案： 在 app.json 下 window 下配置一下 “renderingMode”: “seperated”强制关掉同层<br>关掉同层渲染 “renderingMode”: “seperated”,</p>]]></content>
     
@@ -244,6 +268,10 @@
     </summary>
     
     
+    
+      <category term="前端" scheme="https://wine1.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="小程序" scheme="https://wine1.github.io/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
     
   </entry>
   
@@ -265,9 +293,9 @@
     
     
     
-      <category term="前端" scheme="https://wine1.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
-    
       <category term="css" scheme="https://wine1.github.io/tags/css/"/>
+    
+      <category term="前端" scheme="https://wine1.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
@@ -320,9 +348,9 @@
     
     
     
-      <category term="前端" scheme="https://wine1.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
-    
       <category term="css" scheme="https://wine1.github.io/tags/css/"/>
+    
+      <category term="前端" scheme="https://wine1.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
@@ -343,9 +371,9 @@
     
     
     
-      <category term="前端" scheme="https://wine1.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
-    
       <category term="css" scheme="https://wine1.github.io/tags/css/"/>
+    
+      <category term="前端" scheme="https://wine1.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
@@ -433,35 +461,6 @@
     <summary type="html">
     
       &lt;h2 id=&quot;小程序加腾讯云实时音视频&quot;&gt;&lt;a href=&quot;#小程序加腾讯云实时音视频&quot; class=&quot;headerlink&quot; title=&quot;小程序加腾讯云实时音视频&quot;&gt;&lt;/a&gt;小程序加腾讯云实时音视频&lt;/h2&gt;
-    
-    </summary>
-    
-    
-    
-      <category term="前端" scheme="https://wine1.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>js遍历</title>
-    <link href="https://wine1.github.io/2020/06/12/js%E9%81%8D%E5%8E%86/"/>
-    <id>https://wine1.github.io/2020/06/12/js%E9%81%8D%E5%8E%86/</id>
-    <published>2020-06-12T14:40:45.000Z</published>
-    <updated>2020-06-12T14:42:06.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>foreach和map的区别</p><ol><li><code>foreach</code><br>foreach没有返回值</li></ol><ol start="2"><li><code>map</code><br>映射 跟foreach用法类似 返回一个新数组</li></ol>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;foreach和map的区别&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;code&gt;foreach&lt;/code&gt;&lt;br&gt;foreach没有返回值&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ol start=&quot;2&quot;&gt;
-&lt;li&gt;&lt;code&gt;map&lt;/code&gt;&lt;br&gt;映射 跟foreach用法类似 返回一个新数
-      
     
     </summary>
     
