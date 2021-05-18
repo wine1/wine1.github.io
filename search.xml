@@ -69,30 +69,12 @@
       </tags>
   </entry>
   <entry>
-    <title>CSS 多行省略失效</title>
-    <url>/2019/01/31/CSS-%E5%A4%9A%E8%A1%8C%E7%9C%81%E7%95%A5%E5%A4%B1%E6%95%88/</url>
-    <content><![CDATA[<p>CSS 多行省略失效 (-webkit-box-orient 失效)<br><a href="https://blog.csdn.net/Candy_home/article/details/79646655" target="_blank" rel="noopener">神奇的这个问题目前最好的解决方案</a></p>
-]]></content>
-      <tags>
-        <tag>css</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>async和await</title>
-    <url>/2018/12/11/async%E5%92%8Cawait/</url>
-    <content><![CDATA[<p>async表示函数里有异步操作，await表示紧跟在后面的表达式需要等待结果。</p>
-<a id="more"></a>
-<p>async 表示这是一个async函数，await只能用在这个函数里面。<br>await 表示在这里等待promise返回结果了，再继续执行。<br>await 后面跟着的应该是一个promise对象</p>
-<p>await等待的虽然是promise对象，但不必写.then(..)，直接可以得到返回值。</p>
-<p>捕捉错误<br>既然.then(..)不用写了，那么.catch(..)也不用写，可以直接用标准的try catch语法捕捉错误。<br>await 只能出现在 async 函数中。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">async function testAsync() &#123;</span><br><span class="line">    return &quot;hello async&quot;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">const result = testAsync();</span><br><span class="line">console.log(result);</span><br></pre></td></tr></table></figure>
-
-<p>返回值是一个 promise对象</p>
-<p>引用别人一段话<br><strong>联想一下 Promise 的特点——无等待，所以在没有 await 的情况下执行 async 函数，它会立即执行，返回一个 Promise 对象，并且，绝不会阻塞后面的语句。这和普通返回 Promise 对象的函数并无二致。</strong><br><a href="https://segmentfault.com/a/1190000007535316?utm_source=tag-newest" target="_blank" rel="noopener">原文链接</a></p>
+    <title>Object.defineProperty</title>
+    <url>/2019/07/09/Object-defineProperty/</url>
+    <content><![CDATA[<p>Object.defineProperty(object, propertyname, descriptor)<br>为对象定义属性的函数</p>
 ]]></content>
       <tags>
         <tag>前端</tag>
-        <tag>ES6</tag>
       </tags>
   </entry>
   <entry>
@@ -158,6 +140,36 @@
       </tags>
   </entry>
   <entry>
+    <title>background-clip</title>
+    <url>/2019/07/25/background-clip/</url>
+    <content><![CDATA[<p>今日份的需求出现了一个bug<br>琢磨了好一会解决了，记录一下</p>
+<a id="more"></a>
+<p>需求是这样的<br><img src="/2019/07/25/background-clip/tu2.png" alt="tu1"><br>别的浏览器都显示的好正常的,但是在火狐中，显示的效果就是这样的了<br><img src="/2019/07/25/background-clip/tu1.png" alt="tu1"><br>经过多次尝试，发现去掉左边的背景色，边框就能正常显示出来了<br>但是需求表示左边这块就是要有不一样的颜色，怎么办呢<br>面向浏览器编程的我们打开了谷歌 搜索结果中出现了这么一个属性<br><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-clip" target="_blank" rel="noopener">background-clip</a><br>嗯，根据实际情况酌情使用</p>
+]]></content>
+      <tags>
+        <tag>前端</tag>
+        <tag>css</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>async和await</title>
+    <url>/2018/12/11/async%E5%92%8Cawait/</url>
+    <content><![CDATA[<p>async表示函数里有异步操作，await表示紧跟在后面的表达式需要等待结果。</p>
+<a id="more"></a>
+<p>async 表示这是一个async函数，await只能用在这个函数里面。<br>await 表示在这里等待promise返回结果了，再继续执行。<br>await 后面跟着的应该是一个promise对象</p>
+<p>await等待的虽然是promise对象，但不必写.then(..)，直接可以得到返回值。</p>
+<p>捕捉错误<br>既然.then(..)不用写了，那么.catch(..)也不用写，可以直接用标准的try catch语法捕捉错误。<br>await 只能出现在 async 函数中。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">async function testAsync() &#123;</span><br><span class="line">    return &quot;hello async&quot;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">const result = testAsync();</span><br><span class="line">console.log(result);</span><br></pre></td></tr></table></figure>
+
+<p>返回值是一个 promise对象</p>
+<p>引用别人一段话<br><strong>联想一下 Promise 的特点——无等待，所以在没有 await 的情况下执行 async 函数，它会立即执行，返回一个 Promise 对象，并且，绝不会阻塞后面的语句。这和普通返回 Promise 对象的函数并无二致。</strong><br><a href="https://segmentfault.com/a/1190000007535316?utm_source=tag-newest" target="_blank" rel="noopener">原文链接</a></p>
+]]></content>
+      <tags>
+        <tag>前端</tag>
+        <tag>ES6</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>css3实现加载图标</title>
     <url>/2020/06/12/css3%E5%AE%9E%E7%8E%B0%E5%8A%A0%E8%BD%BD%E5%9B%BE%E6%A0%87/</url>
     <content><![CDATA[<p>纯css3实现loading效果</p>
@@ -169,10 +181,28 @@
       </tags>
   </entry>
   <entry>
-    <title>Object.defineProperty</title>
-    <url>/2019/07/09/Object-defineProperty/</url>
-    <content><![CDATA[<p>Object.defineProperty(object, propertyname, descriptor)<br>为对象定义属性的函数</p>
+    <title>CSS 多行省略失效</title>
+    <url>/2019/01/31/CSS-%E5%A4%9A%E8%A1%8C%E7%9C%81%E7%95%A5%E5%A4%B1%E6%95%88/</url>
+    <content><![CDATA[<p>CSS 多行省略失效 (-webkit-box-orient 失效)<br><a href="https://blog.csdn.net/Candy_home/article/details/79646655" target="_blank" rel="noopener">神奇的这个问题目前最好的解决方案</a></p>
 ]]></content>
+      <tags>
+        <tag>css</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>WebSockets</title>
+    <url>/2017/11/16/WebSockets/</url>
+    <content><![CDATA[<p>实现了用http不容易实现的服务器端与客户端之间进行的非http的通信机制,建立一个非http的双向连接（全双工通信），这个连接是实时的永久的，除非被显式关闭。这意味着当服务器想向客户端发送消息时，可以立即将消息推送到客户端的浏览器，无需重新建立连接。<br>比如用来实现聊天室，实时的接收传递消息。</p>
+<a id="more"></a>
+<p>使用WebSockets API(算了api还是要用的时候查吧 太容易忘记了)</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var ws = new WebSocket(wss://);</span><br><span class="line">ws.onopen() = function(e) &#123;</span><br><span class="line">	console.log(&quot;连接建立，可以开始发消息啦&quot;);</span><br><span class="line">	ws.send();</span><br><span class="line">&#125;;</span><br><span class="line">ws.onmessage() = function(e) &#123;</span><br><span class="line"></span><br><span class="line">	ws.onclose();</span><br><span class="line">&#125;</span><br><span class="line">ws.onclose = function(e) &#123;</span><br><span class="line">	console.log(&quot;大家注意了，连接关了啊&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>readyState的属性值获取WebSocket对象的状态<br>connecting 0 表示正在连接<br>open 1 表示已经建立连接<br>closing 2 表示正在关闭连接<br>closed 3 表示连接已经关闭</p>
+<p>WebSocket和http协议有区别也有联系。首先http协议中请求和响应是成对存在严格对应的，在http1.1中的keep-alive实现可将多个http请求合并成一个，但是它和WebSocket还是不一样，它依然是请求和响应一一对应的。WebSocket是一个新的协议，借助于http协议完成握手。<br>WebSocket的连接请求跟http请求相似，但是多出了这么两行<code>upgrade:wesocket connection:upgrade</code>这两行告诉服务器，我是一个WebSocket协议。</p>
+<pre><code>传统的技术当然也可以实现信息的即时发送和获取，依赖于ajax轮询和long poll。
+轮询，顾名思义就是隔一会查看一下是否有新的消息,需要服务器有很快的处理速度。
+long poll 就是相当于发起请求后没收到消息就赖着不走了这么个样子。需要有很高的并发。
+当然以上两种对我来说都是停留在了理论层面，我并没有真正去实践过。有错误的地方，日后改正。</code></pre>]]></content>
       <tags>
         <tag>前端</tag>
       </tags>
@@ -203,18 +233,20 @@
       </tags>
   </entry>
   <entry>
-    <title>css性能优化</title>
-    <url>/2018/11/06/css%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/</url>
-    <content><![CDATA[<p>css经常会要做一些调整，最后几番改动下来乱的自己都看不明白，给人感觉很糟糕，因此一开始就有一个标准并严格按照标准来写就真的非常重要了。特别是在比较忙的时候，自己看自己的代码都会觉得太乱了 很遭罪。<br>因此就需要做出一些优化，高标准严要求哈哈</p>
+    <title>document.body.scrollTop值为0的解决方法</title>
+    <url>/2019/11/25/document-body-scrollTop%E5%80%BC%E4%B8%BA0%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</url>
+    <content><![CDATA[<p><a href="https://blog.csdn.net/woyaolanjingling/article/details/1934449" target="_blank" rel="noopener">网传解决方法，不再赘述</a></p>
+]]></content>
+      <tags>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>css实现三角形</title>
+    <url>/2019/07/16/css%E5%AE%9E%E7%8E%B0%E4%B8%89%E8%A7%92%E5%BD%A2/</url>
+    <content><![CDATA[<p>在日常开发中，经常有一些箭头啊 边边角角的地方会用到三角形，但是又懒得切图啥的，其实用css自己画也是个不错的选择，这里，来探寻一下其原理~</p>
 <a id="more"></a>
-<p>以下内容整理自稀土掘金中的<a href="https://juejin.im/post/5b6133a351882519d346853f" target="_blank" rel="noopener">奇舞周刊</a><br>1.内联首屏关键css（视情况而定）<br>适当的将渲染首屏内容所需的关键CSS内联到HTML中<br>2.异步加载css<br>3.文件压缩<br>4.去除无用CSS<br>虽然文件压缩能够降低文件大小。但CSS文件压缩通常只会去除无用的空格，这样就限制了CSS文件的压缩比例。那是否还有其他手段来精简CSS呢？答案显然是肯定的，如果压缩后的文件仍然超出了预期的大小，我们可以试着找到并删除代码中无用的CSS。</p>
-<p>一般情况下，会存在这两种无用的CSS代码：一种是不同元素或者其他情况下的重复代码，一种是整个页面内没有生效的CSS代码。对于前者，在编写的代码时候，我们应该尽可能地提取公共类，减少重复。对于后者，在不同开发者进行代码维护的过程中，总会产生不再使用的CSS的代码，当然一个人编写时也有可能出现这一问题。而这些无用的CSS代码不仅会增加浏览器的下载量，还会增加浏览器的解析时间，这对性能来说是很大的消耗。所以我们需要找到并去除这些无用代码。</p>
-<p>5.有选择的使用选择器</p>
-<p>保持简单，不要使用嵌套过多过于复杂的选择器。<br>通配符和属性选择器效率最低，需要匹配的元素最多，尽量避免使用。<br>不要使用类选择器和ID选择器修饰元素标签，如h3#markdown-content，这样多此一举，还会降低效率。<br>不要为了追求速度而放弃可读性与可维护性。<br><a href="http://www.w3cplus.com/css/mindbemding-getting-your-head-round-bem-syntax.html" target="_blank" rel="noopener">BEM命名法</a></p>
-<p>这个命名方式能使结构更加清晰，但是我觉得写出来看着太反人类了，可以借鉴这个思想，但是目前不会用这个方式。</p>
-<p>5.减少使用昂贵的属性</p>
-<p>所有需要浏览器进行操作或计算的属性相对而言都需要花费更大的代价</p>
-<p>6.优化重排和重绘</p>
+<p>css实现三角形的底层原理其实就是利用了盒模型的边框<br><img src="/2019/07/16/css实现三角形/tu1.png" alt="tu"><br>如图所示 实质上在块级元素的长宽均为0的情况下，块级元素的四条边框就组成了一个完整的矩形，在此基础上，我们需要什么样的三角形，调整相应的边框颜色为透明即可。</p>
 ]]></content>
       <tags>
         <tag>前端</tag>
@@ -222,19 +254,12 @@
       </tags>
   </entry>
   <entry>
-    <title>WebSockets</title>
-    <url>/2017/11/16/WebSockets/</url>
-    <content><![CDATA[<p>实现了用http不容易实现的服务器端与客户端之间进行的非http的通信机制,建立一个非http的双向连接（全双工通信），这个连接是实时的永久的，除非被显式关闭。这意味着当服务器想向客户端发送消息时，可以立即将消息推送到客户端的浏览器，无需重新建立连接。<br>比如用来实现聊天室，实时的接收传递消息。</p>
+    <title>echarts在rn中设置颜色不生效解决方案</title>
+    <url>/2020/05/06/echarts%E5%9C%A8rn%E4%B8%AD%E8%AE%BE%E7%BD%AE%E9%A2%9C%E8%89%B2%E4%B8%8D%E7%94%9F%E6%95%88%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</url>
+    <content><![CDATA[<p>echarts在rn中设置颜色不生效解决方案<br>在rn中的用法跟h5中有点不一样 直接照搬过来会出很多问题<br>费了九牛二虎之力 实践摸索出来的</p>
 <a id="more"></a>
-<p>使用WebSockets API(算了api还是要用的时候查吧 太容易忘记了)</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var ws = new WebSocket(wss://);</span><br><span class="line">ws.onopen() = function(e) &#123;</span><br><span class="line">	console.log(&quot;连接建立，可以开始发消息啦&quot;);</span><br><span class="line">	ws.send();</span><br><span class="line">&#125;;</span><br><span class="line">ws.onmessage() = function(e) &#123;</span><br><span class="line"></span><br><span class="line">	ws.onclose();</span><br><span class="line">&#125;</span><br><span class="line">ws.onclose = function(e) &#123;</span><br><span class="line">	console.log(&quot;大家注意了，连接关了啊&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>readyState的属性值获取WebSocket对象的状态<br>connecting 0 表示正在连接<br>open 1 表示已经建立连接<br>closing 2 表示正在关闭连接<br>closed 3 表示连接已经关闭</p>
-<p>WebSocket和http协议有区别也有联系。首先http协议中请求和响应是成对存在严格对应的，在http1.1中的keep-alive实现可将多个http请求合并成一个，但是它和WebSocket还是不一样，它依然是请求和响应一一对应的。WebSocket是一个新的协议，借助于http协议完成握手。<br>WebSocket的连接请求跟http请求相似，但是多出了这么两行<code>upgrade:wesocket connection:upgrade</code>这两行告诉服务器，我是一个WebSocket协议。</p>
-<pre><code>传统的技术当然也可以实现信息的即时发送和获取，依赖于ajax轮询和long poll。
-轮询，顾名思义就是隔一会查看一下是否有新的消息,需要服务器有很快的处理速度。
-long poll 就是相当于发起请求后没收到消息就赖着不走了这么个样子。需要有很高的并发。
-当然以上两种对我来说都是停留在了理论层面，我并没有真正去实践过。有错误的地方，日后改正。</code></pre>]]></content>
+<p><img src="/2020/05/06/echarts在rn中设置颜色不生效解决方案/tu1.png" alt="tu1"></p>
+]]></content>
       <tags>
         <tag>前端</tag>
       </tags>
@@ -276,80 +301,22 @@ long poll 就是相当于发起请求后没收到消息就赖着不走了这么�
       </tags>
   </entry>
   <entry>
-    <title>css实现三角形</title>
-    <url>/2019/07/16/css%E5%AE%9E%E7%8E%B0%E4%B8%89%E8%A7%92%E5%BD%A2/</url>
-    <content><![CDATA[<p>在日常开发中，经常有一些箭头啊 边边角角的地方会用到三角形，但是又懒得切图啥的，其实用css自己画也是个不错的选择，这里，来探寻一下其原理~</p>
+    <title>css性能优化</title>
+    <url>/2018/11/06/css%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/</url>
+    <content><![CDATA[<p>css经常会要做一些调整，最后几番改动下来乱的自己都看不明白，给人感觉很糟糕，因此一开始就有一个标准并严格按照标准来写就真的非常重要了。特别是在比较忙的时候，自己看自己的代码都会觉得太乱了 很遭罪。<br>因此就需要做出一些优化，高标准严要求哈哈</p>
 <a id="more"></a>
-<p>css实现三角形的底层原理其实就是利用了盒模型的边框<br><img src="/2019/07/16/css实现三角形/tu1.png" alt="tu"><br>如图所示 实质上在块级元素的长宽均为0的情况下，块级元素的四条边框就组成了一个完整的矩形，在此基础上，我们需要什么样的三角形，调整相应的边框颜色为透明即可。</p>
+<p>以下内容整理自稀土掘金中的<a href="https://juejin.im/post/5b6133a351882519d346853f" target="_blank" rel="noopener">奇舞周刊</a><br>1.内联首屏关键css（视情况而定）<br>适当的将渲染首屏内容所需的关键CSS内联到HTML中<br>2.异步加载css<br>3.文件压缩<br>4.去除无用CSS<br>虽然文件压缩能够降低文件大小。但CSS文件压缩通常只会去除无用的空格，这样就限制了CSS文件的压缩比例。那是否还有其他手段来精简CSS呢？答案显然是肯定的，如果压缩后的文件仍然超出了预期的大小，我们可以试着找到并删除代码中无用的CSS。</p>
+<p>一般情况下，会存在这两种无用的CSS代码：一种是不同元素或者其他情况下的重复代码，一种是整个页面内没有生效的CSS代码。对于前者，在编写的代码时候，我们应该尽可能地提取公共类，减少重复。对于后者，在不同开发者进行代码维护的过程中，总会产生不再使用的CSS的代码，当然一个人编写时也有可能出现这一问题。而这些无用的CSS代码不仅会增加浏览器的下载量，还会增加浏览器的解析时间，这对性能来说是很大的消耗。所以我们需要找到并去除这些无用代码。</p>
+<p>5.有选择的使用选择器</p>
+<p>保持简单，不要使用嵌套过多过于复杂的选择器。<br>通配符和属性选择器效率最低，需要匹配的元素最多，尽量避免使用。<br>不要使用类选择器和ID选择器修饰元素标签，如h3#markdown-content，这样多此一举，还会降低效率。<br>不要为了追求速度而放弃可读性与可维护性。<br><a href="http://www.w3cplus.com/css/mindbemding-getting-your-head-round-bem-syntax.html" target="_blank" rel="noopener">BEM命名法</a></p>
+<p>这个命名方式能使结构更加清晰，但是我觉得写出来看着太反人类了，可以借鉴这个思想，但是目前不会用这个方式。</p>
+<p>5.减少使用昂贵的属性</p>
+<p>所有需要浏览器进行操作或计算的属性相对而言都需要花费更大的代价</p>
+<p>6.优化重排和重绘</p>
 ]]></content>
       <tags>
         <tag>前端</tag>
         <tag>css</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>document.body.scrollTop值为0的解决方法</title>
-    <url>/2019/11/25/document-body-scrollTop%E5%80%BC%E4%B8%BA0%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</url>
-    <content><![CDATA[<p><a href="https://blog.csdn.net/woyaolanjingling/article/details/1934449" target="_blank" rel="noopener">网传解决方法，不再赘述</a></p>
-]]></content>
-      <tags>
-        <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>background-clip</title>
-    <url>/2019/07/25/background-clip/</url>
-    <content><![CDATA[<p>今日份的需求出现了一个bug<br>琢磨了好一会解决了，记录一下</p>
-<a id="more"></a>
-<p>需求是这样的<br><img src="/2019/07/25/background-clip/tu2.png" alt="tu1"><br>别的浏览器都显示的好正常的,但是在火狐中，显示的效果就是这样的了<br><img src="/2019/07/25/background-clip/tu1.png" alt="tu1"><br>经过多次尝试，发现去掉左边的背景色，边框就能正常显示出来了<br>但是需求表示左边这块就是要有不一样的颜色，怎么办呢<br>面向浏览器编程的我们打开了谷歌 搜索结果中出现了这么一个属性<br><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-clip" target="_blank" rel="noopener">background-clip</a><br>嗯，根据实际情况酌情使用</p>
-]]></content>
-      <tags>
-        <tag>前端</tag>
-        <tag>css</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>echarts在rn中设置颜色不生效解决方案</title>
-    <url>/2020/05/06/echarts%E5%9C%A8rn%E4%B8%AD%E8%AE%BE%E7%BD%AE%E9%A2%9C%E8%89%B2%E4%B8%8D%E7%94%9F%E6%95%88%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</url>
-    <content><![CDATA[<p>echarts在rn中设置颜色不生效解决方案<br>在rn中的用法跟h5中有点不一样 直接照搬过来会出很多问题<br>费了九牛二虎之力 实践摸索出来的</p>
-<a id="more"></a>
-<p><img src="/2020/05/06/echarts在rn中设置颜色不生效解决方案/tu1.png" alt="tu1"></p>
-]]></content>
-      <tags>
-        <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>es6-新特性总结</title>
-    <url>/2020/05/20/es6-%E6%96%B0%E7%89%B9%E6%80%A7%E6%80%BB%E7%BB%93/</url>
-    <content><![CDATA[<p>es6常用新特性总结</p>
-<a id="more"></a>
-<h2 id="es6新特性"><a href="#es6新特性" class="headerlink" title="es6新特性"></a>es6新特性</h2><ol>
-<li>object.assign(source,target) 参数必须是对象 否则会报错 <ul>
-<li>用来将<code>source</code>对象中的所有<code>可枚举属性</code>赋值到目标对象<code>target</code>中</li>
-</ul>
-</li>
-<li>箭头函数<ul>
-<li>箭头函数体内的this对象，就是定义时所在的对象，而不是使用时所在的对象，箭头函数中没有自己的this的，而箭头函数会默认使用父级的this。</li>
-<li>不管在什么情况下,箭头函数的this跟外层function的this一致，外层function的this指向谁，箭头函数的this就指向谁，如果外层不是function则指向window。</li>
-<li>适合使用箭头函数的场景：使用箭头函数对this指向进行干预</li>
-<li>不适合的场景：<ul>
-<li>构造函数的原型方法中（构造函数的原型方法需要通过this获得实例）</li>
-<li>需要获得arguments时（箭头函数中没有arguments）</li>
-<li>使用动态回调</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><strong>proxy代理</strong><ul>
-<li>proxy用于修改某些操作的默认行为</li>
-</ul>
-</li>
-</ol>
-<p><a href="https://www.jianshu.com/p/ac1787f6c50f" target="_blank" rel="noopener">ES6中常用的10个新特性讲解</a></p>
-]]></content>
-      <tags>
-        <tag>前端</tag>
       </tags>
   </entry>
   <entry>
@@ -440,18 +407,6 @@ long poll 就是相当于发起请求后没收到消息就赖着不走了这么�
       </tags>
   </entry>
   <entry>
-    <title>get和post方法</title>
-    <url>/2020/05/16/get%E5%92%8Cpost%E6%96%B9%E6%B3%95/</url>
-    <content><![CDATA[<p>http中的get和post方法</p>
-<a id="more"></a>
-<p>get获取的数据可以被缓存<br>get传输的数据长度短<br>get是明文传输，参数在url中，相对来说安全性不够</p>
-<p><a href="https://www.cnblogs.com/cwzqianduan/p/8675356.html" target="_blank" rel="noopener">关于在axios中 get和post 以及params和data的区别</a><br>详情看官网</p>
-]]></content>
-      <tags>
-        <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>fetch</title>
     <url>/2019/07/23/fetch/</url>
     <content><![CDATA[<p>最近在写的一个项目用到了fetch,本着边写边学的原则，终于到了我要开始学习fetch的时候了。</p>
@@ -518,6 +473,18 @@ long poll 就是相当于发起请求后没收到消息就赖着不走了这么�
       </tags>
   </entry>
   <entry>
+    <title>get和post方法</title>
+    <url>/2020/05/16/get%E5%92%8Cpost%E6%96%B9%E6%B3%95/</url>
+    <content><![CDATA[<p>http中的get和post方法</p>
+<a id="more"></a>
+<p>get获取的数据可以被缓存<br>get传输的数据长度短<br>get是明文传输，参数在url中，相对来说安全性不够</p>
+<p><a href="https://www.cnblogs.com/cwzqianduan/p/8675356.html" target="_blank" rel="noopener">关于在axios中 get和post 以及params和data的区别</a><br>详情看官网</p>
+]]></content>
+      <tags>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>git常用操作</title>
     <url>/2018/11/06/git%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/</url>
     <content><![CDATA[<p>git的基本操作 整理自<a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="noopener">廖雪峰的官方网站</a></p>
@@ -557,6 +524,35 @@ long poll 就是相当于发起请求后没收到消息就赖着不走了这么�
       </tags>
   </entry>
   <entry>
+    <title>iframe</title>
+    <url>/2017/12/06/iframe/</url>
+    <content><![CDATA[<p>哒哒哒~<br>我要来了解一下这个不知道是什么东西的东西了<strong>iframe</strong></p>
+<a id="more"></a>
+<p>iframe 元素会创建包含另外一个文档的内联框架（即行内框架）</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;iframe width=420 height=330 frameborder=0 scrolling=auto src=URL&gt;&lt;/iframe&gt;</span><br><span class="line">scrolling表示是否显示页面滚动条，可选的参数为auto、yes、no，如果省略这个参数，则默认为auto。</span><br><span class="line"></span><br><span class="line">注意：URL建议用绝对路径</span><br></pre></td></tr></table></figure>
+
+<p>文档没看明白，可能是没有怎么应用的原因，也可能是我现在好困精神没法集中。</p>
+<p>知乎上大佬关于iframe的讨论<a href="https://www.zhihu.com/question/20653055" target="_blank" rel="noopener">https://www.zhihu.com/question/20653055</a><br>先这样吧</p>
+]]></content>
+      <tags>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>gulp入门</title>
+    <url>/2018/04/01/gulp%E5%85%A5%E9%97%A8/</url>
+    <content><![CDATA[<p><a href="https://www.gulpjs.com.cn/docs/" target="_blank" rel="noopener">gulp.js中文网</a><br>gulp 基于流的自动构建工具,减少io,提高性能</p>
+<a id="more"></a>
+<ol>
+<li>browserify: 一个前端依赖的工具，可以实现js的模块化加载，主要通过commonjs来实现，</li>
+<li></li>
+</ol>
+]]></content>
+      <tags>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>grid布局</title>
     <url>/2020/08/12/grid%E5%B8%83%E5%B1%80/</url>
     <content><![CDATA[<h2 id="grid布局"><a href="#grid布局" class="headerlink" title="grid布局"></a>grid布局</h2><p>gap属性能解决flex多行布局中最后一行布局不满时位置偏移的问题</p>
@@ -577,14 +573,33 @@ long poll 就是相当于发起请求后没收到消息就赖着不走了这么�
       </tags>
   </entry>
   <entry>
-    <title>gulp入门</title>
-    <url>/2018/04/01/gulp%E5%85%A5%E9%97%A8/</url>
-    <content><![CDATA[<p><a href="https://www.gulpjs.com.cn/docs/" target="_blank" rel="noopener">gulp.js中文网</a><br>gulp 基于流的自动构建工具,减少io,提高性能</p>
+    <title>es6-新特性总结</title>
+    <url>/2020/05/20/es6-%E6%96%B0%E7%89%B9%E6%80%A7%E6%80%BB%E7%BB%93/</url>
+    <content><![CDATA[<p>es6常用新特性总结</p>
 <a id="more"></a>
-<ol>
-<li>browserify: 一个前端依赖的工具，可以实现js的模块化加载，主要通过commonjs来实现，</li>
-<li></li>
+<h2 id="es6新特性"><a href="#es6新特性" class="headerlink" title="es6新特性"></a>es6新特性</h2><ol>
+<li>object.assign(source,target) 参数必须是对象 否则会报错 <ul>
+<li>用来将<code>source</code>对象中的所有<code>可枚举属性</code>赋值到目标对象<code>target</code>中</li>
+</ul>
+</li>
+<li>箭头函数<ul>
+<li>箭头函数体内的this对象，就是定义时所在的对象，而不是使用时所在的对象，箭头函数中没有自己的this的，而箭头函数会默认使用父级的this。</li>
+<li>不管在什么情况下,箭头函数的this跟外层function的this一致，外层function的this指向谁，箭头函数的this就指向谁，如果外层不是function则指向window。</li>
+<li>适合使用箭头函数的场景：使用箭头函数对this指向进行干预</li>
+<li>不适合的场景：<ul>
+<li>构造函数的原型方法中（构造函数的原型方法需要通过this获得实例）</li>
+<li>需要获得arguments时（箭头函数中没有arguments）</li>
+<li>使用动态回调</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>proxy代理</strong><ul>
+<li>proxy用于修改某些操作的默认行为</li>
+</ul>
+</li>
 </ol>
+<p><a href="https://www.jianshu.com/p/ac1787f6c50f" target="_blank" rel="noopener">ES6中常用的10个新特性讲解</a></p>
 ]]></content>
       <tags>
         <tag>前端</tag>
@@ -862,19 +877,9 @@ email、url、number、range、Date（功能强大，但是很多浏览器不支
       </tags>
   </entry>
   <entry>
-    <title>iframe</title>
-    <url>/2017/12/06/iframe/</url>
-    <content><![CDATA[<p>哒哒哒~<br>我要来了解一下这个不知道是什么东西的东西了<strong>iframe</strong></p>
-<a id="more"></a>
-<p>iframe 元素会创建包含另外一个文档的内联框架（即行内框架）</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;iframe width=420 height=330 frameborder=0 scrolling=auto src=URL&gt;&lt;/iframe&gt;</span><br><span class="line">scrolling表示是否显示页面滚动条，可选的参数为auto、yes、no，如果省略这个参数，则默认为auto。</span><br><span class="line"></span><br><span class="line">注意：URL建议用绝对路径</span><br></pre></td></tr></table></figure>
-
-<p>文档没看明白，可能是没有怎么应用的原因，也可能是我现在好困精神没法集中。</p>
-<p>知乎上大佬关于iframe的讨论<a href="https://www.zhihu.com/question/20653055" target="_blank" rel="noopener">https://www.zhihu.com/question/20653055</a><br>先这样吧</p>
-]]></content>
-      <tags>
-        <tag>前端</tag>
-      </tags>
+    <title>iframe下position失效问题</title>
+    <url>/2019/01/26/iframe%E4%B8%8Bposition%E5%A4%B1%E6%95%88%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>h5实现点赞动画呀</title>
@@ -888,11 +893,6 @@ email、url、number、range、Date（功能强大，但是很多浏览器不支
       <tags>
         <tag>前端</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>iframe下position失效问题</title>
-    <url>/2019/01/26/iframe%E4%B8%8Bposition%E5%A4%B1%E6%95%88%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>java基础</title>
@@ -1047,7 +1047,7 @@ console.log(x)//10</code><br>反正我开始看到这个是一脸懵逼的</p>
 <a id="more"></a>
 <p>debounce，去抖动。策略是当事件被触发时，设定一个周期延迟执行动作，若期间又被触发，则重新设定周期，直到周期结束，执行动作。 这是debounce的基本思想，在后期又扩展了前缘debounce，即执行动作在前，然后设定周期，周期内有事件被触发，不执行动作，且周期重新设定。</p>
 <p>throttling，节流的策略是，固定周期内，只执行一次动作，若有新事件触发，不执行。周期结束后，又有事件触发，开始新的周期。 节流策略也分前缘和延迟两种。与debounce类似，延迟是指 周期结束后执行动作，前缘是指执行动作后再开始周期。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">/**防抖 一段时间内重复触发则清除定时器重新开始计时 */</span><br><span class="line">const debounce = function (fn, delay) &#123;</span><br><span class="line">    let timer = null</span><br><span class="line">    if (!delay) &#123;</span><br><span class="line">        delay = 1000</span><br><span class="line">    &#125;</span><br><span class="line">    return function (fn, delay) &#123;</span><br><span class="line">        clearTimeout(timer)</span><br><span class="line">        timer = setTimeout(fn, delay)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/**节流 第一次点击执行后一段时间内再次触发不执行 直到计时结束才可以再次被触发 */</span><br><span class="line">const throttling = function (fn, delay) &#123;</span><br><span class="line">    var timer = null;</span><br><span class="line">    if (!delay) &#123;</span><br><span class="line">        delay = 1000</span><br><span class="line">    &#125;</span><br><span class="line">    return function () &#123;</span><br><span class="line">        var context = this;</span><br><span class="line">        var args = arguments;</span><br><span class="line">        if (!timer) &#123;</span><br><span class="line">            timer = setTimeout(function () &#123;</span><br><span class="line">                fn.apply(context, args);</span><br><span class="line">                timer = null;</span><br><span class="line">            &#125;, delay);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">/**防抖 一段时间内重复触发则清除定时器重新开始计时 */</span><br><span class="line">function debounce(fn,n) &#123;</span><br><span class="line">    let timer = null</span><br><span class="line">    return function (args) &#123;</span><br><span class="line">        let that = this</span><br><span class="line">        timer &amp;&amp; clearTimeout(timer)</span><br><span class="line">        timer = setTimeout(function () &#123;</span><br><span class="line">            fn.call(that, args)</span><br><span class="line">        &#125;, n)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/**节流 第一次点击执行后一段时间内再次触发不执行 直到计时结束才可以再次被触发 */</span><br><span class="line">const throttling = function (fn, delay) &#123;</span><br><span class="line">    var timer = null;</span><br><span class="line">    if (!delay) &#123;</span><br><span class="line">        delay = 1000</span><br><span class="line">    &#125;</span><br><span class="line">    return function () &#123;</span><br><span class="line">        var context = this;</span><br><span class="line">        var args = arguments;</span><br><span class="line">        if (!timer) &#123;</span><br><span class="line">            timer = setTimeout(function () &#123;</span><br><span class="line">                fn.apply(context, args);</span><br><span class="line">                timer = null;</span><br><span class="line">            &#125;, delay);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
       <tags>
         <tag>前端</tag>
       </tags>
@@ -1118,6 +1118,20 @@ console.log(x)//10</code><br>反正我开始看到这个是一脸懵逼的</p>
       </tags>
   </entry>
   <entry>
+    <title>js对中文编码的函数</title>
+    <url>/2020/05/06/js%E5%AF%B9%E4%B8%AD%E6%96%87%E7%BC%96%E7%A0%81%E7%9A%84%E5%87%BD%E6%95%B0/</url>
+    <content><![CDATA[<p>js中的中文保险起见 最好都进行一下转码<br>escape,encodeURI,encodeURIComponent</p>
+<a id="more"></a>
+<h3 id="escape"><a href="#escape" class="headerlink" title="escape"></a>escape</h3><p><a href="https://www.w3school.com.cn/js/jsref_escape.asp" target="_blank" rel="noopener">escape</a></p>
+<h3 id="encodeURI"><a href="#encodeURI" class="headerlink" title="encodeURI"></a>encodeURI</h3><p>encodeURI() 函数可把字符串作为 URI 进行编码。<br>如果 URI 组件中含有分隔符，比如 ? 和 #，则应当使用 encodeURIComponent() 方法分别对各组件进行编码。<br><a href="https://www.w3school.com.cn/js/jsref_encodeuri.asp" target="_blank" rel="noopener">encodeURI</a></p>
+<h3 id="encodeURIComponent"><a href="#encodeURIComponent" class="headerlink" title="encodeURIComponent"></a>encodeURIComponent</h3><p><a href="https://www.w3school.com.cn/js/jsref_encodeURIComponent.asp" target="_blank" rel="noopener">encodeURIComponent</a></p>
+<p><a href="https://www.cnblogs.com/yanglongbo/p/9784020.html" target="_blank" rel="noopener">参考博文</a></p>
+]]></content>
+      <tags>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>js学习笔记(1)</title>
     <url>/2017/11/13/js%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-1/</url>
     <content><![CDATA[<p>基本数据类型<br>undefined、null、Boolean、number、string、object<br><strong>async和defer区别</strong></p>
@@ -1171,6 +1185,21 @@ console.log(x)//10</code><br>反正我开始看到这个是一脸懵逼的</p>
       </tags>
   </entry>
   <entry>
+    <title>js遍历</title>
+    <url>/2020/06/12/js%E9%81%8D%E5%8E%86/</url>
+    <content><![CDATA[<p>foreach和map的区别</p>
+<ol>
+<li><code>foreach</code><br>foreach没有返回值</li>
+</ol>
+<ol start="2">
+<li><code>map</code><br>映射 跟foreach用法类似 返回一个新数组</li>
+</ol>
+]]></content>
+      <tags>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>js模板引擎</title>
     <url>/2017/12/02/js%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/</url>
     <content><![CDATA[<p>其实我对js模板引擎一点都不了解，昨天听一个前端小哥的建议，决定稍微了解一下<del>~ 哒哒哒</del> 又要开始学习新技能了呢</p>
@@ -1190,35 +1219,6 @@ console.log(x)//10</code><br>反正我开始看到这个是一脸懵逼的</p>
       </tags>
   </entry>
   <entry>
-    <title>js对中文编码的函数</title>
-    <url>/2020/05/06/js%E5%AF%B9%E4%B8%AD%E6%96%87%E7%BC%96%E7%A0%81%E7%9A%84%E5%87%BD%E6%95%B0/</url>
-    <content><![CDATA[<p>js中的中文保险起见 最好都进行一下转码<br>escape,encodeURI,encodeURIComponent</p>
-<a id="more"></a>
-<h3 id="escape"><a href="#escape" class="headerlink" title="escape"></a>escape</h3><p><a href="https://www.w3school.com.cn/js/jsref_escape.asp" target="_blank" rel="noopener">escape</a></p>
-<h3 id="encodeURI"><a href="#encodeURI" class="headerlink" title="encodeURI"></a>encodeURI</h3><p>encodeURI() 函数可把字符串作为 URI 进行编码。<br>如果 URI 组件中含有分隔符，比如 ? 和 #，则应当使用 encodeURIComponent() 方法分别对各组件进行编码。<br><a href="https://www.w3school.com.cn/js/jsref_encodeuri.asp" target="_blank" rel="noopener">encodeURI</a></p>
-<h3 id="encodeURIComponent"><a href="#encodeURIComponent" class="headerlink" title="encodeURIComponent"></a>encodeURIComponent</h3><p><a href="https://www.w3school.com.cn/js/jsref_encodeURIComponent.asp" target="_blank" rel="noopener">encodeURIComponent</a></p>
-<p><a href="https://www.cnblogs.com/yanglongbo/p/9784020.html" target="_blank" rel="noopener">参考博文</a></p>
-]]></content>
-      <tags>
-        <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>js遍历</title>
-    <url>/2020/06/12/js%E9%81%8D%E5%8E%86/</url>
-    <content><![CDATA[<p>foreach和map的区别</p>
-<ol>
-<li><code>foreach</code><br>foreach没有返回值</li>
-</ol>
-<ol start="2">
-<li><code>map</code><br>映射 跟foreach用法类似 返回一个新数组</li>
-</ol>
-]]></content>
-      <tags>
-        <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>js的宏任务和微任务</title>
     <url>/2020/09/23/js%E7%9A%84%E5%AE%8F%E4%BB%BB%E5%8A%A1%E5%92%8C%E5%BE%AE%E4%BB%BB%E5%8A%A1/</url>
     <content><![CDATA[<p>.宏任务（macrotask ）和微任务（microtask ）</p>
@@ -1231,6 +1231,43 @@ console.log(x)//10</code><br>反正我开始看到这个是一脸懵逼的</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">外层宏事件1</span><br><span class="line">外层宏事件2</span><br><span class="line">微事件1</span><br><span class="line">微事件2</span><br><span class="line">内层宏事件3</span><br></pre></td></tr></table></figure>
 
 <p>宏任务 setTimeOut setInterval<br>微任务 nextTick promise<br>先执行微任务 再执行宏任务</p>
+]]></content>
+      <tags>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>js高级特性</title>
+    <url>/2018/11/05/js%E9%AB%98%E7%BA%A7%E7%89%B9%E6%80%A7-2/</url>
+    <content><![CDATA[<p>有关于js的几个高级特性</p>
+<a id="more"></a>
+<p>###作用域<br>1.JavaScript的函数定义是可以嵌套的，每层一个作用域，变量搜索顺序是从内到外<br>2.无论函数内在什么地方定义了变量，变量都会提前到函数开始，但是直到运行到var时才会被初始化，在此之前都是undefined<br>3.函数作用域的嵌套关系是定义时决定的，而不是运行时决定的。即 js的作用域是静态作用域</p>
+<p>###闭包</p>
+<p style="color:red">闭包：由函数及其封闭的自由变量组成的集合体。</p>
+特性：当一个函数返回它内部定义的一个函数时，就产生了一个闭包。闭包不但包括被返回的函数，还包括这个函数的定义函数。
+作用：
+- 嵌套的回调函数：让变量的值始终保持在内存中
+- 隐藏对象的细节（实现私有成员）：可以读取函数内部的变量
+[阮一峰关于闭包的解释](http://www.ruanyifeng.com/blog/2009/08/learning_javascript_closures.html)
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">　var name = &quot;The Window&quot;;</span><br><span class="line">　　var object = &#123;</span><br><span class="line">　　　　name : &quot;My Object&quot;,</span><br><span class="line"></span><br><span class="line">　　　　getNameFunc : function()&#123;</span><br><span class="line">　　　　　　return function()&#123;</span><br><span class="line">　　　　　　　　return this.name;</span><br><span class="line">　　　　　　&#125;;</span><br><span class="line"></span><br><span class="line">　　　　&#125;</span><br><span class="line"></span><br><span class="line">　　&#125;;</span><br><span class="line"></span><br><span class="line">　　alert(object.getNameFunc()());//the windows</span><br><span class="line"></span><br><span class="line">//在这里首先执行object.getNameFunc() 它是作为一个返回值，返回的结果就是对象里层的function()函数,而这个函数的返回值是一个匿名函数，此时返回的this指向全局变量~</span><br><span class="line"></span><br><span class="line">var name = &quot;The Window&quot;;</span><br><span class="line"></span><br><span class="line">　　var object = &#123;</span><br><span class="line">　　　　name : &quot;My Object&quot;,</span><br><span class="line"></span><br><span class="line">　　　　getNameFunc : function()&#123;</span><br><span class="line">　　　　　　var that = this;</span><br><span class="line">　　　　　　return function()&#123;</span><br><span class="line">　　　　　　　　return that.name;</span><br><span class="line">　　　　　　&#125;;</span><br><span class="line"></span><br><span class="line">　　　　&#125;</span><br><span class="line"></span><br><span class="line">　　&#125;;</span><br><span class="line"></span><br><span class="line">　　alert(object.getNameFunc()());</span><br><span class="line"></span><br><span class="line">//对象在这里首先执行object.getNameFunc() 它是作为一个返回值，返回的结果就是对象里层的function()函数,而这个返回的函数指向that是指向object对象的哈哈哈 我明白了</span><br></pre></td></tr></table></figure>
+
+<p>###对象<br>1.call和apply</p>
+<ul>
+<li>作用是允许一个对象去调用另一个对象的成员函数</li>
+<li>func.call(func被调用时的上下文，传入func的参数)</li>
+<li>func.apply(func被调用时的上下文，传入func的参数组)</li>
+</ul>
+<p>2.bind（有待深入理解啊）</p>
+<ul>
+<li>永久绑定函数的上下文</li>
+<li>绑定参数表</li>
+</ul>
+<p>3.原型<br><img src="/2018/11/05/js高级特性-2/-1772995812.png" alt="原型"></p>
+<ul>
+<li>构造函数自身的属性和方法无法被共享，而原型对象的属性和方法可以被所有实例对象所共享。无法被共享带来的影响就是实例化多个对象时，构造函数中的方法就会被调用多次</li>
+<li>原型链：js分为两种对象：function和object 在万物皆对象的情况下，函数对象也属于对象，所有对象时最终原型都是object.prototype,而function.prototype是所有函数的原型。</li>
+</ul>
+<p>每一个函数都有prototype属性，prototype属性指向该函数的原型对象<br>每一个对象都有<strong>proto</strong>属性,<strong>proto</strong>属性指向该对象的构造函数的prototype属性<br><img src="/2018/11/05/js高级特性-2/8f7b173c-b989-440a-8590-e1062105037f.jpg" alt="原型链图"></p>
 ]]></content>
       <tags>
         <tag>前端</tag>
@@ -1299,18 +1336,6 @@ console.log(x)//10</code><br>反正我开始看到这个是一脸懵逼的</p>
       </tags>
   </entry>
   <entry>
-    <title>linux命令行</title>
-    <url>/2017/11/29/linux%E5%91%BD%E4%BB%A4%E8%A1%8C/</url>
-    <content><![CDATA[<p>ctrl+C 让当前的程序停掉<br>Ctrl+D 可以取代exit<br>tab 命令补齐</p>
-<a id="more"></a>
-<p>man 通过man指令可以查看Linux中的指令帮助、配置文件帮助和编程帮助等信息。<br>chgrp 改变文件的所属群组<br>chown 改变文件拥有者<br>chmod 改变文件权限<br>cd 变换目录<br>pwd 显示当前所在目录<br>mkdir 建立新目录<br>rmdir 删除空目录<br>ls 档案与目录的显示<br>gzip，zcat 压缩文件和读取压缩文件</p>
-]]></content>
-      <tags>
-        <tag>面试</tag>
-        <tag>linux</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>leetcode之数组</title>
     <url>/2020/08/12/leetcode%E4%B9%8B%E6%95%B0%E7%BB%84/</url>
     <content><![CDATA[<h2 id="leetcode——数组类知识点及题型总结"><a href="#leetcode——数组类知识点及题型总结" class="headerlink" title="leetcode——数组类知识点及题型总结"></a>leetcode——数组类知识点及题型总结</h2><p>很多题都能靠暴力解法 但是通常都会有时间复杂度或者空间复杂度超出限制的情况，因此都不予讨论</p>
@@ -1331,40 +1356,15 @@ console.log(x)//10</code><br>反正我开始看到这个是一脸懵逼的</p>
 ]]></content>
   </entry>
   <entry>
-    <title>js高级特性</title>
-    <url>/2018/11/05/js%E9%AB%98%E7%BA%A7%E7%89%B9%E6%80%A7-2/</url>
-    <content><![CDATA[<p>有关于js的几个高级特性</p>
+    <title>linux命令行</title>
+    <url>/2017/11/29/linux%E5%91%BD%E4%BB%A4%E8%A1%8C/</url>
+    <content><![CDATA[<p>ctrl+C 让当前的程序停掉<br>Ctrl+D 可以取代exit<br>tab 命令补齐</p>
 <a id="more"></a>
-<p>###作用域<br>1.JavaScript的函数定义是可以嵌套的，每层一个作用域，变量搜索顺序是从内到外<br>2.无论函数内在什么地方定义了变量，变量都会提前到函数开始，但是直到运行到var时才会被初始化，在此之前都是undefined<br>3.函数作用域的嵌套关系是定义时决定的，而不是运行时决定的。即 js的作用域是静态作用域</p>
-<p>###闭包</p>
-<p style="color:red">闭包：由函数及其封闭的自由变量组成的集合体。</p>
-特性：当一个函数返回它内部定义的一个函数时，就产生了一个闭包。闭包不但包括被返回的函数，还包括这个函数的定义函数。
-作用：
-- 嵌套的回调函数：让变量的值始终保持在内存中
-- 隐藏对象的细节（实现私有成员）：可以读取函数内部的变量
-[阮一峰关于闭包的解释](http://www.ruanyifeng.com/blog/2009/08/learning_javascript_closures.html)
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">　var name = &quot;The Window&quot;;</span><br><span class="line">　　var object = &#123;</span><br><span class="line">　　　　name : &quot;My Object&quot;,</span><br><span class="line"></span><br><span class="line">　　　　getNameFunc : function()&#123;</span><br><span class="line">　　　　　　return function()&#123;</span><br><span class="line">　　　　　　　　return this.name;</span><br><span class="line">　　　　　　&#125;;</span><br><span class="line"></span><br><span class="line">　　　　&#125;</span><br><span class="line"></span><br><span class="line">　　&#125;;</span><br><span class="line"></span><br><span class="line">　　alert(object.getNameFunc()());//the windows</span><br><span class="line"></span><br><span class="line">//在这里首先执行object.getNameFunc() 它是作为一个返回值，返回的结果就是对象里层的function()函数,而这个函数的返回值是一个匿名函数，此时返回的this指向全局变量~</span><br><span class="line"></span><br><span class="line">var name = &quot;The Window&quot;;</span><br><span class="line"></span><br><span class="line">　　var object = &#123;</span><br><span class="line">　　　　name : &quot;My Object&quot;,</span><br><span class="line"></span><br><span class="line">　　　　getNameFunc : function()&#123;</span><br><span class="line">　　　　　　var that = this;</span><br><span class="line">　　　　　　return function()&#123;</span><br><span class="line">　　　　　　　　return that.name;</span><br><span class="line">　　　　　　&#125;;</span><br><span class="line"></span><br><span class="line">　　　　&#125;</span><br><span class="line"></span><br><span class="line">　　&#125;;</span><br><span class="line"></span><br><span class="line">　　alert(object.getNameFunc()());</span><br><span class="line"></span><br><span class="line">//对象在这里首先执行object.getNameFunc() 它是作为一个返回值，返回的结果就是对象里层的function()函数,而这个返回的函数指向that是指向object对象的哈哈哈 我明白了</span><br></pre></td></tr></table></figure>
-
-<p>###对象<br>1.call和apply</p>
-<ul>
-<li>作用是允许一个对象去调用另一个对象的成员函数</li>
-<li>func.call(func被调用时的上下文，传入func的参数)</li>
-<li>func.apply(func被调用时的上下文，传入func的参数组)</li>
-</ul>
-<p>2.bind（有待深入理解啊）</p>
-<ul>
-<li>永久绑定函数的上下文</li>
-<li>绑定参数表</li>
-</ul>
-<p>3.原型<br><img src="/2018/11/05/js高级特性-2/-1772995812.png" alt="原型"></p>
-<ul>
-<li>构造函数自身的属性和方法无法被共享，而原型对象的属性和方法可以被所有实例对象所共享。无法被共享带来的影响就是实例化多个对象时，构造函数中的方法就会被调用多次</li>
-<li>原型链：js分为两种对象：function和object 在万物皆对象的情况下，函数对象也属于对象，所有对象时最终原型都是object.prototype,而function.prototype是所有函数的原型。</li>
-</ul>
-<p>每一个函数都有prototype属性，prototype属性指向该函数的原型对象<br>每一个对象都有<strong>proto</strong>属性,<strong>proto</strong>属性指向该对象的构造函数的prototype属性<br><img src="/2018/11/05/js高级特性-2/8f7b173c-b989-440a-8590-e1062105037f.jpg" alt="原型链图"></p>
+<p>man 通过man指令可以查看Linux中的指令帮助、配置文件帮助和编程帮助等信息。<br>chgrp 改变文件的所属群组<br>chown 改变文件拥有者<br>chmod 改变文件权限<br>cd 变换目录<br>pwd 显示当前所在目录<br>mkdir 建立新目录<br>rmdir 删除空目录<br>ls 档案与目录的显示<br>gzip，zcat 压缩文件和读取压缩文件</p>
 ]]></content>
       <tags>
-        <tag>前端</tag>
+        <tag>面试</tag>
+        <tag>linux</tag>
       </tags>
   </entry>
   <entry>
@@ -1400,6 +1400,59 @@ console.log(x)//10</code><br>反正我开始看到这个是一脸懵逼的</p>
       </tags>
   </entry>
   <entry>
+    <title>node.js入门(2)</title>
+    <url>/2017/12/07/node-js%E5%85%A5%E9%97%A8-2/</url>
+    <content><![CDATA[<p>node.js中模块的概念<br>前端开发中中js和js文件之间不能相互关联，但是在nodejs中exports和require可以将他们相互关联起来。</p>
+<a id="more"></a>
+<blockquote>
+<p>概念</p>
+<blockquote>
+<p>狭义的说，每一个JavaScript文件都是一个模块；而多个JavaScript文件之间可以相互require，他们共同实现了一个功能，他们整体对外，又称为一个广义上的模块。<br>Node.js中，一个JavaScript文件中定义的变量、函数，都只在这个文件内部有效。当需要从模块外部引用这些变量、函数时，必须使用exports对象进行暴露。使用者要用require()命令引用这个JS文件。<br>一个JavaScript文件，可以向外exports无数个变量、函数。但是require的时候，仅仅需要require这个JS文件一次。使用的它保罗的变量、函数的时候，用点语法即可。所以，无形之中，增加了一个顶层命名空间。<br>js文件和js文件之间有两种合作的模式：<br>1） 某一个js文件中，提供了函数，供别人使用。 只需要暴露函数就行了； exports.msg=msg;<br>2） 某一个js文件，描述了一个类。   module.exports = People;</p>
+</blockquote>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">./text/people.js</span><br><span class="line">function people(name, sex, age) &#123;</span><br><span class="line">    this.name = name;</span><br><span class="line">    this.sex = sex;</span><br><span class="line">    this.age = age;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">people.prototype = &#123;</span><br><span class="line">    sayHello: function () &#123;</span><br><span class="line">        console.log(this.name + this.sex + this.age);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">module.exports = people;</span><br><span class="line"></span><br><span class="line">js.js</span><br><span class="line"></span><br><span class="line">var people = require(&quot;./text/people.js&quot;);</span><br><span class="line"></span><br><span class="line">var xiaoming = new people(&quot;小明&quot;,&quot;男&quot;,&quot;18&quot;);</span><br><span class="line">xiaoming.sayHello();</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<blockquote>
+<p>如果在require命令中，这么写:<br>1var foo = require(“foo.js”);   //没有写./， 所以不是一个相对路径。是一个特殊的路径<br>那么Node.js将该文件视为node_modules目录下的一个文件</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>我们可以使用文件夹来管理模块，比如<br>1var bar = require(“bar”);<br>那么Node.js将会去寻找node_modules目录下的bar文件夹中的index.js去执行。</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>每一个模块文件夹中，推荐都写一个package.json文件，这个文件的名字不能改。node将自动读取里面的配置。有一个main项，就是入口文件：</p>
+</blockquote>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1&#123;</span><br><span class="line">2  &quot;name&quot;: &quot;kaoladebar&quot;,</span><br><span class="line">3  &quot;version&quot;: &quot;1.0.1&quot;,</span><br><span class="line">4  &quot;main&quot; : &quot;app.js&quot;</span><br><span class="line">5&#125;</span><br></pre></td></tr></table></figure>
+
+<p>package.json文件，要放到模块文件夹的根目录去。</p>
+<blockquote>
+<blockquote>
+<p>require()中的路径，是从当前这个js文件出发，找到别人。而fs是从命令提示符找到别人。</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>post请求</p>
+<blockquote>
+<p>node.js追求一种极致，它认为post请求数据量会很大，所以会将数据拆分成很对小数据块chunk,然后通过特定的时间，将小数据块一个个传回来。</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>原生写POST处理，比较复杂，要写两个监听。文件上传业务比较难写。所以，用第三方模块。formidable。formidable是一个强大的封装模块，可以帮助实现文件上传的功能。</p>
+</blockquote>
+</blockquote>
+]]></content>
+      <tags>
+        <tag>前端</tag>
+        <tag>node.js</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>node.js入门(3)</title>
     <url>/2017/12/09/node-js%E5%85%A5%E9%97%A8-3/</url>
     <content><![CDATA[<p><a href="http://www.expressjs.com.cn/" target="_blank" rel="noopener">express框架中文官网</a><br>基于 Node.js 平台，快速、开放、极简的 web 开发框架。<br>express可以极大程度上简化nodejs，它由许多api非常方便使用。<br>node.js的http封装的程度不高，路由由原生代码实现起来比较复杂。在我目前的感知里，我认为框架最主要就是实现了比较方便的路由的架构。  </p>
@@ -1422,20 +1475,6 @@ console.log(x)//10</code><br>反正我开始看到这个是一脸懵逼的</p>
       <tags>
         <tag>前端</tag>
         <tag>node.js</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>node+koa</title>
-    <url>/2020/06/23/node-koa/</url>
-    <content><![CDATA[<ol>
-<li>koa+node基础搭建到实现api接口 <a href="https://www.jianshu.com/p/3b60dda108d4" target="_blank" rel="noopener">https://www.jianshu.com/p/3b60dda108d4</a></li>
-<li>使用pm2管理node进程</li>
-<li>使用knex操作数据库</li>
-<li></li>
-</ol>
-]]></content>
-      <tags>
-        <tag>前端</tag>
       </tags>
   </entry>
   <entry>
@@ -1499,56 +1538,17 @@ console.log(x)//10</code><br>反正我开始看到这个是一脸懵逼的</p>
       </tags>
   </entry>
   <entry>
-    <title>node.js入门(2)</title>
-    <url>/2017/12/07/node-js%E5%85%A5%E9%97%A8-2/</url>
-    <content><![CDATA[<p>node.js中模块的概念<br>前端开发中中js和js文件之间不能相互关联，但是在nodejs中exports和require可以将他们相互关联起来。</p>
-<a id="more"></a>
-<blockquote>
-<p>概念</p>
-<blockquote>
-<p>狭义的说，每一个JavaScript文件都是一个模块；而多个JavaScript文件之间可以相互require，他们共同实现了一个功能，他们整体对外，又称为一个广义上的模块。<br>Node.js中，一个JavaScript文件中定义的变量、函数，都只在这个文件内部有效。当需要从模块外部引用这些变量、函数时，必须使用exports对象进行暴露。使用者要用require()命令引用这个JS文件。<br>一个JavaScript文件，可以向外exports无数个变量、函数。但是require的时候，仅仅需要require这个JS文件一次。使用的它保罗的变量、函数的时候，用点语法即可。所以，无形之中，增加了一个顶层命名空间。<br>js文件和js文件之间有两种合作的模式：<br>1） 某一个js文件中，提供了函数，供别人使用。 只需要暴露函数就行了； exports.msg=msg;<br>2） 某一个js文件，描述了一个类。   module.exports = People;</p>
-</blockquote>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">./text/people.js</span><br><span class="line">function people(name, sex, age) &#123;</span><br><span class="line">    this.name = name;</span><br><span class="line">    this.sex = sex;</span><br><span class="line">    this.age = age;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">people.prototype = &#123;</span><br><span class="line">    sayHello: function () &#123;</span><br><span class="line">        console.log(this.name + this.sex + this.age);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">module.exports = people;</span><br><span class="line"></span><br><span class="line">js.js</span><br><span class="line"></span><br><span class="line">var people = require(&quot;./text/people.js&quot;);</span><br><span class="line"></span><br><span class="line">var xiaoming = new people(&quot;小明&quot;,&quot;男&quot;,&quot;18&quot;);</span><br><span class="line">xiaoming.sayHello();</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<blockquote>
-<p>如果在require命令中，这么写:<br>1var foo = require(“foo.js”);   //没有写./， 所以不是一个相对路径。是一个特殊的路径<br>那么Node.js将该文件视为node_modules目录下的一个文件</p>
-</blockquote>
-</blockquote>
-<blockquote>
-<blockquote>
-<p>我们可以使用文件夹来管理模块，比如<br>1var bar = require(“bar”);<br>那么Node.js将会去寻找node_modules目录下的bar文件夹中的index.js去执行。</p>
-</blockquote>
-</blockquote>
-<blockquote>
-<blockquote>
-<p>每一个模块文件夹中，推荐都写一个package.json文件，这个文件的名字不能改。node将自动读取里面的配置。有一个main项，就是入口文件：</p>
-</blockquote>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1&#123;</span><br><span class="line">2  &quot;name&quot;: &quot;kaoladebar&quot;,</span><br><span class="line">3  &quot;version&quot;: &quot;1.0.1&quot;,</span><br><span class="line">4  &quot;main&quot; : &quot;app.js&quot;</span><br><span class="line">5&#125;</span><br></pre></td></tr></table></figure>
-
-<p>package.json文件，要放到模块文件夹的根目录去。</p>
-<blockquote>
-<blockquote>
-<p>require()中的路径，是从当前这个js文件出发，找到别人。而fs是从命令提示符找到别人。</p>
-</blockquote>
-</blockquote>
-<blockquote>
-<p>post请求</p>
-<blockquote>
-<p>node.js追求一种极致，它认为post请求数据量会很大，所以会将数据拆分成很对小数据块chunk,然后通过特定的时间，将小数据块一个个传回来。</p>
-</blockquote>
-</blockquote>
-<blockquote>
-<blockquote>
-<p>原生写POST处理，比较复杂，要写两个监听。文件上传业务比较难写。所以，用第三方模块。formidable。formidable是一个强大的封装模块，可以帮助实现文件上传的功能。</p>
-</blockquote>
-</blockquote>
+    <title>node+koa</title>
+    <url>/2020/06/23/node-koa/</url>
+    <content><![CDATA[<ol>
+<li>koa+node基础搭建到实现api接口 <a href="https://www.jianshu.com/p/3b60dda108d4" target="_blank" rel="noopener">https://www.jianshu.com/p/3b60dda108d4</a></li>
+<li>使用pm2管理node进程</li>
+<li>使用knex操作数据库</li>
+<li></li>
+</ol>
 ]]></content>
       <tags>
         <tag>前端</tag>
-        <tag>node.js</tag>
       </tags>
   </entry>
   <entry>
@@ -1625,21 +1625,6 @@ console.log(x)//10</code><br>反正我开始看到这个是一脸懵逼的</p>
       </tags>
   </entry>
   <entry>
-    <title>npm依赖管理</title>
-    <url>/2017/12/14/npm%E4%BE%9D%E8%B5%96%E7%AE%A1%E7%90%86/</url>
-    <content><![CDATA[<p>npm是node.js的包管理器，在前端项目中我们经常用它来加载模块，npm库有许多实用的包，使用起来也非常方便，只需要用命令行下载就行了。在项目的拷贝迁移和管理过程中，也能极大地提供方便。</p>
-<a id="more"></a>
-<p>npm中的–save命令行会自动将加载的依赖添加到package.json文件中。<br>npm 目前支持以下几类依赖包管理：</p>
-<blockquote>
-<p>dependencies 应用依赖：它用于指定应用依赖的外部包，这些依赖是应用发布后正常执行时所需要的，但不包含测试时或者本地打包时所使用的包。<br>devDependencies 开发环境依赖：它的对象定义和dependencies一样，只不过它里面的包只用于开发环境，不用于生产环境，这些包通常是单元测试或者打包工具等<br>peerDependencies 同等依赖：或者叫同伴依赖，用于指定当前包（也就是你写的包）兼容的宿主版本。<br>optionalDependencies 可选依赖：如果有一些依赖包即使安装失败，项目仍然能够运行或者希望npm继续运行，就可以使用optionalDependencies。另外optionalDependencies会覆盖dependencies中的同名依赖包，所以不要在两个地方都写。<br>bundledDependencies / bundleDependencies 打包依赖：是一个包含依赖包名的数组对象，在发布时会将这个对象中的包打包到最终的发布包里。</p>
-</blockquote>
-]]></content>
-      <tags>
-        <tag>前端</tag>
-        <tag>工程化</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>react入门</title>
     <url>/2018/11/06/react%E5%85%A5%E9%97%A8/</url>
     <content><![CDATA[<p>react.js入门笔记</p>
@@ -1676,6 +1661,33 @@ console.log(x)//10</code><br>反正我开始看到这个是一脸懵逼的</p>
       </tags>
   </entry>
   <entry>
+    <title>npm依赖管理</title>
+    <url>/2017/12/14/npm%E4%BE%9D%E8%B5%96%E7%AE%A1%E7%90%86/</url>
+    <content><![CDATA[<p>npm是node.js的包管理器，在前端项目中我们经常用它来加载模块，npm库有许多实用的包，使用起来也非常方便，只需要用命令行下载就行了。在项目的拷贝迁移和管理过程中，也能极大地提供方便。</p>
+<a id="more"></a>
+<p>npm中的–save命令行会自动将加载的依赖添加到package.json文件中。<br>npm 目前支持以下几类依赖包管理：</p>
+<blockquote>
+<p>dependencies 应用依赖：它用于指定应用依赖的外部包，这些依赖是应用发布后正常执行时所需要的，但不包含测试时或者本地打包时所使用的包。<br>devDependencies 开发环境依赖：它的对象定义和dependencies一样，只不过它里面的包只用于开发环境，不用于生产环境，这些包通常是单元测试或者打包工具等<br>peerDependencies 同等依赖：或者叫同伴依赖，用于指定当前包（也就是你写的包）兼容的宿主版本。<br>optionalDependencies 可选依赖：如果有一些依赖包即使安装失败，项目仍然能够运行或者希望npm继续运行，就可以使用optionalDependencies。另外optionalDependencies会覆盖dependencies中的同名依赖包，所以不要在两个地方都写。<br>bundledDependencies / bundleDependencies 打包依赖：是一个包含依赖包名的数组对象，在发布时会将这个对象中的包打包到最终的发布包里。</p>
+</blockquote>
+]]></content>
+      <tags>
+        <tag>前端</tag>
+        <tag>工程化</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>rgba的十六进制写法</title>
+    <url>/2019/12/17/rgba%E7%9A%84%E5%8D%81%E5%85%AD%E8%BF%9B%E5%88%B6%E5%86%99%E6%B3%95/</url>
+    <content><![CDATA[<p>rgba的十六进制写法<br>一个小tips</p>
+<a id="more"></a>
+<p>00%=FF（不透明）<br>5%=F2<br>10%=E5<br>15%=D8<br>20%=CC<br>25%=BF<br>30%=B2<br>35%=A5<br>40%=99<br>45%=8c<br>50%=7F<br>55%=72<br>60%=66<br>65%=59<br>70%=4c<br>75%=3F<br>80%=33<br>85%=21<br>90%=19<br>95%=0c<br>100%=00（全透明）</p>
+<p>UI给出的颜色值为#FF0000，透明度30%。<br>结合上表，30%的透明度16进制的值为 B3，那么最终的颜色值为 #B3FF0000</p>
+]]></content>
+      <tags>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>rn投顾项目记录</title>
     <url>/2019/04/08/rn%E6%8A%95%E9%A1%BE%E9%A1%B9%E7%9B%AE%E8%AE%B0%E5%BD%95/</url>
     <content><![CDATA[<p>rn踩坑记录</p>
@@ -1704,18 +1716,6 @@ console.log(x)//10</code><br>反正我开始看到这个是一脸懵逼的</p>
       <tags>
         <tag>前端</tag>
         <tag>rn</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>rgba的十六进制写法</title>
-    <url>/2019/12/17/rgba%E7%9A%84%E5%8D%81%E5%85%AD%E8%BF%9B%E5%88%B6%E5%86%99%E6%B3%95/</url>
-    <content><![CDATA[<p>rgba的十六进制写法<br>一个小tips</p>
-<a id="more"></a>
-<p>00%=FF（不透明）<br>5%=F2<br>10%=E5<br>15%=D8<br>20%=CC<br>25%=BF<br>30%=B2<br>35%=A5<br>40%=99<br>45%=8c<br>50%=7F<br>55%=72<br>60%=66<br>65%=59<br>70%=4c<br>75%=3F<br>80%=33<br>85%=21<br>90%=19<br>95%=0c<br>100%=00（全透明）</p>
-<p>UI给出的颜色值为#FF0000，透明度30%。<br>结合上表，30%的透明度16进制的值为 B3，那么最终的颜色值为 #B3FF0000</p>
-]]></content>
-      <tags>
-        <tag>前端</tag>
       </tags>
   </entry>
   <entry>
@@ -2128,6 +2128,15 @@ CLI：在 shell 命令中指定它们。</code></pre></li>
       </tags>
   </entry>
   <entry>
+    <title>上班后的第一篇</title>
+    <url>/2018/04/01/%E4%B8%8A%E7%8F%AD%E5%90%8E%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87/</url>
+    <content><![CDATA[<p>实习一个星期，最大的感受就是自己好菜还有就是下班之后好困。<br>回头想想之前立的flag,大多数都不了了之。所以，怎么样做个自律的人呢<br>要学的东西还有很多，在公司的开发和以前做的些东西确实有些出入。尽快成长起来才是硬道理呀~</p>
+]]></content>
+      <tags>
+        <tag>随笔</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>乌合之众</title>
     <url>/2019/09/06/%E4%B9%8C%E5%90%88%E4%B9%8B%E4%BC%97/</url>
     <content><![CDATA[<p>法国心理学家古斯塔夫勒庞的这本社会心理学著作《乌合之众》大多数人就算没有看过也应该听说过。其实刚开始看这本书的时候我是看不下去的，加之网上对他各种评论，褒贬不一，让我更加不敢妄加断言自己的观点。但是自己些写东西嘛，必然是有自己的偏见的，还是记录一下自己看这本书时的看法，不一定对。</p>
@@ -2139,12 +2148,26 @@ CLI：在 shell 命令中指定它们。</code></pre></li>
       </tags>
   </entry>
   <entry>
-    <title>上班后的第一篇</title>
-    <url>/2018/04/01/%E4%B8%8A%E7%8F%AD%E5%90%8E%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87/</url>
-    <content><![CDATA[<p>实习一个星期，最大的感受就是自己好菜还有就是下班之后好困。<br>回头想想之前立的flag,大多数都不了了之。所以，怎么样做个自律的人呢<br>要学的东西还有很多，在公司的开发和以前做的些东西确实有些出入。尽快成长起来才是硬道理呀~</p>
+    <title>三栏布局总结</title>
+    <url>/2021/04/24/%E4%B8%89%E6%A0%8F%E5%B8%83%E5%B1%80%E6%80%BB%E7%BB%93/</url>
+    <content><![CDATA[<p>17年写过<a href="https://wine1.github.io/2017/12/01/%E5%9C%A3%E6%9D%AF%E5%B8%83%E5%B1%80%E5%92%8C%E5%8F%8C%E9%A3%9E%E7%BF%BC%E5%B8%83%E5%B1%80/">圣杯布局和双飞翼布局</a>，时间一长没写过pc端吧 又忘却了<br>整理下三栏布局方案</p>
+<a id="more"></a>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">    &lt;div class=&quot;container&quot;&gt;</span><br><span class="line">        &lt;div class=&quot;left&quot;&gt;&lt;/div&gt;</span><br><span class="line">        &lt;div class=&quot;right&quot;&gt;&lt;/div&gt;</span><br><span class="line">        &lt;div class=&quot;main&quot;&gt;&lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line"></span><br><span class="line">.left &#123;</span><br><span class="line">    float: left;</span><br><span class="line">    height: 200px;</span><br><span class="line">    width: 100px;</span><br><span class="line">    background-color: red;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"> .right &#123;</span><br><span class="line">    float: right;</span><br><span class="line">    width: 200px;</span><br><span class="line">    height: 200px;</span><br><span class="line">    background-color: blue;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.main &#123;</span><br><span class="line">    margin-left: 100px;</span><br><span class="line">    margin-right: 200px;</span><br><span class="line">    /* overflow: hidden; </span><br><span class="line">    或者用overflow代替上面的margin 通过bfc清除浮动*/</span><br><span class="line">    height: 200px;</span><br><span class="line">    background-color: green;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>2.flex布局</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;div class=&quot;container&quot;&gt;</span><br><span class="line">    &lt;div class=&quot;main&quot;&gt;&lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;left&quot;&gt;&lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;right&quot;&gt;&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;style&gt;</span><br><span class="line">    .container &#123;</span><br><span class="line">        display: flex;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    .main &#123;</span><br><span class="line">        flex-grow: 1;</span><br><span class="line">        height: 300px;</span><br><span class="line">        background-color: red;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    .left &#123;</span><br><span class="line">        order: -1;</span><br><span class="line">        flex: 0 1 100px;</span><br><span class="line">        height: 300px;</span><br><span class="line">        background-color: blue;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    .right &#123;</span><br><span class="line">        flex: 0 1 100px;</span><br><span class="line">        height: 300px;</span><br><span class="line">        background-color: green;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+<p>flex属性是flex-grow, flex-shrink 和 flex-basis的简写<br>flex-grow：flex-grow属性定义项目的放大比例，默认为0，即如果存在剩余空间，也不放大<br>flex-shrink：flex-shrink属性定义了项目的缩小比例，默认为1，即如果空间不足，该项目将缩小。<br>flex-basis：属性定义了在分配多余空间之前，项目占据的主轴空间（main size）</p>
+<p>3.圣杯布局<br>负边距</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"> &lt;div class=&quot;container&quot;&gt;</span><br><span class="line">    &lt;div class=&quot;main&quot;&gt;&lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;left&quot;&gt;&lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;right&quot;&gt;&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;style&gt;</span><br><span class="line">    .container &#123;</span><br><span class="line">	    margin-left: 100px;</span><br><span class="line">	    margin-right: 100px;</span><br><span class="line">	&#125;</span><br><span class="line">	.main &#123;</span><br><span class="line">	    float: left;</span><br><span class="line">	    width: 100%;</span><br><span class="line">	    height: 300px;</span><br><span class="line">	    background-color: red;</span><br><span class="line">	&#125;</span><br><span class="line">	.left &#123;</span><br><span class="line">	    float: left;</span><br><span class="line">	    width: 100px;</span><br><span class="line">	    height: 300px;</span><br><span class="line">	    margin-left: -100%;</span><br><span class="line">	    position: relative;</span><br><span class="line">	    left: -100px;</span><br><span class="line">	    background-color: blue;</span><br><span class="line">	&#125;</span><br><span class="line">	.right &#123;</span><br><span class="line">	    float: left;</span><br><span class="line">	    width: 100px;</span><br><span class="line">	    height: 300px;</span><br><span class="line">	    margin-left: -100px;</span><br><span class="line">	    position: relative;</span><br><span class="line">	    right: -100px;</span><br><span class="line">	    background-color: green;</span><br><span class="line">	&#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+<p>4.双飞翼布局</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;div class=&quot;content&quot;&gt;</span><br><span class="line">    &lt;div class=&quot;main&quot;&gt;&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;div class=&quot;left&quot;&gt;&lt;/div&gt;</span><br><span class="line">&lt;div class=&quot;right&quot;&gt;&lt;/div&gt;</span><br><span class="line">&lt;style&gt;</span><br><span class="line">    .content &#123;</span><br><span class="line">        float: left;</span><br><span class="line">        width: 100%;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    .main &#123;</span><br><span class="line">        height: 200px;</span><br><span class="line">        margin-left: 100px;</span><br><span class="line">        margin-right: 100px;</span><br><span class="line">        background-color: green;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    .left &#123;</span><br><span class="line">        float: left;</span><br><span class="line">        height: 200px;</span><br><span class="line">        width: 100px;</span><br><span class="line">        margin-left: -100%;</span><br><span class="line">        background-color: red;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    .right &#123;</span><br><span class="line">        width: 100px;</span><br><span class="line">        height: 200px;</span><br><span class="line">        float: right;</span><br><span class="line">        margin-left: -100px;</span><br><span class="line">        background-color: blue;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+<p>5.绝对定位布局</p>
 ]]></content>
       <tags>
-        <tag>随笔</tag>
+        <tag>css</tag>
       </tags>
   </entry>
   <entry>
@@ -2164,6 +2187,15 @@ CLI：在 shell 命令中指定它们。</code></pre></li>
 <li>归咎他人  拒绝职责他人</li>
 <li>情急生乱  慢慢来</li>
 </ol>
+]]></content>
+      <tags>
+        <tag>随笔</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>今日随笔</title>
+    <url>/2017/11/06/%E4%BB%8A%E6%97%A5%E9%9A%8F%E7%AC%94/</url>
+    <content><![CDATA[<p>anyway 今天也算是有了许多收获。<br>从今以后，正式在github写博客啦~<br>反应有点慢，加强锻炼啊</p>
 ]]></content>
       <tags>
         <tag>随笔</tag>
@@ -2279,15 +2311,6 @@ CLI：在 shell 命令中指定它们。</code></pre></li>
       </tags>
   </entry>
   <entry>
-    <title>今日随笔</title>
-    <url>/2017/11/06/%E4%BB%8A%E6%97%A5%E9%9A%8F%E7%AC%94/</url>
-    <content><![CDATA[<p>anyway 今天也算是有了许多收获。<br>从今以后，正式在github写博客啦~<br>反应有点慢，加强锻炼啊</p>
-]]></content>
-      <tags>
-        <tag>随笔</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>从乡下归来</title>
     <url>/2018/03/08/%E4%BB%8E%E4%B9%A1%E4%B8%8B%E5%BD%92%E6%9D%A5/</url>
     <content><![CDATA[<p>经历了一个多月没有WiFi的生活~<br>倒也没有多么难过。各种情绪都有过，但是也想通了许多事情。<br>博客没有写，这倒是有点遗憾了。人呐，每天都会有好多的想法，有时候把有些东西记录下来，其实也是件有意思的事情。功利点想，或许也是一件对以后的发展都很有益的事情呢<br>最近收到了个kindle，除了压泡面之外，对于比较喜欢看书的人来说也的确是个很值得入的东西。倒不是说电子水墨屏有多么护眼，反正多年以来我眼镜的度数也没涨起来过，我觉得，kindle这种除了看书啥也不能干的设定，才是它最大的亮点，嘻嘻嘻，去看书了~</p>
@@ -2315,29 +2338,6 @@ CLI：在 shell 命令中指定它们。</code></pre></li>
 ]]></content>
       <tags>
         <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>三栏布局总结</title>
-    <url>/2021/04/24/%E4%B8%89%E6%A0%8F%E5%B8%83%E5%B1%80%E6%80%BB%E7%BB%93/</url>
-    <content><![CDATA[<p>17年写过<a href="https://wine1.github.io/2017/12/01/%E5%9C%A3%E6%9D%AF%E5%B8%83%E5%B1%80%E5%92%8C%E5%8F%8C%E9%A3%9E%E7%BF%BC%E5%B8%83%E5%B1%80/">圣杯布局和双飞翼布局</a>，时间一长没写过pc端吧 又忘却了<br>整理下三栏布局方案</p>
-<a id="more"></a>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">    &lt;div class=&quot;container&quot;&gt;</span><br><span class="line">        &lt;div class=&quot;left&quot;&gt;&lt;/div&gt;</span><br><span class="line">        &lt;div class=&quot;right&quot;&gt;&lt;/div&gt;</span><br><span class="line">        &lt;div class=&quot;main&quot;&gt;&lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line"></span><br><span class="line">.left &#123;</span><br><span class="line">    float: left;</span><br><span class="line">    height: 200px;</span><br><span class="line">    width: 100px;</span><br><span class="line">    background-color: red;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"> .right &#123;</span><br><span class="line">    float: right;</span><br><span class="line">    width: 200px;</span><br><span class="line">    height: 200px;</span><br><span class="line">    background-color: blue;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.main &#123;</span><br><span class="line">    margin-left: 100px;</span><br><span class="line">    margin-right: 200px;</span><br><span class="line">    /* overflow: hidden; </span><br><span class="line">    或者用overflow代替上面的margin 通过bfc清除浮动*/</span><br><span class="line">    height: 200px;</span><br><span class="line">    background-color: green;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>2.flex布局</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;div class=&quot;container&quot;&gt;</span><br><span class="line">    &lt;div class=&quot;main&quot;&gt;&lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;left&quot;&gt;&lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;right&quot;&gt;&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;style&gt;</span><br><span class="line">    .container &#123;</span><br><span class="line">        display: flex;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    .main &#123;</span><br><span class="line">        flex-grow: 1;</span><br><span class="line">        height: 300px;</span><br><span class="line">        background-color: red;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    .left &#123;</span><br><span class="line">        order: -1;</span><br><span class="line">        flex: 0 1 100px;</span><br><span class="line">        height: 300px;</span><br><span class="line">        background-color: blue;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    .right &#123;</span><br><span class="line">        flex: 0 1 100px;</span><br><span class="line">        height: 300px;</span><br><span class="line">        background-color: green;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
-
-<p>flex属性是flex-grow, flex-shrink 和 flex-basis的简写<br>flex-grow：flex-grow属性定义项目的放大比例，默认为0，即如果存在剩余空间，也不放大<br>flex-shrink：flex-shrink属性定义了项目的缩小比例，默认为1，即如果空间不足，该项目将缩小。<br>flex-basis：属性定义了在分配多余空间之前，项目占据的主轴空间（main size）</p>
-<p>3.圣杯布局<br>负边距</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"> &lt;div class=&quot;container&quot;&gt;</span><br><span class="line">    &lt;div class=&quot;main&quot;&gt;&lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;left&quot;&gt;&lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;right&quot;&gt;&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;style&gt;</span><br><span class="line">    .container &#123;</span><br><span class="line">	    margin-left: 100px;</span><br><span class="line">	    margin-right: 100px;</span><br><span class="line">	&#125;</span><br><span class="line">	.main &#123;</span><br><span class="line">	    float: left;</span><br><span class="line">	    width: 100%;</span><br><span class="line">	    height: 300px;</span><br><span class="line">	    background-color: red;</span><br><span class="line">	&#125;</span><br><span class="line">	.left &#123;</span><br><span class="line">	    float: left;</span><br><span class="line">	    width: 100px;</span><br><span class="line">	    height: 300px;</span><br><span class="line">	    margin-left: -100%;</span><br><span class="line">	    position: relative;</span><br><span class="line">	    left: -100px;</span><br><span class="line">	    background-color: blue;</span><br><span class="line">	&#125;</span><br><span class="line">	.right &#123;</span><br><span class="line">	    float: left;</span><br><span class="line">	    width: 100px;</span><br><span class="line">	    height: 300px;</span><br><span class="line">	    margin-left: -100px;</span><br><span class="line">	    position: relative;</span><br><span class="line">	    right: -100px;</span><br><span class="line">	    background-color: green;</span><br><span class="line">	&#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
-
-<p>4.双飞翼布局</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;div class=&quot;content&quot;&gt;</span><br><span class="line">    &lt;div class=&quot;main&quot;&gt;&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;div class=&quot;left&quot;&gt;&lt;/div&gt;</span><br><span class="line">&lt;div class=&quot;right&quot;&gt;&lt;/div&gt;</span><br><span class="line">&lt;style&gt;</span><br><span class="line">    .content &#123;</span><br><span class="line">        float: left;</span><br><span class="line">        width: 100%;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    .main &#123;</span><br><span class="line">        height: 200px;</span><br><span class="line">        margin-left: 100px;</span><br><span class="line">        margin-right: 100px;</span><br><span class="line">        background-color: green;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    .left &#123;</span><br><span class="line">        float: left;</span><br><span class="line">        height: 200px;</span><br><span class="line">        width: 100px;</span><br><span class="line">        margin-left: -100%;</span><br><span class="line">        background-color: red;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    .right &#123;</span><br><span class="line">        width: 100px;</span><br><span class="line">        height: 200px;</span><br><span class="line">        float: right;</span><br><span class="line">        margin-left: -100px;</span><br><span class="line">        background-color: blue;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
-
-<p>5.绝对定位布局</p>
-]]></content>
-      <tags>
-        <tag>css</tag>
       </tags>
   </entry>
   <entry>
@@ -2486,20 +2486,20 @@ CLI：在 shell 命令中指定它们。</code></pre></li>
       </tags>
   </entry>
   <entry>
-    <title>内心煎熬</title>
-    <url>/2017/11/07/%E5%86%85%E5%BF%83%E7%85%8E%E7%86%AC/</url>
-    <content><![CDATA[<h3 id="开始秋招的第不知道多少天"><a href="#开始秋招的第不知道多少天" class="headerlink" title="开始秋招的第不知道多少天"></a>开始秋招的第不知道多少天</h3><p>不觉得自己努力比别人少，可能方向和方法上真的有很大的问题。<br>一度怀疑自己，是不是真的太没用，什么都做不了。还从来都没有好运气。<br>真的觉得很难过。加上整体的氛围，整个人真的，很乱。<br>写下来是希望无论以后是个什么要的结果，不要好了伤疤忘了疼，<br>决定做什么事的时候，一定要未雨绸缪，做好万全的准备。<br>希望能够有个比较好的结局。坚持做该做的事吧。</p>
-<p><strong>所以如果有正处于大学迷茫期的小伙伴们，一定不能眼高手低，一定要多写代码。<br>多关注实习信息。争取早点去公司实习。不然永远不知道，在学校学的东西跟企业有多大差距。<br></strong></p>
+    <title>关于做产品的一些笔记</title>
+    <url>/2019/09/06/%E5%85%B3%E4%BA%8E%E5%81%9A%E4%BA%A7%E5%93%81%E7%9A%84%E4%B8%80%E4%BA%9B%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<p>如何成为一名优秀的独立开发者，作者给出了以下几点建议：做一些你喜欢做的东西；<br>快速构建好产品，并及早放到市场上验证（精益创业）；<br>不要在技术上浪费太多时间，定好发布日期便执行；<br>不懂技术也可以打造一款好产品；<br>如果你打算开始单干，记得打造好你的个人品牌；<br>亲自为客户提供邮件支持，至少在一开始时要这么做；<br>顾客至上；<br>仔细思考并设定合理的目标，先实现产品再谈其他。</p>
+<p>认清自己，你可以自己问问自己，最喜欢做什么，最不喜欢做什么，也可以问问身边的朋友，觉得你哪方面不错，哪方面不灵。然后认真分析一下，真的，这事可能需要很多年，越早知道越有利。    </p>
 ]]></content>
       <tags>
         <tag>随笔</tag>
       </tags>
   </entry>
   <entry>
-    <title>关于做产品的一些笔记</title>
-    <url>/2019/09/06/%E5%85%B3%E4%BA%8E%E5%81%9A%E4%BA%A7%E5%93%81%E7%9A%84%E4%B8%80%E4%BA%9B%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<p>如何成为一名优秀的独立开发者，作者给出了以下几点建议：做一些你喜欢做的东西；<br>快速构建好产品，并及早放到市场上验证（精益创业）；<br>不要在技术上浪费太多时间，定好发布日期便执行；<br>不懂技术也可以打造一款好产品；<br>如果你打算开始单干，记得打造好你的个人品牌；<br>亲自为客户提供邮件支持，至少在一开始时要这么做；<br>顾客至上；<br>仔细思考并设定合理的目标，先实现产品再谈其他。</p>
-<p>认清自己，你可以自己问问自己，最喜欢做什么，最不喜欢做什么，也可以问问身边的朋友，觉得你哪方面不错，哪方面不灵。然后认真分析一下，真的，这事可能需要很多年，越早知道越有利。    </p>
+    <title>内心煎熬</title>
+    <url>/2017/11/07/%E5%86%85%E5%BF%83%E7%85%8E%E7%86%AC/</url>
+    <content><![CDATA[<h3 id="开始秋招的第不知道多少天"><a href="#开始秋招的第不知道多少天" class="headerlink" title="开始秋招的第不知道多少天"></a>开始秋招的第不知道多少天</h3><p>不觉得自己努力比别人少，可能方向和方法上真的有很大的问题。<br>一度怀疑自己，是不是真的太没用，什么都做不了。还从来都没有好运气。<br>真的觉得很难过。加上整体的氛围，整个人真的，很乱。<br>写下来是希望无论以后是个什么要的结果，不要好了伤疤忘了疼，<br>决定做什么事的时候，一定要未雨绸缪，做好万全的准备。<br>希望能够有个比较好的结局。坚持做该做的事吧。</p>
+<p><strong>所以如果有正处于大学迷茫期的小伙伴们，一定不能眼高手低，一定要多写代码。<br>多关注实习信息。争取早点去公司实习。不然永远不知道，在学校学的东西跟企业有多大差距。<br></strong></p>
 ]]></content>
       <tags>
         <tag>随笔</tag>
@@ -2518,6 +2518,79 @@ CLI：在 shell 命令中指定它们。</code></pre></li>
 ]]></content>
       <tags>
         <tag>随笔</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>再学es6</title>
+    <url>/2018/11/06/%E5%86%8D%E5%AD%A6es6/</url>
+    <content><![CDATA[<p>再一次看阮一峰的ES6入门简单的做个笔记。为接下来写react naive做准备。包括最常用的和已经理解了的部分</p>
+<a id="more"></a>
+<p>##let和const<br>1.var（es5）和let （es6）</p>
+<ul>
+<li>在es5中 var的作用域范围是函数作用域，而在es6中，改用let来替换var 。let只在所在的代码块内有效。最典型的例子是循环输出。</li>
+<li>let声明的变量不存在“变量提升”。声明的变量一定要在声明后使用，否则会报错</li>
+<li><strong>暂时性死区</strong>只要块级作用域内存在let，它所声明的变量就“绑定”（binding）这个区域，不再受外部的影响。即，如果一个全局变量在一个代码块内被let重新声明，那么全局变量对于此代码块是无效的。</li>
+<li>let不允许在同一作用域内，重复声明同一个变量，会报错；但是在用var声明的时候，后者会覆盖前者</li>
+<li><strong>块级作用域</strong>let的作用域只在所声明的代码块内，相当于为es6提供了块级作用域。</li>
+<li>S6 引入了块级作用域，明确允许在块级作用域之中声明函数。ES6 规定，块级作用域之中，函数声明语句的行为类似于let，在块级作用域之外不可引用。<br><img src="/2018/11/06/再学es6/tu1.png" alt="tu"></li>
+</ul>
+<p>2.const</p>
+<ul>
+<li><p>const声明一个只读的常量。一旦声明，常量的值就不能改变。</p>
+</li>
+<li><p>对于const来说，只声明不赋值，就会报错。</p>
+</li>
+<li><p>const的作用域与let命令相同：只在声明所在的块级作用域内有效。</p>
+</li>
+<li><p>const命令声明的常量也是不提升，同样存在暂时性死区，只能在声明的位置后面使用。</p>
+</li>
+<li><p>const声明的常量，也与let一样不可重复声明。</p>
+</li>
+</ul>
+<p>##变量的解构赋值</p>
+<ul>
+<li>ES6 允许按照一定模式，从数组和对象中提取值，对变量进行赋值，这被称为解构（Destructuring）。</li>
+<li>如果解构不成功，变量的值就等于undefined。</li>
+<li>如果等号的右边不是数组（或者严格地说，不是可遍历的结构），那么将会报错。<br><img src="/2018/11/06/再学es6/tu2.png" alt="tu"></li>
+<li>如果默认值是一个表达式，那么这个表达式是惰性求值的，即只有在用到的时候，才会求值。</li>
+</ul>
+<p>##箭头函数<br>箭头函数在js的语言中山一直存在的，比如<br><img src="/2018/11/06/再学es6/tu3.png" alt="tu"><br><img src="/2018/11/06/再学es6/tu4.png" alt="tu"></p>
+<ul>
+<li><p><strong>注意，使用了块语句的箭头函数不会自动返回值，你需要使用return语句将所需值返回。</strong><br><img src="/2018/11/06/再学es6/tu5.png" alt="tu"></p>
+</li>
+<li><p><strong>普通function函数和箭头函数的行为有一个微妙的区别，箭头函数没有它自己的this值，箭头函数内的this值继承自外围作用域。</strong><br>##calss<br>##模板字符串<br>##promise函数</p>
+</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>前端</tag>
+        <tag>ES6</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>初学eslint</title>
+    <url>/2018/01/02/%E5%88%9D%E5%AD%A6eslint/</url>
+    <content><![CDATA[<p>还是说，每天学习一点点~<br>元旦浪完了滚回来继续学习。毕竟生活还有眼前的苟且和枸杞。<br>ESLint在之前有接触过，只知道是一个es6的代码风格检查工具，所以。。。到底具体是做什么呢，走进计算机科学之——eslint</p>
+<a id="more"></a>
+
+<p>JavaScript 是一个动态的弱类型语言，在开发中比较容易出错。因为没有编译程序，为了寻找 JavaScript 代码错误通常需要在执行过程中不断调适。像 ESLint 这样的可以让程序员在编码的过程中发现问题而不是在执行的过程中。</p>
+<p>ESLint 被设计成完全可配置的，开发人员可以通过自定规则来规范代码的风格。</p>
+<ol>
+<li>可以直接把代码嵌入到js文件</li>
+<li>配置文件</li>
+</ol>
+<p>可以被配置的文件主要分为三类：</p>
+<ol>
+<li>环境 environments 如node.js browser commonjs等</li>
+<li>额外全局变量 globals</li>
+<li>开启规则 rules</li>
+</ol>
+<p>还是这种插件还是比较适合在用的过程中了解啊</p>
+<p>明天有电话面试好紧脏<del>~</del></p>
+<p>update: 2021.1.16<br>至今也没有用过eslint<br>typescript 倒是挺好用</p>
+]]></content>
+      <tags>
+        <tag>前端</tag>
       </tags>
   </entry>
   <entry>
@@ -2565,29 +2638,33 @@ CLI：在 shell 命令中指定它们。</code></pre></li>
       </tags>
   </entry>
   <entry>
-    <title>初学eslint</title>
-    <url>/2018/01/02/%E5%88%9D%E5%AD%A6eslint/</url>
-    <content><![CDATA[<p>还是说，每天学习一点点~<br>元旦浪完了滚回来继续学习。毕竟生活还有眼前的苟且和枸杞。<br>ESLint在之前有接触过，只知道是一个es6的代码风格检查工具，所以。。。到底具体是做什么呢，走进计算机科学之——eslint</p>
+    <title>前端安全性问题</title>
+    <url>/2017/12/10/%E5%89%8D%E7%AB%AF%E5%AE%89%E5%85%A8%E6%80%A7%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<p>今天不知道怎么突然想起来前端的安全性问题，之前遇到过这样的笔试题，了解过，但是感觉没明白，又忘记了，所以今天来做一个总结。</p>
 <a id="more"></a>
 
-<p>JavaScript 是一个动态的弱类型语言，在开发中比较容易出错。因为没有编译程序，为了寻找 JavaScript 代码错误通常需要在执行过程中不断调适。像 ESLint 这样的可以让程序员在编码的过程中发现问题而不是在执行的过程中。</p>
-<p>ESLint 被设计成完全可配置的，开发人员可以通过自定规则来规范代码的风格。</p>
 <ol>
-<li>可以直接把代码嵌入到js文件</li>
-<li>配置文件</li>
+<li>SQL注入：通过把SQL命令插入到Web表单提交或输入域名或页面请求的查询字符串，最终达到欺骗服务器执行恶意的SQL命令.防护措施：前端页面要校验用户的输入数据，后端不要使用动态SQL语句，不要直接存放机密数据。（严格说，sql注入属于后端的安全问题）</li>
+<li>XXS跨站脚本分析：攻击者将恶意脚本插入到网页中，网页会将这些恶意脚本当正常脚本来执行。所有可输入的地方没有处理输入的数据，就可能存在xxs漏洞。为了防护应该尽可能完善过滤体系。</li>
+<li>iframe风险 iframe中的内容是由第三方来提供的，默认情况下他们不受我们的控制，他们可以在iframe中运行JavaScirpt脚本、Flash插件、弹出对话框等等，这可能会破坏前端用户体验。如果iframe中的域名因为过期而被恶意攻击者抢注，或者第三方被黑客攻破，iframe中的内容被替换掉了，从而利用用户浏览器中的安全漏洞下载安装木马、恶意勒索软件，这样就会有很大的安全隐患了。</li>
+<li>CSRF 跨站请求伪造：CSRF攻击过程的受害者用户登录网站A，输入个人信息，在本地保存服务器生成的cookie。然后在A网站点击由攻击者构建一条恶意链接跳转到B网站,然后B网站携带着的用户cookie信息去访问B网站.让A网站造成是用户自己访问的假相,从而来进行一些列的操作,常见的就是转账.</li>
 </ol>
-<p>可以被配置的文件主要分为三类：</p>
-<ol>
-<li>环境 environments 如node.js browser commonjs等</li>
-<li>额外全局变量 globals</li>
-<li>开启规则 rules</li>
-</ol>
-<p>还是这种插件还是比较适合在用的过程中了解啊</p>
-<p>明天有电话面试好紧脏<del>~</del></p>
-<p>update: 2021.1.16<br>至今也没有用过eslint<br>typescript 倒是挺好用</p>
+<p>emm~ 大概暂时就这些了，当然还有别的安全问题，但是我好像不太能理解，粗略的浏览了一下，然后以后弄明白点了再补充吧</p>
+<p><strong>补充：前端安全性问题之跨域</strong><br>所谓的跨域，是为了避免前端安全性问题而做的同源策略引发的问题。<br>同域名、同端口、同协议视为同一个域，一个域内的脚本仅仅具有本域内的权限，可以理解为本域脚本只能读写本域内的资源，而无法访问其它域的资源。<br>否则，就是跨域。<br>在同源策略的限制下允许部分不遵循同源策略访问的方式就是跨域<br><a href="https://www.cnblogs.com/st-leslie/p/5958822.html" target="_blank" rel="noopener">这里是一篇我认为总结的很好的博客</a><br><a href="https://www.cnblogs.com/chillaxyw/p/5492763.html" target="_blank" rel="noopener">这是个跟我差不多情况的博主写的博客~</a></p>
+<p>常见的跨域方式有：</p>
+<ul>
+<li>jsonp Jsonp(JSON with Padding)是json的一种”使用模式”，可以让网页从别的域名（网站）那获取资料，即跨域<strong>读取</strong>数据。因为通过script标签引入的js是不受同源策略的限制的。JSONP易于实现，但是也会存在一些安全隐患，如果第三方的脚本随意地执行，那么它就可以篡改页面内容，截获敏感数据。但是在受信任的双方传递数据，JSONP是非常合适的选择。可以看出来JSONP跨域一般用于获取其他域的数据。</li>
+<li>ifarme iframe跨域的原理跟script跨域一样，但是我们要注意的是标签自身功能的差异性，具体差异如下：<br> script单纯就是引入的作用，但是iframe标签还有一个作用是显示的作用可以把远程加载的HTML代码显示出来，也就是script无法引入HTML代码文件script标签只能够从远程获取数据，无法操作远程文件执行。但是iframe可以这样</li>
+<li>document.domain</li>
+<li>window.name </li>
+<li>cookie</li>
+<li>postMessage</li>
+</ul>
+<p>还是不太明白~</p>
 ]]></content>
       <tags>
         <tag>前端</tag>
+        <tag>面试</tag>
       </tags>
   </entry>
   <entry>
@@ -2640,36 +2717,6 @@ CLI：在 shell 命令中指定它们。</code></pre></li>
       </tags>
   </entry>
   <entry>
-    <title>前端安全性问题</title>
-    <url>/2017/12/10/%E5%89%8D%E7%AB%AF%E5%AE%89%E5%85%A8%E6%80%A7%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[<p>今天不知道怎么突然想起来前端的安全性问题，之前遇到过这样的笔试题，了解过，但是感觉没明白，又忘记了，所以今天来做一个总结。</p>
-<a id="more"></a>
-
-<ol>
-<li>SQL注入：通过把SQL命令插入到Web表单提交或输入域名或页面请求的查询字符串，最终达到欺骗服务器执行恶意的SQL命令.防护措施：前端页面要校验用户的输入数据，后端不要使用动态SQL语句，不要直接存放机密数据。（严格说，sql注入属于后端的安全问题）</li>
-<li>XXS跨站脚本分析：攻击者将恶意脚本插入到网页中，网页会将这些恶意脚本当正常脚本来执行。所有可输入的地方没有处理输入的数据，就可能存在xxs漏洞。为了防护应该尽可能完善过滤体系。</li>
-<li>iframe风险 iframe中的内容是由第三方来提供的，默认情况下他们不受我们的控制，他们可以在iframe中运行JavaScirpt脚本、Flash插件、弹出对话框等等，这可能会破坏前端用户体验。如果iframe中的域名因为过期而被恶意攻击者抢注，或者第三方被黑客攻破，iframe中的内容被替换掉了，从而利用用户浏览器中的安全漏洞下载安装木马、恶意勒索软件，这样就会有很大的安全隐患了。</li>
-<li>CSRF 跨站请求伪造：CSRF攻击过程的受害者用户登录网站A，输入个人信息，在本地保存服务器生成的cookie。然后在A网站点击由攻击者构建一条恶意链接跳转到B网站,然后B网站携带着的用户cookie信息去访问B网站.让A网站造成是用户自己访问的假相,从而来进行一些列的操作,常见的就是转账.</li>
-</ol>
-<p>emm~ 大概暂时就这些了，当然还有别的安全问题，但是我好像不太能理解，粗略的浏览了一下，然后以后弄明白点了再补充吧</p>
-<p><strong>补充：前端安全性问题之跨域</strong><br>所谓的跨域，是为了避免前端安全性问题而做的同源策略引发的问题。<br>同域名、同端口、同协议视为同一个域，一个域内的脚本仅仅具有本域内的权限，可以理解为本域脚本只能读写本域内的资源，而无法访问其它域的资源。<br>否则，就是跨域。<br>在同源策略的限制下允许部分不遵循同源策略访问的方式就是跨域<br><a href="https://www.cnblogs.com/st-leslie/p/5958822.html" target="_blank" rel="noopener">这里是一篇我认为总结的很好的博客</a><br><a href="https://www.cnblogs.com/chillaxyw/p/5492763.html" target="_blank" rel="noopener">这是个跟我差不多情况的博主写的博客~</a></p>
-<p>常见的跨域方式有：</p>
-<ul>
-<li>jsonp Jsonp(JSON with Padding)是json的一种”使用模式”，可以让网页从别的域名（网站）那获取资料，即跨域<strong>读取</strong>数据。因为通过script标签引入的js是不受同源策略的限制的。JSONP易于实现，但是也会存在一些安全隐患，如果第三方的脚本随意地执行，那么它就可以篡改页面内容，截获敏感数据。但是在受信任的双方传递数据，JSONP是非常合适的选择。可以看出来JSONP跨域一般用于获取其他域的数据。</li>
-<li>ifarme iframe跨域的原理跟script跨域一样，但是我们要注意的是标签自身功能的差异性，具体差异如下：<br> script单纯就是引入的作用，但是iframe标签还有一个作用是显示的作用可以把远程加载的HTML代码显示出来，也就是script无法引入HTML代码文件script标签只能够从远程获取数据，无法操作远程文件执行。但是iframe可以这样</li>
-<li>document.domain</li>
-<li>window.name </li>
-<li>cookie</li>
-<li>postMessage</li>
-</ul>
-<p>还是不太明白~</p>
-]]></content>
-      <tags>
-        <tag>前端</tag>
-        <tag>面试</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>匹配js中的enter换行操作</title>
     <url>/2020/07/23/%E5%8C%B9%E9%85%8Djs%E4%B8%AD%E7%9A%84enter%E6%8D%A2%E8%A1%8C%E6%93%8D%E4%BD%9C/</url>
     <content><![CDATA[<p>前几日在被莫名其妙的提了个bug<br>测试说 测试数据配置的时候有用enter换行 为什么在我的小程序里换行就神奇的消失了<br>第一次遇到这样的情况 在我的认真查找下 终于发现在数据里 字里行间还隐秘的藏着一些 回车符 （我实在是打不出来那个小小的符号了）</p>
@@ -2679,53 +2726,6 @@ CLI：在 shell 命令中指定它们。</code></pre></li>
       <tags>
         <tag>前端</tag>
         <tag>css</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>再学es6</title>
-    <url>/2018/11/06/%E5%86%8D%E5%AD%A6es6/</url>
-    <content><![CDATA[<p>再一次看阮一峰的ES6入门简单的做个笔记。为接下来写react naive做准备。包括最常用的和已经理解了的部分</p>
-<a id="more"></a>
-<p>##let和const<br>1.var（es5）和let （es6）</p>
-<ul>
-<li>在es5中 var的作用域范围是函数作用域，而在es6中，改用let来替换var 。let只在所在的代码块内有效。最典型的例子是循环输出。</li>
-<li>let声明的变量不存在“变量提升”。声明的变量一定要在声明后使用，否则会报错</li>
-<li><strong>暂时性死区</strong>只要块级作用域内存在let，它所声明的变量就“绑定”（binding）这个区域，不再受外部的影响。即，如果一个全局变量在一个代码块内被let重新声明，那么全局变量对于此代码块是无效的。</li>
-<li>let不允许在同一作用域内，重复声明同一个变量，会报错；但是在用var声明的时候，后者会覆盖前者</li>
-<li><strong>块级作用域</strong>let的作用域只在所声明的代码块内，相当于为es6提供了块级作用域。</li>
-<li>S6 引入了块级作用域，明确允许在块级作用域之中声明函数。ES6 规定，块级作用域之中，函数声明语句的行为类似于let，在块级作用域之外不可引用。<br><img src="/2018/11/06/再学es6/tu1.png" alt="tu"></li>
-</ul>
-<p>2.const</p>
-<ul>
-<li><p>const声明一个只读的常量。一旦声明，常量的值就不能改变。</p>
-</li>
-<li><p>对于const来说，只声明不赋值，就会报错。</p>
-</li>
-<li><p>const的作用域与let命令相同：只在声明所在的块级作用域内有效。</p>
-</li>
-<li><p>const命令声明的常量也是不提升，同样存在暂时性死区，只能在声明的位置后面使用。</p>
-</li>
-<li><p>const声明的常量，也与let一样不可重复声明。</p>
-</li>
-</ul>
-<p>##变量的解构赋值</p>
-<ul>
-<li>ES6 允许按照一定模式，从数组和对象中提取值，对变量进行赋值，这被称为解构（Destructuring）。</li>
-<li>如果解构不成功，变量的值就等于undefined。</li>
-<li>如果等号的右边不是数组（或者严格地说，不是可遍历的结构），那么将会报错。<br><img src="/2018/11/06/再学es6/tu2.png" alt="tu"></li>
-<li>如果默认值是一个表达式，那么这个表达式是惰性求值的，即只有在用到的时候，才会求值。</li>
-</ul>
-<p>##箭头函数<br>箭头函数在js的语言中山一直存在的，比如<br><img src="/2018/11/06/再学es6/tu3.png" alt="tu"><br><img src="/2018/11/06/再学es6/tu4.png" alt="tu"></p>
-<ul>
-<li><p><strong>注意，使用了块语句的箭头函数不会自动返回值，你需要使用return语句将所需值返回。</strong><br><img src="/2018/11/06/再学es6/tu5.png" alt="tu"></p>
-</li>
-<li><p><strong>普通function函数和箭头函数的行为有一个微妙的区别，箭头函数没有它自己的this值，箭头函数内的this值继承自外围作用域。</strong><br>##calss<br>##模板字符串<br>##promise函数</p>
-</li>
-</ul>
-]]></content>
-      <tags>
-        <tag>前端</tag>
-        <tag>ES6</tag>
       </tags>
   </entry>
   <entry>
@@ -2753,17 +2753,6 @@ CLI：在 shell 命令中指定它们。</code></pre></li>
 ]]></content>
   </entry>
   <entry>
-    <title>告别低自尊呐</title>
-    <url>/2019/06/03/%E5%91%8A%E5%88%AB%E4%BD%8E%E8%87%AA%E5%B0%8A%E5%91%90/</url>
-    <content><![CDATA[<ol>
-<li>为什么会有讨好行为<br> 正视自己的真实情感与需求<br> 接受自己的不完美</li>
-</ol>
-]]></content>
-      <tags>
-        <tag>随笔</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>哈希</title>
     <url>/2019/09/25/%E5%93%88%E5%B8%8C/</url>
     <content><![CDATA[<p>今天开始刷算法，<s>立了个每天一道算法题的flag</s>,第一天，一道简单的题目，但是也可以有 有深度 的写法<br><a href="https://github.com/wine1/code/blob/master/1twoSum.js" target="_blank" rel="noopener">leetcode第一题</a><br>用常规方法时间复杂度为O(n*n) 而hashmap的时间复杂度只有O(n)</p>
@@ -2772,6 +2761,17 @@ CLI：在 shell 命令中指定它们。</code></pre></li>
 ]]></content>
       <tags>
         <tag>数据结构</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>告别低自尊呐</title>
+    <url>/2019/06/03/%E5%91%8A%E5%88%AB%E4%BD%8E%E8%87%AA%E5%B0%8A%E5%91%90/</url>
+    <content><![CDATA[<ol>
+<li>为什么会有讨好行为<br> 正视自己的真实情感与需求<br> 接受自己的不完美</li>
+</ol>
+]]></content>
+      <tags>
+        <tag>随笔</tag>
       </tags>
   </entry>
   <entry>
@@ -2873,6 +2873,33 @@ CLI：在 shell 命令中指定它们。</code></pre></li>
       </tags>
   </entry>
   <entry>
+    <title>坚持的重要性</title>
+    <url>/2019/06/04/%E5%9D%9A%E6%8C%81%E7%9A%84%E9%87%8D%E8%A6%81%E6%80%A7/</url>
+    <content><![CDATA[<p>日复一日年复一年<br>做什么事情总是半途而废的话<br>做什么事情总是自我麻痹的话<br>就什么都做不好了的<br>并不是一定要做出多么令人惊叹的创举<br>坚持和自律<br>就已经足以让人变得更加优秀了<br>不要走错了方向啊。</p>
+]]></content>
+      <tags>
+        <tag>随笔</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>基于vue的饿了吗项目总结</title>
+    <url>/2017/11/08/%E5%9F%BA%E4%BA%8Evue%E7%9A%84%E9%A5%BF%E4%BA%86%E5%90%97%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/</url>
+    <content><![CDATA[<p>这是基于vue.js开发的一个仿饿了么外卖的前端APP<br> 开发过程：<br>    1. 需求分析<br>    2. 脚手架工具<br>    3. 数据mock<br>    4. 架构设计<br>    5. 代码编写<br>    6. 自测<br>    7. 编译打包<br>功能技术分析:后端 vue-resource 前端 vue-router 第三方js库better-scroll<br>html5的localstorage做本地存储 各种样式和布局flex布局<br>组件化和模块化的思想  webpack打包构建工具<br>商家页面：</p>
+<ol>
+<li>顶部：商家基本信息<a id="more"></a></li>
+<li>中间部分：商品区 评论区 商家</li>
+<li>底部：购物车<br>商品详情页</li>
+</ol>
+<p>vue.js是一个基于MVVM的前端框架<br>M model 模块 V view 视图 VM viewmodel 实现一个双向绑定<br>数据驱动和组件化的开发模式<br>组件化：模块封装</p>
+<p>vue-cli是vue的脚手架工具,功能是搭建一些基本的代码和模块<br>可以帮助我们完成目录结构、本地调试、热加载、单元测试<br><code>npm install -g vue-cli</code></p>
+<p>初始化项目<code>vue init webpack name</code></p>
+]]></content>
+      <tags>
+        <tag>前端</tag>
+        <tag>vue.js</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>头条项目</title>
     <url>/2017/11/12/%E5%A4%B4%E6%9D%A1%E9%A1%B9%E7%9B%AE/</url>
     <content><![CDATA[<p>这个实战项目是一个不错的面试拿来讲的项目，牛客网购买的，如果有缘看到这个博客，喏，拿去好了 链接：<a href="http://pan.baidu.com/s/1nv86TVN" target="_blank" rel="noopener">http://pan.baidu.com/s/1nv86TVN</a> 密码：pj06</p>
@@ -2900,33 +2927,6 @@ CLI：在 shell 命令中指定它们。</code></pre></li>
 ]]></content>
       <tags>
         <tag>java</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>坚持的重要性</title>
-    <url>/2019/06/04/%E5%9D%9A%E6%8C%81%E7%9A%84%E9%87%8D%E8%A6%81%E6%80%A7/</url>
-    <content><![CDATA[<p>日复一日年复一年<br>做什么事情总是半途而废的话<br>做什么事情总是自我麻痹的话<br>就什么都做不好了的<br>并不是一定要做出多么令人惊叹的创举<br>坚持和自律<br>就已经足以让人变得更加优秀了<br>不要走错了方向啊。</p>
-]]></content>
-      <tags>
-        <tag>随笔</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>基于vue的饿了吗项目总结</title>
-    <url>/2017/11/08/%E5%9F%BA%E4%BA%8Evue%E7%9A%84%E9%A5%BF%E4%BA%86%E5%90%97%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/</url>
-    <content><![CDATA[<p>这是基于vue.js开发的一个仿饿了么外卖的前端APP<br> 开发过程：<br>    1. 需求分析<br>    2. 脚手架工具<br>    3. 数据mock<br>    4. 架构设计<br>    5. 代码编写<br>    6. 自测<br>    7. 编译打包<br>功能技术分析:后端 vue-resource 前端 vue-router 第三方js库better-scroll<br>html5的localstorage做本地存储 各种样式和布局flex布局<br>组件化和模块化的思想  webpack打包构建工具<br>商家页面：</p>
-<ol>
-<li>顶部：商家基本信息<a id="more"></a></li>
-<li>中间部分：商品区 评论区 商家</li>
-<li>底部：购物车<br>商品详情页</li>
-</ol>
-<p>vue.js是一个基于MVVM的前端框架<br>M model 模块 V view 视图 VM viewmodel 实现一个双向绑定<br>数据驱动和组件化的开发模式<br>组件化：模块封装</p>
-<p>vue-cli是vue的脚手架工具,功能是搭建一些基本的代码和模块<br>可以帮助我们完成目录结构、本地调试、热加载、单元测试<br><code>npm install -g vue-cli</code></p>
-<p>初始化项目<code>vue init webpack name</code></p>
-]]></content>
-      <tags>
-        <tag>前端</tag>
-        <tag>vue.js</tag>
       </tags>
   </entry>
   <entry>
@@ -2995,21 +2995,6 @@ CLI：在 shell 命令中指定它们。</code></pre></li>
 ]]></content>
   </entry>
   <entry>
-    <title>封装一个组件</title>
-    <url>/2020/09/13/%E5%B0%81%E8%A3%85%E4%B8%80%E4%B8%AA%E7%BB%84%E4%BB%B6/</url>
-    <content><![CDATA[<p>自己封装一个组件</p>
-<a id="more"></a>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=&quot;en&quot;&gt;</span><br><span class="line">  &lt;head&gt;</span><br><span class="line">    &lt;meta charset=&quot;UTF-8&quot; /&gt;</span><br><span class="line">    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;</span><br><span class="line">    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;ie=edge&quot; /&gt;</span><br><span class="line">    &lt;title&gt;diago&lt;/title&gt;</span><br><span class="line">    &lt;link rel=&quot;stylesheet&quot; href=&quot;./diago.css&quot; /&gt;</span><br><span class="line">  &lt;/head&gt;</span><br><span class="line">  &lt;body&gt;</span><br><span class="line">    &lt;button id=&quot;showDiago&quot;&gt;点击打开弹窗&lt;/button&gt;</span><br><span class="line">    &lt;script src=&quot;./diago.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line">      document.getElementById(&quot;showDiago&quot;).addEventListener(&apos;click&apos;, function(e) &#123;</span><br><span class="line">        dialog.show(&#123;</span><br><span class="line">          title: &quot;biaoti&quot;,</span><br><span class="line">          content: &quot;抱歉，该游戏暂无Android版本&quot;,</span><br><span class="line">          cancel: function() &#123;</span><br><span class="line">            console.log(111);</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">      &#125;);</span><br><span class="line">    &lt;/script&gt;</span><br><span class="line">  &lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var dialog = (function() &#123;</span><br><span class="line">  var elem, dialog, cancelBtn, confirmBtn;</span><br><span class="line">  /**</span><br><span class="line">   * @method getNeedElement 获取所需要的节点</span><br><span class="line">   */</span><br><span class="line">  var getNeedElement = function() &#123;</span><br><span class="line">    elem = document.querySelector(&quot;.dialog-wrapper&quot;);</span><br><span class="line">    dialog = document.querySelector(&quot;.dialog&quot;);</span><br><span class="line">    cancelBtn = document.querySelector(&quot;.cancel-btn&quot;);</span><br><span class="line">    confirmBtn = document.querySelector(&quot;.confirm-btn&quot;);</span><br><span class="line">  &#125;;</span><br><span class="line">  /**</span><br><span class="line">   * @method show 打开dialog组件</span><br><span class="line">   */</span><br><span class="line">  var show = function(options = &#123;&#125;) &#123;</span><br><span class="line">    let &#123;</span><br><span class="line">      title = &quot;&quot;,</span><br><span class="line">      content = &quot;默认content&quot;,</span><br><span class="line">      btns = [&quot;确定&quot;, &quot;取消&quot;],</span><br><span class="line">      confirm = null,</span><br><span class="line">      cancel = null</span><br><span class="line">    &#125; = options;</span><br><span class="line">    let btnTemp = &quot;&quot;;</span><br><span class="line">    btns.forEach((item, index) =&gt; &#123;</span><br><span class="line">      if (index == 2) return;</span><br><span class="line">      let btnClass = index == 0 ? &quot;confirm-btn&quot; : &quot;cancel-btn&quot;;</span><br><span class="line">      let temp = `&lt;div class=&quot;btn $&#123;btnClass&#125;&quot;&gt;$&#123;item&#125;&lt;/div&gt;`;</span><br><span class="line">      btnTemp += temp;</span><br><span class="line">    &#125;);</span><br><span class="line">    let html = `&lt;div class=&quot;dialog-wrapper&quot;&gt;</span><br><span class="line">      &lt;div class=&quot;dialog&quot;&gt;</span><br><span class="line">        &lt;div class=&quot;title&quot;&gt;$&#123;title&#125;&lt;/div&gt;</span><br><span class="line">        &lt;div class=&quot;content&quot;&gt;$&#123;content&#125;&lt;/div&gt;</span><br><span class="line">        &lt;div class=&quot;buttons&quot;&gt;$&#123;btnTemp&#125;&lt;/div&gt;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;`; // 添加到Body</span><br><span class="line">    document.body.innerHTML += html;</span><br><span class="line">    getNeedElement();</span><br><span class="line">    bindEvent(confirm, cancel);</span><br><span class="line">    return elem;</span><br><span class="line">  &#125;;</span><br><span class="line">  /**</span><br><span class="line">   * @method hide 关闭dialog组件</span><br><span class="line">   */</span><br><span class="line">  var hide = function() &#123;</span><br><span class="line">    elem.remove(elem);</span><br><span class="line">    // elem.parentNode.removeChild(elem);</span><br><span class="line">  &#125;;</span><br><span class="line">  /**</span><br><span class="line">   * @method bindEvent 给dialog绑定事件</span><br><span class="line">   * @param &#123;Object&#125; confirm 确认回调</span><br><span class="line">   * @param &#123;Object&#125; cancel 取消回调</span><br><span class="line">   */</span><br><span class="line">  var bindEvent = function(confirm, cancel) &#123;</span><br><span class="line">    confirmBtn &amp;&amp;</span><br><span class="line">      confirmBtn.addEventListener(&quot;click&quot;, e =&gt; &#123;</span><br><span class="line">        hide();</span><br><span class="line">        confirm &amp;&amp; confirm();</span><br><span class="line">      &#125;);</span><br><span class="line"></span><br><span class="line">    cancelBtn &amp;&amp;</span><br><span class="line">      cancelBtn.addEventListener(&quot;click&quot;, e =&gt; &#123;</span><br><span class="line">        hide();</span><br><span class="line">        cancel &amp;&amp; cancel();</span><br><span class="line">      &#125;);</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  return &#123; show, hide &#125;;</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">body,html &#123;  font-family: -apple-system, BlinkMacSystemFont, &apos;Segoe UI&apos;, Roboto, Oxygen, Ubuntu, Cantarell, &apos;Open Sans&apos;, &apos;Helvetica Neue&apos;, sans-serif;</span><br><span class="line">&#125;.dialog-wrapper &#123;  position: fixed;  display: flex;  justify-content: center;  align-items: center;  top: 0;  left: 0;  width: 100vw;  height: 100vh;  background-color: rgba(49, 49, 49, 0.5);  color: #313131;  font-size: 10px;  -webkit-tap-highlight-color: transparent;</span><br><span class="line">&#125;.dialog-wrapper.fadeIn &#123;  animation: fadeIn .2s ease;</span><br><span class="line">&#125;.dialog-wrapper.fadeOut &#123;  animation: fadeOut .2s ease forwards;</span><br><span class="line">&#125;.dialog-wrapper .dialog &#123;  position: relative;  width: 85vw;  max-width: 30em;  border-radius: .4em;  background-color: #fff;  box-sizing: border-box;  overflow: hidden;  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);</span><br><span class="line">&#125;.dialog-wrapper .dialog.slideDown &#123;  animation: slideDown .2s ease;</span><br><span class="line">&#125;.dialog-wrapper .dialog.slideUp &#123;  animation: slideUp .2s ease forwards;</span><br><span class="line">&#125;.dialog-wrapper .dialog.scaleIn &#123;  animation: scaleIn 0.2s cubic-bezier(0.07, 0.89, 0.95, 1.4);</span><br><span class="line">&#125;.dialog-wrapper .dialog.scaleOut &#123;  animation: scaleOut 0.2s cubic-bezier(0.07, 0.89, 0.95, 1.4) forwards;</span><br><span class="line">&#125;.dialog-wrapper .dialog .btn &#123;  cursor: pointer;</span><br><span class="line">&#125;.dialog-wrapper .dialog .btn:active &#123;  background-color: #f4f4f4;</span><br><span class="line">&#125;.dialog-wrapper .dialog .close-btn &#123;  position: absolute;  top: 0;  right: 0;  padding: 10px;  font-size: 1.8em;</span><br><span class="line">&#125;.dialog-wrapper .dialog .title &#123;  font-size: 1.8em;  padding: 15px;  text-align: center;  background-color: #f4f4f4;</span><br><span class="line">&#125;.dialog-wrapper .dialog .title:empty &#123;  display: none;</span><br><span class="line">&#125;.dialog-wrapper .dialog .content &#123;  padding: 40px 20px;  font-size: 1.6em;  text-align: center;</span><br><span class="line">&#125;.dialog-wrapper .dialog .buttons &#123;  font-size: 1.6em;  display: flex;  flex-flow: row-reverse;</span><br><span class="line">&#125;.dialog-wrapper .dialog .buttons .btn &#123;  flex: 1;  padding: 15px;  text-align: center;  border-top: 1px solid #ebebeb;</span><br><span class="line">&#125;.dialog-wrapper .dialog .buttons .btn.confirm-btn &#123;  color: #f2d985;</span><br><span class="line">&#125;.dialog-wrapper .dialog .buttons .btn.cancel-btn &#123;  color: #313131;  border-right: 1px solid #ebebeb;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@keyframes slideDown &#123;  from &#123;    transform: translateY(-3em);</span><br><span class="line">  &#125;  to &#123;    transform: translateY(0);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@keyframes slideUp &#123;  from &#123;    transform: translateY(0);</span><br><span class="line">  &#125;  to &#123;    transform: translateY(-3em);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@keyframes fadeIn &#123;  from &#123;    opacity: .5;</span><br><span class="line">  &#125;  to &#123;    opacity: 1;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@keyframes fadeOut &#123;  from &#123;    opacity: 1;</span><br><span class="line">  &#125;  to &#123;    opacity: 0;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@keyframes scaleIn &#123;  from &#123;    transform: scale(0.8);</span><br><span class="line">  &#125;  to &#123;    transform: scale(1);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@keyframes scaleOut &#123;  from &#123;    transform: scale(1);</span><br><span class="line">  &#125;  to &#123;    transform: scale(0.8);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-      <tags>
-        <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>小学问</title>
     <url>/2019/07/22/%E5%B0%8F%E5%AD%A6%E9%97%AE/</url>
     <content><![CDATA[<p>马东<br>马薇薇<br>邱晨<br>黄执中</p>
@@ -3031,6 +3016,21 @@ CLI：在 shell 命令中指定它们。</code></pre></li>
 ]]></content>
       <tags>
         <tag>随笔</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>封装一个组件</title>
+    <url>/2020/09/13/%E5%B0%81%E8%A3%85%E4%B8%80%E4%B8%AA%E7%BB%84%E4%BB%B6/</url>
+    <content><![CDATA[<p>自己封装一个组件</p>
+<a id="more"></a>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=&quot;en&quot;&gt;</span><br><span class="line">  &lt;head&gt;</span><br><span class="line">    &lt;meta charset=&quot;UTF-8&quot; /&gt;</span><br><span class="line">    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;</span><br><span class="line">    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;ie=edge&quot; /&gt;</span><br><span class="line">    &lt;title&gt;diago&lt;/title&gt;</span><br><span class="line">    &lt;link rel=&quot;stylesheet&quot; href=&quot;./diago.css&quot; /&gt;</span><br><span class="line">  &lt;/head&gt;</span><br><span class="line">  &lt;body&gt;</span><br><span class="line">    &lt;button id=&quot;showDiago&quot;&gt;点击打开弹窗&lt;/button&gt;</span><br><span class="line">    &lt;script src=&quot;./diago.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line">      document.getElementById(&quot;showDiago&quot;).addEventListener(&apos;click&apos;, function(e) &#123;</span><br><span class="line">        dialog.show(&#123;</span><br><span class="line">          title: &quot;biaoti&quot;,</span><br><span class="line">          content: &quot;抱歉，该游戏暂无Android版本&quot;,</span><br><span class="line">          cancel: function() &#123;</span><br><span class="line">            console.log(111);</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">      &#125;);</span><br><span class="line">    &lt;/script&gt;</span><br><span class="line">  &lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var dialog = (function() &#123;</span><br><span class="line">  var elem, dialog, cancelBtn, confirmBtn;</span><br><span class="line">  /**</span><br><span class="line">   * @method getNeedElement 获取所需要的节点</span><br><span class="line">   */</span><br><span class="line">  var getNeedElement = function() &#123;</span><br><span class="line">    elem = document.querySelector(&quot;.dialog-wrapper&quot;);</span><br><span class="line">    dialog = document.querySelector(&quot;.dialog&quot;);</span><br><span class="line">    cancelBtn = document.querySelector(&quot;.cancel-btn&quot;);</span><br><span class="line">    confirmBtn = document.querySelector(&quot;.confirm-btn&quot;);</span><br><span class="line">  &#125;;</span><br><span class="line">  /**</span><br><span class="line">   * @method show 打开dialog组件</span><br><span class="line">   */</span><br><span class="line">  var show = function(options = &#123;&#125;) &#123;</span><br><span class="line">    let &#123;</span><br><span class="line">      title = &quot;&quot;,</span><br><span class="line">      content = &quot;默认content&quot;,</span><br><span class="line">      btns = [&quot;确定&quot;, &quot;取消&quot;],</span><br><span class="line">      confirm = null,</span><br><span class="line">      cancel = null</span><br><span class="line">    &#125; = options;</span><br><span class="line">    let btnTemp = &quot;&quot;;</span><br><span class="line">    btns.forEach((item, index) =&gt; &#123;</span><br><span class="line">      if (index == 2) return;</span><br><span class="line">      let btnClass = index == 0 ? &quot;confirm-btn&quot; : &quot;cancel-btn&quot;;</span><br><span class="line">      let temp = `&lt;div class=&quot;btn $&#123;btnClass&#125;&quot;&gt;$&#123;item&#125;&lt;/div&gt;`;</span><br><span class="line">      btnTemp += temp;</span><br><span class="line">    &#125;);</span><br><span class="line">    let html = `&lt;div class=&quot;dialog-wrapper&quot;&gt;</span><br><span class="line">      &lt;div class=&quot;dialog&quot;&gt;</span><br><span class="line">        &lt;div class=&quot;title&quot;&gt;$&#123;title&#125;&lt;/div&gt;</span><br><span class="line">        &lt;div class=&quot;content&quot;&gt;$&#123;content&#125;&lt;/div&gt;</span><br><span class="line">        &lt;div class=&quot;buttons&quot;&gt;$&#123;btnTemp&#125;&lt;/div&gt;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;`; // 添加到Body</span><br><span class="line">    document.body.innerHTML += html;</span><br><span class="line">    getNeedElement();</span><br><span class="line">    bindEvent(confirm, cancel);</span><br><span class="line">    return elem;</span><br><span class="line">  &#125;;</span><br><span class="line">  /**</span><br><span class="line">   * @method hide 关闭dialog组件</span><br><span class="line">   */</span><br><span class="line">  var hide = function() &#123;</span><br><span class="line">    elem.remove(elem);</span><br><span class="line">    // elem.parentNode.removeChild(elem);</span><br><span class="line">  &#125;;</span><br><span class="line">  /**</span><br><span class="line">   * @method bindEvent 给dialog绑定事件</span><br><span class="line">   * @param &#123;Object&#125; confirm 确认回调</span><br><span class="line">   * @param &#123;Object&#125; cancel 取消回调</span><br><span class="line">   */</span><br><span class="line">  var bindEvent = function(confirm, cancel) &#123;</span><br><span class="line">    confirmBtn &amp;&amp;</span><br><span class="line">      confirmBtn.addEventListener(&quot;click&quot;, e =&gt; &#123;</span><br><span class="line">        hide();</span><br><span class="line">        confirm &amp;&amp; confirm();</span><br><span class="line">      &#125;);</span><br><span class="line"></span><br><span class="line">    cancelBtn &amp;&amp;</span><br><span class="line">      cancelBtn.addEventListener(&quot;click&quot;, e =&gt; &#123;</span><br><span class="line">        hide();</span><br><span class="line">        cancel &amp;&amp; cancel();</span><br><span class="line">      &#125;);</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  return &#123; show, hide &#125;;</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">body,html &#123;  font-family: -apple-system, BlinkMacSystemFont, &apos;Segoe UI&apos;, Roboto, Oxygen, Ubuntu, Cantarell, &apos;Open Sans&apos;, &apos;Helvetica Neue&apos;, sans-serif;</span><br><span class="line">&#125;.dialog-wrapper &#123;  position: fixed;  display: flex;  justify-content: center;  align-items: center;  top: 0;  left: 0;  width: 100vw;  height: 100vh;  background-color: rgba(49, 49, 49, 0.5);  color: #313131;  font-size: 10px;  -webkit-tap-highlight-color: transparent;</span><br><span class="line">&#125;.dialog-wrapper.fadeIn &#123;  animation: fadeIn .2s ease;</span><br><span class="line">&#125;.dialog-wrapper.fadeOut &#123;  animation: fadeOut .2s ease forwards;</span><br><span class="line">&#125;.dialog-wrapper .dialog &#123;  position: relative;  width: 85vw;  max-width: 30em;  border-radius: .4em;  background-color: #fff;  box-sizing: border-box;  overflow: hidden;  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);</span><br><span class="line">&#125;.dialog-wrapper .dialog.slideDown &#123;  animation: slideDown .2s ease;</span><br><span class="line">&#125;.dialog-wrapper .dialog.slideUp &#123;  animation: slideUp .2s ease forwards;</span><br><span class="line">&#125;.dialog-wrapper .dialog.scaleIn &#123;  animation: scaleIn 0.2s cubic-bezier(0.07, 0.89, 0.95, 1.4);</span><br><span class="line">&#125;.dialog-wrapper .dialog.scaleOut &#123;  animation: scaleOut 0.2s cubic-bezier(0.07, 0.89, 0.95, 1.4) forwards;</span><br><span class="line">&#125;.dialog-wrapper .dialog .btn &#123;  cursor: pointer;</span><br><span class="line">&#125;.dialog-wrapper .dialog .btn:active &#123;  background-color: #f4f4f4;</span><br><span class="line">&#125;.dialog-wrapper .dialog .close-btn &#123;  position: absolute;  top: 0;  right: 0;  padding: 10px;  font-size: 1.8em;</span><br><span class="line">&#125;.dialog-wrapper .dialog .title &#123;  font-size: 1.8em;  padding: 15px;  text-align: center;  background-color: #f4f4f4;</span><br><span class="line">&#125;.dialog-wrapper .dialog .title:empty &#123;  display: none;</span><br><span class="line">&#125;.dialog-wrapper .dialog .content &#123;  padding: 40px 20px;  font-size: 1.6em;  text-align: center;</span><br><span class="line">&#125;.dialog-wrapper .dialog .buttons &#123;  font-size: 1.6em;  display: flex;  flex-flow: row-reverse;</span><br><span class="line">&#125;.dialog-wrapper .dialog .buttons .btn &#123;  flex: 1;  padding: 15px;  text-align: center;  border-top: 1px solid #ebebeb;</span><br><span class="line">&#125;.dialog-wrapper .dialog .buttons .btn.confirm-btn &#123;  color: #f2d985;</span><br><span class="line">&#125;.dialog-wrapper .dialog .buttons .btn.cancel-btn &#123;  color: #313131;  border-right: 1px solid #ebebeb;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@keyframes slideDown &#123;  from &#123;    transform: translateY(-3em);</span><br><span class="line">  &#125;  to &#123;    transform: translateY(0);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@keyframes slideUp &#123;  from &#123;    transform: translateY(0);</span><br><span class="line">  &#125;  to &#123;    transform: translateY(-3em);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@keyframes fadeIn &#123;  from &#123;    opacity: .5;</span><br><span class="line">  &#125;  to &#123;    opacity: 1;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@keyframes fadeOut &#123;  from &#123;    opacity: 1;</span><br><span class="line">  &#125;  to &#123;    opacity: 0;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@keyframes scaleIn &#123;  from &#123;    transform: scale(0.8);</span><br><span class="line">  &#125;  to &#123;    transform: scale(1);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@keyframes scaleOut &#123;  from &#123;    transform: scale(1);</span><br><span class="line">  &#125;  to &#123;    transform: scale(0.8);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>前端</tag>
       </tags>
   </entry>
   <entry>
@@ -3086,22 +3086,6 @@ CLI：在 shell 命令中指定它们。</code></pre></li>
       </tags>
   </entry>
   <entry>
-    <title>常见属性失效情况</title>
-    <url>/2018/11/06/%E5%B8%B8%E8%A7%81%E5%B1%9E%E6%80%A7%E5%A4%B1%E6%95%88%E6%83%85%E5%86%B5/</url>
-    <content><![CDATA[<p>这里记录属性失效的情况</p>
-<a id="more"></a>
-<ol>
-<li>z-index失效<br> 1、父标签 position属性为relative；<br> 2、问题标签含有浮动(float)属性；<br> 3、Z-index 仅能在定位元素上奏效；</li>
-<li>margin:0 auto失效<br> 1、问题元素必须要有宽度<br> 2、问题元素不能浮动</li>
-<li>vertical-align失效<br> 1、只有当元素属于inline或者inline-block时，其vertical-align才有效</li>
-</ol>
-]]></content>
-      <tags>
-        <tag>前端</tag>
-        <tag>css</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>小程序同层渲染那些坑</title>
     <url>/2021/05/14/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%90%8C%E5%B1%82%E6%B8%B2%E6%9F%93%E9%82%A3%E4%BA%9B%E5%9D%91/</url>
     <content><![CDATA[<ol>
@@ -3125,6 +3109,22 @@ CLI：在 shell 命令中指定它们。</code></pre></li>
       <tags>
         <tag>前端</tag>
         <tag>小程序</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>常见属性失效情况</title>
+    <url>/2018/11/06/%E5%B8%B8%E8%A7%81%E5%B1%9E%E6%80%A7%E5%A4%B1%E6%95%88%E6%83%85%E5%86%B5/</url>
+    <content><![CDATA[<p>这里记录属性失效的情况</p>
+<a id="more"></a>
+<ol>
+<li>z-index失效<br> 1、父标签 position属性为relative；<br> 2、问题标签含有浮动(float)属性；<br> 3、Z-index 仅能在定位元素上奏效；</li>
+<li>margin:0 auto失效<br> 1、问题元素必须要有宽度<br> 2、问题元素不能浮动</li>
+<li>vertical-align失效<br> 1、只有当元素属于inline或者inline-block时，其vertical-align才有效</li>
+</ol>
+]]></content>
+      <tags>
+        <tag>前端</tag>
+        <tag>css</tag>
       </tags>
   </entry>
   <entry>
@@ -3363,6 +3363,15 @@ async function async1() {
       </tags>
   </entry>
   <entry>
+    <title>支付宝体验设计精髓</title>
+    <url>/2019/12/01/%E6%94%AF%E4%BB%98%E5%AE%9D%E4%BD%93%E9%AA%8C%E8%AE%BE%E8%AE%A1%E7%B2%BE%E9%AB%93/</url>
+    <content><![CDATA[<p>哈</p>
+]]></content>
+      <tags>
+        <tag>随笔</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>数据库</title>
     <url>/2017/11/29/%E6%95%B0%E6%8D%AE%E5%BA%93/</url>
     <content><![CDATA[<ol>
@@ -3398,15 +3407,6 @@ async function async1() {
       <tags>
         <tag>面试</tag>
         <tag>数据库</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>支付宝体验设计精髓</title>
-    <url>/2019/12/01/%E6%94%AF%E4%BB%98%E5%AE%9D%E4%BD%93%E9%AA%8C%E8%AE%BE%E8%AE%A1%E7%B2%BE%E9%AB%93/</url>
-    <content><![CDATA[<p>哈</p>
-]]></content>
-      <tags>
-        <tag>随笔</tag>
       </tags>
   </entry>
   <entry>
@@ -3530,21 +3530,21 @@ kmp算法</code></pre><p>4.逆波兰表达式<br>中缀表达式转成后缀表�
       </tags>
   </entry>
   <entry>
-    <title>最近沉迷于模拟人生</title>
-    <url>/2018/01/07/%E6%9C%80%E8%BF%91%E6%B2%89%E8%BF%B7%E4%BA%8E%E6%A8%A1%E6%8B%9F%E4%BA%BA%E7%94%9F/</url>
-    <content><![CDATA[<p>如题，最近沉迷于模拟人生这个单机游戏，熬夜玩游戏涨了两颗痘痘~<br>不太爱玩竞技类的游戏，像解密啊养成类的游戏对我来说就比较耐玩了<br>感觉很神奇啊 屏幕里的小人们，忙忙碌碌，有时候也会按照自己的想法产生一些行为<del>很可爱</del><br>姑且认为是他们是他们自己的想法吧</p>
-]]></content>
-      <tags>
-        <tag>随笔</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>本地运行服务器</title>
     <url>/2019/03/17/%E6%9C%AC%E5%9C%B0%E8%BF%90%E8%A1%8C%E6%9C%8D%E5%8A%A1%E5%99%A8/</url>
     <content><![CDATA[<p>可以使用基于node的 http-server插件运行本地服务<br>或者 anywhere插件</p>
 ]]></content>
       <tags>
         <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>最近沉迷于模拟人生</title>
+    <url>/2018/01/07/%E6%9C%80%E8%BF%91%E6%B2%89%E8%BF%B7%E4%BA%8E%E6%A8%A1%E6%8B%9F%E4%BA%BA%E7%94%9F/</url>
+    <content><![CDATA[<p>如题，最近沉迷于模拟人生这个单机游戏，熬夜玩游戏涨了两颗痘痘~<br>不太爱玩竞技类的游戏，像解密啊养成类的游戏对我来说就比较耐玩了<br>感觉很神奇啊 屏幕里的小人们，忙忙碌碌，有时候也会按照自己的想法产生一些行为<del>很可爱</del><br>姑且认为是他们是他们自己的想法吧</p>
+]]></content>
+      <tags>
+        <tag>随笔</tag>
       </tags>
   </entry>
   <entry>
@@ -3620,26 +3620,6 @@ kmp算法</code></pre><p>4.逆波兰表达式<br>中缀表达式转成后缀表�
       </tags>
   </entry>
   <entry>
-    <title>移动端长按弹出事件</title>
-    <url>/2018/11/05/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%95%BF%E6%8C%89%E5%BC%B9%E5%87%BA%E4%BA%8B%E4%BB%B6/</url>
-    <content><![CDATA[<p>这是在尝试写购物车的时候遇到的问题，长按商品弹出删除的选项框</p>
-<a id="more"></a>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"> // 长按弹出删除弹窗</span><br><span class="line">        // var timeOUtEvent = 0;</span><br><span class="line">        // $(&apos;.shops ul&apos;).on(&#123;</span><br><span class="line">        //     touchstart: function (e) &#123;</span><br><span class="line">        //         var that = $(this);</span><br><span class="line">        //         timeOUtEvent = setTimeout(function () &#123;</span><br><span class="line">        //             that.addClass(&apos;waitdel&apos;);</span><br><span class="line">        //             timeOUtEvent = 0;</span><br><span class="line">        //             pop($(&apos;#pop-del&apos;));</span><br><span class="line">        //         &#125;, 2000);</span><br><span class="line">        //         e.preventDefault();</span><br><span class="line">        //     &#125;,</span><br><span class="line">        //     touchmove: function () &#123;</span><br><span class="line">        //         clearTimeout(timeOUtEvent);</span><br><span class="line">        //         timeOUtEvent = 0;</span><br><span class="line">        //     &#125;,</span><br><span class="line">        //     touchend: function () &#123;</span><br><span class="line">        //         clearTimeout(timeOUtEvent);</span><br><span class="line">        //         if (timeOUtEvent != 0) &#123;</span><br><span class="line">        //             $(&apos;#cart&apos;).click(</span><br><span class="line">        //                 function (e) &#123;</span><br><span class="line">        //                         console.log(1);</span><br><span class="line">        //                     if(e.target == $(&apos;#count&apos;))&#123;</span><br><span class="line">        //                         console.log(12);</span><br><span class="line">        //             change($(this).find(&apos;#count&apos;));</span><br><span class="line">        //                     &#125;</span><br><span class="line">        //                   &#125;</span><br><span class="line">        //             )</span><br><span class="line">        //             // change($(this).find(&apos;#count&apos;));</span><br><span class="line">        //             // console.log(timeOUtEvent)</span><br><span class="line">        //         &#125;</span><br><span class="line">        //         // return false;</span><br><span class="line">        //     &#125;</span><br><span class="line">        // &#125;, &apos;li&apos;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">// 长按弹出删除弹窗结束</span><br><span class="line">        var timer = null;</span><br><span class="line">        var t = 0;</span><br><span class="line">        $(&apos;.shops ul&apos;).on(&#123;</span><br><span class="line">            touchstart: function (e) &#123;</span><br><span class="line">                var that = $(this);</span><br><span class="line">                timer = setTimeout(function () &#123;</span><br><span class="line">                    pop($(&apos;#pop-del&apos;));</span><br><span class="line">                    that.addClass(&apos;waitdel&apos;)</span><br><span class="line">                    clearTimeout(timer);</span><br><span class="line">                &#125;, 1000)</span><br><span class="line">                e.preventDefault();</span><br><span class="line">            &#125;,</span><br><span class="line">            touchend: function () &#123;</span><br><span class="line">                clearTimeout(timer);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;, &apos;li&apos;)</span><br><span class="line">        //模拟点击事件</span><br><span class="line">        //点击增加商品数量</span><br><span class="line">        var t = 0;</span><br><span class="line">        $(&apos;.shops ul&apos;).on(&#123;</span><br><span class="line">            touchstart: function () &#123;</span><br><span class="line">                t = new Date().getTime();</span><br><span class="line">                console.log(t)</span><br><span class="line">            &#125;,</span><br><span class="line">            touchend: function () &#123;</span><br><span class="line">                var newT = new Date().getTime();</span><br><span class="line">                if (newT - t &lt; 300) &#123;</span><br><span class="line">                    var count = $(this).prev().text();</span><br><span class="line">                    count = parseInt(count) + 1;</span><br><span class="line">                    $(this).prev().text(count);</span><br><span class="line">                    totalprice();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;, &apos;span.ri&apos;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">两种方法，各有千秋</span><br></pre></td></tr></table></figure>]]></content>
-      <tags>
-        <tag>前端</tag>
-        <tag>移动端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>移动端不满一屏的解决方案</title>
-    <url>/2019/03/20/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E4%B8%8D%E6%BB%A1%E4%B8%80%E5%B1%8F%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</url>
-    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">body::before&#123;</span><br><span class="line">    content:&quot; &quot;;</span><br><span class="line">    position:absolute;</span><br><span class="line">    left:0;</span><br><span class="line">    right:0;</span><br><span class="line">    top:0;</span><br><span class="line">    bottom:0;</span><br><span class="line">    background-color:#ccc;/* 颜色自定义 */</span><br><span class="line">    z-index:-100;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-      <tags>
-        <tag>前端</tag>
-        <tag>css</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>移动端布局（一）</title>
     <url>/2018/05/15/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%B8%83%E5%B1%80%EF%BC%88%E4%B8%80%EF%BC%89/</url>
     <content><![CDATA[<p>本来想自己写，但是别人都已经写的非常好了。。。</p>
@@ -3649,17 +3629,6 @@ kmp算法</code></pre><p>4.逆波兰表达式<br>中缀表达式转成后缀表�
       <tags>
         <tag>前端</tag>
         <tag>css</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>移动端隐藏滚动条</title>
-    <url>/2019/11/25/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%9A%90%E8%97%8F%E6%BB%9A%E5%8A%A8%E6%9D%A1/</url>
-    <content><![CDATA[<p>记录工作中遇到的问题，移动端的滚动条在某些情况下十分不美观，特别是在可滚动的表格中，显得格外的不精致。</p>
-<a id="more"></a>
-<p><code>::-webkit-scrollbar {display: none;}</code><br>在ios端并不起作用，安卓端我没有测试<br>针对ios不生效的情况，做如下处理<br>让滚动条离远点超出父元素的范围，在通过隐藏父元素的超出部分让滚动条消失。由于子元素的高度大于父元素的高度，超过父元素的高度的内容被剪裁。因此，子元素的滚动条就被剪裁掉了</p>
-]]></content>
-      <tags>
-        <tag>前端</tag>
       </tags>
   </entry>
   <entry>
@@ -3724,40 +3693,25 @@ kmp算法</code></pre><p>4.逆波兰表达式<br>中缀表达式转成后缀表�
       </tags>
   </entry>
   <entry>
-    <title>自己搞一个npm包</title>
-    <url>/2021/05/18/%E8%87%AA%E5%B7%B1%E6%90%9E%E4%B8%80%E4%B8%AAnpm%E5%8C%85/</url>
-    <content><![CDATA[<p>搞一个npm包给其他业务部门使用 过程中还是有许多问题的<br>主要是 在测试过程中频繁发布npm包 以及版本迭代太快 业务部门更新不及时</p>
+    <title>移动端长按弹出事件</title>
+    <url>/2018/11/05/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%95%BF%E6%8C%89%E5%BC%B9%E5%87%BA%E4%BA%8B%E4%BB%B6/</url>
+    <content><![CDATA[<p>这是在尝试写购物车的时候遇到的问题，长按商品弹出删除的选项框</p>
 <a id="more"></a>
-<p>npm打包基础<br>注册一个npm账号<br>npm login<br>npm publish</p>
-<p>打包工具<br>rollup </p>
-<p>打包发布配置<br><a href="https://wine1.github.io/2021/04/25/%E5%8F%91%E5%B8%83%E4%B8%80%E4%B8%AAnpm%E5%8C%85/#more">详见另一个文章</a></p>
-<p>测试方法<br>之前真机测试只要发布测试环境即可，但是现在要先发布npm包，安装npm包，然后再发布测试环境，从一个步骤变成了三个步骤。<br>npm link</p>
-<blockquote>
-<p>npm link可以让项目和要使用的npm包之间建立符号连接。</p>
-</blockquote>
-<p>换句话说，如果在项目A中使用组件包B，之前要把B打包并发布，然后项目A安装B，打包并发布测试环境才能验证，现在只需要B打包一下，A直接打包并发布测试环境即可（A打包时获取的是B在本地的打包文件, 即写在B package.json中的main文件）</p>
-<blockquote>
-<p>而要使用npm link, 要做到如下几步：<br>在B包里：<br>npm link // 相当于npm install B -g<br>在A包里：<br>npm link B // 代码无需修改，package.json中引用B的包会自动指向本地B的打包文件<br>A包发布测试环境测试</p>
-</blockquote>
-<p>版本管理<br>tag</p>
-<blockquote>
-<p>tag可以用来指带版本号，用户可以使用npm install <name>@<tag>安装</tag></name></p>
-</blockquote>
-]]></content>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"> // 长按弹出删除弹窗</span><br><span class="line">        // var timeOUtEvent = 0;</span><br><span class="line">        // $(&apos;.shops ul&apos;).on(&#123;</span><br><span class="line">        //     touchstart: function (e) &#123;</span><br><span class="line">        //         var that = $(this);</span><br><span class="line">        //         timeOUtEvent = setTimeout(function () &#123;</span><br><span class="line">        //             that.addClass(&apos;waitdel&apos;);</span><br><span class="line">        //             timeOUtEvent = 0;</span><br><span class="line">        //             pop($(&apos;#pop-del&apos;));</span><br><span class="line">        //         &#125;, 2000);</span><br><span class="line">        //         e.preventDefault();</span><br><span class="line">        //     &#125;,</span><br><span class="line">        //     touchmove: function () &#123;</span><br><span class="line">        //         clearTimeout(timeOUtEvent);</span><br><span class="line">        //         timeOUtEvent = 0;</span><br><span class="line">        //     &#125;,</span><br><span class="line">        //     touchend: function () &#123;</span><br><span class="line">        //         clearTimeout(timeOUtEvent);</span><br><span class="line">        //         if (timeOUtEvent != 0) &#123;</span><br><span class="line">        //             $(&apos;#cart&apos;).click(</span><br><span class="line">        //                 function (e) &#123;</span><br><span class="line">        //                         console.log(1);</span><br><span class="line">        //                     if(e.target == $(&apos;#count&apos;))&#123;</span><br><span class="line">        //                         console.log(12);</span><br><span class="line">        //             change($(this).find(&apos;#count&apos;));</span><br><span class="line">        //                     &#125;</span><br><span class="line">        //                   &#125;</span><br><span class="line">        //             )</span><br><span class="line">        //             // change($(this).find(&apos;#count&apos;));</span><br><span class="line">        //             // console.log(timeOUtEvent)</span><br><span class="line">        //         &#125;</span><br><span class="line">        //         // return false;</span><br><span class="line">        //     &#125;</span><br><span class="line">        // &#125;, &apos;li&apos;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">// 长按弹出删除弹窗结束</span><br><span class="line">        var timer = null;</span><br><span class="line">        var t = 0;</span><br><span class="line">        $(&apos;.shops ul&apos;).on(&#123;</span><br><span class="line">            touchstart: function (e) &#123;</span><br><span class="line">                var that = $(this);</span><br><span class="line">                timer = setTimeout(function () &#123;</span><br><span class="line">                    pop($(&apos;#pop-del&apos;));</span><br><span class="line">                    that.addClass(&apos;waitdel&apos;)</span><br><span class="line">                    clearTimeout(timer);</span><br><span class="line">                &#125;, 1000)</span><br><span class="line">                e.preventDefault();</span><br><span class="line">            &#125;,</span><br><span class="line">            touchend: function () &#123;</span><br><span class="line">                clearTimeout(timer);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;, &apos;li&apos;)</span><br><span class="line">        //模拟点击事件</span><br><span class="line">        //点击增加商品数量</span><br><span class="line">        var t = 0;</span><br><span class="line">        $(&apos;.shops ul&apos;).on(&#123;</span><br><span class="line">            touchstart: function () &#123;</span><br><span class="line">                t = new Date().getTime();</span><br><span class="line">                console.log(t)</span><br><span class="line">            &#125;,</span><br><span class="line">            touchend: function () &#123;</span><br><span class="line">                var newT = new Date().getTime();</span><br><span class="line">                if (newT - t &lt; 300) &#123;</span><br><span class="line">                    var count = $(this).prev().text();</span><br><span class="line">                    count = parseInt(count) + 1;</span><br><span class="line">                    $(this).prev().text(count);</span><br><span class="line">                    totalprice();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;, &apos;span.ri&apos;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">两种方法，各有千秋</span><br></pre></td></tr></table></figure>]]></content>
       <tags>
         <tag>前端</tag>
-        <tag>工程化</tag>
+        <tag>移动端</tag>
       </tags>
   </entry>
   <entry>
-    <title>类似fontawesome图标库的实现</title>
-    <url>/2019/12/03/%E7%B1%BB%E4%BC%BCfontawesome%E5%9B%BE%E6%A0%87%E5%BA%93%E7%9A%84%E5%AE%9E%E7%8E%B0/</url>
-    <content><![CDATA[<p>通常一个app中，正常情况下会有大量重复使用的小图标icon 这些图标以图片的形式存在的话，虽然小，但每个图片都会有一个请求。<br>近日我司一个从阿里来的大佬给提供了另一个做前端小图标的思路。<br>类似 <a href="http://www.fontawesome.com.cn/" target="_blank" rel="noopener">fontawesome</a> </p>
-<p>自己实现类似的库，可以通过这种方法(<a href="https://zhuanlan.zhihu.com/p/22724856" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/22724856</a>)</p>
+    <title>移动端隐藏滚动条</title>
+    <url>/2019/11/25/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%9A%90%E8%97%8F%E6%BB%9A%E5%8A%A8%E6%9D%A1/</url>
+    <content><![CDATA[<p>记录工作中遇到的问题，移动端的滚动条在某些情况下十分不美观，特别是在可滚动的表格中，显得格外的不精致。</p>
+<a id="more"></a>
+<p><code>::-webkit-scrollbar {display: none;}</code><br>在ios端并不起作用，安卓端我没有测试<br>针对ios不生效的情况，做如下处理<br>让滚动条离远点超出父元素的范围，在通过隐藏父元素的超出部分让滚动条消失。由于子元素的高度大于父元素的高度，超过父元素的高度的内容被剪裁。因此，子元素的滚动条就被剪裁掉了</p>
 ]]></content>
       <tags>
         <tag>前端</tag>
-        <tag>css</tag>
       </tags>
   </entry>
   <entry>
@@ -3774,6 +3728,47 @@ kmp算法</code></pre><p>4.逆波兰表达式<br>中缀表达式转成后缀表�
 <p>目前存在的问题：<br>没怎么做定制的主页<br>不晓得干嘛<br>用经常要服务器重启之后才能重新连上数据库</p>
 <p>一个大坑<br><a href="https://bbs.aliyun.com/read/269743.html" target="_blank" rel="noopener">https://bbs.aliyun.com/read/269743.html</a></p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>类似fontawesome图标库的实现</title>
+    <url>/2019/12/03/%E7%B1%BB%E4%BC%BCfontawesome%E5%9B%BE%E6%A0%87%E5%BA%93%E7%9A%84%E5%AE%9E%E7%8E%B0/</url>
+    <content><![CDATA[<p>通常一个app中，正常情况下会有大量重复使用的小图标icon 这些图标以图片的形式存在的话，虽然小，但每个图片都会有一个请求。<br>近日我司一个从阿里来的大佬给提供了另一个做前端小图标的思路。<br>类似 <a href="http://www.fontawesome.com.cn/" target="_blank" rel="noopener">fontawesome</a> </p>
+<p>自己实现类似的库，可以通过这种方法(<a href="https://zhuanlan.zhihu.com/p/22724856" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/22724856</a>)</p>
+]]></content>
+      <tags>
+        <tag>前端</tag>
+        <tag>css</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>移动端不满一屏的解决方案</title>
+    <url>/2019/03/20/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E4%B8%8D%E6%BB%A1%E4%B8%80%E5%B1%8F%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</url>
+    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">body::before&#123;</span><br><span class="line">    content:&quot; &quot;;</span><br><span class="line">    position:absolute;</span><br><span class="line">    left:0;</span><br><span class="line">    right:0;</span><br><span class="line">    top:0;</span><br><span class="line">    bottom:0;</span><br><span class="line">    background-color:#ccc;/* 颜色自定义 */</span><br><span class="line">    z-index:-100;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>前端</tag>
+        <tag>css</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>网络之option</title>
+    <url>/2021/04/17/%E7%BD%91%E7%BB%9C%E4%B9%8Boption/</url>
+    <content><![CDATA[<p>MDN的CORS一文中提到：<br>规范要求，对那些可能对服务器数据产生副作用的 HTTP 请求方法（特别是 GET 以外的 HTTP 请求，或者搭配某些 MIME 类型的 POST 请求），浏览器必须首先使用 OPTIONS 方法发起一个预检请求（preflight request），从而获知服务端是否允许该跨域请求。</p>
+<a id="more"></a>
+<p>某些请求不会触发 CORS 预检请求，这样的请求一般称为”简单请求”,而会触发预检的请求则称为”复杂请求”。</p>
+<p>简单请求：<br>简单请求的 HTTP 方法只能是 GET、HEAD 或 POST<br>简单请求的 HTTP 头只能是 Accept/Accept-Language/Conent-Language/Content-Type 等<br>简单请求的 Content-Type 头只能是 text/plain、multipart/form-data 或 application/x-www-form-urlencoded</p>
+<h3 id="CORS预检请求触发条件"><a href="#CORS预检请求触发条件" class="headerlink" title="CORS预检请求触发条件"></a>CORS预检请求触发条件</h3><ol>
+<li>使用了下面任一HTTP 方法：<br>PUT/DELETE/CONNECT/OPTIONS/TRACE/PATCH     </li>
+<li>人为设置了以下集合之外首部字段：<br>Accept/Accept-Language/Content-Language/Content-Type/DPR/Downlink/Save-Data/Viewport-Width/Width     </li>
+<li>Content-Type 的值不属于下列之一:<br>application/x-www-form-urlencoded、multipart/form-data、text/plain</li>
+</ol>
+<h3 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h3><p>当我们发起跨域请求时，如果是简单请求，那么我们只会发出一次请求，但是如果是复杂请求则先发出 options 请求，用于确认目标资源是否支持跨域，然后浏览器会根据服务端响应的 header 自动处理剩余的请求，如果响应支持跨域，则继续发出正常请求，如果不支持，则在控制台显示错误。</p>
+<p>由此可见，当触发预检时，跨域请求便会发送 2 次请求，既增加了请求数，也延迟了请求真正发起的时间，严重影响性能。</p>
+<p>所以，我们可以优化 Options 请求，主要有 2 种方法。</p>
+<p>转为简单请求，如用 JSONP 做跨域请求<br>对 options 请求进行缓存，服务器端设置 Access-Control-Max-Age 字段，那么当第一次请求该 URL 时会发出 OPTIONS 请求，浏览器会根据返回的 Access-Control-Max-Age 字段缓存该请求的 OPTIONS 预检请求的响应结果（具体缓存时间还取决于浏览器的支持的默认最大值，取两者最小值，一般为 10 分钟）。在缓存有效期内，该资源的请求（URL 和 header 字段都相同的情况下）不会再触发预检。</p>
+]]></content>
+      <tags>
+        <tag>网络</tag>
+      </tags>
   </entry>
   <entry>
     <title>网络</title>
@@ -3935,27 +3930,6 @@ kmp算法</code></pre><p>4.逆波兰表达式<br>中缀表达式转成后缀表�
       </tags>
   </entry>
   <entry>
-    <title>网络之option</title>
-    <url>/2021/04/17/%E7%BD%91%E7%BB%9C%E4%B9%8Boption/</url>
-    <content><![CDATA[<p>MDN的CORS一文中提到：<br>规范要求，对那些可能对服务器数据产生副作用的 HTTP 请求方法（特别是 GET 以外的 HTTP 请求，或者搭配某些 MIME 类型的 POST 请求），浏览器必须首先使用 OPTIONS 方法发起一个预检请求（preflight request），从而获知服务端是否允许该跨域请求。</p>
-<a id="more"></a>
-<p>某些请求不会触发 CORS 预检请求，这样的请求一般称为”简单请求”,而会触发预检的请求则称为”复杂请求”。</p>
-<p>简单请求：<br>简单请求的 HTTP 方法只能是 GET、HEAD 或 POST<br>简单请求的 HTTP 头只能是 Accept/Accept-Language/Conent-Language/Content-Type 等<br>简单请求的 Content-Type 头只能是 text/plain、multipart/form-data 或 application/x-www-form-urlencoded</p>
-<h3 id="CORS预检请求触发条件"><a href="#CORS预检请求触发条件" class="headerlink" title="CORS预检请求触发条件"></a>CORS预检请求触发条件</h3><ol>
-<li>使用了下面任一HTTP 方法：<br>PUT/DELETE/CONNECT/OPTIONS/TRACE/PATCH     </li>
-<li>人为设置了以下集合之外首部字段：<br>Accept/Accept-Language/Content-Language/Content-Type/DPR/Downlink/Save-Data/Viewport-Width/Width     </li>
-<li>Content-Type 的值不属于下列之一:<br>application/x-www-form-urlencoded、multipart/form-data、text/plain</li>
-</ol>
-<h3 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h3><p>当我们发起跨域请求时，如果是简单请求，那么我们只会发出一次请求，但是如果是复杂请求则先发出 options 请求，用于确认目标资源是否支持跨域，然后浏览器会根据服务端响应的 header 自动处理剩余的请求，如果响应支持跨域，则继续发出正常请求，如果不支持，则在控制台显示错误。</p>
-<p>由此可见，当触发预检时，跨域请求便会发送 2 次请求，既增加了请求数，也延迟了请求真正发起的时间，严重影响性能。</p>
-<p>所以，我们可以优化 Options 请求，主要有 2 种方法。</p>
-<p>转为简单请求，如用 JSONP 做跨域请求<br>对 options 请求进行缓存，服务器端设置 Access-Control-Max-Age 字段，那么当第一次请求该 URL 时会发出 OPTIONS 请求，浏览器会根据返回的 Access-Control-Max-Age 字段缓存该请求的 OPTIONS 预检请求的响应结果（具体缓存时间还取决于浏览器的支持的默认最大值，取两者最小值，一般为 10 分钟）。在缓存有效期内，该资源的请求（URL 和 header 字段都相同的情况下）不会再触发预检。</p>
-]]></content>
-      <tags>
-        <tag>网络</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>记第一次使用node.js开发的过程</title>
     <url>/2017/12/19/%E8%AE%B0%E7%AC%AC%E4%B8%80%E6%AC%A1%E4%BD%BF%E7%94%A8node-js%E5%BC%80%E5%8F%91%E7%9A%84%E8%BF%87%E7%A8%8B/</url>
     <content><![CDATA[<p>看了几天node.js的书和视频，今天终于是到了要动手写代码的时候了。模仿书上的小demo，做个微博~</p>
@@ -3994,22 +3968,17 @@ kmp算法</code></pre><p>4.逆波兰表达式<br>中缀表达式转成后缀表�
       </tags>
   </entry>
   <entry>
-    <title>逻辑思考的工具</title>
-    <url>/2019/08/19/%E9%80%BB%E8%BE%91%E6%80%9D%E8%80%83%E7%9A%84%E5%B7%A5%E5%85%B7/</url>
-    <content><![CDATA[<p>古语有言‘学而不思则罔’，读再多的书，看再多的信息，不会加以辨别全盘接受或者彻底否定，也没有一点用处。这是一个信息爆炸的时代，每天我们都会接触到各种各样的信息，如何处理这些信息呢 下面是一些方法 不妨试试</p>
+    <title>解决图片宽高自适应需求：object-fit</title>
+    <url>/2019/07/17/%E8%A7%A3%E5%86%B3%E5%9B%BE%E7%89%87%E5%AE%BD%E9%AB%98%E8%87%AA%E9%80%82%E5%BA%94%E9%9C%80%E6%B1%82%EF%BC%9Aobject-fit/</url>
+    <content><![CDATA[<p>在日常的需求中，有这么一个场景：<br>文本中可能会穿插一些图片，但是这个图片的大小啊长宽比啊什么的 都是不确定的。<br>但我们要它美观啊，好看啊，所以要给它一个确定的大小，但同时让展示出来效果尽可能是图片的主体而不是边边角角。<br>这时候，有一个不常见的利器了 object-fit</p>
 <a id="more"></a>
-<p>证有不证无<br>不存在的东西，就没有办法被证明，此时只需要证明存在，便可以驳倒“不存在”的观点。生活中我们也经常陷入一种困境，即抓着自己的情绪不放，试图证明一个不存在的东西。<br>对立成因的谬误:<br>有时候，事情的因果关系可能是相反，符合统计学的规律并不代表符合因果关系。<br>一个简单的判断标准：是否可以做实验<br>诉诸完美的谬误：<br>凡事不必追求完美，在有一个大体的计划时，就去做好了，在尝试中完善自己的想法。追求思想上的完美，大多数会成为行动上的矮子。<br>滑坡谬误：<br>将小事情放大到无限大<br>这其实也是归谬法的应用，即确定一个观点，将这个推演到极致从而得出一个荒谬的结论。但是其实，好多小事情，并不会产生那么大的坏影响不要对自己太苛刻~<br>重复命名的谬误：<br>翻来覆去的废话，并没有以新观点去证明某个观点。同时也可以用这种方法来忽悠人哈哈<br>归因谬误：<br>人都趋向于自我合理化，把自己的成功归功于自己的聪明，失败归咎于坏运气。这种思维容易让人陷入自我安慰和自我麻痹，并不能从成功和失败中吸取经验和教训。<br>分解的谬误：<br>人们总是倾向于相信自己相信的东西，从一个整体中，有意无意地挑出自己符合自己信念的东西，用以加深自己的信念，这种观念容易让人陷入一种盲目的自信和狭隘，从而产生一种错误的信念，并且愈发坚定，在错误的道路上坚定的越走越远。</p>
-<p>非黑即白的二分法谬误<br>世界并不是黑白的，大多数事情其实处于暧昧的灰色地带，武断的下结论，说它好，或者不好，都是把问题过于简单化，这样，通常能得出一些鸡汤式的结论，除了自我合理化之外，并没有实际的用处。</p>
+<p>mdn的官方解释是 指定可替换元素的内容应该如何适应到其使用的高度和宽度确定的框。<br>其属性值有<br>fill:被替换的内容正好填充元素的内容框。整个对象将完全填充此框。如果对象的宽高比与内容框不相匹配，那么该对象将被拉伸以适应内容框。<br>contain:被替换的内容将被缩放，以在填充元素的内容框时保持其宽高比。 整个对象在填充盒子的同时保留其长宽比，因此如果宽高比与框的宽高比不匹配，该对象将被添加“黑边”。<br>cover:被替换的内容在保持其宽高比的同时填充元素的整个内容框。如果对象的宽高比与内容框不相匹配，该对象将被剪裁以适应内容框。<br>none:被替换的内容将保持其原有的尺寸。<br>scale-down:内容的尺寸与 none 或 contain 中的一个相同，取决于它们两个之间谁得到的对象尺寸会更小一些。</p>
+<p>而我在开头提到的需求场景是可以用cover属性值来实现了~<br>css果然是博大精深啊<br>值得好好学习<br><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/object-fit" target="_blank" rel="noopener">mdn地址</a></p>
 ]]></content>
       <tags>
-        <tag>随笔</tag>
+        <tag>前端</tag>
+        <tag>css</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>跨域</title>
-    <url>/2021/03/03/%E8%B7%A8%E5%9F%9F/</url>
-    <content><![CDATA[<p>谷歌浏览器中Response中set-cookie无效<br><a href="https://blog.csdn.net/Ych_cxy/article/details/107673208" target="_blank" rel="noopener">https://blog.csdn.net/Ych_cxy/article/details/107673208</a></p>
-]]></content>
   </entry>
   <entry>
     <title>读《对赌》</title>
@@ -4044,16 +4013,21 @@ kmp算法</code></pre><p>4.逆波兰表达式<br>中缀表达式转成后缀表�
       </tags>
   </entry>
   <entry>
-    <title>解决图片宽高自适应需求：object-fit</title>
-    <url>/2019/07/17/%E8%A7%A3%E5%86%B3%E5%9B%BE%E7%89%87%E5%AE%BD%E9%AB%98%E8%87%AA%E9%80%82%E5%BA%94%E9%9C%80%E6%B1%82%EF%BC%9Aobject-fit/</url>
-    <content><![CDATA[<p>在日常的需求中，有这么一个场景：<br>文本中可能会穿插一些图片，但是这个图片的大小啊长宽比啊什么的 都是不确定的。<br>但我们要它美观啊，好看啊，所以要给它一个确定的大小，但同时让展示出来效果尽可能是图片的主体而不是边边角角。<br>这时候，有一个不常见的利器了 object-fit</p>
+    <title>跨域</title>
+    <url>/2021/03/03/%E8%B7%A8%E5%9F%9F/</url>
+    <content><![CDATA[<p>谷歌浏览器中Response中set-cookie无效<br><a href="https://blog.csdn.net/Ych_cxy/article/details/107673208" target="_blank" rel="noopener">https://blog.csdn.net/Ych_cxy/article/details/107673208</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>逻辑思考的工具</title>
+    <url>/2019/08/19/%E9%80%BB%E8%BE%91%E6%80%9D%E8%80%83%E7%9A%84%E5%B7%A5%E5%85%B7/</url>
+    <content><![CDATA[<p>古语有言‘学而不思则罔’，读再多的书，看再多的信息，不会加以辨别全盘接受或者彻底否定，也没有一点用处。这是一个信息爆炸的时代，每天我们都会接触到各种各样的信息，如何处理这些信息呢 下面是一些方法 不妨试试</p>
 <a id="more"></a>
-<p>mdn的官方解释是 指定可替换元素的内容应该如何适应到其使用的高度和宽度确定的框。<br>其属性值有<br>fill:被替换的内容正好填充元素的内容框。整个对象将完全填充此框。如果对象的宽高比与内容框不相匹配，那么该对象将被拉伸以适应内容框。<br>contain:被替换的内容将被缩放，以在填充元素的内容框时保持其宽高比。 整个对象在填充盒子的同时保留其长宽比，因此如果宽高比与框的宽高比不匹配，该对象将被添加“黑边”。<br>cover:被替换的内容在保持其宽高比的同时填充元素的整个内容框。如果对象的宽高比与内容框不相匹配，该对象将被剪裁以适应内容框。<br>none:被替换的内容将保持其原有的尺寸。<br>scale-down:内容的尺寸与 none 或 contain 中的一个相同，取决于它们两个之间谁得到的对象尺寸会更小一些。</p>
-<p>而我在开头提到的需求场景是可以用cover属性值来实现了~<br>css果然是博大精深啊<br>值得好好学习<br><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/object-fit" target="_blank" rel="noopener">mdn地址</a></p>
+<p>证有不证无<br>不存在的东西，就没有办法被证明，此时只需要证明存在，便可以驳倒“不存在”的观点。生活中我们也经常陷入一种困境，即抓着自己的情绪不放，试图证明一个不存在的东西。<br>对立成因的谬误:<br>有时候，事情的因果关系可能是相反，符合统计学的规律并不代表符合因果关系。<br>一个简单的判断标准：是否可以做实验<br>诉诸完美的谬误：<br>凡事不必追求完美，在有一个大体的计划时，就去做好了，在尝试中完善自己的想法。追求思想上的完美，大多数会成为行动上的矮子。<br>滑坡谬误：<br>将小事情放大到无限大<br>这其实也是归谬法的应用，即确定一个观点，将这个推演到极致从而得出一个荒谬的结论。但是其实，好多小事情，并不会产生那么大的坏影响不要对自己太苛刻~<br>重复命名的谬误：<br>翻来覆去的废话，并没有以新观点去证明某个观点。同时也可以用这种方法来忽悠人哈哈<br>归因谬误：<br>人都趋向于自我合理化，把自己的成功归功于自己的聪明，失败归咎于坏运气。这种思维容易让人陷入自我安慰和自我麻痹，并不能从成功和失败中吸取经验和教训。<br>分解的谬误：<br>人们总是倾向于相信自己相信的东西，从一个整体中，有意无意地挑出自己符合自己信念的东西，用以加深自己的信念，这种观念容易让人陷入一种盲目的自信和狭隘，从而产生一种错误的信念，并且愈发坚定，在错误的道路上坚定的越走越远。</p>
+<p>非黑即白的二分法谬误<br>世界并不是黑白的，大多数事情其实处于暧昧的灰色地带，武断的下结论，说它好，或者不好，都是把问题过于简单化，这样，通常能得出一些鸡汤式的结论，除了自我合理化之外，并没有实际的用处。</p>
 ]]></content>
       <tags>
-        <tag>前端</tag>
-        <tag>css</tag>
+        <tag>随笔</tag>
       </tags>
   </entry>
   <entry>
@@ -4084,59 +4058,29 @@ kmp算法</code></pre><p>4.逆波兰表达式<br>中缀表达式转成后缀表�
       </tags>
   </entry>
   <entry>
-    <title>重学前端系列笔记3</title>
-    <url>/2019/04/11/%E9%87%8D%E5%AD%A6%E5%89%8D%E7%AB%AF%E7%B3%BB%E5%88%97%E7%AC%94%E8%AE%B03/</url>
-    <content><![CDATA[<p>面向对象：<br>JavaScript对象的两类属性</p>
-<ol>
-<li>数据属性  2. 访问器属性</li>
-</ol>
-]]></content>
-      <tags>
-        <tag>前端</tag>
-        <tag>基础知识</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>重排和重绘</title>
-    <url>/2020/07/14/%E9%87%8D%E6%8E%92%E5%92%8C%E9%87%8D%E7%BB%98/</url>
-    <content><![CDATA[<p>今天一个bug引发了我对重排和重绘的好奇<br>对这个知识点做个系统的了解和总结</p>
+    <title>自己搞一个npm包</title>
+    <url>/2021/05/18/%E8%87%AA%E5%B7%B1%E6%90%9E%E4%B8%80%E4%B8%AAnpm%E5%8C%85/</url>
+    <content><![CDATA[<p>搞一个npm包给其他业务部门使用 过程中还是有许多问题的<br>主要是 在测试过程中频繁发布npm包 以及版本迭代太快 业务部门更新不及时</p>
 <a id="more"></a>
-<p>DOM的变化引发了原生的几何属性的变化，比如宽高和位置的变化等，属于重排<br>完成重排后，要将重新构建的其他样式（如颜色）渲染到屏幕上，这个过程就是重绘<br>重排必然会引发重绘，但重绘并不一定伴随着重排</p>
-<p>重排的触发条件：</p>
-<ol>
-<li>添加或者删除可以的DOM元素</li>
-<li>元素位置改变</li>
-<li>元素本身的尺寸变化</li>
-<li>内容改变</li>
-<li>页面渲染器初始化</li>
-<li>浏览器窗口大小发生改变</li>
-</ol>
-<p>重绘和重排的开销是非常昂贵的，如果我们不停的在改变页面的布局，就会造成浏览器耗费大量的开销在进行页面的计算，这样的话，我们页面在用户使用起来，就会出现明显的卡顿。<br>现在的浏览器其实已经对重排进行了优化</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var div = document.querySelector(&apos;.div&apos;);</span><br><span class="line">div.style.width = &apos;200px&apos;;</span><br><span class="line">div.style.background = &apos;red&apos;;</span><br><span class="line">div.style.height = &apos;300px&apos;;</span><br></pre></td></tr></table></figure>
-
-<p>比较久远的浏览器，这段代码会触发页面2次重排，在分别设置宽高的时候，触发2次.<br>当代的浏览器对此进行了优化，这种思路类似于现在流行的MVVM框架使用的虚拟DOM，对改变的DOM节点进行依赖收集，确认没有改变的节点，就进行一次更新。但是浏览器针对重排的优化虽然思路和虚拟DOM接近，但是还是有本质的区别。大多数浏览器通过队列化修改并批量执行来优化重排过程。也就是说上面那段代码其实在现在的浏览器优化下，只构成一次重排。</p>
-<p>除此之外，我们也可以针对性的做一些优化</p>
-<ol>
-<li>最小化重排和重绘（把会引起重排和重绘的操作一起操作，尽量只重绘或重排一次）</li>
-<li>缓存布局信息 缓存布局信息这个概念，在《高性能JavaScript》DOM性能优化中，多次提到类似的思想.<ul>
-<li>比如我现在要得到页面ul节点下面的100个li节点，最好的办法就是第一次获取后就保存起来，减少</li>
-</ul>
-</li>
-</ol>
+<p>npm打包基础<br>注册一个npm账号<br>npm login<br>npm publish</p>
+<p>打包工具<br>rollup </p>
+<p>打包发布配置<br><a href="https://wine1.github.io/2021/04/25/%E5%8F%91%E5%B8%83%E4%B8%80%E4%B8%AAnpm%E5%8C%85/#more">详见另一个文章</a></p>
+<p>测试方法<br>之前真机测试只要发布测试环境即可，但是现在要先发布npm包，安装npm包，然后再发布测试环境，从一个步骤变成了三个步骤。<br>npm link</p>
+<blockquote>
+<p>npm link可以让项目和要使用的npm包之间建立符号连接。</p>
+</blockquote>
+<p>换句话说，如果在项目A中使用组件包B，之前要把B打包并发布，然后项目A安装B，打包并发布测试环境才能验证，现在只需要B打包一下，A直接打包并发布测试环境即可（A打包时获取的是B在本地的打包文件, 即写在B package.json中的main文件）</p>
+<blockquote>
+<p>而要使用npm link, 要做到如下几步：<br>在B包里：<br>npm link // 相当于npm install B -g<br>在A包里：<br>npm link B // 代码无需修改，package.json中引用B的包会自动指向本地B的打包文件<br>A包发布测试环境测试</p>
+</blockquote>
+<p>版本管理<br>tag</p>
+<blockquote>
+<p>tag可以用来指带版本号，用户可以使用npm install <name>@<tag>安装</tag></name></p>
+</blockquote>
 ]]></content>
       <tags>
         <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>重学前端系列笔记2</title>
-    <url>/2019/04/11/%E9%87%8D%E5%AD%A6%E5%89%8D%E7%AB%AF%E7%B3%BB%E5%88%97%E7%AC%94%E8%AE%B02/</url>
-    <content><![CDATA[<p>html部分</p>
-<p>语义化由于越来越多的“阅读模式”的出现，而变得更加重要。<br>emm…<br>适当的实践语义化吧。但是最主要的目的可能是为了让代码可读性高可维护性强，从这个角度来讲，命名规范似乎更加重要一点。<br>加上在企业级的应用里面，几乎并不涉及到seo,所以语义化对于seo的影响也基本上可以忽略不计了。<br>尽可能的践行语义化，或者说是更加标准和工整的结构和命名方式吧。</p>
-]]></content>
-      <tags>
-        <tag>前端</tag>
-        <tag>基础知识</tag>
+        <tag>工程化</tag>
       </tags>
   </entry>
   <entry>
@@ -4201,14 +4145,59 @@ kmp算法</code></pre><p>4.逆波兰表达式<br>中缀表达式转成后缀表�
       </tags>
   </entry>
   <entry>
-    <title>阿德勒《人，可以做得到任何事》</title>
-    <url>/2019/08/10/%E9%98%BF%E5%BE%B7%E5%8B%92%E3%80%8A%E4%BA%BA%EF%BC%8C%E5%8F%AF%E4%BB%A5%E5%81%9A%E5%BE%97%E5%88%B0%E4%BB%BB%E4%BD%95%E4%BA%8B%E3%80%8B/</url>
-    <content><![CDATA[<p>阿德勒的这本《人，做得到任何事情》是在哪儿看到的来着。不甚记得。一直觉得自己是个很自卑的人，想要摆脱这种状态，所以积极的寻找这类书看。也不知道是不是因为最近的心绪一直不宁，太浮躁，还是不太能够理解书中的内容，有点不太能看下去，但是还是 梳理下内容吧。</p>
-<a id="more"></a>
-<p>1.生活的科学<br>2.自卑情结<br>3.优越情节<br>4.人生风格<br>5.早期记忆<br>6.态度与行动<br>7.梦与梦的解析<br>8.问题儿童及其教育<br>9.社会问题与社会适应<br>10.社会感、常识与自卑情结<br>11.爱情与婚姻<br>12.性与性的问题</p>
+    <title>重学前端系列笔记2</title>
+    <url>/2019/04/11/%E9%87%8D%E5%AD%A6%E5%89%8D%E7%AB%AF%E7%B3%BB%E5%88%97%E7%AC%94%E8%AE%B02/</url>
+    <content><![CDATA[<p>html部分</p>
+<p>语义化由于越来越多的“阅读模式”的出现，而变得更加重要。<br>emm…<br>适当的实践语义化吧。但是最主要的目的可能是为了让代码可读性高可维护性强，从这个角度来讲，命名规范似乎更加重要一点。<br>加上在企业级的应用里面，几乎并不涉及到seo,所以语义化对于seo的影响也基本上可以忽略不计了。<br>尽可能的践行语义化，或者说是更加标准和工整的结构和命名方式吧。</p>
 ]]></content>
       <tags>
-        <tag>随笔</tag>
+        <tag>前端</tag>
+        <tag>基础知识</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>重排和重绘</title>
+    <url>/2020/07/14/%E9%87%8D%E6%8E%92%E5%92%8C%E9%87%8D%E7%BB%98/</url>
+    <content><![CDATA[<p>今天一个bug引发了我对重排和重绘的好奇<br>对这个知识点做个系统的了解和总结</p>
+<a id="more"></a>
+<p>DOM的变化引发了原生的几何属性的变化，比如宽高和位置的变化等，属于重排<br>完成重排后，要将重新构建的其他样式（如颜色）渲染到屏幕上，这个过程就是重绘<br>重排必然会引发重绘，但重绘并不一定伴随着重排</p>
+<p>重排的触发条件：</p>
+<ol>
+<li>添加或者删除可以的DOM元素</li>
+<li>元素位置改变</li>
+<li>元素本身的尺寸变化</li>
+<li>内容改变</li>
+<li>页面渲染器初始化</li>
+<li>浏览器窗口大小发生改变</li>
+</ol>
+<p>重绘和重排的开销是非常昂贵的，如果我们不停的在改变页面的布局，就会造成浏览器耗费大量的开销在进行页面的计算，这样的话，我们页面在用户使用起来，就会出现明显的卡顿。<br>现在的浏览器其实已经对重排进行了优化</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var div = document.querySelector(&apos;.div&apos;);</span><br><span class="line">div.style.width = &apos;200px&apos;;</span><br><span class="line">div.style.background = &apos;red&apos;;</span><br><span class="line">div.style.height = &apos;300px&apos;;</span><br></pre></td></tr></table></figure>
+
+<p>比较久远的浏览器，这段代码会触发页面2次重排，在分别设置宽高的时候，触发2次.<br>当代的浏览器对此进行了优化，这种思路类似于现在流行的MVVM框架使用的虚拟DOM，对改变的DOM节点进行依赖收集，确认没有改变的节点，就进行一次更新。但是浏览器针对重排的优化虽然思路和虚拟DOM接近，但是还是有本质的区别。大多数浏览器通过队列化修改并批量执行来优化重排过程。也就是说上面那段代码其实在现在的浏览器优化下，只构成一次重排。</p>
+<p>除此之外，我们也可以针对性的做一些优化</p>
+<ol>
+<li>最小化重排和重绘（把会引起重排和重绘的操作一起操作，尽量只重绘或重排一次）</li>
+<li>缓存布局信息 缓存布局信息这个概念，在《高性能JavaScript》DOM性能优化中，多次提到类似的思想.<ul>
+<li>比如我现在要得到页面ul节点下面的100个li节点，最好的办法就是第一次获取后就保存起来，减少</li>
+</ul>
+</li>
+</ol>
+]]></content>
+      <tags>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>重学前端系列笔记3</title>
+    <url>/2019/04/11/%E9%87%8D%E5%AD%A6%E5%89%8D%E7%AB%AF%E7%B3%BB%E5%88%97%E7%AC%94%E8%AE%B03/</url>
+    <content><![CDATA[<p>面向对象：<br>JavaScript对象的两类属性</p>
+<ol>
+<li>数据属性  2. 访问器属性</li>
+</ol>
+]]></content>
+      <tags>
+        <tag>前端</tag>
+        <tag>基础知识</tag>
       </tags>
   </entry>
   <entry>
@@ -4225,6 +4214,17 @@ kmp算法</code></pre><p>4.逆波兰表达式<br>中缀表达式转成后缀表�
 <li>综合综效</li>
 <li>不断更新</li>
 </ol>
+]]></content>
+      <tags>
+        <tag>随笔</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>阿德勒《人，可以做得到任何事》</title>
+    <url>/2019/08/10/%E9%98%BF%E5%BE%B7%E5%8B%92%E3%80%8A%E4%BA%BA%EF%BC%8C%E5%8F%AF%E4%BB%A5%E5%81%9A%E5%BE%97%E5%88%B0%E4%BB%BB%E4%BD%95%E4%BA%8B%E3%80%8B/</url>
+    <content><![CDATA[<p>阿德勒的这本《人，做得到任何事情》是在哪儿看到的来着。不甚记得。一直觉得自己是个很自卑的人，想要摆脱这种状态，所以积极的寻找这类书看。也不知道是不是因为最近的心绪一直不宁，太浮躁，还是不太能够理解书中的内容，有点不太能看下去，但是还是 梳理下内容吧。</p>
+<a id="more"></a>
+<p>1.生活的科学<br>2.自卑情结<br>3.优越情节<br>4.人生风格<br>5.早期记忆<br>6.态度与行动<br>7.梦与梦的解析<br>8.问题儿童及其教育<br>9.社会问题与社会适应<br>10.社会感、常识与自卑情结<br>11.爱情与婚姻<br>12.性与性的问题</p>
 ]]></content>
       <tags>
         <tag>随笔</tag>
