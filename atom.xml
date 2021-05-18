@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wine1.github.io/"/>
-  <updated>2021-05-14T11:54:24.570Z</updated>
+  <updated>2021-05-18T05:56:00.617Z</updated>
   <id>https://wine1.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>自己搞一个npm包</title>
+    <link href="https://wine1.github.io/2021/05/18/%E8%87%AA%E5%B7%B1%E6%90%9E%E4%B8%80%E4%B8%AAnpm%E5%8C%85/"/>
+    <id>https://wine1.github.io/2021/05/18/%E8%87%AA%E5%B7%B1%E6%90%9E%E4%B8%80%E4%B8%AAnpm%E5%8C%85/</id>
+    <published>2021-05-18T02:59:26.000Z</published>
+    <updated>2021-05-18T05:56:00.617Z</updated>
+    
+    <content type="html"><![CDATA[<p>搞一个npm包给其他业务部门使用 过程中还是有许多问题的<br>主要是 在测试过程中频繁发布npm包 以及版本迭代太快 业务部门更新不及时</p><a id="more"></a><p>npm打包基础<br>注册一个npm账号<br>npm login<br>npm publish</p><p>打包工具<br>rollup </p><p>打包发布配置<br><a href="https://wine1.github.io/2021/04/25/%E5%8F%91%E5%B8%83%E4%B8%80%E4%B8%AAnpm%E5%8C%85/#more">详见另一个文章</a></p><p>测试方法<br>之前真机测试只要发布测试环境即可，但是现在要先发布npm包，安装npm包，然后再发布测试环境，从一个步骤变成了三个步骤。<br>npm link</p><blockquote><p>npm link可以让项目和要使用的npm包之间建立符号连接。</p></blockquote><p>换句话说，如果在项目A中使用组件包B，之前要把B打包并发布，然后项目A安装B，打包并发布测试环境才能验证，现在只需要B打包一下，A直接打包并发布测试环境即可（A打包时获取的是B在本地的打包文件, 即写在B package.json中的main文件）</p><blockquote><p>而要使用npm link, 要做到如下几步：<br>在B包里：<br>npm link // 相当于npm install B -g<br>在A包里：<br>npm link B // 代码无需修改，package.json中引用B的包会自动指向本地B的打包文件<br>A包发布测试环境测试</p></blockquote><p>版本管理<br>tag</p><blockquote><p>tag可以用来指带版本号，用户可以使用npm install <name>@<tag>安装</tag></name></p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;搞一个npm包给其他业务部门使用 过程中还是有许多问题的&lt;br&gt;主要是 在测试过程中频繁发布npm包 以及版本迭代太快 业务部门更新不及时&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="前端" scheme="https://wine1.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="工程化" scheme="https://wine1.github.io/tags/%E5%B7%A5%E7%A8%8B%E5%8C%96/"/>
+    
+  </entry>
   
   <entry>
     <title>小程序同层渲染那些坑</title>
@@ -293,9 +316,9 @@
     
     
     
-      <category term="css" scheme="https://wine1.github.io/tags/css/"/>
-    
       <category term="前端" scheme="https://wine1.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="css" scheme="https://wine1.github.io/tags/css/"/>
     
   </entry>
   
@@ -348,9 +371,9 @@
     
     
     
-      <category term="css" scheme="https://wine1.github.io/tags/css/"/>
-    
       <category term="前端" scheme="https://wine1.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="css" scheme="https://wine1.github.io/tags/css/"/>
     
   </entry>
   
@@ -371,9 +394,9 @@
     
     
     
-      <category term="css" scheme="https://wine1.github.io/tags/css/"/>
-    
       <category term="前端" scheme="https://wine1.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="css" scheme="https://wine1.github.io/tags/css/"/>
     
   </entry>
   
@@ -440,27 +463,6 @@
         &lt;ol&gt;
 &lt;li&gt;koa+node基础搭建到实现api接口 &lt;a href=&quot;https://www.jianshu.com/p/3b60dda108d4&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://www.jianshu.com/p/3b60
       
-    
-    </summary>
-    
-    
-    
-      <category term="前端" scheme="https://wine1.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>小程序+腾讯云实时音视频</title>
-    <link href="https://wine1.github.io/2020/06/23/%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E8%85%BE%E8%AE%AF%E4%BA%91%E5%AE%9E%E6%97%B6%E9%9F%B3%E8%A7%86%E9%A2%91/"/>
-    <id>https://wine1.github.io/2020/06/23/%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E8%85%BE%E8%AE%AF%E4%BA%91%E5%AE%9E%E6%97%B6%E9%9F%B3%E8%A7%86%E9%A2%91/</id>
-    <published>2020-06-23T13:38:16.000Z</published>
-    <updated>2020-06-23T13:44:54.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="小程序加腾讯云实时音视频"><a href="#小程序加腾讯云实时音视频" class="headerlink" title="小程序加腾讯云实时音视频"></a>小程序加腾讯云实时音视频</h2><a id="more"></a><ol><li>腾讯实时音视频官方demo，IOS微信小程序端不显示本地和远程画面？<br> 在 app.json 下 window 下配置一下 “renderingMode”: “seperated”强制关掉同层</li></ol>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;小程序加腾讯云实时音视频&quot;&gt;&lt;a href=&quot;#小程序加腾讯云实时音视频&quot; class=&quot;headerlink&quot; title=&quot;小程序加腾讯云实时音视频&quot;&gt;&lt;/a&gt;小程序加腾讯云实时音视频&lt;/h2&gt;
     
     </summary>
     

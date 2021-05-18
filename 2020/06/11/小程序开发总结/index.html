@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="哦。">
 <meta property="og:description" content="虽然之前提换组没有成功，但是也阴差阳错参与到了小程序开发组开启了小程序开发的升级打怪之路">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2021-05-14T09:54:43.706Z">
+<meta property="og:updated_time" content="2021-05-14T12:23:37.241Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="小程序开发总结">
 <meta name="twitter:description" content="虽然之前提换组没有成功，但是也阴差阳错参与到了小程序开发组开启了小程序开发的升级打怪之路">
@@ -197,17 +197,17 @@
 <li>微信小程序01：关于错误Page “pages/goods_list/index” has not been registered yet.的原因 </li>
 <li>小程序打开H5 <a href="https://www.jianshu.com/p/3c8e84c6e67d" target="_blank" rel="noopener">https://www.jianshu.com/p/3c8e84c6e67d</a></li>
 <li>小程序使textarea自动聚焦 </li>
-<li>9.e.target和e.currentTarget的区别  e.target 指向触发事件监听的对象。<br>e.currentTarget 指向添加监听事件的对象，指向代码中点击事件的元素<br>e.target始终指向即当前点击的目标元素，e.currentTarget在事件委托中，如果监听元素不是目标元素，则指向监听元素</li>
+<li>e.target和e.currentTarget的区别  e.target 指向触发事件监听的对象。 e.currentTarget 指向添加监听事件的对象，指向代码中点击事件的元素<br> e.target始终指向即当前点击的目标元素，e.currentTarget在事件委托中，如果监听元素不是目标元素，则指向监听元素</li>
 <li>bind call 的作用和区别</li>
 <li>methods中的函数和直接写在page中函数的区别</li>
-<li>catchTap</li>
-<li>生命周期</li>
+<li>catchTap 阻止事件冒泡</li>
+<li>生命周期 onload onshow onready onhide onunload</li>
 <li>wx.onMemoryWarning 监听内存不足警告</li>
 <li>页面跳转传参 <a href="https://www.jianshu.com/p/079db5ea1a9b" target="_blank" rel="noopener">https://www.jianshu.com/p/079db5ea1a9b</a></li>
-<li>小程序实现写入缓存与读取缓存</li>
-<li>17 flex布局</li>
+<li>小程序实现写入缓存与读取缓存 wx.setstorage wx.getstorage</li>
+<li>flex布局</li>
 <li>设置小程序的状态栏、导航条、标题、窗口背景色[Window] <a href="https://blog.csdn.net/dxnn520/article/details/79342548" target="_blank" rel="noopener">https://blog.csdn.net/dxnn520/article/details/79342548</a></li>
-<li>textarea 中 ajust-position 中 false 值需要用双层中括号包起来 否则不生效</li>
+<li>textarea 中 ajust-position 中 false 值需要用双层中括号包起来 否则不生效 很多需要这么处理</li>
 <li>【微信小程序】微信小程序阻止IOS页面上下拖动问题<br>为了阻止IOS端小程序页面上下拖动可以再对应的json文件当中添加这个配置 “disableScroll”:true</li>
 <li>小程序windowHeight在不同页面高度不一致问题及解决方案<br><a href="https://blog.csdn.net/qq_41619741/article/details/83143624" target="_blank" rel="noopener">https://blog.csdn.net/qq_41619741/article/details/83143624</a> </li>
 <li>小程序的windowheight和screenheight</li>
@@ -215,7 +215,7 @@
 <li>组件层级问题 <a href="https://www.cnblogs.com/duxingdexin/p/9585285.html" target="_blank" rel="noopener">https://www.cnblogs.com/duxingdexin/p/9585285.html</a></li>
 <li>使用TypeScript开发小程序入门 <a href="https://www.jianshu.com/p/c778943acb37" target="_blank" rel="noopener">https://www.jianshu.com/p/c778943acb37</a></li>
 <li>当input框输入到限定长度时，自动focus下一个input框 <a href="https://blog.csdn.net/weixin_30781107/article/details/95180186" target="_blank" rel="noopener">https://blog.csdn.net/weixin_30781107/article/details/95180186</a></li>
-<li>新增页面 has not been registered yet自行创建的新页面 .js文件中，必须有 Page({ }) 里面留空即可，否则就会爆这个错误 Page “pages/detail/detail” has not been registered yet. 并且页面上的文字也不会显示。 .json文件中，必须有{ }</li>
+<li>新增页面 has not been registered yet 自行创建的新页面 .js文件中，必须有 Page({ }) 里面留空即可，否则就会爆这个错误 Page “pages/detail/detail” has not been registered yet. 并且页面上的文字也不会显示。 .json文件中，必须有{ }</li>
 <li>wx.redirectTo(OBJECT) 关闭当前页面，跳转到应用内的某个页面。</li>
 <li>wx.navigateTo(OBJECT) 保留当前页面，跳转到应用内的某个页面，使用wx.navigateBack可以返回到原页面。</li>
 <li>webview中的页面怎么跳转回小程序？<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wx.miniProgram.navigateTo(&#123;</span><br><span class="line">	url:’pages/login/login’+’$params’</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
@@ -237,6 +237,12 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">wxml：&lt;view wx:for=&quot;&#123;&#123;imgs&#125;&#125;&quot; wx:key=&quot;index&quot; style=&quot;width: 500rpx;height: 300rpx;margin: 30rpx auto;&quot;&gt;</span><br><span class="line">　　&lt;button bindtap=&quot;ondelete&quot; style=&quot;&quot; data-index=&quot;&#123;&#123;index&#125;&#125;&quot;&gt;删除&lt;/button&gt;</span><br><span class="line">　　&lt;image src=&quot;&#123;&#123;item.url&#125;&#125;&quot; style=&quot;width: 100%;height: 100%;&quot;&gt;&lt;/image&gt;</span><br><span class="line">&lt;/view&gt;</span><br><span class="line"></span><br><span class="line">&lt;xly-upload id=&apos;btn&apos; customeStyle=&quot;true&quot;  bindsuccess=&quot;uploadChange&quot;binddelete=&quot;deleteChange&quot; bindfail=&quot;uploadfail&quot;&gt;</span><br><span class="line">&lt;text&gt;上传&lt;/text&gt;</span><br><span class="line">&lt;/xly-upload&gt;</span><br><span class="line"></span><br><span class="line">js:   </span><br><span class="line"></span><br><span class="line">ondelete(e) &#123;</span><br><span class="line">this.selectComponent(&apos;#btn&apos;).DelImg(e);</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
 
 <p>获取子组件的dom<br><a href="https://developers.weixin.qq.com/miniprogram/dev/api/wxml/SelectorQuery.select.html" target="_blank" rel="noopener">https://developers.weixin.qq.com/miniprogram/dev/api/wxml/SelectorQuery.select.html</a><br>跨自定义组件的后代选择器：.the-ancestor &gt;&gt;&gt; .the-descendant</p>
+<p>小程序的双向绑定和vue哪里不一样<br>小程序直接this.data的属性是不可以同步到视图的，必须调用this.setData({})</p>
+<p>小程序内的页面跳转<br>wx.navigateTo——保留当前页面，跳转到应用内的某个页面。但是不能跳到 tabbar 页面（参数必须为字符串）<br>wx.redirectTo——关闭当前页面，跳转到应用内的某个页面。但是不允许跳转到 tabbar 页面<br>wx.switchTab——跳转到 tabBar 页面，并关闭其他所有非 tabBar 页面，路径后不能带参数<br>wx.navigateBack——关闭当前页面，返回上一页面或多级页面。可通过 getCurrentPages() 获取当前的页面栈，决定需要返回几层<br>wx.reLaunch——关闭所有页面，打开到应用内的某个页面</p>
+<p>小程序分为两个部分webview和appService，webview用来展现UI，appService用来处理业务逻辑、数据及接口调用，它们在两个进程中运行，通过系统层JSBridge实现通信，完成UI渲染、事件处理</p>
+<p>微信小程序的setData实现是和react的setData实现类似的，所以它也是一个异步函数，并且有回调函数的参数，当然平时小量数据我们可能并没有感觉到它的异步，但是为了确保逻辑的正确执行，在需要用到setData后 data里的数据的步骤，请写入setData的回调函数中</p>
+<p>webview中的页面怎么跳回小程序中<br>先在管理后台配置域名白名单，<br>然后引入jweixin-1.3.2.js（<a href="https://res.wx.qq.com/open/js...）" target="_blank" rel="noopener">https://res.wx.qq.com/open/js...）</a><br>wx.miniProgram.navigateTo({url: ‘/pages/login/login’+’$params’})<br>wx.miniProgram.navigateTo({url: ‘/path/to/page’})</p>
+<p>小程序和小程序之间的跳转<br>在同一主体公众号上关联2个小程序appid，<br>用navigator，对应设置一些属性即可<br>target：miniProgram——其他小程序<br>target：self——当前小程序</p>
 
       
 
@@ -490,11 +496,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">css</a>
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+                <a href="javascript:void(0)" class="js-tag color4">css</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -526,6 +532,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">工程化</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">实践</a>
               </li>
              
@@ -538,10 +548,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">工程化</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">小程序</a>
               </li>
              
@@ -550,11 +556,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">工作总结</a>
+                <a href="javascript:void(0)" class="js-tag color4">移动端</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">移动端</a>
+                <a href="javascript:void(0)" class="js-tag color5">工作总结</a>
               </li>
              
               <li class="article-tag-list-item">
