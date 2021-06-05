@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wine1.github.io/"/>
-  <updated>2021-05-18T05:56:00.617Z</updated>
+  <updated>2021-06-03T11:19:17.343Z</updated>
   <id>https://wine1.github.io/</id>
   
   <author>
@@ -15,6 +15,54 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>用createReactApp创建项目之后的配置</title>
+    <link href="https://wine1.github.io/2021/06/03/%E7%94%A8createReactApp%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE%E4%B9%8B%E5%90%8E%E7%9A%84%E9%85%8D%E7%BD%AE/"/>
+    <id>https://wine1.github.io/2021/06/03/%E7%94%A8createReactApp%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE%E4%B9%8B%E5%90%8E%E7%9A%84%E9%85%8D%E7%BD%AE/</id>
+    <published>2021-06-03T11:09:16.000Z</published>
+    <updated>2021-06-03T11:19:17.343Z</updated>
+    
+    <content type="html"><![CDATA[<p>在用<a href="https://github.com/facebook/create-react-app" target="_blank" rel="noopener">create-react-app</a>创建一个新的react项目之后<br>会发现package.json里面没有webpack 这是因为 用这个脚手架创建的项目 webpack相关配置都被集成在 react-scripts中了<br>脚手架本身提供了 ejest 来把webpack相关配置暴露出来 但是这个过程是不可逆的 弹出配置后，你将无法跟随官方的脚步去升级项目的 react-script 版本 谨慎操作 反正我没操作<br>如果我们想自己加一些配置 可以通过craco实现</p><a id="more"></a><ol><li><p>安装包<br><code>yarn add @craco/craco</code></p></li><li><p>项目根目录创建 craco.config.js 文件</p> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">/* craco.config.js */</span><br><span class="line"></span><br><span class="line">module.exports = &#123;</span><br><span class="line">...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li><li><p>修改 package.json 的 scripts 命令</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">/* package.json */</span><br><span class="line"></span><br><span class="line">&quot;scripts&quot;: &#123;</span><br><span class="line">-   &quot;start&quot;: &quot;react-scripts start&quot;,</span><br><span class="line">+   &quot;start&quot;: &quot;craco start&quot;,</span><br><span class="line">-   &quot;build&quot;: &quot;react-scripts build&quot;,</span><br><span class="line">+   &quot;build&quot;: &quot;craco build&quot;</span><br><span class="line">-   &quot;test&quot;: &quot;react-scripts test&quot;,</span><br><span class="line">+   &quot;test&quot;: &quot;craco test&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在用&lt;a href=&quot;https://github.com/facebook/create-react-app&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;create-react-app&lt;/a&gt;创建一个新的react项目之后&lt;br&gt;会发现package.json里面没有webpack 这是因为 用这个脚手架创建的项目 webpack相关配置都被集成在 react-scripts中了&lt;br&gt;脚手架本身提供了 ejest 来把webpack相关配置暴露出来 但是这个过程是不可逆的 弹出配置后，你将无法跟随官方的脚步去升级项目的 react-script 版本 谨慎操作 反正我没操作&lt;br&gt;如果我们想自己加一些配置 可以通过craco实现&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="前端" scheme="https://wine1.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="工程化" scheme="https://wine1.github.io/tags/%E5%B7%A5%E7%A8%8B%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>webpack多文件打包</title>
+    <link href="https://wine1.github.io/2021/05/27/webpack%E5%A4%9A%E6%96%87%E4%BB%B6%E6%89%93%E5%8C%85/"/>
+    <id>https://wine1.github.io/2021/05/27/webpack%E5%A4%9A%E6%96%87%E4%BB%B6%E6%89%93%E5%8C%85/</id>
+    <published>2021-05-27T07:51:13.000Z</published>
+    <updated>2021-06-03T11:08:14.015Z</updated>
+    
+    <content type="html"><![CDATA[<p>webpack5相较于4还是有很大的变化的<br>比如说 之前用于清除dist的 clean-webpack-plugin 在5里面被 output:{clean:true} 代替</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;webpack5相较于4还是有很大的变化的&lt;br&gt;比如说 之前用于清除dist的 clean-webpack-plugin 在5里面被 output:{clean:true} 代替&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+    
+      <category term="工程化" scheme="https://wine1.github.io/tags/%E5%B7%A5%E7%A8%8B%E5%8C%96/"/>
+    
+  </entry>
   
   <entry>
     <title>自己搞一个npm包</title>
@@ -417,52 +465,6 @@
 &lt;li&gt;比较两颗虚拟DOM树的差异&lt;/li&gt;
 &lt;li&gt;把差异应用到真正的DOM树上&lt;/li&gt;
 &lt;/ol&gt;
-    
-    </summary>
-    
-    
-    
-      <category term="前端" scheme="https://wine1.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>重排和重绘</title>
-    <link href="https://wine1.github.io/2020/07/14/%E9%87%8D%E6%8E%92%E5%92%8C%E9%87%8D%E7%BB%98/"/>
-    <id>https://wine1.github.io/2020/07/14/%E9%87%8D%E6%8E%92%E5%92%8C%E9%87%8D%E7%BB%98/</id>
-    <published>2020-07-14T15:34:39.000Z</published>
-    <updated>2020-07-14T16:03:38.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>今天一个bug引发了我对重排和重绘的好奇<br>对这个知识点做个系统的了解和总结</p><a id="more"></a><p>DOM的变化引发了原生的几何属性的变化，比如宽高和位置的变化等，属于重排<br>完成重排后，要将重新构建的其他样式（如颜色）渲染到屏幕上，这个过程就是重绘<br>重排必然会引发重绘，但重绘并不一定伴随着重排</p><p>重排的触发条件：</p><ol><li>添加或者删除可以的DOM元素</li><li>元素位置改变</li><li>元素本身的尺寸变化</li><li>内容改变</li><li>页面渲染器初始化</li><li>浏览器窗口大小发生改变</li></ol><p>重绘和重排的开销是非常昂贵的，如果我们不停的在改变页面的布局，就会造成浏览器耗费大量的开销在进行页面的计算，这样的话，我们页面在用户使用起来，就会出现明显的卡顿。<br>现在的浏览器其实已经对重排进行了优化</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var div = document.querySelector(&apos;.div&apos;);</span><br><span class="line">div.style.width = &apos;200px&apos;;</span><br><span class="line">div.style.background = &apos;red&apos;;</span><br><span class="line">div.style.height = &apos;300px&apos;;</span><br></pre></td></tr></table></figure><p>比较久远的浏览器，这段代码会触发页面2次重排，在分别设置宽高的时候，触发2次.<br>当代的浏览器对此进行了优化，这种思路类似于现在流行的MVVM框架使用的虚拟DOM，对改变的DOM节点进行依赖收集，确认没有改变的节点，就进行一次更新。但是浏览器针对重排的优化虽然思路和虚拟DOM接近，但是还是有本质的区别。大多数浏览器通过队列化修改并批量执行来优化重排过程。也就是说上面那段代码其实在现在的浏览器优化下，只构成一次重排。</p><p>除此之外，我们也可以针对性的做一些优化</p><ol><li>最小化重排和重绘（把会引起重排和重绘的操作一起操作，尽量只重绘或重排一次）</li><li>缓存布局信息 缓存布局信息这个概念，在《高性能JavaScript》DOM性能优化中，多次提到类似的思想.<ul><li>比如我现在要得到页面ul节点下面的100个li节点，最好的办法就是第一次获取后就保存起来，减少</li></ul></li></ol>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;今天一个bug引发了我对重排和重绘的好奇&lt;br&gt;对这个知识点做个系统的了解和总结&lt;/p&gt;
-    
-    </summary>
-    
-    
-    
-      <category term="前端" scheme="https://wine1.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>node+koa</title>
-    <link href="https://wine1.github.io/2020/06/23/node-koa/"/>
-    <id>https://wine1.github.io/2020/06/23/node-koa/</id>
-    <published>2020-06-23T13:43:57.000Z</published>
-    <updated>2020-06-27T03:33:18.000Z</updated>
-    
-    <content type="html"><![CDATA[<ol><li>koa+node基础搭建到实现api接口 <a href="https://www.jianshu.com/p/3b60dda108d4" target="_blank" rel="noopener">https://www.jianshu.com/p/3b60dda108d4</a></li><li>使用pm2管理node进程</li><li>使用knex操作数据库</li><li></li></ol>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;ol&gt;
-&lt;li&gt;koa+node基础搭建到实现api接口 &lt;a href=&quot;https://www.jianshu.com/p/3b60dda108d4&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://www.jianshu.com/p/3b60
-      
     
     </summary>
     
