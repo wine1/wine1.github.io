@@ -1,27 +1,28 @@
 <!DOCTYPE html>
 <html>
-<head><meta name="generator" content="Hexo 3.9.0">
+<head>
   <meta charset="utf-8">
   
   <meta name="renderer" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://wine1.github.io">
-  <title>初识less预处理器 | 哦。</title>
+  <title>初识less预处理器 | Wonderland</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="哒哒哒~ 每天学习一点点新东西通过阅读别人的博客初识了css预处理器的强大，我选择了less预处理器作为入门，同时，我也认为利用处理器对css进行某些操作能极大地简化后期的维护和管理，在编写的时候也能带来一些便利，当然这只是我目前的认知，在系统的学习之前的认知~ 但是毫无疑问，在高速的技术迭代中，前端的发展趋于一个更加简化和智能的方向。">
-<meta name="keywords" content="前端,css">
 <meta property="og:type" content="article">
 <meta property="og:title" content="初识less预处理器">
-<meta property="og:url" content="https://wine1.github.io/2017/12/16/初识less预处理器/index.html">
-<meta property="og:site_name" content="哦。">
+<meta property="og:url" content="https://wine1.github.io/2017/12/16/%E5%88%9D%E8%AF%86less%E9%A2%84%E5%A4%84%E7%90%86%E5%99%A8/index.html">
+<meta property="og:site_name" content="Wonderland">
 <meta property="og:description" content="哒哒哒~ 每天学习一点点新东西通过阅读别人的博客初识了css预处理器的强大，我选择了less预处理器作为入门，同时，我也认为利用处理器对css进行某些操作能极大地简化后期的维护和管理，在编写的时候也能带来一些便利，当然这只是我目前的认知，在系统的学习之前的认知~ 但是毫无疑问，在高速的技术迭代中，前端的发展趋于一个更加简化和智能的方向。">
-<meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-11-21T15:23:48.000Z">
+<meta property="og:locale">
+<meta property="article:published_time" content="2017-12-16T12:26:48.000Z">
+<meta property="article:modified_time" content="2020-11-21T15:23:48.000Z">
+<meta property="article:author" content="Rabit">
+<meta property="article:tag" content="css">
+<meta property="article:tag" content="前端">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="初识less预处理器">
-<meta name="twitter:description" content="哒哒哒~ 每天学习一点点新东西通过阅读别人的博客初识了css预处理器的强大，我选择了less预处理器作为入门，同时，我也认为利用处理器对css进行某些操作能极大地简化后期的维护和管理，在编写的时候也能带来一些便利，当然这只是我目前的认知，在系统的学习之前的认知~ 但是毫无疑问，在高速的技术迭代中，前端的发展趋于一个更加简化和智能的方向。">
   
-    <link rel="alternative" href="/atom.xml" title="哦。" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="Wonderland" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -37,8 +38,8 @@
 
   
 
-</head>
-</html>
+<meta name="generator" content="Hexo 6.0.0"></head>
+
 <body>
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
@@ -51,10 +52,8 @@
 			<img src="/img/header.jpg" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="">田珍珠女士</a></h1>
+		  <h1 class="header-author"><a href=""></a></h1>
 		</hgroup>
-		
-		<p class="header-subtitle">日拱一卒 功不唐捐</p>
 		
 
 		<nav class="header-menu">
@@ -62,9 +61,9 @@
 			
 				<li><a href="/">主页</a></li>
 	        
-				<li><a href="/tags/随笔">随笔</a></li>
+				<li><a href="/tags/%E9%9A%8F%E7%AC%94">随笔</a></li>
 	        
-				<li><a href="/tags/图片">一些图片</a></li>
+				<li><a href="/tags/%E5%9B%BE%E7%89%87">一些图片</a></li>
 	        
 			</ul>
 		</nav>
@@ -113,10 +112,8 @@
 				<img src="/img/header.jpg" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">田珍珠女士</h1>
+			  <h1 class="header-author js-header-author"></h1>
 			</hgroup>
-			
-			<p class="header-subtitle"><i class="icon icon-quo-left"></i>日拱一卒 功不唐捐<i class="icon icon-quo-right"></i></p>
 			
 			
 			
@@ -148,9 +145,9 @@
 				
 					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/tags/随笔">随笔</a></li>
+					<li style="width: 33.333333333333336%"><a href="/tags/%E9%9A%8F%E7%AC%94">随笔</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/tags/图片">一些图片</a></li>
+					<li style="width: 33.333333333333336%"><a href="/tags/%E5%9B%BE%E7%89%87">一些图片</a></li>
 		        
 				</ul>
 			</nav>
@@ -177,7 +174,7 @@
   
 
         
-        <a href="/2017/12/16/初识less预处理器/" class="archive-article-date">
+        <a href="/2017/12/16/%E5%88%9D%E8%AF%86less%E9%A2%84%E5%A4%84%E7%90%86%E5%99%A8/" class="archive-article-date">
   	<time datetime="2017-12-16T12:26:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-16</time>
 </a>
         
@@ -186,25 +183,22 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>哒哒哒~ 每天学习一点点新东西<br>通过阅读别人的博客初识了css预处理器的强大，我选择了less预处理器作为入门，同时，我也认为利用处理器对css进行某些操作能极大地简化后期的维护和管理，在编写的时候也能带来一些便利，当然这只是我目前的认知，在系统的学习之前的认知~ 但是毫无疑问，在高速的技术迭代中，前端的发展趋于一个更加简化和智能的方向。</p>
-<a id="more"></a>
+<span id="more"></span>
 <p>Less 是一门 CSS 预处理语言，它扩充了 CSS 语言，增加了诸如变量、混合（mixin）、函数等功能，让 CSS 更易维护、方便制作主题、扩充。</p>
 <p>Less 可以运行在 Node、浏览器和 Rhino 平台上。<br>–来自less官方中文文档。</p>
 <p>工欲善其事，必先利其器。<br>想要学东西，先要搭环境。<br>less可以在多种环境中编译，我选择的是桌面客户端，下载了一个非常cute的小软件koala，在把项目拖入到koala中后，第一次手动编译之后，他就会自动将less文件自动编译成css文件。也可以直接在webstrom中配置一个编译环境出来。</p>
-<p>接下来，就要是语法部分了<br><a href="http://less.bootcss.com/features" target="_blank" rel="noopener">lee中文文档中关于语言特性的介绍</a></p>
+<p>接下来，就要是语法部分了<br><a target="_blank" rel="noopener" href="http://less.bootcss.com/features">lee中文文档中关于语言特性的介绍</a></p>
 <ol>
 <li>注释 //和/*  */两种注释，后者在编译的过程中是会被编译的</li>
 <li>变量 定义变量的格式为 @变量名：设置值;使用时就直接作为一个属性值。</li>
 </ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@test_width:300px;</span><br><span class="line"></span><br><span class="line">box &#123;</span><br><span class="line">	width:@test_width;//编译出来这个width值为300px</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@test_width:300px;</span><br><span class="line"></span><br><span class="line">box &#123;</span><br><span class="line">	width:@test_width;//编译出来这个width值为300px</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <ol start="3">
 <li>混合（mixin) 就是一种将一系列属性从一个规则集引入(“混合”)到另一个规则集的方式。</li>
 </ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">//less文件</span><br><span class="line">@box_width: 300px;</span><br><span class="line">.box &#123;</span><br><span class="line">	width: @box_width;</span><br><span class="line">	background: red;</span><br><span class="line">	.border;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">.border &#123;</span><br><span class="line">	border: solid 5px pink;</span><br><span class="line">&#125;</span><br><span class="line">//css文件</span><br><span class="line">@charset &quot;UTF-8&quot;;</span><br><span class="line">.box &#123;</span><br><span class="line">  width: 300px;</span><br><span class="line">  background: red;</span><br><span class="line">  border: solid 5px pink;</span><br><span class="line">&#125;</span><br><span class="line">.border &#123;</span><br><span class="line">  border: solid 5px pink;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">//less文件</span><br><span class="line">@box_width: 300px;</span><br><span class="line">.box &#123;</span><br><span class="line">	width: @box_width;</span><br><span class="line">	background: red;</span><br><span class="line">	.border;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">.border &#123;</span><br><span class="line">	border: solid 5px pink;</span><br><span class="line">&#125;</span><br><span class="line">//css文件</span><br><span class="line">@charset &quot;UTF-8&quot;;</span><br><span class="line">.box &#123;</span><br><span class="line">  width: 300px;</span><br><span class="line">  background: red;</span><br><span class="line">  border: solid 5px pink;</span><br><span class="line">&#125;</span><br><span class="line">.border &#123;</span><br><span class="line">  border: solid 5px pink;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>这也是混合的一种实用的功能</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">//less文件</span><br><span class="line">.border_radius(@radius:5px) &#123;</span><br><span class="line">	-webkit-border-radius: @radius;</span><br><span class="line">	-moz-border-radius: @radius;</span><br><span class="line">	border-radius: @radius;</span><br><span class="line">&#125;</span><br><span class="line">.radius_test &#123;</span><br><span class="line">	width:100px;</span><br><span class="line">	height: 200px;</span><br><span class="line">	background-color:green;</span><br><span class="line">	.border_radius(10px);</span><br><span class="line">&#125;</span><br><span class="line">//css文件</span><br><span class="line">.radius_test &#123;</span><br><span class="line">  width: 100px;</span><br><span class="line">  height: 200px;</span><br><span class="line">  background-color: green;</span><br><span class="line">  -webkit-border-radius: 10px;</span><br><span class="line">  -moz-border-radius: 10px;</span><br><span class="line">  border-radius: 10px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">//less文件</span><br><span class="line">.border_radius(@radius:5px) &#123;</span><br><span class="line">	-webkit-border-radius: @radius;</span><br><span class="line">	-moz-border-radius: @radius;</span><br><span class="line">	border-radius: @radius;</span><br><span class="line">&#125;</span><br><span class="line">.radius_test &#123;</span><br><span class="line">	width:100px;</span><br><span class="line">	height: 200px;</span><br><span class="line">	background-color:green;</span><br><span class="line">	.border_radius(10px);</span><br><span class="line">&#125;</span><br><span class="line">//css文件</span><br><span class="line">.radius_test &#123;</span><br><span class="line">  width: 100px;</span><br><span class="line">  height: 200px;</span><br><span class="line">  background-color: green;</span><br><span class="line">  -webkit-border-radius: 10px;</span><br><span class="line">  -moz-border-radius: 10px;</span><br><span class="line">  border-radius: 10px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <ol start="4">
 <li><p>匹配模式<br>相当于给一个函数设定不同的参数，如果学过java的话，参照函数的重载，他们参数不同拥有不同的功能，而在less模式匹配这里，参数不同对应不同的样式。（这样写暂时便于我自己的理解，以后理解的深一点了应该能把这部分解释的更好一些，顺便提醒：不要弄混了java的重载和重写）</p>
 </li>
@@ -213,7 +207,7 @@
 <li><p>嵌套规则<br>就是很字面的意思呗<br>样式集合可以嵌套在另一个样式集合里~</p>
 </li>
 </ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">less文件</span><br><span class="line">li &#123;</span><br><span class="line">	display:inline;</span><br><span class="line">	a &#123;</span><br><span class="line">		background:red;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">css文件</span><br><span class="line">li &#123;</span><br><span class="line">  display: inline;</span><br><span class="line">&#125;</span><br><span class="line">li a &#123;</span><br><span class="line">  background: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">less文件</span><br><span class="line">li &#123;</span><br><span class="line">	display:inline;</span><br><span class="line">	a &#123;</span><br><span class="line">		background:red;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">css文件</span><br><span class="line">li &#123;</span><br><span class="line">  display: inline;</span><br><span class="line">&#125;</span><br><span class="line">li a &#123;</span><br><span class="line">  background: red;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <ol start="7">
 <li>arguments变量<br>@arguments 一次性传递所有变量~</li>
@@ -254,11 +248,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
         		</li>
       		
 		</ul>
@@ -314,7 +308,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://wine1.github.io/2017/12/16/初识less预处理器/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://wine1.github.io/2017/12/16/%E5%88%9D%E8%AF%86less%E9%A2%84%E5%A4%84%E7%90%86%E5%99%A8/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -328,7 +322,7 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/12/18/js高级特性/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/12/18/js%E9%AB%98%E7%BA%A7%E7%89%B9%E6%80%A7/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
@@ -338,7 +332,7 @@
     </a>
   
   
-    <a href="/2017/12/15/关于web可访问性的思考/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2017/12/15/%E5%85%B3%E4%BA%8Eweb%E5%8F%AF%E8%AE%BF%E9%97%AE%E6%80%A7%E7%9A%84%E6%80%9D%E8%80%83/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">关于web可访问性的思考</div>
       <i class="icon-circle-right"></i>
     </a>
@@ -382,7 +376,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2021 田珍珠女士
+    		&copy; 2022 Rabit
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -465,7 +459,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -473,7 +467,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -481,7 +475,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -505,11 +499,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">rn</a>
+                <a href="javascript:void(0)" class="js-tag color4">工程化</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">工程化</a>
+                <a href="javascript:void(0)" class="js-tag color3">rn</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -526,6 +520,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">网络</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">安全</a>
               </li>
              
               <li class="article-tag-list-item">

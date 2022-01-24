@@ -1,29 +1,29 @@
 <!DOCTYPE html>
 <html>
-<head><meta name="generator" content="Hexo 3.9.0">
+<head>
   <meta charset="utf-8">
   
   <meta name="renderer" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://wine1.github.io">
-  <title>js基础之ajax | 哦。</title>
+  <title>js基础之ajax | Wonderland</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="AJAX即异步javascript和XMLajax是一个非常基础又常见的前端技能。我认为它的核心就是实现局部刷新。这在网站中是非常有用的。下面是我整理的学习过程和心得~">
-<meta name="keywords" content="前端">
 <meta property="og:type" content="article">
 <meta property="og:title" content="js基础之ajax">
-<meta property="og:url" content="https://wine1.github.io/2017/12/15/js基础之ajax/index.html">
-<meta property="og:site_name" content="哦。">
+<meta property="og:url" content="https://wine1.github.io/2017/12/15/js%E5%9F%BA%E7%A1%80%E4%B9%8Bajax/index.html">
+<meta property="og:site_name" content="Wonderland">
 <meta property="og:description" content="AJAX即异步javascript和XMLajax是一个非常基础又常见的前端技能。我认为它的核心就是实现局部刷新。这在网站中是非常有用的。下面是我整理的学习过程和心得~">
-<meta property="og:locale" content="zh-Hans">
+<meta property="og:locale">
 <meta property="og:image" content="http://m.qpic.cn/psb?/V11DrKVS1wfriy/x2cx0BSfJJcay*CaNkv5071RMgLhSWUM5FJKEp.U0IE!/b/dPIAAAAAAAAA&bo=5QJlAQAAAAARB7M!&rf=viewer_4">
-<meta property="og:updated_time" content="2019-01-07T13:01:38.000Z">
+<meta property="article:published_time" content="2017-12-15T07:05:14.000Z">
+<meta property="article:modified_time" content="2019-01-07T13:01:38.000Z">
+<meta property="article:author" content="Rabit">
+<meta property="article:tag" content="前端">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="js基础之ajax">
-<meta name="twitter:description" content="AJAX即异步javascript和XMLajax是一个非常基础又常见的前端技能。我认为它的核心就是实现局部刷新。这在网站中是非常有用的。下面是我整理的学习过程和心得~">
 <meta name="twitter:image" content="http://m.qpic.cn/psb?/V11DrKVS1wfriy/x2cx0BSfJJcay*CaNkv5071RMgLhSWUM5FJKEp.U0IE!/b/dPIAAAAAAAAA&bo=5QJlAQAAAAARB7M!&rf=viewer_4">
   
-    <link rel="alternative" href="/atom.xml" title="哦。" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="Wonderland" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -39,8 +39,8 @@
 
   
 
-</head>
-</html>
+<meta name="generator" content="Hexo 6.0.0"></head>
+
 <body>
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
@@ -53,10 +53,8 @@
 			<img src="/img/header.jpg" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="">田珍珠女士</a></h1>
+		  <h1 class="header-author"><a href=""></a></h1>
 		</hgroup>
-		
-		<p class="header-subtitle">日拱一卒 功不唐捐</p>
 		
 
 		<nav class="header-menu">
@@ -64,9 +62,9 @@
 			
 				<li><a href="/">主页</a></li>
 	        
-				<li><a href="/tags/随笔">随笔</a></li>
+				<li><a href="/tags/%E9%9A%8F%E7%AC%94">随笔</a></li>
 	        
-				<li><a href="/tags/图片">一些图片</a></li>
+				<li><a href="/tags/%E5%9B%BE%E7%89%87">一些图片</a></li>
 	        
 			</ul>
 		</nav>
@@ -115,10 +113,8 @@
 				<img src="/img/header.jpg" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">田珍珠女士</h1>
+			  <h1 class="header-author js-header-author"></h1>
 			</hgroup>
-			
-			<p class="header-subtitle"><i class="icon icon-quo-left"></i>日拱一卒 功不唐捐<i class="icon icon-quo-right"></i></p>
 			
 			
 			
@@ -150,9 +146,9 @@
 				
 					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/tags/随笔">随笔</a></li>
+					<li style="width: 33.333333333333336%"><a href="/tags/%E9%9A%8F%E7%AC%94">随笔</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/tags/图片">一些图片</a></li>
+					<li style="width: 33.333333333333336%"><a href="/tags/%E5%9B%BE%E7%89%87">一些图片</a></li>
 		        
 				</ul>
 			</nav>
@@ -179,7 +175,7 @@
   
 
         
-        <a href="/2017/12/15/js基础之ajax/" class="archive-article-date">
+        <a href="/2017/12/15/js%E5%9F%BA%E7%A1%80%E4%B9%8Bajax/" class="archive-article-date">
   	<time datetime="2017-12-15T07:05:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-15</time>
 </a>
         
@@ -188,22 +184,17 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>AJAX即异步javascript和XML<br>ajax是一个非常基础又常见的前端技能。我认为它的核心就是实现局部刷新。这在网站中是非常有用的。下面是我整理的学习过程和心得~</p>
-<a id="more"></a>
+<span id="more"></span>
 <p> 运用ajax大致是这样一个过程</p>
 <ol>
-<li><p>创建XMLHttpRequest对象<br><code>var xhr = new XMLHttpRequest();</code><br>FF,Chorme,Safari,Opera,IE7及以上的浏览器都支持xhr对象，IE7以下浏览器不支持，使用的是ActiveXObject</p>
-</li>
-<li><p>请求<br>XMLHttpRequest 对象用于和服务器交换数据。要将请求发送到服务器，要用到对象的open和send方法。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">xmlhttp.open(method,url,async)</span><br><span class="line">xmlhttp.send();</span><br></pre></td></tr></table></figure>
-
-<p>通过 AJAX，JavaScript 无需等待服务器的响应，而是：在等待服务器响应时执行其他脚本，当响应就绪后对响应进行处理<br>当使用 async=true 时，要规定在响应处于 onreadystatechange 事件中的就绪状态时执行的函数<br>readyState 属性存有 XMLHttpRequest 的状态信息，每当 readyState 改变时，就会触发 onreadystatechange 事件。<br><img src="http://m.qpic.cn/psb?/V11DrKVS1wfriy/x2cx0BSfJJcay*CaNkv5071RMgLhSWUM5FJKEp.U0IE!/b/dPIAAAAAAAAA&bo=5QJlAQAAAAARB7M!&rf=viewer_4" alt="XMLHttpRequest对象的三个属性"><br>当使用 async=false 时，不要编写 onreadystatechange 函数，把代码放到 send() 语句后面即可</p>
-</li>
-<li><p>响应  </p>
-</li>
-<li><p>要获得来自服务器的响应，使用 XMLHttpRequest 对象的 responseText 或 responseXML 属性。</p>
-<p>这个东西说简单简单说复杂复杂，但是平时自己折腾的东西里面很少会涉及到与后台有交互的东西，所以总也搞不太明白，看来还是要多找找东西写和多了解一下底层原理呀~</p>
-</li>
+<li>创建XMLHttpRequest对象<br><code>var xhr = new XMLHttpRequest();</code><br>FF,Chorme,Safari,Opera,IE7及以上的浏览器都支持xhr对象，IE7以下浏览器不支持，使用的是ActiveXObject</li>
+<li>请求<br>XMLHttpRequest 对象用于和服务器交换数据。要将请求发送到服务器，要用到对象的open和send方法。<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">xmlhttp.open(method,url,async)</span><br><span class="line">xmlhttp.send();</span><br></pre></td></tr></table></figure>
+通过 AJAX，JavaScript 无需等待服务器的响应，而是：在等待服务器响应时执行其他脚本，当响应就绪后对响应进行处理<br>当使用 async=true 时，要规定在响应处于 onreadystatechange 事件中的就绪状态时执行的函数<br>readyState 属性存有 XMLHttpRequest 的状态信息，每当 readyState 改变时，就会触发 onreadystatechange 事件。<br><img src="http://m.qpic.cn/psb?/V11DrKVS1wfriy/x2cx0BSfJJcay*CaNkv5071RMgLhSWUM5FJKEp.U0IE!/b/dPIAAAAAAAAA&bo=5QJlAQAAAAARB7M!&rf=viewer_4" alt="XMLHttpRequest对象的三个属性"><br>当使用 async=false 时，不要编写 onreadystatechange 函数，把代码放到 send() 语句后面即可</li>
+<li>响应  </li>
+<li>要获得来自服务器的响应，使用 XMLHttpRequest 对象的 responseText 或 responseXML 属性。</li>
 </ol>
+<p>  这个东西说简单简单说复杂复杂，但是平时自己折腾的东西里面很少会涉及到与后台有交互的东西，所以总也搞不太明白，看来还是要多找找东西写和多了解一下底层原理呀~
+    </p>
 
       
 
@@ -294,7 +285,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://wine1.github.io/2017/12/15/js基础之ajax/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://wine1.github.io/2017/12/15/js%E5%9F%BA%E7%A1%80%E4%B9%8Bajax/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -308,7 +299,7 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/12/15/关于web可访问性的思考/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/12/15/%E5%85%B3%E4%BA%8Eweb%E5%8F%AF%E8%AE%BF%E9%97%AE%E6%80%A7%E7%9A%84%E6%80%9D%E8%80%83/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
@@ -318,7 +309,7 @@
     </a>
   
   
-    <a href="/2017/12/14/npm依赖管理/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2017/12/14/npm%E4%BE%9D%E8%B5%96%E7%AE%A1%E7%90%86/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">npm依赖管理</div>
       <i class="icon-circle-right"></i>
     </a>
@@ -362,7 +353,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2021 田珍珠女士
+    		&copy; 2022 Rabit
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -445,7 +436,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -453,7 +444,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -461,7 +452,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -485,11 +476,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">rn</a>
+                <a href="javascript:void(0)" class="js-tag color4">工程化</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">工程化</a>
+                <a href="javascript:void(0)" class="js-tag color3">rn</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -506,6 +497,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">网络</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">安全</a>
               </li>
              
               <li class="article-tag-list-item">

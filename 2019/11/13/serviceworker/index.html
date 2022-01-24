@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html>
-<head><meta name="generator" content="Hexo 3.9.0">
+<head>
   <meta charset="utf-8">
   
   <meta name="renderer" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://wine1.github.io">
-  <title>serviceworker | 哦。</title>
+  <title>serviceworker | Wonderland</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="serviceworker离线网页应用？">
-<meta name="keywords" content="前端">
 <meta property="og:type" content="article">
 <meta property="og:title" content="serviceworker">
 <meta property="og:url" content="https://wine1.github.io/2019/11/13/serviceworker/index.html">
-<meta property="og:site_name" content="哦。">
+<meta property="og:site_name" content="Wonderland">
 <meta property="og:description" content="serviceworker离线网页应用？">
-<meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-11-13T13:22:40.000Z">
+<meta property="og:locale">
+<meta property="article:published_time" content="2019-11-13T13:21:56.000Z">
+<meta property="article:modified_time" content="2019-11-13T13:22:40.000Z">
+<meta property="article:author" content="Rabit">
+<meta property="article:tag" content="前端">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="serviceworker">
-<meta name="twitter:description" content="serviceworker离线网页应用？">
   
-    <link rel="alternative" href="/atom.xml" title="哦。" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="Wonderland" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -37,8 +37,8 @@
 
   
 
-</head>
-</html>
+<meta name="generator" content="Hexo 6.0.0"></head>
+
 <body>
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
@@ -51,10 +51,8 @@
 			<img src="/img/header.jpg" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="">田珍珠女士</a></h1>
+		  <h1 class="header-author"><a href=""></a></h1>
 		</hgroup>
-		
-		<p class="header-subtitle">日拱一卒 功不唐捐</p>
 		
 
 		<nav class="header-menu">
@@ -62,9 +60,9 @@
 			
 				<li><a href="/">主页</a></li>
 	        
-				<li><a href="/tags/随笔">随笔</a></li>
+				<li><a href="/tags/%E9%9A%8F%E7%AC%94">随笔</a></li>
 	        
-				<li><a href="/tags/图片">一些图片</a></li>
+				<li><a href="/tags/%E5%9B%BE%E7%89%87">一些图片</a></li>
 	        
 			</ul>
 		</nav>
@@ -113,10 +111,8 @@
 				<img src="/img/header.jpg" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">田珍珠女士</h1>
+			  <h1 class="header-author js-header-author"></h1>
 			</hgroup>
-			
-			<p class="header-subtitle"><i class="icon icon-quo-left"></i>日拱一卒 功不唐捐<i class="icon icon-quo-right"></i></p>
 			
 			
 			
@@ -148,9 +144,9 @@
 				
 					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/tags/随笔">随笔</a></li>
+					<li style="width: 33.333333333333336%"><a href="/tags/%E9%9A%8F%E7%AC%94">随笔</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/tags/图片">一些图片</a></li>
+					<li style="width: 33.333333333333336%"><a href="/tags/%E5%9B%BE%E7%89%87">一些图片</a></li>
 		        
 				</ul>
 			</nav>
@@ -186,12 +182,12 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h3 id="serviceworker"><a href="#serviceworker" class="headerlink" title="serviceworker"></a>serviceworker</h3><p>离线网页应用？</p>
-<a id="more"></a>
+<span id="more"></span>
 
 <p>serviceworker的前身 manifest</p>
 <p>Service Worker是谷歌发起的实现PWA（Progressive Web App）的一个关键角色</p>
 <p>Service Worker的使用套路是先注册一个Worker，然后后台就会启动一条线程，可以在这条线程启动的时候去加载一些资源缓存起来，然后监听fetch事件，在这个事件里拦截页面的请求，先看下缓存里有没有，如果有直接返回，否则正常加载。或者是一开始不缓存，每个资源请求后再拷贝一份缓存起来，然后下一次请求的时候缓存里就有了。</p>
-<p><a href="https://mp.weixin.qq.com/s?src=11&timestamp=1573614910&ver=1971&signature=aH4qQf8SywagvJizzM6gngPLJazmGrMv98nY6YYoUKXlk54ZujjhnyS3WgcFTYHESj0*l1g8yIkqTsqIFf-8Pq-k0Ns8ppnelA0c9SRh-d8wB5ncp2BsSVbIiGtMNWxq&new=1" target="_blank" rel="noopener">网上的文章</a></p>
+<p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?src=11&timestamp=1573614910&ver=1971&signature=aH4qQf8SywagvJizzM6gngPLJazmGrMv98nY6YYoUKXlk54ZujjhnyS3WgcFTYHESj0*l1g8yIkqTsqIFf-8Pq-k0Ns8ppnelA0c9SRh-d8wB5ncp2BsSVbIiGtMNWxq&new=1">网上的文章</a></p>
 
       
 
@@ -296,7 +292,7 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/11/25/移动端隐藏滚动条/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/11/25/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%9A%90%E8%97%8F%E6%BB%9A%E5%8A%A8%E6%9D%A1/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
@@ -306,7 +302,7 @@
     </a>
   
   
-    <a href="/2019/10/28/重学前端系列笔记4/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2019/10/28/%E9%87%8D%E5%AD%A6%E5%89%8D%E7%AB%AF%E7%B3%BB%E5%88%97%E7%AC%94%E8%AE%B04/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">重学前端系列笔记4</div>
       <i class="icon-circle-right"></i>
     </a>
@@ -350,7 +346,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2021 田珍珠女士
+    		&copy; 2022 Rabit
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -433,7 +429,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -441,7 +437,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -449,7 +445,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -473,11 +469,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">rn</a>
+                <a href="javascript:void(0)" class="js-tag color4">工程化</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">工程化</a>
+                <a href="javascript:void(0)" class="js-tag color3">rn</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -494,6 +490,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">网络</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">安全</a>
               </li>
              
               <li class="article-tag-list-item">

@@ -1,27 +1,28 @@
 <!DOCTYPE html>
 <html>
-<head><meta name="generator" content="Hexo 3.9.0">
+<head>
   <meta charset="utf-8">
   
   <meta name="renderer" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://wine1.github.io">
-  <title>react-native | 哦。</title>
+  <title>react-native | Wonderland</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="第一次尝试写reactnative的demo,下面是遇到的问题的记录">
-<meta name="keywords" content="前端,rn">
 <meta property="og:type" content="article">
 <meta property="og:title" content="react-native">
 <meta property="og:url" content="https://wine1.github.io/2018/11/02/react-native/index.html">
-<meta property="og:site_name" content="哦。">
+<meta property="og:site_name" content="Wonderland">
 <meta property="og:description" content="第一次尝试写reactnative的demo,下面是遇到的问题的记录">
-<meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-11T16:10:00.000Z">
+<meta property="og:locale">
+<meta property="article:published_time" content="2018-11-02T01:16:37.000Z">
+<meta property="article:modified_time" content="2019-04-11T16:10:00.000Z">
+<meta property="article:author" content="Rabit">
+<meta property="article:tag" content="前端">
+<meta property="article:tag" content="rn">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="react-native">
-<meta name="twitter:description" content="第一次尝试写reactnative的demo,下面是遇到的问题的记录">
   
-    <link rel="alternative" href="/atom.xml" title="哦。" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="Wonderland" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -37,8 +38,8 @@
 
   
 
-</head>
-</html>
+<meta name="generator" content="Hexo 6.0.0"></head>
+
 <body>
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
@@ -51,10 +52,8 @@
 			<img src="/img/header.jpg" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="">田珍珠女士</a></h1>
+		  <h1 class="header-author"><a href=""></a></h1>
 		</hgroup>
-		
-		<p class="header-subtitle">日拱一卒 功不唐捐</p>
 		
 
 		<nav class="header-menu">
@@ -62,9 +61,9 @@
 			
 				<li><a href="/">主页</a></li>
 	        
-				<li><a href="/tags/随笔">随笔</a></li>
+				<li><a href="/tags/%E9%9A%8F%E7%AC%94">随笔</a></li>
 	        
-				<li><a href="/tags/图片">一些图片</a></li>
+				<li><a href="/tags/%E5%9B%BE%E7%89%87">一些图片</a></li>
 	        
 			</ul>
 		</nav>
@@ -113,10 +112,8 @@
 				<img src="/img/header.jpg" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">田珍珠女士</h1>
+			  <h1 class="header-author js-header-author"></h1>
 			</hgroup>
-			
-			<p class="header-subtitle"><i class="icon icon-quo-left"></i>日拱一卒 功不唐捐<i class="icon icon-quo-right"></i></p>
 			
 			
 			
@@ -148,9 +145,9 @@
 				
 					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/tags/随笔">随笔</a></li>
+					<li style="width: 33.333333333333336%"><a href="/tags/%E9%9A%8F%E7%AC%94">随笔</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/tags/图片">一些图片</a></li>
+					<li style="width: 33.333333333333336%"><a href="/tags/%E5%9B%BE%E7%89%87">一些图片</a></li>
 		        
 				</ul>
 			</nav>
@@ -186,55 +183,47 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>第一次尝试写reactnative的demo,下面是遇到的问题的记录</p>
-<a id="more"></a>
+<span id="more"></span>
 <ol>
-<li><a href="https://cloud.tencent.com/developer/section/1373970" target="_blank" rel="noopener">native module</a></li>
-<li><a href="https://www.cnblogs.com/mei1234/p/9151922.html" target="_blank" rel="noopener">ES6，import时如何正确使用花括号’{ }’</a></li>
-<li><a href="https://www.jianshu.com/p/fb915d9c99c4" target="_blank" rel="noopener">React 中组件间通信的几种方式</a></li>
-<li><a href="https://www.jianshu.com/p/f39f020197ef" target="_blank" rel="noopener">react-navigation</a></li>
-<li>react-navigation3 容易出的bug(实在不行 换回2吧)<ul>
-<li>undefined is not an object (evaluating ‘RNGestureHandlerModule.State’解决方案<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">remove node_modules and package-lock.json</span><br><span class="line">npm install</span><br><span class="line">npm install --save react-navigation</span><br><span class="line">npm install --save react-native-gesture-handler</span><br><span class="line">react-native link</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
+<li><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/section/1373970">native module</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/mei1234/p/9151922.html">ES6，import时如何正确使用花括号’{ }’</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/fb915d9c99c4">React 中组件间通信的几种方式</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/f39f020197ef">react-navigation</a></li>
+<li>react-navigation3 容易出的bug(实在不行 换回2吧)</li>
 </ol>
 <ul>
-<li><p>unable to load script from asset/index.android.bundle问题解决</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mkdir android\app\src\main\assets</span><br><span class="line">react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res</span><br><span class="line">react-native run-android</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>could not get batchedbridge, make sure your bundle is packaged correctly<br>  查看端口和ip是否正确 端口是否被占用</p>
-</li>
+<li>undefined is not an object (evaluating ‘RNGestureHandlerModule.State’解决方案 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">remove node_modules and package-lock.json</span><br><span class="line">npm install</span><br><span class="line">npm install --save react-navigation</span><br><span class="line">npm install --save react-native-gesture-handler</span><br><span class="line">react-native link</span><br></pre></td></tr></table></figure></li>
+<li>unable to load script from asset/index.android.bundle问题解决  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mkdir android\app\src\main\assets</span><br><span class="line">react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res</span><br><span class="line">react-native run-android</span><br></pre></td></tr></table></figure></li>
+<li>could not get batchedbridge, make sure your bundle is packaged correctly<br>  查看端口和ip是否正确 端口是否被占用</li>
 </ul>
 <ol start="6">
 <li><p>react中的refs</p>
 </li>
 <li><p>FlatList</p>
+</li>
+</ol>
 <ul>
 <li></li>
 </ul>
-</li>
+<ol start="8">
 <li><p>animated</p>
 </li>
 <li><p>Warning: isMounted(…) is deprecated in plain Javascript Classes. Instead, make sure to clean up subscriptions and pending requests in componentWillUnmount to prevent memory leaks.</p>
+</li>
+</ol>
 <ul>
 <li>这是组件本身的bug  目前的解决方法是忽略</li>
 <li>import { YellowBox } from ‘react-native’;</li>
 <li>YellowBox.ignoreWarnings([‘Warning: isMounted(…) is deprecated’, ‘Module RCTImageLoader’]);</li>
 </ul>
-</li>
-<li><p><a href="https://blog.csdn.net/u010347226/article/details/79117940" target="_blank" rel="noopener">真机报错</a></p>
-</li>
-<li><p><a href="https://blog.csdn.net/qq_25827845/article/details/52974991?locationNum=4&fps=1" target="_blank" rel="noopener">Could not connect to development server</a></p>
-</li>
-<li><p><a href="https://blog.csdn.net/qq_25827845/article/details/52974991?locationNum=4&fps=1" target="_blank" rel="noopener">React—Native开发之 Could not connect to development server（Android）解决方法
-</a></p>
-</li>
-<li><p><a href="http://ask.android-studio.org/?/question/3008" target="_blank" rel="noopener">启动另一个项目时失败，adb报错device still connecting</a></p>
-</li>
-<li><p><a href="https://blog.csdn.net/awy1988/article/details/80336913" target="_blank" rel="noopener">React Native version mismatch 错误</a></p>
-</li>
-<li><p><a href="https://blog.csdn.net/qq_34966519/article/details/51857967" target="_blank" rel="noopener">简化启动夜神模拟器的步骤</a><br>部分错误是由于rn的版本问题。最好在初始化项目的时候指定版本号，目前0.55.4比较稳定</p>
-</li>
+<ol start="10">
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/u010347226/article/details/79117940">真机报错</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_25827845/article/details/52974991?locationNum=4&fps=1">Could not connect to development server</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_25827845/article/details/52974991?locationNum=4&fps=1">React—Native开发之 Could not connect to development server（Android）解决方法
+</a></li>
+<li><a target="_blank" rel="noopener" href="http://ask.android-studio.org/?/question/3008">启动另一个项目时失败，adb报错device still connecting</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/awy1988/article/details/80336913">React Native version mismatch 错误</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_34966519/article/details/51857967">简化启动夜神模拟器的步骤</a><br>部分错误是由于rn的版本问题。最好在初始化项目的时候指定版本号，目前0.55.4比较稳定</li>
 </ol>
 <p>react-native bundle –platform android –dev false –entry-file index.android.js –bundle-output android/app/src/main/assets/index.android.bundle –assets-dest android/app/src/main/res</p>
 
@@ -345,7 +334,7 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/11/05/移动端长按弹出事件/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2018/11/05/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%95%BF%E6%8C%89%E5%BC%B9%E5%87%BA%E4%BA%8B%E4%BB%B6/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
@@ -355,7 +344,7 @@
     </a>
   
   
-    <a href="/2018/09/15/js中的this/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2018/09/15/js%E4%B8%AD%E7%9A%84this/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">js中的this</div>
       <i class="icon-circle-right"></i>
     </a>
@@ -399,7 +388,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2021 田珍珠女士
+    		&copy; 2022 Rabit
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -482,7 +471,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -490,7 +479,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -498,7 +487,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -522,11 +511,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">rn</a>
+                <a href="javascript:void(0)" class="js-tag color4">工程化</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">工程化</a>
+                <a href="javascript:void(0)" class="js-tag color3">rn</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -543,6 +532,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">网络</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">安全</a>
               </li>
              
               <li class="article-tag-list-item">

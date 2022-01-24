@@ -1,27 +1,28 @@
 <!DOCTYPE html>
 <html>
-<head><meta name="generator" content="Hexo 3.9.0">
+<head>
   <meta charset="utf-8">
   
   <meta name="renderer" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://wine1.github.io">
-  <title>node.js入门(3) | 哦。</title>
+  <title>node.js入门(3) | Wonderland</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="express框架中文官网基于 Node.js 平台，快速、开放、极简的 web 开发框架。express可以极大程度上简化nodejs，它由许多api非常方便使用。node.js的http封装的程度不高，路由由原生代码实现起来比较复杂。在我目前的感知里，我认为框架最主要就是实现了比较方便的路由的架构。">
-<meta name="keywords" content="前端,node.js">
 <meta property="og:type" content="article">
 <meta property="og:title" content="node.js入门(3)">
-<meta property="og:url" content="https://wine1.github.io/2017/12/09/node-js入门-3/index.html">
-<meta property="og:site_name" content="哦。">
+<meta property="og:url" content="https://wine1.github.io/2017/12/09/node-js%E5%85%A5%E9%97%A8-3/index.html">
+<meta property="og:site_name" content="Wonderland">
 <meta property="og:description" content="express框架中文官网基于 Node.js 平台，快速、开放、极简的 web 开发框架。express可以极大程度上简化nodejs，它由许多api非常方便使用。node.js的http封装的程度不高，路由由原生代码实现起来比较复杂。在我目前的感知里，我认为框架最主要就是实现了比较方便的路由的架构。">
-<meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-07T13:01:38.000Z">
+<meta property="og:locale">
+<meta property="article:published_time" content="2017-12-09T06:07:22.000Z">
+<meta property="article:modified_time" content="2019-01-07T13:01:38.000Z">
+<meta property="article:author" content="Rabit">
+<meta property="article:tag" content="前端">
+<meta property="article:tag" content="node.js">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="node.js入门(3)">
-<meta name="twitter:description" content="express框架中文官网基于 Node.js 平台，快速、开放、极简的 web 开发框架。express可以极大程度上简化nodejs，它由许多api非常方便使用。node.js的http封装的程度不高，路由由原生代码实现起来比较复杂。在我目前的感知里，我认为框架最主要就是实现了比较方便的路由的架构。">
   
-    <link rel="alternative" href="/atom.xml" title="哦。" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="Wonderland" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -37,8 +38,8 @@
 
   
 
-</head>
-</html>
+<meta name="generator" content="Hexo 6.0.0"></head>
+
 <body>
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
@@ -51,10 +52,8 @@
 			<img src="/img/header.jpg" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="">田珍珠女士</a></h1>
+		  <h1 class="header-author"><a href=""></a></h1>
 		</hgroup>
-		
-		<p class="header-subtitle">日拱一卒 功不唐捐</p>
 		
 
 		<nav class="header-menu">
@@ -62,9 +61,9 @@
 			
 				<li><a href="/">主页</a></li>
 	        
-				<li><a href="/tags/随笔">随笔</a></li>
+				<li><a href="/tags/%E9%9A%8F%E7%AC%94">随笔</a></li>
 	        
-				<li><a href="/tags/图片">一些图片</a></li>
+				<li><a href="/tags/%E5%9B%BE%E7%89%87">一些图片</a></li>
 	        
 			</ul>
 		</nav>
@@ -113,10 +112,8 @@
 				<img src="/img/header.jpg" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">田珍珠女士</h1>
+			  <h1 class="header-author js-header-author"></h1>
 			</hgroup>
-			
-			<p class="header-subtitle"><i class="icon icon-quo-left"></i>日拱一卒 功不唐捐<i class="icon icon-quo-right"></i></p>
 			
 			
 			
@@ -148,9 +145,9 @@
 				
 					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/tags/随笔">随笔</a></li>
+					<li style="width: 33.333333333333336%"><a href="/tags/%E9%9A%8F%E7%AC%94">随笔</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/tags/图片">一些图片</a></li>
+					<li style="width: 33.333333333333336%"><a href="/tags/%E5%9B%BE%E7%89%87">一些图片</a></li>
 		        
 				</ul>
 			</nav>
@@ -177,7 +174,7 @@
   
 
         
-        <a href="/2017/12/09/node-js入门-3/" class="archive-article-date">
+        <a href="/2017/12/09/node-js%E5%85%A5%E9%97%A8-3/" class="archive-article-date">
   	<time datetime="2017-12-09T06:07:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-09</time>
 </a>
         
@@ -185,19 +182,17 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><a href="http://www.expressjs.com.cn/" target="_blank" rel="noopener">express框架中文官网</a><br>基于 Node.js 平台，快速、开放、极简的 web 开发框架。<br>express可以极大程度上简化nodejs，它由许多api非常方便使用。<br>node.js的http封装的程度不高，路由由原生代码实现起来比较复杂。在我目前的感知里，我认为框架最主要就是实现了比较方便的路由的架构。  </p>
-<a id="more"></a>
+        <p><a target="_blank" rel="noopener" href="http://www.expressjs.com.cn/">express框架中文官网</a><br>基于 Node.js 平台，快速、开放、极简的 web 开发框架。<br>express可以极大程度上简化nodejs，它由许多api非常方便使用。<br>node.js的http封装的程度不高，路由由原生代码实现起来比较复杂。在我目前的感知里，我认为框架最主要就是实现了比较方便的路由的架构。  </p>
+<span id="more"></span>
 
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var express = require(&apos;express&apos;);</span><br><span class="line">var app = express();</span><br><span class="line"></span><br><span class="line">app.get(&apos;/&apos;, function(req, res)&#123;</span><br><span class="line">  res.send(&apos;hello world&apos;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">app.listen(3000);</span><br></pre></td></tr></table></figure>
-
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var express = require(&#x27;express&#x27;);</span><br><span class="line">var app = express();</span><br><span class="line"></span><br><span class="line">app.get(&#x27;/&#x27;, function(req, res)&#123;</span><br><span class="line">  res.send(&#x27;hello world&#x27;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">app.listen(3000);</span><br></pre></td></tr></table></figure>
 <p><strong>路由 app.method</strong><br>常用method有post和get。还有很多，官方文档都有介绍。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">app.get(&apos;网址&apos;, function()&#123;&#125;);</span><br><span class="line">app.post(&apos;网址&apos;, function()&#123;&#125;);</span><br><span class="line">app.all(&apos;网址&apos;, function()&#123;&#125;); 它的作用是对于一个路径上的所有请求加载中间件。</span><br></pre></td></tr></table></figure>
-
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">app.get(&#x27;网址&#x27;, function()&#123;&#125;);</span><br><span class="line">app.post(&#x27;网址&#x27;, function()&#123;&#125;);</span><br><span class="line">app.all(&#x27;网址&#x27;, function()&#123;&#125;); 它的作用是对于一个路径上的所有请求加载中间件。</span><br></pre></td></tr></table></figure>
 <p>路由路径和请求方法一起定义了请求的端点，它可以是字符串、字符串模式或者正则表达式。<br>路由句柄 可以为请求处理提供多个回调函数，其行为类似 中间件。唯一的区别是这些回调函数有可能调用 next(‘route’) 方法而略过其他路由回调函数。可以利用该机制为路由定义前提条件，如果在现有路径上继续执行没有意义，则可将控制权交给剩下的路径。</p>
-<p>响应方法<br><a href="http://m.qpic.cn/psb?/V11DrKVS1wfriy/P4Q2M8GKHqNe.ok6e8sARSyii349iebvGVX9C2CwZFk!/b/dPMAAAAAAAAA&bo=TgKYAQAAAAARB.U!&rf=viewer_4" target="_blank" rel="noopener">响应方法</a></p>
+<p>响应方法<br><a target="_blank" rel="noopener" href="http://m.qpic.cn/psb?/V11DrKVS1wfriy/P4Q2M8GKHqNe.ok6e8sARSyii349iebvGVX9C2CwZFk!/b/dPMAAAAAAAAA&bo=TgKYAQAAAAARB.U!&rf=viewer_4">响应方法</a></p>
 <p>可使用 app.route() 创建路由路径的链式路由句柄。由于路径在一个地方指定，这样做有助于创建模块化的路由，而且减少了代码冗余和拼写错误。</p>
 <p>可使用 express.Router 类创建模块化、可挂载的路由句柄。Router 实例是一个完整的中间件和路由系统，因此常称其为一个 “mini-app”。</p>
-<p><strong>中间件</strong><br><a href="http://www.expressjs.com.cn/guide/using-middleware.html" target="_blank" rel="noopener">依旧是官网的解释</a><br>在get和post回调函数中，如果没有next参数，那么就 匹配第一个路由，不会继续往下匹配。<br>应用级中间件<br>应用级中间件绑定到 app 对象 使用 app.use() 和 app.METHOD()app.use()的网址不是精确匹配的。</p>
+<p><strong>中间件</strong><br><a target="_blank" rel="noopener" href="http://www.expressjs.com.cn/guide/using-middleware.html">依旧是官网的解释</a><br>在get和post回调函数中，如果没有next参数，那么就 匹配第一个路由，不会继续往下匹配。<br>应用级中间件<br>应用级中间件绑定到 app 对象 使用 app.use() 和 app.METHOD()app.use()的网址不是精确匹配的。</p>
 <p>路由级中间件和应用级中间件一样，只是它绑定的对象为 express.Router()。</p>
 <p><mark>错误处理中间件</mark><br>错误处理中间件有 4 个参数，定义错误处理中间件时必须使用这 4 个参数。即使不需要 next 对象，也必须在签名中声明它，否则中间件会被识别为一个常规中间件，不能处理错误。</p>
 <p>内置中间件express.static(root, [options])</p>
@@ -295,7 +290,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://wine1.github.io/2017/12/09/node-js入门-3/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://wine1.github.io/2017/12/09/node-js%E5%85%A5%E9%97%A8-3/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -309,7 +304,7 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/12/10/前端安全性问题/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/12/10/%E5%89%8D%E7%AB%AF%E5%AE%89%E5%85%A8%E6%80%A7%E9%97%AE%E9%A2%98/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
@@ -319,7 +314,7 @@
     </a>
   
   
-    <a href="/2017/12/07/node-js入门-2/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2017/12/07/node-js%E5%85%A5%E9%97%A8-2/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">node.js入门(2)</div>
       <i class="icon-circle-right"></i>
     </a>
@@ -363,7 +358,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2021 田珍珠女士
+    		&copy; 2022 Rabit
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -446,7 +441,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -454,7 +449,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -462,7 +457,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -486,11 +481,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">rn</a>
+                <a href="javascript:void(0)" class="js-tag color4">工程化</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">工程化</a>
+                <a href="javascript:void(0)" class="js-tag color3">rn</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -507,6 +502,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">网络</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">安全</a>
               </li>
              
               <li class="article-tag-list-item">

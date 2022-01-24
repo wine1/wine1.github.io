@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html>
-<head><meta name="generator" content="Hexo 3.9.0">
+<head>
   <meta charset="utf-8">
   
   <meta name="renderer" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://wine1.github.io">
-  <title>html5(canvas) | 哦。</title>
+  <title>html5(canvas) | Wonderland</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="参考：HTML5与CSS3权威指南或者W3Cschool 菜鸟教程之类的 都有详细的用法">
-<meta name="keywords" content="前端">
 <meta property="og:type" content="article">
 <meta property="og:title" content="html5(canvas)">
 <meta property="og:url" content="https://wine1.github.io/2017/11/15/html5-canvas/index.html">
-<meta property="og:site_name" content="哦。">
+<meta property="og:site_name" content="Wonderland">
 <meta property="og:description" content="参考：HTML5与CSS3权威指南或者W3Cschool 菜鸟教程之类的 都有详细的用法">
-<meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-07T13:01:38.000Z">
+<meta property="og:locale">
+<meta property="article:published_time" content="2017-11-15T13:04:37.000Z">
+<meta property="article:modified_time" content="2019-01-07T13:01:38.000Z">
+<meta property="article:author" content="Rabit">
+<meta property="article:tag" content="前端">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="html5(canvas)">
-<meta name="twitter:description" content="参考：HTML5与CSS3权威指南或者W3Cschool 菜鸟教程之类的 都有详细的用法">
   
-    <link rel="alternative" href="/atom.xml" title="哦。" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="Wonderland" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -37,8 +37,8 @@
 
   
 
-</head>
-</html>
+<meta name="generator" content="Hexo 6.0.0"></head>
+
 <body>
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
@@ -51,10 +51,8 @@
 			<img src="/img/header.jpg" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="">田珍珠女士</a></h1>
+		  <h1 class="header-author"><a href=""></a></h1>
 		</hgroup>
-		
-		<p class="header-subtitle">日拱一卒 功不唐捐</p>
 		
 
 		<nav class="header-menu">
@@ -62,9 +60,9 @@
 			
 				<li><a href="/">主页</a></li>
 	        
-				<li><a href="/tags/随笔">随笔</a></li>
+				<li><a href="/tags/%E9%9A%8F%E7%AC%94">随笔</a></li>
 	        
-				<li><a href="/tags/图片">一些图片</a></li>
+				<li><a href="/tags/%E5%9B%BE%E7%89%87">一些图片</a></li>
 	        
 			</ul>
 		</nav>
@@ -113,10 +111,8 @@
 				<img src="/img/header.jpg" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">田珍珠女士</h1>
+			  <h1 class="header-author js-header-author"></h1>
 			</hgroup>
-			
-			<p class="header-subtitle"><i class="icon icon-quo-left"></i>日拱一卒 功不唐捐<i class="icon icon-quo-right"></i></p>
 			
 			
 			
@@ -148,9 +144,9 @@
 				
 					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/tags/随笔">随笔</a></li>
+					<li style="width: 33.333333333333336%"><a href="/tags/%E9%9A%8F%E7%AC%94">随笔</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/tags/图片">一些图片</a></li>
+					<li style="width: 33.333333333333336%"><a href="/tags/%E5%9B%BE%E7%89%87">一些图片</a></li>
 		        
 				</ul>
 			</nav>
@@ -186,7 +182,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>参考：HTML5与CSS3权威指南<br>或者W3Cschool 菜鸟教程之类的 都有详细的用法</p>
-<a id="more"></a>
+<span id="more"></span>
 <section>
 canvas相当于设置了一块透明画布
 用canvas绘制图形的步骤：
@@ -228,7 +224,7 @@ function draw(id){
   var context = canvas.getContext('2d');
   context.fillStyle = "#999999";
   context.fillRect(0,0,400,400);
-
+  
 <p>  context.beginPath();<br>  context.arc(200,200,150,0,Math.PI*2,true);<br>  context.closePath();<br>  context.fillStyle=’rgba(255,255,255,0.7)’;<br>  context.fill();<br>}</p>
 </section>
 <section>
@@ -268,17 +264,17 @@ function draw(id){
         &lt;meta charset=&quot;UTF-8&quot;&gt;
         &lt;title&gt;画时钟&lt;/title&gt;
     &lt;/head&gt;
-    &lt;body onload=&quot;draw(&apos;canvas&apos;)&quot;&gt;
+    &lt;body onload=&quot;draw(&#39;canvas&#39;)&quot;&gt;
         &lt;canvas id=&quot;canvas&quot; width=&quot;400px&quot; height=&quot;400px&quot; border:&gt;&lt;/canvas&gt;
     &lt;/body&gt;    
 &lt;script&gt;
-    var dom=document.getElementById(&apos;canvas&apos;);
+    var dom=document.getElementById(&#39;canvas&#39;);
     var cxt=dom.getContext(&quot;2d&quot;);
     var width=cxt.canvas.width;
     var height=cxt.canvas.height;
     var r=width/2;
-
-    function drawBackground(){
+     
+    function drawBackground()&#123;
       cxt.save();
       cxt.translate(r,r);
       cxt.beginPath();
@@ -286,68 +282,68 @@ function draw(id){
       cxt.arc(0,0,r-5,0,2*Math.PI,false);
       cxt.stroke();
       cxt.font=&quot;18px Arial&quot;;
-      cxt.textAlign=&apos;center&apos;
-      cxt.textBaseline=&apos;middle&apos;
+      cxt.textAlign=&#39;center&#39;
+      cxt.textBaseline=&#39;middle&#39;
       var hourNums=[3,4,5,6,7,8,9,10,11,12,1,2];
-      hourNums.forEach(function(number,i){
-
+      hourNums.forEach(function(number,i)&#123;
+     
         var rad=2*Math.PI/12*i;
         var x=Math.cos(rad)*(r-30);
         var y=Math.sin(rad)*(r-30);
         cxt.fillText(number,x,y);
-
-      });
-
-      for(var i=0;i&lt;60;i++){
-
+     
+      &#125;);
+     
+      for(var i=0;i&lt;60;i++)&#123;
+     
         var rad=2*Math.PI/60*i;
         var x=Math.cos(rad)*(r-18);
         var y=Math.sin(rad)*(r-18);
         cxt.beginPath();
-        if(i % 5===0){
+        if(i % 5===0)&#123;
           cxt.fillStyle=&quot;#000&quot;
           cxt.arc(x,y,2,0,2*Math.PI,false);
-        }
-        else{
+        &#125;
+        else&#123;
           cxt.fillStyle=&quot;#ccc&quot;
           cxt.arc(x,y,2,0,2*Math.PI,false);
-        }
+        &#125;
         cxt.fill(); 
-      }
-
-    }
-
-    function drawHour(hour,minute){
+      &#125;
+     
+    &#125;
+     
+    function drawHour(hour,minute)&#123;
       cxt.save();
       cxt.beginPath();
       var rad=2*Math.PI/12*hour;
       var mrad=2*Math.PI/12/60*minute
       cxt.rotate(rad+mrad);
       cxt.lineWidth=6;
-      cxt.lineCap=&apos;round&apos;
+      cxt.lineCap=&#39;round&#39;
       cxt.moveTo(0,10);
       cxt.lineTo(0,-r/2);
       cxt.stroke();
       cxt.restore();
-    }
-
-    function drawMinute(minute){
+    &#125;
+     
+    function drawMinute(minute)&#123;
       cxt.save();
       cxt.beginPath();
       var rad=2*Math.PI/60*minute;
       cxt.rotate(rad);
       cxt.lineWidth=3;
-      cxt.lineCap=&apos;round&apos;
+      cxt.lineCap=&#39;round&#39;
       cxt.moveTo(0,10);
       cxt.lineTo(0,-r+30);
       cxt.stroke();
       cxt.restore();
-    }
-
-    function drawSecond(second){
+    &#125;
+     
+    function drawSecond(second)&#123;
       cxt.save();
       cxt.beginPath();
-      cxt.fillStyle=&apos;#c14543&apos;
+      cxt.fillStyle=&#39;#c14543&#39;
       var rad=2*Math.PI/60*second;
       cxt.rotate(rad);  
       cxt.moveTo(-2,20);
@@ -356,18 +352,18 @@ function draw(id){
       cxt.lineTo(-1,-r+18);
       cxt.fill();
       cxt.restore();
-    }
-
-    function drawDot(){
-
+    &#125;
+     
+    function drawDot()&#123;
+     
       cxt.beginPath();
-      cxt.fillStyle=&apos;#fff&apos;
+      cxt.fillStyle=&#39;#fff&#39;
       cxt.arc(0,0,3,0,2*Math.PI,false);
       cxt.fill();
-    }
-
-    function draw(){
-
+    &#125;
+     
+    function draw()&#123;
+     
       cxt.clearRect(0,0,width,height);
       var now=new Date();
       var hour=now.getHours();
@@ -379,12 +375,14 @@ function draw(id){
       drawSecond(second);
       drawDot();
       cxt.restore();
-    }
+    &#125;
     draw();
     setInterval(draw,1000);
-
+        
 &lt;/script&gt;
-&lt;/html&gt;</code></pre>
+&lt;/html&gt;
+</code></pre>
+
       
 
       
@@ -498,7 +496,7 @@ function draw(id){
     </a>
   
   
-    <a href="/2017/11/15/html5-新增元素/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2017/11/15/html5-%E6%96%B0%E5%A2%9E%E5%85%83%E7%B4%A0/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">html5（新增元素）</div>
       <i class="icon-circle-right"></i>
     </a>
@@ -542,7 +540,7 @@ function draw(id){
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2021 田珍珠女士
+    		&copy; 2022 Rabit
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -625,7 +623,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -633,7 +631,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -641,7 +639,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -665,11 +663,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">rn</a>
+                <a href="javascript:void(0)" class="js-tag color4">工程化</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">工程化</a>
+                <a href="javascript:void(0)" class="js-tag color3">rn</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -686,6 +684,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">网络</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">安全</a>
               </li>
              
               <li class="article-tag-list-item">

@@ -1,29 +1,30 @@
 <!DOCTYPE html>
 <html>
-<head><meta name="generator" content="Hexo 3.9.0">
+<head>
   <meta charset="utf-8">
   
   <meta name="renderer" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://wine1.github.io">
-  <title>node.js入门(1) | 哦。</title>
+  <title>node.js入门(1) | Wonderland</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="之前只用过nodejs的npm工具，现在打算来深入了解一下个人感觉入门的话，有点无从学起，官方文档看的一脸懵，比较片面的博客教程拿来入门的话也不太够，我看的是邵山欢老师的视频，一个蛮可爱的老师，讲的也很好懂。视频资源 链接：https://pan.baidu.com/s/1qXTQ7BA 密码：xjqi">
-<meta name="keywords" content="前端,node.js">
+  <meta name="description" content="之前只用过nodejs的npm工具，现在打算来深入了解一下个人感觉入门的话，有点无从学起，官方文档看的一脸懵，比较片面的博客教程拿来入门的话也不太够，我看的是邵山欢老师的视频，一个蛮可爱的老师，讲的也很好懂。视频资源 链接：https:&#x2F;&#x2F;pan.baidu.com&#x2F;s&#x2F;1qXTQ7BA 密码：xjqi">
 <meta property="og:type" content="article">
 <meta property="og:title" content="node.js入门(1)">
-<meta property="og:url" content="https://wine1.github.io/2017/12/06/node-js入门-1/index.html">
-<meta property="og:site_name" content="哦。">
-<meta property="og:description" content="之前只用过nodejs的npm工具，现在打算来深入了解一下个人感觉入门的话，有点无从学起，官方文档看的一脸懵，比较片面的博客教程拿来入门的话也不太够，我看的是邵山欢老师的视频，一个蛮可爱的老师，讲的也很好懂。视频资源 链接：https://pan.baidu.com/s/1qXTQ7BA 密码：xjqi">
-<meta property="og:locale" content="zh-Hans">
+<meta property="og:url" content="https://wine1.github.io/2017/12/06/node-js%E5%85%A5%E9%97%A8-1/index.html">
+<meta property="og:site_name" content="Wonderland">
+<meta property="og:description" content="之前只用过nodejs的npm工具，现在打算来深入了解一下个人感觉入门的话，有点无从学起，官方文档看的一脸懵，比较片面的博客教程拿来入门的话也不太够，我看的是邵山欢老师的视频，一个蛮可爱的老师，讲的也很好懂。视频资源 链接：https:&#x2F;&#x2F;pan.baidu.com&#x2F;s&#x2F;1qXTQ7BA 密码：xjqi">
+<meta property="og:locale">
 <meta property="og:image" content="http://image.beekka.com/blog/2014/bg2014100803.png">
-<meta property="og:updated_time" content="2019-01-07T13:01:38.000Z">
+<meta property="article:published_time" content="2017-12-06T07:59:13.000Z">
+<meta property="article:modified_time" content="2019-01-07T13:01:38.000Z">
+<meta property="article:author" content="Rabit">
+<meta property="article:tag" content="前端">
+<meta property="article:tag" content="node.js">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="node.js入门(1)">
-<meta name="twitter:description" content="之前只用过nodejs的npm工具，现在打算来深入了解一下个人感觉入门的话，有点无从学起，官方文档看的一脸懵，比较片面的博客教程拿来入门的话也不太够，我看的是邵山欢老师的视频，一个蛮可爱的老师，讲的也很好懂。视频资源 链接：https://pan.baidu.com/s/1qXTQ7BA 密码：xjqi">
 <meta name="twitter:image" content="http://image.beekka.com/blog/2014/bg2014100803.png">
   
-    <link rel="alternative" href="/atom.xml" title="哦。" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="Wonderland" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -39,8 +40,8 @@
 
   
 
-</head>
-</html>
+<meta name="generator" content="Hexo 6.0.0"></head>
+
 <body>
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
@@ -53,10 +54,8 @@
 			<img src="/img/header.jpg" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="">田珍珠女士</a></h1>
+		  <h1 class="header-author"><a href=""></a></h1>
 		</hgroup>
-		
-		<p class="header-subtitle">日拱一卒 功不唐捐</p>
 		
 
 		<nav class="header-menu">
@@ -64,9 +63,9 @@
 			
 				<li><a href="/">主页</a></li>
 	        
-				<li><a href="/tags/随笔">随笔</a></li>
+				<li><a href="/tags/%E9%9A%8F%E7%AC%94">随笔</a></li>
 	        
-				<li><a href="/tags/图片">一些图片</a></li>
+				<li><a href="/tags/%E5%9B%BE%E7%89%87">一些图片</a></li>
 	        
 			</ul>
 		</nav>
@@ -115,10 +114,8 @@
 				<img src="/img/header.jpg" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">田珍珠女士</h1>
+			  <h1 class="header-author js-header-author"></h1>
 			</hgroup>
-			
-			<p class="header-subtitle"><i class="icon icon-quo-left"></i>日拱一卒 功不唐捐<i class="icon icon-quo-right"></i></p>
 			
 			
 			
@@ -150,9 +147,9 @@
 				
 					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/tags/随笔">随笔</a></li>
+					<li style="width: 33.333333333333336%"><a href="/tags/%E9%9A%8F%E7%AC%94">随笔</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/tags/图片">一些图片</a></li>
+					<li style="width: 33.333333333333336%"><a href="/tags/%E5%9B%BE%E7%89%87">一些图片</a></li>
 		        
 				</ul>
 			</nav>
@@ -179,7 +176,7 @@
   
 
         
-        <a href="/2017/12/06/node-js入门-1/" class="archive-article-date">
+        <a href="/2017/12/06/node-js%E5%85%A5%E9%97%A8-1/" class="archive-article-date">
   	<time datetime="2017-12-06T07:59:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-06</time>
 </a>
         
@@ -187,25 +184,25 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>之前只用过nodejs的npm工具，现在打算来深入了解一下<br>个人感觉入门的话，有点无从学起，官方文档看的一脸懵，比较片面的博客教程拿来入门的话也不太够，我看的是邵山欢老师的视频，一个蛮可爱的老师，讲的也很好懂。视频资源 链接：<a href="https://pan.baidu.com/s/1qXTQ7BA" target="_blank" rel="noopener">https://pan.baidu.com/s/1qXTQ7BA</a> 密码：xjqi</p>
-<a id="more"></a>
+        <p>之前只用过nodejs的npm工具，现在打算来深入了解一下<br>个人感觉入门的话，有点无从学起，官方文档看的一脸懵，比较片面的博客教程拿来入门的话也不太够，我看的是邵山欢老师的视频，一个蛮可爱的老师，讲的也很好懂。视频资源 链接：<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1qXTQ7BA">https://pan.baidu.com/s/1qXTQ7BA</a> 密码：xjqi</p>
+<span id="more"></span>
 <p>nodejs用javascript编程，运行在Chrome的V8内核上。它没有服务器这个部分，</p>
 <blockquote>
 <p>nodejs的特点：</p>
 <blockquote>
-<p><strong>单线程</strong>：单线程可以让所有用户共用一个线程，节省服务器内存。但是可以实现宏观上的多线程。而且避免了操作系统多次创建，销毁进程的开销。弊端就是，一旦线程崩溃，那么服务器就无法访问。<br>非阻塞IO：nodejs运用了非阻塞IO，传统单线程采用的阻塞IO，极大降低了程序效率。<a href="http://qindongliang.iteye.com/blog/2018539" target="_blank" rel="noopener">http://qindongliang.iteye.com/blog/2018539</a><br>事件驱动：用事件驱动来完成服务器的调度</p>
+<p><strong>单线程</strong>：单线程可以让所有用户共用一个线程，节省服务器内存。但是可以实现宏观上的多线程。而且避免了操作系统多次创建，销毁进程的开销。弊端就是，一旦线程崩溃，那么服务器就无法访问。<br>非阻塞IO：nodejs运用了非阻塞IO，传统单线程采用的阻塞IO，极大降低了程序效率。<a target="_blank" rel="noopener" href="http://qindongliang.iteye.com/blog/2018539">http://qindongliang.iteye.com/blog/2018539</a><br>事件驱动：用事件驱动来完成服务器的调度</p>
 </blockquote>
 </blockquote>
 <p>因此，nodejs 比较适合需要大量IO处理的情况，而不适合需要大量计算的情况。适合做长连接的，比如跟WebSockets配合做长连接的实时交流的应用</p>
 <p>node.js其实是比较像一个虚拟机的，它也是跨平台的。<br>它的程序运行在服务器端，然后将计算结构返回到客户端。<br>如果想修改程序，必须要先中断当前运行的服务器，改动后，重新node，运行服务器<br> Ctrl+C 就可以打断挂起的服务程序，此时按上箭头，能够快速调用最近的node命令<br>简化来想，nodejs 就相当于一个js执行环境.</p>
 <p>node.js没有根目录的概念，它没有web容器。在启动之后，无法直接根据相应的文件路径文件名进入到相应的页面。但是它可以通过读取文件，这样一个路由设计，实现比较方便的读取页面之类的工作。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">fs.readFile(&apos;/etc/passwd&apos;, (err, data) =&gt; &#123;</span><br><span class="line">  if (err) throw err;</span><br><span class="line">  console.log(data);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">fs.readFile(&#x27;/etc/passwd&#x27;, (err, data) =&gt; &#123;</span><br><span class="line">  if (err) throw err;</span><br><span class="line">  console.log(data);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 
 <p>###http模块###<br>node.js中将很多功能划分为一个个的muddule,即模块。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">//引用模块</span><br><span class="line">var http = require(&quot;http&quot;);</span><br><span class="line"></span><br><span class="line">//创建一个服务器，回调函数表示接收到请求之后做的事情</span><br><span class="line">var server = http.createServer(function(req, res) &#123;</span><br><span class="line">	console.log(&quot;服务器接受到了请求&quot; + req.url);</span><br><span class="line">	res.end();//这个方法在回调函数中是必须的，否则浏览器会一直处于等待状态</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"> server.listen(3000, &quot;localhost&quot;);</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">//引用模块</span><br><span class="line">var http = require(&quot;http&quot;);</span><br><span class="line"></span><br><span class="line">//创建一个服务器，回调函数表示接收到请求之后做的事情</span><br><span class="line">var server = http.createServer(function(req, res) &#123;</span><br><span class="line">	console.log(&quot;服务器接受到了请求&quot; + req.url);</span><br><span class="line">	res.end();//这个方法在回调函数中是必须的，否则浏览器会一直处于等待状态</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"> server.listen(3000, &quot;localhost&quot;);</span><br></pre></td></tr></table></figure>
 
 <p>下面是一个将helloWord呈现到页面的一段代码，算是一个完整的请求过程</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">http = require(&quot;http&quot;);</span><br><span class="line">http.createServer( function(req, res) &#123;</span><br><span class="line">	res.writeHead(200, &#123;&quot;Content-type&quot;:&quot;text/html;charset=UTF-8&quot;&#125;);</span><br><span class="line">	res.end(&quot;&lt;h1&gt;hello world&lt;/h1&gt;&quot;);</span><br><span class="line"></span><br><span class="line">&#125;).listen(3000, &quot;localhost&quot;);</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">http = require(&quot;http&quot;);</span><br><span class="line">http.createServer( function(req, res) &#123;</span><br><span class="line">	res.writeHead(200, &#123;&quot;Content-type&quot;:&quot;text/html;charset=UTF-8&quot;&#125;);</span><br><span class="line">	res.end(&quot;&lt;h1&gt;hello world&lt;/h1&gt;&quot;);</span><br><span class="line"></span><br><span class="line">&#125;).listen(3000, &quot;localhost&quot;);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <p>node.js中一个要点就是用户请求url，所有的路由设计，都是通过req.url来完成的。由于node.js中与众不同的路由机制，我们更侧重于关心如何识别url而不是拿到url</p>
 <p>要识别url，用到两个新的模块，一个是url模块，另一个就是querystring（查询字符串）</p>
@@ -304,7 +301,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://wine1.github.io/2017/12/06/node-js入门-1/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://wine1.github.io/2017/12/06/node-js%E5%85%A5%E9%97%A8-1/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -318,7 +315,7 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/12/07/node-js入门-2/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/12/07/node-js%E5%85%A5%E9%97%A8-2/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
@@ -372,7 +369,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2021 田珍珠女士
+    		&copy; 2022 Rabit
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -455,7 +452,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -463,7 +460,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -471,7 +468,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -495,11 +492,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">rn</a>
+                <a href="javascript:void(0)" class="js-tag color4">工程化</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">工程化</a>
+                <a href="javascript:void(0)" class="js-tag color3">rn</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -516,6 +513,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">网络</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">安全</a>
               </li>
              
               <li class="article-tag-list-item">

@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html>
-<head><meta name="generator" content="Hexo 3.9.0">
+<head>
   <meta charset="utf-8">
   
   <meta name="renderer" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://wine1.github.io">
-  <title>浅析虚拟DOM | 哦。</title>
+  <title>浅析虚拟DOM | Wonderland</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="虚拟DOM的基本思想  用js对象模拟DOM树 比较两颗虚拟DOM树的差异 把差异应用到真正的DOM树上">
-<meta name="keywords" content="前端">
 <meta property="og:type" content="article">
 <meta property="og:title" content="浅析虚拟DOM">
-<meta property="og:url" content="https://wine1.github.io/2020/07/15/浅析虚拟DOM/index.html">
-<meta property="og:site_name" content="哦。">
+<meta property="og:url" content="https://wine1.github.io/2020/07/15/%E6%B5%85%E6%9E%90%E8%99%9A%E6%8B%9FDOM/index.html">
+<meta property="og:site_name" content="Wonderland">
 <meta property="og:description" content="虚拟DOM的基本思想  用js对象模拟DOM树 比较两颗虚拟DOM树的差异 把差异应用到真正的DOM树上">
-<meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2021-03-11T14:06:26.000Z">
+<meta property="og:locale">
+<meta property="article:published_time" content="2020-07-14T16:26:01.000Z">
+<meta property="article:modified_time" content="2021-03-11T14:06:26.000Z">
+<meta property="article:author" content="Rabit">
+<meta property="article:tag" content="前端">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="浅析虚拟DOM">
-<meta name="twitter:description" content="虚拟DOM的基本思想  用js对象模拟DOM树 比较两颗虚拟DOM树的差异 把差异应用到真正的DOM树上">
   
-    <link rel="alternative" href="/atom.xml" title="哦。" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="Wonderland" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -37,8 +37,8 @@
 
   
 
-</head>
-</html>
+<meta name="generator" content="Hexo 6.0.0"></head>
+
 <body>
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
@@ -51,10 +51,8 @@
 			<img src="/img/header.jpg" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="">田珍珠女士</a></h1>
+		  <h1 class="header-author"><a href=""></a></h1>
 		</hgroup>
-		
-		<p class="header-subtitle">日拱一卒 功不唐捐</p>
 		
 
 		<nav class="header-menu">
@@ -62,9 +60,9 @@
 			
 				<li><a href="/">主页</a></li>
 	        
-				<li><a href="/tags/随笔">随笔</a></li>
+				<li><a href="/tags/%E9%9A%8F%E7%AC%94">随笔</a></li>
 	        
-				<li><a href="/tags/图片">一些图片</a></li>
+				<li><a href="/tags/%E5%9B%BE%E7%89%87">一些图片</a></li>
 	        
 			</ul>
 		</nav>
@@ -113,10 +111,8 @@
 				<img src="/img/header.jpg" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">田珍珠女士</h1>
+			  <h1 class="header-author js-header-author"></h1>
 			</hgroup>
-			
-			<p class="header-subtitle"><i class="icon icon-quo-left"></i>日拱一卒 功不唐捐<i class="icon icon-quo-right"></i></p>
 			
 			
 			
@@ -148,9 +144,9 @@
 				
 					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/tags/随笔">随笔</a></li>
+					<li style="width: 33.333333333333336%"><a href="/tags/%E9%9A%8F%E7%AC%94">随笔</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/tags/图片">一些图片</a></li>
+					<li style="width: 33.333333333333336%"><a href="/tags/%E5%9B%BE%E7%89%87">一些图片</a></li>
 		        
 				</ul>
 			</nav>
@@ -177,7 +173,7 @@
   
 
         
-        <a href="/2020/07/15/浅析虚拟DOM/" class="archive-article-date">
+        <a href="/2020/07/15/%E6%B5%85%E6%9E%90%E8%99%9A%E6%8B%9FDOM/" class="archive-article-date">
   	<time datetime="2020-07-14T16:26:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-15</time>
 </a>
         
@@ -191,7 +187,7 @@
 <li>比较两颗虚拟DOM树的差异</li>
 <li>把差异应用到真正的DOM树上</li>
 </ol>
-<a id="more"></a>
+<span id="more"></span>
 <h3 id="虚拟dom"><a href="#虚拟dom" class="headerlink" title="虚拟dom"></a>虚拟dom</h3><p>好处</p>
 <ul>
 <li>不用手动操作dom树</li>
@@ -203,24 +199,19 @@
 <blockquote>
 <p>用 JavaScript 对象结构表示 DOM 树的结构；<br>然后用这个树构建一个真正的 DOM 树，插到文档当中当状态变更的时候，重新构造一棵新的对象树;<br>然后用新的树和旧的树进行比较，记录两棵树差异把2所记录的差异应用到步骤1所构建的真正的DOM树上，视图就更新了</p>
 </blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">//一段dom对象</span><br><span class="line">var element=&#123;</span><br><span class="line">    tagname=&quot;ul&quot;,</span><br><span class="line">    props:&#123;</span><br><span class="line">        id:&apos;list&apos;</span><br><span class="line">    &#125;,</span><br><span class="line">    children:[</span><br><span class="line">        &#123;tagName: &apos;li&apos;, props: &#123;class: &apos;item&apos;&#125;, children: [&quot;Item 1&quot;]&#125;,</span><br><span class="line">        &#123;tagName: &apos;li&apos;, props: &#123;class: &apos;item&apos;&#125;, children: [&quot;Item 2&quot;]&#125;,</span><br><span class="line">        &#123;tagName: &apos;li&apos;, props: &#123;class: &apos;item&apos;&#125;, children: [&quot;Item 3&quot;]&#125;,</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">//一段dom对象</span><br><span class="line">var element=&#123;</span><br><span class="line">    tagname=&quot;ul&quot;,</span><br><span class="line">    props:&#123;</span><br><span class="line">        id:&#x27;list&#x27;</span><br><span class="line">    &#125;,</span><br><span class="line">    children:[</span><br><span class="line">        &#123;tagName: &#x27;li&#x27;, props: &#123;class: &#x27;item&#x27;&#125;, children: [&quot;Item 1&quot;]&#125;,</span><br><span class="line">        &#123;tagName: &#x27;li&#x27;, props: &#123;class: &#x27;item&#x27;&#125;, children: [&quot;Item 2&quot;]&#125;,</span><br><span class="line">        &#123;tagName: &#x27;li&#x27;, props: &#123;class: &#x27;item&#x27;&#125;, children: [&quot;Item 3&quot;]&#125;,</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <ol>
 <li><p>用js实现dom对象</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">function Element(tagname,props,children) &#123;</span><br><span class="line">    this.tagname=tagname</span><br><span class="line">    this.props=props</span><br><span class="line">    this.children=children</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// es6 class</span><br><span class="line">class Element &#123;</span><br><span class="line">  constructor(tagname, props = &#123;&#125;, children = []) &#123;</span><br><span class="line">    this.tagname = tagname</span><br><span class="line">    this.props = props</span><br><span class="line">    this.children = children</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">module.exports = function (tagName, props, children) &#123;</span><br><span class="line">  return new Element(tagName, props, children)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">function Element(tagname,props,children) &#123;</span><br><span class="line">    this.tagname=tagname</span><br><span class="line">    this.props=props</span><br><span class="line">    this.children=children</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// es6 class</span><br><span class="line">class Element &#123;</span><br><span class="line">  constructor(tagname, props = &#123;&#125;, children = []) &#123;</span><br><span class="line">    this.tagname = tagname</span><br><span class="line">    this.props = props</span><br><span class="line">    this.children = children</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">module.exports = function (tagName, props, children) &#123;</span><br><span class="line">  return new Element(tagName, props, children)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
 <li><p>将虚拟dom应用到真正的dom树</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">Element.prototype.render=function() &#123;</span><br><span class="line">    let el=document.createElement(this.tagname)</span><br><span class="line">    let props=this.props</span><br><span class="line"></span><br><span class="line">    for(let propname in props)&#123;</span><br><span class="line">        let propvalue=props[propname]</span><br><span class="line">        el.setAttribute(propname,propvalue)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    let children=this.children||[]</span><br><span class="line"></span><br><span class="line">    children.forEach(function (child)&#123;</span><br><span class="line">        let childEl=(child instanceof Element)?child.render():document.createTextNode(child)</span><br><span class="line">        el.appendChild(childEl)</span><br><span class="line">    &#125;)</span><br><span class="line">    return el</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">Element.prototype.render=function() &#123;</span><br><span class="line">    let el=document.createElement(this.tagname)</span><br><span class="line">    let props=this.props</span><br><span class="line"></span><br><span class="line">    for(let propname in props)&#123;</span><br><span class="line">        let propvalue=props[propname]</span><br><span class="line">        el.setAttribute(propname,propvalue)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    let children=this.children||[]</span><br><span class="line"></span><br><span class="line">    children.forEach(function (child)&#123;</span><br><span class="line">        let childEl=(child instanceof Element)?child.render():document.createTextNode(child)</span><br><span class="line">        el.appendChild(childEl)</span><br><span class="line">    &#125;)</span><br><span class="line">    return el</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
 <li><p>比较两棵虚拟dom树的差异(diff算法) 🌟</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br></pre></td><td class="code"><pre><span class="line">function diff(oldTree,newTree) &#123;</span><br><span class="line">    let index=0</span><br><span class="line">    let patches=&#123;&#125;//记录节点差异的对象</span><br><span class="line">    dfs(oldTree,newTree,index,patches)</span><br><span class="line">    return patches</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">let initialIndex = 0</span><br><span class="line"></span><br><span class="line">function dfs(oldNode,newNode,index,patches)&#123;</span><br><span class="line">    let diffResult=[]</span><br><span class="line"></span><br><span class="line">    if(!newNode) &#123;</span><br><span class="line">        diffResult.push(&#123;</span><br><span class="line">            type:&apos;REMOVE&apos;,</span><br><span class="line">            index</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">    else if(typeof oldNode === &apos;string  &amp;&amp; typeof newVirtualDom === &apos;string&apos;) &#123;</span><br><span class="line">        if(oldNode !=== newNode) &#123;</span><br><span class="line">            diffResult.push(&#123;</span><br><span class="line">                type: &apos;MODIFY_TEXT&apos;,</span><br><span class="line">                data: newVirtualDom,</span><br><span class="line">                index</span><br><span class="line">            &#125;)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;else if(oldVirtualDom.tagName === newVirtualDom.tagName) &#123;</span><br><span class="line">        let diffAttributeResult=&#123;&#125;</span><br><span class="line">        for(let key in oldNode) &#123;</span><br><span class="line">            if(oldNode[key]!==newNode[key]) &#123;</span><br><span class="line">                diffAttributeResult[key]=newNode[key]</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        for(let key in newNode) &#123;</span><br><span class="line">            if(!oldNode.hasOwnProperty(key)) &#123;</span><br><span class="line">                diffAttributeResult[key]=newNode[key]</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">       if (Object.keys(diffAttributeResult).length &gt; 0) &#123;</span><br><span class="line">            diffResult.push(&#123; </span><br><span class="line">            type: &apos;MODIFY_ATTRIBUTES&apos;, </span><br><span class="line">            diffAttributeResult </span><br><span class="line">            &#125;)</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        oldNode.children,forEach((child,index)=&gt;&#123;</span><br><span class="line">            diff(child,newNode.children[index],++initialIndex,patches)</span><br><span class="line">        &#125;)</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    else &#123;</span><br><span class="line">         diffResult.push(&#123; </span><br><span class="line">            type: &apos;REPLACE&apos;, </span><br><span class="line">            newNode</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">  if (!oldNode) &#123;</span><br><span class="line">    diffResult.push(&#123; </span><br><span class="line">      type: &apos;REPLACE&apos;, </span><br><span class="line">      newNode</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  if (diffResult.length) &#123;</span><br><span class="line">    patches[index] = diffResult</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br></pre></td><td class="code"><pre><span class="line">function diff(oldTree,newTree) &#123;</span><br><span class="line">    let index=0</span><br><span class="line">    let patches=&#123;&#125;//记录节点差异的对象</span><br><span class="line">    dfs(oldTree,newTree,index,patches)</span><br><span class="line">    return patches</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">let initialIndex = 0</span><br><span class="line"></span><br><span class="line">function dfs(oldNode,newNode,index,patches)&#123;</span><br><span class="line">    let diffResult=[]</span><br><span class="line"></span><br><span class="line">    if(!newNode) &#123;</span><br><span class="line">        diffResult.push(&#123;</span><br><span class="line">            type:&#x27;REMOVE&#x27;,</span><br><span class="line">            index</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">    else if(typeof oldNode === &#x27;string  &amp;&amp; typeof newVirtualDom === &#x27;string&#x27;) &#123;</span><br><span class="line">        if(oldNode !=== newNode) &#123;</span><br><span class="line">            diffResult.push(&#123;</span><br><span class="line">                type: &#x27;MODIFY_TEXT&#x27;,</span><br><span class="line">                data: newVirtualDom,</span><br><span class="line">                index</span><br><span class="line">            &#125;)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;else if(oldVirtualDom.tagName === newVirtualDom.tagName) &#123;</span><br><span class="line">        let diffAttributeResult=&#123;&#125;</span><br><span class="line">        for(let key in oldNode) &#123;</span><br><span class="line">            if(oldNode[key]!==newNode[key]) &#123;</span><br><span class="line">                diffAttributeResult[key]=newNode[key]</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        for(let key in newNode) &#123;</span><br><span class="line">            if(!oldNode.hasOwnProperty(key)) &#123;</span><br><span class="line">                diffAttributeResult[key]=newNode[key]</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">       if (Object.keys(diffAttributeResult).length &gt; 0) &#123;</span><br><span class="line">            diffResult.push(&#123; </span><br><span class="line">            type: &#x27;MODIFY_ATTRIBUTES&#x27;, </span><br><span class="line">            diffAttributeResult </span><br><span class="line">            &#125;)</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        oldNode.children,forEach((child,index)=&gt;&#123;</span><br><span class="line">            diff(child,newNode.children[index],++initialIndex,patches)</span><br><span class="line">        &#125;)</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    else &#123;</span><br><span class="line">         diffResult.push(&#123; </span><br><span class="line">            type: &#x27;REPLACE&#x27;, </span><br><span class="line">            newNode</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">  if (!oldNode) &#123;</span><br><span class="line">    diffResult.push(&#123; </span><br><span class="line">      type: &#x27;REPLACE&#x27;, </span><br><span class="line">      newNode</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  if (diffResult.length) &#123;</span><br><span class="line">    patches[index] = diffResult</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
 <li><p>将差异应用到dom上</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line">const walk = (node, walker, patches) =&gt; &#123;</span><br><span class="line">  let currentPatch = patches[walker.index]</span><br><span class="line"></span><br><span class="line">  let childNodes = node.childNodes</span><br><span class="line"></span><br><span class="line">  childNodes.forEach(child =&gt; &#123;</span><br><span class="line">    walker.index++</span><br><span class="line">    walk(child, walker, patches)</span><br><span class="line">  &#125;)</span><br><span class="line"></span><br><span class="line">  if (currentPatch) &#123;</span><br><span class="line">    doPatch(node, currentPatch)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">const doPatch = (node, patches) =&gt; &#123;</span><br><span class="line">  patches.forEach(patch =&gt; &#123;</span><br><span class="line">    switch (patch.type) &#123;</span><br><span class="line">      case &apos;MODIFY_ATTRIBUTES&apos;:</span><br><span class="line">        const attributes = patch.diffAttributeResult.attributes</span><br><span class="line">        for (let key in attributes) &#123;</span><br><span class="line">            if (node.nodeType !== 1) return</span><br><span class="line">            const value = attributes[key]</span><br><span class="line">            if (value) &#123;</span><br><span class="line">              setAttribute(node, key, value)</span><br><span class="line">            &#125; else &#123;</span><br><span class="line">              node.removeAttribute(key)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        break</span><br><span class="line">      case &apos;MODIFY_TEXT&apos;:</span><br><span class="line">        node.textContent = patch.data</span><br><span class="line">        break</span><br><span class="line">      case &apos;REPLACE&apos;:</span><br><span class="line">        let newNode = (patch.newNode instanceof Element) ? render(patch.newNode) : document.createTextNode(patch.newNode)</span><br><span class="line">        node.parentNode.replaceChild(newNode, node)</span><br><span class="line">        break</span><br><span class="line">        case &apos;REMOVE&apos;:</span><br><span class="line">        node.parentNode.removeChild(node)</span><br><span class="line">        break</span><br><span class="line">      default:</span><br><span class="line">        break</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-</li>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line">const walk = (node, walker, patches) =&gt; &#123;</span><br><span class="line">  let currentPatch = patches[walker.index]</span><br><span class="line"></span><br><span class="line">  let childNodes = node.childNodes</span><br><span class="line"></span><br><span class="line">  childNodes.forEach(child =&gt; &#123;</span><br><span class="line">    walker.index++</span><br><span class="line">    walk(child, walker, patches)</span><br><span class="line">  &#125;)</span><br><span class="line"></span><br><span class="line">  if (currentPatch) &#123;</span><br><span class="line">    doPatch(node, currentPatch)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">const doPatch = (node, patches) =&gt; &#123;</span><br><span class="line">  patches.forEach(patch =&gt; &#123;</span><br><span class="line">    switch (patch.type) &#123;</span><br><span class="line">      case &#x27;MODIFY_ATTRIBUTES&#x27;:</span><br><span class="line">        const attributes = patch.diffAttributeResult.attributes</span><br><span class="line">        for (let key in attributes) &#123;</span><br><span class="line">            if (node.nodeType !== 1) return</span><br><span class="line">            const value = attributes[key]</span><br><span class="line">            if (value) &#123;</span><br><span class="line">              setAttribute(node, key, value)</span><br><span class="line">            &#125; else &#123;</span><br><span class="line">              node.removeAttribute(key)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        break</span><br><span class="line">      case &#x27;MODIFY_TEXT&#x27;:</span><br><span class="line">        node.textContent = patch.data</span><br><span class="line">        break</span><br><span class="line">      case &#x27;REPLACE&#x27;:</span><br><span class="line">        let newNode = (patch.newNode instanceof Element) ? render(patch.newNode) : document.createTextNode(patch.newNode)</span><br><span class="line">        node.parentNode.replaceChild(newNode, node)</span><br><span class="line">        break</span><br><span class="line">        case &#x27;REMOVE&#x27;:</span><br><span class="line">        node.parentNode.removeChild(node)</span><br><span class="line">        break</span><br><span class="line">      default:</span><br><span class="line">        break</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
 </ol>
-<p><a href="https://gitbook.cn/gitchat/column/5c91c813968b1d64b1e08fde/topic/5cbbef7cbbbba80861a35c23" target="_blank" rel="noopener">买的课程中的原链接</a></p>
+<p><a target="_blank" rel="noopener" href="https://gitbook.cn/gitchat/column/5c91c813968b1d64b1e08fde/topic/5cbbef7cbbbba80861a35c23">买的课程中的原链接</a></p>
 
       
 
@@ -311,7 +302,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://wine1.github.io/2020/07/15/浅析虚拟DOM/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://wine1.github.io/2020/07/15/%E6%B5%85%E6%9E%90%E8%99%9A%E6%8B%9FDOM/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -325,7 +316,7 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/07/22/flex布局知识点/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/07/22/flex%E5%B8%83%E5%B1%80%E7%9F%A5%E8%AF%86%E7%82%B9/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
@@ -335,7 +326,7 @@
     </a>
   
   
-    <a href="/2020/07/14/重排和重绘/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2020/07/14/%E9%87%8D%E6%8E%92%E5%92%8C%E9%87%8D%E7%BB%98/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">重排和重绘</div>
       <i class="icon-circle-right"></i>
     </a>
@@ -379,7 +370,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2021 田珍珠女士
+    		&copy; 2022 Rabit
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -462,7 +453,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -470,7 +461,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -478,7 +469,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -502,11 +493,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">rn</a>
+                <a href="javascript:void(0)" class="js-tag color4">工程化</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">工程化</a>
+                <a href="javascript:void(0)" class="js-tag color3">rn</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -523,6 +514,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">网络</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">安全</a>
               </li>
              
               <li class="article-tag-list-item">

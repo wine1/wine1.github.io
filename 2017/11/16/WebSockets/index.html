@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html>
-<head><meta name="generator" content="Hexo 3.9.0">
+<head>
   <meta charset="utf-8">
   
   <meta name="renderer" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://wine1.github.io">
-  <title>WebSockets | 哦。</title>
+  <title>WebSockets | Wonderland</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="实现了用http不容易实现的服务器端与客户端之间进行的非http的通信机制,建立一个非http的双向连接（全双工通信），这个连接是实时的永久的，除非被显式关闭。这意味着当服务器想向客户端发送消息时，可以立即将消息推送到客户端的浏览器，无需重新建立连接。比如用来实现聊天室，实时的接收传递消息。">
-<meta name="keywords" content="前端">
 <meta property="og:type" content="article">
 <meta property="og:title" content="WebSockets">
 <meta property="og:url" content="https://wine1.github.io/2017/11/16/WebSockets/index.html">
-<meta property="og:site_name" content="哦。">
+<meta property="og:site_name" content="Wonderland">
 <meta property="og:description" content="实现了用http不容易实现的服务器端与客户端之间进行的非http的通信机制,建立一个非http的双向连接（全双工通信），这个连接是实时的永久的，除非被显式关闭。这意味着当服务器想向客户端发送消息时，可以立即将消息推送到客户端的浏览器，无需重新建立连接。比如用来实现聊天室，实时的接收传递消息。">
-<meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-07T13:01:38.000Z">
+<meta property="og:locale">
+<meta property="article:published_time" content="2017-11-16T04:26:32.000Z">
+<meta property="article:modified_time" content="2019-01-07T13:01:38.000Z">
+<meta property="article:author" content="Rabit">
+<meta property="article:tag" content="前端">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="WebSockets">
-<meta name="twitter:description" content="实现了用http不容易实现的服务器端与客户端之间进行的非http的通信机制,建立一个非http的双向连接（全双工通信），这个连接是实时的永久的，除非被显式关闭。这意味着当服务器想向客户端发送消息时，可以立即将消息推送到客户端的浏览器，无需重新建立连接。比如用来实现聊天室，实时的接收传递消息。">
   
-    <link rel="alternative" href="/atom.xml" title="哦。" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="Wonderland" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -37,8 +37,8 @@
 
   
 
-</head>
-</html>
+<meta name="generator" content="Hexo 6.0.0"></head>
+
 <body>
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
@@ -51,10 +51,8 @@
 			<img src="/img/header.jpg" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="">田珍珠女士</a></h1>
+		  <h1 class="header-author"><a href=""></a></h1>
 		</hgroup>
-		
-		<p class="header-subtitle">日拱一卒 功不唐捐</p>
 		
 
 		<nav class="header-menu">
@@ -62,9 +60,9 @@
 			
 				<li><a href="/">主页</a></li>
 	        
-				<li><a href="/tags/随笔">随笔</a></li>
+				<li><a href="/tags/%E9%9A%8F%E7%AC%94">随笔</a></li>
 	        
-				<li><a href="/tags/图片">一些图片</a></li>
+				<li><a href="/tags/%E5%9B%BE%E7%89%87">一些图片</a></li>
 	        
 			</ul>
 		</nav>
@@ -113,10 +111,8 @@
 				<img src="/img/header.jpg" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">田珍珠女士</h1>
+			  <h1 class="header-author js-header-author"></h1>
 			</hgroup>
-			
-			<p class="header-subtitle"><i class="icon icon-quo-left"></i>日拱一卒 功不唐捐<i class="icon icon-quo-right"></i></p>
 			
 			
 			
@@ -148,9 +144,9 @@
 				
 					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/tags/随笔">随笔</a></li>
+					<li style="width: 33.333333333333336%"><a href="/tags/%E9%9A%8F%E7%AC%94">随笔</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/tags/图片">一些图片</a></li>
+					<li style="width: 33.333333333333336%"><a href="/tags/%E5%9B%BE%E7%89%87">一些图片</a></li>
 		        
 				</ul>
 			</nav>
@@ -186,16 +182,18 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>实现了用http不容易实现的服务器端与客户端之间进行的非http的通信机制,建立一个非http的双向连接（全双工通信），这个连接是实时的永久的，除非被显式关闭。这意味着当服务器想向客户端发送消息时，可以立即将消息推送到客户端的浏览器，无需重新建立连接。<br>比如用来实现聊天室，实时的接收传递消息。</p>
-<a id="more"></a>
+<span id="more"></span>
 <p>使用WebSockets API(算了api还是要用的时候查吧 太容易忘记了)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">var ws = new WebSocket(wss://);</span><br><span class="line">ws.onopen() = function(e) &#123;</span><br><span class="line">	console.log(&quot;连接建立，可以开始发消息啦&quot;);</span><br><span class="line">	ws.send();</span><br><span class="line">&#125;;</span><br><span class="line">ws.onmessage() = function(e) &#123;</span><br><span class="line"></span><br><span class="line">	ws.onclose();</span><br><span class="line">&#125;</span><br><span class="line">ws.onclose = function(e) &#123;</span><br><span class="line">	console.log(&quot;大家注意了，连接关了啊&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">var ws = new WebSocket(wss://);</span><br><span class="line">ws.onopen() = function(e) &#123;</span><br><span class="line">	console.log(&quot;连接建立，可以开始发消息啦&quot;);</span><br><span class="line">	ws.send();</span><br><span class="line">&#125;;</span><br><span class="line">ws.onmessage() = function(e) &#123;</span><br><span class="line"></span><br><span class="line">	ws.onclose();</span><br><span class="line">&#125;</span><br><span class="line">ws.onclose = function(e) &#123;</span><br><span class="line">	console.log(&quot;大家注意了，连接关了啊&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>readyState的属性值获取WebSocket对象的状态<br>connecting 0 表示正在连接<br>open 1 表示已经建立连接<br>closing 2 表示正在关闭连接<br>closed 3 表示连接已经关闭</p>
 <p>WebSocket和http协议有区别也有联系。首先http协议中请求和响应是成对存在严格对应的，在http1.1中的keep-alive实现可将多个http请求合并成一个，但是它和WebSocket还是不一样，它依然是请求和响应一一对应的。WebSocket是一个新的协议，借助于http协议完成握手。<br>WebSocket的连接请求跟http请求相似，但是多出了这么两行<code>upgrade:wesocket connection:upgrade</code>这两行告诉服务器，我是一个WebSocket协议。</p>
 <pre><code>传统的技术当然也可以实现信息的即时发送和获取，依赖于ajax轮询和long poll。
 轮询，顾名思义就是隔一会查看一下是否有新的消息,需要服务器有很快的处理速度。
 long poll 就是相当于发起请求后没收到消息就赖着不走了这么个样子。需要有很高的并发。
-当然以上两种对我来说都是停留在了理论层面，我并没有真正去实践过。有错误的地方，日后改正。</code></pre>
+当然以上两种对我来说都是停留在了理论层面，我并没有真正去实践过。有错误的地方，日后改正。
+</code></pre>
+
       
 
       
@@ -299,7 +297,7 @@ long poll 就是相当于发起请求后没收到消息就赖着不走了这么�
   
 <nav id="article-nav">
   
-    <a href="/2017/11/16/HTML5-表单/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/11/16/HTML5-%E8%A1%A8%E5%8D%95/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
@@ -353,7 +351,7 @@ long poll 就是相当于发起请求后没收到消息就赖着不走了这么�
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2021 田珍珠女士
+    		&copy; 2022 Rabit
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -436,7 +434,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -444,7 +442,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -452,7 +450,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -476,11 +474,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">rn</a>
+                <a href="javascript:void(0)" class="js-tag color4">工程化</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">工程化</a>
+                <a href="javascript:void(0)" class="js-tag color3">rn</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -497,6 +495,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">网络</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">安全</a>
               </li>
              
               <li class="article-tag-list-item">
