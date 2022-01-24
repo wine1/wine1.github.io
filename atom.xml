@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Wonderland</title>
   
-  <subtitle>日拱一卒 功不唐捐</subtitle>
+  <subtitle>welcome to wonderland</subtitle>
   <link href="https://wine1.github.io/atom.xml" rel="self"/>
   
   <link href="https://wine1.github.io/"/>
@@ -10,7 +10,7 @@
   <id>https://wine1.github.io/</id>
   
   <author>
-    <name>Rabit</name>
+    <name>兔子</name>
     
   </author>
   
