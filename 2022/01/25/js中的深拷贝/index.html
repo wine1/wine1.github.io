@@ -6,16 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://wine1.github.io">
-  <title>Tag: 前端 | Wonderland</title>
+  <title>js中的深拷贝 | Wonderland</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="welcome to wonderland">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Wonderland">
-<meta property="og:url" content="https://wine1.github.io/tags/%E5%89%8D%E7%AB%AF/page/4/index.html">
+  <meta name="description" content="js 类型可以简单地分为基础类型和引用类型其中，基础类型直接存放在栈中，而引用类型存在堆内存中，栈内存存放的是引用类型的内存地址对于引用类型，简单的复制只会复制指向存放数据的内存地址，所以对于引用类型，需要用到深拷贝">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js中的深拷贝">
+<meta property="og:url" content="https://wine1.github.io/2022/01/25/js%E4%B8%AD%E7%9A%84%E6%B7%B1%E6%8B%B7%E8%B4%9D/index.html">
 <meta property="og:site_name" content="Wonderland">
-<meta property="og:description" content="welcome to wonderland">
+<meta property="og:description" content="js 类型可以简单地分为基础类型和引用类型其中，基础类型直接存放在栈中，而引用类型存在堆内存中，栈内存存放的是引用类型的内存地址对于引用类型，简单的复制只会复制指向存放数据的内存地址，所以对于引用类型，需要用到深拷贝">
 <meta property="og:locale">
+<meta property="article:published_time" content="2022-01-25T06:57:18.000Z">
+<meta property="article:modified_time" content="2022-01-26T09:41:19.886Z">
 <meta property="article:author" content="Rabbit">
+<meta property="article:tag" content="前端">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Wonderland" type="application/atom+xml">
@@ -162,36 +165,82 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-js中的深拷贝" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      js中的深拷贝
+    </h1>
+  
+
+        
+        <a href="/2022/01/25/js%E4%B8%AD%E7%9A%84%E6%B7%B1%E6%8B%B7%E8%B4%9D/" class="archive-article-date">
+  	<time datetime="2022-01-25T06:57:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-01-25</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>js 类型可以简单地分为基础类型和引用类型<br>其中，基础类型直接存放在栈中，而引用类型存在堆内存中，栈内存存放的是引用类型的内存地址<br>对于引用类型，简单的复制只会复制指向存放数据的内存地址，所以对于引用类型，需要用到深拷贝</p>
+<span id="more"></span>
+
+<ol>
+<li>简单的复制对象只能复制指向原对象的地址 原对象改变时 新的值也会跟着改变</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">const oldObj = &#123;</span><br><span class="line">  a: 1,</span><br><span class="line">  b: [&#x27;e&#x27;, &#x27;f&#x27;, &#x27;g&#x27;],</span><br><span class="line">  c: &#123; h: &#123; i: 2 &#125; &#125;,</span><br><span class="line">  d: function say() &#123;</span><br><span class="line">    console.log(&#x27;hi&#x27;)</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">let newObj = oldObj</span><br><span class="line">oldObj.b = [1, 2, 3]</span><br><span class="line">console.log(newObj)</span><br><span class="line">// 输出结果</span><br><span class="line">// a:1</span><br><span class="line">// b:(3) [1, 2, 3]</span><br><span class="line">// c:&#123;h: &#123;…&#125;&#125;</span><br><span class="line">// d:ƒ say() &#123;\n    console.log(&#x27;hi&#x27;)\n  &#125;</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>用 JSON.parse(JSON.stringfy(X))的方法复制</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">function Person(name) &#123;</span><br><span class="line">this.name = name</span><br><span class="line">console.log(name)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"> const liai = new Person(&#x27;liai&#x27;)</span><br><span class="line"> const oldObj2 = &#123;</span><br><span class="line"> a: 1,</span><br><span class="line"> b: [&#x27;e&#x27;, &#x27;f&#x27;, &#x27;g&#x27;],</span><br><span class="line"> c: &#123; h: &#123; i: 2 &#125; &#125;,</span><br><span class="line"> d: function say() &#123;</span><br><span class="line"> console.log(&#x27;hi&#x27;)</span><br><span class="line"> &#125;,</span><br><span class="line"> date: [new Date(1536627600000), new Date(1540047600000)],</span><br><span class="line"> RegExp: new RegExp(&#x27;\\w+&#x27;),</span><br><span class="line"> constructor: liai,</span><br><span class="line"> &#125;</span><br><span class="line"> let newObj2 = JSON.parse(JSON.stringify(oldObj2))</span><br><span class="line"> oldObj2.b = [1, 2, 3]</span><br><span class="line"> console.log(newObj2)</span><br><span class="line"> // 输出结果</span><br><span class="line"> // a:1</span><br><span class="line"> // b:(3) [&#x27;e&#x27;, &#x27;f&#x27;, &#x27;g&#x27;]</span><br><span class="line"> // c:&#123;h: &#123;…&#125;&#125;</span><br><span class="line"> // constructor:&#123;name: &#x27;liai&#x27;&#125;</span><br><span class="line"> // date:(2) [&#x27;2018-09-11T01:00:00.000Z&#x27;, &#x27;2018-10-20T15:00:00.000Z&#x27;]</span><br><span class="line"> // RegExp:&#123;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>函数被转成了 undefined 消失了<br>date 被转成了字符串<br>正则表达式被转成了{}<br>JSON.stringify()只能序列化对象的可枚举的自有属性，例如 如果 obj 中的对象是有构造函数生成的， 则使用 JSON.parse(JSON.stringify(obj))深拷贝后，会丢弃对象的 constructor<br>JSON.parse(JSON.stringfy(X))，其中 X 只能是 Number, String, Boolean, Array, 扁平对象，即那些能够被 JSON 直接表示的数据结构。<br>循环引用会报错</p>
+<ol>
+<li>object.assgin</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">const oldObj3 = &#123;</span><br><span class="line">a: 1,</span><br><span class="line">b: [&#x27;e&#x27;, &#x27;f&#x27;, &#x27;g&#x27;],</span><br><span class="line">c: &#123; h: &#123; i: 2 &#125; &#125;,</span><br><span class="line">d: function say() &#123;</span><br><span class="line">console.log(&#x27;hi&#x27;)</span><br><span class="line">&#125;,</span><br><span class="line">date: [new Date(1536627600000), new Date(1540047600000)],</span><br><span class="line">RegExp: new RegExp(&#x27;\\w+&#x27;),</span><br><span class="line">&#125;</span><br><span class="line">let newObj3 = Object.assign(&#123;&#125;, oldObj3)</span><br><span class="line">oldObj3.b = [1, 2, 3]</span><br><span class="line">oldObj3.c.h.i = 20</span><br><span class="line">console.log(newObj3)</span><br><span class="line">// 输出结果</span><br><span class="line">// a:1</span><br><span class="line">// b:(3) [&#x27;e&#x27;, &#x27;f&#x27;, &#x27;g&#x27;]</span><br><span class="line">// c:&#123;h: &#123;…&#125;&#125;</span><br><span class="line">// h:&#123;i: 20&#125;</span><br><span class="line">// **proto**:Object</span><br><span class="line">// d:ƒ say() &#123;\n console.log(&#x27;hi&#x27;)\n &#125;</span><br><span class="line">// date:(2) [Tue Sep 11 2018 09:00:00 GMT+0800 (China Standard Time), Sat Oct 20 2018 23:00:00 GMT+0800 (China Standard Time)]</span><br><span class="line">// RegExp:/\\w+/</span><br></pre></td></tr></table></figure>
+
+<p>Object.assgin 只能深拷贝第一层, 深层的还是浅拷贝</p>
+<p>Object.assign()拷贝的是（可枚举）属性值。<br>假如源值是一个对象的引用，它仅仅会复制其引用值<br>——出自 MDN</p>
+<ol>
+<li>手写深克隆<br>// WeakMap 。它对于值的引用都是不计入垃圾回收机制的，所以名字里面才会有一个”Weak”，表示这是弱引用（对对象的弱引用是指当该对象应该被 GC 回收时不会阻止 GC 的回收行为）。</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">const funcDeepClone = (source, hash = new WeakMap()) =&gt; &#123;</span><br><span class="line">if (typeof source !== &#x27;object&#x27;) return source</span><br><span class="line">if (hash.has(source)) return hash.get(source)</span><br><span class="line">let res = Array.isArray(source) ? [] : &#123;&#125;</span><br><span class="line">hash.set(source, res)</span><br><span class="line">for (let key in source) &#123;</span><br><span class="line">if (typeof source[key] === &#x27;object&#x27;) &#123;</span><br><span class="line">res[key] = funcDeepClone(source[key], hash)</span><br><span class="line">&#125; else &#123;</span><br><span class="line">res[key] = source[key]</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">return res</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">const oldObj4 = &#123;</span><br><span class="line">a: 1,</span><br><span class="line">b: [&#x27;e&#x27;, &#x27;f&#x27;, &#x27;g&#x27;],</span><br><span class="line">c: &#123; h: &#123; i: 2 &#125; &#125;,</span><br><span class="line">d: function say() &#123;</span><br><span class="line">console.log(&#x27;hi&#x27;)</span><br><span class="line">&#125;,</span><br><span class="line">date: [new Date(1536627600000), new Date(1540047600000)],</span><br><span class="line">RegExp: new RegExp(&#x27;\\w+&#x27;),</span><br><span class="line">&#125;</span><br><span class="line">let newObj4 = funcDeepClone(oldObj4)</span><br><span class="line">oldObj4.b = [1, 2, 3]</span><br><span class="line">oldObj4.c.h.i = 20</span><br><span class="line">newObj4.circle = newObj4</span><br><span class="line">console.log(newObj4)</span><br><span class="line">console.log(1)</span><br></pre></td></tr></table></figure>
+
+<p>解决深拷贝过程中的循环引用问题<br>用 weakmap 记录拷贝过的键值对，循环过程中如果是已经拷贝过的，直接把值符给对应的键</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果，但是还是不要了，我牙疼<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/20/es6-%E6%96%B0%E7%89%B9%E6%80%A7%E6%80%BB%E7%BB%93/" class="archive-article-date">
-  	<time datetime="2020-05-20T10:54:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/20/es6-%E6%96%B0%E7%89%B9%E6%80%A7%E6%80%BB%E7%BB%93/">es6-新特性总结</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -203,386 +252,105 @@
 		</ul>
 	</div>
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/20/CSS-BFC/" class="archive-article-date">
-  	<time datetime="2020-05-20T10:47:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/20/CSS-BFC/">CSS-BFC</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/18/axios%E4%B8%AD%E7%9A%84%E6%8B%A6%E6%88%AA%E5%99%A8/" class="archive-article-date">
-  	<time datetime="2020-05-18T13:21:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-18</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/18/axios%E4%B8%AD%E7%9A%84%E6%8B%A6%E6%88%AA%E5%99%A8/">axios中的拦截器</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/16/get%E5%92%8Cpost%E6%96%B9%E6%B3%95/" class="archive-article-date">
-  	<time datetime="2020-05-16T10:36:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-16</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/16/get%E5%92%8Cpost%E6%96%B9%E6%B3%95/">get和post方法</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/13/rn%E8%B8%A9%E5%9D%91/" class="archive-article-date">
-  	<time datetime="2020-05-13T13:06:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/13/rn%E8%B8%A9%E5%9D%91/">rn踩坑</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">rn</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/06/echarts%E5%9C%A8rn%E4%B8%AD%E8%AE%BE%E7%BD%AE%E9%A2%9C%E8%89%B2%E4%B8%8D%E7%94%9F%E6%95%88%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" class="archive-article-date">
-  	<time datetime="2020-05-06T13:52:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/06/echarts%E5%9C%A8rn%E4%B8%AD%E8%AE%BE%E7%BD%AE%E9%A2%9C%E8%89%B2%E4%B8%8D%E7%94%9F%E6%95%88%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/">echarts在rn中设置颜色不生效解决方案</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/06/js%E5%AF%B9%E4%B8%AD%E6%96%87%E7%BC%96%E7%A0%81%E7%9A%84%E5%87%BD%E6%95%B0/" class="archive-article-date">
-  	<time datetime="2020-05-06T13:28:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/06/js%E5%AF%B9%E4%B8%AD%E6%96%87%E7%BC%96%E7%A0%81%E7%9A%84%E5%87%BD%E6%95%B0/">js对中文编码的函数</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/04/02/%E7%A7%BB%E5%8A%A8%E7%AB%AF1%E5%83%8F%E7%B4%A0%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" class="archive-article-date">
-  	<time datetime="2020-04-01T23:54:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/02/%E7%A7%BB%E5%8A%A8%E7%AB%AF1%E5%83%8F%E7%B4%A0%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/">移动端1像素解决方案</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
       
-        </div></section>
+
       
+
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/12/17/web%E5%AE%89%E5%85%A8%E8%AF%A6%E8%A7%A31/" class="archive-article-date">
-  	<time datetime="2019-12-17T14:32:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-17</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/12/17/web%E5%AE%89%E5%85%A8%E8%AF%A6%E8%A7%A31/">web安全详解1</a>
-    </h1>
-  
+      </div>
+    </span>
+  </div>
+</div>
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://wine1.github.io/2022/01/25/js%E4%B8%AD%E7%9A%84%E6%B7%B1%E6%8B%B7%E8%B4%9D/" alt="微信分享二维码">
+    </div>
+</div>
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/12/17/rgba%E7%9A%84%E5%8D%81%E5%85%AD%E8%BF%9B%E5%88%B6%E5%86%99%E6%B3%95/" class="archive-article-date">
-  	<time datetime="2019-12-17T14:30:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-17</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2022/01/24/redux/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">redux</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/12/17/rgba%E7%9A%84%E5%8D%81%E5%85%AD%E8%BF%9B%E5%88%B6%E5%86%99%E6%B3%95/">rgba的十六进制写法</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/tags/%E5%89%8D%E7%AB%AF/page/3/">&amp;laquo; Prev</a><a class="page-number" href="/tags/%E5%89%8D%E7%AB%AF/">1</a><a class="page-number" href="/tags/%E5%89%8D%E7%AB%AF/page/2/">2</a><a class="page-number" href="/tags/%E5%89%8D%E7%AB%AF/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/tags/%E5%89%8D%E7%AB%AF/page/5/">5</a><a class="page-number" href="/tags/%E5%89%8D%E7%AB%AF/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/tags/%E5%89%8D%E7%AB%AF/page/12/">12</a><a class="extend next" rel="next" href="/tags/%E5%89%8D%E7%AB%AF/page/5/">Next &amp;raquo;</a>
-    </nav>
+  
+
   
 
 
@@ -606,9 +374,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: true,
 		toc_hide_index: true,
