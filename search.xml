@@ -510,30 +510,6 @@ long poll 就是相当于发起请求后没收到消息就赖着不走了这么�
       </tags>
   </entry>
   <entry>
-    <title>git常用操作2</title>
-    <url>/2022/01/21/git%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C2/</url>
-    <content><![CDATA[<p>git fetch 和 git pull 的区别<br>git rebase<br>git cherry-pick</p>
-<span id="more"></span>
-
-<p>使用 fech 获取时，并未合并到本地仓库，此时可使用 git merge 实现远程仓库副本与本地仓库的合并。<br>git pull 根据配置的不同，可为 git fetch + git merge 或 git fetch + git rebase</p>
-<p>git rebase<br>rebase 操作可以把本地未 push 的分叉提交历史整理成直线；<br>rebase 的目的是使得我们在查看历史提交的变化时更容易，因为分叉的提交需要三方对比。</p>
-<h4 id="git-cherry-pick"><a href="#git-cherry-pick" class="headerlink" title="git cherry-pick"></a>git cherry-pick</h4><p>(至今没用过)<br>git cherry-pick 命令的作用，就是将指定的提交（commit）应用于其他分支。<br><code>git cherry-pick &lt;commitHash&gt;</code><br>上面命令就会将指定的提交 commitHash，应用于当前分支。这会在当前分支产生一个新的提交，当然它们的哈希值会不一样。</p>
-<p>git cherry-pick 命令的参数，不一定是提交的哈希值，分支名也是可以的，表示转移该分支的最新提交。<br><code>git cherry-pick feature</code><br>上面代码表示将 feature 分支的最近一次提交，转移到当前分支。</p>
-<p>转移多个提交<br>git cherry-pick <HashA> <HashB><br>上面的命令将 A 和 B 两个提交应用到当前分支。</HashB></HashA></p>
-<p>转移多个连续提交<br>git cherry-pick A..B （不包含 A）<br>git cherry-pick A^..B (包含 A)</p>
-<p>配置项</p>
-<ol>
-<li><code>-e, --edit</code> 打开外部编辑器，编辑提交信息。</li>
-<li><code>-n, --no-commit</code> 只更新工作区和暂存区，不产生新的提交。</li>
-<li><code>-x</code> 在提交信息的末尾追加一行(cherry picked from commit …)，方便以后查到这个提交是如何产生的。</li>
-<li><code>-s，--signoff</code> 在提交信息的末尾追加一行操作者的签名，表示是谁进行了这个操作。</li>
-</ol>
-]]></content>
-      <tags>
-        <tag>git</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>grid布局</title>
     <url>/2020/08/12/grid%E5%B8%83%E5%B1%80/</url>
     <content><![CDATA[<h2 id="grid布局"><a href="#grid布局" class="headerlink" title="grid布局"></a>grid布局</h2><p>gap属性能解决flex多行布局中最后一行布局不满时位置偏移的问题</p>
@@ -1671,35 +1647,6 @@ email、url、number、range、Date（功能强大，但是很多浏览器不支
       </tags>
   </entry>
   <entry>
-    <title>react事件机制</title>
-    <url>/2022/01/10/react%E4%BA%8B%E4%BB%B6%E6%9C%BA%E5%88%B6/</url>
-    <content><![CDATA[<p>灵魂发问：<br>• 1 我们写的事件是绑定在 dom 上么，如果不是绑定在哪里？<br>• 2 为什么我们的事件不能绑定给组件？<br>• 3 为什么我们的事件手动绑定 this(不是箭头函数的情况)<br>• 4 为什么不能用 return false 来阻止事件的默认行为？<br>• 5 react 怎么通过 dom 元素，找到与之对应的 fiber 对象的？<br>• 6 onClick 是在冒泡阶段绑定的？ 那么 onClickCapture 就是在事件捕获阶段绑定的吗？</p>
-<span id="more"></span>
-
-<blockquote>
-<p>React 官方说明过的一点是：合成事件符合 W3C 规范，在底层抹平了不同浏览器的差异，在上层面向开发者暴露统一的、稳定的、与 DOM 原生事件相同的事件接口。开发者们由此便不必再关注烦琐的底层兼容问题，可以专注于业务逻辑的开发。</p>
-</blockquote>
-<pre><code>• 原生事件: 在 componentDidMount生命周期里边进行addEventListener绑定的事件
-• 合成事件: 通过 JSX 方式绑定的事件，比如 onClick=&#123;() =&gt; this.handle()&#125;
-</code></pre>
-<p>因为合成事件的触发是基于浏览器的事件机制来实现的，通过冒泡机制冒泡到最顶层元素，然后再由 dispatchEvent 统一去处理</p>
-<p>所以原生事件会早于合成事件先触发</p>
-<p>原生事件中使用 e.stopPropagation() 会阻止合成事件的执行，但在合成事件中使用 e.stopPropagation() 却不会阻止原生事件的执行</p>
-<p>同时在原生事件中 setstate 是同步的<br>在合成事件中 setstate 是异步的</p>
-<p>react 是基于虚拟 dom 的 我们写的 jsx 会被 babel 转换成 React.createElement 的形式<br>而在 jsx 上注册的事件，都被绑定在顶层的 div 上统一管理</p>
-<p>因此关于最开始的六个问题<br>• 1 我们写的事件是绑定在 dom 上么，如果不是绑定在哪里？<br>我们写的事件并不是绑在 dom 上的 而是基于一个合成事件，最终冒泡到顶层 dom 上</p>
-<p>• 2 为什么我们的事件不能绑定给组件？</p>
-<p>• 3 为什么我们的事件手动绑定 this(不是箭头函数的情况)<br>• 4 为什么不能用 return false 来阻止事件的默认行为？<br>• 5 react 怎么通过 dom 元素，找到与之对应的 fiber 对象的？<br>• 6 onClick 是在冒泡阶段绑定的？ 那么 onClickCapture 就是在事件捕获阶段绑定的吗？</p>
-<p>React17 中的事件优化</p>
-<p><img src="/2022/01/10/react%E4%BA%8B%E4%BB%B6%E6%9C%BA%E5%88%B6/tu1.png" alt="React17 中的事件优化"></p>
-<p><a href="https://juejin.cn/post/6955636911214067720">参考</a></p>
-]]></content>
-      <tags>
-        <tag>前端</tag>
-        <tag>react</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>react入门</title>
     <url>/2018/11/06/react%E5%85%A5%E9%97%A8/</url>
     <content><![CDATA[<p>react.js入门笔记</p>
@@ -1737,29 +1684,6 @@ email、url、number、range、Date（功能强大，但是很多浏览器不支
 ]]></content>
       <tags>
         <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>react的setstate相关</title>
-    <url>/2021/06/24/react%E7%9A%84setstate%E7%9B%B8%E5%85%B3/</url>
-    <content><![CDATA[<p>setState 本身并不是异步，只是因为 react 的性能优化机制体现为异步。在 react 的生命周期函数或者作用域下为异步，在原生的环境下为同步。</p>
-<p>据 React 核心成员（Redux 的作者）Dan Abramov 所说</p>
-<span id="more"></span>
-
-<blockquote>
-<p>setState 设计为异步，可以显著的提升性能；如果每次调用 setState 都进行一次更新，那么意味着 render 函数会被频繁调用，界面重新渲染，这样效率是很低的；最好的办法应该是获取到多个更新，之后进行批量更新；如果同步更新了 state，但是还没有执行 render 函数，那么 state 和 props 不能保持同步；state 和 props 不能保持一致性，会在开发中产生很多的问题；</p>
-</blockquote>
-<p>setState 接受两个参数：第二个参数是一个回调函数，这个回调函数会在更新后会执行；<br>格式如下：setState(partialState, callback)</p>
-<h3 id="多个-setstate-合并成一个执行"><a href="#多个-setstate-合并成一个执行" class="headerlink" title="多个 setstate 合并成一个执行"></a>多个 setstate 合并成一个执行</h3><p>这个问题在特定情况下更新列表的时候引发了很大的问题 连续两次拼接列表数据 只会有一次拼接成功</p>
-<p>可以通过传递一个函数 代替传递一个对象来解决</p>
-<p>例如</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">increment() &#123;</span><br><span class="line">    this.setState(&#123;</span><br><span class="line">      counter: this.state.counter + 1</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">    this.setState(&#123;</span><br><span class="line">      counter: this.state.counter + 1</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">    this.setState(&#123;</span><br><span class="line">      counter: this.state.counter + 1</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125; // counter 执行完后加1</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">increment() &#123;</span><br><span class="line">  this.setState((state, props) =&gt; &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">      counter: state.counter + 1</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line"></span><br><span class="line">  this.setState((state, props) =&gt; &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">      counter: state.counter + 1</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line"></span><br><span class="line">  this.setState((state, props) =&gt; &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">      counter: state.counter + 1</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">  &#125;//执行完后加3</span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>前端</tag>
-        <tag>react</tag>
       </tags>
   </entry>
   <entry>
@@ -1819,31 +1743,6 @@ email、url、number、range、Date（功能强大，但是很多浏览器不支
       <tags>
         <tag>前端</tag>
         <tag>rn</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>redux</title>
-    <url>/2022/01/24/redux/</url>
-    <content><![CDATA[<p>redux 学习笔记</p>
-<span id="more"></span>
-
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install --save redux</span><br></pre></td></tr></table></figure>
-
-<p>附加包<br>多数情况下，你还需要使用 React 绑定库和开发者工具。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install --save react-redux</span><br><span class="line">npm install --save-dev redux-devtools</span><br></pre></td></tr></table></figure>
-
-<h3 id="redux-thunk"><a href="#redux-thunk" class="headerlink" title="redux-thunk"></a>redux-thunk</h3><h3 id="combineReducers"><a href="#combineReducers" class="headerlink" title="combineReducers"></a>combineReducers</h3><p>combineReducers 辅助函数的作用是，把一个由多个不同 reducer 函数作为 value 的 object，合并成一个最终的 reducer 函数，然后就可以对这个 reducer 调用 createStore。<br>合并后的 reducer 可以调用各个子 reducer，并把它们的结果合并成一个 state 对象。state 对象的结构由传入的多个 reducer 的 key 决定。</p>
-<p>redux 中的 connect</p>
-<p>connect 用法介绍<br>connect 方法声明：<br>connect([mapStateToProps], [mapDispatchToProps], [mergeProps],[options])<br>作用：连接 React 组件与 Redux store。<br>参数说明：<br>mapStateToProps(state, ownProps) : stateProps<br>这个函数允许我们将 store 中的数据作为 props 绑定到组件上。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">const mapStateToProps = (state) =&gt; &#123;</span><br><span class="line">  return&#123;</span><br><span class="line">  count: state.count</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="mapDispatchToProps"><a href="#mapDispatchToProps" class="headerlink" title="mapDispatchToProps()"></a>mapDispatchToProps()</h3><p>mapDispatchToProps 是 connect 函数的第二个参数，用来建立 UI 组件的参数到 store.dispatch 方法的映射。也就是说，它定义了哪些用户的操作应该当作 Action，传给 Store。它可以是一个函数，也可以是一个对象。<br>如果 mapDispatchToProps 是一个函数，会得到 dispatch 和 ownProps（容器组件的 props 对象）两个参数。</p>
-<p>}<br>}</p>
-<p>mapDispatchToProps()<br>mapDispatchToProps 是 connect 函数的第二个参数，用来建立 UI 组件的参数到 store.dispatch 方法的映射。也就是说，它定义了哪些用户的操作应该当作 Action，传给 Store。它可以是一个函数，也可以是一个对象。<br>如果 mapDispatchToProps 是一个函数，会得到 dispatch 和 ownProps（容器组件的 props 对象）两个参数。</p>
-<p><img src="/2022/01/24/redux/tu1.jpg" alt="redux"></p>
-]]></content>
-      <tags>
-        <tag>前端</tag>
       </tags>
   </entry>
   <entry>
@@ -2581,16 +2480,6 @@ email、url、number、range、Date（功能强大，但是很多浏览器不支
       </tags>
   </entry>
   <entry>
-    <title>前端安全</title>
-    <url>/2021/12/21/%E5%89%8D%E7%AB%AF%E5%AE%89%E5%85%A8/</url>
-    <content><![CDATA[<p>XSS、CSRF、JWT</p>
-]]></content>
-      <tags>
-        <tag>前端</tag>
-        <tag>安全</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>前端安全性问题</title>
     <url>/2017/12/10/%E5%89%8D%E7%AB%AF%E5%AE%89%E5%85%A8%E6%80%A7%E9%97%AE%E9%A2%98/</url>
     <content><![CDATA[<p>今天不知道怎么突然想起来前端的安全性问题，之前遇到过这样的笔试题，了解过，但是感觉没明白，又忘记了，所以今天来做一个总结。</p>
@@ -2675,46 +2564,6 @@ email、url、number、range、Date（功能强大，但是很多浏览器不支
 <p><strong>模块的循环加载</strong><br>如果发生模块的循环加载，即A加载B，B又加载A，则B将加载A的不完整版本。</p>
 <p>require方法有一个main属性，可以用来判断模块是直接执行，还是被调用执行。<br>直接执行的时候（node module.js），require.main属性指向模块本身。</p>
 <h3 id="模块加载机制"><a href="#模块加载机制" class="headerlink" title="模块加载机制"></a>模块加载机制</h3><p>CommonJS模块的加载机制是，输入的是被输出的值的拷贝。也就是说，一旦输出一个值，模块内部的变化就影响不到这个值。</p>
-]]></content>
-      <tags>
-        <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>前端缓存策略</title>
-    <url>/2022/01/12/%E5%89%8D%E7%AB%AF%E7%BC%93%E5%AD%98%E7%AD%96%E7%95%A5/</url>
-    <content><![CDATA[<p>webpack 配置缓存策略<br>文件指纹</p>
-<span id="more"></span>
-
-<p>hash 只要项目文件有更改 整个项目构建的 hash 就会改变<br>chunkhash 不同的 entry 会生成不同的 chunk 值 应用于静态资源的缓存<br>contenthash 文件内容不变 contenthash 不变（通常用于 css 文件）</p>
-<p>图片和字体采用 hash 与上述 hash 不同的是 默认 md5</p>
-<p>基于文件指纹系统的前端部署方案</p>
-<ol>
-<li>静态资源文件使用持久化缓存 (强缓存)</li>
-<li>生成 style_xxx.css 类型的文件，每次更新过的文件都会生成新的文件名</li>
-<li>改变静态资源后 html 中的引用地址相应改变</li>
-</ol>
-]]></content>
-      <tags>
-        <tag>前端</tag>
-        <tag>工程化</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>单点登陆</title>
-    <url>/2021/12/21/%E5%8D%95%E7%82%B9%E7%99%BB%E9%99%86/</url>
-    <content><![CDATA[<p>单页应用鉴权(<a href="https://gitbook.cn/gitchat/column/5c91c813968b1d64b1e08fde/topic/5c99c904ccb24267c1d01f7d">https://gitbook.cn/gitchat/column/5c91c813968b1d64b1e08fde/topic/5c99c904ccb24267c1d01f7d</a>)</p>
-<span id="more"></span>
-
-<ol>
-<li><p>Authentication cookie<br>使用 cookie 存储一个 session ID（session ID 由服务端管理，进行创建和计时，以便在必要的时候清除）。通过验证 cookie 和 session ID，服务端便能标记一个用户的访问信息。</p>
-<p>服务端可以对 cookie 进行一些关键配置，以保障 cookie 的使用安全，诸如：<br>HttpOnly cookie：浏览器端 JavaScript 没有读 cookie 权限。<br>Secure cookie：传输链路只有在特定安全通道（通常指 HTTPS），请求才会自动加入相关 cookie。<br>SameSite cookie：在跨域情况下，相关 cookie 无法被请求携带，这里主要是为了防止 CSRF 攻击。</p>
-</li>
-<li><p>JWT (json web token)<br>在鉴权过程中，为了验证用户的身份，需要浏览器向服务器端提供一个验证信息，我们称为 token。这个 token 通常由 JSON 数据格式组成，通过 hash 散列算法生成一个字符串，称为 JSON Web Token（JSON 表示令牌的原始类型为 JSON 格式，Web 表示在互联网中进行传播，Token 表示令牌，简称 JWT）。任何 token 持有者都可以无差别地用它来访问相关的资源。</p>
-<p>一个 JWT 包含以下 3 个部分：<br>header（消息头）<br>payload（消息体，储存用户 id、用户角色等） + 过期时间（可选）<br>signature（签名）</p>
-<p>正常来讲，当客户端在提交用户名/密码（或者其他方式）通过认证后，会获得 JWT 的 token，接着通过 JavaScript 脚本，对于所有数据请求都在其 HTTP header 中加上这个 JWT 的 token。服务端接到请求之后，验证 token 的 signature 是否等同于 payload，进而得知 payload 字段是否被中间人更改。</p>
-</li>
-</ol>
 ]]></content>
       <tags>
         <tag>前端</tag>
@@ -3719,33 +3568,6 @@ kmp算法
       </tags>
   </entry>
   <entry>
-    <title>浏览器缓存策略</title>
-    <url>/2022/01/12/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%BC%93%E5%AD%98%E7%AD%96%E7%95%A5/</url>
-    <content><![CDATA[<p>浏览器缓存策略大致可以分为：强缓存、协商缓存</p>
-<span id="more"></span>
-
-<p>强缓存：</p>
-<ol>
-<li><p>expires<br>HTTP1.0 的特性，标识该资源过期的时间点，它是一个绝对值，格林威治时间（Greenwich Mean Time, GMT），即在这个时间点之后，缓存的资源过期；<br>但是它的缺点也很明显:它是服务器返回的一个绝对时间，客户端如果修改了时间，结果可能不准</p>
-</li>
-<li><p>cache-conctrol<br>cache-control 优先级更高<br>http1.1 的规定 时间是以客户端的时间为准。是一个相对时间，在配置缓存的时候，以秒为单位，用数值表示<br><strong>no-cache: 协商缓存</strong><br>no-store：全部不缓存<br>public:共有缓存 可被代理服务器缓存 允许用户间共享<br>priavte:私有缓存 只被当前浏览器缓存<br>max-age：缓存的内容会在这个值之后过期<br>must-revalidate: 必须再次检查信息是否过期，这时候返回的代码就不是 200 而是 304</p>
-<p>如果在强缓存的情况下修改源文件？</p>
-</li>
-</ol>
-<p>协商缓存</p>
-<ol>
-<li><p>last-modified If-Modified-Since<br>再向服务器发送一次请求判断资源在时间规定内是否有变化<br>缺点：但是有时候也会服务器上资源其实有变化，但是最后修改时间却没有变化的情况<br>浏览器第一次跟服务器请求一个资源，服务器在返回这个资源的同时，在 response 的 header 加上 Last-Modified 的 header，这个 header 表示这个资源在服务器上的最后修改时间<br>浏览器再次跟服务器请求这个资源时，在 request 的 header 上加上 If-Modified-Since 的 header，这个 header 的值就是上一次请求时返回的 Last-Modified 的值：<br>根据浏览器传过来 If-Modified-Since 和资源在服务器上的最后修改时间判断资源是否有变化<br>根据浏览器传过来 If-Modified-Since 和资源在服务器上的最后修改时间判断资源是否有变化</p>
-</li>
-<li><p>etag if-none-match 优先级更高<br>etag 类似一个 hash 不同文件对应不同的 hash<br>if-no-match 请求服务端资源时如果资源没有变化，就不返回内容 从缓存中加载资源<br>浏览器第一次跟服务器请求一个资源，服务器在返回这个资源的同时，在 response 的 header 加上 ETag 的 header，这个 header 是服务器根据当前请求的资源生成的一个唯一标识，这个唯一标识是一个字符串，只要资源有变化这个串就不同，跟最后修改时间没有关系<br>浏览器再次跟服务器请求这个资源时，在 request 的 header 上加上 If-None-Match 的 header，这个 header 的值就是上一次请求时返回的 ETag 的值<br>服务器再次收到资源请求时，根据浏览器传过来 If-None-Match 和然后再根据资源生成一个新的 ETag，如果这两个值相同就说明资源没有变化，否则就是有变化<br>由于 ETag 重新生成过，response header 中还会把这个 ETag 返回，即使这个 ETag 跟之前的没有变化<br>分布式系统里多台机器间文件的 Last-Modified 必须保持一致，以免负载均衡到不同机器导致比对失败；<br>分布式系统尽量关闭掉 ETag(每台机器生成的 ETag 都会不一样）；</p>
-</li>
-</ol>
-]]></content>
-      <tags>
-        <tag>前端</tag>
-        <tag>网络</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>网站部署</title>
     <url>/2019/06/07/%E7%BD%91%E7%AB%99%E9%83%A8%E7%BD%B2/</url>
     <content><![CDATA[<p>开启阿里云建站之旅~</p>
@@ -4455,41 +4277,6 @@ kmp算法
       <tags>
         <tag>前端</tag>
         <tag>面试</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>js中的深拷贝</title>
-    <url>/2022/01/25/js%E4%B8%AD%E7%9A%84%E6%B7%B1%E6%8B%B7%E8%B4%9D/</url>
-    <content><![CDATA[<p>js 类型可以简单地分为基础类型和引用类型<br>其中，基础类型直接存放在栈中，而引用类型存在堆内存中，栈内存存放的是引用类型的内存地址<br>对于引用类型，简单的复制只会复制指向存放数据的内存地址，所以对于引用类型，需要用到深拷贝</p>
-<span id="more"></span>
-
-<ol>
-<li>简单的复制对象只能复制指向原对象的地址 原对象改变时 新的值也会跟着改变</li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">const oldObj = &#123;</span><br><span class="line">  a: 1,</span><br><span class="line">  b: [&#x27;e&#x27;, &#x27;f&#x27;, &#x27;g&#x27;],</span><br><span class="line">  c: &#123; h: &#123; i: 2 &#125; &#125;,</span><br><span class="line">  d: function say() &#123;</span><br><span class="line">    console.log(&#x27;hi&#x27;)</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">let newObj = oldObj</span><br><span class="line">oldObj.b = [1, 2, 3]</span><br><span class="line">console.log(newObj)</span><br><span class="line">// 输出结果</span><br><span class="line">// a:1</span><br><span class="line">// b:(3) [1, 2, 3]</span><br><span class="line">// c:&#123;h: &#123;…&#125;&#125;</span><br><span class="line">// d:ƒ say() &#123;\n    console.log(&#x27;hi&#x27;)\n  &#125;</span><br></pre></td></tr></table></figure>
-
-<ol>
-<li>用 JSON.parse(JSON.stringfy(X))的方法复制</li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">function Person(name) &#123;</span><br><span class="line">this.name = name</span><br><span class="line">console.log(name)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"> const liai = new Person(&#x27;liai&#x27;)</span><br><span class="line"> const oldObj2 = &#123;</span><br><span class="line"> a: 1,</span><br><span class="line"> b: [&#x27;e&#x27;, &#x27;f&#x27;, &#x27;g&#x27;],</span><br><span class="line"> c: &#123; h: &#123; i: 2 &#125; &#125;,</span><br><span class="line"> d: function say() &#123;</span><br><span class="line"> console.log(&#x27;hi&#x27;)</span><br><span class="line"> &#125;,</span><br><span class="line"> date: [new Date(1536627600000), new Date(1540047600000)],</span><br><span class="line"> RegExp: new RegExp(&#x27;\\w+&#x27;),</span><br><span class="line"> constructor: liai,</span><br><span class="line"> &#125;</span><br><span class="line"> let newObj2 = JSON.parse(JSON.stringify(oldObj2))</span><br><span class="line"> oldObj2.b = [1, 2, 3]</span><br><span class="line"> console.log(newObj2)</span><br><span class="line"> // 输出结果</span><br><span class="line"> // a:1</span><br><span class="line"> // b:(3) [&#x27;e&#x27;, &#x27;f&#x27;, &#x27;g&#x27;]</span><br><span class="line"> // c:&#123;h: &#123;…&#125;&#125;</span><br><span class="line"> // constructor:&#123;name: &#x27;liai&#x27;&#125;</span><br><span class="line"> // date:(2) [&#x27;2018-09-11T01:00:00.000Z&#x27;, &#x27;2018-10-20T15:00:00.000Z&#x27;]</span><br><span class="line"> // RegExp:&#123;&#125;</span><br></pre></td></tr></table></figure>
-
-<p>函数被转成了 undefined 消失了<br>date 被转成了字符串<br>正则表达式被转成了{}<br>JSON.stringify()只能序列化对象的可枚举的自有属性，例如 如果 obj 中的对象是有构造函数生成的， 则使用 JSON.parse(JSON.stringify(obj))深拷贝后，会丢弃对象的 constructor<br>JSON.parse(JSON.stringfy(X))，其中 X 只能是 Number, String, Boolean, Array, 扁平对象，即那些能够被 JSON 直接表示的数据结构。<br>循环引用会报错</p>
-<ol>
-<li>object.assgin</li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">const oldObj3 = &#123;</span><br><span class="line">a: 1,</span><br><span class="line">b: [&#x27;e&#x27;, &#x27;f&#x27;, &#x27;g&#x27;],</span><br><span class="line">c: &#123; h: &#123; i: 2 &#125; &#125;,</span><br><span class="line">d: function say() &#123;</span><br><span class="line">console.log(&#x27;hi&#x27;)</span><br><span class="line">&#125;,</span><br><span class="line">date: [new Date(1536627600000), new Date(1540047600000)],</span><br><span class="line">RegExp: new RegExp(&#x27;\\w+&#x27;),</span><br><span class="line">&#125;</span><br><span class="line">let newObj3 = Object.assign(&#123;&#125;, oldObj3)</span><br><span class="line">oldObj3.b = [1, 2, 3]</span><br><span class="line">oldObj3.c.h.i = 20</span><br><span class="line">console.log(newObj3)</span><br><span class="line">// 输出结果</span><br><span class="line">// a:1</span><br><span class="line">// b:(3) [&#x27;e&#x27;, &#x27;f&#x27;, &#x27;g&#x27;]</span><br><span class="line">// c:&#123;h: &#123;…&#125;&#125;</span><br><span class="line">// h:&#123;i: 20&#125;</span><br><span class="line">// **proto**:Object</span><br><span class="line">// d:ƒ say() &#123;\n console.log(&#x27;hi&#x27;)\n &#125;</span><br><span class="line">// date:(2) [Tue Sep 11 2018 09:00:00 GMT+0800 (China Standard Time), Sat Oct 20 2018 23:00:00 GMT+0800 (China Standard Time)]</span><br><span class="line">// RegExp:/\\w+/</span><br></pre></td></tr></table></figure>
-
-<p>Object.assgin 只能深拷贝第一层, 深层的还是浅拷贝</p>
-<p>Object.assign()拷贝的是（可枚举）属性值。<br>假如源值是一个对象的引用，它仅仅会复制其引用值<br>——出自 MDN</p>
-<ol>
-<li>手写深克隆<br>// WeakMap 。它对于值的引用都是不计入垃圾回收机制的，所以名字里面才会有一个”Weak”，表示这是弱引用（对对象的弱引用是指当该对象应该被 GC 回收时不会阻止 GC 的回收行为）。</li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">const funcDeepClone = (source, hash = new WeakMap()) =&gt; &#123;</span><br><span class="line">if (typeof source !== &#x27;object&#x27;) return source</span><br><span class="line">if (hash.has(source)) return hash.get(source)</span><br><span class="line">let res = Array.isArray(source) ? [] : &#123;&#125;</span><br><span class="line">hash.set(source, res)</span><br><span class="line">for (let key in source) &#123;</span><br><span class="line">if (typeof source[key] === &#x27;object&#x27;) &#123;</span><br><span class="line">res[key] = funcDeepClone(source[key], hash)</span><br><span class="line">&#125; else &#123;</span><br><span class="line">res[key] = source[key]</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">return res</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">const oldObj4 = &#123;</span><br><span class="line">a: 1,</span><br><span class="line">b: [&#x27;e&#x27;, &#x27;f&#x27;, &#x27;g&#x27;],</span><br><span class="line">c: &#123; h: &#123; i: 2 &#125; &#125;,</span><br><span class="line">d: function say() &#123;</span><br><span class="line">console.log(&#x27;hi&#x27;)</span><br><span class="line">&#125;,</span><br><span class="line">date: [new Date(1536627600000), new Date(1540047600000)],</span><br><span class="line">RegExp: new RegExp(&#x27;\\w+&#x27;),</span><br><span class="line">&#125;</span><br><span class="line">let newObj4 = funcDeepClone(oldObj4)</span><br><span class="line">oldObj4.b = [1, 2, 3]</span><br><span class="line">oldObj4.c.h.i = 20</span><br><span class="line">newObj4.circle = newObj4</span><br><span class="line">console.log(newObj4)</span><br><span class="line">console.log(1)</span><br></pre></td></tr></table></figure>
-
-<p>解决深拷贝过程中的循环引用问题<br>用 weakmap 记录拷贝过的键值对，循环过程中如果是已经拷贝过的，直接把值符给对应的键</p>
-]]></content>
-      <tags>
-        <tag>前端</tag>
       </tags>
   </entry>
 </search>
