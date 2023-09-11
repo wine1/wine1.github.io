@@ -164,6 +164,418 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-TS进阶" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2023/09/11/TS%E8%BF%9B%E9%98%B6/">TS进阶</a>
+    </h1>
+  
+
+        
+        <a href="/2023/09/11/TS%E8%BF%9B%E9%98%B6/" class="archive-article-date">
+  	<time datetime="2023-09-11T14:04:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-09-11</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>目前项目中对于 typescript 的应用停留在比较基础的层面，并没有充分使用它的功能。通过对 ts 更深入的学习和使用，能避免一些潜在的问题。</p>
+<h2 id="实践-Tips"><a href="#实践-Tips" class="headerlink" title="实践 Tips"></a>实践 Tips</h2><p>尽量不使用 any,在不能确定类型的情况下，用 unknown 会更合适</p>
+<ul>
+<li><p><code>any</code> 任何类型，会忽略语法检查</p>
+</li>
+<li><p><code>unknown</code> 不可预知的类型，不会忽略语法检查</p>
+</li>
+</ul>
+<p>公共的用 interface 实现，不能用 interface 实现的再用 type 实现，即用 interface 描述数据结构，用 type 描述类型关系;</p>
+<h2 id="interface"><a href="#interface" class="headerlink" title="interface"></a>interface</h2><p>TypeScript 的核心原则之一是对值所具有的<em>结构</em>进行<strong>类型检查</strong>。 它有时被称做“鸭式辨型法”或“结构性子类型化”。 在 TypeScript 里，<strong>接口的作用就是为这些类型命名和为你的代码或第三方代码定义契约。</strong></p>
+<h2 id="type"><a href="#type" class="headerlink" title="type"></a>type</h2><p>类型别名，给类型取一个别名，并不会产生新的类型</p>
+<h3 id="type-和-interface-的异同"><a href="#type-和-interface-的异同" class="headerlink" title="type 和 interface 的异同"></a>type 和 interface 的异同</h3><ul>
+<li><p>都可以用来描述一个对象或者函数</p>
+</li>
+<li><p>都可以拓展，并且两者不是相互独立的，但语法不通。也就是说可以<code> interface extends type</code>，也可以 <code>type = type &amp; interface</code> 或者 <code>type=type ｜ interface</code></p>
+</li>
+<li><p>多次声明一个 interface 会自动合并，但 type 不会,type 唯一且不能重复</p>
+</li>
+<li><p>type 只能用于声明右侧，interface 可以用于任何地方</p>
+</li>
+<li><p>type 可以声明基本类型、联合类型<code>A | B</code>、交叉类型 <code>A &amp; B</code>、元组，interface 只能声明对象和函数</p>
+</li>
+</ul>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">interface</span> IA &#123;</span><br><span class="line">  <span class="attr">a</span>: <span class="built_in">string</span></span><br><span class="line">  <span class="attr">b</span>: <span class="built_in">number</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> TB = &#123;</span><br><span class="line">  <span class="attr">b</span>: <span class="built_in">number</span></span><br><span class="line">  <span class="attr">c</span>: <span class="built_in">number</span>[]</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> TC = IA | TB <span class="comment">// TC类型的变量的键只需包含ab或bc即可，当然也可以abc都有</span></span><br><span class="line"><span class="keyword">type</span> TD = IA &amp; TB <span class="comment">// TD类型的变量的键必需包含abc</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="泛型"><a href="#泛型" class="headerlink" title="泛型"></a>泛型</h2><p>软件工程中，我们不仅要创建一致的定义良好的 API，同时也要考虑可重用性。 组件不仅能够支持当前的数据类型，同时也能支持未来的数据类型，这在创建大型系统时为你提供了十分灵活的功能。</p>
+<p>在像 C#和 Java 这样的语言中，可以使用<code>泛型</code>来创建可重用的组件，一个组件可以支持多种类型的数据。 这样用户就可以以自己的数据类型来使用组件。</p>
+<p>泛型<strong>就像是类型的参数</strong>，和函数一样，可以有默认值。除此之外，还可以用 extends 对参数本身需要满足的条件进行限制。</p>
+<p>在定义一个函数、type、interface、class 时，在名称后面加上&lt;&gt;表示即接受类型参数。而在实际调用时，不一定需要手动传入类型参数，TS 往往能自行推断出来。在 TS 推断不准时，再手动传入参数来纠正。</p>
+<h3 id="泛型定义"><a href="#泛型定义" class="headerlink" title="泛型定义"></a>泛型定义</h3><p>泛型的应用场景：简单来讲就是在定义时无法确定类型，使用时才能确定类型</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">interface</span> InterResponse&lt;T&gt; &#123;</span><br><span class="line">  <span class="attr">code</span>: <span class="built_in">number</span></span><br><span class="line">  <span class="attr">data</span>: T</span><br><span class="line">  <span class="attr">message</span>: <span class="built_in">string</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>泛型可以用在<strong>普通类型定义、类定义、函数定义</strong>上</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 普通类型定义</span></span><br><span class="line"><span class="keyword">type</span> Animal&lt;T&gt; = &#123;<span class="attr">name</span>:<span class="built_in">string</span>, <span class="attr">type</span>:T&#125;</span><br><span class="line"><span class="keyword">const</span> sparrow&lt;<span class="built_in">string</span>&gt; = &#123;<span class="attr">name</span>:<span class="string">&#x27;bird&#x27;</span>, <span class="attr">type</span>:<span class="string">&#x27;bird&#x27;</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 类定义</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span>&lt;<span class="title">T</span>&gt; </span>&#123;</span><br><span class="line"><span class="attr">name</span>:<span class="built_in">string</span>,</span><br><span class="line"><span class="attr">age</span>:T</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> female:Person&lt;<span class="built_in">number</span>&gt; =<span class="keyword">new</span> Person&lt;<span class="built_in">number</span>&gt;(<span class="number">30</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">//函数定义</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">testFunc</span>&lt;<span class="title">T</span>&gt;(<span class="params">arg:T</span>):<span class="title">T</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> arg</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> a=testFunc&lt;<span class="built_in">string</span>&gt;(<span class="string">&#x27;hello&#x27;</span>);</span><br><span class="line"><span class="built_in">console</span>.log(a);</span><br><span class="line"></span><br><span class="line"><span class="comment">//注意，如果对一个类型名定义了泛型，那么使用此类型名的时候一定要把泛型类型也写上去。</span></span><br><span class="line"><span class="comment">// 而对于变量来说，它的类型可以在调用时推断出来的话，就可以省略泛型书写。</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="http://teambitiondoc.hyperchain.cn:8099/storage/012t83b95b68f0db56f9652c95ef151cfa8a?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTY5NTA0NDM0MCwiaWF0IjoxNjk0NDM5NTQwLCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzAxMnQ4M2I5NWI2OGYwZGI1NmY5NjUyYzk1ZWYxNTFjZmE4YSJ9.v-RqiDrK0rsYM3_7lmsPbLtxP_TPE7KmUATti6wVLvM&download=image.png"></p>
+<p>一个函数也可以传入多个泛型</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">testFunc2</span>&lt;<span class="title">T</span>,<span class="title">U</span>&gt;(<span class="params">arg:T[],arg2:U</span>):<span class="title">U</span></span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(arg.length);</span><br><span class="line">    <span class="keyword">return</span> arg2;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">testFunc3</span>&lt;<span class="title">T</span>,<span class="title">U</span>&gt;(<span class="params">arg:T,arg2:U</span>):[<span class="title">U</span>,<span class="title">T</span>]</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> [arg2,arg];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 上面的testFunc3 除了返回元祖之外，也可以用范型接口来定义返回值</span></span><br><span class="line"><span class="keyword">interface</span> InterParams&lt;N,M&gt; &#123;</span><br><span class="line">    <span class="attr">arg</span>:N;</span><br><span class="line">    arg2:M;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">testFunc4</span>&lt;<span class="title">T</span>,<span class="title">U</span>&gt;(<span class="params">arg:T,arg2:U</span>):<span class="title">InterParams</span>&lt;<span class="title">T</span>,<span class="title">U</span>&gt;</span>&#123;</span><br><span class="line">	    <span class="keyword">const</span> params:InterParams&lt;T,U&gt;&#123;</span><br><span class="line">        arg,</span><br><span class="line">        arg2</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> params;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="泛型约束"><a href="#泛型约束" class="headerlink" title="泛型约束"></a>泛型约束</h3><p>限定范型 U 是范型 T 的子集</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">pick</span>&lt;<span class="title">T</span>, <span class="title">U</span> <span class="title">extends</span> <span class="title">keyof</span> <span class="title">T</span>&gt;(<span class="params"></span>) </span>&#123;&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="http://teambitiondoc.hyperchain.cn:8099/storage/012u5d8227b7128405b59f106968578ef7d9?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTY5NTA0NDM0MCwiaWF0IjoxNjk0NDM5NTQwLCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzAxMnU1ZDgyMjdiNzEyODQwNWI1OWYxMDY5Njg1NzhlZjdkOSJ9.dE5QGE89W7yIev9TSKPKbq7wBOyad7o5IfiTcLC4vFM&download=image.png"></p>
+<p>上图中这种情况，编辑器中提示类型 T 上没有 age 和 name,可以通过 extends 改造一下</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">interface Person&lt;J, K&gt; &#123;</span><br><span class="line">  name: J;</span><br><span class="line">  age: K;</span><br><span class="line">&#125;</span><br><span class="line">const printFun = &lt;T extends Person&lt;string, number&gt;, S&gt;(</span><br><span class="line">  person: T,</span><br><span class="line">  msg: S</span><br><span class="line">): S =&gt; &#123;</span><br><span class="line">  console.log(person.age);</span><br><span class="line">  console.log(person.name);</span><br><span class="line">  return msg;</span><br><span class="line">&#125;;</span><br><span class="line">printFun(&#123; name: &quot;sunny&quot;, age: 18 &#125;, &quot;success&quot;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="泛型条件"><a href="#泛型条件" class="headerlink" title="泛型条件"></a>泛型条件</h3><p>这里不限制 T 一定要是 U 的子类型，如果是 U 子类型，则将 T 定义为 X 类型，否则定义为 Y 类型</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">T <span class="keyword">extends</span> U? X: Y</span><br></pre></td></tr></table></figure>
+
+<h3 id="泛型推断-infer"><a href="#泛型推断-infer" class="headerlink" title="泛型推断 infer"></a>泛型推断 infer</h3><figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> ParamType&lt;T&gt; = T <span class="keyword">extends</span> (arg: infer P) =&gt; <span class="built_in">any</span> ? P : T</span><br></pre></td></tr></table></figure>
+
+<p>在这个条件语句 <code>T extends (arg: infer P) =&gt; any ? P : T</code> 中，<code>infer P</code> 表示待推断的函数参数。</p>
+<p>整句表示为：如果 <code>T</code> 能赋值给 <code>(arg: infer P) =&gt; any</code>，则结果是 <code>(arg: infer P) =&gt; any</code> 类型中的参数 <code>P</code>，否则返回为 <code>T</code>。</p>
+<p><strong>需要注意的是，infer 只能在條件類型的 extends 子句中使用，同時 infer 聲明的類型變量只在條件類型的 true 分支中可用。</strong></p>
+<h3 id="常见泛型工具"><a href="#常见泛型工具" class="headerlink" title="常见泛型工具"></a>常见泛型工具</h3><p><code>Partial&lt;T&gt;</code></p>
+<p>它用来将 T 中的所有的属性都变成可选项 ?</p>
+<p><code>Record&lt;K extends keyof any, T&gt; </code></p>
+<p>它用来生成一个属性为 K，类型为 T 的类型集合。</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> Foo = Record&lt;<span class="string">&#x27;a&#x27;</span>, <span class="built_in">string</span>&gt;</span><br><span class="line"><span class="keyword">const</span> foo: Foo = &#123; <span class="attr">a</span>: <span class="string">&#x27;1&#x27;</span> &#125; <span class="comment">// 正确</span></span><br><span class="line"><span class="keyword">const</span> foo: Foo = &#123; <span class="attr">b</span>: <span class="string">&#x27;1&#x27;</span> &#125; <span class="comment">// 错误，因为 key 不为 a</span></span><br><span class="line"><span class="keyword">const</span> foo: Foo = &#123; <span class="attr">a</span>: <span class="number">1</span> &#125; <span class="comment">// 错误，因为 value 的值不是 string 类型</span></span><br></pre></td></tr></table></figure>
+
+<p><code>Pick&lt;T, K extends keyof T&gt; </code></p>
+<p>将某个类型中的子属性挑出来，变成包含这个类型部分属性的子类型。</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">interface</span> Todo &#123;</span><br><span class="line">  <span class="attr">title</span>: <span class="built_in">string</span></span><br><span class="line">  <span class="attr">description</span>: <span class="built_in">string</span></span><br><span class="line">  <span class="attr">completed</span>: <span class="built_in">boolean</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> TodoPreview = Pick&lt;Todo, <span class="string">&#x27;title&#x27;</span> | <span class="string">&#x27;completed&#x27;</span>&gt;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> todo: TodoPreview = &#123;</span><br><span class="line">  <span class="attr">title</span>: <span class="string">&#x27;Clean room&#x27;</span>,</span><br><span class="line">  <span class="attr">completed</span>: <span class="literal">false</span>,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><code>Exclude&lt;T, U&gt; </code></p>
+<p>它的作用是从 <code>T</code> 中<strong>排除</strong>掉所有包含的 <code>U</code> 属性。</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> TFoo = Exclude&lt;<span class="number">1</span> | <span class="number">2</span>, <span class="number">1</span> | <span class="number">3</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<p>如果一个变量被指定为了<code>TFoo</code>类型，它就只能被赋值为 2 了，否则就会报类型检查错误</p>
+<p><code>type Extract&lt;T, U&gt;</code></p>
+<p>它的作用正好和上面的<code>Exclude</code>相反。而是从 <code>T</code> 中提取出所有包含的 <code>U</code> 属性值。</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> TFoo = Extract&lt;<span class="number">1</span> | <span class="number">2</span>, <span class="number">1</span> | <span class="number">3</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<p><code>TFoo</code>类型最终只会包含 1。这是因为 T 包含 U 中的属性值 1，Extract 会将它提取出来生成一个类型</p>
+<p><code>type Omit&lt;T,K&gt;</code></p>
+<p>用来忽略 T 中的 K 属性</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> User = &#123;</span><br><span class="line">  <span class="attr">id</span>: <span class="built_in">string</span></span><br><span class="line">  <span class="attr">name</span>: <span class="built_in">string</span></span><br><span class="line">  <span class="attr">email</span>: <span class="built_in">string</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">type</span> UserWithoutEmail = Omit&lt;User, <span class="string">&#x27;email&#x27;</span>&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 等价于:</span></span><br><span class="line"><span class="keyword">type</span> UserWithoutEmail = &#123;</span><br><span class="line">  <span class="attr">id</span>: <span class="built_in">string</span></span><br><span class="line">  <span class="attr">name</span>: <span class="built_in">string</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><code>type NonNullable&lt;T&gt; </code></p>
+<p>它的作用是去除 T 中包含的 null 或者 undefined。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2023/09/11/TS%E8%BF%9B%E9%98%B6/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-组件设计规范" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2023/09/11/%E7%BB%84%E4%BB%B6%E8%AE%BE%E8%AE%A1%E8%A7%84%E8%8C%83/">组件设计规范</a>
+    </h1>
+  
+
+        
+        <a href="/2023/09/11/%E7%BB%84%E4%BB%B6%E8%AE%BE%E8%AE%A1%E8%A7%84%E8%8C%83/" class="archive-article-date">
+  	<time datetime="2023-09-11T13:58:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-09-11</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="为何要进行组件设计"><a href="#为何要进行组件设计" class="headerlink" title="为何要进行组件设计"></a><strong>为何要进行组件设计</strong></h1><p>开发过程中有大量的重复或相似模块，通过对数据和方法的简单封装，可以解决许多代码冗余的问题。特别是随着项目规模和复杂度的增加，良好的组件设计能够节省许多时间精力和开发维护成本。</p>
+<h1 id="如何提升组件易用性"><a href="#如何提升组件易用性" class="headerlink" title="如何提升组件易用性"></a><strong>如何提升组件易用性</strong></h1><h2 id="合理的封装组件"><a href="#合理的封装组件" class="headerlink" title="合理的封装组件"></a>合理的封装组件</h2><p>前端组件按照类型可以简单分为<strong>容器组件，功能组件和展示组件</strong>，一个优秀的组件应该保证：功能内聚、样式统一、并且与父元素仅通过 props 通信</p>
+<p>组件的封装粒度并不是越小越好，很多时候一个组件是在其他一个或多个组件的基础上开发的，无法完全以功能点的数量衡量是否遵循单一职责原则，组件开发者需要根据组件功能和目标来确定组件封装粒度：</p>
+<ol>
+<li><strong>当该组件需要承载具体的额外功能时，相较于新增</strong> <strong>API</strong> <strong>，封装成独立的组件是更好的选择</strong></li>
+</ol>
+<p>🌰 当我们在多个地方都要使用选择电池电压的组件时，就不适合在选择器组件的基础上加功能，而是包装成一个新的组件</p>
+<p><img src="/2023/09/11/%E7%BB%84%E4%BB%B6%E8%AE%BE%E8%AE%A1%E8%A7%84%E8%8C%83/image%20(1).png"></p>
+<ol>
+<li><strong>当组件中存在可能被单独使用、可以承载独立功能的子组件时，可以将其以内部组件的形式提供。</strong></li>
+</ol>
+<p>🌰 如下图的列表卡片本身是一个组件 Card，其中框中的主体部分在其他的地方又有用到，这时候，组件就可以做成类似 Card.Main Card.address 这种形式调用</p>
+<p><img src="/2023/09/11/%E7%BB%84%E4%BB%B6%E8%AE%BE%E8%AE%A1%E8%A7%84%E8%8C%83/image%20(2).png"></p>
+<h2 id="规范的-API-编写"><a href="#规范的-API-编写" class="headerlink" title="规范的 API 编写"></a>规范的 API 编写</h2><p>一个易用的组件，使用者无需阅读文档或仅快速浏览文档即可上手使用，并且应当在使用过程中给予清晰的注释和代码提示。希望以下 API 编写建议能够给组件开发者一些参考：</p>
+<ol>
+<li><p>减少必填的 API 项，尽可能多地提供默认值，降低组件的使用成本；</p>
+</li>
+<li><p>使用通用且有意义的 API 命名：</p>
+<ol>
+<li><p>onXXX：命名监听/触发方法</p>
+</li>
+<li><p>renderXXX：命名渲染方法</p>
+</li>
+<li><p>beforeXXX/afterXXX：命名前置/后置动作</p>
+</li>
+<li><p>xxxProps：命名子组件属性</p>
+</li>
+<li><p>优先使用常见单词进行命名，如：value、visible、size、disabled、label、type 等等</p>
+</li>
+</ol>
+</li>
+<li><p>单独维护类型文件，并将其打包至组件产物包中，这样使用者在开发过程中能够实时看到对应的类型提示；</p>
+</li>
+<li><p>在类型文件中，为 API 编写注释；</p>
+</li>
+</ol>
+<h2 id="Slot-与-Props-的选择"><a href="#Slot-与-Props-的选择" class="headerlink" title="[Slot] 与 [Props] 的选择"></a>[Slot] 与 [Props] 的选择</h2><p>有的组件中会有大量定制化的场景，这种时候，通过传入类型 props 来判断定制化内容就会让组件看起来非常杂乱，类似这种场景，建议用 slot 替代组件中的定制化内容</p>
+<p><strong>什么是插槽(Slot)？</strong></p>
+<p>Slot 是 Vue 框架提出的概念，可以理解为临时占位，可以用其他组件进行填充，Slot 能够实现父组件向子组件分发内容的功能。Vue 框架中提供了</p>
+<ol>
+<li><p>使用 <code>props.children</code> 获取子组件，若需要区分使用不同子组件，只能通过数组下标读取。</p>
+</li>
+<li><p>使用 Props 传递 ReactNode 元素。</p>
+</li>
+<li><p>将组件划分为多个内部组件，交由开发者自行组装。</p>
+</li>
+</ol>
+<p><img src="/2023/09/11/%E7%BB%84%E4%BB%B6%E8%AE%BE%E8%AE%A1%E8%A7%84%E8%8C%83/image%20(3).png"></p>
+<h1 id="如何提升组件可扩展性"><a href="#如何提升组件可扩展性" class="headerlink" title="如何提升组件可扩展性"></a><strong>如何提升组件可扩展性</strong></h1><p>开闭原则：对扩展开放，模块的行为可以被扩展；对修改关闭，模块中的源代码不应该被修改</p>
+<h2 id="将-DOM-交予用户接管"><a href="#将-DOM-交予用户接管" class="headerlink" title="将 DOM 交予用户接管"></a>将 DOM 交予用户接管</h2><p>在前端组件中，应该提供对应的 API 属性或方法来支持额外的功能，给予开发者更充分的扩展空间，而不是有部分需求无法满足时放弃使用组件。</p>
+<p>形式上比如 FlatList 中的 renderItem, 使用者可以根据各自的需求来自定义渲染的内容</p>
+<p><img src="/2023/09/11/%E7%BB%84%E4%BB%B6%E8%AE%BE%E8%AE%A1%E8%A7%84%E8%8C%83/image%20(4).png"></p>
+<p>与此类似的，还有 <code>renderFooter</code>、<code>renderOption</code>、<code>renderFormat</code> 等 API，这些 API 实现难度并不高，一定程度上将 DOM 元素的掌控权交予组件使用者，作为通用组件，为开发者提供了部分功能和样式的可扩展性。我们在设计前端组件时，多多留意组件中能够接管给使用者的渲染逻辑和操作逻辑，并将这些逻辑暴露出去。</p>
+<h2 id="设计可扩展的-API"><a href="#设计可扩展的-API" class="headerlink" title="设计可扩展的 API"></a>设计可扩展的 API</h2><p>组件开发前，整理组件所需实现的功能，并以功能为维度设计组件 API。以下是一个设计移动端选择器的例子，这个选择器需要支持单选、多选和时间选择，于是这样写了第一版 API👇，它可以满足我们当前的选择器需求。</p>
+<p><img src="/2023/09/11/%E7%BB%84%E4%BB%B6%E8%AE%BE%E8%AE%A1%E8%A7%84%E8%8C%83/image%20(5).png"></p>
+<p>在后续迭代中发现还有地区选择和级联选择的需求，选择器需要进行优化更新，在以上 API 的基础上只能通过添加 cascader、region 两个布尔值字段用于标识不同选择需求。这样做的缺陷是很明显的，每当我们新增不同类型的选择功能，都需要新增一个 API 字段，并且这些字段还是互斥关系。理清问题后，更新了第二版 API👇。在组件库中很多 API 都设计为常量枚举值的形式，即使其只有两个取值，这样扩展性相较于布尔值类型更好。</p>
+<p><img src="/2023/09/11/%E7%BB%84%E4%BB%B6%E8%AE%BE%E8%AE%A1%E8%A7%84%E8%8C%83/image%20(6).png"></p>
+<p>除上述例子外，还可以利用 ts 的泛型和可选类型来实现 API 扩展，例如 Table 组件的 pagination、border 等字段，既可以直接设置为 true/false，也能够以对象的形式进行更详细的配置。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2023/09/11/%E7%BB%84%E4%BB%B6%E8%AE%BE%E8%AE%A1%E8%A7%84%E8%8C%83/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-ReactNative原理浅析" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2023/09/11/ReactNative%E5%8E%9F%E7%90%86%E6%B5%85%E6%9E%90/">ReactNative原理浅析</a>
+    </h1>
+  
+
+        
+        <a href="/2023/09/11/ReactNative%E5%8E%9F%E7%90%86%E6%B5%85%E6%9E%90/" class="archive-article-date">
+  	<time datetime="2023-09-11T13:46:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-09-11</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>特点<br>跨平台：React Native 使用了 Virtual DOM(虚拟 DOM)，只需编写一套代码，便可以将代码打包成不同平台的 App，极大提高了开发效率，并且相对全部原生开发的应用来说，维护成本也相对更低。<br>上手快：相比于原生开发，JavaScript 学习成本低、语法灵活。允许让 Web 开发者更多地基于现有经验开发 App。React Native 只需使用 JavaScript 就能编写移动原生应用，它和 React 的设计理念是一样的，因此可以毫不夸张地说：你如果会写 React，就会写 React Native!<br>原生体验：由于 React Native 提供的组件是对原生 API 的暴露，虽然我们使用的是 JavaScript 语言编写的代码，但是实际上是调用了原生的 API 和原生的 UI 组件。因此，体验和性能足以媲美原生应用。<br>热更新：React Native 开发的应用支持热更新，因为 React Native 的产物是 bundle 文件，其实本质上就是 JS 代码，在 App 启动的时候就会去服务器上获取 bundle 文件，我们只需要更新 bundle 文件，从而使得 App 不需要重新前往商店下载包体就可以进行版本更新，开发者可以在用户无感知的情况下进行功能迭代或者 bug 修复。但是值得注意的是，AppStore 禁止热更新的功能中有调用私有 API、篡改原生代码和改变 App 的行为</p>
+        
+          <a class="article-more-a" href="/2023/09/11/ReactNative%E5%8E%9F%E7%90%86%E6%B5%85%E6%9E%90/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2023/09/11/ReactNative%E5%8E%9F%E7%90%86%E6%B5%85%E6%9E%90/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-merge和rebase" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2023/09/11/merge%E5%92%8Crebase/">merge和rebase</a>
+    </h1>
+  
+
+        
+        <a href="/2023/09/11/merge%E5%92%8Crebase/" class="archive-article-date">
+  	<time datetime="2023-09-11T13:31:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-09-11</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>merge 操作会生成新的合并节点，并保留原本的分支记录</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git checkout feature</span><br><span class="line">git merge main</span><br></pre></td></tr></table></figure>
+
+<p><img src="/2023/09/11/merge%E5%92%8Crebase/pic1.png"></p>
+<p>git rebase<br>rebase 操作会将功能分支合并到主分支中，并且不产生新的合并节点</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git checkout feature</span><br><span class="line">git rebase main</span><br></pre></td></tr></table></figure>
+
+<p><img src="/2023/09/11/merge%E5%92%8Crebase/pic2.png"></p>
+<p>git rebase 和 git merge 的区别<br>rebase 会把你当前分支的 commit 放到公共分支的最后面,所以叫变基。就好像你从公共分支又重新拉出来这个分支一样。<br>而 merge 会把公共分支和你当前的 commit 合并在一起，形成一个新的 commit 提交</p>
+<p>git rebase 和 git merge 的优缺点<br>git merge 优点是分支代码合并后不破坏原分支代码的提交记录，缺点是会产生额外的提交记录并进行两条分支的合并<br>git rebase 优点是可以将对象分支的提交记录续道目标分支上，形成线性提交历史记录，review 时更加直观</p>
+<p>使用 git rebase 的黄金法则 🌿<br>就是不要再公共分支执行 git rebase<br><img src="/2023/09/11/merge%E5%92%8Crebase/pic3.png"></p>
+<p>Rebase 将 main 中的所有提交移到了 feature 的顶端。问题是，这只发生在你的版本库里。所有其他的开发者仍在使用原来的 main。由于重定会产生全新的提交，Git 会认为你的主干分支的历史已经与其他人的不同了。<br>同步两个主分支的唯一方法是将它们 merge 到一起，这样就会产生一个额外的合并提交和两组包含相同修改的提交（原始提交和来自你的重构分支的提交）。不用说，这是一个非常混乱的局面。<br>所以，在你运行 git rebase 之前，一定要问自己，”还有人在看这个分支吗？”如果答案是肯定的，就把你的手从键盘上拿开，开始考虑其他方式来合并修改。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">git</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2023/09/11/merge%E5%92%8Crebase/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-浅谈前端设计模式" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -605,322 +1017,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2021/12/10/node%E9%A1%B9%E7%9B%AE%E4%B8%AD%E4%BD%BF%E7%94%A8typescript/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-react组件通信" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/06/24/react%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1/">react组件通信</a>
-    </h1>
-  
-
-        
-        <a href="/2021/06/24/react%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1/" class="archive-article-date">
-  	<time datetime="2021-06-24T15:50:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-24</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>react中 props是不可更改的 所以在子组件中 想要更改父组件传进来的props 只能把它先赋值给state<br>例如</p>
-        
-          <a class="article-more-a" href="/2021/06/24/react%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">react</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/06/24/react%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-用createReactApp创建项目之后的配置" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/06/03/%E7%94%A8createReactApp%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE%E4%B9%8B%E5%90%8E%E7%9A%84%E9%85%8D%E7%BD%AE/">用createReactApp创建项目之后的配置</a>
-    </h1>
-  
-
-        
-        <a href="/2021/06/03/%E7%94%A8createReactApp%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE%E4%B9%8B%E5%90%8E%E7%9A%84%E9%85%8D%E7%BD%AE/" class="archive-article-date">
-  	<time datetime="2021-06-03T11:09:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-03</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>在用<a target="_blank" rel="noopener" href="https://github.com/facebook/create-react-app">create-react-app</a>创建一个新的react项目之后<br>会发现package.json里面没有webpack 这是因为 用这个脚手架创建的项目 webpack相关配置都被集成在 react-scripts中了<br>脚手架本身提供了 ejest 来把webpack相关配置暴露出来 但是这个过程是不可逆的 弹出配置后，你将无法跟随官方的脚步去升级项目的 react-script 版本 谨慎操作 反正我没操作<br>如果我们想自己加一些配置 可以通过craco实现</p>
-        
-          <a class="article-more-a" href="/2021/06/03/%E7%94%A8createReactApp%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE%E4%B9%8B%E5%90%8E%E7%9A%84%E9%85%8D%E7%BD%AE/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">工程化</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/06/03/%E7%94%A8createReactApp%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE%E4%B9%8B%E5%90%8E%E7%9A%84%E9%85%8D%E7%BD%AE/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-webpack多文件打包" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/05/27/webpack%E5%A4%9A%E6%96%87%E4%BB%B6%E6%89%93%E5%8C%85/">webpack多文件打包</a>
-    </h1>
-  
-
-        
-        <a href="/2021/05/27/webpack%E5%A4%9A%E6%96%87%E4%BB%B6%E6%89%93%E5%8C%85/" class="archive-article-date">
-  	<time datetime="2021-05-27T07:51:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-27</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>webpack 多文件打包系统的配置</p>
-        
-          <a class="article-more-a" href="/2021/05/27/webpack%E5%A4%9A%E6%96%87%E4%BB%B6%E6%89%93%E5%8C%85/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">工程化</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/05/27/webpack%E5%A4%9A%E6%96%87%E4%BB%B6%E6%89%93%E5%8C%85/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-自己搞一个npm包" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/05/18/%E8%87%AA%E5%B7%B1%E6%90%9E%E4%B8%80%E4%B8%AAnpm%E5%8C%85/">自己搞一个npm包</a>
-    </h1>
-  
-
-        
-        <a href="/2021/05/18/%E8%87%AA%E5%B7%B1%E6%90%9E%E4%B8%80%E4%B8%AAnpm%E5%8C%85/" class="archive-article-date">
-  	<time datetime="2021-05-18T02:59:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-18</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>搞一个npm包给其他业务部门使用 过程中还是有许多问题的<br>主要是 在测试过程中频繁发布npm包 以及版本迭代太快 业务部门更新不及时</p>
-        
-          <a class="article-more-a" href="/2021/05/18/%E8%87%AA%E5%B7%B1%E6%90%9E%E4%B8%80%E4%B8%AAnpm%E5%8C%85/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">工程化</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/05/18/%E8%87%AA%E5%B7%B1%E6%90%9E%E4%B8%80%E4%B8%AAnpm%E5%8C%85/">展开全文 >></a>
         </p>
       
 
