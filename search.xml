@@ -4644,4 +4644,66 @@ kmp算法
         <tag>git</tag>
       </tags>
   </entry>
+  <entry>
+    <title>算法leetcode1</title>
+    <url>/2024/08/26/%E7%AE%97%E6%B3%95leetcode1/</url>
+    <content><![CDATA[]]></content>
+      <tags>
+        <tag>算法</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>自己写一个webpack的loader</title>
+    <url>/2024/08/25/%E8%87%AA%E5%B7%B1%E5%86%99%E4%B8%80%E4%B8%AAwebpack%E7%9A%84loader/</url>
+    <content><![CDATA[<p>雪碧图作为一种之前经常用来做图片性能优化的方案，其缺点也比较明显，就是需要手动标明图片的大小和位置，而且需要手动合并雪碧图。对 UI 和开发人员来说，这样的操作非常繁琐。<br>所以，我们需要一个工具来帮助我们自动生成雪碧图，并且能够自动合并雪碧图。</p>
+<span id="more"></span>
+
+<p>在项目中的 webpack.config.js 中添加如下配置：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">...</span><br><span class="line">module: &#123;</span><br><span class="line">  rules:[&#123;</span><br><span class="line">  test: /\.css$/,</span><br><span class="line">  use:[</span><br><span class="line">    path.resolve(&#x27;./loader/index&#x27;)</span><br><span class="line">  ]</span><br><span class="line">&#125;]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>将本地自定义的 loader 引入到 webpack 中，然后在 loader/index.js 中实现对图片的处理。</p>
+<p>loader 就像一个函数，接受文件内容作为参数，返回处理后的内容或者用 fs 将处理后的内容写入到文件中。</p>
+<p>实现一个把图片处理成雪碧图的 loader 思路：</p>
+<ol>
+<li>收集需要处理的图片</li>
+<li>借助 spritesmith， 参数为收集到的图片，回调函数中返回雪碧图的内容和雪碧图的位置信息<br>spritesmith 的用法：</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">var sprites = [&#x27;fork.png&#x27;, &#x27;github.png&#x27;, &#x27;twitter.png&#x27;];</span><br><span class="line">Spritesmith.run(&#123;src: sprites&#125;, function handleResult (err, result) &#123;</span><br><span class="line">  result.image; // Buffer representation of image</span><br><span class="line">  result.coordinates; // Object mapping filename to &#123;x, y, width, height&#125; of image</span><br><span class="line">  result.properties; // Object with metadata about spritesheet &#123;width, height&#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li><p>将雪碧图的内容通过 fs 写入到文件中</p>
+</li>
+<li><p>使用 postcss-value-parser (将 CSS 声明值和规则参数转换为节点树，并提供简单的遍历 API) 解析 CSS 内容，找到所有的背景图片，替换为雪碧图的 URL</p>
+</li>
+<li><p>用 callback 函数将处理后的内容返回给 webpack</p>
+<p>如果是单个处理结果，可以在 同步模式 中直接返回。如果有多个处理结果，则必须调用 this.callback()。在 异步模式 中，必须调用 this.async() 来告知 loader runner 等待异步结果，它会返回 this.callback() 回调函数。随后 loader 必须返回 undefined 并且调用该回调函数。</p>
+</li>
+</ol>
+<p>官方文档中的 loader 相关内容 <a href="https://webpack.docschina.org/loaders/">https://webpack.docschina.org/loaders/</a></p>
+<p>如果需要 options<br>options 里就是传入 loader 的配置参数，下面看看如何在 loader 中使用。<br>获取方法 1：需要引入”loader-utils”库,使用 loaderUtils.getOptions()获取<br>获取方法 2：直接使用 this.getOptions()方法也可</p>
+]]></content>
+      <tags>
+        <tag>工程化</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>自己写一个webpack的plugin</title>
+    <url>/2024/08/25/%E8%87%AA%E5%B7%B1%E5%86%99%E4%B8%80%E4%B8%AAwebpack%E7%9A%84plugin/</url>
+    <content><![CDATA[<p>首先来看看 Webpack 官网对 Plugin 的官方解释：</p>
+<p>Webpack 插件是一个具有 apply 方法的 JavaScript 对象。apply 方法会被 Webpack Compiler 调用，并且在整个编译生命周期都可以访问 Compiler 对象。它向第三方开发者提供了 Webpack 引擎中完整的能力。使用阶段式的构建回调，开发者可以在 Webpack 构建流程中引入自定义的行为。</p>
+]]></content>
+      <tags>
+        <tag>工程化</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>创建一个webpack+react+ts项目</title>
+    <url>/2024/08/26/%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AAwebpack-react-ts%E9%A1%B9%E7%9B%AE/</url>
+    <content><![CDATA[<p>react 官方支持的创建命令为<code>npx create-react-app my-app --template typescript</code><br>官方脚手架集成了 webpack,但是相关配置并没有暴露出来，需要自己借助第三方工具配置。比如 craco 文档为<a href="https://www.npmjs.com/package/@craco/craco%E3%80%82%E4%BD%86%E6%98%AF%E9%80%9A%E8%BF%87%E7%AC%AC%E4%B8%89%E6%96%B9%E9%85%8D%E7%BD%AE%E6%AF%94%E8%BE%83%E5%A4%8D%E6%9D%82%EF%BC%8C%E6%8E%A5%E4%B8%8B%E6%9D%A5%E6%88%91%E4%BB%AC%E7%94%A8%E5%9C%A8webpack%E4%B8%AD%E5%88%9B%E5%BB%BAreact%E7%9A%84%E5%BD%A2%E5%BC%8F%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E9%A1%B9%E7%9B%AE">https://www.npmjs.com/package/@craco/craco。但是通过第三方配置比较复杂，接下来我们用在webpack中创建react的形式搭建一个项目</a></p>
+<span id="more"></span>
+]]></content>
+      <tags>
+        <tag>工程化</tag>
+      </tags>
+  </entry>
 </search>

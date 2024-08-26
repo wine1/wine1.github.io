@@ -6,7 +6,7 @@
   <link href="https://wine1.github.io/atom.xml" rel="self"/>
   
   <link href="https://wine1.github.io/"/>
-  <updated>2023-09-12T14:08:15.268Z</updated>
+  <updated>2024-08-26T10:57:36.131Z</updated>
   <id>https://wine1.github.io/</id>
   
   <author>
@@ -15,6 +15,82 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>创建一个webpack+react+ts项目</title>
+    <link href="https://wine1.github.io/2024/08/26/%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AAwebpack-react-ts%E9%A1%B9%E7%9B%AE/"/>
+    <id>https://wine1.github.io/2024/08/26/%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AAwebpack-react-ts%E9%A1%B9%E7%9B%AE/</id>
+    <published>2024-08-26T10:44:08.000Z</published>
+    <updated>2024-08-26T10:57:36.131Z</updated>
+    
+    <content type="html"><![CDATA[<p>react 官方支持的创建命令为<code>npx create-react-app my-app --template typescript</code><br>官方脚手架集成了 webpack,但是相关配置并没有暴露出来，需要自己借助第三方工具配置。比如 craco 文档为<a href="https://www.npmjs.com/package/@craco/craco%E3%80%82%E4%BD%86%E6%98%AF%E9%80%9A%E8%BF%87%E7%AC%AC%E4%B8%89%E6%96%B9%E9%85%8D%E7%BD%AE%E6%AF%94%E8%BE%83%E5%A4%8D%E6%9D%82%EF%BC%8C%E6%8E%A5%E4%B8%8B%E6%9D%A5%E6%88%91%E4%BB%AC%E7%94%A8%E5%9C%A8webpack%E4%B8%AD%E5%88%9B%E5%BB%BAreact%E7%9A%84%E5%BD%A2%E5%BC%8F%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E9%A1%B9%E7%9B%AE">https://www.npmjs.com/package/@craco/craco。但是通过第三方配置比较复杂，接下来我们用在webpack中创建react的形式搭建一个项目</a></p><span id="more"></span>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;react 官方支持的创建命令为&lt;code&gt;npx create-react-app my-app --template typescript&lt;/code&gt;&lt;br&gt;官方脚手架集成了 webpack,但是相关配置并没有暴露出来，需要自己借助第三方工具配置。比如 craco 文档为&lt;a href=&quot;https://www.npmjs.com/package/@craco/craco%E3%80%82%E4%BD%86%E6%98%AF%E9%80%9A%E8%BF%87%E7%AC%AC%E4%B8%89%E6%96%B9%E9%85%8D%E7%BD%AE%E6%AF%94%E8%BE%83%E5%A4%8D%E6%9D%82%EF%BC%8C%E6%8E%A5%E4%B8%8B%E6%9D%A5%E6%88%91%E4%BB%AC%E7%94%A8%E5%9C%A8webpack%E4%B8%AD%E5%88%9B%E5%BB%BAreact%E7%9A%84%E5%BD%A2%E5%BC%8F%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E9%A1%B9%E7%9B%AE&quot;&gt;https://www.npmjs.com/package/@craco/craco。但是通过第三方配置比较复杂，接下来我们用在webpack中创建react的形式搭建一个项目&lt;/a&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="工程化" scheme="https://wine1.github.io/tags/%E5%B7%A5%E7%A8%8B%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>算法leetcode1</title>
+    <link href="https://wine1.github.io/2024/08/26/%E7%AE%97%E6%B3%95leetcode1/"/>
+    <id>https://wine1.github.io/2024/08/26/%E7%AE%97%E6%B3%95leetcode1/</id>
+    <published>2024-08-26T01:20:18.000Z</published>
+    <updated>2024-08-26T01:20:28.808Z</updated>
+    
+    
+    
+    
+    
+    <category term="算法" scheme="https://wine1.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>自己写一个webpack的plugin</title>
+    <link href="https://wine1.github.io/2024/08/25/%E8%87%AA%E5%B7%B1%E5%86%99%E4%B8%80%E4%B8%AAwebpack%E7%9A%84plugin/"/>
+    <id>https://wine1.github.io/2024/08/25/%E8%87%AA%E5%B7%B1%E5%86%99%E4%B8%80%E4%B8%AAwebpack%E7%9A%84plugin/</id>
+    <published>2024-08-25T12:36:46.000Z</published>
+    <updated>2024-08-26T12:57:30.187Z</updated>
+    
+    <content type="html"><![CDATA[<p>首先来看看 Webpack 官网对 Plugin 的官方解释：</p><p>Webpack 插件是一个具有 apply 方法的 JavaScript 对象。apply 方法会被 Webpack Compiler 调用，并且在整个编译生命周期都可以访问 Compiler 对象。它向第三方开发者提供了 Webpack 引擎中完整的能力。使用阶段式的构建回调，开发者可以在 Webpack 构建流程中引入自定义的行为。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;首先来看看 Webpack 官网对 Plugin 的官方解释：&lt;/p&gt;
+&lt;p&gt;Webpack 插件是一个具有 apply 方法的 JavaScript 对象。apply 方法会被 Webpack Compiler 调用，并且在整个编译生命周期都可以访问 Compiler 对</summary>
+      
+    
+    
+    
+    
+    <category term="工程化" scheme="https://wine1.github.io/tags/%E5%B7%A5%E7%A8%8B%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>自己写一个webpack的loader</title>
+    <link href="https://wine1.github.io/2024/08/25/%E8%87%AA%E5%B7%B1%E5%86%99%E4%B8%80%E4%B8%AAwebpack%E7%9A%84loader/"/>
+    <id>https://wine1.github.io/2024/08/25/%E8%87%AA%E5%B7%B1%E5%86%99%E4%B8%80%E4%B8%AAwebpack%E7%9A%84loader/</id>
+    <published>2024-08-25T11:07:41.000Z</published>
+    <updated>2024-08-26T12:35:25.682Z</updated>
+    
+    <content type="html"><![CDATA[<p>雪碧图作为一种之前经常用来做图片性能优化的方案，其缺点也比较明显，就是需要手动标明图片的大小和位置，而且需要手动合并雪碧图。对 UI 和开发人员来说，这样的操作非常繁琐。<br>所以，我们需要一个工具来帮助我们自动生成雪碧图，并且能够自动合并雪碧图。</p><span id="more"></span><p>在项目中的 webpack.config.js 中添加如下配置：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">...</span><br><span class="line">module: &#123;</span><br><span class="line">  rules:[&#123;</span><br><span class="line">  test: /\.css$/,</span><br><span class="line">  use:[</span><br><span class="line">    path.resolve(&#x27;./loader/index&#x27;)</span><br><span class="line">  ]</span><br><span class="line">&#125;]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>将本地自定义的 loader 引入到 webpack 中，然后在 loader/index.js 中实现对图片的处理。</p><p>loader 就像一个函数，接受文件内容作为参数，返回处理后的内容或者用 fs 将处理后的内容写入到文件中。</p><p>实现一个把图片处理成雪碧图的 loader 思路：</p><ol><li>收集需要处理的图片</li><li>借助 spritesmith， 参数为收集到的图片，回调函数中返回雪碧图的内容和雪碧图的位置信息<br>spritesmith 的用法：</li></ol><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var sprites = [&#x27;fork.png&#x27;, &#x27;github.png&#x27;, &#x27;twitter.png&#x27;];</span><br><span class="line">Spritesmith.run(&#123;src: sprites&#125;, function handleResult (err, result) &#123;</span><br><span class="line">  result.image; // Buffer representation of image</span><br><span class="line">  result.coordinates; // Object mapping filename to &#123;x, y, width, height&#125; of image</span><br><span class="line">  result.properties; // Object with metadata about spritesheet &#123;width, height&#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure><ol start="3"><li><p>将雪碧图的内容通过 fs 写入到文件中</p></li><li><p>使用 postcss-value-parser (将 CSS 声明值和规则参数转换为节点树，并提供简单的遍历 API) 解析 CSS 内容，找到所有的背景图片，替换为雪碧图的 URL</p></li><li><p>用 callback 函数将处理后的内容返回给 webpack</p><p>如果是单个处理结果，可以在 同步模式 中直接返回。如果有多个处理结果，则必须调用 this.callback()。在 异步模式 中，必须调用 this.async() 来告知 loader runner 等待异步结果，它会返回 this.callback() 回调函数。随后 loader 必须返回 undefined 并且调用该回调函数。</p></li></ol><p>官方文档中的 loader 相关内容 <a href="https://webpack.docschina.org/loaders/">https://webpack.docschina.org/loaders/</a></p><p>如果需要 options<br>options 里就是传入 loader 的配置参数，下面看看如何在 loader 中使用。<br>获取方法 1：需要引入”loader-utils”库,使用 loaderUtils.getOptions()获取<br>获取方法 2：直接使用 this.getOptions()方法也可</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;雪碧图作为一种之前经常用来做图片性能优化的方案，其缺点也比较明显，就是需要手动标明图片的大小和位置，而且需要手动合并雪碧图。对 UI 和开发人员来说，这样的操作非常繁琐。&lt;br&gt;所以，我们需要一个工具来帮助我们自动生成雪碧图，并且能够自动合并雪碧图。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="工程化" scheme="https://wine1.github.io/tags/%E5%B7%A5%E7%A8%8B%E5%8C%96/"/>
+    
+  </entry>
   
   <entry>
     <title>TS进阶</title>
@@ -337,80 +413,6 @@
     
     
     <category term="工程化" scheme="https://wine1.github.io/tags/%E5%B7%A5%E7%A8%8B%E5%8C%96/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>三栏布局总结</title>
-    <link href="https://wine1.github.io/2021/04/24/%E4%B8%89%E6%A0%8F%E5%B8%83%E5%B1%80%E6%80%BB%E7%BB%93/"/>
-    <id>https://wine1.github.io/2021/04/24/%E4%B8%89%E6%A0%8F%E5%B8%83%E5%B1%80%E6%80%BB%E7%BB%93/</id>
-    <published>2021-04-24T02:10:23.000Z</published>
-    <updated>2021-04-24T03:40:30.752Z</updated>
-    
-    <content type="html"><![CDATA[<p>17年写过<a href="https://wine1.github.io/2017/12/01/%E5%9C%A3%E6%9D%AF%E5%B8%83%E5%B1%80%E5%92%8C%E5%8F%8C%E9%A3%9E%E7%BF%BC%E5%B8%83%E5%B1%80/">圣杯布局和双飞翼布局</a>，时间一长没写过pc端吧 又忘却了<br>整理下三栏布局方案</p><span id="more"></span><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">    &lt;div class=&quot;container&quot;&gt;</span><br><span class="line">        &lt;div class=&quot;left&quot;&gt;&lt;/div&gt;</span><br><span class="line">        &lt;div class=&quot;right&quot;&gt;&lt;/div&gt;</span><br><span class="line">        &lt;div class=&quot;main&quot;&gt;&lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line"></span><br><span class="line">.left &#123;</span><br><span class="line">    float: left;</span><br><span class="line">    height: 200px;</span><br><span class="line">    width: 100px;</span><br><span class="line">    background-color: red;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"> .right &#123;</span><br><span class="line">    float: right;</span><br><span class="line">    width: 200px;</span><br><span class="line">    height: 200px;</span><br><span class="line">    background-color: blue;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.main &#123;</span><br><span class="line">    margin-left: 100px;</span><br><span class="line">    margin-right: 200px;</span><br><span class="line">    /* overflow: hidden; </span><br><span class="line">    或者用overflow代替上面的margin 通过bfc清除浮动*/</span><br><span class="line">    height: 200px;</span><br><span class="line">    background-color: green;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>2.flex布局</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;container&quot;&gt;</span><br><span class="line">    &lt;div class=&quot;main&quot;&gt;&lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;left&quot;&gt;&lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;right&quot;&gt;&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;style&gt;</span><br><span class="line">    .container &#123;</span><br><span class="line">        display: flex;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    .main &#123;</span><br><span class="line">        flex-grow: 1;</span><br><span class="line">        height: 300px;</span><br><span class="line">        background-color: red;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    .left &#123;</span><br><span class="line">        order: -1;</span><br><span class="line">        flex: 0 1 100px;</span><br><span class="line">        height: 300px;</span><br><span class="line">        background-color: blue;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    .right &#123;</span><br><span class="line">        flex: 0 1 100px;</span><br><span class="line">        height: 300px;</span><br><span class="line">        background-color: green;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure><p>flex属性是flex-grow, flex-shrink 和 flex-basis的简写<br>flex-grow：flex-grow属性定义项目的放大比例，默认为0，即如果存在剩余空间，也不放大<br>flex-shrink：flex-shrink属性定义了项目的缩小比例，默认为1，即如果空间不足，该项目将缩小。<br>flex-basis：属性定义了在分配多余空间之前，项目占据的主轴空间（main size）</p><p>3.圣杯布局<br>负边距</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"> &lt;div class=&quot;container&quot;&gt;</span><br><span class="line">    &lt;div class=&quot;main&quot;&gt;&lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;left&quot;&gt;&lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;right&quot;&gt;&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;style&gt;</span><br><span class="line">    .container &#123;</span><br><span class="line">    margin-left: 100px;</span><br><span class="line">    margin-right: 100px;</span><br><span class="line">&#125;</span><br><span class="line">.main &#123;</span><br><span class="line">    float: left;</span><br><span class="line">    width: 100%;</span><br><span class="line">    height: 300px;</span><br><span class="line">    background-color: red;</span><br><span class="line">&#125;</span><br><span class="line">.left &#123;</span><br><span class="line">    float: left;</span><br><span class="line">    width: 100px;</span><br><span class="line">    height: 300px;</span><br><span class="line">    margin-left: -100%;</span><br><span class="line">    position: relative;</span><br><span class="line">    left: -100px;</span><br><span class="line">    background-color: blue;</span><br><span class="line">&#125;</span><br><span class="line">.right &#123;</span><br><span class="line">    float: left;</span><br><span class="line">    width: 100px;</span><br><span class="line">    height: 300px;</span><br><span class="line">    margin-left: -100px;</span><br><span class="line">    position: relative;</span><br><span class="line">    right: -100px;</span><br><span class="line">    background-color: green;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure><p>4.双飞翼布局</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;content&quot;&gt;</span><br><span class="line">    &lt;div class=&quot;main&quot;&gt;&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;div class=&quot;left&quot;&gt;&lt;/div&gt;</span><br><span class="line">&lt;div class=&quot;right&quot;&gt;&lt;/div&gt;</span><br><span class="line">&lt;style&gt;</span><br><span class="line">    .content &#123;</span><br><span class="line">        float: left;</span><br><span class="line">        width: 100%;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    .main &#123;</span><br><span class="line">        height: 200px;</span><br><span class="line">        margin-left: 100px;</span><br><span class="line">        margin-right: 100px;</span><br><span class="line">        background-color: green;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    .left &#123;</span><br><span class="line">        float: left;</span><br><span class="line">        height: 200px;</span><br><span class="line">        width: 100px;</span><br><span class="line">        margin-left: -100%;</span><br><span class="line">        background-color: red;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    .right &#123;</span><br><span class="line">        width: 100px;</span><br><span class="line">        height: 200px;</span><br><span class="line">        float: right;</span><br><span class="line">        margin-left: -100px;</span><br><span class="line">        background-color: blue;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure><p>5.绝对定位布局</p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;17年写过&lt;a href=&quot;https://wine1.github.io/2017/12/01/%E5%9C%A3%E6%9D%AF%E5%B8%83%E5%B1%80%E5%92%8C%E5%8F%8C%E9%A3%9E%E7%BF%BC%E5%B8%83%E5%B1%80/&quot;&gt;圣杯布局和双飞翼布局&lt;/a&gt;，时间一长没写过pc端吧 又忘却了&lt;br&gt;整理下三栏布局方案&lt;/p&gt;</summary>
-    
-    
-    
-    
-    <category term="css" scheme="https://wine1.github.io/tags/css/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>原型和原型链</title>
-    <link href="https://wine1.github.io/2021/04/17/%E5%8E%9F%E5%9E%8B%E5%92%8C%E5%8E%9F%E5%9E%8B%E9%93%BE/"/>
-    <id>https://wine1.github.io/2021/04/17/%E5%8E%9F%E5%9E%8B%E5%92%8C%E5%8E%9F%E5%9E%8B%E9%93%BE/</id>
-    <published>2021-04-17T15:41:09.000Z</published>
-    <updated>2021-04-17T15:46:55.763Z</updated>
-    
-    <content type="html"><![CDATA[<p>解析原型和原型链</p><span id="more"></span><p><img src="/2021/04/17/%E5%8E%9F%E5%9E%8B%E5%92%8C%E5%8E%9F%E5%9E%8B%E9%93%BE/prototype.jpg"></p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;解析原型和原型链&lt;/p&gt;</summary>
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>网络之option</title>
-    <link href="https://wine1.github.io/2021/04/17/%E7%BD%91%E7%BB%9C%E4%B9%8Boption/"/>
-    <id>https://wine1.github.io/2021/04/17/%E7%BD%91%E7%BB%9C%E4%B9%8Boption/</id>
-    <published>2021-04-17T01:04:12.000Z</published>
-    <updated>2021-04-17T01:53:16.002Z</updated>
-    
-    <content type="html"><![CDATA[<p>MDN的CORS一文中提到：<br>规范要求，对那些可能对服务器数据产生副作用的 HTTP 请求方法（特别是 GET 以外的 HTTP 请求，或者搭配某些 MIME 类型的 POST 请求），浏览器必须首先使用 OPTIONS 方法发起一个预检请求（preflight request），从而获知服务端是否允许该跨域请求。</p><span id="more"></span><p>某些请求不会触发 CORS 预检请求，这样的请求一般称为”简单请求”,而会触发预检的请求则称为”复杂请求”。</p><p>简单请求：<br>简单请求的 HTTP 方法只能是 GET、HEAD 或 POST<br>简单请求的 HTTP 头只能是 Accept/Accept-Language/Conent-Language/Content-Type 等<br>简单请求的 Content-Type 头只能是 text/plain、multipart/form-data 或 application/x-www-form-urlencoded</p><h3 id="CORS预检请求触发条件"><a href="#CORS预检请求触发条件" class="headerlink" title="CORS预检请求触发条件"></a>CORS预检请求触发条件</h3><ol><li>使用了下面任一HTTP 方法：     <br>PUT/DELETE/CONNECT/OPTIONS/TRACE/PATCH     </li><li>人为设置了以下集合之外首部字段：     <br>Accept/Accept-Language/Content-Language/Content-Type/DPR/Downlink/Save-Data/Viewport-Width/Width     </li><li>Content-Type 的值不属于下列之一:     <br>application/x-www-form-urlencoded、multipart/form-data、text/plain</li></ol><h3 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h3><p>当我们发起跨域请求时，如果是简单请求，那么我们只会发出一次请求，但是如果是复杂请求则先发出 options 请求，用于确认目标资源是否支持跨域，然后浏览器会根据服务端响应的 header 自动处理剩余的请求，如果响应支持跨域，则继续发出正常请求，如果不支持，则在控制台显示错误。</p><p>由此可见，当触发预检时，跨域请求便会发送 2 次请求，既增加了请求数，也延迟了请求真正发起的时间，严重影响性能。</p><p>所以，我们可以优化 Options 请求，主要有 2 种方法。</p><p>转为简单请求，如用 JSONP 做跨域请求<br>对 options 请求进行缓存，服务器端设置 Access-Control-Max-Age 字段，那么当第一次请求该 URL 时会发出 OPTIONS 请求，浏览器会根据返回的 Access-Control-Max-Age 字段缓存该请求的 OPTIONS 预检请求的响应结果（具体缓存时间还取决于浏览器的支持的默认最大值，取两者最小值，一般为 10 分钟）。在缓存有效期内，该资源的请求（URL 和 header 字段都相同的情况下）不会再触发预检。</p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;MDN的CORS一文中提到：&lt;br&gt;规范要求，对那些可能对服务器数据产生副作用的 HTTP 请求方法（特别是 GET 以外的 HTTP 请求，或者搭配某些 MIME 类型的 POST 请求），浏览器必须首先使用 OPTIONS 方法发起一个预检请求（preflight request），从而获知服务端是否允许该跨域请求。&lt;/p&gt;</summary>
-    
-    
-    
-    
-    <category term="网络" scheme="https://wine1.github.io/tags/%E7%BD%91%E7%BB%9C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>BFS和DFS</title>
-    <link href="https://wine1.github.io/2021/04/03/BFS%E5%92%8CDFS/"/>
-    <id>https://wine1.github.io/2021/04/03/BFS%E5%92%8CDFS/</id>
-    <published>2021-04-03T11:30:49.000Z</published>
-    <updated>2021-04-24T03:41:47.258Z</updated>
-    
-    <content type="html"><![CDATA[<p>DFS算法和BFS算法<br><a href="https://wine1.github.io/2020/06/12/%E5%B1%82%E5%BA%8F%E9%81%8D%E5%8E%86/">BFS</a></p><span id="more"></span><p>递归实现dfs<br>简单的二叉树dfs<br><a href="https://leetcode-cn.com/problems/binary-tree-preorder-traversal/">https://leetcode-cn.com/problems/binary-tree-preorder-traversal/</a></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">var preorderTraversal = function (root) &#123;</span><br><span class="line">  let res = [];</span><br><span class="line">  if (!root) &#123;</span><br><span class="line">    res = [];</span><br><span class="line">  &#125; else &#123;</span><br><span class="line">    const dfs = function (node) &#123;</span><br><span class="line">      // console.log(node);</span><br><span class="line">      if (!node) return;</span><br><span class="line">      res.push(node.val);</span><br><span class="line">      dfs(node.left);</span><br><span class="line">      dfs(node.right);</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    dfs(root);</span><br><span class="line">  &#125;</span><br><span class="line">  return res;</span><br><span class="line">&#125;;</span><br><span class="line">console.log(preorderTraversal([1, null, 2, 3]));</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;DFS算法和BFS算法&lt;br&gt;&lt;a href=&quot;https://wine1.github.io/2020/06/12/%E5%B1%82%E5%BA%8F%E9%81%8D%E5%8E%86/&quot;&gt;BFS&lt;/a&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    
-    <category term="数据结构" scheme="https://wine1.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
   </entry>
   
